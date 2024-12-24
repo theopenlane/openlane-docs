@@ -1,0 +1,92 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #146355;
+  --ifm-color-primary-dark: #12594d;
+  --ifm-color-primary-darker: #115448;
+  --ifm-color-primary-darkest: #0e453c;
+  --ifm-color-primary-light: #166d5e;
+  --ifm-color-primary-lighter: #177262;
+  --ifm-color-primary-lightest: #197b69;
+  --ifm-background-color: #e9f1f5;
+  --ifm-code-font-size: 85%;
+  --ifm-font-size-base: 90%;
+  --ifm-footer-background-color: #ffffff;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical)* 0.5);
+  --ifm-hero-background-color: #e9f1f5;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #2ccbab;
+  --ifm-color-primary-dark: #28b79a;
+  --ifm-color-primary-darker: #25ad91;
+  --ifm-color-primary-darkest: #1f8e78;
+  --ifm-color-primary-light: #3bd5b6;
+  --ifm-color-primary-lighter: #45d7b9;
+  --ifm-color-primary-lightest: #64ddc5;
+  --ifm-background-color: #0d1117;
+  --ifm-footer-background-color: #1C2630;
+  --ifm-navbar-background-color: #1C2630;
+  --ifm-hero-background-color: #0d1117;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Method labels */
+.api-method>.menu__link {
+  align-items: center;
+  justify-content: start;
+}
+
+.api-method>.menu__link::before {
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  margin-right: var(--ifm-spacing-horizontal);
+  text-align: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  color: white;
+}
+
+.get>.menu__link::before {
+  content: "get";
+  background-color: var(--ifm-color-primary);
+}
+
+.put>.menu__link::before {
+  content: "put";
+  background-color: var(--openapi-code-blue);
+}
+
+.post>.menu__link::before {
+  content: "post";
+  background-color: var(--openapi-code-green);
+}
+
+.delete>.menu__link::before {
+  content: "del";
+  background-color: var(--openapi-code-red);
+}
+
+.patch>.menu__link::before {
+  content: "patch";
+  background-color: var(--openapi-code-orange);
+}
+
+.graphql {
+  height: 100vh;
+  width: 100vw;
+}

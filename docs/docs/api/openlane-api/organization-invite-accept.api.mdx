@@ -1,0 +1,71 @@
+---
+id: organization-invite-accept
+title: "OrganizationInviteAccept"
+description: "Accept an Organization Invite"
+sidebar_label: "OrganizationInviteAccept"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1tvIjcU/iuuX9pKhIHs9iKemkSoQqq6VZJVHyKEzIwBJ4Pt2h5mWTT/vefYc4UJYVft276Ax+fic75z8fGBJtzGRmgnlKQTehPHXDvCJPlg1kyKzwwJZCZ3wnE6oEpz47dmCXC3eQJLkAdGw//JuHW3KtnTyYHGSjouHS6Z1qmIvUz0bPHUA+Wf2Fan3OLaZqDD+uWOpRnHxaN64Wie8/9FUQyojTd8y5CoDVrlRBAvWQ/U7TXIUuuMkGuKIuWOWj7zGG10wqW4EUy/Dxaj9gLtt1pJG3Rej8b/gRP1njMZH9DMcrMQCOP4+t17MAfcESl8wnILfGyNtv3N01htOXGK7FVmiOQ5US3YvwPuZyUkTxaw3dFnlPeOJVsh4ZP50xeuhLLzif6uwOVNTe5+A9zAHFKkWg1CNBYlqkvODDfnY9M14SRENQR9FGOUeZ2yiFXCe8lH4PRw1GD30I5g6ePwKPcQasT6aE16VPAp0MMkEtuw9shmcseNWAme9IvXefU1JaDTfQhhty1U9gLh/Wh0QS00GXAxYzdVjuIpQMka0wtDgkaeCHx1gpyNxXmwTwA9B/EUzXgV4VuWkFYHOkvGIFzSkL4F4QuD8FGyzG2UEZ/hqDfpA/rTt1r4P8IwAweNZCl54AaOJJ77CxiRbcWy1APdlfBWWR5nRjgA7ulQ3VuTp3kxBwPZGrx/ou0rls7xjoC449265uiHZm4DH5Go5iLrDbBeY/fED5rLlElObv6alXYCf2bwpt84p+0kipgWQ7fhqmQdChXtxuDHBbrID6mKWfpjRyeo9LsbZd1k/MvPo1+9vnnj+gOmWkiWCoDjw279PsGMh5wtc3VA4Iv4G4psM+vIkhNGYMQRiTeqHhe8/mYsqFMBzcMIKdR7jaeuUpWH6aCsLX/QXZminc2Pb6EWtEZ1lTaDzaWiJbt3AcjeMMMZhv4e/kgYYYCcG4w8DGj4X21Xt/elp1XzbFMpAZbCT9oy3OK4miV3Skooojc1D3OeplcvUuUyCjquoO2sxDoLg3sTio5ebwQ2ovtmcJ+GgbY9gDetQsiVqnoai32pVQOszbRWxv3WtQwOlsznRJXGJ3VwJHBS75Xg99YnGxadANwJpBgBTrGGSQ8nZeiGO5FgZlqBHsB7JiGc2T0SYT4i2ELNisWcrJQJX+ADeEZy4TY+x+ta0ylzwLUdkseNCAfDX/s4qAFQmpDlniwViIuqLfljP5UfcSqgjiwKVAeeOw3AgQuCwxMEoS2Ru9EMCotcD0cn2OV5PmSePITmFZWyNvpjdjf982F6hTJF04HrA3GBPr0bjocj8qB5DC0+FDumOXa1AP4O6EGHhrayZbJlV89jkdRPwU4MW5fgm4/NMk8dQBgBLiLcQsY/EEIHfqJlB4bWhs0Odw6HJbMc6qQocBuy2WCnh+WOGcGW6D40exCAevad/0BfOLDQu2DZ1SOeO6gebqdXNTbmIFH7+Dpv+/L4ffoIvMvyTbz1LY4almObgl//9FM6QI99B/cOFMK0zsJrMKjEUsU+0b6GqzZbX2c1icl9y0BAx3P4ggaEBqUnZSeag/J/AfbwnDg=
+sidebar_class_name: "get api-method"
+info_path: docs/api/openlane-api/openlane-openapi-3-1-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OrganizationInviteAccept"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/invite"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Accept an Organization Invite
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"Token":"token"}}},"schema":{"properties":{"Token":{"type":"string"}},"type":"object","title":"InviteRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"user_id":"1234","email":"","message":"Welcome to your new organization!","joined_org_id":"1234","role":"admin","access_token":"access_token","refresh_token":"refresh_token","session":"session","token_type":"bearer"}}},"schema":{"properties":{"access_token":{"type":"string"},"email":{"type":"string"},"error":{"type":"string"},"error_code":{"type":"string"},"joined_org_id":{"type":"string"},"message":{"type":"string"},"refresh_token":{"type":"string"},"role":{"type":"string"},"session":{"type":"string"},"success":{"type":"boolean"},"token_type":{"type":"string"},"unverified":{"type":"boolean"},"user_id":{"type":"string"}},"type":"object","title":"InviteReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"401":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Unauthorized"}}},"description":"Unauthorized"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

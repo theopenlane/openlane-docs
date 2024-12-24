@@ -1,0 +1,71 @@
+---
+id: organization-switch
+title: "OrganizationSwitch"
+description: "Switch the user's organization context"
+sidebar_label: "OrganizationSwitch"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV91v2zYQ/1cIvmwDHMtO9tHkaUmWFh62pYjTbUUQGJRES2xkkiMpO67h/313pCRLseM4Q/fWPMQU7/t3vDtyRVNuEyO0E0rSMzpeCJfkxOWclJabbyxRJmNSfGbIQBIlHX90tEeV5sbvjVIQu24xBRXAYvg/JbfuQqVLeraiXlY6XDKtC5F47uiTRcMryh/ZTBfc4tqWScKtX85ZUXJcOGYy7iZtdyYCbQ+Gv769/Xj68eL3X87fnrz78/j03fjN3yeDwSldr9c9apOczxiq0Aa9diIYeU4hUJYaTFLrjJAZRR3Vjoo/8QSjd8IVvIGrHf1NCBpNrxECq5W0weDxYPAFcGj2nCl5jzL/NXHqgWP+Op9ofwou5A25+w3YAHNIfL2C2JA2qSKOOTPc7Aey68IWfD3KjVHmecokUSnfSX7i/g6OJoBdtA16dTRKFZxJJLaj3CFbyjk3Yip4ukv8lSdCF8uAYLfWav+A8P1BR2OTgIMZu5l6ArQAJRlmF5FGJ7cE/nPm9mL/SnD3wX2FbjyL8AVLSasg95IxCcOvSfjySfggWelyZcRnMPUivUd/+FoL/0caRhCgkawgY27AJPHcr2BEtikrCw90VyJ4xTII8Y5iMiEdVRrofY/OOKQXJ7VWFv3VzOXwFdn6omC9IZR+qvlac1kwycn5+1HlD/CXpgBa7py2Z1HEtOiDSVWx9oWK5kPw9wBd5NtCJaz4rqMTVPrdHLw9G/704+CN13ePfialEW45xiMVDkU1H7cgufD7pAtGz9+r/OQhs9I6EnPCCEx2kXqnmqns9W+mb5NydA8zoVDvMVqdFmoRhnBVQ97QZXUUO5sfXkItaI2aatzcHw4Vrdh9CED2jhnOMPc38EPCTQHIC4ARA/oLf+vteiofai3A1a6IAMva305luMvhapReKimhWF7U3F/wojh6kGoho6DjCNrLVGRluOxuUtHR653AhnOzufJehXvc3qvrpkcIOVV1M2OJrzHoWqLw1wStlXE/d10FTyTzh6Q+11uF8URgq9BrQbjk4+nDKhSQCAJnjgCnyCRP4UwSaINzkeJRtQJDIkymhDO7RCK8Egj2TjNlCSdTZcIXxACREajw8Jhoik8XzAHXrE9ucxEMw0/bXOyfHimJlyRWIC7qfuTNPlYfSSGgsCwK1Ab3WQNwYDJwuIojtBVy55pBpZHj/mALu8Vi0Wee3Ie0RZWsjX4bXV79Mb46Qpn1pvU2BnGBMZ30h/0BGWueQG8P1Y/nHttcAH8O9KADu+KMyZZf7dsjaZ5TneS1xt7hb7bq6OJXBMiIMIAw7lXVlO9o1ZSh22H/w53VKmaWQ+ms17gNB9zAdLyD5ZwZwWIE4O4eNOVQ4tgLoYs/cGChl8HFo1u026ufMNtTGnt1kDiHTqDdXt72QHl/Pb4F5rh6Yc5826OGLbB1wX8YTdgLAvrYi3BvRSFTWcky5A068e9fIZVIgA==
+sidebar_class_name: "post api-method"
+info_path: docs/api/openlane-api/openlane-openapi-3-1-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OrganizationSwitch"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/switch"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Switch the user's organization context
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"target_organization_id":"01JFTY9YBMDAF3GV29GS8X3009"}}},"schema":{"properties":{"target_organization_id":{"type":"string"}},"type":"object","title":"SwitchOrganizationRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"access_token":"access_token","refresh_token":"refresh_token","session":"session","token_type":"bearer"}}},"schema":{"properties":{"access_token":{"type":"string"},"error":{"type":"string"},"error_code":{"type":"string"},"refresh_token":{"type":"string"},"session":{"type":"string"},"success":{"type":"boolean"},"token_type":{"type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"SwitchOrganizationReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"401":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Unauthorized"}}},"description":"Unauthorized"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

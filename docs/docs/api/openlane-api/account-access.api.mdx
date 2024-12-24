@@ -1,0 +1,71 @@
+---
+id: account-access
+title: "AccountAccess"
+description: "Check Subject Access to Object"
+sidebar_label: "AccountAccess"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v2zYQ/lcIvmwDHMtO027w0xLXDxnWpIhTrEEQFLREW2xkUiMpq67g/713JCVLtud4QAfsoS+2RB7vx8e7704VTbiJtcitUJKO6Djl8TOZFrPPPLbkMo65McQqcusWaI+qnGuGwtcJiIOAKqT1crCr+d8FN/ZKJWs6qmispOXS4iPL80zE7mT02aCtivIvbJln3OCzKbwOeFyxrOD4oJxRZ2gw/ONi8vHt63fv3gzGHy8ebh5uBm8nk1cPQ/TJyd2vczhFlV4wKb46S86jjIXYYiY/rQQv6Waz6VETp3zJ0EyuMSgrvCNboxW1XqWxWsgF3XQtHdjeGjuwaYpjh0EgrKgaaitsxndBvvMIYwzOoMmVNN7z88HgO4DerFld8B5lWaZKnvjXo8A1kk1sM6UyziQGz7VW+iAsbudTrJLDkLZc3NdayBXXYi4OWz0d0jxb+6ToFkNtGzYuTsJ2C83Jgl0Md2AQoGTBtU8tdHLvwP8C12NIT9CNf0T4iiWkldFHt/EShj8u4ftfwgfJCpsqLb6CqRf3e/T1j1r4L67hGgLUkmVkyjWYJE76Xwii2JwVmQO6e8J5ZXhcaGEBuMeKzjjTAObo8WnzBA6yBUT/SJmnRQpLSw5Xjp03VwZjyJlN4S0KIvjvW75xThintWv1NucyY5KTy/fXwVeQL3QGe6m1uRlFEctF36ZcBdG+UNFqCLGcoIv8nKmYZb90dIJKt5qC16Phr28Gvzl9T9vwp5huPmFqEHaNXbl1glkPeRvytUfgDUahZy7JsjCWzDhhBNqmSJxTboeG9uhyxGtv0gHdczME6j1Hq3NomL51hvpyhsYhTTuLH15CzWuNmkp1o88c5oP01KNB3IUA284xzRnmwB38kebGS4ARA/oL/+tlTHtE4FRrHq52tXhYNm7ElMJVGz5dJ2MlJRTSi5r7Jc+ys2epShl5HWdAPXOxKHQ9Dda22nqdE0hGd9vhdeKHpJ0hNDDGzsDZrLZGzWatM/S1KEfIuaq5kcWuZIEEReamjjxX2v7ejQ50Sebyqi6FvVraObDHG/XBn4xLWCxcAXdHIE0JSIqF5AnO+sCqK5FgdhuBKBAmE8KZWeNmYThBKtZzFnMyV9q/QQwQGSmFTV2dNPWaAyYgteyT+1R4w/DXNgd1BEoTMluTmYLjoqY3Z/ZLeIkzAbXovkVqg8esATjQaDiMxghtQO4yZ1Cc5Lw/2MOuLMs+c9t9+ICIwlkT/Xk9ntxMJ2d4ZrNl8sYgPmBMr/rD/oBMcx5Dq/CEgaWCzOjBX8G+14GEumSy7ZfnVNJ8RnXurdVAX/48CwluAbcIwBC+hWGoVaDwLcv3aKhdYEfkS9yrqhkzHEpts8FlKAiNDQMeV0wLNsPooWfAAaAE10Aq+szX6Jp38syleq/+ntjv+Mjt/gS6n9ujsu1G9P52eg/Cs/BtuXQ0STUrsfTgF9occoeHHrkL1yoK17Qo2AJlvU4sd+Sadjuvqbppi80Wk+uWhwCPk7hH9gKIeiGUwGZPoPwb+RZW8Q==
+sidebar_class_name: "post api-method"
+info_path: docs/api/openlane-api/openlane-openapi-3-1-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AccountAccess"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/account/access"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Check Subject Access to Object
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"objectId":"01J4EXD5MM60CX4YNYN0DEE3Y1","objectType":"organization","relation":"can_view"}}},"schema":{"properties":{"objectId":{"type":"string"},"objectType":{"type":"string"},"relation":{"type":"string"},"subjectType":{"type":"string"}},"type":"object","title":"AccountAccessRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"allowed":true}}},"schema":{"properties":{"allowed":{"type":"boolean"},"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"AccountAccessReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"401":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Unauthorized"}}},"description":"Unauthorized"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

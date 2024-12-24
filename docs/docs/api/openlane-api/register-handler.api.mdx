@@ -1,0 +1,71 @@
+---
+id: register-handler
+title: "RegisterHandler"
+description: "Register creates a new user in the database with the specified password, allowing the user to login to Openlane. This endpoint requires a 'strong' password and a valid register request, otherwise a 400 reply is returned. The password is stored in the database as an argon2 derived key so it is impossible for a hacker to get access to raw passwords. A personal organization is created for the user registering based on the organization data in the register request and the user is assigned the Owner role"
+sidebar_label: "RegisterHandler"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWG1v2zYQ/iusvmQDHNtJu7d8WlJkWIBhKeIM+xAEASWdJTYUqZGUVc/wf98dqdfYdbOg+7QEaELxeHcPH5L30k2Ugk2MKJ3QKjqLbiAT1oFhiQHuwDLOFNSssjglFHM5sJQ7HnMLrBYu9zO2hEQsBaSs5NbW2qQTxqXUtVCZX+DVnWZSZ2REs+sSlOQKpuw2F5aBSkstlGMG/qqE8W6PrDNaZUedTcYV/mMrLkWKCxucpAHWTZhGR6YWiIuzd/M5Ckq5ZmjcgKuMgpR8QW8NJdZpg6Cf7ouje8W4ybQ6ZSkYscJFj7BmVjPhSFEUpbZWxBLYUht0mPPkMWwxA8d4koC19GV43Xm0U3bOSjBWKy6ZNhlX4m9OvJPJwHfq7XWUtbskHglaynTAOtIm4O0mnvLiSevsoR8EIzJkw09e14qWagnRJNKIzRu8SgcX4Vc0IMGgvLF4odN1dLaJEq0cKEdDXpZSJF539tHSPdpE8IkXpQRLY1t5QmiIp1cBDZbCWPegeIFf0YIbnqMLyfu5Xyr1iFNQcCHx0y7xe/0zotbt3REa5S27uKQQLn4TbbfbSWSTHBXJT2loX04EJI21TeTWJTnBO4bcRqgxxLNHPEC2R9qD2BGitJnR8UdIHEJ2wkkYUHwTiCXkW6LZllrZgPd0fvIVuO7mnKlgEtFVeBDE2Mnp23cDjnFY4DqeEbo/QSa6gOFrfUPg9SNQoHgpz2CMNp+XPCQ63c9xh2yPbLDpRhZrvNRckbBBvEetUit8WxS49mt2RL3sVDH+BJbGIbYFiwKMU8843p7kZy8cn8YTTjHQQoZP2l82Arl7fC89pIMHcZjuHUoPkXxJMD7L8AVP2eBRHRTTIfz0eghf/xDea7VEcvaeQC+bRN+9voH/gv4r3KChQmMBBl0yv/pfLKRlS15JT/RYw6OykFRGOCTu7h4x8Qw3fBfxChO0cs2hRPcUtl2uKddgxeR8vnY5fs3aQiUiU+SY9J96ahMPO/9w1eDD9ZWhZJU7V9qz2YyXYjquCmarE8T/DFvsG6kTLr8d2USTfjZHvGcnP3w//9Hbu++3vKArFi5JDNyA2aXows+zMR0TX3P5dMSKCmuzGLp6lkCFRNUkVX8vgvXuChA8OhlNdk99FYVFtgdCM9o0FeH75mqOJv/4EmvB6qxVAl/yLbEcyZ+r2iz3W0CxB4ZlbSgnMeiGuhjFNdLoawz62063qfq53gJdwxcSaNn6UlaFvE2jqxTjjcLH80XL0xqkPH5UulazYOMYw81SZFWojPujGNn1ICgA3fQl8mWoyQbFUBsixrVmPzssfrvJQXnbRxihlroNhTxxIx9VWWrjduvkxnD7Cnae0ROFnTDRKh5Zf1fpzYqEGjWDnRO0PYVmGERXIqWLbQUR4BsQ4HZNQiyoGEVes+RJaJ38F+6BOpyun+yeaim5w1VF0yaSY/wzdBf7ziZl8ZrF2AEGexTNvNtPzUciBT5D35G1Dg95o8PAzWERTtQ2zJ2XHN8lO53Od7ir63rKvXiKjdms0bWz367eX/6+uDwmnW0fuDuHNKA9vZ2eTOdsEbroECvolVBQDOSvUB5sUBQtuBrg6jr2vlMbndwgY7529//f7r6JWw7fxAwvugjViPFNWsjJd1GXkzHZUfqjuc2GoGHk3G5pGt2aJuevuBE8pht9d4+2cozwlAoxiSObocija3d8S54nbTe6W7RRqg4a58hs6Q6uHVYUH64Xt7g4bv5DovBZL8JDocyFv31Dq8vwnCgV0dwG46zKqtDjBpv08w8ocrAw
+sidebar_class_name: "post api-method"
+info_path: docs/api/openlane-api/openlane-openapi-3-1-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"RegisterHandler"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/register"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Register creates a new user in the database with the specified password, allowing the user to login to Openlane. This endpoint requires a 'strong' password and a valid register request, otherwise a 400 reply is returned. The password is stored in the database as an argon2 derived key so it is impossible for a hacker to get access to raw passwords. A personal organization is created for the user registering based on the organization data in the register request and the user is assigned the Owner role
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"first_name":"Sarah","last_name":"Funk","email":"sfunky@theopenlane.io","password":"mitb!"}}},"schema":{"properties":{"email":{"type":"string"},"first_name":{"type":"string"},"last_name":{"type":"string"},"password":{"type":"string"}},"type":"object","title":"RegisterRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"user_id":"1234","email":"","message":"Welcome to Openlane!","token":""}}},"schema":{"properties":{"email":{"type":"string"},"error":{"type":"string"},"error_code":{"type":"string"},"message":{"type":"string"},"success":{"type":"boolean"},"token":{"type":"string"},"unverified":{"type":"boolean"},"user_id":{"type":"string"}},"type":"object","title":"RegisterReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"409":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Conflict"}}},"description":"Conflict"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

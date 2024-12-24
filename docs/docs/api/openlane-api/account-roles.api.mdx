@@ -1,0 +1,71 @@
+---
+id: account-roles
+title: "AccountRoles"
+description: "List roles a subject has in relation to an object"
+sidebar_label: "AccountRoles"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1lvGzcQ/isEX9oCsg7HSQs91Xb04CIXbAeNYRgGtTuSGK/ILcmVogj6750ZcleHL6Vw3/IicTknP87FpczBZ06XQVsj+/Kd9kE4W4AXSvhq+BWyICbKC22Eg0IRmwhWKCMsE2VL2hIcE85y1HCcZbYy4Zx0INHBPxX4cGLzhewvZWZNABNoqcqy0BkLdr56sr6U8E1NSxLEta+yDDwvZ6qogBbRJtvp9v46Gnx5+/r9+zfd0y9HVx+uPnTfDgavrnrkEvNdLkqUktaNldHf2ZJcrVYt6bMJTBUpLB15H3Q0uVa/lCEK++C0GcvVts4HyDU6rEgHmPoH2dKGck4t6Dth/IjatUCDdtChgB2czyPIdDj2xJfoRzzSYbf7Arg3e8FVgBb4cvvXMlPmdqZhjn7REnJNLqoK/28LO2YaOHnzJOrgnHUPgsWU28zmj0Buk8s/AndzuEQaWtSiDBErMwOnRxryh+h730VZLGKYbadWbRoJR3tdyhqvvRm3gd0BTqOSMd4Ghwg5+XI38ZKwPgX0gNx4FOETlYuNVHiSTJfQ+3kJL38Jn42qwsQ6/R1NPUtvydc/c+H/uIYzPKAzqhAX4NCkYO4fYCS2kaoKBnpbgr3ykFVOBwTueimHoByC2b++Wd2gg2rMzUHFqihxawp45dS1S+vpDKUKE/zqJJaOS9OCZx88K902+rEEUygD4vjTWXIV+StXIG0SQun7nY4qdTtMwCbWtradWQ+Psocu8WthM1X8tqUTVfLuBJ3u935/0/2D9d2sT39B0RbjpcZg19gJ7wsKegzbFK4tgV84R92BEdMKR64h4LyF7Vbn7BRTZGqZHCJRexMN5B4PJaT3kKyOCjtnR+r0YkOnKUq3Nj8/h1rU2mkSlee4Ec4Vk31FEzsfAcnsmANFIXCOf0LFHGnJOcJIB/qb/uttinpCYF9rEa7NZImwrHg4NZqTjVZn+ak1BvPoWc3tORTFwZ2xc9OJOg6w8oz0uIqz7voqtvSyE1SLztdz7yAOVzvzayoYO7Nqs7sxTl7Xuzc74+JG0dFmZOvqqDJOWiyDuuC5oyytC39uHxBNGMWhVWfDvXTaEbhXOWrBXzzHLOWuzujh4EAgpx4byOmtgHV1pnMKcK8JCHw85AKUXxCx8iCoGLuRykCMrItfeAY8mZjrMOFUaVK2RFiQa9oWlxMdDePfpjlMJVSai+FCDC2K67rAsdlv6SMrNKajJ4Ha4FPWEBxsNYBTNUGbkDsuFeanOGx372E3n8/bisltfH50kqzvvDs7HXy4GByQzGpdyxuDtKAzvWr32l1xUUKGzSJLkdCSVBwj+DOkRx1UUqfKbPoVq6qo32Bb17bRQf/Tay9FfUAkOwiPjm2NDr9MZX1d+esRHQOXaiiRlsuh8oDpt1rRNiaJox6Cy5lyWg0JDmwjKIBlgnvKUt4BssjT6PYBx36rfpvcHwKo3kcJxAHK8CTvZm/69PHiEpmH6ak65dIpnaLXDf1i56N60jzyeG8p8d7GlRoTb9RJJYDqz2aHr8t30ykbkjKLDQ8RHua4pIqGELXSUVKFo4fUv3TeeZQ=
+sidebar_class_name: "post api-method"
+info_path: docs/api/openlane-api/openlane-openapi-3-1-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AccountRoles"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/account/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+List roles a subject has in relation to an object
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"objectId":"01J4EXD5MM60CX4YNYN0DEE3Y1","objectType":"organization"}}},"schema":{"properties":{"objectId":{"type":"string"},"objectType":{"type":"string"},"relations":{"items":{"type":"string"},"type":"array"},"subjectType":{"type":"string"}},"type":"object","title":"AccountRolesRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"roles":["can_view","can_edit","audit_log_viewer"]}}},"schema":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"roles":{"items":{"type":"string"},"type":"array"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"AccountRolesReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"401":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Unauthorized"}}},"description":"Unauthorized"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,9 @@
+{
+  "label": "Security",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Security resources for Openlane."
+  },
+  "collapsed": false
+}

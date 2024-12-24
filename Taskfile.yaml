@@ -1,0 +1,95 @@
+version: '3'
+
+env:
+  ENV: config
+
+tasks:
+  local-setup:
+    desc: Setup the project dependencies
+    cmds:
+      - task: install-bun
+      - task: install-precommit
+      - pre-commit install && pre-commit install-hooks
+      - pre-commit autoupdate
+      - pre-commit run --show-diff-on-failure --color=always --all-files
+
+  install-bun:
+    desc: install bun package manager
+    cmd: curl -fsSL https://bun.sh/install | bash
+
+  install-precommit:
+    desc: install pre-commit
+    cmd: brew install pre-commit
+
+  build:
+    dir: docs
+    desc: build all apps and package
+    cmd: bun run build
+
+  install:
+    dir: docs
+    desc: install the dependencies listed in package.json
+    cmds:
+      - bun install
+
+  reinstall:
+    dir: docs
+    desc: reinstall the dependencies listed in package.json
+    cmds:
+      - task: clean
+      - task: install
+
+  clean:
+    dir: docs
+    desc: clean all apps and package
+    cmd: bun run clean
+
+  generate-api-docs:
+    dir: docs
+    desc: generate api docs
+    cmd: bun docusaurus gen-api-docs all  
+
+  clean-api-docs:
+    dir: docs
+    desc: clean api docs
+    cmd: bun docusaurus clean-api-docs all
+
+  regenerate-api-docs:
+    dir: docs
+    desc: regenerate api docs
+    cmds:
+      - task: clean-api-docs
+      - task: generate-api-docs
+
+  generate-graphql-docs:
+    dir: docs
+    desc: generate graphql docs
+    cmd: npx docusaurus docs:generate:graphql
+
+  generate:
+    dir: docs
+    desc: generate all docs
+    cmds:
+      - task: regenerate-api-docs
+      - task: generate-graphql-docs
+
+  dev:
+    dir: docs
+    desc: develop all apps
+    cmds:
+      - task: install
+      - bun dev
+
+  dev:docs:
+    dir: docs
+    desc: develop docs
+    cmds:
+      - task: install
+      - bun dev --filter={docs}
+
+  precommit-full:
+    desc: Lint the project against all files
+    cmds:
+      - pre-commit install && pre-commit install-hooks
+      - pre-commit autoupdate
+      - pre-commit run --show-diff-on-failure --color=always --all-files

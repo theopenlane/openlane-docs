@@ -1,0 +1,71 @@
+---
+id: verify-subscriber-email
+title: "VerifySubscriberEmail"
+description: "Verify an email address for a subscription"
+sidebar_label: "VerifySubscriberEmail"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV91v2zYQ/1c4vWwDFMvJtm7w09LAGAIM21Bn3UMRDJR0ttnQJEdSdj3D//vujpItxWnqAN1bn0TxPvnjfXGX1RAqr1xU1mST7C14Nd8KaQSspNJC1rWHEMTceiFFaMojc55ZB17S+rY+iM4SSwl+SgqQy0kvVxDBh2zybpcpMvNPA36LNIMU/I32AUhhqJZoNpvsMudJeVQQ6O+O6biIW0f8IXplFtl+n3c7tnwPVUQVUUUNj71hh98AWg0Rpe7zDA/lrAlJ/dV4TJ/Kmggm0lI6p1XFZyveB8u24YNcOZ0kQlNVCAst11I3MNiLvoE8W+FaLsiVvhMCjcyVX0GdC23tAx6DsN1IX4toRQBT09bWNqJxtYwQvkKH9x+HBry3/glo8kT5u7I1PEk++PcErXe8llZaq0EaIjZmTdgqqJ+iv/BKnN6m8w3DsHMACVfjyzMu5wjP2YxDHB/hpFDJAjw54NnJzwf85wT3Obin5MZHEb7xgNFVP0vKs+/Pyowv4L8Q/NeyFsdy9Dw5z374cgn/xyXc4gG9kVrMwKNJwdwvYCS2uWw0Az2UYK8CVI1XEYF7hw0nygX1vyx0/TG7pxocl5Z65wIid8q4xJ/iwFMwFNQoA5tOHXRo63cHRksD4vqP29ZD5G+8RtoyRhcmRSGdGsUl2JZ1pGyxvsQTnKFLfKNtJfW3A52okneXNsTJ5Y+vxj+xvvvjoWcUZClMSpAe/ClIr3lfyAY9M7GN0lzgn+B5QKyaEEUJOHdgj1U1OzWYFDgykvZDEJB7dDeW9F6R1bm2G3aEdqxX/7KhmzY4B5t/fgq1pLXohCCj5JjjMLE8V7Rl5yMgmR3DektB8AY/QqbUyLMNwkgH+ou+3TYFOyFwrrUEVz9HEix7Ht6M4hyj1W19Y43B9Pmk5tEGtL54MHZjiqTjgmeaRZNmweNVDPSyE8rMbVehZMWJw2Mmd3znrI8/D60dR8QuNE9i+5HASfZ2gl8HDiBKJIVYCgwbgZxqYYBHL6xta1VTtAVFcx7OwLUAGbZEbAIIKoh+LivgYZj/8Aw0rW1UXHLcHvLHaRmRazUSd0uVDOOnbw7jGpXWotyK0qK46ooMm/3Q/lRaYW4EEugMPmcNwcFyDzjXErQtctdOYrKIq9H4BLvNZjOSTB5Zvyha2VD8ensz/W02vSCZ/bGeHgzSgs703ehyNBYzBxUW7JTAFLpUqRL4a6QnHQ5LxUqanl/tU+P4YBDdi2Fwgb1+9rLXSRuFEcEsECGVugudf9dW2n41Zq+p1mIRo7JG1N2ulAEwI/Z72k6PFq7AKshSU4eaSx1w2H+Abe8Z0z4JMq6Ia+kVMVMbQAeWmORUDVFLErrGzHaxJ3XSs/f9TvHL9A5T6T/smcz4
+sidebar_class_name: "get api-method"
+info_path: docs/api/openlane-api/openlane-openapi-3-1-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"VerifySubscriberEmail"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/subscribe/verify"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Verify an email address for a subscription
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"query","name":"token","schema":{"properties":{"Token":{"type":"string"}},"type":"object","title":"VerifySubscriptionRequest"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"message":"Subscription confirmed, looking forward to sending you updates!"}}},"schema":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"message":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"VerifySubscriptionReply"}}},"description":"success"},"201":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Created"}}},"description":"Created"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

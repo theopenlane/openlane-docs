@@ -1,0 +1,71 @@
+---
+id: resend-email
+title: "ResendEmail"
+description: "ResendEmail accepts an email address via a POST request and always returns a 200 Status OK response, no matter the input or result of the processing. This is to ensure that no secure information is leaked from this unauthenticated endpoint. If the email address belongs to a user who has not been verified, another verification email is sent. If the post request contains an orgID and the user is invited to that organization but hasn't accepted the invite, then the invite is resent."
+sidebar_label: "ResendEmail"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv4zYQ/isEL9sCjpykT+TUJM3BaNFdJCl6CIKClsYWNzKpkpS1XsP/vd+Qkm0laeIC6akbBIk0M5zHx3lpLQvyudN10NbIM3lNnkxxtVC6EirPqQ5eKCMoEYrCkfdiqZVQ4sP7m1vh6K+GfIBMIVTVqpUHKTTO4Jg4PT4WN0GFxov3v4Dua2s8jYSxYqFCICdCSUKbugnCOhZoKjzNIrl2NocxbeaZuC21F/gNVpDxjSNIqMB6POX8qs3MOuhEECxXkXqgQsycXUAShMaoBkpN0LkK4CDG2moTMjFJ1oYBTqmyZh7tKdF4ONqWVpTKw2QAl4xYktMzTcUIoVtocB0lT04kfbAMOHdWaguoeshya4LSJuJr3XzycwSRxaJFjtgsNXsLN2K8kFJGf04WpgANHpl3obsoKjo4+dCIn80egfU5it7IkbQ1uahmUgwvHbzOvwtbrOTZWrKbOMWPqq6rLsDxR8/5spb0SS3qijw/+ybnK+PHpaoaivyo9Uzm5HLSWaWM0R5X/xNcgxcGBMq0lZvNZiR9XkKej+H24WLQSXGnZC3DqoZW6YNDXkg+0lHs9CPlAd4HHSoaxnSdAmITGw4vpWFUjAx9gxi3tOAaGskFntWcnUh1xHkTcybh/0qozln3TKijxPkztwU9y95afYa353THm1qLIjHMbEyfy8/xD4W4rlYpsGE/6S2D8e1BWO9wOVhwCOAjgFDkNCcn482zk2+H+Fui+hLOV+zGPyJ8oQqxl+Evskfyuy+X8F9cwgQBOqMqcUMOJkWU/heCLDZTmH7s5/BE9CqOOR0A3N09fFJzBHwHLOexl8p7Lv9QWm7mPGPgd61Cibdx7DmFZBVskM89tvC+a8Pi/MOk8wvyjeO2XYZQ+7PxWNU6G3bs8fIEfh+gS3xV2VxVXw90QmWklvD27OSH749/jPrud6HecGql5JiScuSeQnMR6WJvtIMeJx9G5gMa7qLxPK4xxNGrdRGdihzZNeCYD0n79urZPb4Ry3pP2eqssm10hCnWdRP4skvJAfH311BLWsf9IYoDd4ZbKg892onHEMCOjjlSaZCj2lUqiJFsASMH9Af/78mc4ozAodYSXPuVkWDZxCXC6FhZ/DQpLq0xKJpXNWctVdXRg7GtGScdR2gzMz1v0k6yu4qB3ugEN57r3YJylSbz/qKxaw28FPY9TOVhINTUtXXh8RIykkbFnOjT+EkdPN5aHtd3f/Cdj8nGRaeBu0CKCUjquUn7HLrfUhecmV5zBHH3I+VXzMT+J7hlupnKSWCzTW+IAZGJVocy5vi21upKBd5/u0WZDePfvrlpXCoLMV2JKbbVpI/bUDT7qXvJK406imtvb/AlawAHAwELecS/Q+68VigscZodP8GubdtMRXaGTXbcnfXjXyeXV7/dXB3xmc2u424N8gPH9E12kuGDoqZ8u2dzmnNXS+AvwU86uAkulNnzKy0rol9yB7e2N+a+fAD9Pz6AugYTkPtjJLRO64KLHxlpdPJ4jaMTM4mnFFPW66nyhAa32TAZYbhuJC+V02rKeXt3D00lGjFPLMzaB4KIvEwJdnTLdkf9p8PTnYonajpxHmN6UXZ/7HMyQnjafbUt4nCSTrU8YPAXiwR37FQ0PDGYtpYosHmTPlaSTv75G6FwqS8=
+sidebar_class_name: "post api-method"
+info_path: docs/api/openlane-api/openlane-openapi-3-1-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ResendEmail"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/resend"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+ResendEmail accepts an email address via a POST request and always returns a 200 Status OK response, no matter the input or result of the processing. This is to ensure that no secure information is leaked from this unauthenticated endpoint. If the email address belongs to a user who has not been verified, another verification email is sent. If the post request contains an orgID and the user is invited to that organization but hasn't accepted the invite, then the invite is resent.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"email":"cercei.lannister@theopenlane.io"}}},"schema":{"properties":{"email":{"type":"string"}},"type":"object","title":"ResendEmailRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"message":"Email has been resent"}}},"schema":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"message":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"ResendEmailReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

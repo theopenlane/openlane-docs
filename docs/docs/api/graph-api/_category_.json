@@ -1,0 +1,9 @@
+{
+  "label": "GraphQL API",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Working with the Openlane GraphQL API."
+  },
+  "collapsed": true
+}
