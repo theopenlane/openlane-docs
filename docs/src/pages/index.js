@@ -11,8 +11,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src="img/logo.svg" alt="Openlane Logo" width={100} />
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <img src="img/logo_vert.svg" alt="Openlane Logo" width={300} />
       </div>
     </header>
   );

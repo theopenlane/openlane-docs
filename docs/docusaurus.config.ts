@@ -66,6 +66,11 @@ const config: Config = {
             to: "/graphql",
           },
           {
+            to: 'blog',
+            label: 'Blog',
+            position: 'right'
+          },
+          {
             href: "https://github.com/theopenlane",
             label: "GitHub",
             position: "right",
