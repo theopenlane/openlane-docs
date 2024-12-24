@@ -1,0 +1,9 @@
+{
+  "label": "Risks",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Risks of the business that control objectives are designed to mitigate."
+  },
+  "collapsed": true
+}

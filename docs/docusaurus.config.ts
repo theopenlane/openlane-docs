@@ -151,16 +151,36 @@ const config: Config = {
 
       },
     ],
-    // [
-    //   '@docusaurus/plugin-content-docs',
-    //   {
-    //     id: 'custom-docs',
-    //     async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
-    //       const sidebarItems = await defaultSidebarItemsGenerator(args);
-    //       return capitalizeSidebarItems(sidebarItems);
-    //     },
-    //   },
-    // ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "openlane-core-startup",
+        sourceBaseUrl: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/",
+        outDir: "docs/docs/01_quickstart",
+        documents: ["README.md"],
+        modifyContent(filename, content) {
+          if (filename.includes("README")) {
+            return {
+              content: `---
+sidebar_position: 2
+sidebar_label: Server Startup
+tags: 
+    - local
+    - development
+---
+
+# Server Startup
+
+${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")}`,
+              filename: `startup.md`
+            }
+          }
+
+          // we don't want to modify this item, since it doesn't contain "README" in the name
+          return undefined
+        },
+      },
+    ],
   ],
 
   themes: ["docusaurus-theme-openapi-docs"],
@@ -170,21 +190,10 @@ export default async function createConfig() {
   return config;
 }
 
-function capitalizeSidebarItems(items) {
-  const result = items.map((item) => {
-    if (item.type === 'category') {
-      return { ...item, items: capitalizeSidebarItems(item.items) };
-    }
-    return item;
-  });
-
-
-  return toTitleCase(result);
-}
-
-
-export function toTitleCase(str: string) {
-  return str.toLowerCase().split(' ').map((word: string) => {
-    return (word.charAt(0).toUpperCase() + word.slice(1));
-  }).join(' ');
+// excerpt grabs a substring from a string between two substrings
+// generally used for grabbing a section of a remote markdown file
+function excerpt(str: string, startString: string, endString: string) {
+  const indexStart = str.indexOf(startString, startString.length)
+  const indexEnd = str.indexOf(endString)
+  return str.slice(indexStart, indexEnd)
 }

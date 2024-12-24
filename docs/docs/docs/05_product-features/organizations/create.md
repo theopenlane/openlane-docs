@@ -4,11 +4,15 @@ tags:
     - organization
     - openlane
     - compliance
+    - cli
+    - api 
 ---
 
 # Create a new Organization
 
 ---
+
+Organizations are the top level hierarchical structure and control permissions to objects. Organizations can  be created within the Openlane Console as well as through our API and CLI. 
 
 # Through the Console
 
@@ -17,28 +21,13 @@ tags:
 
 # Using the CLI
 
-1. Install the `openlane` cli to get started
+:::tip
+See the [quickstart](/docs/docs/quickstart/cli) guide on setting up and logging into the Openlane CLI
+:::
 
-```shell shell
-brew install theopenlane/tap/openlane
-```
-
-1. Authenticate using a token or username/password login:
-
-```shell shell
-export CORE_TOKEN=tola_REDACTED
-```
-
-```shell shell
-export CORE_PAT=tolp_REDACTED
-```
-
-```shell shell
-openlane login -u meow@example.com 
-```
-
-1. Create an organization using the `organization` cli command:
+1. Create an organization using the `organization` cli command. The `name` field is required and must be unique, everything else is optional and can be changed at a later time, if desired.
 
 ```shell
-openlane organization create --name "My New Organzation --display-name "my-organization"
+openlane organization create --name "My New Organization --display-name "my-organization"
 ```
+
