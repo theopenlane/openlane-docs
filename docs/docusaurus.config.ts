@@ -123,7 +123,7 @@ const config: Config = {
         config: {
           openlane: {
             specPath: "http://localhost:17608/api-docs",
-            outputDir: "docs/api/openlane-api",
+            outputDir: "docs/api/rest-api",
             downloadUrl:
               "https://api.theopenlane.io/api-docs",
             sidebarOptions: {

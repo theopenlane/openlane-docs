@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "description": "Interacting with the Openlane API",
-    "id": "api/openlane-api"
+    "id": "api/index"
   }
 }

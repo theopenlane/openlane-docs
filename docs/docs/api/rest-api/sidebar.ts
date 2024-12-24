@@ -4,7 +4,7 @@ const sidebar: SidebarsConfig = {
   apisidebar: [
     {
       type: "doc",
-      id: "api/openlane-api/openlane-openapi-3-1-0-specifications",
+      id: "api/rest-api/openlane-openapi-3-1-0-specifications",
     },
     {
       type: "category",
@@ -12,25 +12,25 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "api/openlane-api/account-access",
+          id: "api/rest-api/account-access",
           label: "AccountAccess",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "api/openlane-api/account-roles",
+          id: "api/rest-api/account-roles",
           label: "AccountRoles",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "api/openlane-api/account-roles-organization",
+          id: "api/rest-api/account-roles-organization",
           label: "AccountRolesOrganization",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "api/openlane-api/account-roles-organization-by-id",
+          id: "api/rest-api/account-roles-organization-by-id",
           label: "AccountRolesOrganizationByID",
           className: "api-method get",
         },
@@ -42,37 +42,37 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "api/openlane-api/forgot-password",
+          id: "api/rest-api/forgot-password",
           label: "ForgotPassword",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "api/openlane-api/login-handler",
+          id: "api/rest-api/login-handler",
           label: "LoginHandler",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "api/openlane-api/password-reset",
+          id: "api/rest-api/password-reset",
           label: "PasswordReset",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "api/openlane-api/refresh-handler",
+          id: "api/rest-api/refresh-handler",
           label: "RefreshHandler",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "api/openlane-api/register-handler",
+          id: "api/rest-api/register-handler",
           label: "RegisterHandler",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "api/openlane-api/organization-switch",
+          id: "api/rest-api/organization-switch",
           label: "OrganizationSwitch",
           className: "api-method post",
         },
@@ -84,7 +84,7 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "api/openlane-api/organization-invite-accept",
+          id: "api/rest-api/organization-invite-accept",
           label: "OrganizationInviteAccept",
           className: "api-method get",
         },
@@ -96,13 +96,13 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "api/openlane-api/resend-email",
+          id: "api/rest-api/resend-email",
           label: "ResendEmail",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "api/openlane-api/verify-email",
+          id: "api/rest-api/verify-email",
           label: "VerifyEmail",
           className: "api-method get",
         },
@@ -114,7 +114,7 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "api/openlane-api/verify-subscriber-email",
+          id: "api/rest-api/verify-subscriber-email",
           label: "VerifySubscriberEmail",
           className: "api-method get",
         },
