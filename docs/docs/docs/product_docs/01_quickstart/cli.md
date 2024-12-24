@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 tags: 
     - cli
     - api
@@ -28,7 +28,7 @@ Download the CLI directly from [github releases](https://github.com/theopenlane/
 ## Authentication
 
 :::info
-Oauth login is not currently supported using the cli. You must use an [API or Personal Access Token](/docs/docs/security/authentication/developer-tokens) instead.
+Oauth login is not currently supported using the cli. You must use an [API or Personal Access Token](/docs/docs/product_docs/security/authentication/developer-tokens) instead.
 :::
 
 

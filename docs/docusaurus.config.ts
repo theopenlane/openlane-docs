@@ -51,9 +51,15 @@ const config: Config = {
         items: [
           {
             type: "doc",
-            docId: "overview",
+            docId: "docs/product_docs/overview",
             position: "left",
-            label: "Documentation",
+            label: "Product Documentation",
+          },
+          {
+            type: "doc",
+            docId: "docs/developer_docs/overview",
+            position: "left",
+            label: "Developer Documentation",
           },
           {
             label: "Openlane API",
@@ -156,13 +162,14 @@ const config: Config = {
       {
         name: "openlane-core-startup",
         sourceBaseUrl: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/",
-        outDir: "docs/docs/01_quickstart",
+        outDir: "docs/docs/product_docs/01_quickstart",
         documents: ["README.md"],
         modifyContent(filename, content) {
           if (filename.includes("README")) {
             return {
+              filename: `startup.md`,
               content: `---
-sidebar_position: 2
+sidebar_position: 3
 sidebar_label: Server Startup
 tags: 
     - local
@@ -172,7 +179,6 @@ tags:
 # Server Startup
 
 ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")}`,
-              filename: `startup.md`
             }
           }
 

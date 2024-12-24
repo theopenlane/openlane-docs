@@ -22,7 +22,7 @@ Organizations are the top level hierarchical structure and control permissions t
 # Using the CLI
 
 :::tip
-See the [quickstart](/docs/docs/quickstart/cli) guide on setting up and logging into the Openlane CLI
+See the [quickstart](/docs/docs/product_docs/quickstart/cli) guide on setting up and logging into the Openlane CLI
 :::
 
 1. Create an organization using the `organization` cli command. The `name` field is required and must be unique, everything else is optional and can be changed at a later time, if desired.
