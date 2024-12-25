@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-tags: 
+tags:
     - graphql
     - api
 ---
 
-# GraphQL 
+# GraphQL
 ---

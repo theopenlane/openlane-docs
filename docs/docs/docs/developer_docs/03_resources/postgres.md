@@ -1,10 +1,10 @@
 ---
 sidebar_position: 3
-tags: 
+tags:
     - database
     - postgres
     - psql
 ---
 
-# Postgres 
+# Postgres
 ---

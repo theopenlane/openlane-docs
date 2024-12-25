@@ -4,12 +4,11 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Compliance Modules',
+    title: 'Compliance Automation',
     Svg: require('@site/static/img/visibility.svg').default,
     description: (
       <>
-        Get started with our compliance modules, which are designed to help you
-        meet your compliance requirements.
+        Automate and scale your compliance program using our pre-built controls (or bring your own) and track their status - plus the progress against mapped frameworks. We support SOC 2, ISO 27001, NIST, and more (or customize your own!) and automate up to 90% of the work associated with them.
       </>
     ),
   },
@@ -18,9 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/document.svg').default,
     description: (
       <>
-        Openlane provides a simple and easy-to-use interface to manage your
-        policies and procedures along with templates you can import to get you
-        started quickly.
+        We simplify policy creation and management with templates, step-by-step policy builder to guide you through customization, and version control to track changes. Plus, we automate employee acceptance tracking and reminders to keep your business running smoothly.
       </>
     ),
   },
@@ -29,9 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/automation.svg').default,
     description: (
       <>
-        Openlane provides a simple and easy-to-use interface to automate your
-        questionnaires. You can create, edit, and delete questionnaires with
-        ease.
+        Streamline manual, repetitive, and time-consuming tasks with our questionnaire automation. We provide a library of pre-built questionnaires, the ability to create your own, and automate the distribution, collection, and analysis of responses.
       </>
     ),
   },

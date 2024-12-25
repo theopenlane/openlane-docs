@@ -9,12 +9,15 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 const config: Config = {
   title: "Openlane",
   tagline: "Compliance Made Simple",
-  url: "https://theopenlane.io",
+  url: "https://www.theopenlane.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
   presets: [
     [
       "classic",
@@ -22,6 +25,8 @@ const config: Config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.ts"),
           docItemComponent: "@theme/ApiItem",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -43,7 +48,7 @@ const config: Config = {
         },
       },
       navbar: {
-        title: "Openlane",
+        title: "",
         logo: {
           alt: "Openlane Logo",
           src: "img/logo.svg",
@@ -53,21 +58,21 @@ const config: Config = {
             type: "doc",
             docId: "docs/product_docs/overview",
             position: "left",
-            label: "Product Documentation",
+            label: "Platform",
           },
           {
             type: "doc",
             docId: "docs/developer_docs/overview",
             position: "left",
-            label: "Developer Documentation",
+            label: "Developers",
           },
           {
-            label: "Openlane API",
+            label: "API Specifications",
             position: "left",
             to: "/docs/api",
           },
           {
-            label: "Openlane GraphQL",
+            label: "GraphQL Explorer",
             position: "left",
             to: "/graphql",
           },
@@ -78,7 +83,7 @@ const config: Config = {
           },
           {
             href: "https://github.com/theopenlane",
-            label: "GitHub",
+            label: "Github",
             position: "right",
           },
         ],
@@ -95,7 +100,6 @@ const config: Config = {
             "nodejs",
             "php",
             "java",
-            "php",
             "json",
             "bash",
           ],
@@ -162,16 +166,16 @@ const config: Config = {
       {
         name: "openlane-core-startup",
         sourceBaseUrl: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/",
-        outDir: "docs/docs/product_docs/01_quickstart",
+        outDir: "docs/docs/developer_docs/01_quickstart",
         documents: ["README.md"],
         modifyContent(filename, content) {
           if (filename.includes("README")) {
             return {
-              filename: `startup.md`,
+              filename: `startup.mdx`,
               content: `---
 sidebar_position: 3
 sidebar_label: Server Startup
-tags: 
+tags:
     - local
     - development
 ---

@@ -22,7 +22,7 @@ const sidebars: SidebarsConfig = {
   fullApiSidebar: [
     {
       type: 'category',
-      label: 'Openlane GraphQL API',
+      label: 'GraphQL Definitions',
       collapsible: true,
       collapsed: true,
       items: [
@@ -34,7 +34,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'REST API Specification',
+      label: 'OpenAPI Specification',
       collapsible: true,
       collapsed: true,
       items: [

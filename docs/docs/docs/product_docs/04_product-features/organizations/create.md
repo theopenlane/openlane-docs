@@ -1,18 +1,18 @@
 ---
 sidebar_position: 1
-tags: 
+tags:
     - organization
     - openlane
     - compliance
     - cli
-    - api 
+    - api
 ---
 
 # Create a new Organization
 
 ---
 
-Organizations are the top level hierarchical structure and control permissions to objects. Organizations can  be created within the Openlane Console as well as through our API and CLI. 
+Organizations are the top level hierarchical structure and control permissions to objects. Organizations can  be created within the Openlane Console as well as through our API and CLI.
 
 # Through the Console
 

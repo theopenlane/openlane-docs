@@ -31,7 +31,7 @@ import Heading from "@theme/Heading";
   path={"/login"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -49,14 +49,14 @@ Login is oriented towards human users who use their email and password for authe
 <ParamsDetails
   parameters={undefined}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={{"content":{"application/json":{"examples":{"success":{"value":{"username":"sfunky@theopenlane.io","password":"mitb!","otp_code":"123456"}}},"schema":{"properties":{"otp_code":{"type":"string"},"password":{"type":"string"},"username":{"type":"string"}},"type":"object","title":"LoginRequest"}}}}}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
@@ -64,8 +64,7 @@ Login is oriented towards human users who use their email and password for authe
   label={undefined}
   responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"access_token":"access_token","refresh_token":"refresh_token","session":"session","token_type":"bearer","message":""}}},"schema":{"properties":{"access_token":{"type":"string"},"error":{"type":"string"},"error_code":{"type":"string"},"message":{"type":"string"},"refresh_token":{"type":"string"},"session":{"type":"string"},"success":{"type":"boolean"},"token_type":{"type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"LoginReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 
 
-      
