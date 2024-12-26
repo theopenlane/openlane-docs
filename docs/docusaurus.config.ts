@@ -190,6 +190,9 @@ ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")
   ],
 
   themes: ["docusaurus-theme-openapi-docs"],
+  customFields: {
+    pirschKey: process.env.PIRSCH_KEY,
+  }
 };
 
 export default async function createConfig() {
