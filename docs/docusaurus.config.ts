@@ -17,7 +17,7 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  themes: ["@docusaurus/theme-mermaid"],
+  themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       "classic",
@@ -28,11 +28,6 @@ const config: Config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
-        blog: {
-          showReadingTime: true,
-          onInlineAuthors: "ignore",
-          onUntruncatedBlogPosts: "ignore",
-        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -42,12 +37,16 @@ const config: Config = {
 
   themeConfig:
     {
+      mermaid: {
+        theme: {light: 'neutral', dark: 'forest'},
+      },
       docs: {
         sidebar: {
-          hideable: true,
+          hideable: false,
         },
       },
       navbar: {
+        hideOnScroll: true,
         title: "",
         logo: {
           alt: "Openlane Logo",
@@ -56,13 +55,13 @@ const config: Config = {
         items: [
           {
             type: "doc",
-            docId: "docs/product_docs/overview",
+            docId: "docs/platform/overview",
             position: "left",
             label: "Platform",
           },
           {
             type: "doc",
-            docId: "docs/developer_docs/overview",
+            docId: "docs/developers/overview",
             position: "left",
             label: "Developers",
           },
@@ -77,11 +76,6 @@ const config: Config = {
             to: "/graphql",
           },
           {
-            to: 'blog',
-            label: 'Blog',
-            position: 'right'
-          },
-          {
             href: "https://github.com/theopenlane",
             label: "Github",
             position: "right",
@@ -89,9 +83,15 @@ const config: Config = {
         ],
       },
       footer: {
+        logo: {
+          alt: 'Openlane Logo',
+          src: 'img/logo.svg',
+          href: 'https://www.theopenlane.io',
+          width: 160,
+          height: 51,
+        },
         links: [
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} theopenlane, Inc.`,
       },
       prism: {
         prism: {
@@ -137,7 +137,7 @@ const config: Config = {
         docsPluginId: "classic",
         config: {
           openlane: {
-            specPath: "http://localhost:17608/api-docs",
+            specPath: "https://api.theopenlane.io/api-docs",
             outputDir: "docs/api/rest-api",
             downloadUrl:
               "https://api.theopenlane.io/api-docs",
@@ -166,7 +166,7 @@ const config: Config = {
       {
         name: "openlane-core-startup",
         sourceBaseUrl: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/",
-        outDir: "docs/docs/developer_docs/01_quickstart",
+        outDir: "docs/docs/developers/developing",
         documents: ["README.md"],
         modifyContent(filename, content) {
           if (filename.includes("README")) {
@@ -194,6 +194,9 @@ ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")
   ],
 
   themes: ["docusaurus-theme-openapi-docs"],
+  customFields: {
+    pirschKey: process.env.PIRSCH_KEY,
+  }
 };
 
 export default async function createConfig() {

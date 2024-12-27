@@ -24,6 +24,8 @@
     "@apollo/explorer": "^3.7.0",
     "@docusaurus/core": "3.6.3",
     "@docusaurus/preset-classic": "3.6.3",
+    "@docusaurus/theme-mermaid": "^3.0.0",
+    "mermaid": "^11.4.1",
     "@mdx-js/react": "^3.0.0",
     "bufferutil": "^4.0.8",
     "clsx": "^2.0.0",

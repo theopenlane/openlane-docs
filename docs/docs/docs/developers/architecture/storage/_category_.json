@@ -1,0 +1,9 @@
+{
+  "label": "Storage",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Information regarding object and relational storage within Openlane"
+  },
+  "collapsed": true
+}

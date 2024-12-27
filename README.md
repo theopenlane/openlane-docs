@@ -34,7 +34,7 @@ tags:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Terminology
+# Tabbed tables are fun
 
 <Tabs className="unique-tabs">
   <TabItem value="Apple">This is an apple 🍎</TabItem>
