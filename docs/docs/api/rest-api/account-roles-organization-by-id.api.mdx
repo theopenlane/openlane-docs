@@ -31,7 +31,7 @@ import Heading from "@theme/Heading";
   path={"/account/roles/organization/:{id}"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -49,14 +49,14 @@ List roles a subject has in relation to the organization ID provided
 <ParamsDetails
   parameters={[{"in":"path","name":"id","required":true,"schema":{"properties":{"ID":{"type":"string"}},"type":"object","title":"AccountRolesOrganizationRequest"}}]}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={undefined}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
@@ -64,8 +64,7 @@ List roles a subject has in relation to the organization ID provided
   label={undefined}
   responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"roles":["can_view","can_edit","audit_log_viewer"],"organization_id":"01J4HMNDSZCCQBTY93BF9CBF5D"}}},"schema":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"organization_id":{"type":"string"},"roles":{"items":{"type":"string"},"type":"array"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"AccountRolesOrganizationReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"401":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Unauthorized"}}},"description":"Unauthorized"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 
 
-      

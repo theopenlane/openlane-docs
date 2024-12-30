@@ -9,12 +9,15 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 const config: Config = {
   title: "Openlane",
   tagline: "Compliance Made Simple",
-  url: "https://theopenlane.io",
+  url: "https://www.theopenlane.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       "classic",
@@ -22,11 +25,8 @@ const config: Config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.ts"),
           docItemComponent: "@theme/ApiItem",
-        },
-        blog: {
-          showReadingTime: true,
-          onInlineAuthors: "ignore",
-          onUntruncatedBlogPosts: "ignore",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -37,13 +37,17 @@ const config: Config = {
 
   themeConfig:
     {
+      mermaid: {
+        theme: {light: 'neutral', dark: 'forest'},
+      },
       docs: {
         sidebar: {
-          hideable: true,
+          hideable: false,
         },
       },
       navbar: {
-        title: "Openlane",
+        hideOnScroll: true,
+        title: "",
         logo: {
           alt: "Openlane Logo",
           src: "img/logo.svg",
@@ -51,42 +55,43 @@ const config: Config = {
         items: [
           {
             type: "doc",
-            docId: "docs/product_docs/overview",
+            docId: "docs/platform/overview",
             position: "left",
-            label: "Product Documentation",
+            label: "Platform",
           },
           {
             type: "doc",
-            docId: "docs/developer_docs/overview",
+            docId: "docs/developers/overview",
             position: "left",
-            label: "Developer Documentation",
+            label: "Developers",
           },
           {
-            label: "Openlane API",
+            label: "API Specifications",
             position: "left",
             to: "/docs/api",
           },
           {
-            label: "Openlane GraphQL",
+            label: "GraphQL Explorer",
             position: "left",
             to: "/graphql",
           },
           {
-            to: 'blog',
-            label: 'Blog',
-            position: 'right'
-          },
-          {
             href: "https://github.com/theopenlane",
-            label: "GitHub",
+            label: "Github",
             position: "right",
           },
         ],
       },
       footer: {
+        logo: {
+          alt: 'Openlane Logo',
+          src: 'img/logo.svg',
+          href: 'https://www.theopenlane.io',
+          width: 160,
+          height: 51,
+        },
         links: [
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} theopenlane, Inc.`,
       },
       prism: {
         prism: {
@@ -95,7 +100,6 @@ const config: Config = {
             "nodejs",
             "php",
             "java",
-            "php",
             "json",
             "bash",
           ],
@@ -133,7 +137,7 @@ const config: Config = {
         docsPluginId: "classic",
         config: {
           openlane: {
-            specPath: "http://localhost:17608/api-docs",
+            specPath: "https://api.theopenlane.io/api-docs",
             outputDir: "docs/api/rest-api",
             downloadUrl:
               "https://api.theopenlane.io/api-docs",
@@ -162,16 +166,16 @@ const config: Config = {
       {
         name: "openlane-core-startup",
         sourceBaseUrl: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/",
-        outDir: "docs/docs/product_docs/01_quickstart",
+        outDir: "docs/docs/developers/developing",
         documents: ["README.md"],
         modifyContent(filename, content) {
           if (filename.includes("README")) {
             return {
-              filename: `startup.md`,
+              filename: `startup.mdx`,
               content: `---
 sidebar_position: 3
 sidebar_label: Server Startup
-tags: 
+tags:
     - local
     - development
 ---
@@ -190,6 +194,9 @@ ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")
   ],
 
   themes: ["docusaurus-theme-openapi-docs"],
+  customFields: {
+    pirschKey: process.env.PIRSCH_KEY,
+  }
 };
 
 export default async function createConfig() {

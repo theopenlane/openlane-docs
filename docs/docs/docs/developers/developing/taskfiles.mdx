@@ -1,0 +1,30 @@
+---
+sidebar_position: 4
+tags:
+    - local
+    - development
+---
+
+# Taskfiles
+
+All repositories throughout the Openlane Github organization heavily use [Taskfiles](https://taskfile.dev/) to assist with commonly used development tasks, including things like test commands, lint commands, and generate commands.
+
+Setup [Taskfile](https://taskfile.dev/installation/) by following the
+instructions and using one of the various convenient package managers or
+installation scripts.
+
+Once installed you can simply run `task` from anywhere in the tree of the repo to see all available commands, for example:
+
+```shell
+task
+```
+```shell
+task: Available tasks for this project:
+* precommit-full:         Lint the project against all files
+* example:ent:            runs go generate against ent schema - see the entc.go file and generates the fga mock client
+* example:generate:       a combination of the ent, graph, and gqlgen tasks which are required to fully generate the necessary graph, server, resolvers, client, etc.
+* go:all:                 runs all go test and lint related tasks      (aliases: go)
+* go:lint:                runs golangci-lint, the most annoying opinionated linter ever
+* go:test:                runs and outputs results of created go tests
+* go:tidy:                runs go mod tidy on the backend      (aliases: tidy)
+```

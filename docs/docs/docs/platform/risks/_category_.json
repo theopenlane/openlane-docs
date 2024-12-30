@@ -1,0 +1,9 @@
+{
+  "label": "Risks",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Create and manage risks within Openlane"
+  },
+  "collapsed": true
+}

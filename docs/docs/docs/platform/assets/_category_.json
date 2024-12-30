@@ -1,0 +1,9 @@
+{
+  "label": "Assets",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Create, track, and manage your assets in a centralized location within Openlane"
+  },
+  "collapsed": true
+}

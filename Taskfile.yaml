@@ -1,43 +1,36 @@
 version: '3'
 
-env:
-  ENV: config
-
 tasks:
-  local-setup:
+  default:
+    silent: true
+    cmds:
+      - task --list
+
+  install:
     desc: Setup the project dependencies
     cmds:
-      - task: install-bun
-      - task: install-precommit
-      - pre-commit install && pre-commit install-hooks
-      - pre-commit autoupdate
-      - pre-commit run --show-diff-on-failure --color=always --all-files
-
-  install-bun:
-    desc: install bun package manager
-    cmd: curl -fsSL https://bun.sh/install | bash
-
-  install-precommit:
-    desc: install pre-commit
-    cmd: brew install pre-commit
+      - task: brew-install
+      - task: bun-install
+      - task: build
+      - task: precommit
 
   build:
     dir: docs
     desc: build all apps and package
     cmd: bun run build
 
-  install:
+  bun-install:
     dir: docs
     desc: install the dependencies listed in package.json
     cmds:
       - bun install
 
-  reinstall:
+  bun-reinstall:
     dir: docs
     desc: reinstall the dependencies listed in package.json
     cmds:
       - task: clean
-      - task: install
+      - task: bun-install
 
   clean:
     dir: docs
@@ -47,7 +40,7 @@ tasks:
   generate-api-docs:
     dir: docs
     desc: generate api docs
-    cmd: bun docusaurus gen-api-docs all  
+    cmd: bun docusaurus gen-api-docs all
 
   clean-api-docs:
     dir: docs
@@ -77,19 +70,37 @@ tasks:
     dir: docs
     desc: develop all apps
     cmds:
-      - task: install
       - bun dev
-
-  dev:docs:
-    dir: docs
-    desc: develop docs
-    cmds:
-      - task: install
-      - bun dev --filter={docs}
 
   precommit-full:
     desc: Lint the project against all files
+    aliases: [precommit]
     cmds:
       - pre-commit install && pre-commit install-hooks
       - pre-commit autoupdate
       - pre-commit run --show-diff-on-failure --color=always --all-files
+
+  brew-install:
+    desc: Install workstation dependencies with Brew
+    cmds:
+      - task: update-brew
+      - echo "Installing {{.DEPS}} via homebrew..."
+      - brew install {{.DEPS}} {{.CLI_ARGS}}
+      - echo "Installed {{.DEPS}} via homebrew!"
+    deps:
+      - task: brew-installed
+    status:
+      - '[ -f $(brew --prefix)/bin/{{.DEPS}} ]'
+    vars:
+      DEPS: >-
+        oven-sh/bun/bun pre-commit #magic___^_^___line
+  brew-installed:
+    silent: true
+    desc: check if Homebrew is installed
+    cmds:
+      - '[ -x "$(command -v brew)" ] || (echo "Homebrew is not installed, please install it from https://brew.sh" && exit 1)'
+
+  update-brew:
+    desc: Update Homebrew and upgrade all packages
+    cmds:
+      - brew update && brew upgrade && brew cleanup || true

@@ -31,7 +31,7 @@ import Heading from "@theme/Heading";
   path={"/register"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -49,14 +49,14 @@ Register creates a new user in the database with the specified password, allowin
 <ParamsDetails
   parameters={undefined}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={{"content":{"application/json":{"examples":{"success":{"value":{"first_name":"Sarah","last_name":"Funk","email":"sfunky@theopenlane.io","password":"mitb!"}}},"schema":{"properties":{"email":{"type":"string"},"first_name":{"type":"string"},"last_name":{"type":"string"},"password":{"type":"string"}},"type":"object","title":"RegisterRequest"}}}}}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
@@ -64,8 +64,7 @@ Register creates a new user in the database with the specified password, allowin
   label={undefined}
   responses={{"201":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"user_id":"1234","email":"","message":"Welcome to Openlane!","token":""}}},"schema":{"properties":{"email":{"type":"string"},"error":{"type":"string"},"error_code":{"type":"string"},"message":{"type":"string"},"success":{"type":"boolean"},"token":{"type":"string"},"unverified":{"type":"boolean"},"user_id":{"type":"string"}},"type":"object","title":"RegisterReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Bad Request"}}},"description":"Bad Request"},"409":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Conflict"}}},"description":"Conflict"},"500":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Internal Server Error"}}},"description":"Internal Server Error"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 
 
-      

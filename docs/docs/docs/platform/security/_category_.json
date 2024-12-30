@@ -1,0 +1,9 @@
+{
+  "label": "Security",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation around built-in security features of the Openlane platform"
+  },
+  "collapsed": true
+}

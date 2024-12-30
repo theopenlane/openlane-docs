@@ -16,7 +16,7 @@
   --ifm-background-color: #e9f1f5;
   --ifm-code-font-size: 85%;
   --ifm-font-size-base: 90%;
-  --ifm-footer-background-color: #ffffff;
+  --ifm-footer-background-color: #e9f1f5;
   --ifm-navbar-background-color: #ffffff;
   --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical)* 0.5);
   --ifm-hero-background-color: #e9f1f5;
@@ -24,7 +24,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+html[data-theme='dark'] {
   --ifm-color-primary: #2ccbab;
   --ifm-color-primary-dark: #28b79a;
   --ifm-color-primary-darker: #25ad91;
@@ -32,10 +32,10 @@
   --ifm-color-primary-light: #3bd5b6;
   --ifm-color-primary-lighter: #45d7b9;
   --ifm-color-primary-lightest: #64ddc5;
-  --ifm-background-color: #0d1117;
-  --ifm-footer-background-color: #1C2630;
-  --ifm-navbar-background-color: #1C2630;
-  --ifm-hero-background-color: #0d1117;
+  --ifm-background-color: #1c2630;
+  --ifm-footer-background-color: #1c2630;
+  --ifm-navbar-background-color: #1b1b1d;
+  --ifm-hero-background-color: #1c2630;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -89,4 +89,8 @@
 .graphql {
   height: 100vh;
   width: 100vw;
+}
+
+.pagination-nav {
+  display: none;
 }
