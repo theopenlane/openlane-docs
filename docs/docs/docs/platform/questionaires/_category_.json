@@ -1,0 +1,9 @@
+{
+  "label": "Questionnaires",
+  "position": 6,
+  "link": {
+    "type": "generated-index",
+    "description": "Create and manage your internal policies and procedures in a centralized location"
+  },
+  "collapsed": true
+}

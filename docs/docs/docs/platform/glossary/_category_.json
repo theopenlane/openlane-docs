@@ -1,9 +1,0 @@
-{
-  "label": "Glossary",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "This page will help you get started with Openlane. You'll be up and running in a jiffy!"
-  },
-  "collapsed": true
-}

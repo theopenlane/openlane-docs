@@ -1,0 +1,9 @@
+{
+  "label": "Narratives",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Create and manage narratives as a part of compliance programs"
+  },
+  "collapsed": true
+}
