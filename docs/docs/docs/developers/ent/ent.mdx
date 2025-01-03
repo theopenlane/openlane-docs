@@ -1,8 +1,61 @@
 ---
-title: Ent
+title: Schema Driven Development
 description: The Ent project and how it's used within the Openlane platform
 sidebar_position: 1
 ---
 
-# Ent
+# Schema Driven Development with Ent
 
+Ent is a powerful, Go-based entity framework that emphasizes schema-driven development.
+This approach allows developers to define the structure and relationships of their data in a centralized schema, 
+written in Go code, which then generates all the necessary boilerplate for database interactions.
+
+## Key Features
+1. **Schema as Code**: Define your database schema in Go, enabling type safety and integration with the rest of your codebase
+1. **Automatic Code Generation**: Generate CRUD operations, query builders, and schema migrations
+1. **Built-In Migration System**: Manage database schema changes with ease
+1. **Relationships**: Define and manage complex relationships between entities, such as one-to-many and many-to-many
+1. **Extensibility**: Add hooks, middlewares, and custom fields to extend functionality
+
+## Creating a New Schema
+
+Workflow of generating a new schema and related CRUD resolvers
+
+### Create a new schema file
+    ```bash
+    task db:newschema -- MyNewSchema
+    ```
+### Update new templated schema
+    The file will be located in `internal/ent/schema/`, the file name matching the schema name
+    1. Add [Fields](https://entgo.io/docs/schema-fields) to the schema
+    1. Add [Edges](https://entgo.io/docs/schema-edges) to the schema for 1:1, 1:m, or m:m relationships with other objects
+    1. Add [Indexes](https://entgo.io/docs/schema-indexes) to the schema. A common use in our codebase is to add an index to allow soft-deleted names to be reused even when the name is required to be unique. 
+        ```go
+        index.Fields("name").
+			Unique().Annotations(entsql.IndexWhere("deleted_at is NULL")),
+        ```
+    1. Review and update the [Annotations](https://entgo.io/docs/schema-annotations) on the templated schema
+    1. Add [Hooks](https://entgo.io/docs/hooks/) for use on mutations, these act as middleware that can happen before or after the request is executed
+    1. Add [Interceptors](https://entgo.io/docs/interceptors) for use on queries, these act as middleware that can happen before or after the request is executed, commonly used to filter data
+    1. Review and update the [Privacy](https://entgo.io/docs/privacy) policy on the templated schema
+
+### Generate the CRUD resolvers
+    This will take a few minutes the first time and run through:
+    1. entc generate (ORM functions for the object)
+    1. gqlgen generation (graphapi resolvers)
+    1. gqlgenc generation (golang api client)
+
+    ```bash
+    task generate
+    ```
+### Generate the Migrations 
+    This will generate the goose and atlas migrations based on the ent schema changes
+    ```bash
+    task db:create
+    ```
+### Stub out the CRUD cli commands
+    ```bash
+    task cli:generate
+    ```
+    The cli flags for create and update, along with field output (in `root.go`) will need to be manually updated
+    
