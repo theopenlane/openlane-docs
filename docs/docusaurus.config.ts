@@ -6,7 +6,6 @@ import type { Config } from "@docusaurus/types";
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
-console.log("process env", process.env)
 const config: Config = {
   title: "Openlane",
   tagline: "Compliance Made Simple",
@@ -199,6 +198,8 @@ ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")
 };
 
 export default async function createConfig() {
+  console.log("process env", process.env)
+
   return config;
 }
 
