@@ -195,6 +195,7 @@ ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")
   customFields: {
     test: process.env.PUBLIC_EXAMPLE,
     pirschKey: process.env.PIRSCH_KEY,
+    anotherTest: process.env.REACT_APP_ANOTHER_TEST,
   }
 };
 
