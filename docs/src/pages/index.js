@@ -30,6 +30,7 @@ export default function Home() {
         {siteConfig.customFields.pirschKey && (
           <script defer src="https://api.pirsch.io/pa.js"
             id="pianjs"
+            data-dev="docs.theopenlane.io"
             data-code={siteConfig.customFields.pirschKey}></script>
         )}
       </Head>
