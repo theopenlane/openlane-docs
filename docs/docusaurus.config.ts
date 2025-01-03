@@ -1,12 +1,12 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-import 'dotenv/config';
 
 import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
+console.log(process.env)
 const config: Config = {
   title: "Openlane",
   tagline: "Compliance Made Simple",
@@ -193,7 +193,6 @@ ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")
       },
     ],
   ],
-
   customFields: {
     pirschKey: process.env.PIRSCH_KEY,
   }
