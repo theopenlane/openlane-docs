@@ -19,6 +19,8 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+  console.log("key" + siteConfig.customFields.pirschKey);
+
   return (
     <Layout
       title={`${siteConfig.title}`}
