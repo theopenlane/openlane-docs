@@ -17,7 +17,7 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
   presets: [
     [
       "classic",
@@ -38,7 +38,7 @@ const config: Config = {
   themeConfig:
     {
       mermaid: {
-        theme: {light: 'neutral', dark: 'forest'},
+        theme: { light: 'neutral', dark: 'forest' },
       },
       docs: {
         sidebar: {
@@ -94,39 +94,31 @@ const config: Config = {
         ],
       },
       prism: {
-        prism: {
-          additionalLanguages: [
-            "go",
-            "nodejs",
-            "php",
-            "java",
-            "json",
-            "bash",
-          ],
-        },
-        languageTabs: [
-          {
-            highlight: "python",
-            language: "python",
-            logoClass: "python",
-          },
-          {
-            highlight: "bash",
-            language: "curl",
-            logoClass: "bash",
-          },
-          {
-            highlight: "go",
-            language: "go",
-            logoClass: "go",
-          },
-          {
-            highlight: "javascript",
-            language: "nodejs",
-            logoClass: "nodejs",
-          },
-        ],
+        defaultLanguage: "bash",
       },
+      languageTabs: [
+        {
+          language: "curl",
+        },
+        {
+          language: "go",
+        },
+        {
+          language: "python",
+        },
+        {
+          language: "nodejs",
+        },
+        {
+          language: "php",
+        },
+        {
+          language: "java",
+        },
+        {
+          language: "rust",
+        },
+      ],
     } satisfies Preset.ThemeConfig,
 
   plugins: [
@@ -192,8 +184,6 @@ ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")
       },
     ],
   ],
-
-  themes: ["docusaurus-theme-openapi-docs"],
   customFields: {
     pirschKey: process.env.PIRSCH_KEY,
   }
