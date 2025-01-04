@@ -1,10 +1,10 @@
 ---
-title: Source code structure
+title: Source Code Structure
 description: The structure of the Openlane source code
 sidebar_position: 1
 ---
 
-# Project Structure - Core 
+# Project Structure - Core
 
 [Core](https://github.com/theopenlane/core) is the main server for Openlane and where the majority of the backend code and business logic is 
 located for the API. 
@@ -31,7 +31,7 @@ Located in `config/` this directory contains the generated config and example se
 
 ## internal 
 
-Everything in the `internal` directory is intended to only be used by packages within this repository, outside usage will be blocked by the go-compiler.
+The meat of the repo, if you are looking for something, it's probably in this directory somewhere. Everything in the `internal` directory is intended to only be used by packages within this repository, outside usage will be blocked by the go-compiler.
 
 ### ent
 
@@ -107,7 +107,9 @@ This include all schemas for the database. When generating a new schema, refer t
 Mixins are common fields and functions that are used on multiple schemas, for example, the `SoftDeleteMixin` is used on all schemas as we want to use soft-deletes
 across all our database tables. 
 
-Note: not **all** mixins are here. Due to import cycles, some are located within the `schema` directory. Others, because they are not unique to this repository are located within the [entx](https://github.com/theopenlane/entx/tree/main/mixin) repository
+:::note
+not **all** mixins are here. Due to import cycles, some are located within the `schema` directory. Others, because they are not unique to this repository are located within the [entx](https://github.com/theopenlane/entx/tree/main/mixin) repository
+::: 
 
 ### graphapi 
 

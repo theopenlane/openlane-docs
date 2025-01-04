@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Schema Driven Development with Ent
 
-Ent is a powerful, Go-based entity framework that emphasizes schema-driven development.
+[Ent](https://entgo.io/docs/getting-started) is a powerful, Go-based entity framework that emphasizes schema-driven development.
 This approach allows developers to define the structure and relationships of their data in a centralized schema, 
 written in Go code, which then generates all the necessary boilerplate for database interactions.
 
@@ -40,14 +40,15 @@ Workflow of generating a new schema and related CRUD resolvers
     1. Review and update the [Privacy](https://entgo.io/docs/privacy) policy on the templated schema
 
 ### Generate the CRUD resolvers
-    This will take a few minutes the first time and run through:
-    1. entc generate (ORM functions for the object)
-    1. gqlgen generation (graphapi resolvers)
-    1. gqlgenc generation (golang api client)
-
     ```bash
     task generate
     ```
+
+    This will take a few minutes to run the first time, the main generation that will happen:
+    1. **entc** - ORM functions for the object
+    1. **gqlgen** - graphapi resolvers and basic query generation
+    1. **gqlgenc** - golang api client based on queries
+
 ### Generate the Migrations 
     This will generate the goose and atlas migrations based on the ent schema changes
     ```bash
