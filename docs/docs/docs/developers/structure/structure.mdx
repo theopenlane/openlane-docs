@@ -34,7 +34,7 @@ located for the API.
         ```bash
         go run cmd/cli/main.go [command] [subcommand] <flags>
         ```
-        ::: 
+        :::
     </TabItem>
 </Tabs>
 
@@ -50,7 +50,7 @@ task config:generate
 ```
 
 :::info
-The first time you setup the server locally, you'll need to copy the `config/config-dev.example.yaml` into `config/.config.yaml`. This file is 
+The first time you setup the server locally, you'll need to copy the `config/config-dev.example.yaml` into `config/.config.yaml`. This file is
 in the `.gitignore` to prevent accidentally committing secrets
 :::
 
@@ -79,7 +79,7 @@ Located in `internal/ent` this directory contains all the code related to the sc
         ```
     </TabItem>
     <TabItem value="schema">
-        This include all schemas for the database. When generating a new schema, refer to the [new schema](../ent/create_schema) documentation. 
+        This include all schemas for the database. When generating a new schema, refer to the [new schema](../ent/create_schema) documentation.
 
         When generating a new schema, a template is used that includes the basic structure of any new schema used in Openlane
         ```go
@@ -204,7 +204,7 @@ Located in `internal/ent` this directory contains all the code related to the sc
         - `Traverse` functions occur before the query is executed
         - `Interceptor` functions occur after the query is executed
 
-        We commonly use these to filter data the user has access to, or log information such as query timing, for example: 
+        We commonly use these to filter data the user has access to, or log information such as query timing, for example:
 
         ```go
             func QueryLogger() ent.InterceptFunc {
@@ -270,10 +270,10 @@ All graphapi resolvers require authentication, this is handled by the auth middl
         ```
     </TabItem>
     <TabItem value="resolvers">
-        The `*.resolvers.go` files contain the business logic of the resolvers. 
+        The `*.resolvers.go` files contain the business logic of the resolvers.
         These are generated based on the schema and a template, but the generated should be reviewed and updated as needed depending on the use case.
 
-        All of the list functions are included in `ent.resolvers.go`, whereas the `CRUD` functions are in a file per schema. For example, the `group` schema 
+        All of the list functions are included in `ent.resolvers.go`, whereas the `CRUD` functions are in a file per schema. For example, the `group` schema
         resolvers will be located in `group.resolvers.go.`
     </TabItem>
     <TabItem value="query">
@@ -281,11 +281,11 @@ All graphapi resolvers require authentication, this is handled by the auth middl
 
         :::info
         Basic queries are generated as part of the gqlgen process, however, these only include direct fields and no edges. These are **not** regenerated after
-        each run to preserve manual changes. 
+        each run to preserve manual changes.
         :::
     </TabItem>
     <TabItem value="schema">
-        The `internal/graphapi/schema` directory contains the generated graphql schemas. 
+        The `internal/graphapi/schema` directory contains the generated graphql schemas.
 
         You can add manually created schemas here for additional functionality. As an example the `programextended.graphql` contains extended schemas such as:
 
@@ -301,16 +301,16 @@ All graphapi resolvers require authentication, this is handled by the auth middl
         ```
 
         :::info
-        Schemas are generated as part of the gqlgen process. These are **not** regenerated after each run to preserve manual changes with the exception of 
+        Schemas are generated as part of the gqlgen process. These are **not** regenerated after each run to preserve manual changes with the exception of
         `ent.graphql` which is fully generated.
         :::
     </TabItem>
     <TabItem value="generated">
-     All the generated functions are included in the `internal/graphapi/generated` directory, with a file per schema. 
+     All the generated functions are included in the `internal/graphapi/generated` directory, with a file per schema.
 
-     The generated models are included in the `internal/graphapi/model/gen_model.go`. 
+     The generated models are included in the `internal/graphapi/model/gen_model.go`.
 
-     The files in both of these directories are not intended for manual changes, and instead should only be updated the the generation scripts. 
+     The files in both of these directories are not intended for manual changes, and instead should only be updated the the generation scripts.
 
      The `generate` directory contains the config and generation scripts for the graphapi related generation (`gqlgen` and `gqlgenc`)
      </TabItem>
@@ -382,7 +382,7 @@ All graphapi resolvers require authentication, this is handled by the auth middl
         ```
     </TabItem>
     <TabItem value="routes">
-        Located in `internal/httpserve/route` this directory contains all the http routes for the server. 
+        Located in `internal/httpserve/route` this directory contains all the http routes for the server.
         All handlers must be registered routes with the `echo` server. Once a handler is created, a route should be added here. These all follow a predictable pattern
 
         ```go
@@ -415,7 +415,7 @@ All graphapi resolvers require authentication, this is handled by the auth middl
         :::
     </TabItem>
     <TabItem value="server opts">
-        This contains server options for the echo server, including `With` options for setting up different settings. 
+        This contains server options for the echo server, including `With` options for setting up different settings.
     </TabItem>
 </Tabs>
 

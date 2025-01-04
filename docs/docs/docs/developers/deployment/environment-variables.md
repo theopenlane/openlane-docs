@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
         Variables used for the authentication settings and providers with the core api
         ```
         CORE_AUTH_TOKEN_REFRESHAUDIENCE
-        CORE_AUTH_TOKEN_ISSUER    
+        CORE_AUTH_TOKEN_ISSUER
         CORE_AUTH_TOKEN_KID
         CORE_AUTH_TOKEN_JWKSENDPOINT
         CORE_AUTH_TOKEN_GENERATEKEYS
@@ -57,7 +57,7 @@ import TabItem from '@theme/TabItem';
         ```
 
         #### Sessions Variables
-        Variabels used for the sessions implementation
+        Variables used for the sessions implementation
         ```
         CORE_SESSIONS_SIGNINGKEY
         CORE_SESSIONS_ENCRYPTIONKEY
@@ -80,8 +80,8 @@ import TabItem from '@theme/TabItem';
         CORE_OBJECTSTORAGE_DEFAULTBUCKET
         ```
 
-        #### Job Queue Variables 
-        Varaibles used to interact with the jobs queue (riverboat) from the core server
+        #### Job Queue Variables
+        Variables used to interact with the jobs queue (riverboat) from the core server
         ```
         CORE_JOBQUEUE_CONNECTIONURI
         ```

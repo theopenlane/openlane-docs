@@ -23,7 +23,7 @@ Workflow of generating a new schema and related CRUD resolvers
         index.Fields("name").
 			Unique().Annotations(entsql.IndexWhere("deleted_at is NULL")),
         ```
-        :::    
+        :::
     1. Review and update the [annotations](https://entgo.io/docs/schema-annotations) on the templated schema
     1. Add [hooks](https://entgo.io/docs/hooks/) for use on mutations, these act as middleware that can happen before or after the request is executed
     1. Add [interceptors](https://entgo.io/docs/interceptors) for use on queries, these act as middleware that can happen before or after the request is executed, commonly used to filter data
