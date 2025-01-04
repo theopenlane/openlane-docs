@@ -7,7 +7,7 @@ sidebar_position: 1
 # Schema Driven Development with Ent
 
 [Ent](https://entgo.io/docs/getting-started) is a powerful, Go-based entity framework that emphasizes schema-driven development.
-This approach allows developers to define the structure and relationships of their data in a centralized schema, 
+This approach allows developers to define the structure and relationships of their data in a centralized schema,
 written in Go code, which then generates all the necessary boilerplate for database interactions.
 
 ## Key Features
@@ -29,7 +29,7 @@ Workflow of generating a new schema and related CRUD resolvers
     The file will be located in `internal/ent/schema/`, the file name matching the schema name
     1. Add [Fields](https://entgo.io/docs/schema-fields) to the schema
     1. Add [Edges](https://entgo.io/docs/schema-edges) to the schema for 1:1, 1:m, or m:m relationships with other objects
-    1. Add [Indexes](https://entgo.io/docs/schema-indexes) to the schema. A common use in our codebase is to add an index to allow soft-deleted names to be reused even when the name is required to be unique. 
+    1. Add [Indexes](https://entgo.io/docs/schema-indexes) to the schema. A common use in our codebase is to add an index to allow soft-deleted names to be reused even when the name is required to be unique.
         ```go
         index.Fields("name").
 			Unique().Annotations(entsql.IndexWhere("deleted_at is NULL")),
@@ -49,7 +49,7 @@ Workflow of generating a new schema and related CRUD resolvers
     1. **gqlgen** - graphapi resolvers and basic query generation
     1. **gqlgenc** - golang api client based on queries
 
-### Generate the Migrations 
+### Generate the Migrations
     This will generate the goose and atlas migrations based on the ent schema changes
     ```bash
     task db:create
@@ -59,4 +59,3 @@ Workflow of generating a new schema and related CRUD resolvers
     task cli:generate
     ```
     The cli flags for create and update, along with field output (in `root.go`) will need to be manually updated
-    
