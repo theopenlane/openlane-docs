@@ -30,7 +30,7 @@
     "bufferutil": "^4.0.8",
     "clsx": "^2.0.0",
     "docusaurus-graphql-plugin": "^0.9.0",
-    "docusaurus-lunr-search": "3.5.0",
+    "docusaurus-lunr-search": "3.6.0",
     "docusaurus-plugin-openapi-docs": "4.3.1",
     "docusaurus-plugin-remote-content": "^4.0.0",
     "docusaurus-theme-openapi-docs": "4.3.1",
