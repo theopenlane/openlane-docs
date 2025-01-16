@@ -16,3 +16,74 @@ written in Go code, which then generates all the necessary boilerplate for datab
 1. **Built-In Migration System**: Manage database schema changes with ease
 1. **Relationships**: Define and manage complex relationships between entities, such as one-to-many and many-to-many
 1. **Extensibility**: Add hooks, middlewares, and custom fields to extend functionality
+
+## Tips and Tricks
+
+### Keywords
+
+Ent and qglgen have a few keywords and if you try to use them as a field or a schema name you'll have a bad time. For example:
+
+- `Type`: This keyword is used to define the schema type. Avoid using it as a field name.
+- `Subscription`: This keyword is used to define a subscription in graphql. Avoid using it as a schema name.
+
+### Edges
+
+Edges in Ent are essential for defining relationships between schemas. Here's how they work:
+
+- `edge.To`: This is the primary edge used to define relationships such as one-to-many (1:M), one-to-one (1:1), and many-to-many (M:M).
+- `edge.From`: This is an optional back-reference edge. Use `edge.From` if you want the relationship to appear in both schemas. If not, you can stick with just the `edge.To` relationship.
+   :::info[tip]
+   A common mistake when using `edge.From` is forgetting to define the `edge.To` relationship first. To avoid errors, always start with `edge.To`.
+   :::
+- `Unique`: This modifier creates a foreign key relation to the id field of the target schema, establishing a 1:M relationship.
+- `Field`: This allows linking a specific schema field to the edge. For example, you can use fields like `created_by` and `updated_by` to store references to a `User` schema.
+    The corresponding foreign keys (`created_by_id` and `updated_by_id`) will be stored in the table.
+
+    ```go
+        edge.To("created_by", User.Type).
+            Field("created_by_id").
+            Immutable().
+            Unique(),
+        edge.To("updated_by", User.Type).
+            Field("updated_by_id").
+            Unique()
+    ```
+
+### Mixins
+
+Commonly  used [mixins](https://entgo.io/docs/schema-mixin/) in our schemas:
+
+- AuditMixin - Adds `created_at`, `updated_at`, `created_by`, and `updated_by` fields to the schema.
+- IDMixin - Adds an `id` field to the schema.
+- SoftDeleteMixin - Adds a `deleted_at` field to the schema and sets when a entry is deleted instead of hard deleting it.
+- TagMixin - Adds a `tags` field to the schema, which can be used to store tags or labels for an object
+
+### Hooks
+
+You are going to want to use hooks to add business logic to the CRUD operations of a schema. These can alter the mutation before or after the request is
+processed depending on where `next.Mutate()` is called.
+
+    ```go
+    // HookExample is a hook that is used as an example that only happens on `Create` operations
+    func HookExample() ent.Hook {
+        return hook.On(func(next ent.Mutator) ent.Mutator {
+            return hook.ExampleFunc(func(ctx context.Context, m *generated.ExampleMutation) (generated.Value, error) {
+                // code here will occur before the example mutation is executed
+
+                retVal, err := next.Mutate(ctx, m)
+                if err != nil {
+                    return nil, err
+                }
+
+                // code here will occur after the example mutation is executed
+
+                return retVal, err
+            })
+        }, ent.OpCreate) // only do the thing on create operations, this can be omitted completely or include multiple operations separated by `|`
+    }
+    ```
+
+### Interceptors
+
+Similar to hooks, interceptors are used to add business logic to queries. They can be used to modify the query before or after it is executed and
+are commonly used to filter results returned to the user.
