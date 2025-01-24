@@ -1792,6 +1792,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -2273,6 +2282,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -2543,6 +2561,15 @@ deletedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -3015,6 +3042,15 @@ deletedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -5834,6 +5870,15 @@ program<br />
 
 </td>
 </tr>
+<tr>
+<td>
+presignedURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6359,6 +6404,15 @@ description<br />
 </td>
 <td>
 <p>the groups description</p>
+</td>
+</tr>
+<tr>
+<td>
+isManaged<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the group is managed by the system</p>
 </td>
 </tr>
 <tr>
@@ -6984,6 +7038,15 @@ description<br />
 </td>
 <td>
 <p>the groups description</p>
+</td>
+</tr>
+<tr>
+<td>
+isManaged<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the group is managed by the system</p>
 </td>
 </tr>
 <tr>
@@ -9289,6 +9352,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -9694,6 +9766,15 @@ deletedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -10291,6 +10372,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -10664,6 +10754,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -10886,6 +10985,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -11124,6 +11232,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -11375,6 +11492,24 @@ avatarRemoteURL<br />
 </tr>
 <tr>
 <td>
+avatarLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The organizations&#39;s local avatar file id, takes precedence over the avatar remote URL</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>The time the user&#39;s (local) avatar was last updated</p>
+</td>
+</tr>
+<tr>
+<td>
 dedicatedDb<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
@@ -11546,53 +11681,8 @@ where<br />
 </tr>
 <tr>
 <td>
-groups<br />
-<a href="objects#group"><code>[Group!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templates<br />
-<a href="objects#template"><code>[Template!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-integrations<br />
-<a href="objects#integration"><code>[Integration!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 setting<br />
 <a href="objects#organizationsetting"><code>OrganizationSetting</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-documentData<br />
-<a href="objects#documentdata"><code>[DocumentData!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-orgSubscriptions<br />
-<a href="objects#orgsubscription"><code>[OrgSubscription!]</code></a>
 </td>
 <td>
 
@@ -11627,24 +11717,6 @@ users<br />
 </tr>
 <tr>
 <td>
-invites<br />
-<a href="objects#invite"><code>[Invite!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subscribers<br />
-<a href="objects#subscriber"><code>[Subscriber!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 events<br />
 <a href="objects#event"><code>[Event!]</code></a>
 </td>
@@ -11665,6 +11737,78 @@ secrets<br />
 <td>
 files<br />
 <a href="objects#file"><code>[File!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+groups<br />
+<a href="objects#group"><code>[Group!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templates<br />
+<a href="objects#template"><code>[Template!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrations<br />
+<a href="objects#integration"><code>[Integration!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+documentData<br />
+<a href="objects#documentdata"><code>[DocumentData!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orgSubscriptions<br />
+<a href="objects#orgsubscription"><code>[OrgSubscription!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+invites<br />
+<a href="objects#invite"><code>[Invite!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscribers<br />
+<a href="objects#subscriber"><code>[Subscriber!]</code></a>
 </td>
 <td>
 
@@ -12090,6 +12234,24 @@ avatarRemoteURL<br />
 </tr>
 <tr>
 <td>
+avatarLocalFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The organizations&#39;s local avatar file id, takes precedence over the avatar remote URL</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>The time the user&#39;s (local) avatar was last updated</p>
+</td>
+</tr>
+<tr>
+<td>
 dedicatedDb<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
@@ -12314,10 +12476,10 @@ billingPhone<br />
 <tr>
 <td>
 billingAddress<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#address"><code>Address</code></a>
 </td>
 <td>
-<p>Address to send billing information to</p>
+<p>the billing address to send billing information to</p>
 </td>
 </tr>
 <tr>
@@ -12349,11 +12511,11 @@ organizationID<br />
 </tr>
 <tr>
 <td>
-stripeID<br />
-<a href="scalars#string"><code>String</code></a>
+billingNotificationsEnabled<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>the ID of the stripe customer associated with the organization</p>
+<p>should we send email notifications related to billing</p>
 </td>
 </tr>
 <tr>
@@ -12660,10 +12822,10 @@ billingPhone<br />
 <tr>
 <td>
 billingAddress<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#address"><code>Address</code></a>
 </td>
 <td>
-<p>Address to send billing information to</p>
+<p>the billing address to send billing information to</p>
 </td>
 </tr>
 <tr>
@@ -12695,11 +12857,11 @@ organizationID<br />
 </tr>
 <tr>
 <td>
-stripeID<br />
-<a href="scalars#string"><code>String</code></a>
+billingNotificationsEnabled<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>the ID of the stripe customer associated with the organization</p>
+<p>should we send email notifications related to billing</p>
 </td>
 </tr>
 </tbody>
@@ -13439,6 +13601,15 @@ productTier<br />
 </tr>
 <tr>
 <td>
+productPrice<br />
+<a href="scalars#price"><code>Price</code></a>
+</td>
+<td>
+<p>the price of the product tier</p>
+</td>
+</tr>
+<tr>
+<td>
 stripeProductTierID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -13493,6 +13664,15 @@ features<br />
 </tr>
 <tr>
 <td>
+featureLookupKeys<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>the feature lookup keys associated with the subscription</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -13500,25 +13680,13 @@ owner<br />
 
 </td>
 </tr>
-</tbody>
-</table>
-
-## OrgSubscriptionBulkCreatePayload
-
-Return response for createBulkOrgSubscription mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
 <tr>
 <td>
-orgSubscriptions<br />
-<a href="objects#orgsubscription"><code>[OrgSubscription!]</code></a>
+subscriptionURL<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>Created orgSubscriptions</p>
+
 </td>
 </tr>
 </tbody>
@@ -13558,48 +13726,6 @@ totalCount<br />
 </td>
 <td>
 <p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrgSubscriptionCreatePayload
-
-Return response for createOrgSubscription mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-orgSubscription<br />
-<a href="objects#orgsubscription"><code>OrgSubscription!</code></a>
-</td>
-<td>
-<p>Created orgSubscription</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrgSubscriptionDeletePayload
-
-Return response for deleteOrgSubscription mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>Deleted orgSubscription ID</p>
 </td>
 </tr>
 </tbody>
@@ -13776,6 +13902,15 @@ productTier<br />
 </tr>
 <tr>
 <td>
+productPrice<br />
+<a href="scalars#price"><code>Price</code></a>
+</td>
+<td>
+<p>the price of the product tier</p>
+</td>
+</tr>
+<tr>
+<td>
 stripeProductTierID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -13826,6 +13961,15 @@ features<br />
 </td>
 <td>
 <p>the features associated with the subscription</p>
+</td>
+</tr>
+<tr>
+<td>
+featureLookupKeys<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>the feature lookup keys associated with the subscription</p>
 </td>
 </tr>
 </tbody>
@@ -13916,27 +14060,6 @@ orgSubscriptions<br />
 </td>
 <td>
 
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrgSubscriptionUpdatePayload
-
-Return response for updateOrgSubscription mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-orgSubscription<br />
-<a href="objects#orgsubscription"><code>OrgSubscription!</code></a>
-</td>
-<td>
-<p>Updated orgSubscription</p>
 </td>
 </tr>
 </tbody>
@@ -14412,6 +14535,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -14830,6 +14962,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -15097,6 +15238,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -15587,6 +15737,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -16368,6 +16527,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -16786,6 +16954,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -17021,7 +17198,16 @@ page<br />
 <a href="objects#pageinfo"><code>PageInfo!</code></a>
 </td>
 <td>
-
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
 </td>
 </tr>
 <tr>
@@ -17030,7 +17216,7 @@ nodes<br />
 <a href="unions#searchresult"><code>[SearchResult!]!</code></a>
 </td>
 <td>
-
+<p>A list of nodes with results.</p>
 </td>
 </tr>
 </tbody>
@@ -17785,6 +17971,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -18235,6 +18430,15 @@ deletedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -18907,6 +19111,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 deletedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -18930,6 +19143,15 @@ tags<br />
 </td>
 <td>
 <p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -18979,11 +19201,47 @@ due<br />
 </tr>
 <tr>
 <td>
+priority<br />
+<a href="enums#taskpriority"><code>TaskPriority!</code></a>
+</td>
+<td>
+<p>the priority of the task</p>
+</td>
+</tr>
+<tr>
+<td>
 completed<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
 <p>the completion date of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+assigneeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the user who was assigned the task</p>
+</td>
+</tr>
+<tr>
+<td>
+assignerID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the id of the user who assigned the task</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization!</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -18999,15 +19257,6 @@ assigner<br />
 <td>
 assignee<br />
 <a href="objects#user"><code>User</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-organization<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
 </td>
 <td>
 
@@ -19298,6 +19547,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 deletedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -19321,6 +19579,15 @@ tags<br />
 </td>
 <td>
 <p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -19370,11 +19637,38 @@ due<br />
 </tr>
 <tr>
 <td>
+priority<br />
+<a href="enums#taskhistorypriority"><code>TaskHistoryPriority!</code></a>
+</td>
+<td>
+<p>the priority of the task</p>
+</td>
+</tr>
+<tr>
+<td>
 completed<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
 <p>the completion date of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+assigneeID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the user who was assigned the task</p>
+</td>
+</tr>
+<tr>
+<td>
+assignerID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the id of the user who assigned the task</p>
 </td>
 </tr>
 </tbody>
@@ -20150,38 +20444,11 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-tfaSecret<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>TFA secret for the user</p>
-</td>
-</tr>
-<tr>
-<td>
 verified<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
 <p>specifies if the TFA device has been verified</p>
-</td>
-</tr>
-<tr>
-<td>
-recoveryCodes<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>recovery codes for 2fa</p>
 </td>
 </tr>
 <tr>
@@ -20262,6 +20529,15 @@ tfaSetting<br />
 <p>Created tfaSetting</p>
 </td>
 </tr>
+<tr>
+<td>
+qrCode<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -20295,27 +20571,6 @@ cursor<br />
 </tbody>
 </table>
 
-## TFASettingSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tFASettings<br />
-<a href="objects#tfasetting"><code>[TFASetting!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## TFASettingUpdatePayload
 
 Return response for updateTFASetting mutation
@@ -20332,6 +20587,24 @@ tfaSetting<br />
 </td>
 <td>
 <p>Updated tfaSetting</p>
+</td>
+</tr>
+<tr>
+<td>
+qrCode<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+recoveryCodes<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -20415,6 +20688,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -20469,20 +20751,11 @@ avatarRemoteURL<br />
 </tr>
 <tr>
 <td>
-avatarLocalFile<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The user&#39;s local avatar file</p>
-</td>
-</tr>
-<tr>
-<td>
 avatarLocalFileID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>The user&#39;s local avatar file id</p>
+<p>The user&#39;s local avatar file id, takes precedence over the avatar remote URL</p>
 </td>
 </tr>
 <tr>
@@ -20586,7 +20859,7 @@ files<br />
 </tr>
 <tr>
 <td>
-file<br />
+avatarFile<br />
 <a href="objects#file"><code>File</code></a>
 </td>
 <td>
@@ -20914,6 +21187,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -20968,20 +21250,11 @@ avatarRemoteURL<br />
 </tr>
 <tr>
 <td>
-avatarLocalFile<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The user&#39;s local avatar file</p>
-</td>
-</tr>
-<tr>
-<td>
 avatarLocalFileID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>The user&#39;s local avatar file id</p>
+<p>The user&#39;s local avatar file id, takes precedence over the avatar remote URL</p>
 </td>
 </tr>
 <tr>

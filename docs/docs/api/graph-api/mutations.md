@@ -628,29 +628,6 @@ input<br />
 </tbody>
 </table>
 
-## createBulkCSVOrgSubscription
-
-**Type:** [OrgSubscriptionBulkCreatePayload!](objects#orgsubscriptionbulkcreatepayload)
-
-Create multiple new orgSubscriptions via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the orgSubscription</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createBulkCSVPersonalAccessToken
 
 **Type:** [PersonalAccessTokenBulkCreatePayload!](objects#personalaccesstokenbulkcreatepayload)
@@ -1244,29 +1221,6 @@ input<br />
 </td>
 <td>
 <p>values of the orgMembership</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createBulkOrgSubscription
-
-**Type:** [OrgSubscriptionBulkCreatePayload!](objects#orgsubscriptionbulkcreatepayload)
-
-Create multiple new orgSubscriptions
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createorgsubscriptioninput"><code>[CreateOrgSubscriptionInput!]</code></a>
-</td>
-<td>
-<p>values of the orgSubscription</p>
 </td>
 </tr>
 </tbody>
@@ -1936,6 +1890,15 @@ input<br />
 <p>values of the organization</p>
 </td>
 </tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1980,29 +1943,6 @@ input<br />
 </td>
 <td>
 <p>values of the orgMembership</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createOrgSubscription
-
-**Type:** [OrgSubscriptionCreatePayload!](objects#orgsubscriptioncreatepayload)
-
-Create a new orgSubscription
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createorgsubscriptioninput"><code>CreateOrgSubscriptionInput!</code></a>
-</td>
-<td>
-<p>values of the orgSubscription</p>
 </td>
 </tr>
 </tbody>
@@ -2817,29 +2757,6 @@ id<br />
 </td>
 <td>
 <p>ID of the orgMembership</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## deleteOrgSubscription
-
-**Type:** [OrgSubscriptionDeletePayload!](objects#orgsubscriptiondeletepayload)
-
-Delete an existing orgSubscription
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the orgSubscription</p>
 </td>
 </tr>
 </tbody>
@@ -3680,6 +3597,15 @@ input<br />
 <p>New values for the organization</p>
 </td>
 </tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3742,38 +3668,6 @@ input<br />
 </td>
 <td>
 <p>New values for the orgMembership</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## updateOrgSubscription
-
-**Type:** [OrgSubscriptionUpdatePayload!](objects#orgsubscriptionupdatepayload)
-
-Update an existing orgSubscription
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the orgSubscription</p>
-</td>
-</tr>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#updateorgsubscriptioninput"><code>UpdateOrgSubscriptionInput!</code></a>
-</td>
-<td>
-<p>New values for the orgSubscription</p>
 </td>
 </tr>
 </tbody>

@@ -815,29 +815,6 @@ query<br />
 </tbody>
 </table>
 
-## adminTFASettingSearch
-
-**Type:** [TFASettingSearchResult](objects#tfasettingsearchresult)
-
-Search across TFASetting objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Search query</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## adminUserSearch
 
 **Type:** [UserSearchResult](objects#usersearchresult)
@@ -5210,6 +5187,12 @@ query<br />
 </tbody>
 </table>
 
+## self
+
+**Type:** [User!](objects#user)
+
+Look up user authorized user
+
 ## standard
 
 **Type:** [Standard!](objects#standard)
@@ -6066,29 +6049,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for TFASettings returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## tFASettingSearch
-
-**Type:** [TFASettingSearchResult](objects#tfasettingsearchresult)
-
-Search across TFASetting objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Search query</p>
 </td>
 </tr>
 </tbody>
