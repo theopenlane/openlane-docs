@@ -38,7 +38,6 @@ sidebar_position: 7
 - [StandardSearchResult](objects#standardsearchresult)
 - [SubcontrolSearchResult](objects#subcontrolsearchresult)
 - [SubscriberSearchResult](objects#subscribersearchresult)
-- [TFASettingSearchResult](objects#tfasettingsearchresult)
 - [TaskSearchResult](objects#tasksearchresult)
 - [TemplateSearchResult](objects#templatesearchresult)
 - [UserSearchResult](objects#usersearchresult)

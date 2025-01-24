@@ -1,0 +1,70 @@
+---
+id: tfa-validation
+title: "TFAValidation"
+description: "Validate a user's TOTP code"
+sidebar_label: "TFAValidation"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1v4zYQ/SsEL20BxbKTolv41GyQBdIWTRB7u4fAKGiJsriRSZakrHUF//fOkJQj2d7Eh1xskTOcj8eZN2xpzm1mhHZCSTqlf7NK5MxxwkhtufnBkvn9/IFkKuc0oUpzw1DzLgfd+afrqI5nE2r4vzW37qPKt3Ta0kxJx6XDT6Z1JTKvl3616Kil/Btb64pb/LZ1lnHrPzesqjl+OOX0P97vlE4mV1cfJnS32yXUZiVfM9TQBuNxItgwPFMbbrbxDBjYajxrnRFyReFkz+KRFMVhRy2/8sxBOk64ioc0H0NmGMAO87RaSRvcXo7H75Dsfs+Zmid0Dd9shc5fz5kbo8zJXL3k+1DsHZyQ9eKLsqVSFWcShbUEjEUheH5K/haKutqGhIZF13kEwc9nwfmCx9mKQ+AOgBFgZMUN9ZeLQb4f0u+J5mv43mIY30X4Tm6wU8md1LU7QwHFBasrD+xQ00dheVYb4QCop5YuOTMA3vRpsUtaqljtystutWRWZN2CafEH3/rVAiJnK4DlibqC0QWWpCsV0opWFhPTzJWwSi8Llm4iK1H0bAAz6x0PA7vXXFZMcnL9cEdmXg30a1OBrHRO22maQgQjV3IVVUdCpRvgleQMW+THSmWs+mlgE0z63RJink4+/DL+1dtbvCA0wwoMNdSlf+gMfYCAIHBQy7GGEwIr8gz769o6skRKDneE+rAPgQg8XnKW+1RjaUQ3cEsR/EN/nwFDydZgUObkgVnbKJMTUOb5QQw0Uo8vS29s7wWz9z7i5Xdl8EmZNYOyob9/mdPDKvvoVU4m6tQzlydT9ZJBJMHlUShd5bW0qFQTIIcdZcR/3tFN7NHB5ue36iNYTbtD3A+6AmZAee7RqO5TAHGcVgxr/RH+CAsMkdAGCgYT+oL/3bYfXIDAud4CXH2qCLDs/PiGyX2jpETugCgGG286GDW8qi6epWpkivsivwD6LcSqNl21dC4HjjAWJOTHl/fBbZiHJ+Z2R52Dcd3jUyEL1RE/C1kAw4vKjxGtlXG/DcMGS1jsvaY+YoWDA0fk2B2E1xAWJFKQgLshUIYENMVKQuc4RWBkbESO1WsFpucbjDO7RSE8pwjOGVOwjJNCmbCCHCAz0ghX+j7YM4+umAOt9YjMSxEcw1/fHfRJjT273JKlguPenmRVcPstLrJKQK9ZPNA5fM0bgANTlMPzBqGNyF1rBs1HLkfjI+yaphkxLx4ps0rjWZv+eXdz+9fs9gLP7F7G1N4hfmBOV6PJaEJmmmcwBwMhYCsgxwfwN5PRONjAwbBmshcXPCrI4Ak6uLfe6+CNd20sWwegpYCECMMZ82zjHHqiMIcwrm4SAcUj6aOkbZE7oX12O9yGIjd+yKG2EWyJieMA7JgaRxfy95TehPgu5ug/6Z6Dxy8ZHFDhxDWQgnav6vZn6cP9DFl4GZ/k69BNhjXIYvAL4xxpIaCOzYh7LYUbWtXhARpsYgsjjfSfKR0L78f/XsTkthchwOM15khMAFESU4lEtQDj/wO8B1Wa
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-1-1-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"TFAValidation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/2fa/validate"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Validate a user's TOTP code
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"totp_code":"113371"}}},"schema":{"properties":{"recovery_code":{"type":"string"},"totp_code":{"type":"string"}},"type":"object","title":"TFARequest"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"message":""}}},"schema":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"message":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"TFAReply"}}},"description":"success"},"400":{"content":{"application/json":{"schema":{"content":{"application/json":{"schema":{"properties":{"code":{"type":"integer"},"reply":{"properties":{"error":{"type":"string"},"error_code":{"type":"string"},"success":{"type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"}},"type":"object","title":"ErrorReply"}}},"description":"Invalid Input"}}},"description":"Invalid Input"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

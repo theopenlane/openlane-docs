@@ -1,6 +1,6 @@
 ---
-id: openlane-openapi-3-1-0-specifications
-title: "Openlane OpenAPI 3.1.0 Specifications"
+id: openlane-openapi-3-1-1-specifications
+title: "Openlane OpenAPI 3.1.1 Specifications"
 description: "Openlane's API services are designed to provide a simple and easy to use interface for interacting with the Openlane platform. This API is designed to be used by both internal and external clients to interact with the Openlane platform."
 sidebar_label: Introduction
 sidebar_position: 0
@@ -30,7 +30,7 @@ import Export from "@theme/ApiExplorer/Export";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Openlane OpenAPI 3.1.0 Specifications"}
+  children={"Openlane OpenAPI 3.1.1 Specifications"}
 >
 </Heading>
 
@@ -51,6 +51,60 @@ Openlane's API services are designed to provide a simple and easy to use interfa
     className={"openapi-tabs__security-schemes"}
   >
     <TabItem
+      label={"API Key: apiKey"}
+      value={"apiKey"}
+    >
+
+
+      API Key authentication, the key must be a valid API key
+
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Security Scheme Type:
+              </th><td>
+                apiKey
+              </td>
+            </tr><tr>
+              <th>
+                Header parameter name:
+              </th><td>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </TabItem><TabItem
+      label={"HTTP: Basic Auth"}
+      value={"basic"}
+    >
+
+
+      Username and Password based authentication
+
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Security Scheme Type:
+              </th><td>
+                http
+              </td>
+            </tr><tr>
+              <th>
+                HTTP Authorization Scheme:
+              </th><td>
+                basic
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </TabItem><TabItem
       label={"HTTP: Bearer Auth"}
       value={"bearer"}
     >
@@ -72,6 +126,12 @@ Openlane's API services are designed to provide a simple and easy to use interfa
                 HTTP Authorization Scheme:
               </th><td>
                 bearer
+              </td>
+            </tr><tr>
+              <th>
+                Bearer format:
+              </th><td>
+                JWT
               </td>
             </tr>
           </tbody>
@@ -119,8 +179,8 @@ Openlane's API services are designed to provide a simple and easy to use interfa
         </table>
       </div>
     </TabItem><TabItem
-      label={"OpenID Connect: openid"}
-      value={"openid"}
+      label={"OpenID Connect: openIdConnect"}
+      value={"openIdConnect"}
     >
 
 
