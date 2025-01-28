@@ -8,6 +8,18 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "tfa",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/tfa-validation",
+          label: "TFAValidation",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "account",
       items: [
         {
@@ -38,7 +50,7 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "authentication",
+      label: "forgotpassword",
       items: [
         {
           type: "doc",
@@ -46,41 +58,11 @@ const sidebar: SidebarsConfig = {
           label: "ForgotPassword",
           className: "api-method post",
         },
-        {
-          type: "doc",
-          id: "api/rest-api/login-handler",
-          label: "LoginHandler",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/password-reset",
-          label: "PasswordReset",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/refresh-handler",
-          label: "RefreshHandler",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/register-handler",
-          label: "RegisterHandler",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/organization-switch",
-          label: "OrganizationSwitch",
-          className: "api-method post",
-        },
       ],
     },
     {
       type: "category",
-      label: "organization",
+      label: "invitations",
       items: [
         {
           type: "doc",
@@ -92,8 +74,50 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "register",
+      label: "authentication",
       items: [
+        {
+          type: "doc",
+          id: "api/rest-api/login-handler",
+          label: "LoginHandler",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "passwordReset",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/password-reset",
+          label: "PasswordReset",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "refresh",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/refresh-handler",
+          label: "RefreshHandler",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "accountRegistration",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/register-handler",
+          label: "RegisterHandler",
+          className: "api-method post",
+        },
         {
           type: "doc",
           id: "api/rest-api/resend-email",
@@ -117,6 +141,18 @@ const sidebar: SidebarsConfig = {
           id: "api/rest-api/verify-subscriber-email",
           label: "VerifySubscriberEmail",
           className: "api-method get",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "switchorganizations",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/organization-switch",
+          label: "OrganizationSwitch",
+          className: "api-method post",
         },
       ],
     },
