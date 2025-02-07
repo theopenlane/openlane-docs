@@ -1663,6 +1663,38 @@ input<br />
 </tbody>
 </table>
 
+## createEvidence
+
+**Type:** [EvidenceCreatePayload!](objects#evidencecreatepayload)
+
+Create a new evidence
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createevidenceinput"><code>CreateEvidenceInput!</code></a>
+</td>
+<td>
+<p>values of the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+evidenceFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createFullProgram
 
 **Type:** [ProgramCreatePayload!](objects#programcreatepayload)
@@ -1709,6 +1741,58 @@ input<br />
 </tbody>
 </table>
 
+## createGroupByClone
+
+**Type:** [GroupCreatePayload!](objects#groupcreatepayload)
+
+Create a new group with members
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+groupInput<br />
+<a href="inputObjects#creategroupinput"><code>CreateGroupInput!</code></a>
+</td>
+<td>
+<p>values of the group</p>
+</td>
+</tr>
+<tr>
+<td>
+members<br />
+<a href="inputObjects#groupmembersinput"><code>[GroupMembersInput!]</code></a>
+</td>
+<td>
+<p>group members to be added to the group</p>
+</td>
+</tr>
+<tr>
+<td>
+inheritGroupPermissions<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>inheritGroupPermissions allows a group to be created with the same permissions
+as the specified group ID</p>
+</td>
+</tr>
+<tr>
+<td>
+cloneGroupMembers<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>cloneGroupMembers allows a group to be created with the same group members
+as the specified group ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createGroupMembership
 
 **Type:** [GroupMembershipCreatePayload!](objects#groupmembershipcreatepayload)
@@ -1750,6 +1834,38 @@ input<br />
 </td>
 <td>
 <p>values of the groupSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createGroupWithMembers
+
+**Type:** [GroupCreatePayload!](objects#groupcreatepayload)
+
+Create a new group with members
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+groupInput<br />
+<a href="inputObjects#creategroupinput"><code>CreateGroupInput!</code></a>
+</td>
+<td>
+<p>values of the group to be created</p>
+</td>
+</tr>
+<tr>
+<td>
+members<br />
+<a href="inputObjects#groupmembersinput"><code>[GroupMembersInput!]</code></a>
+</td>
+<td>
+<p>group members to be added to the group</p>
 </td>
 </tr>
 </tbody>
@@ -1920,6 +2036,47 @@ input<br />
 </td>
 <td>
 <p>values of the organizationSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createOrganizationWithMembers
+
+**Type:** [OrganizationCreatePayload!](objects#organizationcreatepayload)
+
+Create a new organization with members
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+organizationInput<br />
+<a href="inputObjects#createorganizationinput"><code>CreateOrganizationInput!</code></a>
+</td>
+<td>
+<p>values of the new organization to be created</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+<p>avatar file to Upload</p>
+</td>
+</tr>
+<tr>
+<td>
+members<br />
+<a href="inputObjects#orgmembersinput"><code>[OrgMembersInput!]</code></a>
+</td>
+<td>
+<p>organization members to be added to the new org</p>
 </td>
 </tr>
 </tbody>
@@ -2481,6 +2638,29 @@ id<br />
 </td>
 <td>
 <p>ID of the event</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteEvidence
+
+**Type:** [EvidenceDeletePayload!](objects#evidencedeletepayload)
+
+Delete an existing evidence
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the evidence</p>
 </td>
 </tr>
 </tbody>
@@ -3307,6 +3487,47 @@ input<br />
 </td>
 <td>
 <p>New values for the event</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateEvidence
+
+**Type:** [EvidenceUpdatePayload!](objects#evidenceupdatepayload)
+
+Update an existing evidence
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateevidenceinput"><code>UpdateEvidenceInput!</code></a>
+</td>
+<td>
+<p>New values for the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+evidenceFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>

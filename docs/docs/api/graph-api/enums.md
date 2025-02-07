@@ -415,6 +415,36 @@ EventHistoryOpType is enum for the field operation
 </tbody>
 </table>
 
+## EvidenceHistoryOpType
+
+EvidenceHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## FileHistoryOpType
 
 FileHistoryOpType is enum for the field operation
@@ -1362,6 +1392,42 @@ OrgSubscriptionHistoryOpType is enum for the field operation
 </tr>
 <tr>
 <td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Permission
+
+Permission is enum for the permissions types
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>EDITOR</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VIEWER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CREATOR</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BLOCKED</td>
 <td>
 
 </td>

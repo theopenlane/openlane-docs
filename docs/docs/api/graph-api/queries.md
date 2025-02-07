@@ -378,6 +378,29 @@ query<br />
 </tbody>
 </table>
 
+## adminEvidenceSearch
+
+**Type:** [EvidenceSearchResult](objects#evidencesearchresult)
+
+Search across Evidence objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Search query</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## adminFileSearch
 
 **Type:** [FileSearchResult](objects#filesearchresult)
@@ -406,29 +429,6 @@ query<br />
 **Type:** [GroupSearchResult](objects#groupsearchresult)
 
 Search across Group objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Search query</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminGroupSettingSearch
-
-**Type:** [GroupSettingSearchResult](objects#groupsettingsearchresult)
-
-Search across GroupSetting objects
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -2209,6 +2209,170 @@ query<br />
 </tbody>
 </table>
 
+## evidence
+
+**Type:** [Evidence!](objects#evidence)
+
+Look up evidence by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the evidence</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## evidenceHistories
+
+**Type:** [EvidenceHistoryConnection!](objects#evidencehistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#evidencehistorywhereinput"><code>EvidenceHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for EvidenceHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## evidences
+
+**Type:** [EvidenceConnection!](objects#evidenceconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#evidencewhereinput"><code>EvidenceWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Evidences returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## evidenceSearch
+
+**Type:** [EvidenceSearchResult](objects#evidencesearchresult)
+
+Search across Evidence objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Search query</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## file
 
 **Type:** [File!](objects#file)
@@ -2832,29 +2996,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for GroupSettings returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## groupSettingSearch
-
-**Type:** [GroupSettingSearchResult](objects#groupsettingsearchresult)
-
-Search across GroupSetting objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Search query</p>
 </td>
 </tr>
 </tbody>

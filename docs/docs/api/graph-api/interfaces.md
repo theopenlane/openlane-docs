@@ -32,6 +32,8 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [EntityTypeHistory](objects#entitytypehistory)
 - [Event](objects#event)
 - [EventHistory](objects#eventhistory)
+- [Evidence](objects#evidence)
+- [EvidenceHistory](objects#evidencehistory)
 - [File](objects#file)
 - [FileHistory](objects#filehistory)
 - [Group](objects#group)

@@ -1927,6 +1927,15 @@ details<br />
 </tr>
 <tr>
 <td>
+exampleEvidence<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>example evidence to provide for the control</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization!</code></a>
 </td>
@@ -2037,6 +2046,15 @@ tasks<br />
 <td>
 programs<br />
 <a href="objects#program"><code>[Program!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -2415,6 +2433,15 @@ details<br />
 <p>json data including details of the control</p>
 </td>
 </tr>
+<tr>
+<td>
+exampleEvidence<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>example evidence to provide for the control</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2691,6 +2718,15 @@ details<br />
 </tr>
 <tr>
 <td>
+exampleEvidence<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>example evidence to provide for the control</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization!</code></a>
 </td>
@@ -2801,6 +2837,15 @@ tasks<br />
 <td>
 programs<br />
 <a href="objects#program"><code>[Program!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -3168,6 +3213,15 @@ details<br />
 </td>
 <td>
 <p>json data including details of the control objective</p>
+</td>
+</tr>
+<tr>
+<td>
+exampleEvidence<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>example evidence to provide for the control</p>
 </td>
 </tr>
 </tbody>
@@ -5569,6 +5623,695 @@ event<br />
 </tbody>
 </table>
 
+## Evidence
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the description of the evidence, what is contained in the uploaded file(s) or url(s)</p>
+</td>
+</tr>
+<tr>
+<td>
+collectionProcedure<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of how the evidence was collected</p>
+</td>
+</tr>
+<tr>
+<td>
+creationDate<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>the date the evidence was retrieved</p>
+</td>
+</tr>
+<tr>
+<td>
+renewalDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the date the evidence should be renewed, defaults to a year from entry date</p>
+</td>
+</tr>
+<tr>
+<td>
+source<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the source of the evidence, e.g. system the evidence was retrieved from (splunk, github, etc)</p>
+</td>
+</tr>
+<tr>
+<td>
+isAutomated<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the evidence was automatically generated</p>
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the url of the evidence if not uploaded directly to the system</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlObjectives<br />
+<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#control"><code>[Control!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrol"><code>[Subcontrol!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#file"><code>[File!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programs<br />
+<a href="objects#program"><code>[Program!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tasks<br />
+<a href="objects#task"><code>[Task!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceBulkCreatePayload
+
+Return response for createBulkEvidence mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+evidences<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
+</td>
+<td>
+<p>Created evidences</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#evidenceedge"><code>[EvidenceEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceCreatePayload
+
+Return response for createEvidence mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>Evidence!</code></a>
+</td>
+<td>
+<p>Created evidence</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceDeletePayload
+
+Return response for deleteEvidence mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted evidence ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#evidence"><code>Evidence</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#evidencehistoryoptype"><code>EvidenceHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the description of the evidence, what is contained in the uploaded file(s) or url(s)</p>
+</td>
+</tr>
+<tr>
+<td>
+collectionProcedure<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of how the evidence was collected</p>
+</td>
+</tr>
+<tr>
+<td>
+creationDate<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>the date the evidence was retrieved</p>
+</td>
+</tr>
+<tr>
+<td>
+renewalDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the date the evidence should be renewed, defaults to a year from entry date</p>
+</td>
+</tr>
+<tr>
+<td>
+source<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the source of the evidence, e.g. system the evidence was retrieved from (splunk, github, etc)</p>
+</td>
+</tr>
+<tr>
+<td>
+isAutomated<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the evidence was automatically generated</p>
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the url of the evidence if not uploaded directly to the system</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#evidencehistoryedge"><code>[EvidenceHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#evidencehistory"><code>EvidenceHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceSearchResult
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+evidences<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceUpdatePayload
+
+Return response for updateEvidence mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>Evidence!</code></a>
+</td>
+<td>
+<p>Updated evidence</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## File
 
 
@@ -5865,6 +6608,15 @@ events<br />
 <td>
 program<br />
 <a href="objects#program"><code>[Program!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -6372,6 +7124,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -6446,87 +7207,6 @@ displayName<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlObjectiveCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-groupCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-internalPolicyCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-narrativeCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateCreators<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
 </td>
 <td>
 
@@ -6706,7 +7386,7 @@ narrativeViewers<br />
 <tr>
 <td>
 setting<br />
-<a href="objects#groupsetting"><code>GroupSetting!</code></a>
+<a href="objects#groupsetting"><code>GroupSetting</code></a>
 </td>
 <td>
 
@@ -6764,6 +7444,15 @@ members<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+permissions<br />
+<a href="objects#grouppermissions"><code>[GroupPermissions!]</code></a>
+</td>
+<td>
+<p>permissions the group provides</p>
 </td>
 </tr>
 </tbody>
@@ -7002,6 +7691,15 @@ deletedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
 </td>
 </tr>
 <tr>
@@ -7636,6 +8334,65 @@ groupMembership<br />
 </tbody>
 </table>
 
+## GroupPermissions
+
+GroupPermissions contains details for the related object and the permissions
+the group provides (or removes in the case of blocked) to the object within the
+organization
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+objectType<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+permissions<br />
+<a href="enums#permission"><code>Permission!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## GroupSearchResult
 
 
@@ -7713,15 +8470,6 @@ updatedBy<br />
 </td>
 <td>
 
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
 </td>
 </tr>
 <tr>
@@ -8018,15 +8766,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
 deletedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -8155,27 +8894,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupSettingSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-groupSettings<br />
-<a href="objects#groupsetting"><code>[GroupSetting!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -9406,6 +10124,15 @@ status<br />
 </tr>
 <tr>
 <td>
+reviewDue<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the date the policy should be reviewed, defaults to a year from creation date</p>
+</td>
+</tr>
+<tr>
+<td>
 policyType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -9820,6 +10547,15 @@ status<br />
 </td>
 <td>
 <p>status of the policy</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewDue<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the date the policy should be reviewed, defaults to a year from creation date</p>
 </td>
 </tr>
 <tr>
@@ -11016,15 +11752,6 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -11259,15 +11986,6 @@ deletedBy<br />
 </td>
 <td>
 
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
 </td>
 </tr>
 <tr>
@@ -11926,6 +12644,15 @@ controls<br />
 <td>
 subcontrols<br />
 <a href="objects#subcontrol"><code>[Subcontrol!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -14598,6 +15325,15 @@ procedureType<br />
 </tr>
 <tr>
 <td>
+reviewDue<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the date the procedure should be reviewed, defaults to a year from creation date</p>
+</td>
+</tr>
+<tr>
+<td>
 version<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -15021,6 +15757,15 @@ procedureType<br />
 </td>
 <td>
 <p>type of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewDue<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the date the procedure should be reviewed, defaults to a year from creation date</p>
 </td>
 </tr>
 <tr>
@@ -15469,6 +16214,15 @@ notes<br />
 <td>
 files<br />
 <a href="objects#file"><code>[File!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -18142,6 +18896,15 @@ details<br />
 </tr>
 <tr>
 <td>
+exampleEvidence<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>example evidence to provide for the control</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization!</code></a>
 </td>
@@ -18189,6 +18952,15 @@ notes<br />
 <td>
 programs<br />
 <a href="objects#program"><code>[Program!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -18601,6 +19373,15 @@ details<br />
 </td>
 <td>
 <p>json data details of the subcontrol</p>
+</td>
+</tr>
+<tr>
+<td>
+exampleEvidence<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>example evidence to provide for the control</p>
 </td>
 </tr>
 </tbody>
@@ -19320,6 +20101,15 @@ subcontrol<br />
 <td>
 program<br />
 <a href="objects#program"><code>[Program!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -20531,6 +21321,15 @@ tfaSetting<br />
 </tr>
 <tr>
 <td>
+tfaSecret<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 qrCode<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -20587,6 +21386,15 @@ tfaSetting<br />
 </td>
 <td>
 <p>Updated tfaSetting</p>
+</td>
+</tr>
+<tr>
+<td>
+tfaSecret<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
