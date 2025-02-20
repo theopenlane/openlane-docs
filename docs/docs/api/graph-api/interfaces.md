@@ -53,6 +53,7 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [NarrativeHistory](objects#narrativehistory)
 - [Note](objects#note)
 - [NoteHistory](objects#notehistory)
+- [Onboarding](objects#onboarding)
 - [OrgMembership](objects#orgmembership)
 - [OrgMembershipHistory](objects#orgmembershiphistory)
 - [OrgSubscription](objects#orgsubscription)
