@@ -1986,6 +1986,29 @@ input<br />
 </tbody>
 </table>
 
+## createOnboarding
+
+**Type:** [OnboardingCreatePayload!](objects#onboardingcreatepayload)
+
+Create a new onboarding
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createonboardinginput"><code>CreateOnboardingInput!</code></a>
+</td>
+<td>
+<p>values of the onboarding</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createOrganization
 
 **Type:** [OrganizationCreatePayload!](objects#organizationcreatepayload)

@@ -12078,6 +12078,133 @@ cursor<br />
 </tbody>
 </table>
 
+## Onboarding
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+organizationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>name of the company</p>
+</td>
+</tr>
+<tr>
+<td>
+domains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains associated with the company</p>
+</td>
+</tr>
+<tr>
+<td>
+companyDetails<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>details given about the company during the onboarding process, including things such as company size, sector, etc</p>
+</td>
+</tr>
+<tr>
+<td>
+userDetails<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>details given about the user during the onboarding process, including things such as name, job title, department, etc</p>
+</td>
+</tr>
+<tr>
+<td>
+compliance<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>details given about the compliance requirements during the onboarding process, such as coming with existing policies, controls, risk assessments, etc</p>
+</td>
+</tr>
+<tr>
+<td>
+organization<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## OnboardingCreatePayload
+
+Return response for createOnboarding mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+onboarding<br />
+<a href="objects#onboarding"><code>Onboarding!</code></a>
+</td>
+<td>
+<p>Created onboarding</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Organization
 
 
