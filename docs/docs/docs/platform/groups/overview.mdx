@@ -5,3 +5,93 @@ sidebar_position: 1
 ---
 
 # Overview
+
+Groups in this system are entities that manage collections of users and control their permissions across various objects such as programs, controls, internal policies, and more. Groups can have different roles and permissions, which dictate what actions their members can perform on these objects.
+
+## Creating Groups
+
+Groups can be created in several ways:
+
+* Basic Creation: Using the `createGroup` mutation.
+* With Members: Using the `createGroupWithMembers` mutation, which allows specifying members at the time of creation.
+* By Cloning: Using the `createGroupByClone` mutation, which allows creating a new group by cloning the permissions and/or members of an existing group.
+
+### Example Mutation for Basic Creation
+
+```graphql
+mutation CreateGroup($input: CreateGroupInput!) {
+  createGroup(input: $input) {
+    group {
+      id
+      name
+      displayName
+      owner {
+        id
+        displayName
+      }
+      setting {
+        id
+        joinPolicy
+        syncToGithub
+        syncToSlack
+        visibility
+      }
+      permissions {
+        id
+        objectType
+        permissions
+      }
+      members {
+        id
+        role
+        user {
+          id
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}
+```
+
+## Updating Groups
+
+Groups can be updated using the `updateGroup` mutation. This mutation allows modifying various attributes of the group, including its name, description, and settings. Additionally, it supports adding or removing members and inheriting permissions from another group.
+
+### Example Mutation for Updating a Group
+
+```graphql
+mutation UpdateGroup($id: ID!, $input: UpdateGroupInput!) {
+  updateGroup(id: $id, input: $input) {
+    group {
+      id
+      name
+      displayName
+      description
+      setting {
+        id
+        joinPolicy
+        syncToGithub
+        syncToSlack
+        visibility
+      }
+      permissions {
+        id
+        objectType
+        permissions
+      }
+      members {
+        id
+        role
+        user {
+          id
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}
+```
+

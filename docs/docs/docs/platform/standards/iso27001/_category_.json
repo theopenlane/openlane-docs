@@ -3,7 +3,7 @@
   "position": 8,
   "link": {
     "type": "generated-index",
-    "description": "Information around the respective compliance standards supported by the Openlane system"
+    "description": "Information around ISO27001 compliance standards"
   },
   "collapsed": true
 }

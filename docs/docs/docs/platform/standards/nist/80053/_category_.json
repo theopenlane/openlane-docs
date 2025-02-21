@@ -3,7 +3,7 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Information around NIST compliance standards"
+    "description": "Information around NIST 800-53 compliance standards"
   },
   "collapsed": true
 }

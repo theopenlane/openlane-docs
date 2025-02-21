@@ -1,0 +1,9 @@
+{
+  "label": "CIS Benchmarks",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Information around Center for Internet Security (CIS) compliance standards"
+  },
+  "collapsed": true
+}

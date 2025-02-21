@@ -1,0 +1,9 @@
+{
+  "label": "CCM v4",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Cloud Controls Matrix compliance standards"
+  },
+  "collapsed": true
+}

@@ -1,0 +1,9 @@
+{
+    "label": "Organizations",
+    "position": 4,
+    "link": {
+      "type": "generated-index",
+      "description": "Information on what Organizations are and their relationshipo to other objects in the system"
+    },
+    "collapsed": true
+  }

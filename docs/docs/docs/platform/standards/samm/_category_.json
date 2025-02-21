@@ -1,0 +1,9 @@
+{
+  "label": "SAMM",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Information around Software Assurance Maturity Model (SAMM) compliance standards"
+  },
+  "collapsed": true
+}
