@@ -1,0 +1,9 @@
+{
+  "label": "GDPR",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Information around General Data Protection Regulation (GDPR) compliance standards"
+  },
+  "collapsed": true
+}

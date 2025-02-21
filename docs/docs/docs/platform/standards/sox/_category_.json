@@ -1,0 +1,9 @@
+{
+  "label": "SOX",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Information aruond Sarbanes-Oxley Act (SOX) compliance"
+  },
+  "collapsed": true
+}

@@ -1,0 +1,9 @@
+{
+  "label": "HIPPA",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Information around HIPPA compliance standards"
+  },
+  "collapsed": true
+}
