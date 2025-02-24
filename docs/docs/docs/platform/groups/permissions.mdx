@@ -63,7 +63,7 @@ Add user as viewer of the program:
 ```graphql
 mutation AssignViewerToProgram {
   updateProgram(id: "program1-id", input: {
-    viewers: ["user1-id"]
+    viewers: ["group-id"]
   }) {
     program {
       id
@@ -82,7 +82,7 @@ Add user as editor of control:
 ```graphql
 mutation AssignEditorToControl {
   updateControl(id: "control1-id", input: {
-    editors: ["user1-id"]
+    editors: ["group-id"]
   }) {
     control {
       id

@@ -20,32 +20,36 @@ A Control is a measure that is put in place to mitigate risk.
 <Tabs className="unique-tabs">
   <TabItem value="Detective" label="Detective">
     Controls which alert employees to an action.
-    Examples: Log Monitoring with Alerts, Data leak Prevention, Intrusion Detection System
+    <br/>
+    **Example**: Log Monitoring with Alerts, Data leak Prevention, Intrusion Detection System
   </TabItem>
   <TabItem value="Preventative" label="Preventative">
-    Controls used to help prevent certain events from occurring.
-    Examples: A signature is required before an employee spends over $2,000.00 on a service or equipment
-    Examples: Firewalls, access controls, encryption
+    Controls used to help prevent certain events from occurring.<br/>
+    <br/>
+    **Example**: A signature is required before an employee spends over $2,000.00 on a service or equipment<br/>
+    <br/>
+    **Example**: Firewalls, access controls, encryption
   </TabItem>
   <TabItem value="Corrective" label="Corrective">
-    Controls that take corrective action based upon an event that occurred.
-    Examples: The DevOps team developed a script to spin up in a new region if their current region goes down
+    Controls that take corrective action based upon an event that occurred.<br/>
+    <br/>
+    **Example**: The DevOps team developed a script to spin up in a new region if their current region goes down
   </TabItem>
     <TabItem value="Compensating" label="Compensating">
-    Compensating controls are used when a process or technology is deficient and would require enormous changes, or it would be very costly for the organization to remediate.
-    Oftentimes compensating controls are used more to assist information systems and IT processes, rather than business processes. It's important to understand what controls are, and the different types that can be implemented.
+    Compensating controls are used when a process or technology is deficient and would require enormous changes, or it would be very costly for the organization to remediate. Oftentimes compensating controls are used more to assist information systems and IT processes, rather than business processes. It's important to understand what controls are, and the different types that can be implemented.
   </TabItem>
 </Tabs>
 
 ## Relationship Diagram
 
 ```mermaid
-graph TD
-    A[Policies] --> B[Controls]
-    B --> C[Procedures]
-    B --> D[Mitigate Risks]
-    C --> D
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
+
 
 ## Control Categories
 
