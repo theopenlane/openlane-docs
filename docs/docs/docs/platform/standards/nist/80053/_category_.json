@@ -1,5 +1,5 @@
 {
-  "label": "NIST",
+  "label": "800-53",
   "position": 3,
   "link": {
     "type": "generated-index",
