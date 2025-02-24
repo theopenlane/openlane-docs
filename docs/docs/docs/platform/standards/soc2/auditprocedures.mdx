@@ -1,0 +1,75 @@
+---
+title: Audit Procedures
+sidebar_position: 5
+---
+
+# Audit Procedures
+
+Testing will occur for different criteria and controls that have been implemented by the service organization. For example the testing and evidence for availability will be different than that of privacy.
+
+The table below provides a basic breakdown of the types of tests that would be performed on any given control:
+
+| **Test**                                                   | **Description**                                                                                                                                                                                                                                                                                                                                                                 | **Practical Examples**                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Inquiry                                                    | Conducted detailed interviews with relevant personnel to obtain evidence that the control was in operation during the report period and is accompanied by other procedures noted below that are necessary to corroborate the information derived from the inquiry. This procedure is normally performed by the auditor to obtain an understanding of the design of the control. | During the walkthrough with management, the auditor will ask management (inquire) to explain how users are given access to AWS.                                                                                                                                                                                                                                                   |
+| Observation                                                | Observed the performance of the control multiple times throughout the report period to evidence application of the specific control activity.                                                                                                                                                                                                                                   | During the walkthrough with management, the auditor will observe management creating a test user and observe the test user being given access to AWS. Furthermore the auditor will observe the authorization of an existing user, and verify the completed access form that is signed by the relevant manager. This observation will be documented in the auditors working paper. |
+| Examination of documentation / Inspection                  | If the performance of the control is documented, inspected documents, screenshots and reports indicating performance of the control.                                                                                                                                                                                                                                            | The auditors will select a sample of new AWS users and inspect the relevant evidence received i.e. signed access form. The evidence received will be compared with the control that was provided by management.                                                                                                                                                                   |
+| Re-performance of monitoring activities or manual controls | Obtained documents used in the monitoring activity or manual control activity and independently re-performed the procedures. Compared any exception items identified with those identified by the responsible control owner.                                                                                                                                                    | The auditor will obtain a list of AWS users and compare it to a termination listing or an HR listing to verify: (1) Terminated users are removed from AWS (2) The active users access is appropriate based on their job responsibility. E.g. the receptionist wouldn't need AWS access. In essence the auditor re-performed the user access review control.                       |
+
+
+## Audit Evidence
+
+Currently a SOC2 audit process uses the trust but verify approach by external auditing teams. The theory behind this approach is that the auditing team receiving the evidence produced by the service organization is forthright and not tampered or altered with. This approach allows for the auditing team to stay independent of pulling the evidence. Evidence is obtained from management at three various stages of the audit:
+
+### Obtaining Evidence Regarding the Description
+
+The auditor will obtain and inspect the system description and will evaluate whether those aspects of the description included in the scope of the engagement are fairly presented i.e. the way we describing our system is actually the way it is working. You cant say we use JIRA for change management, and then JIRA is still being implemented. The following are the checks on the system description that the service auditor will perform:
+
+* Controls stated in the service organization’s description of its system do address the criteria;
+* Controls identified in that description were implemented;
+* Complementary user entity controls, if any, are adequately described; and
+* Services performed by a subservice organization, if any, are adequately described, including whether the inclusive method or the carve-out method has been used in relation to them.
+
+The auditor shall determine, through other procedures in combination with inquiries, whether the service organization’s system has been implemented. Those other procedures shall include observation, and inspection of records and other documentation, of the manner in which the service organization’s system operates and controls are applied.
+
+### Obtaining Evidence Regarding Design and implementation of Controls
+
+The auditor will decide which of the controls at the service organization are needed to achieve the criteria (For example what controls are in place to achieve the Control Environment criteria) and shall assess whether those controls were suitably designed.
+
+To ensure that controls are suitably designed, the auditor will perform the following procedures:
+
+(a) Identifying the risks that threaten the achievement of the criteria; and
+
+(b) Evaluating the linkage of controls identified in the service organization’s description of its system with those risks.
+
+When designing and performing tests of controls, the auditor will:
+
+* Perform other procedures in combination with inquiry to obtain evidence about:
+  * How the control was applied;
+  * Does the control address the criteria;
+  * The consistency with which the control was applied; and
+  * By whom or by what means the control was applied;
+
+Evidence pertaining to the implementation of the control, shall be obtained via walkthroughs performed between the auditor and management. A walkthrough is a process where the auditors will “walk – through” a control in order to obtain an understanding of how the control operates. During this walkthrough process, the auditor will obtain evidence in forms of screenshots, emails, documentation etc. in order to verify that the control was implemented as designed.
+
+**Control design**: For example, users gain access to Windows via a completed and signed IT form.
+
+The auditor will enquire of management to take them through one such example of a user gaining access to Windows i.e. the walkthrough. Should the auditor see that users are given access to Windows via a completed and signed IT form, then they will conclude that the control is implemented as designed. If users are given access to Windows via a completed IT form that is not signed, then the auditors will conclude that the control is not implemented as designed and the control will fail.
+
+Design and implementation of the controls are normally tested together. At this stage it is important to clearly show the auditors that the controls management have in place, are implemented as management say they are. Management cannot say that they have an anti-virus installed on all end users laptops and then the first laptop that is checked the auditors find that the anti-virus software is not installed. Failing a control on design and implementation, is a much more significant deficiency than failing a control on an operating effectiveness level, which is discussed below.
+
+### Obtaining Evidence Regarding Operating Effectiveness of Controls
+
+When providing a type 2 report, the auditor shall test those controls that the auditor has determined are necessary to achieve the criteria stated in the service organization’s description of its system (Section 3) and assess their operating effectiveness throughout the period.
+
+This needs to be a period no less than 6 months and no more than 12 months.
+
+As per number 2 above, the auditor tested the design and the implementation of the control, which is a sample of one occurrence. When testing for operating effectiveness the auditor needs to select a sample throughout the period and obtain evidence for the sample to ensure that the control was operating effectively throughout the period of testing.
+
+When determining the extent of tests of controls, the auditor shall consider matters including the characteristics of the population to be tested, which includes the nature of controls, the frequency of their application (for example, monthly, daily, a number of times per day), and the expected rate of deviation.
+
+For example if we have a population of 50 new users that were added to AWS for the period 01 January to 31 December, the auditor would select a sample of 5 new users and request the relevant evidence for those 5 users.
+
+Evidence provided for the sample selected, can range from screenshots, emails, documentation etc. In essence the evidence provided needs to clearly indicate that the control is being performed as designed over a period of time. In the day and age where almost all the evidence will be electronic, it is important that the pieces of evidence have a date stamp on. Evidence that does not have a date stamp on, can provide difficulties for the auditor to determine the validity of the evidence.
+
+Evidence obtained in prior audits about the satisfactory operation of controls in prior periods does not provide a basis for a reduction in testing, even if it is supplemented with evidence obtained during the current period. This means that the evidence provided needs to be from the current period of review.

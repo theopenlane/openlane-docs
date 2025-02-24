@@ -1,0 +1,9 @@
+{
+  "label": "PCI-DSS",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Information around Payment Card Industry Data Security (PCI-DSS) Standard compliance standards"
+  },
+  "collapsed": true
+}

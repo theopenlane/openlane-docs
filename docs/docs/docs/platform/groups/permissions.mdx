@@ -1,0 +1,314 @@
+---
+title: Permissions
+---
+
+# Permissions
+
+Groups control permissions for various objects in the system. These permissions determine what actions members of the group can perform on these objects. You can use GraphQL queries and mutations to view and/or define the relationships between various objects (e.g., programs, controls) and the permissions that can be assigned to users or groups.
+
+## Setting up permissions
+
+**Use Case**: Create a Program where the user can view the program only but edit controls
+
+1. Create a Program and Control Objects:
+    1. Create a program object and a control object
+    1. Add the member to the program with a role of member (viewer)
+    1. Assign the user to groups as an editor or owner of the control
+
+Example GraphQL:
+
+**Create a Program**
+
+```graphql
+mutation CreateProgram($input: CreateProgramInput!) {
+  createProgram(input: $input) {
+    program {
+      id
+      name
+      description
+      status
+      framework
+      owner {
+        id
+        displayName
+      }
+    }
+  }
+}
+```
+
+**Create a Control**
+
+```graphql
+mutation CreateControl($input: CreateControlInput!) {
+  createControl(input: $input) {
+    control {
+      id
+      name
+      description
+      status
+      owner {
+        id
+        displayName
+      }
+    }
+  }
+}
+```
+
+**Assign Permissions**
+
+Add user as viewer of the program:
+
+```graphql
+mutation AssignViewerToProgram {
+  updateProgram(id: "program1-id", input: {
+    viewers: ["group-id"]
+  }) {
+    program {
+      id
+      name
+      viewers {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+Add user as editor of control:
+
+```graphql
+mutation AssignEditorToControl {
+  updateControl(id: "control1-id", input: {
+    editors: ["group-id"]
+  }) {
+    control {
+      id
+      name
+      editors {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+## Permission Inheritance
+
+Permission inheritance in the system allows permissions to be propagated from one object to another, typically from a parent object to its child objects. This mechanism ensures that permissions are consistently applied across related objects without the need to explicitly define them for each object.
+
+**How Permission Inheritance Works**:
+1. Defining Relationships:
+    * Relationships between objects are defined in the system's underlying data model.
+    * These relationships specify how permissions are inherited from one object to another.
+1. Inheritance Rules:
+    * Permissions can be inherited directly or through intermediary relationships.
+    * For example, a user who is an editor of a group can inherit editor permissions for all programs associated with that group.
+
+**Example of Permission Inheritance**:
+
+1. Group Membership:
+    * A user is added as a member of a group
+    * The group has editor permissions of a program
+1. Inherited Permissions:
+    * The user inherits editor permissions for the program through their membership in the group.
+
+**Example**
+
+Create a group:
+
+```graphql
+mutation CreateGroup {
+  createGroup(input: {
+    name: "Group1",
+    description: "A sample group"
+  }) {
+    group {
+      id
+      name
+    }
+  }
+}
+```
+
+Add user to group:
+
+```graphql
+mutation AddUserToGroup {
+  updateGroup(id: "group1-id", input: {
+    members: ["user1-id"]
+  }) {
+    group {
+      id
+      name
+      members {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+Assign group as editor of the program:
+
+```graphql
+mutation AssignEditorToProgram {
+  updateProgram(id: "program1-id", input: {
+    editors: ["group1-id"]
+  }) {
+    program {
+      id
+      name
+      editors {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+### Overlap
+
+When a user is in multiple groups with different permissions for the same object, the most permissive set of permissions typically applies. In this case, if a user is in one group that can edit a program and another group that can only view the program, the user will have the higher level of access, which is the ability to edit the program.
+
+**Example Scenario**:
+    * **Group A**: Has editor permissions for `Program1`.
+    * **Group B**: Has viewer permissions for `Program1`.
+    * **User1**: Is a member of both `Group A` and `Group B`.
+
+Resulting Permissions for `User1`
+    * **Program1**: `User1` will have editor permissions because the editor permission is more permissive than the viewer permission.
+
+
+**Example**
+
+Create groups:
+
+```graphql
+mutation CreateGroups {
+  createGroup(input: {
+    name: "GroupA",
+    description: "Group with editor permissions"
+  }) {
+    group {
+      id
+      name
+    }
+  }
+  createGroup(input: {
+    name: "GroupB",
+    description: "Group with viewer permissions"
+  }) {
+    group {
+      id
+      name
+    }
+  }
+}
+```
+
+Add user to groups:
+
+```graphql
+mutation AddUserToGroups {
+  updateGroup(id: "groupa-id", input: {
+    members: ["user1-id"]
+  }) {
+    group {
+      id
+      name
+      members {
+        id
+        name
+      }
+    }
+  }
+  updateGroup(id: "groupb-id", input: {
+    members: ["user1-id"]
+  }) {
+    group {
+      id
+      name
+      members {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+Assign permissions to groups:
+
+```graphql
+mutation AssignPermissionsToGroups {
+  updateProgram(id: "program1-id", input: {
+    editors: ["groupa-id"],
+    viewers: ["groupb-id"]
+  }) {
+    program {
+      id
+      name
+      editors {
+        id
+        name
+      }
+      viewers {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+In a scenario where a user is in multiple groups with different permissions for the same object, the user will inherit the most permissive set of permissions. If a user is in a group with editor permissions and another group with viewer permissions for the same program, the user will have editor permissions for that program. This ensures that the user has the highest level of access granted by any of their group memberships.
+
+## Revoking Permissions
+
+To revoke specific permissions from a user or group, you can use GraphQL mutations to update the permissions of the relevant objects. This involves removing the user or group from the list of entities that have the specified permissions.
+
+**Examples**
+
+Remove user from the list of editors for a control:
+
+```graphql
+mutation RemoveEditorFromControl {
+  updateControl(id: "control1-id", input: {
+    editors: []
+  }) {
+    control {
+      id
+      name
+      editors {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+Remove group from the list of viewers for a program:
+
+```graphql
+mutation RemoveViewerFromProgram {
+  updateProgram(id: "program1-id", input: {
+    viewers: []
+  }) {
+    program {
+      id
+      name
+      viewers {
+        id
+        name
+      }
+    }
+  }
+}
+```

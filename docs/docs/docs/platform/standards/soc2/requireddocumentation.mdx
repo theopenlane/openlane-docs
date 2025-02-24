@@ -1,0 +1,98 @@
+---
+title: Required Documents for SOC2 Audit
+sidebar_position: 3
+---
+
+# Required documents for SOC 2 compliance
+
+There are three documents you’ll need for your SOC 2 audit: a management assertion, a system description, and a controls matrix.
+
+## Management assertion
+
+This document introduces your auditor to your systems. A management assertion is a statement from your organization about how your system is designed, how it operates, and how you manage it. It will give your auditor an idea of how you’ve set up your information security controls and attest that you’ve met the necessary criteria for SOC 2 compliance to the best of your knowledge.
+
+## System description
+
+A system description details the components of your infrastructure that handle, manage, or process customer data — essentially anything within the scope of your SOC 2 audit. This doesn’t need to include everything about your technology or business infrastructure, just what’s relevant to your SOC 2.
+
+The description documents the people, processes, technologies, and accompanying controls for the organization. Think of this similar to a network architecture diagram, but with no diagrams and a lot of reading regarding the organizations' structure, processes, and controls. The system description is intended to provide users with information about the system, particularly system controls intended to meet the criteria: security, availability, processing integrity, confidentiality, and privacy.
+
+### Details of the System Description
+
+There are 10 components to include in your system description:
+
+* **Company overview**: A description of the services you provide and the types of customers you work with.
+* **System overview**: An explanation of how your infrastructure helps service your customers.
+* **Principle service commitments and system requirements**: A description of the service commitments you’ve made to clients — like uptime guarantees for example — and the system requirements needed to meet them.
+* **System components**: A list of all your system components including your infrastructure, software tools, processes, data, and personnel.
+* **Incident disclosure**: Reports of any breaches or incidents that have impacted the commitments you’ve made to your customers.
+* **Criteria disclosure**: A list of the Trust Services Criteria relevant to your audit.
+* Relevant aspects of the control environment: A list and explanation of the controls you’ve implemented to meet the necessary criteria.
+* **Complementary user entity and subservice organization controls**: A description of any controls that your clients or vendors are responsible for.
+* **Criteria exceptions**: An explanation for why the Trust Services Criteria that weren’t included in your controls aren’t applicable to your current audit.
+* (For SOC 2 Type 2 audits) Changes to the system during the period: A notation of any changes you’ve made to your system during the audit window.
+
+### Management's Approval
+
+Depending on how the project has been scoped and the personnel involved. Once the Section III report or “System Description” has been created. It will be the responsibility of the consultant or lead implementer to have the management team review and approve the Section III outline. The system description can start to be worked on once a defined scope has been identified and set with the auditing team.
+
+## Controls matrix
+
+Your SOC 2 controls matrix is a document that lists out all the controls applicable to the audit. If you want to save time, energy, and money you can use a system like Openlane to inventory your controls, otherwise you can take the clunky error prone manual route of creating them in a spreadsheet given.
+
+List each control and include the following information alongside it:
+
+* Criteria reference: The Trust Services Criteria that maps to the control.
+* Control number: The reference number for the control within the Trust Services Criteria.
+* Control activity: A description of what the control does.
+* Control owner: The person within your organization who is responsible for implementing and maintaining the control.
+* Risk level: The likelihood that a control might fail and the impact it will have if it does, stated as low, moderate, or high.
+
+### Types of Controls
+
+1. Detective - controls that alert employees to an action. ie, Log Monitoring with Alerts, Data leak Prevention, Intrusion Detection System
+1. Preventative - controls used to help prevent certain events from occurring. ie, Example - A signature is required before an employee spends over 2,000.00 dollars on a service or equipment
+1. Corrective - control that takes corrective action based upon an event that occurred. For Example, the DevOps team developed a script to spin up in a new region if their current region goes down
+1. Compensating - compensating control is when a process or technology is deficient and would require enormous changes, or it would be very costly for the organization to remediate
+
+Oftentimes compensating controls are used more to assist information systems and IT processes, rather than business processes. It's important to understand what controls are, and the different types that can be implemented.
+
+Oftentimes technologies such as anti-malware will encompass all three control types especially with newer systems such as Carbon Black and CrowdStrike that have a machine learning backend.
+
+## Additional SOC 2 compliance documentation
+
+In addition to the core documents listed above, your auditor may request other documents during your SOC 2 audit that you’ll either need to share with your auditor or develop if they don’t already exist. This will vary based on the criteria and controls relevant to your organization and the type of SOC 2 report you need.
+
+Some of these additional documents include:
+
+* Corporate governance manual
+* Organization code of conduct
+* Network Diagram
+* Employee handbook
+* Risk management plan
+* Map of your office
+* Organizational chart
+* Compliance program budget
+* Incident response plans/business continuity plans
+* Vendor agreements
+* Employee onboarding documentation
+* Employee termination process
+* Logs of employee security trainings
+* Inventory of all network devices
+* Maintenance records for all IT equipment
+* Data privacy and security policies, including:
+    * Data retention and data destruction policies
+    * Encryption policy
+    * Log management policy
+    * Access policy
+    * Password requirements policy
+    * User unsubscribe and opt-out policies
+    * Confidentiality policy and agreements
+* Controlled access logs
+* Logs of system updates and backups
+* Notice of privacy practices
+* Data use agreement
+* Risk assessments
+* Previous compliance reports, if applicable
+* Self-assessment questionnaires, if applicable
+* Penetration testing questionnaires, if applicable

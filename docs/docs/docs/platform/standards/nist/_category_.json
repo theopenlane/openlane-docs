@@ -1,9 +1,9 @@
 {
   "label": "NIST",
-  "position": 8,
+  "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Information around the respective compliance standards supported by the Openlane system"
+    "description": "Information around NIST compliance standards"
   },
   "collapsed": true
 }

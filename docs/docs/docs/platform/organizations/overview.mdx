@@ -1,0 +1,77 @@
+---
+title: Overview
+---
+
+# Overview
+
+The `Organization` object represents a central entity within the system, encapsulating various resources, settings, and members. It serves as a container for managing access control, settings, and relationships with other entities.
+
+## Permissions at an Organization Level
+
+Permissions within an organization are managed through roles and specific permissions:
+
+* Roles: Roles such as `owner`, `admin`, `member` define the level of access a user has within an organization.
+* Permissions: Specific permissions like `can_view`, `can_edit`, `audit_log_viewer`, and `can_invite_members` are assigned to roles to control access to various resources and actions within the organization.
+
+### Organization Membership
+
+Organization membership involves associating users with an organization and assigning them roles. Membership details include:
+
+* Roles: Roles assigned to members determine their access level and permissions within the organization.
+* Membership Management: Members can be added, updated, or removed using mutations like `createOrgMembership`, `updateOrgMembership`, and `deleteOrgMembership`.
+
+### Update Organization roles
+
+Example:
+
+```graphql
+mutation UpdateUserRoleInOrg($updateOrgMemberId: ID!, $input: UpdateOrgMembershipInput!) {
+  updateOrgMembership(id: $updateOrgMemberId, input: $input) {
+    orgMembership {
+      id
+      role
+      userID
+      organizationID
+    }
+  }
+}
+```
+
+## Organization Invitations
+
+Organization invitations allow users to be invited to join an organization. Invitations typically involve sending an invite to a user via email, who can then accept with the uniquely generated code sent to them in an email and become a member of the organization.
+
+## Examples
+
+Adding a Member to an Existing Organization:
+
+```graphql
+mutation {
+  createOrgMembership(
+    input: {
+      organizationID: "org1",
+      userID: "user3",
+      role: MEMBER
+    }
+  ) {
+    orgMembership {
+      id
+      userID
+      role
+    }
+  }
+}
+```
+
+Updating Organization settings (update avatar):
+
+```graphql
+mutation UpdateOrganization($updateOrganizationId: ID!, $input: UpdateOrganizationInput!, $avatarFile: Upload) {
+  updateOrganization(id: $updateOrganizationId, input: $input, avatarFile: $avatarFile) {
+    organization {
+      id
+    }
+  }
+}
+```
+

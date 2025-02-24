@@ -1,0 +1,9 @@
+{
+    "label": "Risk Assessements",
+    "position": 8,
+    "link": {
+      "type": "generated-index",
+      "description": "Performing Risk Assessments and Mitigation strategies"
+    },
+    "collapsed": true
+  }
