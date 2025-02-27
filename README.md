@@ -4,14 +4,16 @@ This repo holds the markdown files and associated configurations for the [Openla
 
 ## Developing
 
-Setup [Taskfile](https://taskfile.dev/installation/) by following the instructions and using one of the various convenient package managers or installation scripts. After installation, you can then simply run `task install`
-to load the associated dependencies. NOTE: the taskfile automation does not install anything related to `npm`, `yarn`, `npx` - we assume these are in place already.
+Setup [Taskfile](https://taskfile.dev/installation/) by following the instructions and using one of the various convenient package managers or installation scripts. After installation,
+you can then simply run `task install` to load the associated dependencies. NOTE: the taskfile automation does not install anything related to `npm`, `yarn`, `npx` - we assume these are
+in place already.
 
-After installing the needed dependencies, you can run `task dev` to bring up a local docusaurus instance which you'll be able to view in your browser at ` http://localhost:8000/`.
+After installing the needed dependencies, you can run `task dev` to bring up a local docusaurus instance which you'll be able to view in your browser at `http://localhost:8000/`.
 
 ### Guidance
 
-When creating new documentation there is very likely a section which already exists that the docs should fit into, try and find it first. If you believe you need to create a new section, be certain to follow the documented [style guide](docs/docs/docs/platform/contributing/styleguide.mdx) as well as ensuring:
+When creating new documentation there is very likely a section which already exists that the docs should fit into, try and find it first. If you believe you need to create a new section,
+be certain to follow the documented [style guide](docs/docs/docs/platform/contributing/styleguide.mdx) as well as ensuring:
 
 * Markdown files are created with the extension `.mdx`
 * Your directory contains a `_category_.json` file with the respective configurations (an empty one of these files can be found [here](templates/_category_.json))
