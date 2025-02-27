@@ -3798,6 +3798,29 @@ ids<br />
 </tbody>
 </table>
 
+## note
+
+**Type:** [Note!](objects#note)
+
+Look up note by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the note</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## noteHistories
 
 **Type:** [NoteHistoryConnection!](objects#notehistoryconnection)

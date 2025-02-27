@@ -1897,42 +1897,6 @@ TaskHistoryOpType is enum for the field operation
 </tbody>
 </table>
 
-## TaskHistoryPriority
-
-TaskHistoryPriority is enum for the field priority
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>LOW</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>MEDIUM</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>HIGH</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>CRITICAL</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## TaskHistoryTaskStatus
 
 TaskHistoryTaskStatus is enum for the field status
@@ -1968,42 +1932,6 @@ TaskHistoryTaskStatus is enum for the field status
 </tr>
 <tr>
 <td>WONT_DO</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## TaskPriority
-
-TaskPriority is enum for the field priority
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>LOW</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>MEDIUM</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>HIGH</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>CRITICAL</td>
 <td>
 
 </td>

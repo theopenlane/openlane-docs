@@ -4205,6 +4205,38 @@ input<br />
 </tbody>
 </table>
 
+## updateTaskComment
+
+**Type:** [TaskUpdatePayload!](objects#taskupdatepayload)
+
+Update an existing task comment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatenoteinput"><code>UpdateNoteInput!</code></a>
+</td>
+<td>
+<p>New values for the comment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateTemplate
 
 **Type:** [TemplateUpdatePayload!](objects#templateupdatepayload)
