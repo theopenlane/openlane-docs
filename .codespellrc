@@ -1,0 +1,5 @@
+[codespell]
+write-changes = true
+quiet-level = 3
+count =
+skip = docs/docs/api/**

@@ -11,7 +11,8 @@ tags:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Required Environment Variables
+## Required Environment Variables
+
 ---
 
 <Tabs>
@@ -126,4 +127,3 @@ import TabItem from '@theme/TabItem';
         ```
     </TabItem>
 </Tabs>
-
