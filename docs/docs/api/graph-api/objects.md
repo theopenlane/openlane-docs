@@ -1811,7 +1811,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -1937,7 +1937,7 @@ exampleEvidence<br />
 <tr>
 <td>
 owner<br />
-<a href="objects#organization"><code>Organization!</code></a>
+<a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
 
@@ -2319,7 +2319,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -2611,7 +2611,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -2728,7 +2728,7 @@ exampleEvidence<br />
 <tr>
 <td>
 owner<br />
-<a href="objects#organization"><code>Organization!</code></a>
+<a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
 
@@ -3110,7 +3110,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -3471,7 +3471,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -3781,7 +3781,7 @@ ownerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -5720,7 +5720,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -5801,7 +5801,7 @@ url<br />
 <tr>
 <td>
 owner<br />
-<a href="objects#organization"><code>Organization!</code></a>
+<a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
 
@@ -6120,7 +6120,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -11127,7 +11127,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -11172,7 +11172,7 @@ details<br />
 <tr>
 <td>
 owner<br />
-<a href="objects#organization"><code>Organization!</code></a>
+<a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
 
@@ -11509,7 +11509,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -11756,7 +11756,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -11779,26 +11779,8 @@ owner<br />
 </tr>
 <tr>
 <td>
-entity<br />
-<a href="objects#entity"><code>Entity</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrols<br />
-<a href="objects#subcontrol"><code>[Subcontrol!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-program<br />
-<a href="objects#program"><code>[Program!]</code></a>
+task<br />
+<a href="objects#task"><code>Task</code></a>
 </td>
 <td>
 
@@ -11994,7 +11976,7 @@ ownerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -12562,6 +12544,15 @@ users<br />
 </tr>
 <tr>
 <td>
+files<br />
+<a href="objects#file"><code>[File!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 events<br />
 <a href="objects#event"><code>[Event!]</code></a>
 </td>
@@ -12573,15 +12564,6 @@ events<br />
 <td>
 secrets<br />
 <a href="objects#hush"><code>[Hush!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-files<br />
-<a href="objects#file"><code>[File!]</code></a>
 </td>
 <td>
 
@@ -13374,6 +13356,15 @@ billingNotificationsEnabled<br />
 </tr>
 <tr>
 <td>
+allowedEmailDomains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains allowed to access the organization, if empty all domains are allowed</p>
+</td>
+</tr>
+<tr>
+<td>
 organization<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -13716,6 +13707,15 @@ billingNotificationsEnabled<br />
 </td>
 <td>
 <p>should we send email notifications related to billing</p>
+</td>
+</tr>
+<tr>
+<td>
+allowedEmailDomains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains allowed to access the organization, if empty all domains are allowed</p>
 </td>
 </tr>
 </tbody>
@@ -17427,7 +17427,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -17526,7 +17526,7 @@ details<br />
 <tr>
 <td>
 owner<br />
-<a href="objects#organization"><code>Organization!</code></a>
+<a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
 
@@ -17854,7 +17854,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -18871,7 +18871,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -19033,7 +19033,7 @@ exampleEvidence<br />
 <tr>
 <td>
 owner<br />
-<a href="objects#organization"><code>Organization!</code></a>
+<a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
 
@@ -19050,26 +19050,8 @@ controls<br />
 </tr>
 <tr>
 <td>
-user<br />
-<a href="objects#user"><code>[User!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tasks<br />
 <a href="objects#task"><code>[Task!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-notes<br />
-<a href="objects#note"><code>Note</code></a>
 </td>
 <td>
 
@@ -19352,7 +19334,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -20056,7 +20038,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -20083,7 +20065,7 @@ description<br />
 <tr>
 <td>
 details<br />
-<a href="scalars#map"><code>Map</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the details of the task</p>
@@ -20100,20 +20082,20 @@ status<br />
 </tr>
 <tr>
 <td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
 due<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
 <p>the due date of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="enums#taskpriority"><code>TaskPriority!</code></a>
-</td>
-<td>
-<p>the priority of the task</p>
 </td>
 </tr>
 <tr>
@@ -20137,16 +20119,16 @@ assigneeID<br />
 <tr>
 <td>
 assignerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the id of the user who assigned the task</p>
+<p>the id of the user who assigned the task, can be left empty if created by the system or a service token</p>
 </td>
 </tr>
 <tr>
 <td>
 owner<br />
-<a href="objects#organization"><code>Organization!</code></a>
+<a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
 
@@ -20155,7 +20137,7 @@ owner<br />
 <tr>
 <td>
 assigner<br />
-<a href="objects#user"><code>User!</code></a>
+<a href="objects#user"><code>User</code></a>
 </td>
 <td>
 
@@ -20168,6 +20150,15 @@ assignee<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+comments<br />
+<a href="objects#note"><code>[Note!]</code></a>
+</td>
+<td>
+<p>conversations related to the task</p>
 </td>
 </tr>
 <tr>
@@ -20501,7 +20492,7 @@ tags<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
@@ -20528,7 +20519,7 @@ description<br />
 <tr>
 <td>
 details<br />
-<a href="scalars#map"><code>Map</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the details of the task</p>
@@ -20545,20 +20536,20 @@ status<br />
 </tr>
 <tr>
 <td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
 due<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
 <p>the due date of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="enums#taskhistorypriority"><code>TaskHistoryPriority!</code></a>
-</td>
-<td>
-<p>the priority of the task</p>
 </td>
 </tr>
 <tr>
@@ -20582,10 +20573,10 @@ assigneeID<br />
 <tr>
 <td>
 assignerID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>the id of the user who assigned the task</p>
+<p>the id of the user who assigned the task, can be left empty if created by the system or a service token</p>
 </td>
 </tr>
 </tbody>

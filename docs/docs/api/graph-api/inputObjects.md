@@ -9861,6 +9861,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -12745,6 +12763,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -15244,6 +15280,24 @@ ownerIDHasPrefix<br />
 <td>
 ownerIDHasSuffix<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -18009,6 +18063,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -20339,7 +20411,7 @@ exampleEvidence<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -20595,7 +20667,7 @@ exampleEvidence<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -21230,7 +21302,7 @@ url<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -22541,7 +22613,7 @@ details<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -22652,26 +22724,8 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-entityID<br />
+taskID<br />
 <a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -22948,6 +23002,15 @@ apiTokenIDs<br />
 </tr>
 <tr>
 <td>
+fileIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 eventIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -22958,15 +23021,6 @@ eventIDs<br />
 <tr>
 <td>
 secretIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-fileIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -23272,6 +23326,15 @@ billingNotificationsEnabled<br />
 </td>
 <td>
 <p>should we send email notifications related to billing</p>
+</td>
+</tr>
+<tr>
+<td>
+allowedEmailDomains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains allowed to access the organization, if empty all domains are allowed</p>
 </td>
 </tr>
 <tr>
@@ -24060,7 +24123,7 @@ details<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -24464,7 +24527,7 @@ exampleEvidence<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -24481,26 +24544,8 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
-userIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 taskIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-notesID<br />
-<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -24625,7 +24670,7 @@ description<br />
 <tr>
 <td>
 details<br />
-<a href="scalars#map"><code>Map</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the details of the task</p>
@@ -24642,20 +24687,20 @@ status<br />
 </tr>
 <tr>
 <td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
 due<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
 <p>the due date of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="enums#taskpriority"><code>TaskPriority</code></a>
-</td>
-<td>
-<p>the priority of the task</p>
 </td>
 </tr>
 <tr>
@@ -24670,7 +24715,7 @@ completed<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -24679,7 +24724,7 @@ ownerID<br />
 <tr>
 <td>
 assignerID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -24689,6 +24734,15 @@ assignerID<br />
 <td>
 assigneeID<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+commentIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -37162,6 +37216,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -39049,6 +39121,24 @@ ownerIDHasPrefix<br />
 <td>
 ownerIDHasSuffix<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -66187,6 +66277,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -67606,6 +67714,24 @@ ownerIDHasPrefix<br />
 <td>
 ownerIDHasSuffix<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -70789,53 +70915,17 @@ hasOwnerWith<br />
 </tr>
 <tr>
 <td>
-hasEntity<br />
+hasTask<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>entity edge predicates</p>
+<p>task edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasEntityWith<br />
-<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasSubcontrols<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>subcontrols edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasSubcontrolsWith<br />
-<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasProgram<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>program edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasProgramWith<br />
-<a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
+hasTaskWith<br />
+<a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
 </td>
 <td>
 
@@ -78330,6 +78420,24 @@ hasUsersWith<br />
 </tr>
 <tr>
 <td>
+hasFiles<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>files edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasFilesWith<br />
+<a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasEvents<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -78359,24 +78467,6 @@ hasSecrets<br />
 <td>
 hasSecretsWith<br />
 <a href="inputObjects#hushwhereinput"><code>[HushWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasFiles<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>files edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasFilesWith<br />
-<a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
 </td>
 <td>
 
@@ -97876,6 +97966,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -99943,6 +100051,24 @@ ownerIDHasPrefix<br />
 <td>
 ownerIDHasSuffix<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -106748,6 +106874,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -109839,6 +109983,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -111945,24 +112107,6 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
-hasUser<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>user edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasUserWith<br />
-<a href="inputObjects#userwhereinput"><code>[UserWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasTasks<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -111974,24 +112118,6 @@ hasTasks<br />
 <td>
 hasTasksWith<br />
 <a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasNotes<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>notes edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasNotesWith<br />
-<a href="inputObjects#notewhereinput"><code>[NoteWhereInput!]</code></a>
 </td>
 <td>
 
@@ -114581,6 +114707,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -114851,6 +114995,141 @@ descriptionContainsFold<br />
 </tr>
 <tr>
 <td>
+details<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>details field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+detailsNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 status<br />
 <a href="enums#taskhistorytaskstatus"><code>TaskHistoryTaskStatus</code></a>
 </td>
@@ -114880,6 +115159,141 @@ statusIn<br />
 <td>
 statusNotIn<br />
 <a href="enums#taskhistorytaskstatus"><code>[TaskHistoryTaskStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -114970,42 +115384,6 @@ dueIsNil<br />
 <td>
 dueNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="enums#taskhistorypriority"><code>TaskHistoryPriority</code></a>
-</td>
-<td>
-<p>priority field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-priorityNEQ<br />
-<a href="enums#taskhistorypriority"><code>TaskHistoryPriority</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-priorityIn<br />
-<a href="enums#taskhistorypriority"><code>[TaskHistoryPriority!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-priorityNotIn<br />
-<a href="enums#taskhistorypriority"><code>[TaskHistoryPriority!]</code></a>
 </td>
 <td>
 
@@ -115330,6 +115708,24 @@ assignerIDHasPrefix<br />
 <td>
 assignerIDHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -116376,6 +116772,24 @@ ownerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerIDEqualFold<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -116646,6 +117060,141 @@ descriptionContainsFold<br />
 </tr>
 <tr>
 <td>
+details<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>details field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+detailsNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 status<br />
 <a href="enums#tasktaskstatus"><code>TaskTaskStatus</code></a>
 </td>
@@ -116675,6 +117224,141 @@ statusIn<br />
 <td>
 statusNotIn<br />
 <a href="enums#tasktaskstatus"><code>[TaskTaskStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+categoryContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -116765,42 +117449,6 @@ dueIsNil<br />
 <td>
 dueNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="enums#taskpriority"><code>TaskPriority</code></a>
-</td>
-<td>
-<p>priority field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-priorityNEQ<br />
-<a href="enums#taskpriority"><code>TaskPriority</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-priorityIn<br />
-<a href="enums#taskpriority"><code>[TaskPriority!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-priorityNotIn<br />
-<a href="enums#taskpriority"><code>[TaskPriority!]</code></a>
 </td>
 <td>
 
@@ -117132,6 +117780,24 @@ assignerIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+assignerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 assignerIDEqualFold<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -117197,6 +117863,24 @@ hasAssignee<br />
 <td>
 hasAssigneeWith<br />
 <a href="inputObjects#userwhereinput"><code>[UserWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasComments<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>comments edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCommentsWith<br />
+<a href="inputObjects#notewhereinput"><code>[NoteWhereInput!]</code></a>
 </td>
 <td>
 
@@ -121945,15 +122629,6 @@ clearExampleEvidence<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -122552,15 +123227,6 @@ clearExampleEvidence<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -122957,24 +123623,6 @@ data<br />
 </td>
 <td>
 <p>the json data of the document</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearOwner<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 <tr>
@@ -123933,15 +124581,6 @@ url<br />
 <td>
 clearURL<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -126551,15 +127190,6 @@ clearDetails<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -126798,7 +127428,7 @@ text<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
+taskID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -126807,79 +127437,7 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-clearOwner<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-entityID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEntity<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addSubcontrolIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeSubcontrolIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearSubcontrols<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addProgramIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeProgramIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearProgram<br />
+clearTask<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -127315,6 +127873,33 @@ clearAPITokens<br />
 </tr>
 <tr>
 <td>
+addFileIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeFileIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearFiles<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addEventIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -127361,33 +127946,6 @@ removeSecretIDs<br />
 <tr>
 <td>
 clearSecrets<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addFileIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeFileIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearFiles<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -128188,6 +128746,33 @@ billingNotificationsEnabled<br />
 </td>
 <td>
 <p>should we send email notifications related to billing</p>
+</td>
+</tr>
+<tr>
+<td>
+allowedEmailDomains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains allowed to access the organization, if empty all domains are allowed</p>
+</td>
+</tr>
+<tr>
+<td>
+appendAllowedEmailDomains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAllowedEmailDomains<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -129737,15 +130322,6 @@ clearDetails<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -130618,15 +131194,6 @@ clearExampleEvidence<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addControlIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -130638,33 +131205,6 @@ addControlIDs<br />
 <td>
 removeControlIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addUserIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeUserIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearUser<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -130691,24 +131231,6 @@ removeTaskIDs<br />
 <tr>
 <td>
 clearTasks<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-notesID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearNotes<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -130951,7 +131473,7 @@ clearDescription<br />
 <tr>
 <td>
 details<br />
-<a href="scalars#map"><code>Map</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the details of the task</p>
@@ -130977,6 +131499,24 @@ status<br />
 </tr>
 <tr>
 <td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+clearCategory<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 due<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -130991,15 +131531,6 @@ clearDue<br />
 </td>
 <td>
 
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="enums#taskpriority"><code>TaskPriority</code></a>
-</td>
-<td>
-<p>the priority of the task</p>
 </td>
 </tr>
 <tr>
@@ -131022,7 +131553,7 @@ clearCompleted<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
+assignerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -131031,8 +131562,8 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-assignerID<br />
-<a href="scalars#id"><code>ID</code></a>
+clearAssigner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -131050,6 +131581,33 @@ assigneeID<br />
 <tr>
 <td>
 clearAssignee<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addCommentIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCommentIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearComments<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131267,6 +131825,24 @@ removeEvidenceIDs<br />
 <td>
 clearEvidence<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addComment<br />
+<a href="inputObjects#createnoteinput"><code>CreateNoteInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deleteComment<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
