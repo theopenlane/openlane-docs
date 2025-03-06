@@ -151,6 +151,150 @@ ContactUserStatus is enum for the field status
 </tbody>
 </table>
 
+## ControlControlSource
+
+ControlControlSource is enum for the field source
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEMPLATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>USER_DEFINED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IMPORTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlControlType
+
+ControlControlType is enum for the field control_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREVENTATIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DETECTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CORRECTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DETERRENT</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlHistoryControlSource
+
+ControlHistoryControlSource is enum for the field source
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEMPLATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>USER_DEFINED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IMPORTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlHistoryControlType
+
+ControlHistoryControlType is enum for the field control_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREVENTATIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DETECTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CORRECTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DETERRENT</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlHistoryOpType
 
 ControlHistoryOpType is enum for the field operation
@@ -174,6 +318,108 @@ ControlHistoryOpType is enum for the field operation
 </tr>
 <tr>
 <td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationHistoryOpType
+
+ControlImplementationHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlObjectiveControlSource
+
+ControlObjectiveControlSource is enum for the field source
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEMPLATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>USER_DEFINED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IMPORTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlObjectiveHistoryControlSource
+
+ControlObjectiveHistoryControlSource is enum for the field source
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEMPLATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>USER_DEFINED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IMPORTED</td>
 <td>
 
 </td>
@@ -1027,6 +1273,36 @@ InviteRole is enum for the field role
 </tbody>
 </table>
 
+## MappedControlHistoryOpType
+
+MappedControlHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## NarrativeHistoryOpType
 
 NarrativeHistoryOpType is enum for the field operation
@@ -1830,6 +2106,150 @@ StandardHistoryOpType is enum for the field operation
 </tr>
 <tr>
 <td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubcontrolControlSource
+
+SubcontrolControlSource is enum for the field source
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEMPLATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>USER_DEFINED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IMPORTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubcontrolControlType
+
+SubcontrolControlType is enum for the field control_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREVENTATIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DETECTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CORRECTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DETERRENT</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubcontrolHistoryControlSource
+
+SubcontrolHistoryControlSource is enum for the field source
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEMPLATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>USER_DEFINED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IMPORTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubcontrolHistoryControlType
+
+SubcontrolHistoryControlType is enum for the field control_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREVENTATIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DETECTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CORRECTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DETERRENT</td>
 <td>
 
 </td>

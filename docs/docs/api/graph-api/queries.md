@@ -240,6 +240,29 @@ query<br />
 </tbody>
 </table>
 
+## adminControlImplementationSearch
+
+**Type:** [ControlImplementationSearchResult](objects#controlimplementationsearchresult)
+
+Search across ControlImplementation objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Search query</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## adminControlObjectiveSearch
 
 **Type:** [ControlObjectiveSearchResult](objects#controlobjectivesearchresult)
@@ -475,6 +498,29 @@ query<br />
 **Type:** [InternalPolicySearchResult](objects#internalpolicysearchresult)
 
 Search across InternalPolicy objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Search query</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## adminMappedControlSearch
+
+**Type:** [MappedControlSearchResult](objects#mappedcontrolsearchresult)
+
+Search across MappedControl objects
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -1266,6 +1312,170 @@ where<br />
 </td>
 <td>
 <p>Filtering options for ControlHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## controlImplementation
+
+**Type:** [ControlImplementation!](objects#controlimplementation)
+
+Look up controlImplementation by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the controlImplementation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## controlImplementationHistories
+
+**Type:** [ControlImplementationHistoryConnection!](objects#controlimplementationhistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationhistorywhereinput"><code>ControlImplementationHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementationHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## controlImplementations
+
+**Type:** [ControlImplementationConnection!](objects#controlimplementationconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## controlImplementationSearch
+
+**Type:** [ControlImplementationSearchResult](objects#controlimplementationsearchresult)
+
+Search across ControlImplementation objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Search query</p>
 </td>
 </tr>
 </tbody>
@@ -3583,6 +3793,170 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Invites returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## mappedControl
+
+**Type:** [MappedControl!](objects#mappedcontrol)
+
+Look up mappedControl by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the mappedControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## mappedControlHistories
+
+**Type:** [MappedControlHistoryConnection!](objects#mappedcontrolhistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#mappedcontrolhistorywhereinput"><code>MappedControlHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for MappedControlHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## mappedControls
+
+**Type:** [MappedControlConnection!](objects#mappedcontrolconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## mappedControlSearch
+
+**Type:** [MappedControlSearchResult](objects#mappedcontrolsearchresult)
+
+Search across MappedControl objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Search query</p>
 </td>
 </tr>
 </tbody>

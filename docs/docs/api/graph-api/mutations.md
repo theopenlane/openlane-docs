@@ -145,6 +145,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkControlImplementation
+
+**Type:** [ControlImplementationBulkCreatePayload!](objects#controlimplementationbulkcreatepayload)
+
+Create multiple new controlImplementations
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcontrolimplementationinput"><code>[CreateControlImplementationInput!]</code></a>
+</td>
+<td>
+<p>values of the controlImplementation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkControlObjective
 
 **Type:** [ControlObjectiveBulkCreatePayload!](objects#controlobjectivebulkcreatepayload)
@@ -255,6 +278,29 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the control</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVControlImplementation
+
+**Type:** [ControlImplementationBulkCreatePayload!](objects#controlimplementationbulkcreatepayload)
+
+Create multiple new controlImplementations via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the controlImplementation</p>
 </td>
 </tr>
 </tbody>
@@ -536,6 +582,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVMappedControl
+
+**Type:** [MappedControlBulkCreatePayload!](objects#mappedcontrolbulkcreatepayload)
+
+Create multiple new mappedControls via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the mappedControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVNarrative
 
 **Type:** [NarrativeBulkCreatePayload!](objects#narrativebulkcreatepayload)
@@ -554,29 +623,6 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the narrative</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createBulkCSVOrganization
-
-**Type:** [OrganizationBulkCreatePayload!](objects#organizationbulkcreatepayload)
-
-Create multiple new organizations via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the organization</p>
 </td>
 </tr>
 </tbody>
@@ -738,29 +784,6 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the risk</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createBulkCSVStandard
-
-**Type:** [StandardBulkCreatePayload!](objects#standardbulkcreatepayload)
-
-Create multiple new standards via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the standard</p>
 </td>
 </tr>
 </tbody>
@@ -1134,6 +1157,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkMappedControl
+
+**Type:** [MappedControlBulkCreatePayload!](objects#mappedcontrolbulkcreatepayload)
+
+Create multiple new mappedControls
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createmappedcontrolinput"><code>[CreateMappedControlInput!]</code></a>
+</td>
+<td>
+<p>values of the mappedControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkNarrative
 
 **Type:** [NarrativeBulkCreatePayload!](objects#narrativebulkcreatepayload)
@@ -1152,29 +1198,6 @@ input<br />
 </td>
 <td>
 <p>values of the narrative</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createBulkOrganization
-
-**Type:** [OrganizationBulkCreatePayload!](objects#organizationbulkcreatepayload)
-
-Create multiple new organizations
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createorganizationinput"><code>[CreateOrganizationInput!]</code></a>
-</td>
-<td>
-<p>values of the organization</p>
 </td>
 </tr>
 </tbody>
@@ -1341,29 +1364,6 @@ input<br />
 </tbody>
 </table>
 
-## createBulkStandard
-
-**Type:** [StandardBulkCreatePayload!](objects#standardbulkcreatepayload)
-
-Create multiple new standards
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createstandardinput"><code>[CreateStandardInput!]</code></a>
-</td>
-<td>
-<p>values of the standard</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createBulkSubcontrol
 
 **Type:** [SubcontrolBulkCreatePayload!](objects#subcontrolbulkcreatepayload)
@@ -1520,6 +1520,29 @@ input<br />
 </td>
 <td>
 <p>values of the control</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createControlImplementation
+
+**Type:** [ControlImplementationCreatePayload!](objects#controlimplementationcreatepayload)
+
+Create a new controlImplementation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcontrolimplementationinput"><code>CreateControlImplementationInput!</code></a>
+</td>
+<td>
+<p>values of the controlImplementation</p>
 </td>
 </tr>
 </tbody>
@@ -1958,6 +1981,29 @@ input<br />
 </td>
 <td>
 <p>values of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createMappedControl
+
+**Type:** [MappedControlCreatePayload!](objects#mappedcontrolcreatepayload)
+
+Create a new mappedControl
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createmappedcontrolinput"><code>CreateMappedControlInput!</code></a>
+</td>
+<td>
+<p>values of the mappedControl</p>
 </td>
 </tr>
 </tbody>
@@ -2551,6 +2597,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteControlImplementation
+
+**Type:** [ControlImplementationDeletePayload!](objects#controlimplementationdeletepayload)
+
+Delete an existing controlImplementation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the controlImplementation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteControlObjective
 
 **Type:** [ControlObjectiveDeletePayload!](objects#controlobjectivedeletepayload)
@@ -2868,6 +2937,29 @@ id<br />
 </td>
 <td>
 <p>ID of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteMappedControl
+
+**Type:** [MappedControlDeletePayload!](objects#mappedcontroldeletepayload)
+
+Delete an existing mappedControl
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the mappedControl</p>
 </td>
 </tr>
 </tbody>
@@ -3355,6 +3447,38 @@ input<br />
 </tbody>
 </table>
 
+## updateControlImplementation
+
+**Type:** [ControlImplementationUpdatePayload!](objects#controlimplementationupdatepayload)
+
+Update an existing controlImplementation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the controlImplementation</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatecontrolimplementationinput"><code>UpdateControlImplementationInput!</code></a>
+</td>
+<td>
+<p>New values for the controlImplementation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateControlObjective
 
 **Type:** [ControlObjectiveUpdatePayload!](objects#controlobjectiveupdatepayload)
@@ -3775,6 +3899,38 @@ input<br />
 </td>
 <td>
 <p>New values for the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateMappedControl
+
+**Type:** [MappedControlUpdatePayload!](objects#mappedcontrolupdatepayload)
+
+Update an existing mappedControl
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the mappedControl</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatemappedcontrolinput"><code>UpdateMappedControlInput!</code></a>
+</td>
+<td>
+<p>New values for the mappedControl</p>
 </td>
 </tr>
 </tbody>
