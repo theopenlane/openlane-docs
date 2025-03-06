@@ -157,15 +157,6 @@ details<br />
 </tr>
 <tr>
 <td>
-standard<br />
-<a href="objects#standard"><code>[Standard!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 risk<br />
 <a href="objects#risk"><code>[Risk!]</code></a>
 </td>
@@ -770,6 +761,42 @@ lastUsedAt<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the token is active</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reason the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who revoked the token</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token was revoked</p>
 </td>
 </tr>
 <tr>
@@ -1819,20 +1846,11 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the control</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the control</p>
+<p>description of what the control is supposed to accomplish</p>
 </td>
 </tr>
 <tr>
@@ -1846,53 +1864,8 @@ status<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-controlNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control number or identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>family associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlcontrolsource"><code>ControlControlSource</code></a>
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
@@ -1900,38 +1873,119 @@ source<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
+controlType<br />
+<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
 </td>
 <td>
-<p>which control objectives are satisfied by the control</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped frameworks</p>
+<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
 <tr>
 <td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
+category<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>json data including details of the control</p>
+<p>category of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category id of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+subcategory<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subcategory of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+mappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>mapped categories of the control to other standards</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
+</td>
+<td>
+<p>objectives of the audit assessment for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
+</td>
+<td>
+<p>methods used to verify the control implementation during an audit</p>
+</td>
+</tr>
+<tr>
+<td>
+controlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>questions to ask to verify the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+<p>implementation guidance for the control</p>
 </td>
 </tr>
 <tr>
 <td>
 exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
 </td>
 <td>
-<p>example evidence to provide for the control</p>
+<p>examples of evidence for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+references<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+<p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+standardID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the standard that the control belongs to, if applicable</p>
 </td>
 </tr>
 <tr>
@@ -1972,8 +2026,53 @@ viewers<br />
 </tr>
 <tr>
 <td>
-procedures<br />
-<a href="objects#procedure"><code>[Procedure!]</code></a>
+standard<br />
+<a href="objects#standard"><code>Standard</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programs<br />
+<a href="objects#program"><code>[Program!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementations<br />
+<a href="objects#controlimplementation"><code>[ControlImplementation!]</code></a>
+</td>
+<td>
+<p>the implementation(s) of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+mappedControls<br />
+<a href="objects#mappedcontrol"><code>[MappedControl!]</code></a>
+</td>
+<td>
+<p>mapped subcontrols that have a relation to another control or subcontrol</p>
+</td>
+</tr>
+<tr>
+<td>
+controlObjectives<br />
+<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
 </td>
 <td>
 
@@ -1990,17 +2089,8 @@ subcontrols<br />
 </tr>
 <tr>
 <td>
-controlObjectives<br />
-<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-standard<br />
-<a href="objects#standard"><code>[Standard!]</code></a>
+tasks<br />
+<a href="objects#task"><code>[Task!]</code></a>
 </td>
 <td>
 
@@ -2035,8 +2125,8 @@ actionPlans<br />
 </tr>
 <tr>
 <td>
-tasks<br />
-<a href="objects#task"><code>[Task!]</code></a>
+procedures<br />
+<a href="objects#procedure"><code>[Procedure!]</code></a>
 </td>
 <td>
 
@@ -2044,8 +2134,8 @@ tasks<br />
 </tr>
 <tr>
 <td>
-programs<br />
-<a href="objects#program"><code>[Program!]</code></a>
+internalPolicies<br />
+<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
 </td>
 <td>
 
@@ -2053,11 +2143,20 @@ programs<br />
 </tr>
 <tr>
 <td>
-evidence<br />
-<a href="objects#evidence"><code>[Evidence!]</code></a>
+controlOwner<br />
+<a href="objects#group"><code>Group</code></a>
 </td>
 <td>
-
+<p>the group of users who are responsible for the control, will be assigned tasks, approval, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+delegate<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>temporary delegate for the control, used for temporary control ownership</p>
 </td>
 </tr>
 </tbody>
@@ -2327,20 +2426,11 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the control</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the control</p>
+<p>description of what the control is supposed to accomplish</p>
 </td>
 </tr>
 <tr>
@@ -2354,53 +2444,8 @@ status<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-controlNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control number or identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>family associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlhistorycontrolsource"><code>ControlHistoryControlSource</code></a>
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
@@ -2408,38 +2453,119 @@ source<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
+controlType<br />
+<a href="enums#controlhistorycontroltype"><code>ControlHistoryControlType</code></a>
 </td>
 <td>
-<p>which control objectives are satisfied by the control</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped frameworks</p>
+<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
 <tr>
 <td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
+category<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>json data including details of the control</p>
+<p>category of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category id of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+subcategory<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subcategory of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+mappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>mapped categories of the control to other standards</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
+</td>
+<td>
+<p>objectives of the audit assessment for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
+</td>
+<td>
+<p>methods used to verify the control implementation during an audit</p>
+</td>
+</tr>
+<tr>
+<td>
+controlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>questions to ask to verify the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+<p>implementation guidance for the control</p>
 </td>
 </tr>
 <tr>
 <td>
 exampleEvidence<br />
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
+</td>
+<td>
+<p>examples of evidence for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+references<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+<p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+standardID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>example evidence to provide for the control</p>
+<p>the id of the standard that the control belongs to, if applicable</p>
 </td>
 </tr>
 </tbody>
@@ -2509,6 +2635,551 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementation
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>status of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>date the control was implemented</p>
+</td>
+</tr>
+<tr>
+<td>
+verified<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>set to true if the control implementation has been verified</p>
+</td>
+</tr>
+<tr>
+<td>
+verificationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>date the control implementation was verified</p>
+</td>
+</tr>
+<tr>
+<td>
+details<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>details of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#control"><code>[Control!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationBulkCreatePayload
+
+Return response for createBulkControlImplementation mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+controlImplementations<br />
+<a href="objects#controlimplementation"><code>[ControlImplementation!]</code></a>
+</td>
+<td>
+<p>Created controlImplementations</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#controlimplementationedge"><code>[ControlImplementationEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationCreatePayload
+
+Return response for createControlImplementation mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+controlImplementation<br />
+<a href="objects#controlimplementation"><code>ControlImplementation!</code></a>
+</td>
+<td>
+<p>Created controlImplementation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationDeletePayload
+
+Return response for deleteControlImplementation mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted controlImplementation ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#controlimplementation"><code>ControlImplementation</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#controlimplementationhistoryoptype"><code>ControlImplementationHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>status of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>date the control was implemented</p>
+</td>
+</tr>
+<tr>
+<td>
+verified<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>set to true if the control implementation has been verified</p>
+</td>
+</tr>
+<tr>
+<td>
+verificationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>date the control implementation was verified</p>
+</td>
+</tr>
+<tr>
+<td>
+details<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>details of the control implementation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#controlimplementationhistoryedge"><code>[ControlImplementationHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#controlimplementationhistory"><code>ControlImplementationHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationSearchResult
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+controlImplementations<br />
+<a href="objects#controlimplementation"><code>[ControlImplementation!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationUpdatePayload
+
+Return response for updateControlImplementation mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+controlImplementation<br />
+<a href="objects#controlimplementation"><code>ControlImplementation!</code></a>
+</td>
+<td>
+<p>Updated controlImplementation</p>
 </td>
 </tr>
 </tbody>
@@ -2628,11 +3299,11 @@ name<br />
 </tr>
 <tr>
 <td>
-description<br />
+desiredOutcome<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the control objective</p>
+<p>the desired outcome or target of the control objective</p>
 </td>
 </tr>
 <tr>
@@ -2646,11 +3317,20 @@ status<br />
 </tr>
 <tr>
 <td>
+source<br />
+<a href="enums#controlobjectivecontrolsource"><code>ControlObjectiveControlSource</code></a>
+</td>
+<td>
+<p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
 controlObjectiveType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>type of the control objective</p>
+<p>type of the control objective e.g. compliance, financial, operational, etc.</p>
 </td>
 </tr>
 <tr>
@@ -2664,65 +3344,20 @@ version<br />
 </tr>
 <tr>
 <td>
-controlNumber<br />
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>number of the control objective</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-family<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class associated with the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>source of the control objective, e.g. framework, template, user-defined, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped frameworks</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data including details of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>example evidence to provide for the control</p>
+<p>subcategory of the control</p>
 </td>
 </tr>
 <tr>
@@ -2763,8 +3398,17 @@ viewers<br />
 </tr>
 <tr>
 <td>
-internalPolicies<br />
-<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
+programs<br />
+<a href="objects#program"><code>[Program!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -2774,6 +3418,24 @@ internalPolicies<br />
 <td>
 controls<br />
 <a href="objects#control"><code>[Control!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrol"><code>[Subcontrol!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
 </td>
 <td>
 
@@ -2799,24 +3461,6 @@ risks<br />
 </tr>
 <tr>
 <td>
-subcontrols<br />
-<a href="objects#subcontrol"><code>[Subcontrol!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-standard<br />
-<a href="objects#standard"><code>[Standard!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 narratives<br />
 <a href="objects#narrative"><code>[Narrative!]</code></a>
 </td>
@@ -2828,24 +3472,6 @@ narratives<br />
 <td>
 tasks<br />
 <a href="objects#task"><code>[Task!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programs<br />
-<a href="objects#program"><code>[Program!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-evidence<br />
-<a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
 
@@ -3127,11 +3753,11 @@ name<br />
 </tr>
 <tr>
 <td>
-description<br />
+desiredOutcome<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the control objective</p>
+<p>the desired outcome or target of the control objective</p>
 </td>
 </tr>
 <tr>
@@ -3145,11 +3771,20 @@ status<br />
 </tr>
 <tr>
 <td>
+source<br />
+<a href="enums#controlobjectivehistorycontrolsource"><code>ControlObjectiveHistoryControlSource</code></a>
+</td>
+<td>
+<p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
 controlObjectiveType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>type of the control objective</p>
+<p>type of the control objective e.g. compliance, financial, operational, etc.</p>
 </td>
 </tr>
 <tr>
@@ -3163,65 +3798,20 @@ version<br />
 </tr>
 <tr>
 <td>
-controlNumber<br />
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>number of the control objective</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-family<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class associated with the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>source of the control objective, e.g. framework, template, user-defined, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped frameworks</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data including details of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>example evidence to provide for the control</p>
+<p>subcategory of the control</p>
 </td>
 </tr>
 </tbody>
@@ -3486,7 +4076,7 @@ templateID<br />
 <tr>
 <td>
 data<br />
-<a href="scalars#json"><code>JSON!</code></a>
+<a href="scalars#map"><code>Map!</code></a>
 </td>
 <td>
 <p>the json data of the document</p>
@@ -3796,7 +4386,7 @@ templateID<br />
 <tr>
 <td>
 data<br />
-<a href="scalars#json"><code>JSON!</code></a>
+<a href="scalars#map"><code>Map!</code></a>
 </td>
 <td>
 <p>the json data of the document</p>
@@ -11030,6 +11620,506 @@ invite<br />
 </tbody>
 </table>
 
+## MappedControl
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+mappingType<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the type of mapping between the two controls, e.g. subset, intersect, equal, superset</p>
+</td>
+</tr>
+<tr>
+<td>
+relation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of how the two controls are related</p>
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#control"><code>[Control!]</code></a>
+</td>
+<td>
+<p>mapped controls that have a relation to each other</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrol"><code>[Subcontrol!]</code></a>
+</td>
+<td>
+<p>mapped subcontrols that have a relation to each other</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlBulkCreatePayload
+
+Return response for createBulkMappedControl mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+mappedControls<br />
+<a href="objects#mappedcontrol"><code>[MappedControl!]</code></a>
+</td>
+<td>
+<p>Created mappedControls</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#mappedcontroledge"><code>[MappedControlEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlCreatePayload
+
+Return response for createMappedControl mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+mappedControl<br />
+<a href="objects#mappedcontrol"><code>MappedControl!</code></a>
+</td>
+<td>
+<p>Created mappedControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlDeletePayload
+
+Return response for deleteMappedControl mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted mappedControl ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#mappedcontrol"><code>MappedControl</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#mappedcontrolhistoryoptype"><code>MappedControlHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+mappingType<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the type of mapping between the two controls, e.g. subset, intersect, equal, superset</p>
+</td>
+</tr>
+<tr>
+<td>
+relation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of how the two controls are related</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#mappedcontrolhistoryedge"><code>[MappedControlHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#mappedcontrolhistory"><code>MappedControlHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlSearchResult
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+mappedControls<br />
+<a href="objects#mappedcontrol"><code>[MappedControl!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlUpdatePayload
+
+Return response for updateMappedControl mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+mappedControl<br />
+<a href="objects#mappedcontrol"><code>MappedControl!</code></a>
+</td>
+<td>
+<p>Updated mappedControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Narrative
 
 
@@ -11153,20 +12243,11 @@ description<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
+details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>which controls are satisfied by the narrative</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data for the narrative document</p>
+<p>text data for the narrative document</p>
 </td>
 </tr>
 <tr>
@@ -11207,38 +12288,11 @@ viewers<br />
 </tr>
 <tr>
 <td>
-internalPolicy<br />
-<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-control<br />
+satisfies<br />
 <a href="objects#control"><code>[Control!]</code></a>
 </td>
 <td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedure<br />
-<a href="objects#procedure"><code>[Procedure!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlObjective<br />
-<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
-</td>
-<td>
-
+<p>which controls are satisfied by the narrative</p>
 </td>
 </tr>
 <tr>
@@ -11535,20 +12589,11 @@ description<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
+details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>which controls are satisfied by the narrative</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data for the narrative document</p>
+<p>text data for the narrative document</p>
 </td>
 </tr>
 </tbody>
@@ -12762,6 +13807,15 @@ subcontrols<br />
 <td>
 evidence<br />
 <a href="objects#evidence"><code>[Evidence!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standards<br />
+<a href="objects#standard"><code>[Standard!]</code></a>
 </td>
 <td>
 
@@ -14509,6 +15563,33 @@ expiresAt<br />
 </tr>
 <tr>
 <td>
+trialExpiresAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the time the trial is set to expire</p>
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDue<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>number of days until there is a due payment</p>
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAdded<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether or not a payment method has been added to the account</p>
+</td>
+</tr>
+<tr>
+<td>
 features<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -14529,6 +15610,15 @@ featureLookupKeys<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+events<br />
+<a href="objects#event"><code>[Event!]</code></a>
 </td>
 <td>
 
@@ -14806,6 +15896,33 @@ expiresAt<br />
 </td>
 <td>
 <p>the time the subscription is set to expire; only populated if subscription is cancelled</p>
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the time the trial is set to expire</p>
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDue<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>number of days until there is a due payment</p>
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAdded<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether or not a payment method has been added to the account</p>
 </td>
 </tr>
 <tr>
@@ -15105,6 +16222,42 @@ lastUsedAt<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the token is active</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reason the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who revoked the token</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token was revoked</p>
 </td>
 </tr>
 <tr>
@@ -16371,15 +17524,6 @@ actionPlans<br />
 </td>
 <td>
 
-</td>
-</tr>
-<tr>
-<td>
-standards<br />
-<a href="objects#standard"><code>[Standard!]</code></a>
-</td>
-<td>
-<p>the framework(s) that the program is based on</p>
 </td>
 </tr>
 <tr>
@@ -18190,11 +19334,38 @@ tags<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>the name of the standard body, e.g. TSC, NIST, SOC, HITRUST, FedRamp, etc.</p>
+<p>the long name of the standard body</p>
+</td>
+</tr>
+<tr>
+<td>
+shortName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>short name of the standard, e.g. SOC 2, ISO 27001, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+framework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>unique identifier of the standard with version</p>
 </td>
 </tr>
 <tr>
@@ -18208,11 +19379,29 @@ description<br />
 </tr>
 <tr>
 <td>
-family<br />
+governingBody<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family of the standard, e.g. 800-53, 800-171, 27001, etc.</p>
+<p>governing body of the standard, e.g. AICPA, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+domains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains the standard covers, e.g. availability, confidentiality, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+link<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>link to the official standard documentation</p>
 </td>
 </tr>
 <tr>
@@ -18222,6 +19411,33 @@ status<br />
 </td>
 <td>
 <p>status of the standard - active, deprecated, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+isPublic<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard should be made available to all users, only for public standards</p>
+</td>
+</tr>
+<tr>
+<td>
+freeToUse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard is freely distributable under a trial license, only for public standards</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard is owned by the the openlane system</p>
 </td>
 </tr>
 <tr>
@@ -18244,44 +19460,17 @@ version<br />
 </tr>
 <tr>
 <td>
-purposeAndScope<br />
+revision<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>purpose and scope</p>
+<p>internal revision of the standard</p>
 </td>
 </tr>
 <tr>
 <td>
-background<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>which controls are satisfied by the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data with details of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-controlObjectives<br />
-<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
 
@@ -18291,33 +19480,6 @@ controlObjectives<br />
 <td>
 controls<br />
 <a href="objects#control"><code>[Control!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedures<br />
-<a href="objects#procedure"><code>[Procedure!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlans<br />
-<a href="objects#actionplan"><code>[ActionPlan!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programs<br />
-<a href="objects#program"><code>[Program!]</code></a>
 </td>
 <td>
 
@@ -18572,11 +19734,38 @@ tags<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>the name of the standard body, e.g. TSC, NIST, SOC, HITRUST, FedRamp, etc.</p>
+<p>the long name of the standard body</p>
+</td>
+</tr>
+<tr>
+<td>
+shortName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>short name of the standard, e.g. SOC 2, ISO 27001, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+framework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>unique identifier of the standard with version</p>
 </td>
 </tr>
 <tr>
@@ -18590,11 +19779,29 @@ description<br />
 </tr>
 <tr>
 <td>
-family<br />
+governingBody<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family of the standard, e.g. 800-53, 800-171, 27001, etc.</p>
+<p>governing body of the standard, e.g. AICPA, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+domains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains the standard covers, e.g. availability, confidentiality, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+link<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>link to the official standard documentation</p>
 </td>
 </tr>
 <tr>
@@ -18604,6 +19811,33 @@ status<br />
 </td>
 <td>
 <p>status of the standard - active, deprecated, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+isPublic<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard should be made available to all users, only for public standards</p>
+</td>
+</tr>
+<tr>
+<td>
+freeToUse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard is freely distributable under a trial license, only for public standards</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard is owned by the the openlane system</p>
 </td>
 </tr>
 <tr>
@@ -18626,38 +19860,11 @@ version<br />
 </tr>
 <tr>
 <td>
-purposeAndScope<br />
+revision<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>purpose and scope</p>
-</td>
-</tr>
-<tr>
-<td>
-background<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>which controls are satisfied by the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data with details of the standard</p>
+<p>internal revision of the standard</p>
 </td>
 </tr>
 </tbody>
@@ -18879,20 +20086,11 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the subcontrol</p>
+<p>description of what the control is supposed to accomplish</p>
 </td>
 </tr>
 <tr>
@@ -18901,133 +20099,133 @@ status<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>status of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>number of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol family</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol class</p>
+<p>status of the control</p>
 </td>
 </tr>
 <tr>
 <td>
 source<br />
+<a href="enums#subcontrolcontrolsource"><code>SubcontrolControlSource</code></a>
+</td>
+<td>
+<p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+controlType<br />
+<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
+</td>
+<td>
+<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>source of the control, e.g. framework, template, user-defined, etc.</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-mappedFrameworks<br />
+categoryID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>mapped frameworks that the subcontrol is part of</p>
+<p>category id of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationEvidence<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation evidence of the subcontrol</p>
+<p>subcategory of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationStatus<br />
-<a href="scalars#string"><code>String</code></a>
+mappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
-<p>implementation status</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>date the subcontrol was implemented</p>
+<p>mapped categories of the control to other standards</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationVerification<br />
-<a href="scalars#string"><code>String</code></a>
+assessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
 </td>
 <td>
-<p>implementation verification</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>date the subcontrol implementation was verified</p>
+<p>objectives of the audit assessment for the control</p>
 </td>
 </tr>
 <tr>
 <td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
+assessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
 </td>
 <td>
-<p>json data details of the subcontrol</p>
+<p>methods used to verify the control implementation during an audit</p>
+</td>
+</tr>
+<tr>
+<td>
+controlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>questions to ask to verify the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+<p>implementation guidance for the control</p>
 </td>
 </tr>
 <tr>
 <td>
 exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
 </td>
 <td>
-<p>example evidence to provide for the control</p>
+<p>examples of evidence for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+references<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+<p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the id of the parent control</p>
 </td>
 </tr>
 <tr>
@@ -19041,8 +20239,35 @@ owner<br />
 </tr>
 <tr>
 <td>
-controls<br />
-<a href="objects#control"><code>[Control!]!</code></a>
+control<br />
+<a href="objects#control"><code>Control!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappedControls<br />
+<a href="objects#mappedcontrol"><code>[MappedControl!]</code></a>
+</td>
+<td>
+<p>mapped subcontrols that have a relation to another control or subcontrol</p>
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlObjectives<br />
+<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
 </td>
 <td>
 
@@ -19059,8 +20284,8 @@ tasks<br />
 </tr>
 <tr>
 <td>
-programs<br />
-<a href="objects#program"><code>[Program!]</code></a>
+narratives<br />
+<a href="objects#narrative"><code>[Narrative!]</code></a>
 </td>
 <td>
 
@@ -19068,11 +20293,56 @@ programs<br />
 </tr>
 <tr>
 <td>
-evidence<br />
-<a href="objects#evidence"><code>[Evidence!]</code></a>
+risks<br />
+<a href="objects#risk"><code>[Risk!]</code></a>
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+actionPlans<br />
+<a href="objects#actionplan"><code>[ActionPlan!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+procedures<br />
+<a href="objects#procedure"><code>[Procedure!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlOwner<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>the user who is responsible for the subcontrol, defaults to the parent control owner if not set</p>
+</td>
+</tr>
+<tr>
+<td>
+delegate<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>temporary delegate for the control, used for temporary control ownership</p>
 </td>
 </tr>
 </tbody>
@@ -19342,20 +20612,11 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the subcontrol</p>
+<p>description of what the control is supposed to accomplish</p>
 </td>
 </tr>
 <tr>
@@ -19364,133 +20625,133 @@ status<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>status of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>number of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol family</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol class</p>
+<p>status of the control</p>
 </td>
 </tr>
 <tr>
 <td>
 source<br />
+<a href="enums#subcontrolhistorycontrolsource"><code>SubcontrolHistoryControlSource</code></a>
+</td>
+<td>
+<p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+controlType<br />
+<a href="enums#subcontrolhistorycontroltype"><code>SubcontrolHistoryControlType</code></a>
+</td>
+<td>
+<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>source of the control, e.g. framework, template, user-defined, etc.</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-mappedFrameworks<br />
+categoryID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>mapped frameworks that the subcontrol is part of</p>
+<p>category id of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationEvidence<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation evidence of the subcontrol</p>
+<p>subcategory of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationStatus<br />
-<a href="scalars#string"><code>String</code></a>
+mappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
-<p>implementation status</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>date the subcontrol was implemented</p>
+<p>mapped categories of the control to other standards</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationVerification<br />
-<a href="scalars#string"><code>String</code></a>
+assessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
 </td>
 <td>
-<p>implementation verification</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>date the subcontrol implementation was verified</p>
+<p>objectives of the audit assessment for the control</p>
 </td>
 </tr>
 <tr>
 <td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
+assessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
 </td>
 <td>
-<p>json data details of the subcontrol</p>
+<p>methods used to verify the control implementation during an audit</p>
+</td>
+</tr>
+<tr>
+<td>
+controlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>questions to ask to verify the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+<p>implementation guidance for the control</p>
 </td>
 </tr>
 <tr>
 <td>
 exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
 </td>
 <td>
-<p>example evidence to provide for the control</p>
+<p>examples of evidence for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+references<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+<p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the id of the parent control</p>
 </td>
 </tr>
 </tbody>
@@ -20817,7 +22078,7 @@ description<br />
 <tr>
 <td>
 jsonconfig<br />
-<a href="scalars#json"><code>JSON!</code></a>
+<a href="scalars#map"><code>Map!</code></a>
 </td>
 <td>
 <p>the jsonschema object of the template</p>
@@ -20826,7 +22087,7 @@ jsonconfig<br />
 <tr>
 <td>
 uischema<br />
-<a href="scalars#json"><code>JSON</code></a>
+<a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
 <p>the uischema for the template to render in the UI</p>
@@ -21145,7 +22406,7 @@ description<br />
 <tr>
 <td>
 jsonconfig<br />
-<a href="scalars#json"><code>JSON!</code></a>
+<a href="scalars#map"><code>Map!</code></a>
 </td>
 <td>
 <p>the jsonschema object of the template</p>
@@ -21154,7 +22415,7 @@ jsonconfig<br />
 <tr>
 <td>
 uischema<br />
-<a href="scalars#json"><code>JSON</code></a>
+<a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
 <p>the uischema for the template to render in the UI</p>

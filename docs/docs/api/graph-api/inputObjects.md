@@ -3353,24 +3353,6 @@ sourceContainsFold<br />
 </tr>
 <tr>
 <td>
-hasStandard<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>standard edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasStandardWith<br />
-<a href="inputObjects#standardwhereinput"><code>[StandardWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasRisk<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -4672,6 +4654,402 @@ lastUsedAtIsNil<br />
 <tr>
 <td>
 lastUsedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>is_active field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+isActiveNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActiveIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActiveNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>revoked_reason field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>revoked_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>revoked_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -9897,123 +10275,6 @@ ownerIDContainsFold<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>name field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-nameNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -10284,683 +10545,8 @@ statusContainsFold<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-versionNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control_number field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-controlNumberNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>family field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-familyNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-classNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlhistorycontrolsource"><code>ControlHistoryControlSource</code></a>
 </td>
 <td>
 <p>source field predicates</p>
@@ -10969,7 +10555,7 @@ source<br />
 <tr>
 <td>
 sourceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlhistorycontrolsource"><code>ControlHistoryControlSource</code></a>
 </td>
 <td>
 
@@ -10978,7 +10564,7 @@ sourceNEQ<br />
 <tr>
 <td>
 sourceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
+<a href="enums#controlhistorycontrolsource"><code>[ControlHistoryControlSource!]</code></a>
 </td>
 <td>
 
@@ -10987,70 +10573,7 @@ sourceIn<br />
 <tr>
 <td>
 sourceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlhistorycontrolsource"><code>[ControlHistoryControlSource!]</code></a>
 </td>
 <td>
 
@@ -11076,8 +10599,17 @@ sourceNotNil<br />
 </tr>
 <tr>
 <td>
-sourceEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
+controlType<br />
+<a href="enums#controlhistorycontroltype"><code>ControlHistoryControlType</code></a>
+</td>
+<td>
+<p>control_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+controlTypeNEQ<br />
+<a href="enums#controlhistorycontroltype"><code>ControlHistoryControlType</code></a>
 </td>
 <td>
 
@@ -11085,8 +10617,8 @@ sourceEqualFold<br />
 </tr>
 <tr>
 <td>
-sourceContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
+controlTypeIn<br />
+<a href="enums#controlhistorycontroltype"><code>[ControlHistoryControlType!]</code></a>
 </td>
 <td>
 
@@ -11094,17 +10626,8 @@ sourceContainsFold<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>satisfies field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+controlTypeNotIn<br />
+<a href="enums#controlhistorycontroltype"><code>[ControlHistoryControlType!]</code></a>
 </td>
 <td>
 
@@ -11112,88 +10635,7 @@ satisfiesNEQ<br />
 </tr>
 <tr>
 <td>
-satisfiesIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesIsNil<br />
+controlTypeIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -11202,7 +10644,7 @@ satisfiesIsNil<br />
 </tr>
 <tr>
 <td>
-satisfiesNotNil<br />
+controlTypeNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -11211,7 +10653,16 @@ satisfiesNotNil<br />
 </tr>
 <tr>
 <td>
-satisfiesEqualFold<br />
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11220,34 +10671,7 @@ satisfiesEqualFold<br />
 </tr>
 <tr>
 <td>
-satisfiesContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped_frameworks field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksIn<br />
+categoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -11256,7 +10680,7 @@ mappedFrameworksIn<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksNotIn<br />
+categoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -11265,7 +10689,7 @@ mappedFrameworksNotIn<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksGT<br />
+categoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11274,7 +10698,7 @@ mappedFrameworksGT<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksGTE<br />
+categoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11283,7 +10707,7 @@ mappedFrameworksGTE<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksLT<br />
+categoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11292,7 +10716,7 @@ mappedFrameworksLT<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksLTE<br />
+categoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11301,7 +10725,7 @@ mappedFrameworksLTE<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksContains<br />
+categoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11310,7 +10734,7 @@ mappedFrameworksContains<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksHasPrefix<br />
+categoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11319,7 +10743,7 @@ mappedFrameworksHasPrefix<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksHasSuffix<br />
+categoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11328,7 +10752,7 @@ mappedFrameworksHasSuffix<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksIsNil<br />
+categoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -11337,7 +10761,7 @@ mappedFrameworksIsNil<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksNotNil<br />
+categoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -11346,7 +10770,7 @@ mappedFrameworksNotNil<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksEqualFold<br />
+categoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11355,7 +10779,7 @@ mappedFrameworksEqualFold<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksContainsFold<br />
+categoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11364,16 +10788,16 @@ mappedFrameworksContainsFold<br />
 </tr>
 <tr>
 <td>
-exampleEvidence<br />
+categoryID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>example_evidence field predicates</p>
+<p>category_id field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-exampleEvidenceNEQ<br />
+categoryIDNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11382,7 +10806,7 @@ exampleEvidenceNEQ<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceIn<br />
+categoryIDIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -11391,7 +10815,7 @@ exampleEvidenceIn<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceNotIn<br />
+categoryIDNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -11400,7 +10824,7 @@ exampleEvidenceNotIn<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceGT<br />
+categoryIDGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11409,7 +10833,7 @@ exampleEvidenceGT<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceGTE<br />
+categoryIDGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11418,7 +10842,7 @@ exampleEvidenceGTE<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceLT<br />
+categoryIDLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11427,7 +10851,7 @@ exampleEvidenceLT<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceLTE<br />
+categoryIDLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11436,7 +10860,7 @@ exampleEvidenceLTE<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceContains<br />
+categoryIDContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11445,7 +10869,7 @@ exampleEvidenceContains<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceHasPrefix<br />
+categoryIDHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11454,7 +10878,7 @@ exampleEvidenceHasPrefix<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceHasSuffix<br />
+categoryIDHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11463,7 +10887,7 @@ exampleEvidenceHasSuffix<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceIsNil<br />
+categoryIDIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -11472,7 +10896,7 @@ exampleEvidenceIsNil<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceNotNil<br />
+categoryIDNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -11481,7 +10905,7 @@ exampleEvidenceNotNil<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceEqualFold<br />
+categoryIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11490,8 +10914,3238 @@ exampleEvidenceEqualFold<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceContainsFold<br />
+categoryIDContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategory<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subcategory field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+subcategoryNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ref_code field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+refCodeNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>standard_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+standardIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationHistoryWhereInput
+
+ControlImplementationHistoryWhereInput is used for filtering ControlImplementationHistory objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#controlimplementationhistorywhereinput"><code>ControlImplementationHistoryWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#controlimplementationhistorywhereinput"><code>[ControlImplementationHistoryWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#controlimplementationhistorywhereinput"><code>[ControlImplementationHistoryWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>history_time field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+historyTimeNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ref field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+refNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#controlimplementationhistoryoptype"><code>ControlImplementationHistoryOpType</code></a>
+</td>
+<td>
+<p>operation field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+operationNEQ<br />
+<a href="enums#controlimplementationhistoryoptype"><code>ControlImplementationHistoryOpType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operationIn<br />
+<a href="enums#controlimplementationhistoryoptype"><code>[ControlImplementationHistoryOpType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operationNotIn<br />
+<a href="enums#controlimplementationhistoryoptype"><code>[ControlImplementationHistoryOpType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>deleted_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>deleted_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>status field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+statusNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>implementation_date field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDateNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verified<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>verified field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+verifiedNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verifiedIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verifiedNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>verification_date field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+verificationDateNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+details<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>details field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+detailsNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationWhereInput
+
+ControlImplementationWhereInput is used for filtering ControlImplementation objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>[ControlImplementationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>[ControlImplementationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>deleted_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>deleted_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>status field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+statusNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>implementation_date field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDateNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDateNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verified<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>verified field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+verifiedNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verifiedIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verifiedNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>verification_date field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+verificationDateNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDateNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+details<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>details field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+detailsNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+detailsContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>controls edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasControlsWith<br />
+<a href="inputObjects#controlwhereinput"><code>[ControlWhereInput!]</code></a>
 </td>
 <td>
 
@@ -12916,16 +15570,16 @@ nameContainsFold<br />
 </tr>
 <tr>
 <td>
-description<br />
+desiredOutcome<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description field predicates</p>
+<p>desired_outcome field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-descriptionNEQ<br />
+desiredOutcomeNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -12934,7 +15588,7 @@ descriptionNEQ<br />
 </tr>
 <tr>
 <td>
-descriptionIn<br />
+desiredOutcomeIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -12943,7 +15597,7 @@ descriptionIn<br />
 </tr>
 <tr>
 <td>
-descriptionNotIn<br />
+desiredOutcomeNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -12952,7 +15606,7 @@ descriptionNotIn<br />
 </tr>
 <tr>
 <td>
-descriptionGT<br />
+desiredOutcomeGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -12961,7 +15615,7 @@ descriptionGT<br />
 </tr>
 <tr>
 <td>
-descriptionGTE<br />
+desiredOutcomeGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -12970,7 +15624,7 @@ descriptionGTE<br />
 </tr>
 <tr>
 <td>
-descriptionLT<br />
+desiredOutcomeLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -12979,7 +15633,7 @@ descriptionLT<br />
 </tr>
 <tr>
 <td>
-descriptionLTE<br />
+desiredOutcomeLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -12988,7 +15642,7 @@ descriptionLTE<br />
 </tr>
 <tr>
 <td>
-descriptionContains<br />
+desiredOutcomeContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -12997,7 +15651,7 @@ descriptionContains<br />
 </tr>
 <tr>
 <td>
-descriptionHasPrefix<br />
+desiredOutcomeHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13006,7 +15660,7 @@ descriptionHasPrefix<br />
 </tr>
 <tr>
 <td>
-descriptionHasSuffix<br />
+desiredOutcomeHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13015,7 +15669,7 @@ descriptionHasSuffix<br />
 </tr>
 <tr>
 <td>
-descriptionIsNil<br />
+desiredOutcomeIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -13024,7 +15678,7 @@ descriptionIsNil<br />
 </tr>
 <tr>
 <td>
-descriptionNotNil<br />
+desiredOutcomeNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -13033,7 +15687,7 @@ descriptionNotNil<br />
 </tr>
 <tr>
 <td>
-descriptionEqualFold<br />
+desiredOutcomeEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13042,7 +15696,7 @@ descriptionEqualFold<br />
 </tr>
 <tr>
 <td>
-descriptionContainsFold<br />
+desiredOutcomeContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13179,6 +15833,60 @@ statusEqualFold<br />
 <td>
 statusContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+source<br />
+<a href="enums#controlobjectivehistorycontrolsource"><code>ControlObjectiveHistoryControlSource</code></a>
+</td>
+<td>
+<p>source field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceNEQ<br />
+<a href="enums#controlobjectivehistorycontrolsource"><code>ControlObjectiveHistoryControlSource</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceIn<br />
+<a href="enums#controlobjectivehistorycontrolsource"><code>[ControlObjectiveHistoryControlSource!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceNotIn<br />
+<a href="enums#controlobjectivehistorycontrolsource"><code>[ControlObjectiveHistoryControlSource!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -13456,16 +16164,16 @@ versionContainsFold<br />
 </tr>
 <tr>
 <td>
-controlNumber<br />
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>control_number field predicates</p>
+<p>category field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-controlNumberNEQ<br />
+categoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13474,7 +16182,7 @@ controlNumberNEQ<br />
 </tr>
 <tr>
 <td>
-controlNumberIn<br />
+categoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -13483,7 +16191,7 @@ controlNumberIn<br />
 </tr>
 <tr>
 <td>
-controlNumberNotIn<br />
+categoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -13492,7 +16200,7 @@ controlNumberNotIn<br />
 </tr>
 <tr>
 <td>
-controlNumberGT<br />
+categoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13501,7 +16209,7 @@ controlNumberGT<br />
 </tr>
 <tr>
 <td>
-controlNumberGTE<br />
+categoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13510,7 +16218,7 @@ controlNumberGTE<br />
 </tr>
 <tr>
 <td>
-controlNumberLT<br />
+categoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13519,7 +16227,7 @@ controlNumberLT<br />
 </tr>
 <tr>
 <td>
-controlNumberLTE<br />
+categoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13528,7 +16236,7 @@ controlNumberLTE<br />
 </tr>
 <tr>
 <td>
-controlNumberContains<br />
+categoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13537,7 +16245,7 @@ controlNumberContains<br />
 </tr>
 <tr>
 <td>
-controlNumberHasPrefix<br />
+categoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13546,7 +16254,7 @@ controlNumberHasPrefix<br />
 </tr>
 <tr>
 <td>
-controlNumberHasSuffix<br />
+categoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13555,7 +16263,7 @@ controlNumberHasSuffix<br />
 </tr>
 <tr>
 <td>
-controlNumberIsNil<br />
+categoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -13564,7 +16272,7 @@ controlNumberIsNil<br />
 </tr>
 <tr>
 <td>
-controlNumberNotNil<br />
+categoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -13573,7 +16281,7 @@ controlNumberNotNil<br />
 </tr>
 <tr>
 <td>
-controlNumberEqualFold<br />
+categoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13582,7 +16290,7 @@ controlNumberEqualFold<br />
 </tr>
 <tr>
 <td>
-controlNumberContainsFold<br />
+categoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13591,16 +16299,16 @@ controlNumberContainsFold<br />
 </tr>
 <tr>
 <td>
-family<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family field predicates</p>
+<p>subcategory field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-familyNEQ<br />
+subcategoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13609,7 +16317,7 @@ familyNEQ<br />
 </tr>
 <tr>
 <td>
-familyIn<br />
+subcategoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -13618,7 +16326,7 @@ familyIn<br />
 </tr>
 <tr>
 <td>
-familyNotIn<br />
+subcategoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -13627,7 +16335,7 @@ familyNotIn<br />
 </tr>
 <tr>
 <td>
-familyGT<br />
+subcategoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13636,7 +16344,7 @@ familyGT<br />
 </tr>
 <tr>
 <td>
-familyGTE<br />
+subcategoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13645,7 +16353,7 @@ familyGTE<br />
 </tr>
 <tr>
 <td>
-familyLT<br />
+subcategoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13654,7 +16362,7 @@ familyLT<br />
 </tr>
 <tr>
 <td>
-familyLTE<br />
+subcategoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13663,7 +16371,7 @@ familyLTE<br />
 </tr>
 <tr>
 <td>
-familyContains<br />
+subcategoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13672,7 +16380,7 @@ familyContains<br />
 </tr>
 <tr>
 <td>
-familyHasPrefix<br />
+subcategoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13681,7 +16389,7 @@ familyHasPrefix<br />
 </tr>
 <tr>
 <td>
-familyHasSuffix<br />
+subcategoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13690,7 +16398,7 @@ familyHasSuffix<br />
 </tr>
 <tr>
 <td>
-familyIsNil<br />
+subcategoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -13699,7 +16407,7 @@ familyIsNil<br />
 </tr>
 <tr>
 <td>
-familyNotNil<br />
+subcategoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -13708,7 +16416,7 @@ familyNotNil<br />
 </tr>
 <tr>
 <td>
-familyEqualFold<br />
+subcategoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13717,547 +16425,7 @@ familyEqualFold<br />
 </tr>
 <tr>
 <td>
-familyContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-classNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>source field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-sourceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped_frameworks field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>example_evidence field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceContainsFold<br />
+subcategoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15440,16 +17608,16 @@ nameContainsFold<br />
 </tr>
 <tr>
 <td>
-description<br />
+desiredOutcome<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description field predicates</p>
+<p>desired_outcome field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-descriptionNEQ<br />
+desiredOutcomeNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15458,7 +17626,7 @@ descriptionNEQ<br />
 </tr>
 <tr>
 <td>
-descriptionIn<br />
+desiredOutcomeIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -15467,7 +17635,7 @@ descriptionIn<br />
 </tr>
 <tr>
 <td>
-descriptionNotIn<br />
+desiredOutcomeNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -15476,7 +17644,7 @@ descriptionNotIn<br />
 </tr>
 <tr>
 <td>
-descriptionGT<br />
+desiredOutcomeGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15485,7 +17653,7 @@ descriptionGT<br />
 </tr>
 <tr>
 <td>
-descriptionGTE<br />
+desiredOutcomeGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15494,7 +17662,7 @@ descriptionGTE<br />
 </tr>
 <tr>
 <td>
-descriptionLT<br />
+desiredOutcomeLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15503,7 +17671,7 @@ descriptionLT<br />
 </tr>
 <tr>
 <td>
-descriptionLTE<br />
+desiredOutcomeLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15512,7 +17680,7 @@ descriptionLTE<br />
 </tr>
 <tr>
 <td>
-descriptionContains<br />
+desiredOutcomeContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15521,7 +17689,7 @@ descriptionContains<br />
 </tr>
 <tr>
 <td>
-descriptionHasPrefix<br />
+desiredOutcomeHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15530,7 +17698,7 @@ descriptionHasPrefix<br />
 </tr>
 <tr>
 <td>
-descriptionHasSuffix<br />
+desiredOutcomeHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15539,7 +17707,7 @@ descriptionHasSuffix<br />
 </tr>
 <tr>
 <td>
-descriptionIsNil<br />
+desiredOutcomeIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -15548,7 +17716,7 @@ descriptionIsNil<br />
 </tr>
 <tr>
 <td>
-descriptionNotNil<br />
+desiredOutcomeNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -15557,7 +17725,7 @@ descriptionNotNil<br />
 </tr>
 <tr>
 <td>
-descriptionEqualFold<br />
+desiredOutcomeEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15566,7 +17734,7 @@ descriptionEqualFold<br />
 </tr>
 <tr>
 <td>
-descriptionContainsFold<br />
+desiredOutcomeContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15703,6 +17871,60 @@ statusEqualFold<br />
 <td>
 statusContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+source<br />
+<a href="enums#controlobjectivecontrolsource"><code>ControlObjectiveControlSource</code></a>
+</td>
+<td>
+<p>source field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceNEQ<br />
+<a href="enums#controlobjectivecontrolsource"><code>ControlObjectiveControlSource</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceIn<br />
+<a href="enums#controlobjectivecontrolsource"><code>[ControlObjectiveControlSource!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceNotIn<br />
+<a href="enums#controlobjectivecontrolsource"><code>[ControlObjectiveControlSource!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -15980,16 +18202,16 @@ versionContainsFold<br />
 </tr>
 <tr>
 <td>
-controlNumber<br />
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>control_number field predicates</p>
+<p>category field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-controlNumberNEQ<br />
+categoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15998,7 +18220,7 @@ controlNumberNEQ<br />
 </tr>
 <tr>
 <td>
-controlNumberIn<br />
+categoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -16007,7 +18229,7 @@ controlNumberIn<br />
 </tr>
 <tr>
 <td>
-controlNumberNotIn<br />
+categoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -16016,7 +18238,7 @@ controlNumberNotIn<br />
 </tr>
 <tr>
 <td>
-controlNumberGT<br />
+categoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16025,7 +18247,7 @@ controlNumberGT<br />
 </tr>
 <tr>
 <td>
-controlNumberGTE<br />
+categoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16034,7 +18256,7 @@ controlNumberGTE<br />
 </tr>
 <tr>
 <td>
-controlNumberLT<br />
+categoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16043,7 +18265,7 @@ controlNumberLT<br />
 </tr>
 <tr>
 <td>
-controlNumberLTE<br />
+categoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16052,7 +18274,7 @@ controlNumberLTE<br />
 </tr>
 <tr>
 <td>
-controlNumberContains<br />
+categoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16061,7 +18283,7 @@ controlNumberContains<br />
 </tr>
 <tr>
 <td>
-controlNumberHasPrefix<br />
+categoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16070,7 +18292,7 @@ controlNumberHasPrefix<br />
 </tr>
 <tr>
 <td>
-controlNumberHasSuffix<br />
+categoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16079,7 +18301,7 @@ controlNumberHasSuffix<br />
 </tr>
 <tr>
 <td>
-controlNumberIsNil<br />
+categoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -16088,7 +18310,7 @@ controlNumberIsNil<br />
 </tr>
 <tr>
 <td>
-controlNumberNotNil<br />
+categoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -16097,7 +18319,7 @@ controlNumberNotNil<br />
 </tr>
 <tr>
 <td>
-controlNumberEqualFold<br />
+categoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16106,7 +18328,7 @@ controlNumberEqualFold<br />
 </tr>
 <tr>
 <td>
-controlNumberContainsFold<br />
+categoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16115,16 +18337,16 @@ controlNumberContainsFold<br />
 </tr>
 <tr>
 <td>
-family<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family field predicates</p>
+<p>subcategory field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-familyNEQ<br />
+subcategoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16133,7 +18355,7 @@ familyNEQ<br />
 </tr>
 <tr>
 <td>
-familyIn<br />
+subcategoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -16142,7 +18364,7 @@ familyIn<br />
 </tr>
 <tr>
 <td>
-familyNotIn<br />
+subcategoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -16151,7 +18373,7 @@ familyNotIn<br />
 </tr>
 <tr>
 <td>
-familyGT<br />
+subcategoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16160,7 +18382,7 @@ familyGT<br />
 </tr>
 <tr>
 <td>
-familyGTE<br />
+subcategoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16169,7 +18391,7 @@ familyGTE<br />
 </tr>
 <tr>
 <td>
-familyLT<br />
+subcategoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16178,7 +18400,7 @@ familyLT<br />
 </tr>
 <tr>
 <td>
-familyLTE<br />
+subcategoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16187,7 +18409,7 @@ familyLTE<br />
 </tr>
 <tr>
 <td>
-familyContains<br />
+subcategoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16196,7 +18418,7 @@ familyContains<br />
 </tr>
 <tr>
 <td>
-familyHasPrefix<br />
+subcategoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16205,7 +18427,7 @@ familyHasPrefix<br />
 </tr>
 <tr>
 <td>
-familyHasSuffix<br />
+subcategoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16214,7 +18436,7 @@ familyHasSuffix<br />
 </tr>
 <tr>
 <td>
-familyIsNil<br />
+subcategoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -16223,7 +18445,7 @@ familyIsNil<br />
 </tr>
 <tr>
 <td>
-familyNotNil<br />
+subcategoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -16232,7 +18454,7 @@ familyNotNil<br />
 </tr>
 <tr>
 <td>
-familyEqualFold<br />
+subcategoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16241,547 +18463,7 @@ familyEqualFold<br />
 </tr>
 <tr>
 <td>
-familyContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-classNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>source field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-sourceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped_frameworks field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>example_evidence field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceContainsFold<br />
+subcategoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16862,17 +18544,35 @@ hasViewersWith<br />
 </tr>
 <tr>
 <td>
-hasInternalPolicies<br />
+hasPrograms<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>internal_policies edge predicates</p>
+<p>programs edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasInternalPoliciesWith<br />
-<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+hasProgramsWith<br />
+<a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEvidence<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>evidence edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEvidenceWith<br />
+<a href="inputObjects#evidencewhereinput"><code>[EvidenceWhereInput!]</code></a>
 </td>
 <td>
 
@@ -16891,6 +18591,42 @@ hasControls<br />
 <td>
 hasControlsWith<br />
 <a href="inputObjects#controlwhereinput"><code>[ControlWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
 </td>
 <td>
 
@@ -16934,42 +18670,6 @@ hasRisksWith<br />
 </tr>
 <tr>
 <td>
-hasSubcontrols<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>subcontrols edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasSubcontrolsWith<br />
-<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasStandard<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>standard edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasStandardWith<br />
-<a href="inputObjects#standardwhereinput"><code>[StandardWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasNarratives<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -16999,42 +18699,6 @@ hasTasks<br />
 <td>
 hasTasksWith<br />
 <a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasPrograms<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>programs edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasProgramsWith<br />
-<a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasEvidence<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>evidence edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasEvidenceWith<br />
-<a href="inputObjects#evidencewhereinput"><code>[EvidenceWhereInput!]</code></a>
 </td>
 <td>
 
@@ -18099,123 +19763,6 @@ ownerIDContainsFold<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>name field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-nameNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -18486,683 +20033,8 @@ statusContainsFold<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-versionNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control_number field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-controlNumberNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumberContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>family field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-familyNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-classNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlcontrolsource"><code>ControlControlSource</code></a>
 </td>
 <td>
 <p>source field predicates</p>
@@ -19171,7 +20043,7 @@ source<br />
 <tr>
 <td>
 sourceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlcontrolsource"><code>ControlControlSource</code></a>
 </td>
 <td>
 
@@ -19180,7 +20052,7 @@ sourceNEQ<br />
 <tr>
 <td>
 sourceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
+<a href="enums#controlcontrolsource"><code>[ControlControlSource!]</code></a>
 </td>
 <td>
 
@@ -19189,70 +20061,7 @@ sourceIn<br />
 <tr>
 <td>
 sourceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlcontrolsource"><code>[ControlControlSource!]</code></a>
 </td>
 <td>
 
@@ -19278,8 +20087,17 @@ sourceNotNil<br />
 </tr>
 <tr>
 <td>
-sourceEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
+controlType<br />
+<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
+</td>
+<td>
+<p>control_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+controlTypeNEQ<br />
+<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
 </td>
 <td>
 
@@ -19287,8 +20105,8 @@ sourceEqualFold<br />
 </tr>
 <tr>
 <td>
-sourceContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
+controlTypeIn<br />
+<a href="enums#controlcontroltype"><code>[ControlControlType!]</code></a>
 </td>
 <td>
 
@@ -19296,17 +20114,8 @@ sourceContainsFold<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>satisfies field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+controlTypeNotIn<br />
+<a href="enums#controlcontroltype"><code>[ControlControlType!]</code></a>
 </td>
 <td>
 
@@ -19314,88 +20123,7 @@ satisfiesNEQ<br />
 </tr>
 <tr>
 <td>
-satisfiesIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesIsNil<br />
+controlTypeIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -19404,7 +20132,7 @@ satisfiesIsNil<br />
 </tr>
 <tr>
 <td>
-satisfiesNotNil<br />
+controlTypeNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -19413,7 +20141,16 @@ satisfiesNotNil<br />
 </tr>
 <tr>
 <td>
-satisfiesEqualFold<br />
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19422,34 +20159,7 @@ satisfiesEqualFold<br />
 </tr>
 <tr>
 <td>
-satisfiesContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped_frameworks field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksIn<br />
+categoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -19458,7 +20168,7 @@ mappedFrameworksIn<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksNotIn<br />
+categoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -19467,7 +20177,7 @@ mappedFrameworksNotIn<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksGT<br />
+categoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19476,7 +20186,7 @@ mappedFrameworksGT<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksGTE<br />
+categoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19485,7 +20195,7 @@ mappedFrameworksGTE<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksLT<br />
+categoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19494,7 +20204,7 @@ mappedFrameworksLT<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksLTE<br />
+categoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19503,7 +20213,7 @@ mappedFrameworksLTE<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksContains<br />
+categoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19512,7 +20222,7 @@ mappedFrameworksContains<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksHasPrefix<br />
+categoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19521,7 +20231,7 @@ mappedFrameworksHasPrefix<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksHasSuffix<br />
+categoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19530,7 +20240,7 @@ mappedFrameworksHasSuffix<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksIsNil<br />
+categoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -19539,7 +20249,7 @@ mappedFrameworksIsNil<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksNotNil<br />
+categoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -19548,7 +20258,7 @@ mappedFrameworksNotNil<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksEqualFold<br />
+categoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19557,7 +20267,7 @@ mappedFrameworksEqualFold<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksContainsFold<br />
+categoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19566,16 +20276,16 @@ mappedFrameworksContainsFold<br />
 </tr>
 <tr>
 <td>
-exampleEvidence<br />
+categoryID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>example_evidence field predicates</p>
+<p>category_id field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-exampleEvidenceNEQ<br />
+categoryIDNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19584,7 +20294,7 @@ exampleEvidenceNEQ<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceIn<br />
+categoryIDIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -19593,7 +20303,7 @@ exampleEvidenceIn<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceNotIn<br />
+categoryIDNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -19602,7 +20312,7 @@ exampleEvidenceNotIn<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceGT<br />
+categoryIDGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19611,7 +20321,7 @@ exampleEvidenceGT<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceGTE<br />
+categoryIDGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19620,7 +20330,7 @@ exampleEvidenceGTE<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceLT<br />
+categoryIDLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19629,7 +20339,7 @@ exampleEvidenceLT<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceLTE<br />
+categoryIDLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19638,7 +20348,7 @@ exampleEvidenceLTE<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceContains<br />
+categoryIDContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19647,7 +20357,7 @@ exampleEvidenceContains<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceHasPrefix<br />
+categoryIDHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19656,7 +20366,7 @@ exampleEvidenceHasPrefix<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceHasSuffix<br />
+categoryIDHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19665,7 +20375,7 @@ exampleEvidenceHasSuffix<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceIsNil<br />
+categoryIDIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -19674,7 +20384,7 @@ exampleEvidenceIsNil<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceNotNil<br />
+categoryIDNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -19683,7 +20393,7 @@ exampleEvidenceNotNil<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceEqualFold<br />
+categoryIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19692,8 +20402,395 @@ exampleEvidenceEqualFold<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceContainsFold<br />
+categoryIDContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategory<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subcategory field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+subcategoryNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategoryContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ref_code field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+refCodeNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCodeContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>standard_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+standardIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standardIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -19773,17 +20870,17 @@ hasViewersWith<br />
 </tr>
 <tr>
 <td>
-hasProcedures<br />
+hasStandard<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>procedures edge predicates</p>
+<p>standard edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasProceduresWith<br />
-<a href="inputObjects#procedurewhereinput"><code>[ProcedureWhereInput!]</code></a>
+hasStandardWith<br />
+<a href="inputObjects#standardwhereinput"><code>[StandardWhereInput!]</code></a>
 </td>
 <td>
 
@@ -19791,17 +20888,71 @@ hasProceduresWith<br />
 </tr>
 <tr>
 <td>
-hasSubcontrols<br />
+hasPrograms<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>subcontrols edge predicates</p>
+<p>programs edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasSubcontrolsWith<br />
-<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+hasProgramsWith<br />
+<a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEvidence<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>evidence edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEvidenceWith<br />
+<a href="inputObjects#evidencewhereinput"><code>[EvidenceWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasControlImplementations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>control_implementations edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasControlImplementationsWith<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>[ControlImplementationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasMappedControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>mapped_controls edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasMappedControlsWith<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>[MappedControlWhereInput!]</code></a>
 </td>
 <td>
 
@@ -19827,17 +20978,35 @@ hasControlObjectivesWith<br />
 </tr>
 <tr>
 <td>
-hasStandard<br />
+hasSubcontrols<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>standard edge predicates</p>
+<p>subcontrols edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasStandardWith<br />
-<a href="inputObjects#standardwhereinput"><code>[StandardWhereInput!]</code></a>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTasks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>tasks edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTasksWith<br />
+<a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
 </td>
 <td>
 
@@ -19899,17 +21068,17 @@ hasActionPlansWith<br />
 </tr>
 <tr>
 <td>
-hasTasks<br />
+hasProcedures<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>tasks edge predicates</p>
+<p>procedures edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasTasksWith<br />
-<a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
+hasProceduresWith<br />
+<a href="inputObjects#procedurewhereinput"><code>[ProcedureWhereInput!]</code></a>
 </td>
 <td>
 
@@ -19917,17 +21086,17 @@ hasTasksWith<br />
 </tr>
 <tr>
 <td>
-hasPrograms<br />
+hasInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>programs edge predicates</p>
+<p>internal_policies edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasProgramsWith<br />
-<a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
 </td>
 <td>
 
@@ -19935,17 +21104,35 @@ hasProgramsWith<br />
 </tr>
 <tr>
 <td>
-hasEvidence<br />
+hasControlOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>evidence edge predicates</p>
+<p>control_owner edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasEvidenceWith<br />
-<a href="inputObjects#evidencewhereinput"><code>[EvidenceWhereInput!]</code></a>
+hasControlOwnerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDelegate<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>delegate edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDelegateWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
 
@@ -20034,15 +21221,6 @@ details<br />
 </td>
 <td>
 <p>json data including details of the action plan</p>
-</td>
-</tr>
-<tr>
-<td>
-standardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 <tr>
@@ -20146,6 +21324,42 @@ lastUsedAt<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the token is active</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reason the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who revoked the token</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token was revoked</p>
 </td>
 </tr>
 <tr>
@@ -20272,6 +21486,82 @@ fileIDs<br />
 </tbody>
 </table>
 
+## CreateControlImplementationInput
+
+CreateControlImplementationInput is used for create ControlImplementation object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>status of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>date the control was implemented</p>
+</td>
+</tr>
+<tr>
+<td>
+verified<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>set to true if the control implementation has been verified</p>
+</td>
+</tr>
+<tr>
+<td>
+verificationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>date the control implementation was verified</p>
+</td>
+</tr>
+<tr>
+<td>
+details<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>details of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+controlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## CreateControlInput
 
 CreateControlInput is used for create Control object.
@@ -20293,20 +21583,11 @@ tags<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the control</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the control</p>
+<p>description of what the control is supposed to accomplish</p>
 </td>
 </tr>
 <tr>
@@ -20320,53 +21601,8 @@ status<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-controlNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control number or identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>family associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlcontrolsource"><code>ControlControlSource</code></a>
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
@@ -20374,38 +21610,110 @@ source<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
+controlType<br />
+<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
 </td>
 <td>
-<p>which control objectives are satisfied by the control</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped frameworks</p>
+<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
 <tr>
 <td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
+category<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>json data including details of the control</p>
+<p>category of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category id of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+subcategory<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subcategory of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+mappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>mapped categories of the control to other standards</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
+</td>
+<td>
+<p>objectives of the audit assessment for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
+</td>
+<td>
+<p>methods used to verify the control implementation during an audit</p>
+</td>
+</tr>
+<tr>
+<td>
+controlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>questions to ask to verify the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+<p>implementation guidance for the control</p>
 </td>
 </tr>
 <tr>
 <td>
 exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
 </td>
 <td>
-<p>example evidence to provide for the control</p>
+<p>examples of evidence for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+references<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+<p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
 </td>
 </tr>
 <tr>
@@ -20446,7 +21754,16 @@ viewerIDs<br />
 </tr>
 <tr>
 <td>
-procedureIDs<br />
+standardID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -20455,7 +21772,25 @@ procedureIDs<br />
 </tr>
 <tr>
 <td>
-subcontrolIDs<br />
+evidenceIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappedControlIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -20473,7 +21808,16 @@ controlObjectiveIDs<br />
 </tr>
 <tr>
 <td>
-standardIDs<br />
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+taskIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -20509,7 +21853,7 @@ actionPlanIDs<br />
 </tr>
 <tr>
 <td>
-taskIDs<br />
+procedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -20518,7 +21862,7 @@ taskIDs<br />
 </tr>
 <tr>
 <td>
-programIDs<br />
+internalPolicyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -20527,8 +21871,17 @@ programIDs<br />
 </tr>
 <tr>
 <td>
-evidenceIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
+controlOwnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -20567,11 +21920,11 @@ name<br />
 </tr>
 <tr>
 <td>
-description<br />
+desiredOutcome<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the control objective</p>
+<p>the desired outcome or target of the control objective</p>
 </td>
 </tr>
 <tr>
@@ -20585,11 +21938,20 @@ status<br />
 </tr>
 <tr>
 <td>
+source<br />
+<a href="enums#controlobjectivecontrolsource"><code>ControlObjectiveControlSource</code></a>
+</td>
+<td>
+<p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
 controlObjectiveType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>type of the control objective</p>
+<p>type of the control objective e.g. compliance, financial, operational, etc.</p>
 </td>
 </tr>
 <tr>
@@ -20603,65 +21965,20 @@ version<br />
 </tr>
 <tr>
 <td>
-controlNumber<br />
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>number of the control objective</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-family<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class associated with the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>source of the control objective, e.g. framework, template, user-defined, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped frameworks</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data including details of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>example evidence to provide for the control</p>
+<p>subcategory of the control</p>
 </td>
 </tr>
 <tr>
@@ -20702,7 +22019,16 @@ viewerIDs<br />
 </tr>
 <tr>
 <td>
-internalPolicyIDs<br />
+programIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidenceIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -20712,6 +22038,24 @@ internalPolicyIDs<br />
 <tr>
 <td>
 controlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -20738,24 +22082,6 @@ riskIDs<br />
 </tr>
 <tr>
 <td>
-subcontrolIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-standardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 narrativeIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -20766,24 +22092,6 @@ narrativeIDs<br />
 <tr>
 <td>
 taskIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-evidenceIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -20845,7 +22153,7 @@ tags<br />
 <tr>
 <td>
 data<br />
-<a href="scalars#json"><code>JSON!</code></a>
+<a href="scalars#map"><code>Map!</code></a>
 </td>
 <td>
 <p>the json data of the document</p>
@@ -21625,15 +22933,6 @@ evidenceIDs<br />
 <td>
 program<br />
 <a href="inputObjects#createprograminput"><code>CreateProgramInput!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-standard<br />
-<a href="inputObjects#createstandardinput"><code>CreateStandardInput!</code></a>
 </td>
 <td>
 
@@ -22525,6 +23824,64 @@ eventIDs<br />
 </tbody>
 </table>
 
+## CreateMappedControlInput
+
+CreateMappedControlInput is used for create MappedControl object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+mappingType<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the type of mapping between the two controls, e.g. subset, intersect, equal, superset</p>
+</td>
+</tr>
+<tr>
+<td>
+relation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of how the two controls are related</p>
+</td>
+</tr>
+<tr>
+<td>
+controlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## CreateMemberWithProgramInput
 
 
@@ -22594,20 +23951,11 @@ description<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
+details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>which controls are satisfied by the narrative</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data for the narrative document</p>
+<p>text data for the narrative document</p>
 </td>
 </tr>
 <tr>
@@ -22648,34 +23996,7 @@ viewerIDs<br />
 </tr>
 <tr>
 <td>
-internalPolicyIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlObjectiveIDs<br />
+satisfyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -23227,6 +24548,15 @@ evidenceIDs<br />
 </tr>
 <tr>
 <td>
+standardIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 createOrgSettings<br />
 <a href="inputObjects#createorganizationsettinginput"><code>CreateOrganizationSettingInput</code></a>
 </td>
@@ -23469,6 +24799,42 @@ lastUsedAt<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the token is active</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reason the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who revoked the token</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token was revoked</p>
 </td>
 </tr>
 <tr>
@@ -23929,15 +25295,6 @@ actionPlanIDs<br />
 
 </td>
 </tr>
-<tr>
-<td>
-standardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -24220,7 +25577,25 @@ name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>the name of the standard body, e.g. TSC, NIST, SOC, HITRUST, FedRamp, etc.</p>
+<p>the long name of the standard body</p>
+</td>
+</tr>
+<tr>
+<td>
+shortName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>short name of the standard, e.g. SOC 2, ISO 27001, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+framework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>unique identifier of the standard with version</p>
 </td>
 </tr>
 <tr>
@@ -24234,11 +25609,29 @@ description<br />
 </tr>
 <tr>
 <td>
-family<br />
+governingBody<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family of the standard, e.g. 800-53, 800-171, 27001, etc.</p>
+<p>governing body of the standard, e.g. AICPA, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+domains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains the standard covers, e.g. availability, confidentiality, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+link<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>link to the official standard documentation</p>
 </td>
 </tr>
 <tr>
@@ -24248,6 +25641,33 @@ status<br />
 </td>
 <td>
 <p>status of the standard - active, deprecated, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+isPublic<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard should be made available to all users, only for public standards</p>
+</td>
+</tr>
+<tr>
+<td>
+freeToUse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard is freely distributable under a trial license, only for public standards</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard is owned by the the openlane system</p>
 </td>
 </tr>
 <tr>
@@ -24270,44 +25690,17 @@ version<br />
 </tr>
 <tr>
 <td>
-purposeAndScope<br />
+revision<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>purpose and scope</p>
+<p>internal revision of the standard</p>
 </td>
 </tr>
 <tr>
 <td>
-background<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>which controls are satisfied by the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data with details of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-controlObjectiveIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -24316,33 +25709,6 @@ controlObjectiveIDs<br />
 <tr>
 <td>
 controlIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -24373,20 +25739,11 @@ tags<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the subcontrol</p>
+<p>description of what the control is supposed to accomplish</p>
 </td>
 </tr>
 <tr>
@@ -24395,133 +25752,124 @@ status<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>status of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>number of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol family</p>
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol class</p>
+<p>status of the control</p>
 </td>
 </tr>
 <tr>
 <td>
 source<br />
+<a href="enums#subcontrolcontrolsource"><code>SubcontrolControlSource</code></a>
+</td>
+<td>
+<p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+controlType<br />
+<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
+</td>
+<td>
+<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>source of the control, e.g. framework, template, user-defined, etc.</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-mappedFrameworks<br />
+categoryID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>mapped frameworks that the subcontrol is part of</p>
+<p>category id of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationEvidence<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation evidence of the subcontrol</p>
+<p>subcategory of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationStatus<br />
-<a href="scalars#string"><code>String</code></a>
+mappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
-<p>implementation status</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>date the subcontrol was implemented</p>
+<p>mapped categories of the control to other standards</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationVerification<br />
-<a href="scalars#string"><code>String</code></a>
+assessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
 </td>
 <td>
-<p>implementation verification</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>date the subcontrol implementation was verified</p>
+<p>objectives of the audit assessment for the control</p>
 </td>
 </tr>
 <tr>
 <td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
+assessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
 </td>
 <td>
-<p>json data details of the subcontrol</p>
+<p>methods used to verify the control implementation during an audit</p>
+</td>
+</tr>
+<tr>
+<td>
+controlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>questions to ask to verify the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+<p>implementation guidance for the control</p>
 </td>
 </tr>
 <tr>
 <td>
 exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
 </td>
 <td>
-<p>example evidence to provide for the control</p>
+<p>examples of evidence for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+references<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+<p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
 </td>
 </tr>
 <tr>
@@ -24535,8 +25883,35 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-controlIDs<br />
-<a href="scalars#id"><code>[ID!]!</code></a>
+controlID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappedControlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidenceIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlObjectiveIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -24553,7 +25928,7 @@ taskIDs<br />
 </tr>
 <tr>
 <td>
-programIDs<br />
+narrativeIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -24562,8 +25937,53 @@ programIDs<br />
 </tr>
 <tr>
 <td>
-evidenceIDs<br />
+riskIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+actionPlanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+procedureIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlOwnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -24872,7 +26292,7 @@ description<br />
 <tr>
 <td>
 jsonconfig<br />
-<a href="scalars#json"><code>JSON!</code></a>
+<a href="scalars#map"><code>Map!</code></a>
 </td>
 <td>
 <p>the jsonschema object of the template</p>
@@ -24881,7 +26301,7 @@ jsonconfig<br />
 <tr>
 <td>
 uischema<br />
-<a href="scalars#json"><code>JSON</code></a>
+<a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
 <p>the uischema for the template to render in the UI</p>
@@ -65014,6 +66434,2435 @@ hasEventsWith<br />
 </tbody>
 </table>
 
+## MappedControlHistoryWhereInput
+
+MappedControlHistoryWhereInput is used for filtering MappedControlHistory objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#mappedcontrolhistorywhereinput"><code>MappedControlHistoryWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#mappedcontrolhistorywhereinput"><code>[MappedControlHistoryWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#mappedcontrolhistorywhereinput"><code>[MappedControlHistoryWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>history_time field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+historyTimeNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTimeLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ref field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+refNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#mappedcontrolhistoryoptype"><code>MappedControlHistoryOpType</code></a>
+</td>
+<td>
+<p>operation field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+operationNEQ<br />
+<a href="enums#mappedcontrolhistoryoptype"><code>MappedControlHistoryOpType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operationIn<br />
+<a href="enums#mappedcontrolhistoryoptype"><code>[MappedControlHistoryOpType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operationNotIn<br />
+<a href="enums#mappedcontrolhistoryoptype"><code>[MappedControlHistoryOpType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>deleted_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>deleted_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingType<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>mapping_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>relation field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+relationNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlWhereInput
+
+MappedControlWhereInput is used for filtering MappedControl objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>[MappedControlWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>[MappedControlWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>deleted_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>deleted_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+deletedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deletedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingType<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>mapping_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingTypeContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>relation field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+relationNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relationContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>controls edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasControlsWith<br />
+<a href="inputObjects#controlwhereinput"><code>[ControlWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## NarrativeHistoryWhereInput
 
 NarrativeHistoryWhereInput is used for filtering NarrativeHistory objects.
@@ -66565,16 +70414,16 @@ descriptionContainsFold<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
+details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>satisfies field predicates</p>
+<p>details field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-satisfiesNEQ<br />
+detailsNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66583,7 +70432,7 @@ satisfiesNEQ<br />
 </tr>
 <tr>
 <td>
-satisfiesIn<br />
+detailsIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -66592,7 +70441,7 @@ satisfiesIn<br />
 </tr>
 <tr>
 <td>
-satisfiesNotIn<br />
+detailsNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -66601,7 +70450,7 @@ satisfiesNotIn<br />
 </tr>
 <tr>
 <td>
-satisfiesGT<br />
+detailsGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66610,7 +70459,7 @@ satisfiesGT<br />
 </tr>
 <tr>
 <td>
-satisfiesGTE<br />
+detailsGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66619,7 +70468,7 @@ satisfiesGTE<br />
 </tr>
 <tr>
 <td>
-satisfiesLT<br />
+detailsLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66628,7 +70477,7 @@ satisfiesLT<br />
 </tr>
 <tr>
 <td>
-satisfiesLTE<br />
+detailsLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66637,7 +70486,7 @@ satisfiesLTE<br />
 </tr>
 <tr>
 <td>
-satisfiesContains<br />
+detailsContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66646,7 +70495,7 @@ satisfiesContains<br />
 </tr>
 <tr>
 <td>
-satisfiesHasPrefix<br />
+detailsHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66655,7 +70504,7 @@ satisfiesHasPrefix<br />
 </tr>
 <tr>
 <td>
-satisfiesHasSuffix<br />
+detailsHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66664,7 +70513,7 @@ satisfiesHasSuffix<br />
 </tr>
 <tr>
 <td>
-satisfiesIsNil<br />
+detailsIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -66673,7 +70522,7 @@ satisfiesIsNil<br />
 </tr>
 <tr>
 <td>
-satisfiesNotNil<br />
+detailsNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -66682,7 +70531,7 @@ satisfiesNotNil<br />
 </tr>
 <tr>
 <td>
-satisfiesEqualFold<br />
+detailsEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -66691,7 +70540,7 @@ satisfiesEqualFold<br />
 </tr>
 <tr>
 <td>
-satisfiesContainsFold<br />
+detailsContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68009,16 +71858,16 @@ descriptionContainsFold<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
+details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>satisfies field predicates</p>
+<p>details field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-satisfiesNEQ<br />
+detailsNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68027,7 +71876,7 @@ satisfiesNEQ<br />
 </tr>
 <tr>
 <td>
-satisfiesIn<br />
+detailsIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -68036,7 +71885,7 @@ satisfiesIn<br />
 </tr>
 <tr>
 <td>
-satisfiesNotIn<br />
+detailsNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -68045,7 +71894,7 @@ satisfiesNotIn<br />
 </tr>
 <tr>
 <td>
-satisfiesGT<br />
+detailsGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68054,7 +71903,7 @@ satisfiesGT<br />
 </tr>
 <tr>
 <td>
-satisfiesGTE<br />
+detailsGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68063,7 +71912,7 @@ satisfiesGTE<br />
 </tr>
 <tr>
 <td>
-satisfiesLT<br />
+detailsLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68072,7 +71921,7 @@ satisfiesLT<br />
 </tr>
 <tr>
 <td>
-satisfiesLTE<br />
+detailsLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68081,7 +71930,7 @@ satisfiesLTE<br />
 </tr>
 <tr>
 <td>
-satisfiesContains<br />
+detailsContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68090,7 +71939,7 @@ satisfiesContains<br />
 </tr>
 <tr>
 <td>
-satisfiesHasPrefix<br />
+detailsHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68099,7 +71948,7 @@ satisfiesHasPrefix<br />
 </tr>
 <tr>
 <td>
-satisfiesHasSuffix<br />
+detailsHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68108,7 +71957,7 @@ satisfiesHasSuffix<br />
 </tr>
 <tr>
 <td>
-satisfiesIsNil<br />
+detailsIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -68117,7 +71966,7 @@ satisfiesIsNil<br />
 </tr>
 <tr>
 <td>
-satisfiesNotNil<br />
+detailsNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -68126,7 +71975,7 @@ satisfiesNotNil<br />
 </tr>
 <tr>
 <td>
-satisfiesEqualFold<br />
+detailsEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68135,7 +71984,7 @@ satisfiesEqualFold<br />
 </tr>
 <tr>
 <td>
-satisfiesContainsFold<br />
+detailsContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -68216,71 +72065,17 @@ hasViewersWith<br />
 </tr>
 <tr>
 <td>
-hasInternalPolicy<br />
+hasSatisfies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>internal_policy edge predicates</p>
+<p>satisfies edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasInternalPolicyWith<br />
-<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasControl<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>control edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasControlWith<br />
+hasSatisfiesWith<br />
 <a href="inputObjects#controlwhereinput"><code>[ControlWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasProcedure<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>procedure edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasProcedureWith<br />
-<a href="inputObjects#procedurewhereinput"><code>[ProcedureWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasControlObjective<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>control_objective edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasControlObjectiveWith<br />
-<a href="inputObjects#controlobjectivewhereinput"><code>[ControlObjectiveWhereInput!]</code></a>
 </td>
 <td>
 
@@ -78870,6 +82665,24 @@ hasEvidenceWith<br />
 </tr>
 <tr>
 <td>
+hasStandards<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>standards edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasStandardsWith<br />
+<a href="inputObjects#standardwhereinput"><code>[StandardWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasMembers<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -83060,6 +86873,267 @@ expiresAtNotNil<br />
 
 </td>
 </tr>
+<tr>
+<td>
+trialExpiresAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>trial_expires_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDue<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>days_until_due field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAdded<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>payment_method_added field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAddedNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAddedIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAddedNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -84785,6 +88859,267 @@ expiresAtNotNil<br />
 </tr>
 <tr>
 <td>
+trialExpiresAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>trial_expires_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trialExpiresAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDue<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>days_until_due field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+daysUntilDueContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAdded<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>payment_method_added field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAddedNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAddedIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAddedNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -84796,6 +89131,24 @@ hasOwner<br />
 <td>
 hasOwnerWith<br />
 <a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEvents<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>events edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEventsWith<br />
+<a href="inputObjects#eventwhereinput"><code>[EventWhereInput!]</code></a>
 </td>
 <td>
 
@@ -85897,6 +90250,402 @@ lastUsedAtIsNil<br />
 <tr>
 <td>
 lastUsedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>is_active field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+isActiveNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActiveIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActiveNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>revoked_reason field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReasonContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>revoked_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>revoked_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAtNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -96648,24 +101397,6 @@ hasActionPlansWith<br />
 </tr>
 <tr>
 <td>
-hasStandards<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>standards edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasStandardsWith<br />
-<a href="inputObjects#standardwhereinput"><code>[StandardWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasUsers<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -102321,6 +107052,141 @@ deletedByContainsFold<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>owner_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -102430,6 +107296,276 @@ nameEqualFold<br />
 <tr>
 <td>
 nameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>short_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+shortNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+framework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>framework field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+frameworkNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102573,16 +107709,16 @@ descriptionContainsFold<br />
 </tr>
 <tr>
 <td>
-family<br />
+governingBody<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family field predicates</p>
+<p>governing_body field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-familyNEQ<br />
+governingBodyNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102591,7 +107727,7 @@ familyNEQ<br />
 </tr>
 <tr>
 <td>
-familyIn<br />
+governingBodyIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -102600,7 +107736,7 @@ familyIn<br />
 </tr>
 <tr>
 <td>
-familyNotIn<br />
+governingBodyNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -102609,7 +107745,7 @@ familyNotIn<br />
 </tr>
 <tr>
 <td>
-familyGT<br />
+governingBodyGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102618,7 +107754,7 @@ familyGT<br />
 </tr>
 <tr>
 <td>
-familyGTE<br />
+governingBodyGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102627,7 +107763,7 @@ familyGTE<br />
 </tr>
 <tr>
 <td>
-familyLT<br />
+governingBodyLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102636,7 +107772,7 @@ familyLT<br />
 </tr>
 <tr>
 <td>
-familyLTE<br />
+governingBodyLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102645,7 +107781,7 @@ familyLTE<br />
 </tr>
 <tr>
 <td>
-familyContains<br />
+governingBodyContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102654,7 +107790,7 @@ familyContains<br />
 </tr>
 <tr>
 <td>
-familyHasPrefix<br />
+governingBodyHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102663,7 +107799,7 @@ familyHasPrefix<br />
 </tr>
 <tr>
 <td>
-familyHasSuffix<br />
+governingBodyHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102672,7 +107808,7 @@ familyHasSuffix<br />
 </tr>
 <tr>
 <td>
-familyIsNil<br />
+governingBodyIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -102681,7 +107817,7 @@ familyIsNil<br />
 </tr>
 <tr>
 <td>
-familyNotNil<br />
+governingBodyNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -102690,7 +107826,7 @@ familyNotNil<br />
 </tr>
 <tr>
 <td>
-familyEqualFold<br />
+governingBodyEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102699,7 +107835,142 @@ familyEqualFold<br />
 </tr>
 <tr>
 <td>
-familyContainsFold<br />
+governingBodyContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+link<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>link field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+linkNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -102836,6 +108107,114 @@ statusEqualFold<br />
 <td>
 statusContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isPublic<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>is_public field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+isPublicNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isPublicIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isPublicNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+freeToUse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>free_to_use field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+freeToUseNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+freeToUseIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+freeToUseNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>system_owned field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwnedNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemOwnedIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemOwnedNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -103113,16 +108492,16 @@ versionContainsFold<br />
 </tr>
 <tr>
 <td>
-purposeAndScope<br />
+revision<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>purpose_and_scope field predicates</p>
+<p>revision field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-purposeAndScopeNEQ<br />
+revisionNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103131,7 +108510,7 @@ purposeAndScopeNEQ<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeIn<br />
+revisionIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -103140,7 +108519,7 @@ purposeAndScopeIn<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeNotIn<br />
+revisionNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -103149,7 +108528,7 @@ purposeAndScopeNotIn<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeGT<br />
+revisionGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103158,7 +108537,7 @@ purposeAndScopeGT<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeGTE<br />
+revisionGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103167,7 +108546,7 @@ purposeAndScopeGTE<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeLT<br />
+revisionLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103176,7 +108555,7 @@ purposeAndScopeLT<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeLTE<br />
+revisionLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103185,7 +108564,7 @@ purposeAndScopeLTE<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeContains<br />
+revisionContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103194,7 +108573,7 @@ purposeAndScopeContains<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeHasPrefix<br />
+revisionHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103203,7 +108582,7 @@ purposeAndScopeHasPrefix<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeHasSuffix<br />
+revisionHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103212,7 +108591,7 @@ purposeAndScopeHasSuffix<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeIsNil<br />
+revisionIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -103221,7 +108600,7 @@ purposeAndScopeIsNil<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeNotNil<br />
+revisionNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -103230,7 +108609,7 @@ purposeAndScopeNotNil<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeEqualFold<br />
+revisionEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -103239,277 +108618,7 @@ purposeAndScopeEqualFold<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-background<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-backgroundNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>satisfies field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesContainsFold<br />
+revisionContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104323,6 +109432,141 @@ deletedByContainsFold<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>owner_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -104432,6 +109676,276 @@ nameEqualFold<br />
 <tr>
 <td>
 nameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>short_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+shortNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+shortNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+framework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>framework field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+frameworkNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104575,16 +110089,16 @@ descriptionContainsFold<br />
 </tr>
 <tr>
 <td>
-family<br />
+governingBody<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family field predicates</p>
+<p>governing_body field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-familyNEQ<br />
+governingBodyNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104593,7 +110107,7 @@ familyNEQ<br />
 </tr>
 <tr>
 <td>
-familyIn<br />
+governingBodyIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -104602,7 +110116,7 @@ familyIn<br />
 </tr>
 <tr>
 <td>
-familyNotIn<br />
+governingBodyNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -104611,7 +110125,7 @@ familyNotIn<br />
 </tr>
 <tr>
 <td>
-familyGT<br />
+governingBodyGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104620,7 +110134,7 @@ familyGT<br />
 </tr>
 <tr>
 <td>
-familyGTE<br />
+governingBodyGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104629,7 +110143,7 @@ familyGTE<br />
 </tr>
 <tr>
 <td>
-familyLT<br />
+governingBodyLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104638,7 +110152,7 @@ familyLT<br />
 </tr>
 <tr>
 <td>
-familyLTE<br />
+governingBodyLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104647,7 +110161,7 @@ familyLTE<br />
 </tr>
 <tr>
 <td>
-familyContains<br />
+governingBodyContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104656,7 +110170,7 @@ familyContains<br />
 </tr>
 <tr>
 <td>
-familyHasPrefix<br />
+governingBodyHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104665,7 +110179,7 @@ familyHasPrefix<br />
 </tr>
 <tr>
 <td>
-familyHasSuffix<br />
+governingBodyHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104674,7 +110188,7 @@ familyHasSuffix<br />
 </tr>
 <tr>
 <td>
-familyIsNil<br />
+governingBodyIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -104683,7 +110197,7 @@ familyIsNil<br />
 </tr>
 <tr>
 <td>
-familyNotNil<br />
+governingBodyNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -104692,7 +110206,7 @@ familyNotNil<br />
 </tr>
 <tr>
 <td>
-familyEqualFold<br />
+governingBodyEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104701,7 +110215,142 @@ familyEqualFold<br />
 </tr>
 <tr>
 <td>
-familyContainsFold<br />
+governingBodyContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+link<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>link field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+linkNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+linkContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -104838,6 +110487,114 @@ statusEqualFold<br />
 <td>
 statusContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isPublic<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>is_public field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+isPublicNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isPublicIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isPublicNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+freeToUse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>free_to_use field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+freeToUseNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+freeToUseIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+freeToUseNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>system_owned field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwnedNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemOwnedIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemOwnedNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -105115,16 +110872,16 @@ versionContainsFold<br />
 </tr>
 <tr>
 <td>
-purposeAndScope<br />
+revision<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>purpose_and_scope field predicates</p>
+<p>revision field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-purposeAndScopeNEQ<br />
+revisionNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105133,7 +110890,7 @@ purposeAndScopeNEQ<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeIn<br />
+revisionIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -105142,7 +110899,7 @@ purposeAndScopeIn<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeNotIn<br />
+revisionNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -105151,7 +110908,7 @@ purposeAndScopeNotIn<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeGT<br />
+revisionGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105160,7 +110917,7 @@ purposeAndScopeGT<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeGTE<br />
+revisionGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105169,7 +110926,7 @@ purposeAndScopeGTE<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeLT<br />
+revisionLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105178,7 +110935,7 @@ purposeAndScopeLT<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeLTE<br />
+revisionLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105187,7 +110944,7 @@ purposeAndScopeLTE<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeContains<br />
+revisionContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105196,7 +110953,7 @@ purposeAndScopeContains<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeHasPrefix<br />
+revisionHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105205,7 +110962,7 @@ purposeAndScopeHasPrefix<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeHasSuffix<br />
+revisionHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105214,7 +110971,7 @@ purposeAndScopeHasSuffix<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeIsNil<br />
+revisionIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -105223,7 +110980,7 @@ purposeAndScopeIsNil<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeNotNil<br />
+revisionNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -105232,7 +110989,7 @@ purposeAndScopeNotNil<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeEqualFold<br />
+revisionEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105241,7 +110998,7 @@ purposeAndScopeEqualFold<br />
 </tr>
 <tr>
 <td>
-purposeAndScopeContainsFold<br />
+revisionContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -105250,287 +111007,17 @@ purposeAndScopeContainsFold<br />
 </tr>
 <tr>
 <td>
-background<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-backgroundNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundIsNil<br />
+hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-
+<p>owner edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-backgroundNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>satisfies field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-satisfiesContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasControlObjectives<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>control_objectives edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasControlObjectivesWith<br />
-<a href="inputObjects#controlobjectivewhereinput"><code>[ControlObjectiveWhereInput!]</code></a>
+hasOwnerWith<br />
+<a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -105549,60 +111036,6 @@ hasControls<br />
 <td>
 hasControlsWith<br />
 <a href="inputObjects#controlwhereinput"><code>[ControlWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasProcedures<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>procedures edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasProceduresWith<br />
-<a href="inputObjects#procedurewhereinput"><code>[ProcedureWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasActionPlans<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>action_plans edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasActionPlansWith<br />
-<a href="inputObjects#actionplanwhereinput"><code>[ActionPlanWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasPrograms<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>programs edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasProgramsWith<br />
-<a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
 </td>
 <td>
 
@@ -106910,123 +112343,6 @@ ownerIDContainsFold<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>name field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-nameNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -107297,683 +112613,8 @@ statusContainsFold<br />
 </tr>
 <tr>
 <td>
-subcontrolType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-versionNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol_number field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>family field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-familyNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-classNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#subcontrolhistorycontrolsource"><code>SubcontrolHistoryControlSource</code></a>
 </td>
 <td>
 <p>source field predicates</p>
@@ -107982,7 +112623,7 @@ source<br />
 <tr>
 <td>
 sourceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#subcontrolhistorycontrolsource"><code>SubcontrolHistoryControlSource</code></a>
 </td>
 <td>
 
@@ -107991,7 +112632,7 @@ sourceNEQ<br />
 <tr>
 <td>
 sourceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
+<a href="enums#subcontrolhistorycontrolsource"><code>[SubcontrolHistoryControlSource!]</code></a>
 </td>
 <td>
 
@@ -108000,70 +112641,7 @@ sourceIn<br />
 <tr>
 <td>
 sourceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#subcontrolhistorycontrolsource"><code>[SubcontrolHistoryControlSource!]</code></a>
 </td>
 <td>
 
@@ -108089,7 +112667,70 @@ sourceNotNil<br />
 </tr>
 <tr>
 <td>
-sourceEqualFold<br />
+controlType<br />
+<a href="enums#subcontrolhistorycontroltype"><code>SubcontrolHistoryControlType</code></a>
+</td>
+<td>
+<p>control_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+controlTypeNEQ<br />
+<a href="enums#subcontrolhistorycontroltype"><code>SubcontrolHistoryControlType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlTypeIn<br />
+<a href="enums#subcontrolhistorycontroltype"><code>[SubcontrolHistoryControlType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlTypeNotIn<br />
+<a href="enums#subcontrolhistorycontroltype"><code>[SubcontrolHistoryControlType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlTypeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlTypeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108098,34 +112739,7 @@ sourceEqualFold<br />
 </tr>
 <tr>
 <td>
-sourceContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped_frameworks field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksIn<br />
+categoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108134,7 +112748,7 @@ mappedFrameworksIn<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksNotIn<br />
+categoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108143,7 +112757,7 @@ mappedFrameworksNotIn<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksGT<br />
+categoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108152,7 +112766,7 @@ mappedFrameworksGT<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksGTE<br />
+categoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108161,7 +112775,7 @@ mappedFrameworksGTE<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksLT<br />
+categoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108170,7 +112784,7 @@ mappedFrameworksLT<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksLTE<br />
+categoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108179,7 +112793,7 @@ mappedFrameworksLTE<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksContains<br />
+categoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108188,7 +112802,7 @@ mappedFrameworksContains<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksHasPrefix<br />
+categoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108197,7 +112811,7 @@ mappedFrameworksHasPrefix<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksHasSuffix<br />
+categoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108206,7 +112820,7 @@ mappedFrameworksHasSuffix<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksIsNil<br />
+categoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -108215,7 +112829,7 @@ mappedFrameworksIsNil<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksNotNil<br />
+categoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -108224,7 +112838,7 @@ mappedFrameworksNotNil<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksEqualFold<br />
+categoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108233,7 +112847,7 @@ mappedFrameworksEqualFold<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksContainsFold<br />
+categoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108242,16 +112856,16 @@ mappedFrameworksContainsFold<br />
 </tr>
 <tr>
 <td>
-implementationEvidence<br />
+categoryID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation_evidence field predicates</p>
+<p>category_id field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationEvidenceNEQ<br />
+categoryIDNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108260,7 +112874,7 @@ implementationEvidenceNEQ<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceIn<br />
+categoryIDIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108269,7 +112883,7 @@ implementationEvidenceIn<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceNotIn<br />
+categoryIDNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108278,7 +112892,7 @@ implementationEvidenceNotIn<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceGT<br />
+categoryIDGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108287,7 +112901,7 @@ implementationEvidenceGT<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceGTE<br />
+categoryIDGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108296,7 +112910,7 @@ implementationEvidenceGTE<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceLT<br />
+categoryIDLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108305,7 +112919,7 @@ implementationEvidenceLT<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceLTE<br />
+categoryIDLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108314,7 +112928,7 @@ implementationEvidenceLTE<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceContains<br />
+categoryIDContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108323,7 +112937,7 @@ implementationEvidenceContains<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceHasPrefix<br />
+categoryIDHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108332,7 +112946,7 @@ implementationEvidenceHasPrefix<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceHasSuffix<br />
+categoryIDHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108341,7 +112955,7 @@ implementationEvidenceHasSuffix<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceIsNil<br />
+categoryIDIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -108350,7 +112964,7 @@ implementationEvidenceIsNil<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceNotNil<br />
+categoryIDNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -108359,7 +112973,7 @@ implementationEvidenceNotNil<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceEqualFold<br />
+categoryIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108368,7 +112982,7 @@ implementationEvidenceEqualFold<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceContainsFold<br />
+categoryIDContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108377,16 +112991,16 @@ implementationEvidenceContainsFold<br />
 </tr>
 <tr>
 <td>
-implementationStatus<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation_status field predicates</p>
+<p>subcategory field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationStatusNEQ<br />
+subcategoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108395,7 +113009,7 @@ implementationStatusNEQ<br />
 </tr>
 <tr>
 <td>
-implementationStatusIn<br />
+subcategoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108404,7 +113018,7 @@ implementationStatusIn<br />
 </tr>
 <tr>
 <td>
-implementationStatusNotIn<br />
+subcategoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108413,7 +113027,7 @@ implementationStatusNotIn<br />
 </tr>
 <tr>
 <td>
-implementationStatusGT<br />
+subcategoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108422,7 +113036,7 @@ implementationStatusGT<br />
 </tr>
 <tr>
 <td>
-implementationStatusGTE<br />
+subcategoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108431,7 +113045,7 @@ implementationStatusGTE<br />
 </tr>
 <tr>
 <td>
-implementationStatusLT<br />
+subcategoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108440,7 +113054,7 @@ implementationStatusLT<br />
 </tr>
 <tr>
 <td>
-implementationStatusLTE<br />
+subcategoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108449,7 +113063,7 @@ implementationStatusLTE<br />
 </tr>
 <tr>
 <td>
-implementationStatusContains<br />
+subcategoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108458,7 +113072,7 @@ implementationStatusContains<br />
 </tr>
 <tr>
 <td>
-implementationStatusHasPrefix<br />
+subcategoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108467,7 +113081,7 @@ implementationStatusHasPrefix<br />
 </tr>
 <tr>
 <td>
-implementationStatusHasSuffix<br />
+subcategoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108476,7 +113090,7 @@ implementationStatusHasSuffix<br />
 </tr>
 <tr>
 <td>
-implementationStatusIsNil<br />
+subcategoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -108485,7 +113099,7 @@ implementationStatusIsNil<br />
 </tr>
 <tr>
 <td>
-implementationStatusNotNil<br />
+subcategoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -108494,7 +113108,7 @@ implementationStatusNotNil<br />
 </tr>
 <tr>
 <td>
-implementationStatusEqualFold<br />
+subcategoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108503,7 +113117,7 @@ implementationStatusEqualFold<br />
 </tr>
 <tr>
 <td>
-implementationStatusContainsFold<br />
+subcategoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108512,106 +113126,16 @@ implementationStatusContainsFold<br />
 </tr>
 <tr>
 <td>
-implementationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>implementation_date field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationDateNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateGT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateGTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateLT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateLTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerification<br />
+refCode<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation_verification field predicates</p>
+<p>ref_code field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationVerificationNEQ<br />
+refCodeNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108620,7 +113144,7 @@ implementationVerificationNEQ<br />
 </tr>
 <tr>
 <td>
-implementationVerificationIn<br />
+refCodeIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108629,7 +113153,7 @@ implementationVerificationIn<br />
 </tr>
 <tr>
 <td>
-implementationVerificationNotIn<br />
+refCodeNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108638,7 +113162,7 @@ implementationVerificationNotIn<br />
 </tr>
 <tr>
 <td>
-implementationVerificationGT<br />
+refCodeGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108647,7 +113171,7 @@ implementationVerificationGT<br />
 </tr>
 <tr>
 <td>
-implementationVerificationGTE<br />
+refCodeGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108656,7 +113180,7 @@ implementationVerificationGTE<br />
 </tr>
 <tr>
 <td>
-implementationVerificationLT<br />
+refCodeLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108665,7 +113189,7 @@ implementationVerificationLT<br />
 </tr>
 <tr>
 <td>
-implementationVerificationLTE<br />
+refCodeLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108674,7 +113198,7 @@ implementationVerificationLTE<br />
 </tr>
 <tr>
 <td>
-implementationVerificationContains<br />
+refCodeContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108683,7 +113207,7 @@ implementationVerificationContains<br />
 </tr>
 <tr>
 <td>
-implementationVerificationHasPrefix<br />
+refCodeHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108692,7 +113216,7 @@ implementationVerificationHasPrefix<br />
 </tr>
 <tr>
 <td>
-implementationVerificationHasSuffix<br />
+refCodeHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108701,25 +113225,7 @@ implementationVerificationHasSuffix<br />
 </tr>
 <tr>
 <td>
-implementationVerificationIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationEqualFold<br />
+refCodeEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108728,7 +113234,7 @@ implementationVerificationEqualFold<br />
 </tr>
 <tr>
 <td>
-implementationVerificationContainsFold<br />
+refCodeContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108737,106 +113243,16 @@ implementationVerificationContainsFold<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>implementation_verification_date field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateGT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateGTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateLT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateLTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationDateNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
+controlID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>example_evidence field predicates</p>
+<p>control_id field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-exampleEvidenceNEQ<br />
+controlIDNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108845,7 +113261,7 @@ exampleEvidenceNEQ<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceIn<br />
+controlIDIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108854,7 +113270,7 @@ exampleEvidenceIn<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceNotIn<br />
+controlIDNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -108863,7 +113279,7 @@ exampleEvidenceNotIn<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceGT<br />
+controlIDGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108872,7 +113288,7 @@ exampleEvidenceGT<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceGTE<br />
+controlIDGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108881,7 +113297,7 @@ exampleEvidenceGTE<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceLT<br />
+controlIDLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108890,7 +113306,7 @@ exampleEvidenceLT<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceLTE<br />
+controlIDLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108899,7 +113315,7 @@ exampleEvidenceLTE<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceContains<br />
+controlIDContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108908,7 +113324,7 @@ exampleEvidenceContains<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceHasPrefix<br />
+controlIDHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108917,7 +113333,7 @@ exampleEvidenceHasPrefix<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceHasSuffix<br />
+controlIDHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108926,25 +113342,7 @@ exampleEvidenceHasSuffix<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceEqualFold<br />
+controlIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -108953,7 +113351,7 @@ exampleEvidenceEqualFold<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceContainsFold<br />
+controlIDContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -110019,123 +114417,6 @@ ownerIDContainsFold<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>name field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-nameNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -110406,683 +114687,8 @@ statusContainsFold<br />
 </tr>
 <tr>
 <td>
-subcontrolType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolTypeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-versionNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-versionContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol_number field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumberContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>family field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-familyNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-familyContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-classNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-classContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#subcontrolcontrolsource"><code>SubcontrolControlSource</code></a>
 </td>
 <td>
 <p>source field predicates</p>
@@ -111091,7 +114697,7 @@ source<br />
 <tr>
 <td>
 sourceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#subcontrolcontrolsource"><code>SubcontrolControlSource</code></a>
 </td>
 <td>
 
@@ -111100,7 +114706,7 @@ sourceNEQ<br />
 <tr>
 <td>
 sourceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
+<a href="enums#subcontrolcontrolsource"><code>[SubcontrolControlSource!]</code></a>
 </td>
 <td>
 
@@ -111109,70 +114715,7 @@ sourceIn<br />
 <tr>
 <td>
 sourceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-sourceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#subcontrolcontrolsource"><code>[SubcontrolControlSource!]</code></a>
 </td>
 <td>
 
@@ -111198,7 +114741,70 @@ sourceNotNil<br />
 </tr>
 <tr>
 <td>
-sourceEqualFold<br />
+controlType<br />
+<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
+</td>
+<td>
+<p>control_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+controlTypeNEQ<br />
+<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlTypeIn<br />
+<a href="enums#subcontrolcontroltype"><code>[SubcontrolControlType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlTypeNotIn<br />
+<a href="enums#subcontrolcontroltype"><code>[SubcontrolControlType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlTypeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlTypeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111207,34 +114813,7 @@ sourceEqualFold<br />
 </tr>
 <tr>
 <td>
-sourceContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped_frameworks field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworksIn<br />
+categoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -111243,7 +114822,7 @@ mappedFrameworksIn<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksNotIn<br />
+categoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -111252,7 +114831,7 @@ mappedFrameworksNotIn<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksGT<br />
+categoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111261,7 +114840,7 @@ mappedFrameworksGT<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksGTE<br />
+categoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111270,7 +114849,7 @@ mappedFrameworksGTE<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksLT<br />
+categoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111279,7 +114858,7 @@ mappedFrameworksLT<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksLTE<br />
+categoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111288,7 +114867,7 @@ mappedFrameworksLTE<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksContains<br />
+categoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111297,7 +114876,7 @@ mappedFrameworksContains<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksHasPrefix<br />
+categoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111306,7 +114885,7 @@ mappedFrameworksHasPrefix<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksHasSuffix<br />
+categoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111315,7 +114894,7 @@ mappedFrameworksHasSuffix<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksIsNil<br />
+categoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -111324,7 +114903,7 @@ mappedFrameworksIsNil<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksNotNil<br />
+categoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -111333,7 +114912,7 @@ mappedFrameworksNotNil<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksEqualFold<br />
+categoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111342,7 +114921,7 @@ mappedFrameworksEqualFold<br />
 </tr>
 <tr>
 <td>
-mappedFrameworksContainsFold<br />
+categoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111351,16 +114930,16 @@ mappedFrameworksContainsFold<br />
 </tr>
 <tr>
 <td>
-implementationEvidence<br />
+categoryID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation_evidence field predicates</p>
+<p>category_id field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationEvidenceNEQ<br />
+categoryIDNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111369,7 +114948,7 @@ implementationEvidenceNEQ<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceIn<br />
+categoryIDIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -111378,7 +114957,7 @@ implementationEvidenceIn<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceNotIn<br />
+categoryIDNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -111387,7 +114966,7 @@ implementationEvidenceNotIn<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceGT<br />
+categoryIDGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111396,7 +114975,7 @@ implementationEvidenceGT<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceGTE<br />
+categoryIDGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111405,7 +114984,7 @@ implementationEvidenceGTE<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceLT<br />
+categoryIDLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111414,7 +114993,7 @@ implementationEvidenceLT<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceLTE<br />
+categoryIDLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111423,7 +115002,7 @@ implementationEvidenceLTE<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceContains<br />
+categoryIDContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111432,7 +115011,7 @@ implementationEvidenceContains<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceHasPrefix<br />
+categoryIDHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111441,7 +115020,7 @@ implementationEvidenceHasPrefix<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceHasSuffix<br />
+categoryIDHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111450,7 +115029,7 @@ implementationEvidenceHasSuffix<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceIsNil<br />
+categoryIDIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -111459,7 +115038,7 @@ implementationEvidenceIsNil<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceNotNil<br />
+categoryIDNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -111468,7 +115047,7 @@ implementationEvidenceNotNil<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceEqualFold<br />
+categoryIDEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111477,7 +115056,7 @@ implementationEvidenceEqualFold<br />
 </tr>
 <tr>
 <td>
-implementationEvidenceContainsFold<br />
+categoryIDContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111486,16 +115065,16 @@ implementationEvidenceContainsFold<br />
 </tr>
 <tr>
 <td>
-implementationStatus<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation_status field predicates</p>
+<p>subcategory field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationStatusNEQ<br />
+subcategoryNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111504,7 +115083,7 @@ implementationStatusNEQ<br />
 </tr>
 <tr>
 <td>
-implementationStatusIn<br />
+subcategoryIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -111513,7 +115092,7 @@ implementationStatusIn<br />
 </tr>
 <tr>
 <td>
-implementationStatusNotIn<br />
+subcategoryNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -111522,7 +115101,7 @@ implementationStatusNotIn<br />
 </tr>
 <tr>
 <td>
-implementationStatusGT<br />
+subcategoryGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111531,7 +115110,7 @@ implementationStatusGT<br />
 </tr>
 <tr>
 <td>
-implementationStatusGTE<br />
+subcategoryGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111540,7 +115119,7 @@ implementationStatusGTE<br />
 </tr>
 <tr>
 <td>
-implementationStatusLT<br />
+subcategoryLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111549,7 +115128,7 @@ implementationStatusLT<br />
 </tr>
 <tr>
 <td>
-implementationStatusLTE<br />
+subcategoryLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111558,7 +115137,7 @@ implementationStatusLTE<br />
 </tr>
 <tr>
 <td>
-implementationStatusContains<br />
+subcategoryContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111567,7 +115146,7 @@ implementationStatusContains<br />
 </tr>
 <tr>
 <td>
-implementationStatusHasPrefix<br />
+subcategoryHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111576,7 +115155,7 @@ implementationStatusHasPrefix<br />
 </tr>
 <tr>
 <td>
-implementationStatusHasSuffix<br />
+subcategoryHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111585,7 +115164,7 @@ implementationStatusHasSuffix<br />
 </tr>
 <tr>
 <td>
-implementationStatusIsNil<br />
+subcategoryIsNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -111594,7 +115173,7 @@ implementationStatusIsNil<br />
 </tr>
 <tr>
 <td>
-implementationStatusNotNil<br />
+subcategoryNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -111603,7 +115182,7 @@ implementationStatusNotNil<br />
 </tr>
 <tr>
 <td>
-implementationStatusEqualFold<br />
+subcategoryEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111612,7 +115191,7 @@ implementationStatusEqualFold<br />
 </tr>
 <tr>
 <td>
-implementationStatusContainsFold<br />
+subcategoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111621,106 +115200,16 @@ implementationStatusContainsFold<br />
 </tr>
 <tr>
 <td>
-implementationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>implementation_date field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationDateNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateGT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateGTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateLT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateLTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationDateNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerification<br />
+refCode<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation_verification field predicates</p>
+<p>ref_code field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationVerificationNEQ<br />
+refCodeNEQ<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111729,7 +115218,7 @@ implementationVerificationNEQ<br />
 </tr>
 <tr>
 <td>
-implementationVerificationIn<br />
+refCodeIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -111738,7 +115227,7 @@ implementationVerificationIn<br />
 </tr>
 <tr>
 <td>
-implementationVerificationNotIn<br />
+refCodeNotIn<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -111747,7 +115236,7 @@ implementationVerificationNotIn<br />
 </tr>
 <tr>
 <td>
-implementationVerificationGT<br />
+refCodeGT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111756,7 +115245,7 @@ implementationVerificationGT<br />
 </tr>
 <tr>
 <td>
-implementationVerificationGTE<br />
+refCodeGTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111765,7 +115254,7 @@ implementationVerificationGTE<br />
 </tr>
 <tr>
 <td>
-implementationVerificationLT<br />
+refCodeLT<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111774,7 +115263,7 @@ implementationVerificationLT<br />
 </tr>
 <tr>
 <td>
-implementationVerificationLTE<br />
+refCodeLTE<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111783,7 +115272,7 @@ implementationVerificationLTE<br />
 </tr>
 <tr>
 <td>
-implementationVerificationContains<br />
+refCodeContains<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111792,7 +115281,7 @@ implementationVerificationContains<br />
 </tr>
 <tr>
 <td>
-implementationVerificationHasPrefix<br />
+refCodeHasPrefix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111801,7 +115290,7 @@ implementationVerificationHasPrefix<br />
 </tr>
 <tr>
 <td>
-implementationVerificationHasSuffix<br />
+refCodeHasSuffix<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111810,25 +115299,7 @@ implementationVerificationHasSuffix<br />
 </tr>
 <tr>
 <td>
-implementationVerificationIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-implementationVerificationEqualFold<br />
+refCodeEqualFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111837,7 +115308,7 @@ implementationVerificationEqualFold<br />
 </tr>
 <tr>
 <td>
-implementationVerificationContainsFold<br />
+refCodeContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -111846,17 +115317,17 @@ implementationVerificationContainsFold<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+controlID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>implementation_verification_date field predicates</p>
+<p>control_id field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-implementationVerificationDateNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+controlIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111864,8 +115335,8 @@ implementationVerificationDateNEQ<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDateIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+controlIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -111873,8 +115344,8 @@ implementationVerificationDateIn<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDateNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+controlIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -111882,8 +115353,8 @@ implementationVerificationDateNotIn<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDateGT<br />
-<a href="scalars#time"><code>Time</code></a>
+controlIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111891,8 +115362,8 @@ implementationVerificationDateGT<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDateGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+controlIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111900,8 +115371,8 @@ implementationVerificationDateGTE<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDateLT<br />
-<a href="scalars#time"><code>Time</code></a>
+controlIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111909,8 +115380,8 @@ implementationVerificationDateLT<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDateLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+controlIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111918,8 +115389,8 @@ implementationVerificationDateLTE<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDateIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
+controlIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111927,8 +115398,8 @@ implementationVerificationDateIsNil<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDateNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
+controlIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111936,17 +115407,8 @@ implementationVerificationDateNotNil<br />
 </tr>
 <tr>
 <td>
-exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>example_evidence field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+controlIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111954,8 +115416,8 @@ exampleEvidenceNEQ<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
+controlIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -111963,107 +115425,8 @@ exampleEvidenceIn<br />
 </tr>
 <tr>
 <td>
-exampleEvidenceNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidenceContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
+controlIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -112089,17 +115452,71 @@ hasOwnerWith<br />
 </tr>
 <tr>
 <td>
-hasControls<br />
+hasControl<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>controls edge predicates</p>
+<p>control edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasControlsWith<br />
+hasControlWith<br />
 <a href="inputObjects#controlwhereinput"><code>[ControlWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasMappedControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>mapped_controls edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasMappedControlsWith<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>[MappedControlWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEvidence<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>evidence edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEvidenceWith<br />
+<a href="inputObjects#evidencewhereinput"><code>[EvidenceWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasControlObjectives<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>control_objectives edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasControlObjectivesWith<br />
+<a href="inputObjects#controlobjectivewhereinput"><code>[ControlObjectiveWhereInput!]</code></a>
 </td>
 <td>
 
@@ -112125,17 +115542,17 @@ hasTasksWith<br />
 </tr>
 <tr>
 <td>
-hasPrograms<br />
+hasNarratives<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>programs edge predicates</p>
+<p>narratives edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasProgramsWith<br />
-<a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
+hasNarrativesWith<br />
+<a href="inputObjects#narrativewhereinput"><code>[NarrativeWhereInput!]</code></a>
 </td>
 <td>
 
@@ -112143,17 +115560,107 @@ hasProgramsWith<br />
 </tr>
 <tr>
 <td>
-hasEvidence<br />
+hasRisks<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>evidence edge predicates</p>
+<p>risks edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasEvidenceWith<br />
-<a href="inputObjects#evidencewhereinput"><code>[EvidenceWhereInput!]</code></a>
+hasRisksWith<br />
+<a href="inputObjects#riskwhereinput"><code>[RiskWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasActionPlans<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>action_plans edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasActionPlansWith<br />
+<a href="inputObjects#actionplanwhereinput"><code>[ActionPlanWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasProcedures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>procedures edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasProceduresWith<br />
+<a href="inputObjects#procedurewhereinput"><code>[ProcedureWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasControlOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>control_owner edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasControlOwnerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDelegate<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>delegate edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDelegateWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
 
@@ -121879,33 +125386,6 @@ clearDetails<br />
 </tr>
 <tr>
 <td>
-addStandardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeStandardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearStandard<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addRiskIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -122118,6 +125598,78 @@ lastUsedAt<br />
 <tr>
 <td>
 clearLastUsedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the token is active</p>
+</td>
+</tr>
+<tr>
+<td>
+clearIsActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reason the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRevokedReason<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who revoked the token</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRevokedBy<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRevokedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122365,6 +125917,163 @@ clearFiles<br />
 </tbody>
 </table>
 
+## UpdateControlImplementationInput
+
+UpdateControlImplementationInput is used for update ControlImplementation object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+appendTags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTags<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>status of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+clearStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>date the control was implemented</p>
+</td>
+</tr>
+<tr>
+<td>
+clearImplementationDate<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verified<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>set to true if the control implementation has been verified</p>
+</td>
+</tr>
+<tr>
+<td>
+clearVerified<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+verificationDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>date the control implementation was verified</p>
+</td>
+</tr>
+<tr>
+<td>
+clearVerificationDate<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+details<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>details of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDetails<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addControlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeControlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## UpdateControlInput
 
 UpdateControlInput is used for update Control object.
@@ -122404,20 +126113,11 @@ clearTags<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the name of the control</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the control</p>
+<p>description of what the control is supposed to accomplish</p>
 </td>
 </tr>
 <tr>
@@ -122449,98 +126149,8 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-clearControlType<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-clearVersion<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control number or identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-clearControlNumber<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>family associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
-clearFamily<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
-clearClass<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlcontrolsource"><code>ControlControlSource</code></a>
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
@@ -122557,16 +126167,16 @@ clearSource<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
+controlType<br />
+<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
 </td>
 <td>
-<p>which control objectives are satisfied by the control</p>
+<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
 <tr>
 <td>
-clearSatisfies<br />
+clearControlType<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122575,16 +126185,16 @@ clearSatisfies<br />
 </tr>
 <tr>
 <td>
-mappedFrameworks<br />
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>mapped frameworks</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearMappedFrameworks<br />
+clearCategory<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122593,16 +126203,169 @@ clearMappedFrameworks<br />
 </tr>
 <tr>
 <td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
+categoryID<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>json data including details of the control</p>
+<p>category id of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearDetails<br />
+clearCategoryID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcategory<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subcategory of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+clearSubcategory<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>mapped categories of the control to other standards</p>
+</td>
+</tr>
+<tr>
+<td>
+appendMappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearMappedCategories<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
+</td>
+<td>
+<p>objectives of the audit assessment for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+appendAssessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssessmentObjectives<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
+</td>
+<td>
+<p>methods used to verify the control implementation during an audit</p>
+</td>
+</tr>
+<tr>
+<td>
+appendAssessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssessmentMethods<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>questions to ask to verify the control</p>
+</td>
+</tr>
+<tr>
+<td>
+appendControlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControlQuestions<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+<p>implementation guidance for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+appendImplementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearImplementationGuidance<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122612,10 +126375,19 @@ clearDetails<br />
 <tr>
 <td>
 exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
 </td>
 <td>
-<p>example evidence to provide for the control</p>
+<p>examples of evidence for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+appendExampleEvidence<br />
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -122625,6 +126397,42 @@ clearExampleEvidence<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+references<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+<p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+appendReferences<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReferences<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
 </td>
 </tr>
 <tr>
@@ -122710,8 +126518,8 @@ clearViewers<br />
 </tr>
 <tr>
 <td>
-addProcedureIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
+standardID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -122719,16 +126527,7 @@ addProcedureIDs<br />
 </tr>
 <tr>
 <td>
-removeProcedureIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearProcedures<br />
+clearStandard<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122737,7 +126536,7 @@ clearProcedures<br />
 </tr>
 <tr>
 <td>
-addSubcontrolIDs<br />
+addProgramIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -122746,7 +126545,7 @@ addSubcontrolIDs<br />
 </tr>
 <tr>
 <td>
-removeSubcontrolIDs<br />
+removeProgramIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -122755,7 +126554,88 @@ removeSubcontrolIDs<br />
 </tr>
 <tr>
 <td>
-clearSubcontrols<br />
+clearPrograms<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEvidenceIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEvidenceIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEvidence<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addControlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeControlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControlImplementations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addMappedControlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeMappedControlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearMappedControls<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122791,7 +126671,7 @@ clearControlObjectives<br />
 </tr>
 <tr>
 <td>
-addStandardIDs<br />
+addSubcontrolIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -122800,7 +126680,7 @@ addStandardIDs<br />
 </tr>
 <tr>
 <td>
-removeStandardIDs<br />
+removeSubcontrolIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -122809,7 +126689,34 @@ removeStandardIDs<br />
 </tr>
 <tr>
 <td>
-clearStandard<br />
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTaskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTaskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTasks<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122899,7 +126806,7 @@ clearActionPlans<br />
 </tr>
 <tr>
 <td>
-addTaskIDs<br />
+addProcedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -122908,7 +126815,7 @@ addTaskIDs<br />
 </tr>
 <tr>
 <td>
-removeTaskIDs<br />
+removeProcedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -122917,7 +126824,7 @@ removeTaskIDs<br />
 </tr>
 <tr>
 <td>
-clearTasks<br />
+clearProcedures<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122926,7 +126833,7 @@ clearTasks<br />
 </tr>
 <tr>
 <td>
-addProgramIDs<br />
+addInternalPolicyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -122935,7 +126842,7 @@ addProgramIDs<br />
 </tr>
 <tr>
 <td>
-removeProgramIDs<br />
+removeInternalPolicyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -122944,7 +126851,7 @@ removeProgramIDs<br />
 </tr>
 <tr>
 <td>
-clearPrograms<br />
+clearInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -122953,8 +126860,8 @@ clearPrograms<br />
 </tr>
 <tr>
 <td>
-addEvidenceIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
+controlOwnerID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -122962,8 +126869,8 @@ addEvidenceIDs<br />
 </tr>
 <tr>
 <td>
-removeEvidenceIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
+clearControlOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -122971,7 +126878,16 @@ removeEvidenceIDs<br />
 </tr>
 <tr>
 <td>
-clearEvidence<br />
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDelegate<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -123029,16 +126945,16 @@ name<br />
 </tr>
 <tr>
 <td>
-description<br />
+desiredOutcome<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the control objective</p>
+<p>the desired outcome or target of the control objective</p>
 </td>
 </tr>
 <tr>
 <td>
-clearDescription<br />
+clearDesiredOutcome<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -123065,11 +126981,29 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
+source<br />
+<a href="enums#controlobjectivecontrolsource"><code>ControlObjectiveControlSource</code></a>
+</td>
+<td>
+<p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+clearSource<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 controlObjectiveType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>type of the control objective</p>
+<p>type of the control objective e.g. compliance, financial, operational, etc.</p>
 </td>
 </tr>
 <tr>
@@ -123101,16 +127035,16 @@ clearVersion<br />
 </tr>
 <tr>
 <td>
-controlNumber<br />
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>number of the control objective</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearControlNumber<br />
+clearCategory<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -123119,106 +127053,16 @@ clearControlNumber<br />
 </tr>
 <tr>
 <td>
-family<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family of the control objective</p>
+<p>subcategory of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearFamily<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>class associated with the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-clearClass<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>source of the control objective, e.g. framework, template, user-defined, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearSource<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedFrameworks<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mapped frameworks</p>
-</td>
-</tr>
-<tr>
-<td>
-clearMappedFrameworks<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data including details of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-clearDetails<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>example evidence to provide for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-clearExampleEvidence<br />
+clearSubcategory<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -123308,7 +127152,7 @@ clearViewers<br />
 </tr>
 <tr>
 <td>
-addInternalPolicyIDs<br />
+addProgramIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -123317,7 +127161,7 @@ addInternalPolicyIDs<br />
 </tr>
 <tr>
 <td>
-removeInternalPolicyIDs<br />
+removeProgramIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -123326,7 +127170,34 @@ removeInternalPolicyIDs<br />
 </tr>
 <tr>
 <td>
-clearInternalPolicies<br />
+clearPrograms<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEvidenceIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEvidenceIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEvidence<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -123354,6 +127225,60 @@ removeControlIDs<br />
 <tr>
 <td>
 clearControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -123416,60 +127341,6 @@ clearRisks<br />
 </tr>
 <tr>
 <td>
-addSubcontrolIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeSubcontrolIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearSubcontrols<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addStandardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeStandardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearStandard<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addNarrativeIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -123522,60 +127393,6 @@ clearTasks<br />
 
 </td>
 </tr>
-<tr>
-<td>
-addProgramIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeProgramIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearPrograms<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addEvidenceIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeEvidenceIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEvidence<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -123619,7 +127436,7 @@ clearTags<br />
 <tr>
 <td>
 data<br />
-<a href="scalars#json"><code>JSON</code></a>
+<a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
 <p>the json data of the document</p>
@@ -127088,6 +130905,136 @@ clearEvents<br />
 </tbody>
 </table>
 
+## UpdateMappedControlInput
+
+UpdateMappedControlInput is used for update MappedControl object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+appendTags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTags<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappingType<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the type of mapping between the two controls, e.g. subset, intersect, equal, superset</p>
+</td>
+</tr>
+<tr>
+<td>
+clearMappingType<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+relation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of how the two controls are related</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRelation<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addControlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeControlIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## UpdateNarrativeInput
 
 UpdateNarrativeInput is used for update Narrative object.
@@ -127154,29 +131101,11 @@ clearDescription<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
+details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>which controls are satisfied by the narrative</p>
-</td>
-</tr>
-<tr>
-<td>
-clearSatisfies<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data for the narrative document</p>
+<p>text data for the narrative document</p>
 </td>
 </tr>
 <tr>
@@ -127271,7 +131200,7 @@ clearViewers<br />
 </tr>
 <tr>
 <td>
-addInternalPolicyIDs<br />
+addSatisfyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -127280,7 +131209,7 @@ addInternalPolicyIDs<br />
 </tr>
 <tr>
 <td>
-removeInternalPolicyIDs<br />
+removeSatisfyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -127289,88 +131218,7 @@ removeInternalPolicyIDs<br />
 </tr>
 <tr>
 <td>
-clearInternalPolicy<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addControlIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeControlIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearControl<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addProcedureIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeProcedureIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearProcedure<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addControlObjectiveIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeControlObjectiveIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearControlObjective<br />
+clearSatisfies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -128539,6 +132387,33 @@ clearEvidence<br />
 </tr>
 <tr>
 <td>
+addStandardIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeStandardIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearStandards<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addOrgMembers<br />
 <a href="inputObjects#createorgmembershipinput"><code>[CreateOrgMembershipInput!]</code></a>
 </td>
@@ -128975,6 +132850,78 @@ lastUsedAt<br />
 <tr>
 <td>
 clearLastUsedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the token is active</p>
+</td>
+</tr>
+<tr>
+<td>
+clearIsActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reason the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRevokedReason<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who revoked the token</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRevokedBy<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRevokedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -130044,33 +133991,6 @@ clearActionPlans<br />
 </tr>
 <tr>
 <td>
-addStandardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeStandardIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearStandards<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addProgramMembers<br />
 <a href="inputObjects#createprogrammembershipinput"><code>[CreateProgramMembershipInput!]</code></a>
 </td>
@@ -130555,7 +134475,43 @@ name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>the name of the standard body, e.g. TSC, NIST, SOC, HITRUST, FedRamp, etc.</p>
+<p>the long name of the standard body</p>
+</td>
+</tr>
+<tr>
+<td>
+shortName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>short name of the standard, e.g. SOC 2, ISO 27001, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+clearShortName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+framework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>unique identifier of the standard with version</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFramework<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -130578,16 +134534,61 @@ clearDescription<br />
 </tr>
 <tr>
 <td>
-family<br />
+governingBody<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>family of the standard, e.g. 800-53, 800-171, 27001, etc.</p>
+<p>governing body of the standard, e.g. AICPA, etc.</p>
 </td>
 </tr>
 <tr>
 <td>
-clearFamily<br />
+clearGoverningBody<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>domains the standard covers, e.g. availability, confidentiality, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+appendDomains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDomains<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+link<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>link to the official standard documentation</p>
+</td>
+</tr>
+<tr>
+<td>
+clearLink<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -130606,6 +134607,60 @@ status<br />
 <tr>
 <td>
 clearStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isPublic<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard should be made available to all users, only for public standards</p>
+</td>
+</tr>
+<tr>
+<td>
+clearIsPublic<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+freeToUse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard is freely distributable under a trial license, only for public standards</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFreeToUse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the standard is owned by the the openlane system</p>
+</td>
+</tr>
+<tr>
+<td>
+clearSystemOwned<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -130650,16 +134705,16 @@ clearVersion<br />
 </tr>
 <tr>
 <td>
-purposeAndScope<br />
+revision<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>purpose and scope</p>
+<p>internal revision of the standard</p>
 </td>
 </tr>
 <tr>
 <td>
-clearPurposeAndScope<br />
+clearRevision<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -130668,17 +134723,8 @@ clearPurposeAndScope<br />
 </tr>
 <tr>
 <td>
-background<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-clearBackground<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -130686,61 +134732,7 @@ clearBackground<br />
 </tr>
 <tr>
 <td>
-satisfies<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>which controls are satisfied by the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-clearSatisfies<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>json data with details of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-clearDetails<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addControlObjectiveIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeControlObjectiveIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearControlObjectives<br />
+clearOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -130768,87 +134760,6 @@ removeControlIDs<br />
 <tr>
 <td>
 clearControls<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addProcedureIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeProcedureIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearProcedures<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addActionPlanIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeActionPlanIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearActionPlans<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addProgramIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeProgramIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearPrograms<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -130897,20 +134808,11 @@ clearTags<br />
 </tr>
 <tr>
 <td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the name of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>description of the subcontrol</p>
+<p>description of what the control is supposed to accomplish</p>
 </td>
 </tr>
 <tr>
@@ -130928,7 +134830,7 @@ status<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>status of the subcontrol</p>
+<p>status of the control</p>
 </td>
 </tr>
 <tr>
@@ -130942,101 +134844,11 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
-subcontrolType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-clearSubcontrolType<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-clearVersion<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>number of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-clearSubcontrolNumber<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-family<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol family</p>
-</td>
-</tr>
-<tr>
-<td>
-clearFamily<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-class<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcontrol class</p>
-</td>
-</tr>
-<tr>
-<td>
-clearClass<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 source<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#subcontrolcontrolsource"><code>SubcontrolControlSource</code></a>
 </td>
 <td>
-<p>source of the control, e.g. framework, template, user-defined, etc.</p>
+<p>source of the control, e.g. framework, template, custom, etc.</p>
 </td>
 </tr>
 <tr>
@@ -131050,16 +134862,34 @@ clearSource<br />
 </tr>
 <tr>
 <td>
-mappedFrameworks<br />
+controlType<br />
+<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
+</td>
+<td>
+<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
+</td>
+</tr>
+<tr>
+<td>
+clearControlType<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>mapped frameworks that the subcontrol is part of</p>
+<p>category of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearMappedFrameworks<br />
+clearCategory<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131068,16 +134898,16 @@ clearMappedFrameworks<br />
 </tr>
 <tr>
 <td>
-implementationEvidence<br />
+categoryID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation evidence of the subcontrol</p>
+<p>category id of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearImplementationEvidence<br />
+clearCategoryID<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131086,16 +134916,16 @@ clearImplementationEvidence<br />
 </tr>
 <tr>
 <td>
-implementationStatus<br />
+subcategory<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>implementation status</p>
+<p>subcategory of the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearImplementationStatus<br />
+clearSubcategory<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131104,16 +134934,25 @@ clearImplementationStatus<br />
 </tr>
 <tr>
 <td>
-implementationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+mappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
-<p>date the subcontrol was implemented</p>
+<p>mapped categories of the control to other standards</p>
 </td>
 </tr>
 <tr>
 <td>
-clearImplementationDate<br />
+appendMappedCategories<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearMappedCategories<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131122,16 +134961,25 @@ clearImplementationDate<br />
 </tr>
 <tr>
 <td>
-implementationVerification<br />
-<a href="scalars#string"><code>String</code></a>
+assessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
 </td>
 <td>
-<p>implementation verification</p>
+<p>objectives of the audit assessment for the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearImplementationVerification<br />
+appendAssessmentObjectives<br />
+<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssessmentObjectives<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131140,16 +134988,25 @@ clearImplementationVerification<br />
 </tr>
 <tr>
 <td>
-implementationVerificationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+assessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
 </td>
 <td>
-<p>date the subcontrol implementation was verified</p>
+<p>methods used to verify the control implementation during an audit</p>
 </td>
 </tr>
 <tr>
 <td>
-clearImplementationVerificationDate<br />
+appendAssessmentMethods<br />
+<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssessmentMethods<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131158,16 +135015,52 @@ clearImplementationVerificationDate<br />
 </tr>
 <tr>
 <td>
-details<br />
-<a href="scalars#map"><code>Map</code></a>
+controlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
-<p>json data details of the subcontrol</p>
+<p>questions to ask to verify the control</p>
 </td>
 </tr>
 <tr>
 <td>
-clearDetails<br />
+appendControlQuestions<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControlQuestions<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+<p>implementation guidance for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+appendImplementationGuidance<br />
+<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearImplementationGuidance<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131177,10 +135070,19 @@ clearDetails<br />
 <tr>
 <td>
 exampleEvidence<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
 </td>
 <td>
-<p>example evidence to provide for the control</p>
+<p>examples of evidence for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+appendExampleEvidence<br />
+<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -131194,7 +135096,52 @@ clearExampleEvidence<br />
 </tr>
 <tr>
 <td>
-addControlIDs<br />
+references<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+<p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+appendReferences<br />
+<a href="scalars#reference"><code>[Reference!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReferences<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addMappedControlIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -131203,8 +135150,71 @@ addControlIDs<br />
 </tr>
 <tr>
 <td>
-removeControlIDs<br />
+removeMappedControlIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearMappedControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEvidenceIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEvidenceIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEvidence<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addControlObjectiveIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeControlObjectiveIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControlObjectives<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -131239,7 +135249,7 @@ clearTasks<br />
 </tr>
 <tr>
 <td>
-addProgramIDs<br />
+addNarrativeIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -131248,7 +135258,7 @@ addProgramIDs<br />
 </tr>
 <tr>
 <td>
-removeProgramIDs<br />
+removeNarrativeIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -131257,7 +135267,7 @@ removeProgramIDs<br />
 </tr>
 <tr>
 <td>
-clearPrograms<br />
+clearNarratives<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131266,7 +135276,7 @@ clearPrograms<br />
 </tr>
 <tr>
 <td>
-addEvidenceIDs<br />
+addRiskIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -131275,7 +135285,7 @@ addEvidenceIDs<br />
 </tr>
 <tr>
 <td>
-removeEvidenceIDs<br />
+removeRiskIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -131284,7 +135294,124 @@ removeEvidenceIDs<br />
 </tr>
 <tr>
 <td>
-clearEvidence<br />
+clearRisks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addActionPlanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeActionPlanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearActionPlans<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addProcedureIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeProcedureIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearProcedures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlOwnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControlOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDelegate<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -131927,7 +136054,7 @@ clearDescription<br />
 <tr>
 <td>
 jsonconfig<br />
-<a href="scalars#json"><code>JSON</code></a>
+<a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
 <p>the jsonschema object of the template</p>
@@ -131936,7 +136063,7 @@ jsonconfig<br />
 <tr>
 <td>
 uischema<br />
-<a href="scalars#json"><code>JSON</code></a>
+<a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
 <p>the uischema for the template to render in the UI</p>
