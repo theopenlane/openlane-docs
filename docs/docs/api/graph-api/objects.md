@@ -5834,6 +5834,15 @@ file<br />
 
 </td>
 </tr>
+<tr>
+<td>
+orgsubscription<br />
+<a href="objects#orgsubscription"><code>[OrgSubscription!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15627,6 +15636,24 @@ events<br />
 <tr>
 <td>
 subscriptionURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managePaymentMethods<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+cancellation<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>

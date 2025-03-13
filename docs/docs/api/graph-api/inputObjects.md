@@ -22513,6 +22513,15 @@ fileIDs<br />
 
 </td>
 </tr>
+<tr>
+<td>
+orgsubscriptionIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -37365,6 +37374,24 @@ hasFile<br />
 <td>
 hasFileWith<br />
 <a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasOrgsubscription<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>orgsubscription edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasOrgsubscriptionWith<br />
+<a href="inputObjects#orgsubscriptionwhereinput"><code>[OrgSubscriptionWhereInput!]</code></a>
 </td>
 <td>
 
@@ -128231,6 +128258,33 @@ removeFileIDs<br />
 <tr>
 <td>
 clearFile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addOrgsubscriptionIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeOrgsubscriptionIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearOrgsubscription<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>

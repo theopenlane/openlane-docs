@@ -674,29 +674,6 @@ input<br />
 </tbody>
 </table>
 
-## createBulkCSVPersonalAccessToken
-
-**Type:** [PersonalAccessTokenBulkCreatePayload!](objects#personalaccesstokenbulkcreatepayload)
-
-Create multiple new personalAccessTokens via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the personalAccessToken</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createBulkCSVProcedure
 
 **Type:** [ProcedureBulkCreatePayload!](objects#procedurebulkcreatepayload)
@@ -1244,29 +1221,6 @@ input<br />
 </td>
 <td>
 <p>values of the orgMembership</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createBulkPersonalAccessToken
-
-**Type:** [PersonalAccessTokenBulkCreatePayload!](objects#personalaccesstokenbulkcreatepayload)
-
-Create multiple new personalAccessTokens
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createpersonalaccesstokeninput"><code>[CreatePersonalAccessTokenInput!]</code></a>
-</td>
-<td>
-<p>values of the personalAccessToken</p>
 </td>
 </tr>
 </tbody>
