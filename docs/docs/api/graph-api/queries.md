@@ -79,6 +79,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#actionplanhistoryorder"><code>ActionPlanHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for ActionPlanHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#actionplanhistorywhereinput"><code>ActionPlanHistoryWhereInput</code></a>
 </td>
@@ -134,6 +143,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#actionplanorder"><code>[ActionPlanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ActionPlans returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -1143,6 +1161,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#contacthistoryorder"><code>ContactHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for ContactHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#contacthistorywhereinput"><code>ContactHistoryWhereInput</code></a>
 </td>
@@ -1198,6 +1225,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#contactorder"><code>[ContactOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Contacts returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -1307,6 +1343,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#controlhistoryorder"><code>ControlHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for ControlHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#controlhistorywhereinput"><code>ControlHistoryWhereInput</code></a>
 </td>
@@ -1389,6 +1434,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#controlimplementationhistoryorder"><code>ControlImplementationHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementationHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#controlimplementationhistorywhereinput"><code>ControlImplementationHistoryWhereInput</code></a>
 </td>
@@ -1444,6 +1498,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementations returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -1553,6 +1616,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#controlobjectivehistoryorder"><code>ControlObjectiveHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for ControlObjectiveHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#controlobjectivehistorywhereinput"><code>ControlObjectiveHistoryWhereInput</code></a>
 </td>
@@ -1608,6 +1680,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlobjectiveorder"><code>[ControlObjectiveOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlObjectives returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -1690,6 +1771,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -1941,7 +2031,7 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#entityorder"><code>EntityOrder</code></a>
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
 </td>
 <td>
 <p>Ordering options for Entities returned from the connection.</p>
@@ -2491,6 +2581,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#evidencehistoryorder"><code>EvidenceHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for EvidenceHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#evidencehistorywhereinput"><code>EvidenceHistoryWhereInput</code></a>
 </td>
@@ -2546,6 +2645,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#evidenceorder"><code>[EvidenceOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Evidences returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -2910,6 +3018,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#groupmembershiphistoryorder"><code>GroupMembershipHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for GroupMembershipHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#groupmembershiphistorywhereinput"><code>GroupMembershipHistoryWhereInput</code></a>
 </td>
@@ -2965,6 +3082,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#groupmembershiporder"><code>GroupMembershipOrder</code></a>
+</td>
+<td>
+<p>Ordering options for GroupMemberships returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -3029,7 +3155,7 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#grouporder"><code>GroupOrder</code></a>
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
 </td>
 <td>
 <p>Ordering options for Groups returned from the connection.</p>
@@ -3284,7 +3410,7 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#hushorder"><code>HushOrder</code></a>
+<a href="inputObjects#hushorder"><code>[HushOrder!]</code></a>
 </td>
 <td>
 <p>Ordering options for Hushes returned from the connection.</p>
@@ -3511,7 +3637,7 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#integrationorder"><code>IntegrationOrder</code></a>
+<a href="inputObjects#integrationorder"><code>[IntegrationOrder!]</code></a>
 </td>
 <td>
 <p>Ordering options for Integrations returned from the connection.</p>
@@ -3788,6 +3914,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#inviteorder"><code>[InviteOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Invites returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#invitewhereinput"><code>InviteWhereInput</code></a>
 </td>
@@ -3870,6 +4005,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#mappedcontrolhistoryorder"><code>MappedControlHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for MappedControlHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#mappedcontrolhistorywhereinput"><code>MappedControlHistoryWhereInput</code></a>
 </td>
@@ -3925,6 +4069,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#mappedcontrolorder"><code>MappedControlOrder</code></a>
+</td>
+<td>
+<p>Ordering options for MappedControls returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -4034,6 +4187,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#narrativehistoryorder"><code>NarrativeHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for NarrativeHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#narrativehistorywhereinput"><code>NarrativeHistoryWhereInput</code></a>
 </td>
@@ -4089,6 +4251,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#narrativeorder"><code>NarrativeOrder</code></a>
+</td>
+<td>
+<p>Ordering options for Narratives returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -4454,7 +4625,7 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#organizationorder"><code>OrganizationOrder</code></a>
+<a href="inputObjects#organizationorder"><code>[OrganizationOrder!]</code></a>
 </td>
 <td>
 <p>Ordering options for Organizations returned from the connection.</p>
@@ -4731,6 +4902,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#orgmembershiphistoryorder"><code>OrgMembershipHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for OrgMembershipHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#orgmembershiphistorywhereinput"><code>OrgMembershipHistoryWhereInput</code></a>
 </td>
@@ -4786,6 +4966,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#orgmembershiporder"><code>OrgMembershipOrder</code></a>
+</td>
+<td>
+<p>Ordering options for OrgMemberships returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -4872,6 +5061,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#orgsubscriptionhistoryorder"><code>OrgSubscriptionHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for OrgSubscriptionHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#orgsubscriptionhistorywhereinput"><code>OrgSubscriptionHistoryWhereInput</code></a>
 </td>
@@ -4927,6 +5125,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#orgsubscriptionorder"><code>OrgSubscriptionOrder</code></a>
+</td>
+<td>
+<p>Ordering options for OrgSubscriptions returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -5305,6 +5512,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#programhistoryorder"><code>ProgramHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for ProgramHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#programhistorywhereinput"><code>ProgramHistoryWhereInput</code></a>
 </td>
@@ -5387,6 +5603,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#programmembershiphistoryorder"><code>ProgramMembershipHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for ProgramMembershipHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#programmembershiphistorywhereinput"><code>ProgramMembershipHistoryWhereInput</code></a>
 </td>
@@ -5446,6 +5671,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#programmembershiporder"><code>ProgramMembershipOrder</code></a>
+</td>
+<td>
+<p>Ordering options for ProgramMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#programmembershipwhereinput"><code>ProgramMembershipWhereInput</code></a>
 </td>
@@ -5501,6 +5735,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Programs returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -5610,6 +5853,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#riskhistoryorder"><code>RiskHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for RiskHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#riskhistorywhereinput"><code>RiskHistoryWhereInput</code></a>
 </td>
@@ -5665,6 +5917,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#riskorder"><code>[RiskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Risks returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -5803,6 +6064,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#standardhistoryorder"><code>StandardHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for StandardHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#standardhistorywhereinput"><code>StandardHistoryWhereInput</code></a>
 </td>
@@ -5858,6 +6128,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#standardorder"><code>[StandardOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Standards returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -5967,6 +6246,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#subcontrolhistoryorder"><code>SubcontrolHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for SubcontrolHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#subcontrolhistorywhereinput"><code>SubcontrolHistoryWhereInput</code></a>
 </td>
@@ -6022,6 +6310,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -6131,6 +6428,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#subscriberorder"><code>[SubscriberOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subscribers returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#subscriberwhereinput"><code>SubscriberWhereInput</code></a>
 </td>
@@ -6236,6 +6542,15 @@ last<br />
 </tr>
 <tr>
 <td>
+orderBy<br />
+<a href="inputObjects#taskhistoryorder"><code>TaskHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for TaskHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
 where<br />
 <a href="inputObjects#taskhistorywhereinput"><code>TaskHistoryWhereInput</code></a>
 </td>
@@ -6291,6 +6606,15 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#taskorder"><code>[TaskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Tasks returned from the connection.</p>
 </td>
 </tr>
 <tr>
@@ -6469,7 +6793,7 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#templateorder"><code>TemplateOrder</code></a>
+<a href="inputObjects#templateorder"><code>[TemplateOrder!]</code></a>
 </td>
 <td>
 <p>Ordering options for Templates returned from the connection.</p>
@@ -6733,7 +7057,7 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#userorder"><code>UserOrder</code></a>
+<a href="inputObjects#userorder"><code>[UserOrder!]</code></a>
 </td>
 <td>
 <p>Ordering options for Users returned from the connection.</p>
