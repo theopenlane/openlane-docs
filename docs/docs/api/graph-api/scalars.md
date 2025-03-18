@@ -9,15 +9,17 @@ sidebar_position: 9
 
 ## Address
 
-
+The `Address` scalar type represents a physical or mailing address.
+This scalar can be used to store and validate address information in the GraphQL schema.
+It contains `Line1`, `Line2`, `City`, `State`, `PostalCode`, and `Country`
 
 ## AssessmentMethod
 
-
+The `AssessmentMethod` scalar type represents methods that can be used during the audit to assess the control implementation
 
 ## AssessmentObjective
 
-
+The `AssessmentObjective` scalar type represents objectives that are validated during the audit to ensure the control is implemented
 
 ## Boolean
 
@@ -30,7 +32,7 @@ https://relay.dev/graphql/connections.htm#sec-Cursor
 
 ## ExampleEvidence
 
-
+The `ExampleEvidence` scalar type represents example evidence that can be used to satisfy the control
 
 ## ID
 
@@ -38,7 +40,7 @@ The `ID` scalar type represents a unique identifier, often used to refetch an ob
 
 ## ImplementationGuidance
 
-
+The `ImplementationGuidance` scalar type that represents steps to take to implement a control; they can come directly from the control source or pulled from external sources
 
 ## Int
 
@@ -54,11 +56,11 @@ The builtin Map type
 
 ## Price
 
-
+The `Price` scalar type represents a monetary value for a subscription, including the numerical amount, the interval of recurrence and the currency to be charged in (e.g. USD)
 
 ## Reference
 
-
+The `Reference` represents are links to external sources that can be used to gain more information about the control
 
 ## String
 
@@ -70,5 +72,10 @@ The builtin Time type
 
 ## Upload
 
+The `Upload` scalar type represents a file upload.
+This scalar is typically used to handle file uploads in GraphQL mutations.
 
+## VersionBump
+
+VersionBump allows a revision to automatically be bumped based on "Major", "Minor", "Patch", or "Draft"
 
