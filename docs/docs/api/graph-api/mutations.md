@@ -1525,6 +1525,29 @@ input<br />
 </tbody>
 </table>
 
+## createControlsByClone
+
+**Type:** [ControlBulkCreatePayload!](objects#controlbulkcreatepayload)
+
+Create a new controls based on existing control ID(s)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#clonecontrolinput"><code>CloneControlInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createControlWithSubcontrols
 
 **Type:** [ControlCreatePayload!](objects#controlcreatepayload)
