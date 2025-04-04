@@ -166,6 +166,24 @@ reviewFrequency<br />
 </tr>
 <tr>
 <td>
+approverID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -832,6 +850,24 @@ reviewFrequency<br />
 </td>
 <td>
 <p>the frequency at which the action_plan should be reviewed, used to calculate the review_due date</p>
+</td>
+</tr>
+<tr>
+<td>
+approverID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the action_plan</p>
 </td>
 </tr>
 <tr>
@@ -2332,15 +2368,6 @@ tags<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -2350,8 +2377,26 @@ description<br />
 </tr>
 <tr>
 <td>
-status<br />
+referenceID<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal reference id of the control, can be used for internal tracking</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorReferenceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external auditor id of the control, can be used to map to external audit partner mappings</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#controlcontrolstatus"><code>ControlControlStatus</code></a>
 </td>
 <td>
 <p>status of the control</p>
@@ -2467,6 +2512,33 @@ references<br />
 </tr>
 <tr>
 <td>
+controlOwnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group that owns the control</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group that is temporarily delegated to own the control</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
 refCode<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -2481,123 +2553,6 @@ standardID<br />
 </td>
 <td>
 <p>the id of the standard that the control belongs to, if applicable</p>
-</td>
-</tr>
-<tr>
-<td>
-owner<br />
-<a href="objects#organization"><code>Organization</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-blockedGroups<br />
-<a href="objects#group"><code>[Group!]</code></a>
-</td>
-<td>
-<p>groups that are blocked from viewing or editing the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-editors<br />
-<a href="objects#group"><code>[Group!]</code></a>
-</td>
-<td>
-<p>provides edit access to the risk to members of the group</p>
-</td>
-</tr>
-<tr>
-<td>
-viewers<br />
-<a href="objects#group"><code>[Group!]</code></a>
-</td>
-<td>
-<p>provides view access to the risk to members of the group</p>
-</td>
-</tr>
-<tr>
-<td>
-standard<br />
-<a href="objects#standard"><code>Standard</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programs<br />
-<a href="objects#programconnection"><code>ProgramConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Programs returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#programwhereinput"><code>ProgramWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Programs returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 </td>
 </tr>
 <tr>
@@ -2674,150 +2629,6 @@ where<br />
 </tr>
 <tr>
 <td>
-controlImplementations<br />
-<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for ControlImplementations returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ControlImplementations returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedControls<br />
-<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for MappedControls returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for MappedControls returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
 controlObjectives<br />
 <a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
@@ -2881,78 +2692,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for ControlObjectives returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrols<br />
-<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Subcontrols returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Subcontrols returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -3394,6 +3133,78 @@ where<br />
 </tr>
 <tr>
 <td>
+mappedControls<br />
+<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 controlOwner<br />
 <a href="objects#group"><code>Group</code></a>
 </td>
@@ -3408,6 +3219,267 @@ delegate<br />
 </td>
 <td>
 <p>temporary delegate for the control, used for temporary control ownership</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#group"><code>[Group!]</code></a>
+</td>
+<td>
+<p>groups that are blocked from viewing or editing the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#group"><code>[Group!]</code></a>
+</td>
+<td>
+<p>provides edit access to the risk to members of the group</p>
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#group"><code>[Group!]</code></a>
+</td>
+<td>
+<p>provides view access to the risk to members of the group</p>
+</td>
+</tr>
+<tr>
+<td>
+standard<br />
+<a href="objects#standard"><code>Standard</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programs<br />
+<a href="objects#programconnection"><code>ProgramConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Programs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#programwhereinput"><code>ProgramWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementations<br />
+<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -3668,15 +3740,6 @@ tags<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -3686,8 +3749,26 @@ description<br />
 </tr>
 <tr>
 <td>
-status<br />
+referenceID<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal reference id of the control, can be used for internal tracking</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorReferenceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external auditor id of the control, can be used to map to external audit partner mappings</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#controlhistorycontrolstatus"><code>ControlHistoryControlStatus</code></a>
 </td>
 <td>
 <p>status of the control</p>
@@ -3799,6 +3880,33 @@ references<br />
 </td>
 <td>
 <p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlOwnerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group that owns the control</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group that is temporarily delegated to own the control</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -3978,6 +4086,15 @@ tags<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
 status<br />
 <a href="enums#controlimplementationdocumentstatus"><code>ControlImplementationDocumentStatus</code></a>
 </td>
@@ -4019,6 +4136,15 @@ details<br />
 </td>
 <td>
 <p>details of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -4086,6 +4212,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -4338,6 +4536,15 @@ tags<br />
 </td>
 <td>
 <p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -14935,6 +15142,24 @@ reviewFrequency<br />
 </tr>
 <tr>
 <td>
+approverID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the policy</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the policy</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -15745,6 +15970,24 @@ reviewFrequency<br />
 </td>
 <td>
 <p>the frequency at which the policy should be reviewed, used to calculate the review_due date</p>
+</td>
+</tr>
+<tr>
+<td>
+approverID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the policy</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the policy</p>
 </td>
 </tr>
 </tbody>
@@ -17697,6 +17940,78 @@ task<br />
 <a href="objects#task"><code>Task</code></a>
 </td>
 <td>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -20177,6 +20492,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementations<br />
+<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementations returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -23553,6 +23940,24 @@ reviewFrequency<br />
 </tr>
 <tr>
 <td>
+approverID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -24363,6 +24768,24 @@ reviewFrequency<br />
 </td>
 <td>
 <p>the frequency at which the procedure should be reviewed, used to calculate the review_due date</p>
+</td>
+</tr>
+<tr>
+<td>
+approverID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group responsible for approving the procedure</p>
 </td>
 </tr>
 </tbody>
@@ -26823,6 +27246,24 @@ businessCosts<br />
 </tr>
 <tr>
 <td>
+stakeholderID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group responsible for risk oversight</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group responsible for risk oversight on behalf of the stakeholder</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -27516,6 +27957,24 @@ businessCosts<br />
 </td>
 <td>
 <p>business costs associated with the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+stakeholderID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group responsible for risk oversight</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group responsible for risk oversight on behalf of the stakeholder</p>
 </td>
 </tr>
 </tbody>
@@ -28582,15 +29041,6 @@ tags<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -28600,8 +29050,26 @@ description<br />
 </tr>
 <tr>
 <td>
-status<br />
+referenceID<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal reference id of the control, can be used for internal tracking</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorReferenceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external auditor id of the control, can be used to map to external audit partner mappings</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#subcontrolcontrolstatus"><code>SubcontrolControlStatus</code></a>
 </td>
 <td>
 <p>status of the control</p>
@@ -28717,6 +29185,33 @@ references<br />
 </tr>
 <tr>
 <td>
+controlOwnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group that owns the control</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the group that is temporarily delegated to own the control</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
 refCode<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -28731,96 +29226,6 @@ controlID<br />
 </td>
 <td>
 <p>the id of the parent control</p>
-</td>
-</tr>
-<tr>
-<td>
-owner<br />
-<a href="objects#organization"><code>Organization</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-control<br />
-<a href="objects#control"><code>Control!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedControls<br />
-<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for MappedControls returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for MappedControls returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 </td>
 </tr>
 <tr>
@@ -29401,11 +29806,83 @@ where<br />
 </tr>
 <tr>
 <td>
+mappedControls<br />
+<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 controlOwner<br />
 <a href="objects#group"><code>Group</code></a>
 </td>
 <td>
-<p>the user who is responsible for the subcontrol, defaults to the parent control owner if not set</p>
+<p>the group of users who are responsible for the control, will be assigned tasks, approval, etc.</p>
 </td>
 </tr>
 <tr>
@@ -29414,7 +29891,97 @@ delegate<br />
 <a href="objects#group"><code>Group</code></a>
 </td>
 <td>
-<p>temporary delegate for the subcontrol, used for temporary control ownership</p>
+<p>temporary delegate for the control, used for temporary control ownership</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+control<br />
+<a href="objects#control"><code>Control!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementations<br />
+<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -29675,15 +30242,6 @@ tags<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -29693,8 +30251,26 @@ description<br />
 </tr>
 <tr>
 <td>
-status<br />
+referenceID<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal reference id of the control, can be used for internal tracking</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorReferenceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external auditor id of the control, can be used to map to external audit partner mappings</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#subcontrolhistorycontrolstatus"><code>SubcontrolHistoryControlStatus</code></a>
 </td>
 <td>
 <p>status of the control</p>
@@ -29806,6 +30382,33 @@ references<br />
 </td>
 <td>
 <p>references for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlOwnerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group that owns the control</p>
+</td>
+</tr>
+<tr>
+<td>
+delegateID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group that is temporarily delegated to own the control</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>

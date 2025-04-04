@@ -431,6 +431,12 @@ Properties by which APIToken connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>name</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>expires_at</td>
 <td>
 
@@ -438,6 +444,12 @@ Properties by which APIToken connections can be ordered.
 </tr>
 <tr>
 <td>last_used_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>is_active</td>
 <td>
 
 </td>
@@ -703,6 +715,54 @@ ControlControlSource is enum for the field source
 </tbody>
 </table>
 
+## ControlControlStatus
+
+ControlControlStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREPARING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NEEDS_APPROVAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CHANGES_REQUESTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ARCHIVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlControlType
 
 ControlControlType is enum for the field control_type
@@ -768,6 +828,54 @@ ControlHistoryControlSource is enum for the field source
 </tr>
 <tr>
 <td>IMPORTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlHistoryControlStatus
+
+ControlHistoryControlStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREPARING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NEEDS_APPROVAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CHANGES_REQUESTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ARCHIVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NULL</td>
 <td>
 
 </td>
@@ -863,7 +971,7 @@ Properties by which ControlHistory connections can be ordered.
 </td>
 </tr>
 <tr>
-<td>status</td>
+<td>STATUS</td>
 <td>
 
 </td>
@@ -1367,7 +1475,7 @@ Properties by which Control connections can be ordered.
 </td>
 </tr>
 <tr>
-<td>status</td>
+<td>STATUS</td>
 <td>
 
 </td>
@@ -5287,6 +5395,54 @@ SubcontrolControlSource is enum for the field source
 </tbody>
 </table>
 
+## SubcontrolControlStatus
+
+SubcontrolControlStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREPARING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NEEDS_APPROVAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CHANGES_REQUESTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ARCHIVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## SubcontrolControlType
 
 SubcontrolControlType is enum for the field control_type
@@ -5352,6 +5508,54 @@ SubcontrolHistoryControlSource is enum for the field source
 </tr>
 <tr>
 <td>IMPORTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubcontrolHistoryControlStatus
+
+SubcontrolHistoryControlStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREPARING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NEEDS_APPROVAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CHANGES_REQUESTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ARCHIVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NULL</td>
 <td>
 
 </td>
@@ -5447,7 +5651,7 @@ Properties by which SubcontrolHistory connections can be ordered.
 </td>
 </tr>
 <tr>
-<td>status</td>
+<td>STATUS</td>
 <td>
 
 </td>
@@ -5507,7 +5711,7 @@ Properties by which Subcontrol connections can be ordered.
 </td>
 </tr>
 <tr>
-<td>status</td>
+<td>STATUS</td>
 <td>
 
 </td>
