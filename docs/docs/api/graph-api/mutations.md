@@ -4367,6 +4367,15 @@ input<br />
 <p>New values for the comment</p>
 </td>
 </tr>
+<tr>
+<td>
+noteFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the comment</p>
+</td>
+</tr>
 </tbody>
 </table>
 

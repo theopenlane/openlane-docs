@@ -978,27 +978,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ActionPlanSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-actionPlans<br />
-<a href="objects#actionplan"><code>[ActionPlan!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ActionPlanUpdatePayload
 
 Return response for updateActionPlan mutation
@@ -1343,27 +1322,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## APITokenSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-apiTokens<br />
-<a href="objects#apitoken"><code>[APIToken!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -2225,27 +2183,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ContactSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-contacts<br />
-<a href="objects#contact"><code>[Contact!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -4664,27 +4601,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ControlImplementationSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-controlImplementations<br />
-<a href="objects#controlimplementation"><code>[ControlImplementation!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ControlImplementationUpdatePayload
 
 Return response for updateControlImplementation mutation
@@ -4839,7 +4755,7 @@ desiredOutcome<br />
 <tr>
 <td>
 status<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectiveobjectivestatus"><code>ControlObjectiveObjectiveStatus</code></a>
 </td>
 <td>
 <p>status of the control objective</p>
@@ -5860,7 +5776,7 @@ desiredOutcome<br />
 <tr>
 <td>
 status<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectivehistoryobjectivestatus"><code>ControlObjectiveHistoryObjectiveStatus</code></a>
 </td>
 <td>
 <p>status of the control objective</p>
@@ -5974,27 +5890,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ControlObjectiveSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-controlObjectives<br />
-<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ControlObjectiveUpdatePayload
 
 Return response for updateControlObjective mutation
@@ -6011,27 +5906,6 @@ controlObjective<br />
 </td>
 <td>
 <p>Updated controlObjective</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-controls<br />
-<a href="objects#control"><code>[Control!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -6673,27 +6547,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DocumentDataSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-documentData<br />
-<a href="objects#documentdata"><code>[DocumentData!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -7556,27 +7409,6 @@ cursor<br />
 </tbody>
 </table>
 
-## EntitySearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-entities<br />
-<a href="objects#entity"><code>[Entity!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## EntityType
 
 
@@ -8093,27 +7925,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EntityTypeSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-entityTypes<br />
-<a href="objects#entitytype"><code>[EntityType!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -9465,27 +9276,6 @@ cursor<br />
 </tbody>
 </table>
 
-## EventSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-events<br />
-<a href="objects#event"><code>[Event!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## EventUpdatePayload
 
 Return response for updateEvent mutation
@@ -10550,27 +10340,6 @@ cursor<br />
 </tbody>
 </table>
 
-## EvidenceSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-evidences<br />
-<a href="objects#evidence"><code>[Evidence!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## EvidenceUpdatePayload
 
 Return response for updateEvidence mutation
@@ -11426,27 +11195,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## FileSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-files<br />
-<a href="objects#file"><code>[File!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -13114,27 +12862,6 @@ name<br />
 </tbody>
 </table>
 
-## GroupSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-groups<br />
-<a href="objects#group"><code>[Group!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## GroupSetting
 
 
@@ -13740,6 +13467,15 @@ deletedBy<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -13772,6 +13508,15 @@ secretName<br />
 </td>
 <td>
 <p>the generic name of a secret associated with the organization</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -13843,15 +13588,6 @@ where<br />
 </tr>
 </tbody>
 </table>
-
-</td>
-</tr>
-<tr>
-<td>
-organization<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
 
 </td>
 </tr>
@@ -14163,6 +13899,15 @@ deletedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
 </td>
 </tr>
 <tr>
@@ -14923,27 +14668,6 @@ cursor<br />
 </tbody>
 </table>
 
-## IntegrationSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-integrations<br />
-<a href="objects#integration"><code>[Integration!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## IntegrationUpdatePayload
 
 Return response for updateIntegration mutation
@@ -15349,6 +15073,78 @@ where<br />
 </tr>
 <tr>
 <td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 procedures<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
@@ -15556,6 +15352,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+risks<br />
+<a href="objects#riskconnection"><code>RiskConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#riskorder"><code>[RiskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Risks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#riskwhereinput"><code>RiskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Risks returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -16057,27 +15925,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## InternalPolicySearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-internalPolicies<br />
-<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -17064,27 +16911,6 @@ cursor<br />
 </tbody>
 </table>
 
-## MappedControlSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-mappedControls<br />
-<a href="objects#mappedcontrol"><code>[MappedControl!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## MappedControlUpdatePayload
 
 Return response for updateMappedControl mutation
@@ -17409,6 +17235,150 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+procedures<br />
+<a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#procedureorder"><code>[ProcedureOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Procedures returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#procedurewhereinput"><code>ProcedureWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Procedures returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -17775,27 +17745,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## NarrativeSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-narratives<br />
-<a href="objects#narrative"><code>[Narrative!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -18891,9 +18840,72 @@ where<br />
 <tr>
 <td>
 users<br />
-<a href="objects#user"><code>[User!]</code></a>
+<a href="objects#userconnection"><code>UserConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#userorder"><code>[UserOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Users returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#userwhereinput"><code>UserWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Users returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -20790,9 +20802,72 @@ where<br />
 <tr>
 <td>
 members<br />
-<a href="objects#orgmembership"><code>[OrgMembership!]</code></a>
+<a href="objects#orgmembershipconnection"><code>OrgMembershipConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#orgmembershiporder"><code>[OrgMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for OrgMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#orgmembershipwhereinput"><code>OrgMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for OrgMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -21182,27 +21257,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrganizationSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-organizations<br />
-<a href="objects#organization"><code>[Organization!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -21868,27 +21922,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrganizationSettingSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-organizationSettings<br />
-<a href="objects#organizationsetting"><code>[OrganizationSetting!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -23188,27 +23221,6 @@ cursor<br />
 </tbody>
 </table>
 
-## OrgSubscriptionSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-orgSubscriptions<br />
-<a href="objects#orgsubscription"><code>[OrgSubscription!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## PageInfo
 
 Information about pagination in a connection.
@@ -23721,27 +23733,6 @@ cursor<br />
 </tbody>
 </table>
 
-## PersonalAccessTokenSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-personalAccessTokens<br />
-<a href="objects#personalaccesstoken"><code>[PersonalAccessToken!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## PersonalAccessTokenUpdatePayload
 
 Return response for updatePersonalAccessToken mutation
@@ -24066,6 +24057,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -24860,27 +24923,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ProcedureSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-procedures<br />
-<a href="objects#procedure"><code>[Procedure!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ProcedureUpdatePayload
 
 Return response for updateProcedure mutation
@@ -25030,6 +25072,24 @@ status<br />
 </td>
 <td>
 <p>the status of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+programType<br />
+<a href="enums#programprogramtype"><code>ProgramProgramType!</code></a>
+</td>
+<td>
+<p>the type of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+frameworkName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the short name of the compliance standard the program is based on, only used for framework type programs</p>
 </td>
 </tr>
 <tr>
@@ -26415,6 +26475,24 @@ status<br />
 </tr>
 <tr>
 <td>
+programType<br />
+<a href="enums#programhistoryprogramtype"><code>ProgramHistoryProgramType!</code></a>
+</td>
+<td>
+<p>the type of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+frameworkName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the short name of the compliance standard the program is based on, only used for framework type programs</p>
+</td>
+</tr>
+<tr>
+<td>
 startDate<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -27009,27 +27087,6 @@ programMembership<br />
 </tbody>
 </table>
 
-## ProgramSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-programs<br />
-<a href="objects#program"><code>[Program!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ProgramUpdatePayload
 
 Return response for updateProgram mutation
@@ -27372,6 +27429,78 @@ where<br />
 </tr>
 <tr>
 <td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 procedures<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
@@ -27435,6 +27564,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Procedures returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -28049,27 +28250,6 @@ cursor<br />
 </tbody>
 </table>
 
-## RiskSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-risks<br />
-<a href="objects#risk"><code>[Risk!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## RiskUpdatePayload
 
 Return response for updateRisk mutation
@@ -28091,7 +28271,7 @@ risk<br />
 </tbody>
 </table>
 
-## SearchResultConnection
+## SearchResults
 
 
 
@@ -28120,11 +28300,290 @@ totalCount<br />
 </tr>
 <tr>
 <td>
-nodes<br />
-<a href="unions#searchresult"><code>[SearchResult!]!</code></a>
+apiTokens<br />
+<a href="objects#apitokenconnection"><code>APITokenConnection</code></a>
 </td>
 <td>
-<p>A list of nodes with results.</p>
+
+</td>
+</tr>
+<tr>
+<td>
+actionPlans<br />
+<a href="objects#actionplanconnection"><code>ActionPlanConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contacts<br />
+<a href="objects#contactconnection"><code>ContactConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#controlconnection"><code>ControlConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementations<br />
+<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlObjectives<br />
+<a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+documentData<br />
+<a href="objects#documentdataconnection"><code>DocumentDataConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entities<br />
+<a href="objects#entityconnection"><code>EntityConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityTypes<br />
+<a href="objects#entitytypeconnection"><code>EntityTypeConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+events<br />
+<a href="objects#eventconnection"><code>EventConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidences<br />
+<a href="objects#evidenceconnection"><code>EvidenceConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+groups<br />
+<a href="objects#groupconnection"><code>GroupConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrations<br />
+<a href="objects#integrationconnection"><code>IntegrationConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+invites<br />
+<a href="objects#inviteconnection"><code>InviteConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mappedControls<br />
+<a href="objects#mappedcontrolconnection"><code>MappedControlConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+narratives<br />
+<a href="objects#narrativeconnection"><code>NarrativeConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orgSubscriptions<br />
+<a href="objects#orgsubscriptionconnection"><code>OrgSubscriptionConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+organizations<br />
+<a href="objects#organizationconnection"><code>OrganizationConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+organizationSettings<br />
+<a href="objects#organizationsettingconnection"><code>OrganizationSettingConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+personalAccessTokens<br />
+<a href="objects#personalaccesstokenconnection"><code>PersonalAccessTokenConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+procedures<br />
+<a href="objects#procedureconnection"><code>ProcedureConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programs<br />
+<a href="objects#programconnection"><code>ProgramConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+risks<br />
+<a href="objects#riskconnection"><code>RiskConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standards<br />
+<a href="objects#standardconnection"><code>StandardConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscribers<br />
+<a href="objects#subscriberconnection"><code>SubscriberConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tasks<br />
+<a href="objects#taskconnection"><code>TaskConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templates<br />
+<a href="objects#templateconnection"><code>TemplateConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+users<br />
+<a href="objects#userconnection"><code>UserConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userSettings<br />
+<a href="objects#usersettingconnection"><code>UserSettingConnection</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -28898,27 +29357,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## StandardSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-standards<br />
-<a href="objects#standard"><code>[Standard!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -30501,27 +30939,6 @@ cursor<br />
 </tbody>
 </table>
 
-## SubcontrolSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-subcontrols<br />
-<a href="objects#subcontrol"><code>[Subcontrol!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## SubcontrolUpdatePayload
 
 Return response for updateSubcontrol mutation
@@ -30689,6 +31106,15 @@ unsubscribed<br />
 </td>
 <td>
 <p>indicates if the subscriber has unsubscribed from communications</p>
+</td>
+</tr>
+<tr>
+<td>
+sendAttempts<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>the number of attempts made to perform email send of the subscription, maximum of 5</p>
 </td>
 </tr>
 <tr>
@@ -30907,27 +31333,6 @@ cursor<br />
 </tbody>
 </table>
 
-## SubscriberSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-subscribers<br />
-<a href="objects#subscriber"><code>[Subscriber!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## SubscriberUpdatePayload
 
 Return response for updateSubscriber mutation
@@ -31063,15 +31468,6 @@ title<br />
 </tr>
 <tr>
 <td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the description of the task</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -31100,7 +31496,7 @@ category<br />
 <tr>
 <td>
 due<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the due date of the task</p>
@@ -31109,7 +31505,7 @@ due<br />
 <tr>
 <td>
 completed<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the completion date of the task</p>
@@ -32084,15 +32480,6 @@ title<br />
 </tr>
 <tr>
 <td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the description of the task</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -32121,7 +32508,7 @@ category<br />
 <tr>
 <td>
 due<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the due date of the task</p>
@@ -32130,7 +32517,7 @@ due<br />
 <tr>
 <td>
 completed<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the completion date of the task</p>
@@ -32221,27 +32608,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TaskSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tasks<br />
-<a href="objects#task"><code>[Task!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -32933,27 +33299,6 @@ cursor<br />
 </tbody>
 </table>
 
-## TemplateSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-templates<br />
-<a href="objects#template"><code>[Template!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## TemplateUpdatePayload
 
 Return response for updateTemplate mutation
@@ -33401,6 +33746,15 @@ lastSeen<br />
 </td>
 <td>
 <p>the time the user was last seen</p>
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProvider<br />
+<a href="enums#userauthprovider"><code>UserAuthProvider</code></a>
+</td>
+<td>
+<p>the last auth provider used to login</p>
 </td>
 </tr>
 <tr>
@@ -34660,6 +35014,15 @@ lastSeen<br />
 </tr>
 <tr>
 <td>
+lastLoginProvider<br />
+<a href="enums#userhistoryauthprovider"><code>UserHistoryAuthProvider</code></a>
+</td>
+<td>
+<p>the last auth provider used to login</p>
+</td>
+</tr>
+<tr>
+<td>
 sub<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -34752,27 +35115,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## UserSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-users<br />
-<a href="objects#user"><code>[User!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -35390,27 +35732,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## UserSettingSearchResult
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-userSettings<br />
-<a href="objects#usersetting"><code>[UserSetting!]</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>

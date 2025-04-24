@@ -18194,7 +18194,7 @@ desiredOutcomeContainsFold<br />
 <tr>
 <td>
 status<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectivehistoryobjectivestatus"><code>ControlObjectiveHistoryObjectiveStatus</code></a>
 </td>
 <td>
 <p>status field predicates</p>
@@ -18203,7 +18203,7 @@ status<br />
 <tr>
 <td>
 statusNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectivehistoryobjectivestatus"><code>ControlObjectiveHistoryObjectiveStatus</code></a>
 </td>
 <td>
 
@@ -18212,7 +18212,7 @@ statusNEQ<br />
 <tr>
 <td>
 statusIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
+<a href="enums#controlobjectivehistoryobjectivestatus"><code>[ControlObjectiveHistoryObjectiveStatus!]</code></a>
 </td>
 <td>
 
@@ -18221,70 +18221,7 @@ statusIn<br />
 <tr>
 <td>
 statusNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectivehistoryobjectivestatus"><code>[ControlObjectiveHistoryObjectiveStatus!]</code></a>
 </td>
 <td>
 
@@ -18303,24 +18240,6 @@ statusIsNil<br />
 <td>
 statusNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -20262,7 +20181,7 @@ desiredOutcomeContainsFold<br />
 <tr>
 <td>
 status<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectiveobjectivestatus"><code>ControlObjectiveObjectiveStatus</code></a>
 </td>
 <td>
 <p>status field predicates</p>
@@ -20271,7 +20190,7 @@ status<br />
 <tr>
 <td>
 statusNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectiveobjectivestatus"><code>ControlObjectiveObjectiveStatus</code></a>
 </td>
 <td>
 
@@ -20280,7 +20199,7 @@ statusNEQ<br />
 <tr>
 <td>
 statusIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
+<a href="enums#controlobjectiveobjectivestatus"><code>[ControlObjectiveObjectiveStatus!]</code></a>
 </td>
 <td>
 
@@ -20289,70 +20208,7 @@ statusIn<br />
 <tr>
 <td>
 statusNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectiveobjectivestatus"><code>[ControlObjectiveObjectiveStatus!]</code></a>
 </td>
 <td>
 
@@ -20371,24 +20227,6 @@ statusIsNil<br />
 <td>
 statusNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -24910,7 +24748,7 @@ desiredOutcome<br />
 <tr>
 <td>
 status<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectiveobjectivestatus"><code>ControlObjectiveObjectiveStatus</code></a>
 </td>
 <td>
 <p>status of the control objective</p>
@@ -26431,8 +26269,8 @@ secretValue<br />
 </tr>
 <tr>
 <td>
-integrationIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -26440,7 +26278,7 @@ integrationIDs<br />
 </tr>
 <tr>
 <td>
-organizationIDs<br />
+integrationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -26691,6 +26529,15 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 procedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -26710,6 +26557,15 @@ narrativeIDs<br />
 <tr>
 <td>
 taskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -26995,6 +26851,24 @@ satisfyIDs<br />
 <tr>
 <td>
 programIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+procedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -27994,6 +27868,15 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 internalPolicyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -28084,6 +27967,24 @@ status<br />
 </td>
 <td>
 <p>the status of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+programType<br />
+<a href="enums#programprogramtype"><code>ProgramProgramType</code></a>
+</td>
+<td>
+<p>the type of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+frameworkName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the short name of the compliance standard the program is based on, only used for framework type programs</p>
 </td>
 </tr>
 <tr>
@@ -28504,7 +28405,25 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 procedureIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -29096,15 +29015,6 @@ title<br />
 </tr>
 <tr>
 <td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the description of the task</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -29133,7 +29043,7 @@ category<br />
 <tr>
 <td>
 due<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the due date of the task</p>
@@ -29142,7 +29052,7 @@ due<br />
 <tr>
 <td>
 completed<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the completion date of the task</p>
@@ -29455,6 +29365,15 @@ lastSeen<br />
 </td>
 <td>
 <p>the time the user was last seen</p>
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProvider<br />
+<a href="enums#userauthprovider"><code>UserAuthProvider</code></a>
+</td>
+<td>
+<p>the last auth provider used to login</p>
 </td>
 </tr>
 <tr>
@@ -59507,6 +59426,141 @@ deletedByContainsFold<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>owner_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -60729,6 +60783,141 @@ deletedByContainsFold<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>owner_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -61116,6 +61305,24 @@ secretNameContainsFold<br />
 </tr>
 <tr>
 <td>
+hasOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>owner edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasOwnerWith<br />
+<a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasIntegrations<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -61127,24 +61334,6 @@ hasIntegrations<br />
 <td>
 hasIntegrationsWith<br />
 <a href="inputObjects#integrationwhereinput"><code>[IntegrationWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasOrganization<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>organization edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasOrganizationWith<br />
-<a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -68506,6 +68695,24 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasProcedures<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -68553,6 +68760,24 @@ hasTasks<br />
 <td>
 hasTasksWith<br />
 <a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRisks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>risks edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRisksWith<br />
+<a href="inputObjects#riskwhereinput"><code>[RiskWhereInput!]</code></a>
 </td>
 <td>
 
@@ -75851,6 +76076,42 @@ hasPrograms<br />
 <td>
 hasProgramsWith<br />
 <a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasProcedures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>procedures edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasProceduresWith<br />
+<a href="inputObjects#procedurewhereinput"><code>[ProcedureWhereInput!]</code></a>
 </td>
 <td>
 
@@ -88867,6 +89128,15 @@ userID<br />
 
 </td>
 </tr>
+<tr>
+<td>
+hasUserWith<br />
+<a href="inputObjects#userwhereinput"><code>[UserWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -99366,6 +99636,24 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -101067,6 +101355,177 @@ statusIn<br />
 <td>
 statusNotIn<br />
 <a href="enums#programhistoryprogramstatus"><code>[ProgramHistoryProgramStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programType<br />
+<a href="enums#programhistoryprogramtype"><code>ProgramHistoryProgramType</code></a>
+</td>
+<td>
+<p>program_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+programTypeNEQ<br />
+<a href="enums#programhistoryprogramtype"><code>ProgramHistoryProgramType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programTypeIn<br />
+<a href="enums#programhistoryprogramtype"><code>[ProgramHistoryProgramType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programTypeNotIn<br />
+<a href="enums#programhistoryprogramtype"><code>[ProgramHistoryProgramType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>framework_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -104913,6 +105372,177 @@ statusIn<br />
 <td>
 statusNotIn<br />
 <a href="enums#programprogramstatus"><code>[ProgramProgramStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programType<br />
+<a href="enums#programprogramtype"><code>ProgramProgramType</code></a>
+</td>
+<td>
+<p>program_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+programTypeNEQ<br />
+<a href="enums#programprogramtype"><code>ProgramProgramType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programTypeIn<br />
+<a href="enums#programprogramtype"><code>[ProgramProgramType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programTypeNotIn<br />
+<a href="enums#programprogramtype"><code>[ProgramProgramType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>framework_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+frameworkNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -110613,6 +111243,24 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasProcedures<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -110624,6 +111272,24 @@ hasProcedures<br />
 <td>
 hasProceduresWith<br />
 <a href="inputObjects#procedurewhereinput"><code>[ProcedureWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
 </td>
 <td>
 
@@ -122825,6 +123491,78 @@ unsubscribedNEQ<br />
 </tr>
 <tr>
 <td>
+sendAttempts<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>send_attempts field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+sendAttemptsNEQ<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sendAttemptsIn<br />
+<a href="scalars#int"><code>[Int!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sendAttemptsNotIn<br />
+<a href="scalars#int"><code>[Int!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sendAttemptsGT<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sendAttemptsGTE<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sendAttemptsLT<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sendAttemptsLTE<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -124308,141 +125046,6 @@ titleContainsFold<br />
 </tr>
 <tr>
 <td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>description field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-descriptionNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -124750,7 +125353,7 @@ categoryContainsFold<br />
 <tr>
 <td>
 due<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>due field predicates</p>
@@ -124759,7 +125362,7 @@ due<br />
 <tr>
 <td>
 dueNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124768,7 +125371,7 @@ dueNEQ<br />
 <tr>
 <td>
 dueIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -124777,7 +125380,7 @@ dueIn<br />
 <tr>
 <td>
 dueNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -124786,7 +125389,7 @@ dueNotIn<br />
 <tr>
 <td>
 dueGT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124795,7 +125398,7 @@ dueGT<br />
 <tr>
 <td>
 dueGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124804,7 +125407,7 @@ dueGTE<br />
 <tr>
 <td>
 dueLT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124813,7 +125416,7 @@ dueLT<br />
 <tr>
 <td>
 dueLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124840,7 +125443,7 @@ dueNotNil<br />
 <tr>
 <td>
 completed<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>completed field predicates</p>
@@ -124849,7 +125452,7 @@ completed<br />
 <tr>
 <td>
 completedNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124858,7 +125461,7 @@ completedNEQ<br />
 <tr>
 <td>
 completedIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -124867,7 +125470,7 @@ completedIn<br />
 <tr>
 <td>
 completedNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -124876,7 +125479,7 @@ completedNotIn<br />
 <tr>
 <td>
 completedGT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124885,7 +125488,7 @@ completedGT<br />
 <tr>
 <td>
 completedGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124894,7 +125497,7 @@ completedGTE<br />
 <tr>
 <td>
 completedLT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -124903,7 +125506,7 @@ completedLT<br />
 <tr>
 <td>
 completedLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126403,141 +127006,6 @@ titleContainsFold<br />
 </tr>
 <tr>
 <td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>description field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-descriptionNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-descriptionContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -126845,7 +127313,7 @@ categoryContainsFold<br />
 <tr>
 <td>
 due<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>due field predicates</p>
@@ -126854,7 +127322,7 @@ due<br />
 <tr>
 <td>
 dueNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126863,7 +127331,7 @@ dueNEQ<br />
 <tr>
 <td>
 dueIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -126872,7 +127340,7 @@ dueIn<br />
 <tr>
 <td>
 dueNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -126881,7 +127349,7 @@ dueNotIn<br />
 <tr>
 <td>
 dueGT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126890,7 +127358,7 @@ dueGT<br />
 <tr>
 <td>
 dueGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126899,7 +127367,7 @@ dueGTE<br />
 <tr>
 <td>
 dueLT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126908,7 +127376,7 @@ dueLT<br />
 <tr>
 <td>
 dueLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126935,7 +127403,7 @@ dueNotNil<br />
 <tr>
 <td>
 completed<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>completed field predicates</p>
@@ -126944,7 +127412,7 @@ completed<br />
 <tr>
 <td>
 completedNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126953,7 +127421,7 @@ completedNEQ<br />
 <tr>
 <td>
 completedIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -126962,7 +127430,7 @@ completedIn<br />
 <tr>
 <td>
 completedNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -126971,7 +127439,7 @@ completedNotIn<br />
 <tr>
 <td>
 completedGT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126980,7 +127448,7 @@ completedGT<br />
 <tr>
 <td>
 completedGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126989,7 +127457,7 @@ completedGTE<br />
 <tr>
 <td>
 completedLT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -126998,7 +127466,7 @@ completedLT<br />
 <tr>
 <td>
 completedLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -133181,7 +133649,7 @@ clearDesiredOutcome<br />
 <tr>
 <td>
 status<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#controlobjectiveobjectivestatus"><code>ControlObjectiveObjectiveStatus</code></a>
 </td>
 <td>
 <p>status of the control objective</p>
@@ -136371,6 +136839,24 @@ clearKind<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addIntegrationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -136390,33 +136876,6 @@ removeIntegrationIDs<br />
 <tr>
 <td>
 clearIntegrations<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addOrganizationIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeOrganizationIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearOrganization<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -136946,6 +137405,33 @@ clearControls<br />
 </tr>
 <tr>
 <td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addProcedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -137019,6 +137505,33 @@ removeTaskIDs<br />
 <tr>
 <td>
 clearTasks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRiskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRiskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRisks<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -137508,6 +138021,60 @@ removeProgramIDs<br />
 <tr>
 <td>
 clearPrograms<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addProcedureIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeProcedureIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearProcedures<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -139583,6 +140150,33 @@ clearControls<br />
 </tr>
 <tr>
 <td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addInternalPolicyIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -139799,6 +140393,33 @@ status<br />
 </td>
 <td>
 <p>the status of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+programType<br />
+<a href="enums#programprogramtype"><code>ProgramProgramType</code></a>
+</td>
+<td>
+<p>the type of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+frameworkName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the short name of the compliance standard the program is based on, only used for framework type programs</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFrameworkName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -140648,6 +141269,33 @@ clearControls<br />
 </tr>
 <tr>
 <td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addProcedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -140667,6 +141315,33 @@ removeProcedureIDs<br />
 <tr>
 <td>
 clearProcedures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -141969,24 +142644,6 @@ title<br />
 </tr>
 <tr>
 <td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the description of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-clearDescription<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -142033,7 +142690,7 @@ clearCategory<br />
 <tr>
 <td>
 due<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the due date of the task</p>
@@ -142051,7 +142708,7 @@ clearDue<br />
 <tr>
 <td>
 completed<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the completion date of the task</p>
@@ -142729,6 +143386,24 @@ lastSeen<br />
 <tr>
 <td>
 clearLastSeen<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProvider<br />
+<a href="enums#userauthprovider"><code>UserAuthProvider</code></a>
+</td>
+<td>
+<p>the last auth provider used to login</p>
+</td>
+</tr>
+<tr>
+<td>
+clearLastLoginProvider<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -145548,6 +146223,60 @@ lastSeenIsNil<br />
 <tr>
 <td>
 lastSeenNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProvider<br />
+<a href="enums#userhistoryauthprovider"><code>UserHistoryAuthProvider</code></a>
+</td>
+<td>
+<p>last_login_provider field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderNEQ<br />
+<a href="enums#userhistoryauthprovider"><code>UserHistoryAuthProvider</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderIn<br />
+<a href="enums#userhistoryauthprovider"><code>[UserHistoryAuthProvider!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderNotIn<br />
+<a href="enums#userhistoryauthprovider"><code>[UserHistoryAuthProvider!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -150564,6 +151293,60 @@ lastSeenIsNil<br />
 <tr>
 <td>
 lastSeenNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProvider<br />
+<a href="enums#userauthprovider"><code>UserAuthProvider</code></a>
+</td>
+<td>
+<p>last_login_provider field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderNEQ<br />
+<a href="enums#userauthprovider"><code>UserAuthProvider</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderIn<br />
+<a href="enums#userauthprovider"><code>[UserAuthProvider!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderNotIn<br />
+<a href="enums#userauthprovider"><code>[UserAuthProvider!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastLoginProviderNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>

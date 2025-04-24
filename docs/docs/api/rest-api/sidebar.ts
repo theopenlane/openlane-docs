@@ -4,7 +4,7 @@ const sidebar: SidebarsConfig = {
   apisidebar: [
     {
       type: "doc",
-      id: "api/rest-api/openlane-openapi-3-1-1-specifications",
+      id: "api/rest-api/openlane-openapi-3-0-0-specifications",
     },
     {
       type: "category",

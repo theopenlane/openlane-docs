@@ -168,7 +168,7 @@ where<br />
 
 ## actionPlanSearch
 
-**Type:** [ActionPlanSearchResult](objects#actionplansearchresult)
+**Type:** [ActionPlanConnection](objects#actionplanconnection)
 
 Search across ActionPlan objects
 
@@ -183,7 +183,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -191,7 +227,7 @@ query<br />
 
 ## adminActionPlanSearch
 
-**Type:** [ActionPlanSearchResult](objects#actionplansearchresult)
+**Type:** [ActionPlanConnection](objects#actionplanconnection)
 
 Search across ActionPlan objects
 
@@ -206,7 +242,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -214,7 +286,7 @@ query<br />
 
 ## adminAPITokenSearch
 
-**Type:** [APITokenSearchResult](objects#apitokensearchresult)
+**Type:** [APITokenConnection](objects#apitokenconnection)
 
 Search across APIToken objects
 
@@ -229,7 +301,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -237,7 +345,7 @@ query<br />
 
 ## adminContactSearch
 
-**Type:** [ContactSearchResult](objects#contactsearchresult)
+**Type:** [ContactConnection](objects#contactconnection)
 
 Search across Contact objects
 
@@ -252,7 +360,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -260,7 +404,7 @@ query<br />
 
 ## adminControlImplementationSearch
 
-**Type:** [ControlImplementationSearchResult](objects#controlimplementationsearchresult)
+**Type:** [ControlImplementationConnection](objects#controlimplementationconnection)
 
 Search across ControlImplementation objects
 
@@ -275,7 +419,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -283,7 +463,7 @@ query<br />
 
 ## adminControlObjectiveSearch
 
-**Type:** [ControlObjectiveSearchResult](objects#controlobjectivesearchresult)
+**Type:** [ControlObjectiveConnection](objects#controlobjectiveconnection)
 
 Search across ControlObjective objects
 
@@ -298,7 +478,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -306,7 +522,7 @@ query<br />
 
 ## adminControlSearch
 
-**Type:** [ControlSearchResult](objects#controlsearchresult)
+**Type:** [ControlConnection](objects#controlconnection)
 
 Search across Control objects
 
@@ -321,7 +537,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -329,7 +581,7 @@ query<br />
 
 ## adminDocumentDataSearch
 
-**Type:** [DocumentDataSearchResult](objects#documentdatasearchresult)
+**Type:** [DocumentDataConnection](objects#documentdataconnection)
 
 Search across DocumentData objects
 
@@ -344,7 +596,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -352,7 +640,7 @@ query<br />
 
 ## adminEntitySearch
 
-**Type:** [EntitySearchResult](objects#entitysearchresult)
+**Type:** [EntityConnection](objects#entityconnection)
 
 Search across Entity objects
 
@@ -367,7 +655,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -375,7 +699,7 @@ query<br />
 
 ## adminEntityTypeSearch
 
-**Type:** [EntityTypeSearchResult](objects#entitytypesearchresult)
+**Type:** [EntityTypeConnection](objects#entitytypeconnection)
 
 Search across EntityType objects
 
@@ -390,7 +714,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -398,7 +758,7 @@ query<br />
 
 ## adminEventSearch
 
-**Type:** [EventSearchResult](objects#eventsearchresult)
+**Type:** [EventConnection](objects#eventconnection)
 
 Search across Event objects
 
@@ -413,7 +773,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -421,7 +817,7 @@ query<br />
 
 ## adminEvidenceSearch
 
-**Type:** [EvidenceSearchResult](objects#evidencesearchresult)
+**Type:** [EvidenceConnection](objects#evidenceconnection)
 
 Search across Evidence objects
 
@@ -436,7 +832,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -444,7 +876,7 @@ query<br />
 
 ## adminFileSearch
 
-**Type:** [FileSearchResult](objects#filesearchresult)
+**Type:** [FileConnection](objects#fileconnection)
 
 Search across File objects
 
@@ -459,7 +891,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -467,7 +935,7 @@ query<br />
 
 ## adminGroupSearch
 
-**Type:** [GroupSearchResult](objects#groupsearchresult)
+**Type:** [GroupConnection](objects#groupconnection)
 
 Search across Group objects
 
@@ -482,7 +950,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -490,7 +994,7 @@ query<br />
 
 ## adminIntegrationSearch
 
-**Type:** [IntegrationSearchResult](objects#integrationsearchresult)
+**Type:** [IntegrationConnection](objects#integrationconnection)
 
 Search across Integration objects
 
@@ -505,7 +1009,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -513,7 +1053,7 @@ query<br />
 
 ## adminInternalPolicySearch
 
-**Type:** [InternalPolicySearchResult](objects#internalpolicysearchresult)
+**Type:** [InternalPolicyConnection](objects#internalpolicyconnection)
 
 Search across InternalPolicy objects
 
@@ -528,7 +1068,102 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## adminInviteSearch
+
+**Type:** [InviteConnection](objects#inviteconnection)
+
+Search across Invite objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -536,7 +1171,7 @@ query<br />
 
 ## adminMappedControlSearch
 
-**Type:** [MappedControlSearchResult](objects#mappedcontrolsearchresult)
+**Type:** [MappedControlConnection](objects#mappedcontrolconnection)
 
 Search across MappedControl objects
 
@@ -551,7 +1186,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -559,7 +1230,7 @@ query<br />
 
 ## adminNarrativeSearch
 
-**Type:** [NarrativeSearchResult](objects#narrativesearchresult)
+**Type:** [NarrativeConnection](objects#narrativeconnection)
 
 Search across Narrative objects
 
@@ -574,7 +1245,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -582,7 +1289,7 @@ query<br />
 
 ## adminOrganizationSearch
 
-**Type:** [OrganizationSearchResult](objects#organizationsearchresult)
+**Type:** [OrganizationConnection](objects#organizationconnection)
 
 Search across Organization objects
 
@@ -597,7 +1304,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -605,7 +1348,7 @@ query<br />
 
 ## adminOrganizationSettingSearch
 
-**Type:** [OrganizationSettingSearchResult](objects#organizationsettingsearchresult)
+**Type:** [OrganizationSettingConnection](objects#organizationsettingconnection)
 
 Search across OrganizationSetting objects
 
@@ -620,7 +1363,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -628,7 +1407,7 @@ query<br />
 
 ## adminOrgSubscriptionSearch
 
-**Type:** [OrgSubscriptionSearchResult](objects#orgsubscriptionsearchresult)
+**Type:** [OrgSubscriptionConnection](objects#orgsubscriptionconnection)
 
 Search across OrgSubscription objects
 
@@ -643,7 +1422,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -651,7 +1466,7 @@ query<br />
 
 ## adminPersonalAccessTokenSearch
 
-**Type:** [PersonalAccessTokenSearchResult](objects#personalaccesstokensearchresult)
+**Type:** [PersonalAccessTokenConnection](objects#personalaccesstokenconnection)
 
 Search across PersonalAccessToken objects
 
@@ -666,7 +1481,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -674,7 +1525,7 @@ query<br />
 
 ## adminProcedureSearch
 
-**Type:** [ProcedureSearchResult](objects#proceduresearchresult)
+**Type:** [ProcedureConnection](objects#procedureconnection)
 
 Search across Procedure objects
 
@@ -689,7 +1540,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -697,7 +1584,7 @@ query<br />
 
 ## adminProgramSearch
 
-**Type:** [ProgramSearchResult](objects#programsearchresult)
+**Type:** [ProgramConnection](objects#programconnection)
 
 Search across Program objects
 
@@ -712,7 +1599,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -720,7 +1643,7 @@ query<br />
 
 ## adminRiskSearch
 
-**Type:** [RiskSearchResult](objects#risksearchresult)
+**Type:** [RiskConnection](objects#riskconnection)
 
 Search across Risk objects
 
@@ -735,7 +1658,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -743,7 +1702,7 @@ query<br />
 
 ## adminSearch
 
-**Type:** [SearchResultConnection](objects#searchresultconnection)
+**Type:** [SearchResults](objects#searchresults)
 
 Admin search across all objects
 
@@ -758,7 +1717,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -766,7 +1761,7 @@ query<br />
 
 ## adminStandardSearch
 
-**Type:** [StandardSearchResult](objects#standardsearchresult)
+**Type:** [StandardConnection](objects#standardconnection)
 
 Search across Standard objects
 
@@ -781,7 +1776,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -789,7 +1820,7 @@ query<br />
 
 ## adminSubcontrolSearch
 
-**Type:** [SubcontrolSearchResult](objects#subcontrolsearchresult)
+**Type:** [SubcontrolConnection](objects#subcontrolconnection)
 
 Search across Subcontrol objects
 
@@ -804,7 +1835,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -812,7 +1879,7 @@ query<br />
 
 ## adminSubscriberSearch
 
-**Type:** [SubscriberSearchResult](objects#subscribersearchresult)
+**Type:** [SubscriberConnection](objects#subscriberconnection)
 
 Search across Subscriber objects
 
@@ -827,7 +1894,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -835,7 +1938,7 @@ query<br />
 
 ## adminTaskSearch
 
-**Type:** [TaskSearchResult](objects#tasksearchresult)
+**Type:** [TaskConnection](objects#taskconnection)
 
 Search across Task objects
 
@@ -850,7 +1953,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -858,7 +1997,7 @@ query<br />
 
 ## adminTemplateSearch
 
-**Type:** [TemplateSearchResult](objects#templatesearchresult)
+**Type:** [TemplateConnection](objects#templateconnection)
 
 Search across Template objects
 
@@ -873,7 +2012,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -881,7 +2056,7 @@ query<br />
 
 ## adminUserSearch
 
-**Type:** [UserSearchResult](objects#usersearchresult)
+**Type:** [UserConnection](objects#userconnection)
 
 Search across User objects
 
@@ -896,7 +2071,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -904,7 +2115,7 @@ query<br />
 
 ## adminUserSettingSearch
 
-**Type:** [UserSettingSearchResult](objects#usersettingsearchresult)
+**Type:** [UserSettingConnection](objects#usersettingconnection)
 
 Search across UserSetting objects
 
@@ -919,7 +2130,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -1018,7 +2265,7 @@ where<br />
 
 ## apiTokenSearch
 
-**Type:** [APITokenSearchResult](objects#apitokensearchresult)
+**Type:** [APITokenConnection](objects#apitokenconnection)
 
 Search across APIToken objects
 
@@ -1033,7 +2280,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -1259,7 +2542,7 @@ where<br />
 
 ## contactSearch
 
-**Type:** [ContactSearchResult](objects#contactsearchresult)
+**Type:** [ContactConnection](objects#contactconnection)
 
 Search across Contact objects
 
@@ -1274,7 +2557,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -1532,7 +2851,7 @@ where<br />
 
 ## controlImplementationSearch
 
-**Type:** [ControlImplementationSearchResult](objects#controlimplementationsearchresult)
+**Type:** [ControlImplementationConnection](objects#controlimplementationconnection)
 
 Search across ControlImplementation objects
 
@@ -1547,7 +2866,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -1714,7 +3069,7 @@ where<br />
 
 ## controlObjectiveSearch
 
-**Type:** [ControlObjectiveSearchResult](objects#controlobjectivesearchresult)
+**Type:** [ControlObjectiveConnection](objects#controlobjectiveconnection)
 
 Search across ControlObjective objects
 
@@ -1729,7 +3084,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -1805,7 +3196,7 @@ where<br />
 
 ## controlSearch
 
-**Type:** [ControlSearchResult](objects#controlsearchresult)
+**Type:** [ControlConnection](objects#controlconnection)
 
 Search across Control objects
 
@@ -1820,7 +3211,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -1919,7 +3346,7 @@ where<br />
 
 ## documentDataSearch
 
-**Type:** [DocumentDataSearchResult](objects#documentdatasearchresult)
+**Type:** [DocumentDataConnection](objects#documentdataconnection)
 
 Search across DocumentData objects
 
@@ -1934,7 +3361,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -2169,7 +3632,7 @@ where<br />
 
 ## entitySearch
 
-**Type:** [EntitySearchResult](objects#entitysearchresult)
+**Type:** [EntityConnection](objects#entityconnection)
 
 Search across Entity objects
 
@@ -2184,7 +3647,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -2351,7 +3850,7 @@ where<br />
 
 ## entityTypeSearch
 
-**Type:** [EntityTypeSearchResult](objects#entitytypesearchresult)
+**Type:** [EntityTypeConnection](objects#entitytypeconnection)
 
 Search across EntityType objects
 
@@ -2366,7 +3865,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -2533,7 +4068,7 @@ where<br />
 
 ## eventSearch
 
-**Type:** [EventSearchResult](objects#eventsearchresult)
+**Type:** [EventConnection](objects#eventconnection)
 
 Search across Event objects
 
@@ -2548,7 +4083,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -2715,7 +4286,7 @@ where<br />
 
 ## evidenceSearch
 
-**Type:** [EvidenceSearchResult](objects#evidencesearchresult)
+**Type:** [EvidenceConnection](objects#evidenceconnection)
 
 Search across Evidence objects
 
@@ -2730,7 +4301,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -2897,7 +4504,7 @@ where<br />
 
 ## fileSearch
 
-**Type:** [FileSearchResult](objects#filesearchresult)
+**Type:** [FileConnection](objects#fileconnection)
 
 Search across File objects
 
@@ -2912,7 +4519,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -3238,7 +4881,7 @@ where<br />
 
 ## groupSearch
 
-**Type:** [GroupSearchResult](objects#groupsearchresult)
+**Type:** [GroupConnection](objects#groupconnection)
 
 Search across Group objects
 
@@ -3253,7 +4896,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -3738,7 +5417,7 @@ where<br />
 
 ## integrationSearch
 
-**Type:** [IntegrationSearchResult](objects#integrationsearchresult)
+**Type:** [IntegrationConnection](objects#integrationconnection)
 
 Search across Integration objects
 
@@ -3753,7 +5432,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -3920,7 +5635,7 @@ where<br />
 
 ## internalPolicySearch
 
-**Type:** [InternalPolicySearchResult](objects#internalpolicysearchresult)
+**Type:** [InternalPolicyConnection](objects#internalpolicyconnection)
 
 Search across InternalPolicy objects
 
@@ -3935,7 +5650,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -4027,6 +5778,65 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Invites returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## inviteSearch
+
+**Type:** [InviteConnection](objects#inviteconnection)
+
+Search across Invite objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -4193,7 +6003,7 @@ where<br />
 
 ## mappedControlSearch
 
-**Type:** [MappedControlSearchResult](objects#mappedcontrolsearchresult)
+**Type:** [MappedControlConnection](objects#mappedcontrolconnection)
 
 Search across MappedControl objects
 
@@ -4208,7 +6018,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -4375,7 +6221,7 @@ where<br />
 
 ## narrativeSearch
 
-**Type:** [NarrativeSearchResult](objects#narrativesearchresult)
+**Type:** [NarrativeConnection](objects#narrativeconnection)
 
 Search across Narrative objects
 
@@ -4390,7 +6236,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -4762,7 +6644,7 @@ where<br />
 
 ## organizationSearch
 
-**Type:** [OrganizationSearchResult](objects#organizationsearchresult)
+**Type:** [OrganizationConnection](objects#organizationconnection)
 
 Search across Organization objects
 
@@ -4777,7 +6659,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -4944,7 +6862,7 @@ where<br />
 
 ## organizationSettingSearch
 
-**Type:** [OrganizationSettingSearchResult](objects#organizationsettingsearchresult)
+**Type:** [OrganizationSettingConnection](objects#organizationsettingconnection)
 
 Search across OrganizationSetting objects
 
@@ -4959,7 +6877,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -5285,7 +7239,7 @@ where<br />
 
 ## orgSubscriptionSearch
 
-**Type:** [OrgSubscriptionSearchResult](objects#orgsubscriptionsearchresult)
+**Type:** [OrgSubscriptionConnection](objects#orgsubscriptionconnection)
 
 Search across OrgSubscription objects
 
@@ -5300,7 +7254,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -5399,7 +7389,7 @@ where<br />
 
 ## personalAccessTokenSearch
 
-**Type:** [PersonalAccessTokenSearchResult](objects#personalaccesstokensearchresult)
+**Type:** [PersonalAccessTokenConnection](objects#personalaccesstokenconnection)
 
 Search across PersonalAccessToken objects
 
@@ -5414,7 +7404,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -5581,7 +7607,7 @@ where<br />
 
 ## procedureSearch
 
-**Type:** [ProcedureSearchResult](objects#proceduresearchresult)
+**Type:** [ProcedureConnection](objects#procedureconnection)
 
 Search across Procedure objects
 
@@ -5596,7 +7622,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -5922,7 +7984,7 @@ where<br />
 
 ## programSearch
 
-**Type:** [ProgramSearchResult](objects#programsearchresult)
+**Type:** [ProgramConnection](objects#programconnection)
 
 Search across Program objects
 
@@ -5937,7 +7999,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -6104,7 +8202,7 @@ where<br />
 
 ## riskSearch
 
-**Type:** [RiskSearchResult](objects#risksearchresult)
+**Type:** [RiskConnection](objects#riskconnection)
 
 Search across Risk objects
 
@@ -6119,7 +8217,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -6127,7 +8261,7 @@ query<br />
 
 ## search
 
-**Type:** [SearchResultConnection](objects#searchresultconnection)
+**Type:** [SearchResults](objects#searchresults)
 
 Search across all objects
 
@@ -6142,7 +8276,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -6315,7 +8485,7 @@ where<br />
 
 ## standardSearch
 
-**Type:** [StandardSearchResult](objects#standardsearchresult)
+**Type:** [StandardConnection](objects#standardconnection)
 
 Search across Standard objects
 
@@ -6330,7 +8500,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -6497,7 +8703,7 @@ where<br />
 
 ## subcontrolSearch
 
-**Type:** [SubcontrolSearchResult](objects#subcontrolsearchresult)
+**Type:** [SubcontrolConnection](objects#subcontrolconnection)
 
 Search across Subcontrol objects
 
@@ -6512,7 +8718,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -6611,7 +8853,7 @@ where<br />
 
 ## subscriberSearch
 
-**Type:** [SubscriberSearchResult](objects#subscribersearchresult)
+**Type:** [SubscriberConnection](objects#subscriberconnection)
 
 Search across Subscriber objects
 
@@ -6626,7 +8868,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -6793,7 +9071,7 @@ where<br />
 
 ## taskSearch
 
-**Type:** [TaskSearchResult](objects#tasksearchresult)
+**Type:** [TaskConnection](objects#taskconnection)
 
 Search across Task objects
 
@@ -6808,7 +9086,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -6975,7 +9289,7 @@ where<br />
 
 ## templateSearch
 
-**Type:** [TemplateSearchResult](objects#templatesearchresult)
+**Type:** [TemplateConnection](objects#templateconnection)
 
 Search across Template objects
 
@@ -6990,7 +9304,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -7248,7 +9598,7 @@ where<br />
 
 ## userSearch
 
-**Type:** [UserSearchResult](objects#usersearchresult)
+**Type:** [UserConnection](objects#userconnection)
 
 Search across User objects
 
@@ -7263,7 +9613,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -7430,7 +9816,7 @@ where<br />
 
 ## userSettingSearch
 
-**Type:** [UserSettingSearchResult](objects#usersettingsearchresult)
+**Type:** [UserSettingConnection](objects#usersettingconnection)
 
 Search across UserSetting objects
 
@@ -7445,7 +9831,43 @@ query<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>Search query</p>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
