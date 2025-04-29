@@ -1291,6 +1291,36 @@ ControlObjectiveHistoryControlSource is enum for the field source
 </tbody>
 </table>
 
+## ControlObjectiveHistoryObjectiveStatus
+
+ControlObjectiveHistoryObjectiveStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ARCHIVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DRAFT</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlObjectiveHistoryOpType
 
 ControlObjectiveHistoryOpType is enum for the field operation
@@ -1380,6 +1410,36 @@ Properties by which ControlObjectiveHistory connections can be ordered.
 </tr>
 <tr>
 <td>subcategory</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlObjectiveObjectiveStatus
+
+ControlObjectiveObjectiveStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ARCHIVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DRAFT</td>
 <td>
 
 </td>
@@ -4463,6 +4523,18 @@ Properties by which ProgramHistory connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>PROGRAM_TYPE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>framework</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>start_date</td>
 <td>
 
@@ -4512,6 +4584,42 @@ ProgramHistoryProgramStatus is enum for the field status
 </tr>
 <tr>
 <td>ACTION_REQUIRED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ProgramHistoryProgramType
+
+ProgramHistoryProgramType is enum for the field program_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GAP_ANALYSIS</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>RISK_ASSESSMENT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OTHER</td>
 <td>
 
 </td>
@@ -4691,6 +4799,18 @@ Properties by which Program connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>PROGRAM_TYPE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>framework</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>start_date</td>
 <td>
 
@@ -4740,6 +4860,42 @@ ProgramProgramStatus is enum for the field status
 </tr>
 <tr>
 <td>ACTION_REQUIRED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ProgramProgramType
+
+ProgramProgramType is enum for the field program_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GAP_ANALYSIS</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>RISK_ASSESSMENT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OTHER</td>
 <td>
 
 </td>
@@ -5788,6 +5944,12 @@ Properties by which Subscriber connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>send_attempts</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6189,7 +6351,7 @@ Properties by which TFASetting connections can be ordered.
 
 ## UserAuthProvider
 
-UserAuthProvider is enum for the field auth_provider
+UserAuthProvider is enum for the field last_login_provider
 
 <p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
 
@@ -6225,7 +6387,7 @@ UserAuthProvider is enum for the field auth_provider
 
 ## UserHistoryAuthProvider
 
-UserHistoryAuthProvider is enum for the field auth_provider
+UserHistoryAuthProvider is enum for the field last_login_provider
 
 <p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
 

@@ -30,6 +30,10 @@ The `Boolean` scalar type represents `true` or `false`.
 Define a Relay Cursor type:
 https://relay.dev/graphql/connections.htm#sec-Cursor
 
+## DateTime
+
+DateTime allows clients to use multiple time/date formats ( 2006-01-10 or 2025-04-28T04:00:00Z )
+
 ## ExampleEvidence
 
 The `ExampleEvidence` scalar type represents example evidence that can be used to satisfy the control
