@@ -3296,6 +3296,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteWebauthn
+
+**Type:** [WebauthnDeletePayload!](objects#webauthndeletepayload)
+
+Delete an existing webauthn
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the webauthn</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateActionPlan
 
 **Type:** [ActionPlanUpdatePayload!](objects#actionplanupdatepayload)

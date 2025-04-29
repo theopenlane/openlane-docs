@@ -25139,6 +25139,33 @@ auditorReadComments<br />
 </tr>
 <tr>
 <td>
+auditFirm<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the name of the audit firm conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+auditor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the full name of the auditor conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the email of the auditor conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -26534,6 +26561,33 @@ auditorReadComments<br />
 </td>
 <td>
 <p>can the auditor read comments</p>
+</td>
+</tr>
+<tr>
+<td>
+auditFirm<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the name of the audit firm conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+auditor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the full name of the auditor conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the email of the auditor conducting the audit</p>
 </td>
 </tr>
 </tbody>
@@ -28581,6 +28635,15 @@ users<br />
 <td>
 userSettings<br />
 <a href="objects#usersettingconnection"><code>UserSettingConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+webauthns<br />
+<a href="objects#webauthnconnection"><code>WebauthnConnection</code></a>
 </td>
 <td>
 
@@ -34083,6 +34146,78 @@ where<br />
 </tr>
 <tr>
 <td>
+webauthns<br />
+<a href="objects#webauthnconnection"><code>WebauthnConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#webauthnorder"><code>WebauthnOrder</code></a>
+</td>
+<td>
+<p>Ordering options for Webauthns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#webauthnwhereinput"><code>WebauthnWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Webauthns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
@@ -35774,6 +35909,202 @@ user<br />
 </td>
 <td>
 <p>Updated user</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## Webauthn
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+aaguid<br />
+<a href="scalars#aaguid"><code>AAGUID!</code></a>
+</td>
+<td>
+<p>The AAGUID of the authenticator; AAGUID is defined as an array containing the globally unique identifier of the authenticator model being sought</p>
+</td>
+</tr>
+<tr>
+<td>
+backupEligible<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Flag backup eligible indicates the credential is able to be backed up and/or sync&#39;d between devices. This should NEVER change</p>
+</td>
+</tr>
+<tr>
+<td>
+backupState<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Flag backup state indicates the credential has been backed up and/or sync&#39;d</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#user"><code>User!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WebauthnConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#webauthnedge"><code>[WebauthnEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WebauthnDeletePayload
+
+Return response for deleteWebauthn mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted webauthn ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WebauthnEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#webauthn"><code>Webauthn</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
 </td>
 </tr>
 </tbody>

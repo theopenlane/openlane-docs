@@ -89,6 +89,7 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [UserHistory](objects#userhistory)
 - [UserSetting](objects#usersetting)
 - [UserSettingHistory](objects#usersettinghistory)
+- [Webauthn](objects#webauthn)
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
