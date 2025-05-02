@@ -28034,6 +28034,33 @@ auditorReadComments<br />
 </tr>
 <tr>
 <td>
+auditFirm<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the name of the audit firm conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+auditor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the full name of the auditor conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the email of the auditor conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -29621,15 +29648,6 @@ emailConfirmed<br />
 </td>
 <td>
 <p>whether the user has confirmed their email address</p>
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowed<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>specifies a user may complete authentication by verifying a WebAuthn capable device</p>
 </td>
 </tr>
 <tr>
@@ -101765,6 +101783,411 @@ auditorReadCommentsNEQ<br />
 
 </td>
 </tr>
+<tr>
+<td>
+auditFirm<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>audit_firm field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+auditFirmNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>auditor field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>auditor_email field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -105777,6 +106200,411 @@ auditorReadComments<br />
 <td>
 auditorReadCommentsNEQ<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirm<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>audit_firm field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+auditFirmNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditFirmContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>auditor field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>auditor_email field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmailContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -140487,6 +141315,60 @@ auditorReadComments<br />
 </tr>
 <tr>
 <td>
+auditFirm<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the name of the audit firm conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAuditFirm<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the full name of the auditor conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAuditor<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+auditorEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the email of the auditor conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAuditorEmail<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -143664,7 +144546,7 @@ removeWebauthnIDs<br />
 </tr>
 <tr>
 <td>
-clearWebauthn<br />
+clearWebauthns<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -143979,24 +144861,6 @@ emailConfirmed<br />
 </td>
 <td>
 <p>whether the user has confirmed their email address</p>
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowed<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>specifies a user may complete authentication by verifying a WebAuthn capable device</p>
-</td>
-</tr>
-<tr>
-<td>
-clearIsWebauthnAllowed<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 <tr>
@@ -148005,42 +148869,6 @@ emailConfirmedNEQ<br />
 </tr>
 <tr>
 <td>
-isWebauthnAllowed<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>is_webauthn_allowed field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowedNEQ<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowedIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowedNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 isTfaEnabled<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -149291,42 +150119,6 @@ emailConfirmed<br />
 <tr>
 <td>
 emailConfirmedNEQ<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowed<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>is_webauthn_allowed field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowedNEQ<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowedIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowedNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -151670,6 +152462,24 @@ hasOrganizationsWith<br />
 </tr>
 <tr>
 <td>
+hasWebauthns<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>webauthns edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWebauthnsWith<br />
+<a href="inputObjects#webauthnwhereinput"><code>[WebauthnWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasFiles<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -151861,6 +152671,634 @@ hasProgramMemberships<br />
 <td>
 hasProgramMembershipsWith<br />
 <a href="inputObjects#programmembershipwhereinput"><code>[ProgramMembershipWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WebauthnOrder
+
+Ordering options for Webauthn connections
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+direction<br />
+<a href="enums#orderdirection"><code>OrderDirection!</code></a>
+</td>
+<td>
+<p>The ordering direction.</p>
+</td>
+</tr>
+<tr>
+<td>
+field<br />
+<a href="enums#webauthnorderfield"><code>WebauthnOrderField!</code></a>
+</td>
+<td>
+<p>The field by which to order Webauthns.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WebauthnWhereInput
+
+WebauthnWhereInput is used for filtering Webauthn objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#webauthnwhereinput"><code>WebauthnWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#webauthnwhereinput"><code>[WebauthnWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#webauthnwhereinput"><code>[WebauthnWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>owner edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasOwnerWith<br />
+<a href="inputObjects#userwhereinput"><code>[UserWhereInput!]</code></a>
 </td>
 <td>
 

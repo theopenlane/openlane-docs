@@ -6757,3 +6757,27 @@ UserSettingUserStatus is enum for the field status
 </tbody>
 </table>
 
+## WebauthnOrderField
+
+Properties by which Webauthn connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
