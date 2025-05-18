@@ -755,7 +755,7 @@ ControlControlStatus is enum for the field status
 </td>
 </tr>
 <tr>
-<td>NULL</td>
+<td>NOT_IMPLEMENTED</td>
 <td>
 
 </td>
@@ -875,7 +875,7 @@ ControlHistoryControlStatus is enum for the field status
 </td>
 </tr>
 <tr>
-<td>NULL</td>
+<td>NOT_IMPLEMENTED</td>
 <td>
 
 </td>
@@ -1566,6 +1566,168 @@ Properties by which Control connections can be ordered.
 </tr>
 <tr>
 <td>ref_code</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomDomainCustomDomainStatus
+
+CustomDomainCustomDomainStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INVALID</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VERIFIED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED_VERIFY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomDomainHistoryCustomDomainStatus
+
+CustomDomainHistoryCustomDomainStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INVALID</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VERIFIED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED_VERIFY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomDomainHistoryOpType
+
+CustomDomainHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomDomainHistoryOrderField
+
+Properties by which CustomDomainHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>cname_record</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomDomainOrderField
+
+Properties by which CustomDomain connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>cname_record</td>
 <td>
 
 </td>
@@ -3252,6 +3414,96 @@ InviteRole is enum for the field role
 </tr>
 <tr>
 <td>MEMBER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappableDomainHistoryOpType
+
+MappableDomainHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappableDomainHistoryOrderField
+
+Properties by which MappableDomainHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappableDomainOrderField
+
+Properties by which MappableDomain connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>name</td>
 <td>
 
 </td>
@@ -5591,7 +5843,7 @@ SubcontrolControlStatus is enum for the field status
 </td>
 </tr>
 <tr>
-<td>NULL</td>
+<td>NOT_IMPLEMENTED</td>
 <td>
 
 </td>
@@ -5711,7 +5963,7 @@ SubcontrolHistoryControlStatus is enum for the field status
 </td>
 </tr>
 <tr>
-<td>NULL</td>
+<td>NOT_IMPLEMENTED</td>
 <td>
 
 </td>

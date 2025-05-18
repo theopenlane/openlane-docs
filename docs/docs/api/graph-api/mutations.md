@@ -329,6 +329,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVCustomDomain
+
+**Type:** [CustomDomainBulkCreatePayload!](objects#customdomainbulkcreatepayload)
+
+Create multiple new customDomains via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVDocumentData
 
 **Type:** [DocumentDataBulkCreatePayload!](objects#documentdatabulkcreatepayload)
@@ -577,6 +600,29 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVMappableDomain
+
+**Type:** [MappableDomainBulkCreatePayload!](objects#mappabledomainbulkcreatepayload)
+
+Create multiple new mappableDomains via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the mappableDomain</p>
 </td>
 </tr>
 </tbody>
@@ -881,6 +927,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCustomDomain
+
+**Type:** [CustomDomainBulkCreatePayload!](objects#customdomainbulkcreatepayload)
+
+Create multiple new customDomains
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcustomdomaininput"><code>[CreateCustomDomainInput!]</code></a>
+</td>
+<td>
+<p>values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkDocumentData
 
 **Type:** [DocumentDataBulkCreatePayload!](objects#documentdatabulkcreatepayload)
@@ -1129,6 +1198,29 @@ input<br />
 </td>
 <td>
 <p>values of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkMappableDomain
+
+**Type:** [MappableDomainBulkCreatePayload!](objects#mappabledomainbulkcreatepayload)
+
+Create multiple new mappableDomains
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createmappabledomaininput"><code>[CreateMappableDomainInput!]</code></a>
+</td>
+<td>
+<p>values of the mappableDomain</p>
 </td>
 </tr>
 </tbody>
@@ -1571,6 +1663,29 @@ input<br />
 </tbody>
 </table>
 
+## createCustomDomain
+
+**Type:** [CustomDomainCreatePayload!](objects#customdomaincreatepayload)
+
+Create a new customDomain
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcustomdomaininput"><code>CreateCustomDomainInput!</code></a>
+</td>
+<td>
+<p>values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createDocumentData
 
 **Type:** [DocumentDataCreatePayload!](objects#documentdatacreatepayload)
@@ -1958,6 +2073,29 @@ input<br />
 </td>
 <td>
 <p>values of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createMappableDomain
+
+**Type:** [MappableDomainCreatePayload!](objects#mappabledomaincreatepayload)
+
+Create a new mappableDomain
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createmappabledomaininput"><code>CreateMappableDomainInput!</code></a>
+</td>
+<td>
+<p>values of the mappableDomain</p>
 </td>
 </tr>
 </tbody>
@@ -2620,6 +2758,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteCustomDomain
+
+**Type:** [CustomDomainDeletePayload!](objects#customdomaindeletepayload)
+
+Delete an existing customDomain
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteDocumentData
 
 **Type:** [DocumentDataDeletePayload!](objects#documentdatadeletepayload)
@@ -2914,6 +3075,29 @@ id<br />
 </td>
 <td>
 <p>ID of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteMappableDomain
+
+**Type:** [MappableDomainDeletePayload!](objects#mappabledomaindeletepayload)
+
+Delete an existing mappableDomain
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the mappableDomain</p>
 </td>
 </tr>
 </tbody>
@@ -3511,6 +3695,38 @@ input<br />
 </tbody>
 </table>
 
+## updateCustomDomain
+
+**Type:** [CustomDomainUpdatePayload!](objects#customdomainupdatepayload)
+
+Update an existing customDomain
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the customDomain</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatecustomdomaininput"><code>UpdateCustomDomainInput!</code></a>
+</td>
+<td>
+<p>New values for the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateDocumentData
 
 **Type:** [DocumentDataUpdatePayload!](objects#documentdataupdatepayload)
@@ -3899,6 +4115,38 @@ input<br />
 </td>
 <td>
 <p>New values for the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateMappableDomain
+
+**Type:** [MappableDomainUpdatePayload!](objects#mappabledomainupdatepayload)
+
+Update an existing mappableDomain
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the mappableDomain</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatemappabledomaininput"><code>UpdateMappableDomainInput!</code></a>
+</td>
+<td>
+<p>New values for the mappableDomain</p>
 </td>
 </tr>
 </tbody>
