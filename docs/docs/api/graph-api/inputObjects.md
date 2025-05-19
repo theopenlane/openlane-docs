@@ -31276,42 +31276,6 @@ mappableDomainIDContainsFold<br />
 
 </td>
 </tr>
-<tr>
-<td>
-status<br />
-<a href="enums#customdomainhistorycustomdomainstatus"><code>CustomDomainHistoryCustomDomainStatus</code></a>
-</td>
-<td>
-<p>status field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-statusNEQ<br />
-<a href="enums#customdomainhistorycustomdomainstatus"><code>CustomDomainHistoryCustomDomainStatus</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusIn<br />
-<a href="enums#customdomainhistorycustomdomainstatus"><code>[CustomDomainHistoryCustomDomainStatus!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusNotIn<br />
-<a href="enums#customdomainhistorycustomdomainstatus"><code>[CustomDomainHistoryCustomDomainStatus!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -32511,42 +32475,6 @@ mappableDomainIDEqualFold<br />
 <td>
 mappableDomainIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#customdomaincustomdomainstatus"><code>CustomDomainCustomDomainStatus</code></a>
-</td>
-<td>
-<p>status field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-statusNEQ<br />
-<a href="enums#customdomaincustomdomainstatus"><code>CustomDomainCustomDomainStatus</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusIn<br />
-<a href="enums#customdomaincustomdomainstatus"><code>[CustomDomainCustomDomainStatus!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusNotIn<br />
-<a href="enums#customdomaincustomdomainstatus"><code>[CustomDomainCustomDomainStatus!]</code></a>
 </td>
 <td>
 

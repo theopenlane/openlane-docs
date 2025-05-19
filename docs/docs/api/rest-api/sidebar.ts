@@ -30,6 +30,18 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/rest-api/account-features",
+          label: "AccountFeatures",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/account-features-by-id",
+          label: "AccountFeaturesByID",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
           id: "api/rest-api/account-roles",
           label: "AccountRoles",
           className: "api-method post",

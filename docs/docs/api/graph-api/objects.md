@@ -6064,33 +6064,6 @@ mappableDomainID<br />
 </tr>
 <tr>
 <td>
-txtRecordSubdomain<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>String to be prepended to the cname_record, used to evaluate domain ownership.</p>
-</td>
-</tr>
-<tr>
-<td>
-txtRecordValue<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Hashed expected value of the TXT record. This is a random string that is generated on creation and is used to verify ownership of the domain.</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#customdomaincustomdomainstatus"><code>CustomDomainCustomDomainStatus!</code></a>
-</td>
-<td>
-<p>Status of the custom domain verification</p>
-</td>
-</tr>
-<tr>
-<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -6379,33 +6352,6 @@ mappableDomainID<br />
 </td>
 <td>
 <p>The mappable domain id that this custom domain maps to</p>
-</td>
-</tr>
-<tr>
-<td>
-txtRecordSubdomain<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>String to be prepended to the cname_record, used to evaluate domain ownership.</p>
-</td>
-</tr>
-<tr>
-<td>
-txtRecordValue<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Hashed expected value of the TXT record. This is a random string that is generated on creation and is used to verify ownership of the domain.</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#customdomainhistorycustomdomainstatus"><code>CustomDomainHistoryCustomDomainStatus!</code></a>
-</td>
-<td>
-<p>Status of the custom domain verification</p>
 </td>
 </tr>
 </tbody>
