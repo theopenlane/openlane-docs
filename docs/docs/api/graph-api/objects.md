@@ -67,24 +67,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -764,24 +746,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -1069,24 +1033,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -1565,24 +1511,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -2037,24 +1965,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -2287,24 +2197,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -2364,6 +2256,15 @@ source<br />
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFramework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework for the control if it came from a standard</p>
 </td>
 </tr>
 <tr>
@@ -3088,8 +2989,35 @@ where<br />
 </tr>
 <tr>
 <td>
-mappedControls<br />
-<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
+controlOwner<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>the group of users who are responsible for the control, will be assigned tasks, approval, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+delegate<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>temporary delegate for the control, used for temporary control ownership</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
 
@@ -3138,19 +3066,19 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
 </td>
 <td>
-<p>Ordering options for MappedControls returned from the connection.</p>
+<p>Ordering options for Groups returned from the connection.</p>
 </td>
 </tr>
 <tr>
 <td>
 where<br />
-<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
 </td>
 <td>
-<p>Filtering options for MappedControls returned from the connection.</p>
+<p>Filtering options for Groups returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -3160,56 +3088,74 @@ where<br />
 </tr>
 <tr>
 <td>
-controlOwner<br />
-<a href="objects#group"><code>Group</code></a>
-</td>
-<td>
-<p>the group of users who are responsible for the control, will be assigned tasks, approval, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-delegate<br />
-<a href="objects#group"><code>Group</code></a>
-</td>
-<td>
-<p>temporary delegate for the control, used for temporary control ownership</p>
-</td>
-</tr>
-<tr>
-<td>
-owner<br />
-<a href="objects#organization"><code>Organization</code></a>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
 
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
 </td>
 </tr>
 <tr>
 <td>
-blockedGroups<br />
-<a href="objects#group"><code>[Group!]</code></a>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
 </td>
 <td>
-<p>groups that are blocked from viewing or editing the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-editors<br />
-<a href="objects#group"><code>[Group!]</code></a>
-</td>
-<td>
-<p>provides edit access to the risk to members of the group</p>
+<p>Returns the first <em>n</em> elements from the list.</p>
 </td>
 </tr>
 <tr>
 <td>
-viewers<br />
-<a href="objects#group"><code>[Group!]</code></a>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
 </td>
 <td>
-<p>provides view access to the risk to members of the group</p>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -3430,6 +3376,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobs<br />
+<a href="objects#controlscheduledjobconnection"><code>ControlScheduledJobConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlscheduledjoborder"><code>[ControlScheduledJobOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlscheduledjobwhereinput"><code>ControlScheduledJobWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlScheduledJobs returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -3659,24 +3677,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -3736,6 +3736,15 @@ source<br />
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFramework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework for the control if it came from a standard</p>
 </td>
 </tr>
 <tr>
@@ -4014,24 +4023,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -4099,6 +4090,222 @@ owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -4468,24 +4675,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -4700,24 +4889,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -4827,28 +4998,217 @@ owner<br />
 <tr>
 <td>
 blockedGroups<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are blocked from viewing or editing the risk</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 editors<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides edit access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 viewers<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides view access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -5721,24 +6081,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -5929,6 +6271,656 @@ controlObjective<br />
 </tbody>
 </table>
 
+## ControlScheduledJob
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+jobID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the scheduled_job id to take the script to run from</p>
+</td>
+</tr>
+<tr>
+<td>
+configuration<br />
+<a href="scalars#jobconfiguration"><code>JobConfiguration!</code></a>
+</td>
+<td>
+<p>the configuration to run this job</p>
+</td>
+</tr>
+<tr>
+<td>
+cadence<br />
+<a href="scalars#jobcadence"><code>JobCadence</code></a>
+</td>
+<td>
+<p>the schedule to run this job. If not provided, it would inherit the cadence of the parent job</p>
+</td>
+</tr>
+<tr>
+<td>
+cron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron syntax. If not provided, it would inherit the cron of the parent job</p>
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the runner that this job will run on. If not set, it will scheduled on a general runner instead</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+job<br />
+<a href="objects#scheduledjob"><code>ScheduledJob!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunner<br />
+<a href="objects#jobrunner"><code>JobRunner</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobBulkCreatePayload
+
+Return response for createBulkControlScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+controlScheduledJobs<br />
+<a href="objects#controlscheduledjob"><code>[ControlScheduledJob!]</code></a>
+</td>
+<td>
+<p>Created controlScheduledJobs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#controlscheduledjobedge"><code>[ControlScheduledJobEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobCreatePayload
+
+Return response for createControlScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+controlScheduledJob<br />
+<a href="objects#controlscheduledjob"><code>ControlScheduledJob!</code></a>
+</td>
+<td>
+<p>Created controlScheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobDeletePayload
+
+Return response for deleteControlScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted controlScheduledJob ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#controlscheduledjob"><code>ControlScheduledJob</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#controlscheduledjobhistoryoptype"><code>ControlScheduledJobHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+jobID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the scheduled_job id to take the script to run from</p>
+</td>
+</tr>
+<tr>
+<td>
+configuration<br />
+<a href="scalars#jobconfiguration"><code>JobConfiguration!</code></a>
+</td>
+<td>
+<p>the configuration to run this job</p>
+</td>
+</tr>
+<tr>
+<td>
+cadence<br />
+<a href="scalars#jobcadence"><code>JobCadence</code></a>
+</td>
+<td>
+<p>the schedule to run this job. If not provided, it would inherit the cadence of the parent job</p>
+</td>
+</tr>
+<tr>
+<td>
+cron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron syntax. If not provided, it would inherit the cron of the parent job</p>
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the runner that this job will run on. If not set, it will scheduled on a general runner instead</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#controlscheduledjobhistoryedge"><code>[ControlScheduledJobHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#controlscheduledjobhistory"><code>ControlScheduledJobHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlScheduledJobUpdatePayload
+
+Return response for updateControlScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+controlScheduledJob<br />
+<a href="objects#controlscheduledjob"><code>ControlScheduledJob!</code></a>
+</td>
+<td>
+<p>Updated controlScheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlUpdatePayload
 
 Return response for updateControl mutation
@@ -6010,24 +7002,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -6064,6 +7038,15 @@ mappableDomainID<br />
 </tr>
 <tr>
 <td>
+dnsVerificationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The ID of the dns verification record</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -6075,6 +7058,15 @@ owner<br />
 <td>
 mappableDomain<br />
 <a href="objects#mappabledomain"><code>MappableDomain!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dnsVerification<br />
+<a href="objects#dnsverification"><code>DNSVerification</code></a>
 </td>
 <td>
 
@@ -6302,24 +7294,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -6352,6 +7326,15 @@ mappableDomainID<br />
 </td>
 <td>
 <p>The mappable domain id that this custom domain maps to</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsVerificationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The ID of the dns verification record</p>
 </td>
 </tr>
 </tbody>
@@ -6447,7 +7430,7 @@ customDomain<br />
 </tbody>
 </table>
 
-## DocumentData
+## DNSVerification
 
 
 
@@ -6507,7 +7490,371 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+cloudflareHostnameID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The ID of the custom domain in cloudflare</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsTxtRecord<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the dns txt record</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsTxtValue<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the expected value of the dns txt record</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsVerificationStatus<br />
+<a href="enums#dnsverificationdnsverificationstatus"><code>DNSVerificationDNSVerificationStatus!</code></a>
+</td>
+<td>
+<p>Status of the domain verification</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsVerificationStatusReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Reason of the dns verification status, for giving the user diagnostic info</p>
+</td>
+</tr>
+<tr>
+<td>
+acmeChallengePath<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Path under /.well-known/acme-challenge/ to serve the ACME challenge</p>
+</td>
+</tr>
+<tr>
+<td>
+expectedAcmeChallengeValue<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the expected value of the acme challenge record</p>
+</td>
+</tr>
+<tr>
+<td>
+acmeChallengeStatus<br />
+<a href="enums#dnsverificationsslverificationstatus"><code>DNSVerificationSSLVerificationStatus!</code></a>
+</td>
+<td>
+<p>Status of the ACME challenge validation</p>
+</td>
+</tr>
+<tr>
+<td>
+acmeChallengeStatusReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Reason of the ACME status, for giving the user diagnostic info</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+customDomains<br />
+<a href="objects#customdomainconnection"><code>CustomDomainConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#customdomainorder"><code>[CustomDomainOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CustomDomains returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#customdomainwhereinput"><code>CustomDomainWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CustomDomains returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationBulkCreatePayload
+
+Return response for createBulkDNSVerification mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+dnsVerifications<br />
+<a href="objects#dnsverification"><code>[DNSVerification!]</code></a>
+</td>
+<td>
+<p>Created dnsVerifications</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#dnsverificationedge"><code>[DNSVerificationEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationCreatePayload
+
+Return response for createDNSVerification mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+dnsVerification<br />
+<a href="objects#dnsverification"><code>DNSVerification!</code></a>
+</td>
+<td>
+<p>Created dnsVerification</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationDeletePayload
+
+Return response for deleteDNSVerification mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted dnsVerification ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#dnsverification"><code>DNSVerification</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#dnsverificationhistoryoptype"><code>DNSVerificationHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
@@ -6516,7 +7863,275 @@ deletedAt<br />
 </tr>
 <tr>
 <td>
-deletedBy<br />
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+cloudflareHostnameID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The ID of the custom domain in cloudflare</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsTxtRecord<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the dns txt record</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsTxtValue<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the expected value of the dns txt record</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsVerificationStatus<br />
+<a href="enums#dnsverificationhistorydnsverificationstatus"><code>DNSVerificationHistoryDNSVerificationStatus!</code></a>
+</td>
+<td>
+<p>Status of the domain verification</p>
+</td>
+</tr>
+<tr>
+<td>
+dnsVerificationStatusReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Reason of the dns verification status, for giving the user diagnostic info</p>
+</td>
+</tr>
+<tr>
+<td>
+acmeChallengePath<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Path under /.well-known/acme-challenge/ to serve the ACME challenge</p>
+</td>
+</tr>
+<tr>
+<td>
+expectedAcmeChallengeValue<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the expected value of the acme challenge record</p>
+</td>
+</tr>
+<tr>
+<td>
+acmeChallengeStatus<br />
+<a href="enums#dnsverificationhistorysslverificationstatus"><code>DNSVerificationHistorySSLVerificationStatus!</code></a>
+</td>
+<td>
+<p>Status of the ACME challenge validation</p>
+</td>
+</tr>
+<tr>
+<td>
+acmeChallengeStatusReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Reason of the ACME status, for giving the user diagnostic info</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#dnsverificationhistoryedge"><code>[DNSVerificationHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#dnsverificationhistory"><code>DNSVerificationHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationUpdatePayload
+
+Return response for updateDNSVerification mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+dnsVerification<br />
+<a href="objects#dnsverification"><code>DNSVerification!</code></a>
+</td>
+<td>
+<p>Updated dnsVerification</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DocumentData
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -6943,24 +8558,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -7140,24 +8737,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -7764,24 +9343,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -7976,24 +9537,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -8322,24 +9865,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -9872,24 +11397,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -10659,24 +12166,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -10928,24 +12417,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -11501,24 +12972,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -11775,24 +13228,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -11884,171 +13319,1656 @@ owner<br />
 <tr>
 <td>
 programEditors<br />
-<a href="objects#program"><code>[Program!]</code></a>
+<a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Programs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#programwhereinput"><code>ProgramWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 programBlockedGroups<br />
-<a href="objects#program"><code>[Program!]</code></a>
+<a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Programs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#programwhereinput"><code>ProgramWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 programViewers<br />
-<a href="objects#program"><code>[Program!]</code></a>
+<a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Programs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#programwhereinput"><code>ProgramWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 riskEditors<br />
-<a href="objects#risk"><code>[Risk!]</code></a>
+<a href="objects#riskconnection"><code>RiskConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#riskorder"><code>[RiskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Risks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#riskwhereinput"><code>RiskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Risks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 riskBlockedGroups<br />
-<a href="objects#risk"><code>[Risk!]</code></a>
+<a href="objects#riskconnection"><code>RiskConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#riskorder"><code>[RiskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Risks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#riskwhereinput"><code>RiskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Risks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 riskViewers<br />
-<a href="objects#risk"><code>[Risk!]</code></a>
+<a href="objects#riskconnection"><code>RiskConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#riskorder"><code>[RiskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Risks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#riskwhereinput"><code>RiskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Risks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 controlObjectiveEditors<br />
-<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
+<a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlobjectiveorder"><code>[ControlObjectiveOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlObjectives returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlobjectivewhereinput"><code>ControlObjectiveWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlObjectives returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 controlObjectiveBlockedGroups<br />
-<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
+<a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlobjectiveorder"><code>[ControlObjectiveOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlObjectives returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlobjectivewhereinput"><code>ControlObjectiveWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlObjectives returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 controlObjectiveViewers<br />
-<a href="objects#controlobjective"><code>[ControlObjective!]</code></a>
+<a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
 <td>
 
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
 </td>
 </tr>
 <tr>
 <td>
-controlEditors<br />
-<a href="objects#control"><code>[Control!]</code></a>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
 </td>
 <td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlBlockedGroups<br />
-<a href="objects#control"><code>[Control!]</code></a>
-</td>
-<td>
-
+<p>Returns the first <em>n</em> elements from the list.</p>
 </td>
 </tr>
 <tr>
 <td>
-controlViewers<br />
-<a href="objects#control"><code>[Control!]</code></a>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
 </td>
 <td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlobjectiveorder"><code>[ControlObjectiveOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlObjectives returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlobjectivewhereinput"><code>ControlObjectiveWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlObjectives returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 narrativeEditors<br />
-<a href="objects#narrative"><code>[Narrative!]</code></a>
+<a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#narrativeorder"><code>[NarrativeOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Narratives returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#narrativewhereinput"><code>NarrativeWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Narratives returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 narrativeBlockedGroups<br />
-<a href="objects#narrative"><code>[Narrative!]</code></a>
+<a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#narrativeorder"><code>[NarrativeOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Narratives returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#narrativewhereinput"><code>NarrativeWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Narratives returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 narrativeViewers<br />
-<a href="objects#narrative"><code>[Narrative!]</code></a>
+<a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#narrativeorder"><code>[NarrativeOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Narratives returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#narrativewhereinput"><code>NarrativeWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Narratives returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementationEditors<br />
+<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementationBlockedGroups<br />
+<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementationViewers<br />
+<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 procedureEditors<br />
-<a href="objects#procedure"><code>[Procedure!]</code></a>
+<a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#procedureorder"><code>[ProcedureOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Procedures returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#procedurewhereinput"><code>ProcedureWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Procedures returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 procedureBlockedGroups<br />
-<a href="objects#procedure"><code>[Procedure!]</code></a>
+<a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#procedureorder"><code>[ProcedureOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Procedures returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#procedurewhereinput"><code>ProcedureWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Procedures returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 internalPolicyEditors<br />
-<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 internalPolicyBlockedGroups<br />
-<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlEditors<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlBlockedGroups<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+mappedControlEditors<br />
+<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+mappedControlBlockedGroups<br />
+<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -12064,9 +14984,72 @@ setting<br />
 <tr>
 <td>
 users<br />
-<a href="objects#user"><code>[User!]</code></a>
+<a href="objects#userconnection"><code>UserConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#userorder"><code>[UserOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Users returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#userwhereinput"><code>UserWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Users returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -12361,19 +15344,127 @@ where<br />
 <tr>
 <td>
 members<br />
-<a href="objects#groupmembership"><code>[GroupMembership!]</code></a>
+<a href="objects#groupmembershipconnection"><code>GroupMembershipConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#groupmembershiporder"><code>[GroupMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for GroupMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupmembershipwhereinput"><code>GroupMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for GroupMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 <tr>
 <td>
 permissions<br />
-<a href="objects#grouppermissions"><code>[GroupPermissions!]</code></a>
+<a href="objects#grouppermissionconnection"><code>GroupPermissionConnection!</code></a>
 </td>
 <td>
 <p>permissions the group provides</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -12598,24 +15689,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -12819,24 +15892,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13182,24 +16237,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 role<br />
 <a href="enums#groupmembershiphistoryrole"><code>GroupMembershipHistoryRole!</code></a>
 </td>
@@ -13318,11 +16355,15 @@ groupMembership<br />
 </tbody>
 </table>
 
-## GroupPermissions
+## GroupPermission
 
-GroupPermissions contains details for the related object and the permissions
+GroupPermission contains details for the related object and the permissions
 the group provides (or removes in the case of blocked) to the object within the
 organization
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -13335,7 +16376,7 @@ objectType<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-
+<p>the type of object the permissions are for, e.g. Program, Control, etc.</p>
 </td>
 </tr>
 <tr>
@@ -13344,16 +16385,16 @@ permissions<br />
 <a href="enums#permission"><code>Permission!</code></a>
 </td>
 <td>
-
+<p>the permissions the group has in relation to the object, e.g. EDITOR, VIEWER, BLOCKED</p>
 </td>
 </tr>
 <tr>
 <td>
 id<br />
-<a href="scalars#id"><code>ID</code></a>
+<a href="scalars#id"><code>ID!</code></a>
 </td>
 <td>
-
+<p>the ID of the object the group was given permissions to</p>
 </td>
 </tr>
 <tr>
@@ -13362,7 +16403,7 @@ displayID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-
+<p>the displayID of the object the group was given permissions to</p>
 </td>
 </tr>
 <tr>
@@ -13371,7 +16412,76 @@ name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<p>the  name of the object the group was given permissions to</p>
+</td>
+</tr>
+</tbody>
+</table>
 
+## GroupPermissionConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#grouppermissionedge"><code>[GroupPermissionEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## GroupPermissionEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#grouppermission"><code>GroupPermission</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
 </td>
 </tr>
 </tbody>
@@ -13429,24 +16539,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -13729,24 +16821,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 visibility<br />
 <a href="enums#groupsettinghistoryvisibility"><code>GroupSettingHistoryVisibility!</code></a>
 </td>
@@ -13956,24 +17030,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -14400,24 +17456,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 ownerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -14606,24 +17644,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -15050,24 +18070,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -15264,24 +18266,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -15418,19 +18402,145 @@ owner<br />
 <tr>
 <td>
 blockedGroups<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are blocked from viewing or editing the risk</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 editors<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides edit access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -16249,24 +19359,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -16536,24 +19628,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -16860,6 +19934,1382 @@ invite<br />
 </tbody>
 </table>
 
+## JobResult
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the job this result belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#jobresultjobexecutionstatus"><code>JobResultJobExecutionStatus!</code></a>
+</td>
+<td>
+<p>the status of this job. did it fail? did it succeed?</p>
+</td>
+</tr>
+<tr>
+<td>
+exitCode<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>the exit code from the script that was executed</p>
+</td>
+</tr>
+<tr>
+<td>
+finishedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>The time the job finished it&#39;s execution. This is different from the db insertion time</p>
+</td>
+</tr>
+<tr>
+<td>
+startedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>The time the job started it&#39;s execution. This is different from the db insertion time</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJob<br />
+<a href="objects#controlscheduledjob"><code>ControlScheduledJob!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+file<br />
+<a href="objects#file"><code>File!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobResultConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#jobresultedge"><code>[JobResultEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobResultEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#jobresult"><code>JobResult</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunner
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the runner</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#jobrunnerjobrunnerstatus"><code>JobRunnerJobRunnerStatus!</code></a>
+</td>
+<td>
+<p>the status of this runner</p>
+</td>
+</tr>
+<tr>
+<td>
+ipAddress<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the IP address of this runner</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerTokens<br />
+<a href="objects#jobrunnertokenconnection"><code>JobRunnerTokenConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#jobrunnertokenorder"><code>[JobRunnerTokenOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for JobRunnerTokens returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#jobrunnertokenwhereinput"><code>JobRunnerTokenWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for JobRunnerTokens returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#jobrunneredge"><code>[JobRunnerEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerDeletePayload
+
+Return response for deleteJobRunner mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted jobRunner ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#jobrunner"><code>JobRunner</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#jobrunnerhistoryoptype"><code>JobRunnerHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the runner</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#jobrunnerhistoryjobrunnerstatus"><code>JobRunnerHistoryJobRunnerStatus!</code></a>
+</td>
+<td>
+<p>the status of this runner</p>
+</td>
+</tr>
+<tr>
+<td>
+ipAddress<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the IP address of this runner</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#jobrunnerhistoryedge"><code>[JobRunnerHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#jobrunnerhistory"><code>JobRunnerHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerRegistrationToken
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+token<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+expiresAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>when the token expires</p>
+</td>
+</tr>
+<tr>
+<td>
+lastUsedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the runner this token was used to register</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunner<br />
+<a href="objects#jobrunner"><code>JobRunner</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerRegistrationTokenBulkCreatePayload
+
+Return response for createBulkJobRunnerRegistrationToken mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobRunnerRegistrationTokens<br />
+<a href="objects#jobrunnerregistrationtoken"><code>[JobRunnerRegistrationToken!]</code></a>
+</td>
+<td>
+<p>Created jobRunnerRegistrationTokens</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerRegistrationTokenConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#jobrunnerregistrationtokenedge"><code>[JobRunnerRegistrationTokenEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerRegistrationTokenCreatePayload
+
+Return response for createJobRunnerRegistrationToken mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobRunnerRegistrationToken<br />
+<a href="objects#jobrunnerregistrationtoken"><code>JobRunnerRegistrationToken!</code></a>
+</td>
+<td>
+<p>Created jobRunnerRegistrationToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerRegistrationTokenDeletePayload
+
+Return response for deleteJobRunnerRegistrationToken mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted jobRunnerRegistrationToken ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerRegistrationTokenEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#jobrunnerregistrationtoken"><code>JobRunnerRegistrationToken</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerToken
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+token<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+expiresAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token expires</p>
+</td>
+</tr>
+<tr>
+<td>
+lastUsedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the token is active</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reason the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who revoked the token</p>
+</td>
+</tr>
+<tr>
+<td>
+revokedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunners<br />
+<a href="objects#jobrunnerconnection"><code>JobRunnerConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#jobrunnerorder"><code>[JobRunnerOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for JobRunners returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#jobrunnerwhereinput"><code>JobRunnerWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for JobRunners returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerTokenConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#jobrunnertokenedge"><code>[JobRunnerTokenEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerTokenCreatePayload
+
+Return response for createJobRunnerToken mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobRunnerToken<br />
+<a href="objects#jobrunnertoken"><code>JobRunnerToken!</code></a>
+</td>
+<td>
+<p>Created jobRunnerToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerTokenDeletePayload
+
+Return response for deleteJobRunnerToken mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted jobRunnerToken ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerTokenEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#jobrunnertoken"><code>JobRunnerToken</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerTokenUpdatePayload
+
+Return response for updateJobRunnerToken mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobRunnerToken<br />
+<a href="objects#jobrunnertoken"><code>JobRunnerToken!</code></a>
+</td>
+<td>
+<p>Updated jobRunnerToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerUpdatePayload
+
+Return response for updateJobRunner mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobRunner<br />
+<a href="objects#jobrunner"><code>JobRunner!</code></a>
+</td>
+<td>
+<p>Updated jobRunner</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## MappableDomain
 
 
@@ -16920,24 +21370,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -16952,6 +21384,15 @@ name<br />
 </td>
 <td>
 <p>Name of the mappable domain</p>
+</td>
+</tr>
+<tr>
+<td>
+zoneID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>DNS Zone ID of the mappable domain.</p>
 </td>
 </tr>
 <tr>
@@ -17248,24 +21689,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -17280,6 +21703,15 @@ name<br />
 </td>
 <td>
 <p>Name of the mappable domain</p>
+</td>
+</tr>
+<tr>
+<td>
+zoneID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>DNS Zone ID of the mappable domain.</p>
 </td>
 </tr>
 </tbody>
@@ -17435,24 +21867,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -17462,8 +21876,17 @@ tags<br />
 </tr>
 <tr>
 <td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
 mappingType<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#mappedcontrolmappingtype"><code>MappedControlMappingType!</code></a>
 </td>
 <td>
 <p>the type of mapping between the two controls, e.g. subset, intersect, equal, superset</p>
@@ -17480,7 +21903,178 @@ relation<br />
 </tr>
 <tr>
 <td>
-controls<br />
+confidence<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>percentage (0-100) of confidence in the mapping</p>
+</td>
+</tr>
+<tr>
+<td>
+source<br />
+<a href="enums#mappedcontrolmappingsource"><code>MappedControlMappingSource</code></a>
+</td>
+<td>
+<p>source of the mapping, e.g. manual, suggested, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+fromControls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
@@ -17552,7 +22146,151 @@ where<br />
 </tr>
 <tr>
 <td>
-subcontrols<br />
+toControls<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+fromSubcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+toSubcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
 </td>
 <td>
@@ -17844,24 +22582,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -17871,8 +22591,17 @@ tags<br />
 </tr>
 <tr>
 <td>
-mappingType<br />
+ownerID<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+mappingType<br />
+<a href="enums#mappedcontrolhistorymappingtype"><code>MappedControlHistoryMappingType!</code></a>
 </td>
 <td>
 <p>the type of mapping between the two controls, e.g. subset, intersect, equal, superset</p>
@@ -17885,6 +22614,24 @@ relation<br />
 </td>
 <td>
 <p>description of how the two controls are related</p>
+</td>
+</tr>
+<tr>
+<td>
+confidence<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>percentage (0-100) of confidence in the mapping</p>
+</td>
+</tr>
+<tr>
+<td>
+source<br />
+<a href="enums#mappedcontrolhistorymappingsource"><code>MappedControlHistoryMappingSource</code></a>
+</td>
+<td>
+<p>source of the mapping, e.g. manual, suggested, etc.</p>
 </td>
 </tr>
 </tbody>
@@ -18040,24 +22787,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -18122,28 +22851,217 @@ owner<br />
 <tr>
 <td>
 blockedGroups<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are blocked from viewing or editing the risk</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 editors<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides edit access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 viewers<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides view access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -18656,24 +23574,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -18871,24 +23771,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -19171,24 +24053,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -19303,24 +24167,6 @@ cursor<br />
 <td>
 id<br />
 <a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -19473,24 +24319,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -19573,82 +24401,1009 @@ dedicatedDb<br />
 <tr>
 <td>
 controlCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create controls</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementationCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 controlObjectiveCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create control_objectives</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+evidenceCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 groupCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create groups</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 internalPolicyCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create internal_policys</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+mappedControlCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 narrativeCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create narratives</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 procedureCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create procedures</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 programCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create programs</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 riskCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create risks</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+standardCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 templateCreators<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are allowed to create templates</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -21633,6 +27388,78 @@ where<br />
 </tr>
 <tr>
 <td>
+mappedControls<br />
+<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for MappedControls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 evidence<br />
 <a href="objects#evidenceconnection"><code>EvidenceConnection!</code></a>
 </td>
@@ -21912,6 +27739,582 @@ where<br />
 </td>
 <td>
 <p>Filtering options for CustomDomains returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunners<br />
+<a href="objects#jobrunnerconnection"><code>JobRunnerConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#jobrunnerorder"><code>[JobRunnerOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for JobRunners returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#jobrunnerwhereinput"><code>JobRunnerWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for JobRunners returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerTokens<br />
+<a href="objects#jobrunnertokenconnection"><code>JobRunnerTokenConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#jobrunnertokenorder"><code>[JobRunnerTokenOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for JobRunnerTokens returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#jobrunnertokenwhereinput"><code>JobRunnerTokenWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for JobRunnerTokens returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerRegistrationTokens<br />
+<a href="objects#jobrunnerregistrationtokenconnection"><code>JobRunnerRegistrationTokenConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#jobrunnerregistrationtokenorder"><code>[JobRunnerRegistrationTokenOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for JobRunnerRegistrationTokens returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#jobrunnerregistrationtokenwhereinput"><code>JobRunnerRegistrationTokenWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for JobRunnerRegistrationTokens returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+dnsVerifications<br />
+<a href="objects#dnsverificationconnection"><code>DNSVerificationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#dnsverificationorder"><code>[DNSVerificationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DNSVerifications returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#dnsverificationwhereinput"><code>DNSVerificationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DNSVerifications returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+jobs<br />
+<a href="objects#scheduledjobconnection"><code>ScheduledJobConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scheduledjoborder"><code>[ScheduledJobOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scheduledjobwhereinput"><code>ScheduledJobWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobs<br />
+<a href="objects#controlscheduledjobconnection"><code>ControlScheduledJobConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlscheduledjoborder"><code>[ControlScheduledJobOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlscheduledjobwhereinput"><code>ControlScheduledJobWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+jobResults<br />
+<a href="objects#jobresultconnection"><code>JobResultConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#jobresultorder"><code>[JobResultOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for JobResults returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#jobresultwhereinput"><code>JobResultWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for JobResults returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobRuns<br />
+<a href="objects#scheduledjobrunconnection"><code>ScheduledJobRunConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scheduledjobrunorder"><code>[ScheduledJobRunOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ScheduledJobRuns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scheduledjobrunwhereinput"><code>ScheduledJobRunWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ScheduledJobRuns returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -22213,24 +28616,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -22434,24 +28819,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -22860,24 +29227,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -23141,24 +29490,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -23504,24 +29835,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 role<br />
 <a href="enums#orgmembershiphistoryrole"><code>OrgMembershipHistoryRole!</code></a>
 </td>
@@ -23692,24 +30005,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -24118,24 +30413,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -24442,24 +30719,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -24934,24 +31193,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -25088,19 +31329,145 @@ owner<br />
 <tr>
 <td>
 blockedGroups<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are blocked from viewing or editing the risk</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 editors<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides edit access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -25847,24 +32214,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -26142,24 +32491,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -26314,28 +32645,217 @@ owner<br />
 <tr>
 <td>
 blockedGroups<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are blocked from viewing or editing the risk</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 editors<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides edit access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 viewers<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides view access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -27568,24 +34088,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -27860,24 +34362,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 role<br />
 <a href="enums#programmembershiprole"><code>ProgramMembershipRole!</code></a>
 </td>
@@ -28143,24 +34627,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 role<br />
 <a href="enums#programmembershiphistoryrole"><code>ProgramMembershipHistoryRole!</code></a>
 </td>
@@ -28360,24 +34826,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -28523,28 +34971,217 @@ owner<br />
 <tr>
 <td>
 blockedGroups<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>groups that are blocked from viewing or editing the risk</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 editors<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides edit access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
 <td>
 viewers<br />
-<a href="objects#group"><code>[Group!]</code></a>
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
-<p>provides view access to the risk to members of the group</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -29291,24 +35928,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -29535,6 +36154,797 @@ risk<br />
 </tbody>
 </table>
 
+## ScheduledJob
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the title of the job</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the description of the job</p>
+</td>
+</tr>
+<tr>
+<td>
+jobType<br />
+<a href="enums#scheduledjobjobtype"><code>ScheduledJobJobType!</code></a>
+</td>
+<td>
+<p>the type of this job</p>
+</td>
+</tr>
+<tr>
+<td>
+script<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the script to run</p>
+</td>
+</tr>
+<tr>
+<td>
+configuration<br />
+<a href="scalars#jobconfiguration"><code>JobConfiguration!</code></a>
+</td>
+<td>
+<p>the configuration to run this job</p>
+</td>
+</tr>
+<tr>
+<td>
+cadence<br />
+<a href="scalars#jobcadence"><code>JobCadence</code></a>
+</td>
+<td>
+<p>the schedule to run this job</p>
+</td>
+</tr>
+<tr>
+<td>
+cron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron syntax</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobBulkCreatePayload
+
+Return response for createBulkScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+scheduledJobs<br />
+<a href="objects#scheduledjob"><code>[ScheduledJob!]</code></a>
+</td>
+<td>
+<p>Created scheduledJobs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#scheduledjobedge"><code>[ScheduledJobEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobCreatePayload
+
+Return response for createScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+scheduledJob<br />
+<a href="objects#scheduledjob"><code>ScheduledJob!</code></a>
+</td>
+<td>
+<p>Created scheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobDeletePayload
+
+Return response for deleteScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted scheduledJob ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#scheduledjob"><code>ScheduledJob</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#scheduledjobhistoryoptype"><code>ScheduledJobHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the title of the job</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the description of the job</p>
+</td>
+</tr>
+<tr>
+<td>
+jobType<br />
+<a href="enums#scheduledjobhistoryjobtype"><code>ScheduledJobHistoryJobType!</code></a>
+</td>
+<td>
+<p>the type of this job</p>
+</td>
+</tr>
+<tr>
+<td>
+script<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the script to run</p>
+</td>
+</tr>
+<tr>
+<td>
+configuration<br />
+<a href="scalars#jobconfiguration"><code>JobConfiguration!</code></a>
+</td>
+<td>
+<p>the configuration to run this job</p>
+</td>
+</tr>
+<tr>
+<td>
+cadence<br />
+<a href="scalars#jobcadence"><code>JobCadence</code></a>
+</td>
+<td>
+<p>the schedule to run this job</p>
+</td>
+</tr>
+<tr>
+<td>
+cron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron syntax</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#scheduledjobhistoryedge"><code>[ScheduledJobHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#scheduledjobhistory"><code>ScheduledJobHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobRun
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>The runner that this job will be executed on. Useful to know because of self hosted runners</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#scheduledjobrunscheduledjobrunstatus"><code>ScheduledJobRunScheduledJobRunStatus!</code></a>
+</td>
+<td>
+<p>The status of the job to be executed. By default will be pending but when
+            scheduled on a runner, this will change to acquired.</p>
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the parent job for this run</p>
+</td>
+</tr>
+<tr>
+<td>
+expectedExecutionTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>When should this job execute on the agent. Since we might potentially schedule a few minutes before</p>
+</td>
+</tr>
+<tr>
+<td>
+script<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the script that will be executed by the agent.
+This script will be templated with the values from the configuration on the job</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJob<br />
+<a href="objects#controlscheduledjob"><code>ControlScheduledJob!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunner<br />
+<a href="objects#jobrunner"><code>JobRunner!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobRunConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#scheduledjobrunedge"><code>[ScheduledJobRunEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobRunEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#scheduledjobrun"><code>ScheduledJobRun</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobUpdatePayload
+
+Return response for updateScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+scheduledJob<br />
+<a href="objects#scheduledjob"><code>ScheduledJob!</code></a>
+</td>
+<td>
+<p>Updated scheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## SearchResults
 
 
@@ -29620,6 +37030,15 @@ controlObjectives<br />
 <td>
 customDomains<br />
 <a href="objects#customdomainconnection"><code>CustomDomainConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dnsVerifications<br />
+<a href="objects#dnsverificationconnection"><code>DNSVerificationConnection</code></a>
 </td>
 <td>
 
@@ -29717,6 +37136,33 @@ invites<br />
 </tr>
 <tr>
 <td>
+jobRunners<br />
+<a href="objects#jobrunnerconnection"><code>JobRunnerConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerRegistrationTokens<br />
+<a href="objects#jobrunnerregistrationtokenconnection"><code>JobRunnerRegistrationTokenConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerTokens<br />
+<a href="objects#jobrunnertokenconnection"><code>JobRunnerTokenConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 mappableDomains<br />
 <a href="objects#mappabledomainconnection"><code>MappableDomainConnection</code></a>
 </td>
@@ -29800,6 +37246,15 @@ programs<br />
 <td>
 risks<br />
 <a href="objects#riskconnection"><code>RiskConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobs<br />
+<a href="objects#scheduledjobconnection"><code>ScheduledJobConnection</code></a>
 </td>
 <td>
 
@@ -29932,24 +37387,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -30412,24 +37849,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -30734,24 +38153,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -30811,6 +38212,15 @@ source<br />
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFramework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework for the control if it came from a standard</p>
 </td>
 </tr>
 <tr>
@@ -31535,78 +38945,6 @@ where<br />
 </tr>
 <tr>
 <td>
-mappedControls<br />
-<a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#mappedcontrolorder"><code>[MappedControlOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for MappedControls returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#mappedcontrolwhereinput"><code>MappedControlWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for MappedControls returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
 controlOwner<br />
 <a href="objects#group"><code>Group</code></a>
 </td>
@@ -31706,6 +39044,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobs<br />
+<a href="objects#controlscheduledjobconnection"><code>ControlScheduledJobConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlscheduledjoborder"><code>[ControlScheduledJobOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlscheduledjobwhereinput"><code>ControlScheduledJobWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlScheduledJobs returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -31935,24 +39345,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -32012,6 +39404,15 @@ source<br />
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFramework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework for the control if it came from a standard</p>
 </td>
 </tr>
 <tr>
@@ -32303,24 +39704,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -32697,24 +40080,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -33789,24 +41154,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -34049,24 +41396,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -34511,24 +41840,6 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -34735,24 +42046,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -34997,24 +42290,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -35960,9 +43235,72 @@ where<br />
 <tr>
 <td>
 programs<br />
-<a href="objects#program"><code>[Program!]</code></a>
+<a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Programs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#programwhereinput"><code>ProgramWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -36113,9 +43451,72 @@ where<br />
 <tr>
 <td>
 programMemberships<br />
-<a href="objects#programmembership"><code>[ProgramMembership!]</code></a>
+<a href="objects#programmembershipconnection"><code>ProgramMembershipConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programmembershiporder"><code>[ProgramMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ProgramMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#programmembershipwhereinput"><code>ProgramMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ProgramMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -36333,24 +43734,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -36607,24 +43990,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -36995,24 +44360,6 @@ createdBy<br />
 <tr>
 <td>
 updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-deletedBy<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>

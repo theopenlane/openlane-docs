@@ -7,7 +7,7 @@ export default function GrapqhlExplorer() {
     <Layout title="Graphql" description="Openlane Graphql Explorer">
       <ApolloExplorer
         className='graphql'
-        graphRef='Openlane-2fwyqq@current'
+        graphRef='Openlane-0dedz@current'
         persistExplorerState={false}
         initialState={{
           document: `query Programs {

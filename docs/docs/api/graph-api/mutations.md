@@ -191,6 +191,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkControlScheduledJob
+
+**Type:** [ControlScheduledJobBulkCreatePayload!](objects#controlscheduledjobbulkcreatepayload)
+
+Create multiple new controlScheduledJobs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcontrolscheduledjobinput"><code>[CreateControlScheduledJobInput!]</code></a>
+</td>
+<td>
+<p>values of the controlScheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVActionPlan
 
 **Type:** [ActionPlanBulkCreatePayload!](objects#actionplanbulkcreatepayload)
@@ -329,6 +352,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVControlScheduledJob
+
+**Type:** [ControlScheduledJobBulkCreatePayload!](objects#controlscheduledjobbulkcreatepayload)
+
+Create multiple new controlScheduledJobs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the controlScheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVCustomDomain
 
 **Type:** [CustomDomainBulkCreatePayload!](objects#customdomainbulkcreatepayload)
@@ -347,6 +393,29 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVDNSVerification
+
+**Type:** [DNSVerificationBulkCreatePayload!](objects#dnsverificationbulkcreatepayload)
+
+Create multiple new dnsVerifications via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the dnsVerification</p>
 </td>
 </tr>
 </tbody>
@@ -812,6 +881,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVScheduledJob
+
+**Type:** [ScheduledJobBulkCreatePayload!](objects#scheduledjobbulkcreatepayload)
+
+Create multiple new scheduledJobs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the scheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVSubcontrol
 
 **Type:** [SubcontrolBulkCreatePayload!](objects#subcontrolbulkcreatepayload)
@@ -945,6 +1037,29 @@ input<br />
 </td>
 <td>
 <p>values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkDNSVerification
+
+**Type:** [DNSVerificationBulkCreatePayload!](objects#dnsverificationbulkcreatepayload)
+
+Create multiple new dnsVerifications
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#creatednsverificationinput"><code>[CreateDNSVerificationInput!]</code></a>
+</td>
+<td>
+<p>values of the dnsVerification</p>
 </td>
 </tr>
 </tbody>
@@ -1410,6 +1525,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkScheduledJob
+
+**Type:** [ScheduledJobBulkCreatePayload!](objects#scheduledjobbulkcreatepayload)
+
+Create multiple new scheduledJobs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createscheduledjobinput"><code>[CreateScheduledJobInput!]</code></a>
+</td>
+<td>
+<p>values of the scheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkSubcontrol
 
 **Type:** [SubcontrolBulkCreatePayload!](objects#subcontrolbulkcreatepayload)
@@ -1640,6 +1778,29 @@ input<br />
 </tbody>
 </table>
 
+## createControlScheduledJob
+
+**Type:** [ControlScheduledJobCreatePayload!](objects#controlscheduledjobcreatepayload)
+
+Create a new controlScheduledJob
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcontrolscheduledjobinput"><code>CreateControlScheduledJobInput!</code></a>
+</td>
+<td>
+<p>values of the controlScheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createControlWithSubcontrols
 
 **Type:** [ControlCreatePayload!](objects#controlcreatepayload)
@@ -1681,6 +1842,29 @@ input<br />
 </td>
 <td>
 <p>values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createDNSVerification
+
+**Type:** [DNSVerificationCreatePayload!](objects#dnsverificationcreatepayload)
+
+Create a new dnsVerification
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#creatednsverificationinput"><code>CreateDNSVerificationInput!</code></a>
+</td>
+<td>
+<p>values of the dnsVerification</p>
 </td>
 </tr>
 </tbody>
@@ -2078,6 +2262,52 @@ input<br />
 </tbody>
 </table>
 
+## createJobRunnerRegistrationToken
+
+**Type:** [JobRunnerRegistrationTokenCreatePayload!](objects#jobrunnerregistrationtokencreatepayload)
+
+Create a new jobRunnerRegistrationToken
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createjobrunnerregistrationtokeninput"><code>CreateJobRunnerRegistrationTokenInput!</code></a>
+</td>
+<td>
+<p>values of the jobRunnerRegistrationToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createJobRunnerToken
+
+**Type:** [JobRunnerTokenCreatePayload!](objects#jobrunnertokencreatepayload)
+
+Create a new jobRunnerToken
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createjobrunnertokeninput"><code>CreateJobRunnerTokenInput!</code></a>
+</td>
+<td>
+<p>values of the jobRunnerToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createMappableDomain
 
 **Type:** [MappableDomainCreatePayload!](objects#mappabledomaincreatepayload)
@@ -2427,6 +2657,29 @@ input<br />
 </tbody>
 </table>
 
+## createScheduledJob
+
+**Type:** [ScheduledJobCreatePayload!](objects#scheduledjobcreatepayload)
+
+Create a new scheduledJob
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createscheduledjobinput"><code>CreateScheduledJobInput!</code></a>
+</td>
+<td>
+<p>values of the scheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createStandard
 
 **Type:** [StandardCreatePayload!](objects#standardcreatepayload)
@@ -2758,6 +3011,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteControlScheduledJob
+
+**Type:** [ControlScheduledJobDeletePayload!](objects#controlscheduledjobdeletepayload)
+
+Delete an existing controlScheduledJob
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the controlScheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteCustomDomain
 
 **Type:** [CustomDomainDeletePayload!](objects#customdomaindeletepayload)
@@ -2776,6 +3052,29 @@ id<br />
 </td>
 <td>
 <p>ID of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteDNSVerification
+
+**Type:** [DNSVerificationDeletePayload!](objects#dnsverificationdeletepayload)
+
+Delete an existing dnsVerification
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the dnsVerification</p>
 </td>
 </tr>
 </tbody>
@@ -3080,6 +3379,75 @@ id<br />
 </tbody>
 </table>
 
+## deleteJobRunner
+
+**Type:** [JobRunnerDeletePayload!](objects#jobrunnerdeletepayload)
+
+Delete an existing jobRunner
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the jobRunner</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteJobRunnerRegistrationToken
+
+**Type:** [JobRunnerRegistrationTokenDeletePayload!](objects#jobrunnerregistrationtokendeletepayload)
+
+Delete an existing jobRunnerRegistrationToken
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the jobRunnerRegistrationToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteJobRunnerToken
+
+**Type:** [JobRunnerTokenDeletePayload!](objects#jobrunnertokendeletepayload)
+
+Delete an existing jobRunnerToken
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the jobRunnerToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteMappableDomain
 
 **Type:** [MappableDomainDeletePayload!](objects#mappabledomaindeletepayload)
@@ -3328,6 +3696,29 @@ id<br />
 </td>
 <td>
 <p>ID of the risk</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteScheduledJob
+
+**Type:** [ScheduledJobDeletePayload!](objects#scheduledjobdeletepayload)
+
+Delete an existing scheduledJob
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the scheduledJob</p>
 </td>
 </tr>
 </tbody>
@@ -3695,6 +4086,38 @@ input<br />
 </tbody>
 </table>
 
+## updateControlScheduledJob
+
+**Type:** [ControlScheduledJobUpdatePayload!](objects#controlscheduledjobupdatepayload)
+
+Update an existing controlScheduledJob
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the controlScheduledJob</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatecontrolscheduledjobinput"><code>UpdateControlScheduledJobInput!</code></a>
+</td>
+<td>
+<p>New values for the controlScheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateCustomDomain
 
 **Type:** [CustomDomainUpdatePayload!](objects#customdomainupdatepayload)
@@ -3722,6 +4145,38 @@ input<br />
 </td>
 <td>
 <p>New values for the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateDNSVerification
+
+**Type:** [DNSVerificationUpdatePayload!](objects#dnsverificationupdatepayload)
+
+Update an existing dnsVerification
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the dnsVerification</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatednsverificationinput"><code>UpdateDNSVerificationInput!</code></a>
+</td>
+<td>
+<p>New values for the dnsVerification</p>
 </td>
 </tr>
 </tbody>
@@ -4120,6 +4575,38 @@ input<br />
 </tbody>
 </table>
 
+## updateJobRunner
+
+**Type:** [JobRunnerUpdatePayload!](objects#jobrunnerupdatepayload)
+
+Update an existing jobRunner
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the jobRunner</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatejobrunnerinput"><code>UpdateJobRunnerInput!</code></a>
+</td>
+<td>
+<p>New values for the jobRunner</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateMappableDomain
 
 **Type:** [MappableDomainUpdatePayload!](objects#mappabledomainupdatepayload)
@@ -4476,6 +4963,38 @@ input<br />
 </td>
 <td>
 <p>New values for the risk</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateScheduledJob
+
+**Type:** [ScheduledJobUpdatePayload!](objects#scheduledjobupdatepayload)
+
+Update an existing scheduledJob
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the scheduledJob</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatescheduledjobinput"><code>UpdateScheduledJobInput!</code></a>
+</td>
+<td>
+<p>New values for the scheduledJob</p>
 </td>
 </tr>
 </tbody>
