@@ -53,6 +53,29 @@ input<br />
 </tbody>
 </table>
 
+## createAsset
+
+**Type:** [AssetCreatePayload!](objects#assetcreatepayload)
+
+Create a new asset
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createassetinput"><code>CreateAssetInput!</code></a>
+</td>
+<td>
+<p>values of the asset</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkActionPlan
 
 **Type:** [ActionPlanBulkCreatePayload!](objects#actionplanbulkcreatepayload)
@@ -94,6 +117,29 @@ input<br />
 </td>
 <td>
 <p>values of the apiToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkAsset
+
+**Type:** [AssetBulkCreatePayload!](objects#assetbulkcreatepayload)
+
+Create multiple new assets
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createassetinput"><code>[CreateAssetInput!]</code></a>
+</td>
+<td>
+<p>values of the asset</p>
 </td>
 </tr>
 </tbody>
@@ -255,6 +301,29 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the apiToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVAsset
+
+**Type:** [AssetBulkCreatePayload!](objects#assetbulkcreatepayload)
+
+Create multiple new assets via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the asset</p>
 </td>
 </tr>
 </tbody>
@@ -876,6 +945,29 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the risk</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVScan
+
+**Type:** [ScanBulkCreatePayload!](objects#scanbulkcreatepayload)
+
+Create multiple new scans via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the scan</p>
 </td>
 </tr>
 </tbody>
@@ -1520,6 +1612,29 @@ input<br />
 </td>
 <td>
 <p>values of the risk</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkScan
+
+**Type:** [ScanBulkCreatePayload!](objects#scanbulkcreatepayload)
+
+Create multiple new scans
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createscaninput"><code>[CreateScanInput!]</code></a>
+</td>
+<td>
+<p>values of the scan</p>
 </td>
 </tr>
 </tbody>
@@ -2657,6 +2772,29 @@ input<br />
 </tbody>
 </table>
 
+## createScan
+
+**Type:** [ScanCreatePayload!](objects#scancreatepayload)
+
+Create a new scan
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createscaninput"><code>CreateScanInput!</code></a>
+</td>
+<td>
+<p>values of the scan</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createScheduledJob
 
 **Type:** [ScheduledJobCreatePayload!](objects#scheduledjobcreatepayload)
@@ -2818,6 +2956,52 @@ input<br />
 </tbody>
 </table>
 
+## createTrustCenter
+
+**Type:** [TrustCenterCreatePayload!](objects#trustcentercreatepayload)
+
+Create a new trustCenter
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterinput"><code>CreateTrustCenterInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenter</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createTrustCenterSetting
+
+**Type:** [TrustCenterSettingCreatePayload!](objects#trustcentersettingcreatepayload)
+
+Create a new trustCenterSetting
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcentersettinginput"><code>CreateTrustCenterSettingInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createUser
 
 **Type:** [UserCreatePayload!](objects#usercreatepayload)
@@ -2914,6 +3098,29 @@ id<br />
 </td>
 <td>
 <p>ID of the apiToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteAsset
+
+**Type:** [AssetDeletePayload!](objects#assetdeletepayload)
+
+Delete an existing asset
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the asset</p>
 </td>
 </tr>
 </tbody>
@@ -3701,6 +3908,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteScan
+
+**Type:** [ScanDeletePayload!](objects#scandeletepayload)
+
+Delete an existing scan
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the scan</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteScheduledJob
 
 **Type:** [ScheduledJobDeletePayload!](objects#scheduledjobdeletepayload)
@@ -3848,6 +4078,52 @@ id<br />
 </tbody>
 </table>
 
+## deleteTrustCenter
+
+**Type:** [TrustCenterDeletePayload!](objects#trustcenterdeletepayload)
+
+Delete an existing trustCenter
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenter</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteTrustCenterSetting
+
+**Type:** [TrustCenterSettingDeletePayload!](objects#trustcentersettingdeletepayload)
+
+Delete an existing trustCenterSetting
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteUser
 
 **Type:** [UserDeletePayload!](objects#userdeletepayload)
@@ -3953,6 +4229,38 @@ input<br />
 </td>
 <td>
 <p>New values for the apiToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateAsset
+
+**Type:** [AssetUpdatePayload!](objects#assetupdatepayload)
+
+Update an existing asset
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateassetinput"><code>UpdateAssetInput!</code></a>
+</td>
+<td>
+<p>New values for the asset</p>
 </td>
 </tr>
 </tbody>
@@ -4968,6 +5276,38 @@ input<br />
 </tbody>
 </table>
 
+## updateScan
+
+**Type:** [ScanUpdatePayload!](objects#scanupdatepayload)
+
+Update an existing scan
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatescaninput"><code>UpdateScanInput!</code></a>
+</td>
+<td>
+<p>New values for the scan</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateScheduledJob
 
 **Type:** [ScheduledJobUpdatePayload!](objects#scheduledjobupdatepayload)
@@ -5219,6 +5559,70 @@ input<br />
 </td>
 <td>
 <p>New values for the tfaSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTrustCenter
+
+**Type:** [TrustCenterUpdatePayload!](objects#trustcenterupdatepayload)
+
+Update an existing trustCenter
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenter</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcenterinput"><code>UpdateTrustCenterInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenter</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTrustCenterSetting
+
+**Type:** [TrustCenterSettingUpdatePayload!](objects#trustcentersettingupdatepayload)
+
+Update an existing trustCenterSetting
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterSetting</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcentersettinginput"><code>UpdateTrustCenterSettingInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenterSetting</p>
 </td>
 </tr>
 </tbody>
