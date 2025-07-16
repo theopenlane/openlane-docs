@@ -1,0 +1,513 @@
+---
+title: "Subcontrols"
+description: "Granular sub-requirements and components within compliance controls"
+---
+
+# Subcontrols
+
+Subcontrols are granular components or sub-requirements within larger compliance controls that provide detailed, specific requirements for achieving control objectives.
+
+## What Are Subcontrols?
+
+Subcontrols break down complex controls into smaller, more manageable components that can be implemented, tested, and verified independently. They provide detailed specifications for control implementation while maintaining the hierarchical relationship to their parent control.
+
+## Compliance Significance
+
+Subcontrols are essential for:
+- **Granular Implementation**: Breaking complex controls into manageable implementation units
+- **Detailed Testing**: Enabling specific testing of individual control components
+- **Precise Mapping**: Mapping specific requirements to implementation activities
+- **Audit Granularity**: Providing detailed audit trails for control components
+- **Risk Mitigation**: Addressing specific risk scenarios within broader control objectives
+
+## Subcontrol Categories
+
+### Technical Subcontrols
+- **Purpose**: Specific technical implementation requirements
+- **Examples**: Encryption algorithms, access control mechanisms, logging requirements
+- **Implementation**: Technical configuration and system settings
+- **Verification**: Automated testing and technical validation
+
+### Administrative Subcontrols
+- **Purpose**: Process and procedure requirements
+- **Examples**: Approval workflows, documentation requirements, training mandates
+- **Implementation**: Policy development and process implementation
+- **Verification**: Process audits and compliance checks
+
+### Physical Subcontrols
+- **Purpose**: Physical security and environmental requirements
+- **Examples**: Access controls, environmental monitoring, equipment protection
+- **Implementation**: Physical security measures and controls
+- **Verification**: Physical inspections and monitoring
+
+### Operational Subcontrols
+- **Purpose**: Ongoing operational requirements
+- **Examples**: Monitoring procedures, maintenance activities, incident response
+- **Implementation**: Operational procedures and workflows
+- **Verification**: Operational audits and performance monitoring
+
+## Properties
+
+### Core Information
+- **ID**: Unique identifier for the subcontrol
+- **Reference Code**: Specific reference code for the subcontrol
+- **Name**: Descriptive name of the subcontrol
+- **Description**: Detailed description of the subcontrol requirement
+- **Control ID**: Parent control this subcontrol belongs to
+
+### Implementation Details
+- **Implementation Type**: Technical, administrative, physical, or operational
+- **Implementation Priority**: Priority level for implementation
+- **Implementation Status**: Current status of implementation
+- **Implementation Date**: When the subcontrol was implemented
+
+### Verification and Testing
+- **Verification Method**: How the subcontrol is verified
+- **Test Frequency**: How often the subcontrol should be tested
+- **Last Verification**: Date of most recent verification
+- **Verification Results**: Results from the latest verification
+
+### Relationships
+- **Parent Control**: The main control this subcontrol belongs to
+- **Control Implementations**: Specific implementations of this subcontrol
+- **Mapped Controls**: Cross-framework mappings for this subcontrol
+- **Evidence**: Evidence supporting subcontrol implementation
+
+## GraphQL Operations
+
+### Query Subcontrols
+```graphql
+query GetSubcontrols($first: Int, $where: SubcontrolWhereInput) {
+  subcontrols(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        name
+        description
+        implementationType
+        implementationStatus
+        implementationDate
+        subcontrolNumber
+        source
+        control {
+          id
+          name
+          controlNumber
+        }
+        controlObjectives {
+          edges {
+            node {
+              id
+              name
+              description
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Create Subcontrol
+```graphql
+mutation CreateSubcontrol($input: CreateSubcontrolInput!) {
+  createSubcontrol(input: $input) {
+    subcontrol {
+      id
+      name
+      description
+      implementationType
+      subcontrolNumber
+      source
+      control {
+        id
+        name
+        controlNumber
+      }
+    }
+  }
+}
+```
+
+### Update Subcontrol
+```graphql
+mutation UpdateSubcontrol($id: ID!, $input: UpdateSubcontrolInput!) {
+  updateSubcontrol(id: $id, input: $input) {
+    subcontrol {
+      id
+      name
+      description
+      implementationType
+      implementationStatus
+      implementationDate
+      subcontrolNumber
+    }
+  }
+}
+```
+
+### Query Subcontrol Details
+```graphql
+query GetSubcontrolDetails($id: ID!) {
+  subcontrol(id: $id) {
+    id
+    name
+    description
+    implementationType
+    implementationStatus
+    implementationDate
+    subcontrolNumber
+    source
+    control {
+      id
+      name
+      controlNumber
+    }
+    controlObjectives {
+      edges {
+        node {
+          id
+          name
+          description
+        }
+      }
+    }
+  }
+}
+```
+
+## API Access
+
+Subcontrols are managed exclusively through GraphQL operations. There are no REST endpoints for subcontrol CRUD operations. All subcontrol management, implementation tracking, and control objective operations must be performed using the GraphQL API as shown in the examples above.
+
+## Subcontrol Frameworks
+
+### NIST 800-53 Subcontrols
+```yaml
+# NIST 800-53 subcontrol structure
+nist_subcontrols:
+  - ref_code: "AC-2.1"
+    name: "Automated System Account Management"
+    description: "Automated mechanisms to support account management"
+    control_family: "Access Control"
+    implementation_type: "technical"
+
+  - ref_code: "AC-2.2"
+    name: "Removal of Temporary/Emergency Accounts"
+    description: "Automatically remove temporary and emergency accounts"
+    control_family: "Access Control"
+    implementation_type: "technical"
+
+  - ref_code: "AC-2.3"
+    name: "Disable Inactive Accounts"
+    description: "Automatically disable inactive accounts"
+    control_family: "Access Control"
+    implementation_type: "technical"
+```
+
+### ISO 27001 Subcontrols
+```yaml
+# ISO 27001 subcontrol structure
+iso_subcontrols:
+  - ref_code: "A.9.2.1"
+    name: "User registration and de-registration"
+    description: "Formal user registration and de-registration process"
+    control_family: "Access Control"
+    implementation_type: "administrative"
+
+  - ref_code: "A.9.2.2"
+    name: "User access provisioning"
+    description: "User access provisioning process"
+    control_family: "Access Control"
+    implementation_type: "administrative"
+
+  - ref_code: "A.9.2.3"
+    name: "Management of privileged access rights"
+    description: "Allocation and use of privileged access rights"
+    control_family: "Access Control"
+    implementation_type: "technical"
+```
+
+### SOC 2 Subcontrols
+```yaml
+# SOC 2 subcontrol structure
+soc2_subcontrols:
+  - ref_code: "CC6.1.1"
+    name: "Logical Access Security Measures"
+    description: "Logical access security measures to protect against threats"
+    trust_service: "Common Criteria"
+    implementation_type: "technical"
+
+  - ref_code: "CC6.1.2"
+    name: "User Access Rights"
+    description: "User access rights are reviewed and approved"
+    trust_service: "Common Criteria"
+    implementation_type: "administrative"
+```
+
+## Implementation Workflows
+
+### Subcontrol Implementation Pipeline
+```javascript
+// Automated subcontrol implementation pipeline
+class SubcontrolImplementationPipeline {
+  async implementSubcontrol(subcontrolId, implementationData) {
+    const subcontrol = await this.getSubcontrol(subcontrolId);
+
+    // Create implementation record
+    const implementation = await this.createImplementation({
+      subcontrol_id: subcontrolId,
+      implementation_type: implementationData.type,
+      implementation_details: implementationData.details,
+      assigned_to: implementationData.assignee,
+      target_date: implementationData.targetDate
+    });
+
+    // Execute implementation based on type
+    let result;
+    switch (implementationData.type) {
+      case 'technical':
+        result = await this.implementTechnicalSubcontrol(subcontrol, implementationData);
+        break;
+      case 'administrative':
+        result = await this.implementAdministrativeSubcontrol(subcontrol, implementationData);
+        break;
+      case 'physical':
+        result = await this.implementPhysicalSubcontrol(subcontrol, implementationData);
+        break;
+      case 'operational':
+        result = await this.implementOperationalSubcontrol(subcontrol, implementationData);
+        break;
+    }
+
+    // Update implementation status
+    await this.updateImplementationStatus(implementation.id, result.status, result.details);
+
+    return result;
+  }
+
+  async verifySubcontrol(subcontrolId, verificationData) {
+    const subcontrol = await this.getSubcontrol(subcontrolId);
+
+    // Perform verification based on subcontrol type
+    const verificationResult = await this.performVerification(subcontrol, verificationData);
+
+    // Update verification status
+    await this.updateSubcontrolVerification(subcontrolId, {
+      verified: verificationResult.passed,
+      verification_date: new Date().toISOString(),
+      verification_method: verificationData.method,
+      verification_results: verificationResult.results,
+      verification_evidence: verificationResult.evidence
+    });
+
+    return verificationResult;
+  }
+}
+```
+
+### Cross-Framework Mapping
+```javascript
+// Map subcontrols across compliance frameworks
+const mapSubcontrolsAcrossFrameworks = async (sourceFramework, targetFramework) => {
+  const sourceSubcontrols = await getSubcontrolsByFramework(sourceFramework);
+  const mappings = [];
+
+  for (const sourceSubcontrol of sourceSubcontrols) {
+    const potentialMappings = await findMappingCandidates(sourceSubcontrol, targetFramework);
+
+    for (const candidate of potentialMappings) {
+      const mappingScore = await calculateMappingScore(sourceSubcontrol, candidate);
+
+      if (mappingScore > 0.7) { // High confidence mapping
+        mappings.push({
+          source_subcontrol: sourceSubcontrol.id,
+          target_subcontrol: candidate.id,
+          mapping_score: mappingScore,
+          mapping_type: 'direct',
+          confidence: 'high'
+        });
+      } else if (mappingScore > 0.4) { // Potential mapping
+        mappings.push({
+          source_subcontrol: sourceSubcontrol.id,
+          target_subcontrol: candidate.id,
+          mapping_score: mappingScore,
+          mapping_type: 'partial',
+          confidence: 'medium'
+        });
+      }
+    }
+  }
+
+  return mappings;
+};
+```
+
+### Automated Verification
+```javascript
+// Automated subcontrol verification
+const performAutomatedVerification = async (subcontrolId) => {
+  const subcontrol = await getSubcontrol(subcontrolId);
+  const verificationTests = await getVerificationTests(subcontrol.implementation_type);
+
+  const results = {
+    subcontrol_id: subcontrolId,
+    verification_date: new Date().toISOString(),
+    tests_performed: [],
+    overall_result: 'pending',
+    evidence_collected: []
+  };
+
+  for (const test of verificationTests) {
+    const testResult = await executeVerificationTest(test, subcontrol);
+    results.tests_performed.push(testResult);
+
+    if (testResult.evidence) {
+      results.evidence_collected.push(testResult.evidence);
+    }
+  }
+
+  // Determine overall result
+  const passedTests = results.tests_performed.filter(test => test.result === 'passed');
+  const failedTests = results.tests_performed.filter(test => test.result === 'failed');
+
+  if (failedTests.length === 0) {
+    results.overall_result = 'passed';
+  } else if (passedTests.length === 0) {
+    results.overall_result = 'failed';
+  } else {
+    results.overall_result = 'partial';
+  }
+
+  // Update subcontrol verification status
+  await updateSubcontrolVerification(subcontrolId, results);
+
+  return results;
+};
+```
+
+## Testing and Validation
+
+### Subcontrol Testing Framework
+```javascript
+// Comprehensive subcontrol testing framework
+class SubcontrolTestingFramework {
+  async testSubcontrol(subcontrolId, testType = 'comprehensive') {
+    const subcontrol = await this.getSubcontrol(subcontrolId);
+    const testSuite = await this.getTestSuite(subcontrol, testType);
+
+    const testResults = {
+      subcontrol_id: subcontrolId,
+      test_type: testType,
+      test_date: new Date().toISOString(),
+      test_results: [],
+      overall_score: 0,
+      passed: false
+    };
+
+    for (const test of testSuite.tests) {
+      const result = await this.executeTest(test, subcontrol);
+      testResults.test_results.push(result);
+    }
+
+    // Calculate overall score
+    const totalScore = testResults.test_results.reduce((sum, result) => sum + result.score, 0);
+    testResults.overall_score = totalScore / testResults.test_results.length;
+    testResults.passed = testResults.overall_score >= testSuite.passing_score;
+
+    return testResults;
+  }
+
+  async getTestSuite(subcontrol, testType) {
+    const testSuites = {
+      'technical': await this.getTechnicalTests(subcontrol),
+      'administrative': await this.getAdministrativeTests(subcontrol),
+      'physical': await this.getPhysicalTests(subcontrol),
+      'operational': await this.getOperationalTests(subcontrol),
+      'comprehensive': await this.getComprehensiveTests(subcontrol)
+    };
+
+    return testSuites[testType] || testSuites['comprehensive'];
+  }
+}
+```
+
+### Continuous Monitoring
+```javascript
+// Continuous monitoring for subcontrols
+const setupSubcontrolMonitoring = async (subcontrolId, monitoringConfig) => {
+  const subcontrol = await getSubcontrol(subcontrolId);
+
+  const monitoringJob = {
+    subcontrol_id: subcontrolId,
+    monitoring_type: monitoringConfig.type,
+    frequency: monitoringConfig.frequency,
+    monitoring_rules: monitoringConfig.rules,
+    alert_thresholds: monitoringConfig.thresholds,
+    notification_recipients: monitoringConfig.recipients
+  };
+
+  // Create scheduled monitoring job
+  const scheduledJob = await createScheduledJob({
+    name: `Subcontrol Monitoring - ${subcontrol.ref_code}`,
+    schedule: monitoringConfig.schedule,
+    job_type: 'subcontrol_monitoring',
+    job_data: monitoringJob
+  });
+
+  return scheduledJob;
+};
+```
+
+## Relationships
+
+Subcontrols integrate with several other Openlane objects:
+
+### Direct Relationships
+- **Control**: Parent control that contains this subcontrol
+- **Control Implementation**: Specific implementations of this subcontrol
+- **Mapped Controls**: Cross-framework control mappings
+- **Organization**: Organization responsible for the subcontrol
+
+### Indirect Relationships
+- **Evidence**: Evidence supporting subcontrol implementation and verification
+- **Tasks**: Tasks related to subcontrol implementation and testing
+- **Programs**: Compliance programs that include this subcontrol
+- **Standards**: Standards that define this subcontrol requirement
+- **Risks**: Risks that this subcontrol is designed to mitigate
+
+## Best Practices
+
+### Subcontrol Design
+1. **Clear Scope**: Define clear scope and boundaries for each subcontrol
+2. **Measurable Criteria**: Establish measurable success criteria
+3. **Implementation Guidance**: Provide clear implementation guidance
+4. **Verification Methods**: Define appropriate verification methods
+
+### Implementation Management
+1. **Phased Implementation**: Implement subcontrols in logical phases
+2. **Dependencies**: Manage dependencies between subcontrols
+3. **Resource Allocation**: Allocate appropriate resources for each subcontrol
+4. **Progress Tracking**: Track implementation progress at the subcontrol level
+
+### Testing and Verification
+1. **Comprehensive Testing**: Test all aspects of subcontrol implementation
+2. **Automated Verification**: Use automated verification where possible
+3. **Evidence Collection**: Collect and maintain verification evidence
+4. **Regular Validation**: Perform regular validation of subcontrol effectiveness
+
+### Continuous Improvement
+1. **Performance Monitoring**: Monitor subcontrol performance metrics
+2. **Feedback Integration**: Integrate feedback from testing and audits
+3. **Update Procedures**: Maintain procedures for updating subcontrols
+4. **Best Practice Sharing**: Share best practices across subcontrol implementations
+
+Subcontrols provide the granular detail necessary for effective control implementation while maintaining the structure and organization required for compliance management.

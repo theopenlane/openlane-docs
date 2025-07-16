@@ -1,0 +1,550 @@
+---
+title: "Files"
+description: "Document and file management for compliance artifacts"
+---
+
+# Files
+
+Files represent documents, artifacts, and digital assets that support compliance activities, provide evidence, and maintain organizational documentation within Openlane.
+
+## What Are Files?
+
+Files are digital documents, images, reports, and other artifacts that serve as evidence for compliance activities, support audit processes, and maintain organizational knowledge. They provide secure storage, version control, and access management for compliance-related documentation.
+
+## Compliance Significance
+
+Files are essential for:
+- **Evidence Documentation**: Storing and organizing evidence for compliance requirements
+- **Audit Support**: Providing documentation for internal and external audits
+- **Policy Management**: Maintaining current versions of policies and procedures
+- **Regulatory Compliance**: Supporting regulatory filing and reporting requirements
+- **Knowledge Management**: Preserving organizational compliance knowledge and expertise
+
+## File Categories
+
+### Evidence Files
+- **Purpose**: Supporting documentation for compliance controls
+- **Types**: Screenshots, logs, reports, certificates, attestations
+- **Access**: Controlled access based on compliance roles
+- **Retention**: Long-term retention for audit purposes
+
+### Policy Documents
+- **Purpose**: Organizational policies and procedures
+- **Types**: Security policies, operational procedures, governance documents
+- **Access**: Broad organizational access with approval workflows
+- **Retention**: Version control with historical preservation
+
+### Audit Artifacts
+- **Purpose**: Documents created for or during audit processes
+- **Types**: Audit reports, management responses, corrective action plans
+- **Access**: Restricted access to audit teams and management
+- **Retention**: Extended retention for regulatory requirements
+
+### Compliance Reports
+- **Purpose**: Compliance status and reporting documents
+- **Types**: Compliance dashboards, risk assessments, control testing results
+- **Access**: Management and compliance team access
+- **Retention**: Regulatory and business retention requirements
+
+### Template Files
+- **Purpose**: Standardized templates for compliance activities
+- **Types**: Policy templates, evidence collection forms, audit checklists
+- **Access**: Organization-wide access for consistency
+- **Retention**: Version control with template evolution
+
+## Properties
+
+### Core Information
+- **ID**: Unique identifier for the file
+- **Name**: Human-readable file name
+- **File Type**: Type of file (document, image, report, etc.)
+- **Size**: File size in bytes
+- **Content Type**: MIME type of the file content
+
+### Storage and Access
+- **Storage Location**: Secure storage location reference
+- **Access URL**: Secure access URL for file retrieval
+- **Access Controls**: Permissions and access restrictions
+- **Encryption Status**: Encryption state and method
+
+### Metadata
+- **Created At**: File creation timestamp
+- **Updated At**: Last modification timestamp
+- **Created By**: User who uploaded or created the file
+- **Updated By**: User who last modified the file
+- **Version**: File version number or identifier
+
+### Classification
+- **Sensitivity**: Data classification level (public, internal, confidential, restricted)
+- **Retention Period**: How long the file should be retained
+- **Compliance Tags**: Tags indicating compliance relevance
+- **Categories**: Organizational categories for file management
+
+## GraphQL Operations
+
+### Query Files
+```graphql
+query GetFiles($first: Int, $where: FileWhereInput) {
+  files(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        providedFileName
+        providedFileExtension
+        providedFileSize
+        categoryType
+        uri
+        storageScheme
+        storageVolume
+        storagePath
+        fileContents
+        createdAt
+        updatedAt
+        createdBy {
+          id
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}
+```
+
+### Create File
+```graphql
+mutation CreateFile($input: CreateFileInput!) {
+  createFile(input: $input) {
+    file {
+      id
+      providedFileName
+      providedFileExtension
+      providedFileSize
+      categoryType
+      uri
+      storageScheme
+      storageVolume
+      storagePath
+      createdAt
+    }
+  }
+}
+```
+
+### Update File
+```graphql
+mutation UpdateFile($id: ID!, $input: UpdateFileInput!) {
+  updateFile(id: $id, input: $input) {
+    file {
+      id
+      providedFileName
+      providedFileExtension
+      categoryType
+      uri
+      storageScheme
+      updatedAt
+    }
+  }
+}
+```
+
+### Delete File
+```graphql
+mutation DeleteFile($id: ID!) {
+  deleteFile(id: $id) {
+    deletedID
+  }
+}
+```
+
+## API Access
+
+Files are managed exclusively through GraphQL operations. There are no REST endpoints for file CRUD operations. File uploads use special GraphQL mechanisms with multipart form data. All file management, metadata updates, and access operations must be performed using the GraphQL API as shown in the examples above.
+
+**Note**: File uploads require special handling through GraphQL multipart requests. The file content should be uploaded as `fileContents` in the CreateFileInput, and the system will automatically handle storage allocation and URI generation.
+
+## File Management Workflows
+
+### Evidence Collection Workflow
+```javascript
+// Automated evidence collection and file management
+class EvidenceFileManager {
+  async collectEvidence(controlId, evidenceType, collectionMethod) {
+    const evidenceData = await this.performEvidenceCollection(controlId, evidenceType, collectionMethod);
+
+    // Create file record
+    const file = await this.uploadFile({
+      name: `Evidence - ${controlId} - ${evidenceType}`,
+      file_type: 'evidence',
+      content: evidenceData.content,
+      sensitivity: 'internal',
+      compliance_tags: ['evidence', evidenceType, controlId],
+      retention_period: '7_years'
+    });
+
+    // Link file to control and evidence record
+    await this.linkFileToControl(file.id, controlId);
+    await this.createEvidenceRecord(file.id, controlId, evidenceType);
+
+    return file;
+  }
+
+  async validateFileEvidence(fileId) {
+    const file = await this.getFile(fileId);
+    const validationResults = await this.performFileValidation(file);
+
+    // Update file with validation results
+    await this.updateFile(fileId, {
+      validation_status: validationResults.status,
+      validation_date: new Date().toISOString(),
+      validation_results: validationResults.details
+    });
+
+    return validationResults;
+  }
+}
+```
+
+### Document Lifecycle Management
+```javascript
+// Document lifecycle management
+const manageDocumentLifecycle = async (fileId, lifecycleStage) => {
+  const file = await getFile(fileId);
+  const lifecycleActions = {
+    'draft': async () => {
+      await updateFile(fileId, {
+        status: 'draft',
+        workflow_stage: 'authoring',
+        access_level: 'author_only'
+      });
+    },
+    'review': async () => {
+      await updateFile(fileId, {
+        status: 'under_review',
+        workflow_stage: 'review',
+        access_level: 'reviewers'
+      });
+      await notifyReviewers(fileId);
+    },
+    'approved': async () => {
+      await updateFile(fileId, {
+        status: 'approved',
+        workflow_stage: 'approved',
+        access_level: 'organization',
+        approval_date: new Date().toISOString()
+      });
+      await publishDocument(fileId);
+    },
+    'archived': async () => {
+      await updateFile(fileId, {
+        status: 'archived',
+        workflow_stage: 'archived',
+        access_level: 'compliance_team',
+        archive_date: new Date().toISOString()
+      });
+      await moveToArchiveStorage(fileId);
+    }
+  };
+
+  const action = lifecycleActions[lifecycleStage];
+  if (action) {
+    await action();
+  }
+
+  return await getFile(fileId);
+};
+```
+
+### Automated File Processing
+```javascript
+// Automated file processing and categorization
+const processUploadedFile = async (fileId) => {
+  const file = await getFile(fileId);
+
+  // Analyze file content
+  const analysis = await analyzeFileContent(file);
+
+  // Categorize file
+  const category = await categorizeFile(analysis);
+
+  // Extract metadata
+  const metadata = await extractMetadata(file);
+
+  // Update file with processing results
+  await updateFile(fileId, {
+    category: category,
+    extracted_metadata: metadata,
+    content_analysis: analysis,
+    processing_date: new Date().toISOString(),
+    processing_status: 'completed'
+  });
+
+  // Apply retention policy
+  await applyRetentionPolicy(fileId, category);
+
+  // Set up monitoring
+  await setupFileMonitoring(fileId);
+
+  return {
+    file: await getFile(fileId),
+    category: category,
+    metadata: metadata,
+    analysis: analysis
+  };
+};
+```
+
+## Security and Access Control
+
+### File Access Control
+```javascript
+// File access control management
+class FileAccessManager {
+  async checkFileAccess(fileId, userId, action) {
+    const file = await this.getFile(fileId);
+    const user = await this.getUser(userId);
+
+    // Check sensitivity-based access
+    const sensitivityAccess = await this.checkSensitivityAccess(file.sensitivity, user.clearance);
+
+    // Check role-based access
+    const roleAccess = await this.checkRoleAccess(file.compliance_tags, user.roles);
+
+    // Check action-specific permissions
+    const actionAccess = await this.checkActionPermissions(fileId, userId, action);
+
+    return sensitivityAccess && roleAccess && actionAccess;
+  }
+
+  async setFilePermissions(fileId, permissions) {
+    await this.updateFile(fileId, {
+      access_permissions: permissions,
+      permission_updated_at: new Date().toISOString()
+    });
+
+    // Audit permission change
+    await this.auditPermissionChange(fileId, permissions);
+  }
+}
+```
+
+### Encryption and Security
+```javascript
+// File encryption and security
+const secureFile = async (fileId, securityLevel) => {
+  const file = await getFile(fileId);
+
+  const securityMeasures = {
+    'standard': async () => {
+      await encryptFile(fileId, 'AES-256');
+      await enableAccessLogging(fileId);
+    },
+    'high': async () => {
+      await encryptFile(fileId, 'AES-256-GCM');
+      await enableAccessLogging(fileId);
+      await enableIntegrityChecking(fileId);
+    },
+    'maximum': async () => {
+      await encryptFile(fileId, 'AES-256-GCM');
+      await enableAccessLogging(fileId);
+      await enableIntegrityChecking(fileId);
+      await enableDigitalSigning(fileId);
+      await enableWatermarking(fileId);
+    }
+  };
+
+  const securityMeasure = securityMeasures[securityLevel];
+  if (securityMeasure) {
+    await securityMeasure();
+  }
+
+  await updateFile(fileId, {
+    security_level: securityLevel,
+    security_applied_date: new Date().toISOString()
+  });
+};
+```
+
+## Compliance Integration
+
+### Audit File Management
+```javascript
+// Audit file management
+const manageAuditFiles = async (auditId, auditType) => {
+  const auditFiles = await getFilesByAudit(auditId);
+
+  const auditFileStructure = {
+    'soc2': {
+      folders: ['control_evidence', 'policies', 'procedures', 'test_results'],
+      retention: '7_years',
+      access_level: 'audit_team'
+    },
+    'iso27001': {
+      folders: ['isms_documentation', 'risk_assessments', 'control_evidence', 'audit_reports'],
+      retention: '3_years',
+      access_level: 'compliance_team'
+    },
+    'internal': {
+      folders: ['findings', 'evidence', 'remediation_plans', 'management_responses'],
+      retention: '5_years',
+      access_level: 'internal_audit'
+    }
+  };
+
+  const structure = auditFileStructure[auditType];
+  if (structure) {
+    await organizeAuditFiles(auditFiles, structure);
+    await applyAuditRetentionPolicy(auditFiles, structure.retention);
+    await setAuditAccessControls(auditFiles, structure.access_level);
+  }
+
+  return auditFiles;
+};
+```
+
+### Compliance Reporting
+```javascript
+// Generate compliance reports from files
+const generateComplianceReport = async (reportType, dateRange) => {
+  const relevantFiles = await getFilesByComplianceTag(reportType, dateRange);
+
+  const reportData = {
+    report_type: reportType,
+    date_range: dateRange,
+    total_files: relevantFiles.length,
+    file_categories: {},
+    compliance_status: {},
+    recommendations: []
+  };
+
+  // Analyze files by category
+  for (const file of relevantFiles) {
+    const category = file.category || 'uncategorized';
+    reportData.file_categories[category] = (reportData.file_categories[category] || 0) + 1;
+  }
+
+  // Check compliance status
+  const complianceChecks = await performComplianceChecks(relevantFiles);
+  reportData.compliance_status = complianceChecks;
+
+  // Generate recommendations
+  reportData.recommendations = await generateRecommendations(relevantFiles, complianceChecks);
+
+  // Create report file
+  const reportFile = await createReportFile(reportData);
+
+  return reportFile;
+};
+```
+
+## File Templates and Standards
+
+### Evidence Collection Templates
+```yaml
+# Evidence collection file templates
+evidence_templates:
+  - name: "Access Control Evidence"
+    file_type: "evidence"
+    required_fields:
+      - "control_id"
+      - "collection_date"
+      - "collection_method"
+      - "evidence_type"
+    suggested_tags:
+      - "access_control"
+      - "evidence"
+      - "control_testing"
+    retention: "7_years"
+
+  - name: "Vulnerability Scan Results"
+    file_type: "evidence"
+    required_fields:
+      - "scan_date"
+      - "scan_scope"
+      - "vulnerabilities_found"
+      - "remediation_status"
+    suggested_tags:
+      - "vulnerability_scan"
+      - "security_testing"
+      - "evidence"
+    retention: "3_years"
+```
+
+### Policy Document Templates
+```yaml
+# Policy document templates
+policy_templates:
+  - name: "Security Policy Template"
+    file_type: "policy"
+    required_sections:
+      - "purpose"
+      - "scope"
+      - "responsibilities"
+      - "requirements"
+      - "compliance"
+    approval_workflow: "security_committee"
+    retention: "permanent"
+
+  - name: "Procedure Template"
+    file_type: "procedure"
+    required_sections:
+      - "overview"
+      - "procedure_steps"
+      - "responsibilities"
+      - "references"
+    approval_workflow: "department_head"
+    retention: "current_plus_3"
+```
+
+## Relationships
+
+Files integrate with several other Openlane objects:
+
+### Direct Relationships
+- **Organization**: Files belong to organizations
+- **User**: Files are created and managed by users
+- **Document Data**: Metadata and classification information
+- **File History**: Version control and change tracking
+
+### Indirect Relationships
+- **Evidence**: Files serve as evidence for compliance activities
+- **Controls**: Files document control implementation and testing
+- **Policies**: Files represent organizational policies and procedures
+- **Tasks**: Files are deliverables or attachments for tasks
+- **Programs**: Files support compliance program activities
+- **Audits**: Files provide audit documentation and evidence
+
+## Best Practices
+
+### File Organization
+1. **Consistent Naming**: Use consistent file naming conventions
+2. **Logical Structure**: Organize files in logical folder structures
+3. **Metadata Management**: Maintain comprehensive metadata for all files
+4. **Version Control**: Implement proper version control for documents
+
+### Security and Access
+1. **Least Privilege**: Apply least privilege access principles
+2. **Encryption**: Encrypt sensitive files at rest and in transit
+3. **Access Monitoring**: Monitor and log file access activities
+4. **Regular Reviews**: Conduct regular access reviews and updates
+
+### Compliance Management
+1. **Retention Policies**: Implement appropriate retention policies
+2. **Audit Trails**: Maintain comprehensive audit trails
+3. **Evidence Preservation**: Preserve evidence integrity and authenticity
+4. **Regulatory Compliance**: Ensure compliance with applicable regulations
+
+### Operational Excellence
+1. **Automated Processing**: Implement automated file processing where possible
+2. **Backup and Recovery**: Maintain robust backup and recovery procedures
+3. **Performance Monitoring**: Monitor file system performance and usage
+4. **Continuous Improvement**: Regularly review and improve file management processes
+
+Files provide the foundation for evidence management, documentation, and knowledge preservation in Openlane's compliance management platform.

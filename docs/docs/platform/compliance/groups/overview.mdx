@@ -1,0 +1,555 @@
+---
+title: "Groups"
+description: "User groups and access management for compliance teams"
+---
+
+# Groups
+
+Groups provide a mechanism for organizing users, managing permissions, and implementing role-based access control (RBAC) within Openlane's compliance management platform.
+
+## What Are Groups?
+
+Groups are collections of users with shared responsibilities, permissions, or organizational functions. They enable efficient management of access controls, assignment of compliance tasks, and coordination of compliance activities across teams and departments.
+
+## Compliance Significance
+
+Groups are essential for:
+- **Access Control**: Implementing role-based access control (RBAC) for compliance systems
+- **Segregation of Duties**: Ensuring proper separation of responsibilities in compliance processes
+- **Audit Trail**: Tracking group-based permissions and access for compliance auditing
+- **Organizational Structure**: Mapping compliance responsibilities to organizational units
+- **Workflow Management**: Enabling group-based task assignment and collaboration
+
+## Group Types
+
+### Functional Groups
+- **Purpose**: Groups based on job functions or expertise areas
+- **Examples**: Security Team, Compliance Officers, IT Administrators
+- **Permissions**: Role-specific access to relevant compliance objects
+- **Responsibilities**: Functional compliance activities and oversight
+
+### Organizational Groups
+- **Purpose**: Groups based on organizational structure
+- **Examples**: Regional Teams, Department Groups, Business Units
+- **Permissions**: Organization-level access to relevant entities and programs
+- **Responsibilities**: Entity-specific compliance activities
+
+### Project Groups
+- **Purpose**: Temporary groups for specific compliance projects
+- **Examples**: SOC 2 Audit Team, Risk Assessment Team, Implementation Team
+- **Permissions**: Project-specific access to relevant objects and evidence
+- **Responsibilities**: Project deliverables and compliance milestones
+
+### Approval Groups
+- **Purpose**: Groups with approval authority for compliance activities
+- **Examples**: Risk Committee, Compliance Committee, Executive Team
+- **Permissions**: Approval rights for policies, risk assessments, and remediation plans
+- **Responsibilities**: Governance and approval of compliance decisions
+
+## Properties
+
+### Core Information
+- **ID**: Unique identifier for the group
+- **Name**: Descriptive name for the group
+- **Display Name**: User-friendly display name
+- **Description**: Purpose and scope of the group
+- **Group Type**: Classification of the group (functional, organizational, etc.)
+
+### Configuration
+- **Settings**: Group configuration options and preferences
+- **Permissions**: Fine-grained permissions and access controls
+- **Visibility**: Group visibility and discoverability settings
+- **Status**: Active, inactive, or archived status
+
+### Membership Management
+- **Members**: Users who belong to the group
+- **Membership Roles**: Roles within the group (member, admin, etc.)
+- **Join Policy**: How users can join the group (invitation, request, automatic)
+- **Membership History**: Audit trail of membership changes
+
+### Organizational Context
+- **Organization**: Parent organization that owns the group
+- **Parent Groups**: Hierarchical relationship to parent groups
+- **Child Groups**: Subordinate groups under this group
+- **Related Entities**: Associated business entities or departments
+
+## GraphQL Operations
+
+### Query Groups
+```graphql
+query GetGroups($first: Int, $where: GroupWhereInput) {
+  groups(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        name
+        displayID
+        description
+        settings {
+          visibility
+          joinPolicy
+        }
+        members {
+          edges {
+            node {
+              id
+              user {
+                id
+                firstName
+                lastName
+                email
+              }
+              role
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Create Group
+```graphql
+mutation CreateGroup($input: CreateGroupInput!) {
+  createGroup(input: $input) {
+    group {
+      id
+      name
+      displayID
+      description
+      settings {
+        visibility
+        joinPolicy
+      }
+    }
+  }
+}
+```
+
+### Add Group Member
+```graphql
+mutation CreateGroupMembership($input: CreateGroupMembershipInput!) {
+  createGroupMembership(input: $input) {
+    groupMembership {
+      id
+      role
+      user {
+        id
+        firstName
+        lastName
+        email
+      }
+      group {
+        id
+        name
+        displayID
+      }
+    }
+  }
+}
+```
+
+### Update Group
+```graphql
+mutation UpdateGroup($id: ID!, $input: UpdateGroupInput!) {
+  updateGroup(id: $id, input: $input) {
+    group {
+      id
+      name
+      displayID
+      description
+      settings {
+        visibility
+        joinPolicy
+      }
+    }
+  }
+}
+```
+
+## API Access
+
+Groups are managed exclusively through GraphQL operations. There are no REST endpoints for group CRUD operations. All group management, membership, and permission operations must be performed using the GraphQL API as shown in the examples above.
+
+## Group Permissions and Access Control
+
+### Permission Types
+```javascript
+// Common permission types for compliance groups
+const permissionTypes = {
+  // Object-level permissions
+  'control': ['can_view', 'can_edit', 'can_delete', 'can_approve'],
+  'evidence': ['can_view', 'can_upload', 'can_edit', 'can_delete'],
+  'risk': ['can_view', 'can_assess', 'can_edit', 'can_approve'],
+  'policy': ['can_view', 'can_edit', 'can_approve', 'can_publish'],
+  'program': ['can_view', 'can_manage', 'can_audit'],
+
+  // System-level permissions
+  'system': ['can_admin', 'can_configure', 'can_audit_logs'],
+  'organization': ['can_manage_users', 'can_manage_groups', 'can_view_reports']
+};
+```
+
+### Role-Based Permission Templates
+```yaml
+# Permission templates for common compliance roles
+roles:
+  compliance_officer:
+    permissions:
+      - object: "control"
+        relations: ["can_view", "can_edit", "can_approve"]
+      - object: "evidence"
+        relations: ["can_view", "can_upload", "can_edit"]
+      - object: "risk"
+        relations: ["can_view", "can_assess", "can_edit"]
+      - object: "policy"
+        relations: ["can_view", "can_edit", "can_approve"]
+
+  auditor:
+    permissions:
+      - object: "control"
+        relations: ["can_view"]
+      - object: "evidence"
+        relations: ["can_view", "can_download"]
+      - object: "risk"
+        relations: ["can_view"]
+      - object: "program"
+        relations: ["can_audit"]
+
+  security_admin:
+    permissions:
+      - object: "control"
+        relations: ["can_view", "can_edit", "can_delete"]
+      - object: "evidence"
+        relations: ["can_view", "can_upload", "can_edit", "can_delete"]
+      - object: "scan"
+        relations: ["can_view", "can_execute", "can_configure"]
+```
+
+## Group Workflows
+
+### Compliance Team Setup
+```javascript
+// Set up compliance team groups
+const setupComplianceGroups = async () => {
+  // Create main compliance group
+  const complianceGroup = await createGroup({
+    name: 'compliance-team',
+    displayName: 'Compliance Team',
+    description: 'Main compliance team with full access',
+    permissions: complianceOfficerPermissions
+  });
+
+  // Create specialized subgroups
+  const auditGroup = await createGroup({
+    name: 'audit-team',
+    displayName: 'Audit Team',
+    description: 'Internal and external audit coordination',
+    parentGroup: complianceGroup.id,
+    permissions: auditorPermissions
+  });
+
+  const riskGroup = await createGroup({
+    name: 'risk-team',
+    displayName: 'Risk Management Team',
+    description: 'Risk assessment and management',
+    parentGroup: complianceGroup.id,
+    permissions: riskManagementPermissions
+  });
+
+  return { complianceGroup, auditGroup, riskGroup };
+};
+```
+
+### Project-Based Group Management
+```javascript
+// Create project-specific compliance groups
+const createProjectGroup = async (projectName, projectType, duration) => {
+  const group = await createGroup({
+    name: `${projectName.toLowerCase().replace(/\s+/g, '-')}-team`,
+    displayName: `${projectName} Team`,
+    description: `Temporary group for ${projectName}`,
+    settings: {
+      visibility: 'private',
+      joinPolicy: 'invitation_only',
+      autoArchive: new Date(Date.now() + duration * 24 * 60 * 60 * 1000)
+    },
+    permissions: getProjectPermissions(projectType)
+  });
+
+  return group;
+};
+```
+
+### Dynamic Permission Management
+```javascript
+// Dynamically update group permissions based on compliance requirements using GraphQL
+const updateGroupPermissionsForCompliance = async (groupId, complianceFramework) => {
+  const frameworkPermissions = getFrameworkPermissions(complianceFramework);
+
+  const mutation = `
+    mutation UpdateGroup($id: ID!, $input: UpdateGroupInput!) {
+      updateGroup(id: $id, input: $input) {
+        group {
+          id
+          name
+          settings {
+            permissions
+          }
+          updatedAt
+        }
+      }
+    }
+  `;
+
+  const variables = {
+    id: groupId,
+    input: {
+      settings: {
+        permissions: frameworkPermissions,
+        effectiveDate: new Date().toISOString(),
+        reason: `Updated for ${complianceFramework} compliance`
+      }
+    }
+  };
+
+  const response = await fetch('https://api.openlane.io/query', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiToken}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      query: mutation,
+      variables: variables
+    })
+  });
+
+  const result = await response.json();
+  return result.data.updateGroup.group;
+};
+```
+
+## Group Membership Management
+
+### Membership Lifecycle
+```javascript
+// Manage group membership lifecycle using GraphQL
+class GroupMembershipManager {
+  async addMember(groupId, userId, role = 'member') {
+    const mutation = `
+      mutation CreateGroupMembership($input: CreateGroupMembershipInput!) {
+        createGroupMembership(input: $input) {
+          groupMembership {
+            id
+            role
+            user {
+              id
+              firstName
+              lastName
+              email
+            }
+            group {
+              id
+              name
+            }
+            createdAt
+          }
+        }
+      }
+    `;
+
+    const variables = {
+      input: {
+        userID: userId,
+        groupID: groupId,
+        role: role
+      }
+    };
+
+    const response = await fetch('https://api.openlane.io/query', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${this.apiToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: mutation,
+        variables: variables
+      })
+    });
+
+    const result = await response.json();
+    return result.data.createGroupMembership.groupMembership;
+  }
+
+  async removeMember(membershipId, reason) {
+    const mutation = `
+      mutation DeleteGroupMembership($id: ID!) {
+        deleteGroupMembership(id: $id) {
+          deletedID
+        }
+      }
+    `;
+
+    const variables = { id: membershipId };
+
+    const response = await fetch('https://api.openlane.io/query', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${this.apiToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: mutation,
+        variables: variables
+      })
+    });
+
+    const result = await response.json();
+    return result.data.deleteGroupMembership;
+  }
+
+  async updateMemberRole(membershipId, newRole) {
+    const mutation = `
+      mutation UpdateGroupMembership($id: ID!, $input: UpdateGroupMembershipInput!) {
+        updateGroupMembership(id: $id, input: $input) {
+          groupMembership {
+            id
+            role
+            updatedAt
+          }
+        }
+      }
+    `;
+
+    const variables = {
+      id: membershipId,
+      input: {
+        role: newRole
+      }
+    };
+
+    const response = await fetch('https://api.openlane.io/query', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${this.apiToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: mutation,
+        variables: variables
+      })
+    });
+
+    const result = await response.json();
+    return result.data.updateGroupMembership.groupMembership;
+  }
+}
+```
+
+### Bulk Membership Operations
+```javascript
+// Bulk membership management for large teams using GraphQL
+const bulkAddMembers = async (groupId, userIds, role = 'member') => {
+  const mutation = `
+    mutation CreateGroupMembership($input: CreateGroupMembershipInput!) {
+      createGroupMembership(input: $input) {
+        groupMembership {
+          id
+          role
+          user {
+            id
+            firstName
+            lastName
+          }
+          createdAt
+        }
+      }
+    }
+  `;
+
+  const memberships = [];
+
+  for (const userId of userIds) {
+    const variables = {
+      input: {
+        userID: userId,
+        groupID: groupId,
+        role: role
+      }
+    };
+
+    const response = await fetch('https://api.openlane.io/query', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: mutation,
+        variables: variables
+      })
+    });
+
+    const result = await response.json();
+    memberships.push(result.data.createGroupMembership.groupMembership);
+  }
+
+  return memberships;
+};
+```
+
+## Relationships
+
+Groups integrate with several other Openlane objects:
+
+### Direct Relationships
+- **Organization**: Groups belong to organizations
+- **Group Membership**: Links users to groups with specific roles
+- **Group Settings**: Configuration and preferences for groups
+- **Group Permissions**: Fine-grained access controls for groups
+
+### Indirect Relationships
+- **Users**: Group members who participate in compliance activities
+- **Controls**: Groups may have specific permissions for control management
+- **Evidence**: Groups may be responsible for evidence collection and review
+- **Risks**: Groups may be assigned risk assessment and management responsibilities
+- **Tasks**: Groups can be assigned compliance tasks and activities
+- **Programs**: Groups may be responsible for specific compliance programs
+
+## Best Practices
+
+### Group Design
+1. **Clear Purpose**: Define clear purpose and scope for each group
+2. **Logical Structure**: Create logical hierarchies and relationships
+3. **Consistent Naming**: Use consistent naming conventions across groups
+4. **Size Management**: Keep groups to manageable sizes for effective collaboration
+
+### Permission Management
+1. **Least Privilege**: Grant minimum necessary permissions for group functions
+2. **Regular Review**: Conduct regular reviews of group permissions
+3. **Documentation**: Document the rationale for group permission assignments
+4. **Audit Trail**: Maintain complete audit trails for permission changes
+
+### Membership Management
+1. **Clear Roles**: Define clear roles and responsibilities within groups
+2. **Onboarding**: Implement proper onboarding processes for new members
+3. **Lifecycle Management**: Manage membership lifecycle including removal procedures
+4. **Regular Audits**: Conduct regular audits of group memberships
+
+### Operational Guidelines
+1. **Communication**: Establish clear communication channels within groups
+2. **Collaboration**: Implement effective collaboration tools and processes
+3. **Performance Monitoring**: Monitor group performance and effectiveness
+4. **Continuous Improvement**: Regularly assess and improve group operations
+
+Groups provide the organizational foundation for effective compliance team management and access control within Openlane's platform.

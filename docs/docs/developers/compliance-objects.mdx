@@ -1,0 +1,354 @@
+# Compliance Objects Developer Reference
+
+This page provides developer-focused information about Openlane's compliance objects, including code examples, API references, and links to implementation details in the core repository.
+
+## Core Repository References
+
+For detailed implementation information, refer to these files in the [Openlane core repository](https://github.com/theopenlane/core):
+
+### Configuration and Automation
+- **[Configuration Management](/Users/manderson/core/config/README.md)** - Auto-generated configuration files, secret management, and deployment automation
+- **[Domain Inheritance System](/Users/manderson/core/config/README.md#global-domain-inheritance-system)** - Global domain configuration for compliance environments
+- **[Buildkite Automation](/Users/manderson/core/.buildkite/helm-automation.sh)** - Automated compliance configuration deployment
+
+### Database Schemas
+- **[Ent Schemas](/Users/manderson/core/internal/ent/schema/)** - Database entity definitions for all compliance objects
+- **[Schema Generator](/Users/manderson/core/jsonschema/schema_generator.go)** - Automated schema and configuration generation
+
+### API Implementation
+- **[GraphQL API](/Users/manderson/core/internal/graphapi/)** - Complete GraphQL schema and resolvers
+- **[HTTP Handlers](/Users/manderson/core/internal/httpserve/)** - REST endpoints and authentication
+
+## Compliance Object Categories
+
+### Core Compliance Management
+- **[Standards](../platform/compliance/standards/overview.mdx)** - Compliance frameworks (SOC 2, ISO 27001, NIST)
+- **[Controls](../platform/compliance/controls/overview.mdx)** - Specific compliance controls and requirements
+- **[Evidence](../platform/compliance/evidence/overview.mdx)** - Audit evidence collection and management
+- **[Risks](../platform/compliance/risks/overview.mdx)** - Risk identification and mitigation
+
+### Program Management
+- **[Programs](../platform/compliance/programs/overview.mdx)** - Compliance program organization
+- **[Control Objectives](../platform/compliance/control-objectives/overview.mdx)** - High-level control objectives
+- **[Control Implementations](../platform/compliance/control-implementations/overview.mdx)** - Implementation tracking
+
+### Governance and Documentation
+- **[Internal Policies](../platform/compliance/internal-policies/overview.mdx)** - Policy management
+- **[Procedures](../platform/compliance/procedures/overview.mdx)** - Operational procedures
+- **[Narratives](../platform/compliance/narratives/overview.mdx)** - Compliance narratives
+
+## Development Patterns
+
+### Entity Relationships
+
+All compliance objects follow consistent relationship patterns:
+
+```go
+// Example: Control entity relationships
+type Control struct {
+    // Core fields
+    ID          string `json:"id"`
+    DisplayID   string `json:"displayID"`
+    Description string `json:"description"`
+
+    // Relationships
+    Standard            *Standard             `json:"standard,omitempty"`
+    Programs            []*Program            `json:"programs,omitempty"`
+    Subcontrols         []*Subcontrol         `json:"subcontrols,omitempty"`
+    ControlImplementations []*ControlImplementation `json:"controlImplementations,omitempty"`
+    Evidence            []*Evidence           `json:"evidence,omitempty"`
+
+    // Organizational
+    Organization        *Organization         `json:"organization,omitempty"`
+    ControlOwner        *Group               `json:"controlOwner,omitempty"`
+    Delegate            *Group               `json:"delegate,omitempty"`
+}
+```
+
+### GraphQL Schema Patterns
+
+All entities follow consistent GraphQL patterns:
+
+```graphql
+# Query pattern
+type Query {
+  entity(id: ID!): Entity
+  entities(where: EntityWhereInput, orderBy: [EntityOrder!], first: Int, after: Cursor): EntityConnection
+  entitySearch(query: String!): EntityConnection
+}
+
+# Mutation pattern
+type Mutation {
+  createEntity(input: CreateEntityInput!): CreateEntityPayload!
+  createBulkEntity(input: [CreateEntityInput!]!): CreateBulkEntityPayload!
+  updateEntity(id: ID!, input: UpdateEntityInput!): UpdateEntityPayload!
+  deleteEntity(id: ID!): DeleteEntityPayload!
+}
+
+# Connection pattern
+type EntityConnection {
+  edges: [EntityEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+```
+
+### Access Control Patterns
+
+All entities implement consistent access control:
+
+```go
+// FGA (Fine-Grained Authorization) annotations
+entfga.Annotations{
+    ObjectType:   "control",
+    IncludeHooks: true,
+    IDField:      "ID",
+    NillableIDField: true,
+},
+
+// Organization-based ownership
+func (c *Control) Intercept(next ent.Interceptor) ent.Interceptor {
+    return ent.InterceptFunc(func(ctx context.Context, q ent.Query) (ent.Value, error) {
+        // Apply organization-based filtering
+        return next.Intercept(ctx, q)
+    })
+}
+```
+
+## Code Examples
+
+### Create Control with Evidence
+
+```graphql
+mutation CreateControlWithEvidence {
+  # Create the control
+  createControl(input: {
+    displayID: "AC-001"
+    description: "Access Control Policy Implementation"
+    category: "ACCESS_CONTROL"
+    controlType: "PREVENTATIVE"
+    source: "USER_DEFINED"
+    status: "PREPARING"
+    standardID: "standard-uuid"
+  }) {
+    control {
+      id
+      displayID
+      description
+    }
+  }
+
+  # Create evidence for the control
+  createEvidence(input: {
+    name: "Access Control Policy Document"
+    description: "Formal access control policy with management approval"
+    source: "Document Management System"
+    status: "READY"
+    controlIDs: ["control-uuid-from-above"]
+  }) {
+    evidence {
+      id
+      name
+      status
+    }
+  }
+}
+```
+
+### Risk Assessment Workflow
+
+```graphql
+# 1. Create risk
+mutation CreateRisk {
+  createRisk(input: {
+    name: "Unauthorized Data Access"
+    details: "Risk of unauthorized access to sensitive customer data"
+    category: "DATA_SECURITY"
+    riskType: "OPERATIONAL"
+    impact: HIGH
+    likelihood: MEDIUM
+    status: OPEN
+  }) {
+    risk {
+      id
+      name
+      score # Automatically calculated
+    }
+  }
+}
+
+# 2. Create controls to mitigate risk
+mutation CreateMitigatingControl {
+  createControl(input: {
+    displayID: "AC-002"
+    description: "Multi-Factor Authentication"
+    controlType: "PREVENTATIVE"
+    riskIDs: ["risk-uuid-from-above"]
+  }) {
+    control {
+      id
+      displayID
+      risks {
+        edges {
+          node {
+            name
+            score
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Bulk Operations
+
+```graphql
+# Import framework controls
+mutation ImportSOC2Controls {
+  createBulkControl(input: [
+    {
+      displayID: "CC6.1"
+      description: "Logical access security controls"
+      category: "COMMON_CRITERIA"
+      controlType: "PREVENTATIVE"
+      source: "FRAMEWORK"
+      standardID: "soc2-standard-id"
+    },
+    {
+      displayID: "CC6.2"
+      description: "User access authorization"
+      category: "COMMON_CRITERIA"
+      controlType: "PREVENTATIVE"
+      source: "FRAMEWORK"
+      standardID: "soc2-standard-id"
+    }
+  ]) {
+    controls {
+      id
+      displayID
+      description
+    }
+  }
+}
+```
+
+## Development Tools
+
+### Schema Generation
+
+The core repository includes automated schema generation:
+
+```bash
+# Generate configuration schemas
+task config:generate
+
+# Generate GraphQL schemas
+task generate
+
+# Generate documentation
+task docs:generate
+```
+
+### Testing
+
+```bash
+# Run compliance object tests
+go test ./internal/ent/schema/...
+
+# Test GraphQL operations
+go test ./internal/graphapi/...
+
+# Integration tests
+go test ./tests/compliance/...
+```
+
+### Database Migrations
+
+```bash
+# Generate migrations for schema changes
+task atlas:migration
+
+# Apply migrations
+task atlas:migrate
+
+# Validate schema
+task atlas:lint
+```
+
+## Configuration Management
+
+Openlane provides automated configuration management for compliance deployments:
+
+### Domain Inheritance
+
+Configure global domains for compliance environments:
+
+```yaml
+# Helm values
+domain: "compliance.company.com"
+
+# Automatically configures:
+# - API endpoints: https://api.compliance.company.com
+# - Trust center: https://trust.compliance.company.com
+# - Documentation: https://docs.compliance.company.com
+```
+
+### Secret Management
+
+Sensitive compliance data is managed through External Secrets:
+
+```yaml
+# External Secrets configuration
+externalSecrets:
+  enabled: true
+  secrets:
+    compliance-database-password:
+      enabled: true
+      secretKey: "DATABASE_PASSWORD"
+      remoteKey: "compliance-db-password"
+```
+
+### Environment Configuration
+
+Use environment variables for compliance-specific settings:
+
+```bash
+# Core compliance settings
+CORE_COMPLIANCE_ENABLED=true
+CORE_AUDIT_LOGGING=true
+CORE_EVIDENCE_RETENTION_DAYS=2555  # 7 years
+
+# Framework-specific settings
+CORE_SOC2_ENABLED=true
+CORE_ISO27001_ENABLED=true
+CORE_NIST_CSF_ENABLED=true
+```
+
+## Best Practices
+
+### Entity Design
+1. **Consistent Relationships**: Use standard relationship patterns across entities
+2. **Proper Indexing**: Index frequently queried fields for performance
+3. **Validation Rules**: Implement comprehensive validation for data integrity
+4. **Audit Trails**: Include audit fields for compliance tracking
+
+### API Design
+1. **Consistent Schemas**: Follow established GraphQL patterns
+2. **Proper Error Handling**: Return meaningful error messages
+3. **Rate Limiting**: Implement appropriate rate limits for API endpoints
+4. **Authentication**: Require proper authentication for all operations
+
+### Testing
+1. **Unit Tests**: Test individual object methods and validations
+2. **Integration Tests**: Test relationships between objects
+3. **Performance Tests**: Verify query performance with large datasets
+4. **Security Tests**: Validate access controls and permissions
+
+### Documentation
+1. **Code Comments**: Document complex business logic
+2. **API Documentation**: Maintain current GraphQL schema documentation
+3. **Change Logs**: Document schema changes and migrations
+4. **User Guides**: Provide usage examples and best practices
+
+For more detailed implementation information, see the source code in the [Openlane core repository](https://github.com/theopenlane/core) and the specific object documentation pages linked above.
