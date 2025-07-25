@@ -9,7 +9,7 @@ sidebar_position: 9
 
 ## AAGUID
 
-
+AAGUID (Authenticator Attestation Global Unique Identifier) is a 128-bit identifier used in the WebAuthn and FIDO2 protocols to uniquely identify the model of an authenticator device
 
 ## Address
 
@@ -28,6 +28,11 @@ The `AssessmentObjective` scalar type represents objectives that are validated d
 ## Boolean
 
 The `Boolean` scalar type represents `true` or `false`.
+
+## Change
+
+Change is a difference between two updates to an object used by
+the audit history resolvers
 
 ## Cursor
 
@@ -56,11 +61,11 @@ The `Int` scalar type represents non-fractional signed whole numeric values. Int
 
 ## JobCadence
 
-
+JobCadence is when a job should be scheduled to run
 
 ## JobConfiguration
 
-
+JobConfiguration is the configuration for an automated job
 
 ## JSON
 

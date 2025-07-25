@@ -203,6 +203,12 @@ Properties by which ActionPlanHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -457,6 +463,204 @@ Properties by which APIToken connections can be ordered.
 </tbody>
 </table>
 
+## AssetAssetType
+
+AssetAssetType is enum for the field asset_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>TECHNOLOGY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DOMAIN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DEVICE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TELEPHONE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssetHistoryAssetType
+
+AssetHistoryAssetType is enum for the field asset_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>TECHNOLOGY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DOMAIN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DEVICE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TELEPHONE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssetHistoryOpType
+
+AssetHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssetHistoryOrderField
+
+Properties by which AssetHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ASSET_TYPE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssetOrderField
+
+Properties by which Asset connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ASSET_TYPE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AuditLogOrderField
+
+Properties by which AuditLog connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ContactHistoryOpType
 
 ContactHistoryOpType is enum for the field operation
@@ -496,6 +700,12 @@ Properties by which ContactHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -959,6 +1169,12 @@ Properties by which ControlHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -978,6 +1194,12 @@ Properties by which ControlHistory connections can be ordered.
 </tr>
 <tr>
 <td>SOURCE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>REFERENCE_FRAMEWORK</td>
 <td>
 
 </td>
@@ -1132,6 +1354,12 @@ Properties by which ControlImplementationHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -1361,6 +1589,12 @@ Properties by which ControlObjectiveHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -1547,6 +1781,12 @@ Properties by which Control connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>REFERENCE_FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>CONTROL_TYPE</td>
 <td>
 
@@ -1566,6 +1806,12 @@ Properties by which Control connections can be ordered.
 </tr>
 <tr>
 <td>ref_code</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CONTROL_OWNER_name</td>
 <td>
 
 </td>
@@ -1612,6 +1858,12 @@ Properties by which ControlScheduledJobHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -1690,6 +1942,12 @@ Properties by which CustomDomainHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -1996,6 +2254,12 @@ Properties by which DNSVerificationHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -2351,6 +2615,12 @@ Properties by which DocumentDataHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -2428,6 +2698,12 @@ Properties by which EntityHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -2543,6 +2819,12 @@ Properties by which EntityTypeHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -2586,60 +2868,6 @@ Properties by which EntityType connections can be ordered.
 </tr>
 <tr>
 <td>name</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## EventHistoryOpType
-
-EventHistoryOpType is enum for the field operation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>INSERT</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>UPDATE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## EventHistoryOrderField
-
-Properties by which EventHistory connections can be ordered.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>created_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>updated_at</td>
 <td>
 
 </td>
@@ -2795,6 +3023,12 @@ Properties by which EvidenceHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -2921,6 +3155,12 @@ Properties by which FileHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -2999,6 +3239,12 @@ Properties by which GroupHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -3064,6 +3310,12 @@ Properties by which GroupMembershipHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -3305,6 +3557,12 @@ Properties by which GroupSettingHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -3467,6 +3725,12 @@ Properties by which HushHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -3568,6 +3832,12 @@ Properties by which IntegrationHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -3826,6 +4096,12 @@ Properties by which InternalPolicyHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -4111,90 +4387,6 @@ Properties by which JobResult connections can be ordered.
 </tbody>
 </table>
 
-## JobRunnerHistoryJobRunnerStatus
-
-JobRunnerHistoryJobRunnerStatus is enum for the field status
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>ONLINE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>OFFLINE</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## JobRunnerHistoryOpType
-
-JobRunnerHistoryOpType is enum for the field operation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>INSERT</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>UPDATE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## JobRunnerHistoryOrderField
-
-Properties by which JobRunnerHistory connections can be ordered.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>created_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>updated_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>name</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## JobRunnerJobRunnerStatus
 
 JobRunnerJobRunnerStatus is enum for the field status
@@ -4354,6 +4546,12 @@ Properties by which MappableDomainHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -4516,6 +4714,12 @@ Properties by which MappedControlHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -4691,6 +4895,12 @@ Properties by which NarrativeHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -4780,6 +4990,12 @@ Properties by which NoteHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -4883,6 +5099,12 @@ Properties by which OrganizationHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -4985,6 +5207,12 @@ Properties by which OrganizationSettingHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -5022,6 +5250,54 @@ OrganizationSettingHistoryRegion is enum for the field geo_location
 </tr>
 <tr>
 <td>APAC</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## OrganizationSettingHistorySSOProvider
+
+OrganizationSettingHistorySSOProvider is enum for the field identity_provider
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>OKTA</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ONELOGIN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GOOGLEWORKSPACE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SLACK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GITHUB</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
 <td>
 
 </td>
@@ -5083,6 +5359,54 @@ OrganizationSettingRegion is enum for the field geo_location
 </tbody>
 </table>
 
+## OrganizationSettingSSOProvider
+
+OrganizationSettingSSOProvider is enum for the field identity_provider
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>OKTA</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ONELOGIN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GOOGLEWORKSPACE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SLACK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GITHUB</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## OrgMembershipHistoryOpType
 
 OrgMembershipHistoryOpType is enum for the field operation
@@ -5122,6 +5446,12 @@ Properties by which OrgMembershipHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -5272,6 +5602,12 @@ Properties by which OrgSubscriptionHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -5663,6 +5999,12 @@ Properties by which ProcedureHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -5800,6 +6142,12 @@ Properties by which ProgramHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -5968,6 +6316,12 @@ Properties by which ProgramMembershipHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -6244,6 +6598,12 @@ Properties by which RiskHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -6595,6 +6955,258 @@ RiskRiskStatus is enum for the field status
 </tbody>
 </table>
 
+## ScanHistoryOpType
+
+ScanHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScanHistoryOrderField
+
+Properties by which ScanHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SCAN_TYPE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScanHistoryScanStatus
+
+ScanHistoryScanStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PROCESSING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScanHistoryScanType
+
+ScanHistoryScanType is enum for the field scan_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>DOMAIN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VULNERABILITY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VENDOR</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PROVIDER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScanOrderField
+
+Properties by which Scan connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SCAN_TYPE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScanScanStatus
+
+ScanScanStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PROCESSING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScanScanType
+
+ScanScanType is enum for the field scan_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>DOMAIN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VULNERABILITY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VENDOR</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PROVIDER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ScheduledJobHistoryJobType
 
 ScheduledJobHistoryJobType is enum for the field job_type
@@ -6652,6 +7264,12 @@ Properties by which ScheduledJobHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -6820,6 +7438,12 @@ Properties by which StandardHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -7283,6 +7907,12 @@ Properties by which SubcontrolHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -7302,6 +7932,12 @@ Properties by which SubcontrolHistory connections can be ordered.
 </tr>
 <tr>
 <td>SOURCE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>REFERENCE_FRAMEWORK</td>
 <td>
 
 </td>
@@ -7367,6 +8003,12 @@ Properties by which Subcontrol connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>REFERENCE_FRAMEWORK</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>CONTROL_TYPE</td>
 <td>
 
@@ -7386,6 +8028,12 @@ Properties by which Subcontrol connections can be ordered.
 </tr>
 <tr>
 <td>ref_code</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CONTROL_OWNER_name</td>
 <td>
 
 </td>
@@ -7480,6 +8128,12 @@ Properties by which TaskHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -7751,6 +8405,12 @@ Properties by which TemplateHistory connections can be ordered.
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>
 
@@ -7816,6 +8476,174 @@ Properties by which Template connections can be ordered.
 ## TFASettingOrderField
 
 Properties by which TFASetting connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterHistoryOpType
+
+TrustCenterHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterHistoryOrderField
+
+Properties by which TrustCenterHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterOrderField
+
+Properties by which TrustCenter connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSettingHistoryOpType
+
+TrustCenterSettingHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSettingHistoryOrderField
+
+Properties by which TrustCenterSettingHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSettingOrderField
+
+Properties by which TrustCenterSetting connections can be ordered.
 
 <p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
 
@@ -7948,6 +8776,12 @@ Properties by which UserHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
@@ -8122,6 +8956,12 @@ Properties by which UserSettingHistory connections can be ordered.
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>created_at</td>
 <td>
