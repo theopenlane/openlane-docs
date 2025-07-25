@@ -1,0 +1,8 @@
+{
+  "label": "Job Management",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Job management, automation, and workflow orchestration within Openlane."
+  }
+}

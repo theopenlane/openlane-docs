@@ -1,0 +1,691 @@
+---
+title: "Personal Access Tokens"
+description: "User-specific tokens for personal automation and tooling"
+sidebar_position: 2
+---
+
+# Personal Access Tokens
+
+Personal Access Tokens (PATs) provide user-specific programmatic access to Openlane APIs. Unlike organization-level API tokens, PATs inherit the permissions of the user who created them and are designed for personal automation, development tools, and user-specific integrations.
+
+## What Are Personal Access Tokens?
+
+Personal Access Tokens are authentication credentials that allow individual users to access Openlane APIs programmatically while maintaining the user's identity and permission context. They enable users to build personal automation tools, integrate with third-party services, and develop applications that interact with Openlane on their behalf.
+
+## Key Features
+
+- **User Identity**: PATs maintain the identity of the creating user
+- **Permission Inheritance**: Inherit all permissions from the user's roles and group memberships
+- **Personal Management**: Users can create, manage, and revoke their own tokens
+- **Flexible Scoping**: Support for custom permission scopes
+- **Audit Traceability**: All actions are attributed to the token owner
+
+## Token Properties
+
+### Core Information
+- **ID**: Unique identifier for the token
+- **Name**: User-defined name for easy identification
+- **Token**: Secure token value (displayed only once at creation)
+- **Description**: Optional description of token purpose
+- **Owner**: User who created and owns the token
+
+### Access Control
+- **Scopes**: Array of permission scopes (read, write, admin)
+- **Active Status**: Whether the token is currently active
+- **Expiration**: Optional expiration date for automatic revocation
+
+### Usage Tracking
+- **Created At**: Token creation timestamp
+- **Last Used At**: Most recent usage timestamp
+- **Usage Count**: Number of times token has been used
+- **IP Addresses**: Recent IP addresses that used the token
+
+## GraphQL Operations
+
+### Query Personal Access Tokens
+
+```graphql
+query GetPersonalAccessTokens($first: Int, $where: PersonalAccessTokenWhereInput) {
+  personalAccessTokens(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        name
+        description
+        scopes
+        isActive
+        expiresAt
+        lastUsedAt
+        createdAt
+        abilities
+        usageCount
+        owner {
+          id
+          firstName
+          lastName
+          email
+        }
+      }
+    }
+  }
+}
+```
+
+### Create Personal Access Token
+
+```graphql
+mutation CreatePersonalAccessToken($input: CreatePersonalAccessTokenInput!) {
+  createPersonalAccessToken(input: $input) {
+    personalAccessToken {
+      id
+      name
+      token
+      description
+      scopes
+      expiresAt
+      isActive
+      createdAt
+      abilities
+    }
+  }
+}
+```
+
+**Input Example:**
+```json
+{
+  "input": {
+    "name": "Development Tools Integration",
+    "description": "Token for local development environment and CLI tools",
+    "scopes": ["read", "write"],
+    "expiresAt": "2024-12-31T23:59:59Z"
+  }
+}
+```
+
+### Update Personal Access Token
+
+```graphql
+mutation UpdatePersonalAccessToken($id: ID!, $input: UpdatePersonalAccessTokenInput!) {
+  updatePersonalAccessToken(id: $id, input: $input) {
+    personalAccessToken {
+      id
+      name
+      description
+      scopes
+      isActive
+      expiresAt
+      updatedAt
+    }
+  }
+}
+```
+
+### Revoke Personal Access Token
+
+```graphql
+mutation RevokePersonalAccessToken($id: ID!) {
+  updatePersonalAccessToken(id: $id, input: { isActive: false }) {
+    personalAccessToken {
+      id
+      name
+      isActive
+      updatedAt
+    }
+  }
+}
+```
+
+## API Usage Examples
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+### Token Management
+
+<Tabs>
+<TabItem value="golang" label="Go">
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "log"
+    "time"
+
+    "github.com/theopenlane/core/pkg/openlaneclient"
+)
+
+// PersonalTokenManager handles personal access token operations
+type PersonalTokenManager struct {
+    client *openlaneclient.OpenlaneClient
+}
+
+// CreatePersonalToken creates a new personal access token
+func (ptm *PersonalTokenManager) CreatePersonalToken(ctx context.Context, tokenConfig *PersonalTokenConfig) (*generated.PersonalAccessToken, error) {
+    input := openlaneclient.CreatePersonalAccessTokenInput{
+        Name:        tokenConfig.Name,
+        Description: openlaneclient.Ptr(tokenConfig.Description),
+        Scopes:      tokenConfig.Scopes,
+    }
+
+    // Set expiration if provided
+    if tokenConfig.ExpirationDays > 0 {
+        expirationTime := time.Now().AddDate(0, 0, tokenConfig.ExpirationDays)
+        input.ExpiresAt = &expirationTime
+    }
+
+    token, err := ptm.client.CreatePersonalAccessToken(ctx, input)
+    if err != nil {
+        return nil, fmt.Errorf("failed to create personal access token: %w", err)
+    }
+
+    log.Printf("Created personal access token: %s (%s)", token.Name, token.ID)
+
+    // Important: Token value is only returned once
+    if token.Token != nil {
+        log.Printf("Token value (save this securely): %s", *token.Token)
+    }
+
+    return token, nil
+}
+
+// ListPersonalTokens retrieves all personal access tokens for the current user
+func (ptm *PersonalTokenManager) ListPersonalTokens(ctx context.Context) ([]*generated.PersonalAccessToken, error) {
+    where := openlaneclient.PersonalAccessTokenWhereInput{
+        IsActive: openlaneclient.Ptr(true),
+    }
+
+    result, err := ptm.client.GetPersonalAccessTokens(ctx, &where)
+    if err != nil {
+        return nil, fmt.Errorf("failed to get personal access tokens: %w", err)
+    }
+
+    var tokens []*generated.PersonalAccessToken
+    for _, edge := range result.PersonalAccessTokens.Edges {
+        tokens = append(tokens, edge.Node)
+    }
+
+    return tokens, nil
+}
+
+// RevokePersonalToken revokes a personal access token
+func (ptm *PersonalTokenManager) RevokePersonalToken(ctx context.Context, tokenID string, reason string) error {
+    input := openlaneclient.UpdatePersonalAccessTokenInput{
+        IsActive: openlaneclient.Ptr(false),
+    }
+
+    if reason != "" {
+        input.Description = openlaneclient.Ptr(fmt.Sprintf("Revoked: %s", reason))
+    }
+
+    _, err := ptm.client.UpdatePersonalAccessToken(ctx, tokenID, input)
+    if err != nil {
+        return fmt.Errorf("failed to revoke personal access token: %w", err)
+    }
+
+    log.Printf("Revoked personal access token: %s", tokenID)
+    return nil
+}
+
+// RotatePersonalToken creates a new token and revokes the old one
+func (ptm *PersonalTokenManager) RotatePersonalToken(ctx context.Context, oldTokenID string, newTokenConfig *PersonalTokenConfig) (*generated.PersonalAccessToken, error) {
+    // Create new token first
+    newToken, err := ptm.CreatePersonalToken(ctx, newTokenConfig)
+    if err != nil {
+        return nil, fmt.Errorf("failed to create new token during rotation: %w", err)
+    }
+
+    // Revoke old token
+    err = ptm.RevokePersonalToken(ctx, oldTokenID, "Token rotation")
+    if err != nil {
+        log.Printf("Warning: failed to revoke old token during rotation: %v", err)
+        // Don't fail rotation if old token revocation fails
+    }
+
+    log.Printf("Successfully rotated token. New token ID: %s", newToken.ID)
+    return newToken, nil
+}
+
+// GetTokenUsageStats retrieves usage statistics for personal tokens
+func (ptm *PersonalTokenManager) GetTokenUsageStats(ctx context.Context) (*TokenUsageStats, error) {
+    tokens, err := ptm.ListPersonalTokens(ctx)
+    if err != nil {
+        return nil, fmt.Errorf("failed to get tokens for usage stats: %w", err)
+    }
+
+    stats := &TokenUsageStats{
+        TotalTokens:       len(tokens),
+        ActiveTokens:      0,
+        ExpiringTokens:    0,
+        UnusedTokens:      0,
+        RecentlyUsedTokens: 0,
+    }
+
+    now := time.Now()
+    thirtyDaysAgo := now.AddDate(0, 0, -30)
+    sevenDaysFromNow := now.AddDate(0, 0, 7)
+
+    for _, token := range tokens {
+        if token.IsActive {
+            stats.ActiveTokens++
+        }
+
+        // Check if token expires within 7 days
+        if token.ExpiresAt != nil && token.ExpiresAt.Before(sevenDaysFromNow) {
+            stats.ExpiringTokens++
+        }
+
+        // Check if token was never used
+        if token.LastUsedAt == nil {
+            stats.UnusedTokens++
+        } else if token.LastUsedAt.After(thirtyDaysAgo) {
+            stats.RecentlyUsedTokens++
+        }
+    }
+
+    return stats, nil
+}
+
+// PersonalTokenConfig represents configuration for creating personal tokens
+type PersonalTokenConfig struct {
+    Name           string
+    Description    string
+    Scopes         []string
+    ExpirationDays int
+}
+
+// TokenUsageStats represents usage statistics for personal tokens
+type TokenUsageStats struct {
+    TotalTokens        int
+    ActiveTokens       int
+    ExpiringTokens     int
+    UnusedTokens       int
+    RecentlyUsedTokens int
+}
+```
+
+</TabItem>
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+// Personal Access Token management
+class PersonalTokenManager {
+  constructor(client) {
+    this.client = client;
+  }
+
+  async createPersonalToken(tokenConfig) {
+    const input = {
+      name: tokenConfig.name,
+      description: tokenConfig.description,
+      scopes: tokenConfig.scopes
+    };
+
+    if (tokenConfig.expirationDays > 0) {
+      const expirationDate = new Date();
+      expirationDate.setDate(expirationDate.getDate() + tokenConfig.expirationDays);
+      input.expiresAt = expirationDate.toISOString();
+    }
+
+    const token = await this.client.createPersonalAccessToken(input);
+    console.log(`Created personal access token: ${token.name} (${token.id})`);
+
+    // Important: Token value is only returned once
+    if (token.token) {
+      console.log(`Token value (save this securely): ${token.token}`);
+    }
+
+    return token;
+  }
+
+  async listPersonalTokens() {
+    const where = { isActive: true };
+    const result = await this.client.getPersonalAccessTokens({ where });
+    return result.personalAccessTokens.edges.map(edge => edge.node);
+  }
+
+  async revokePersonalToken(tokenId, reason) {
+    const input = { isActive: false };
+
+    if (reason) {
+      input.description = `Revoked: ${reason}`;
+    }
+
+    await this.client.updatePersonalAccessToken(tokenId, input);
+    console.log(`Revoked personal access token: ${tokenId}`);
+  }
+
+  async rotatePersonalToken(oldTokenId, newTokenConfig) {
+    // Create new token first
+    const newToken = await this.createPersonalToken(newTokenConfig);
+
+    // Revoke old token
+    try {
+      await this.revokePersonalToken(oldTokenId, 'Token rotation');
+    } catch (error) {
+      console.warn('Warning: failed to revoke old token during rotation:', error);
+    }
+
+    console.log(`Successfully rotated token. New token ID: ${newToken.id}`);
+    return newToken;
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Using Personal Access Tokens
+
+<Tabs>
+<TabItem value="golang" label="Go">
+
+```go
+// Example: Using a personal access token with the Openlane client
+package main
+
+import (
+    "context"
+    "fmt"
+    "log"
+
+    "github.com/theopenlane/core/pkg/openlaneclient"
+)
+
+func main() {
+    // Create client with personal access token
+    config := openlaneclient.Config{
+        BaseURL: "https://api.openlane.io",
+        Token:   "tolp_your_personal_access_token_here",
+    }
+
+    client, err := openlaneclient.New(config)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    ctx := context.Background()
+
+    // Example: List organizations (using token owner's permissions)
+    orgs, err := client.GetOrganizations(ctx, nil)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    fmt.Printf("Found %d organizations:\n", len(orgs.Organizations.Edges))
+    for _, edge := range orgs.Organizations.Edges {
+        fmt.Printf("- %s (%s)\n", edge.Node.Name, edge.Node.ID)
+    }
+
+    // Example: Create a task (if user has write permissions)
+    taskInput := openlaneclient.CreateTaskInput{
+        Title:       "Review compliance documentation",
+        Description: openlaneclient.Ptr("Monthly review of all compliance documentation"),
+        Status:      openlaneclient.TaskStatusTODO,
+        Category:    openlaneclient.Ptr("COMPLIANCE"),
+    }
+
+    task, err := client.CreateTask(ctx, taskInput)
+    if err != nil {
+        log.Printf("Failed to create task: %v", err)
+    } else {
+        fmt.Printf("Created task: %s (%s)\n", task.Title, task.ID)
+    }
+}
+
+// PersonalToolsAutomation demonstrates personal automation use cases
+type PersonalToolsAutomation struct {
+    client *openlaneclient.OpenlaneClient
+}
+
+// SyncMyTasks synchronizes user's tasks with external systems
+func (pta *PersonalToolsAutomation) SyncMyTasks(ctx context.Context) error {
+    // Get current user's tasks
+    where := openlaneclient.TaskWhereInput{
+        // Filter for tasks assigned to the current user
+        Status: &openlaneclient.TaskStatusFilterInput{
+            In: []openlaneclient.TaskStatus{
+                openlaneclient.TaskStatusTODO,
+                openlaneclient.TaskStatusINPROGRESS,
+            },
+        },
+    }
+
+    result, err := pta.client.GetTasks(ctx, &where)
+    if err != nil {
+        return fmt.Errorf("failed to get tasks: %w", err)
+    }
+
+    // Sync with external calendar/task management system
+    for _, edge := range result.Tasks.Edges {
+        task := edge.Node
+        log.Printf("Syncing task: %s (Due: %v)", task.Title, task.Due)
+
+        // Here you would integrate with external systems like:
+        // - Google Calendar
+        // - Jira
+        // - Asana
+        // - Notion
+        // etc.
+    }
+
+    return nil
+}
+
+// GeneratePersonalReport creates a personal compliance report
+func (pta *PersonalToolsAutomation) GeneratePersonalReport(ctx context.Context) (*PersonalComplianceReport, error) {
+    report := &PersonalComplianceReport{
+        GeneratedAt: time.Now(),
+    }
+
+    // Get user's assigned controls
+    controlsResult, err := pta.client.GetControls(ctx, nil)
+    if err != nil {
+        return nil, fmt.Errorf("failed to get controls: %w", err)
+    }
+
+    // Get user's tasks
+    tasksResult, err := pta.client.GetTasks(ctx, nil)
+    if err != nil {
+        return nil, fmt.Errorf("failed to get tasks: %w", err)
+    }
+
+    // Get user's evidence
+    evidenceResult, err := pta.client.GetEvidence(ctx, nil)
+    if err != nil {
+        return nil, fmt.Errorf("failed to get evidence: %w", err)
+    }
+
+    // Compile report statistics
+    report.TotalControls = len(controlsResult.Controls.Edges)
+    report.TotalTasks = len(tasksResult.Tasks.Edges)
+    report.TotalEvidence = len(evidenceResult.Evidence.Edges)
+
+    // Calculate completion rates
+    completedTasks := 0
+    for _, edge := range tasksResult.Tasks.Edges {
+        if edge.Node.Status == openlaneclient.TaskStatusCOMPLETED {
+            completedTasks++
+        }
+    }
+
+    if report.TotalTasks > 0 {
+        report.TaskCompletionRate = float64(completedTasks) / float64(report.TotalTasks) * 100
+    }
+
+    return report, nil
+}
+
+// PersonalComplianceReport represents a user's personal compliance summary
+type PersonalComplianceReport struct {
+    GeneratedAt        time.Time
+    TotalControls      int
+    TotalTasks         int
+    TotalEvidence      int
+    TaskCompletionRate float64
+}
+```
+
+</TabItem>
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+// Using personal access tokens for automation
+class PersonalAutomation {
+  constructor(token) {
+    this.client = new OpenlaneClient({
+      baseURL: 'https://api.openlane.io',
+      token: token
+    });
+  }
+
+  async syncMyTasks() {
+    const where = {
+      status: { in: ['TODO', 'IN_PROGRESS'] }
+    };
+
+    const result = await this.client.getTasks({ where });
+
+    for (const edge of result.tasks.edges) {
+      const task = edge.node;
+      console.log(`Syncing task: ${task.title} (Due: ${task.due})`);
+
+      // Integrate with external systems
+      // - Google Calendar
+      // - Jira
+      // - Asana
+      // - Notion
+    }
+  }
+
+  async generatePersonalReport() {
+    const [controls, tasks, evidence] = await Promise.all([
+      this.client.getControls(),
+      this.client.getTasks(),
+      this.client.getEvidence()
+    ]);
+
+    const completedTasks = tasks.tasks.edges.filter(
+      edge => edge.node.status === 'COMPLETED'
+    ).length;
+
+    return {
+      generatedAt: new Date(),
+      totalControls: controls.controls.edges.length,
+      totalTasks: tasks.tasks.edges.length,
+      totalEvidence: evidence.evidence.edges.length,
+      taskCompletionRate: (completedTasks / tasks.tasks.edges.length) * 100
+    };
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Common Use Cases
+
+### Development and Testing
+- **Local Development**: Access APIs during application development
+- **Testing Frameworks**: Automated testing of compliance workflows
+- **Debugging Tools**: Personal debugging and troubleshooting tools
+- **CLI Applications**: Command-line tools for personal productivity
+
+### Personal Automation
+- **Task Management**: Sync compliance tasks with personal productivity tools
+- **Reporting**: Generate personal compliance dashboards and reports
+- **Notifications**: Custom notification systems for compliance activities
+- **Data Export**: Export personal data for analysis or backup
+
+### Integration Development
+- **Prototype Development**: Build and test integration prototypes
+- **Third-Party Tools**: Connect personal tools to Openlane data
+- **Custom Workflows**: Automate personal compliance workflows
+- **Data Synchronization**: Keep external systems in sync with Openlane
+
+## Security Best Practices
+
+### Token Creation
+1. **Descriptive Names**: Use clear, descriptive names for easy identification
+2. **Minimal Scopes**: Only grant necessary permissions for the intended use
+3. **Expiration Dates**: Set appropriate expiration dates for all tokens
+4. **Documentation**: Document the purpose and usage of each token
+
+### Token Storage
+1. **Secure Storage**: Store tokens securely using environment variables or secure vaults
+2. **Never Log Tokens**: Avoid logging token values in application logs
+3. **Repository Security**: Never commit tokens to version control systems
+4. **Encryption**: Encrypt tokens when storing in configuration files
+
+### Token Usage
+1. **HTTPS Only**: Always use HTTPS for API calls with tokens
+2. **Error Handling**: Implement proper error handling for authentication failures
+3. **Rate Limiting**: Respect API rate limits to avoid token suspension
+4. **IP Restrictions**: Consider IP-based restrictions for sensitive tokens
+
+### Token Lifecycle
+1. **Regular Rotation**: Rotate tokens regularly, especially for long-term use
+2. **Immediate Revocation**: Revoke tokens immediately when no longer needed
+3. **Usage Monitoring**: Monitor token usage for unusual patterns
+4. **Incident Response**: Include token revocation in security incident procedures
+
+## Token Scopes
+
+### Read Scopes
+- **read**: Basic read access to user-accessible resources
+- **read:controls**: Read access to compliance controls
+- **read:evidence**: Read access to evidence records
+- **read:tasks**: Read access to assigned tasks
+- **read:reports**: Read access to compliance reports
+
+### Write Scopes
+- **write**: Basic write access to user-modifiable resources
+- **write:tasks**: Create and update tasks
+- **write:evidence**: Upload and manage evidence
+- **write:notes**: Create and manage notes
+- **write:files**: Upload and manage files
+
+### Administrative Scopes
+- **admin**: Administrative access within user's permissions
+- **admin:tokens**: Manage personal access tokens
+- **admin:integrations**: Manage personal integrations
+
+## Troubleshooting
+
+### Common Issues
+
+#### Authentication Failures
+```bash
+# Check token format
+curl -H "Authorization: Bearer tolp_your_token_here" \
+     https://api.openlane.io/query \
+     -d '{"query": "{ me { id } }"}'
+```
+
+#### Permission Denied
+- Verify token scopes include required permissions
+- Check if user has necessary role-based permissions
+- Ensure token is active and not expired
+
+#### Token Not Working
+- Confirm token prefix is `tolp_` for personal access tokens
+- Verify token was copied completely without extra characters
+- Check if token has been revoked or expired
+
+### Debugging Tips
+1. **Test with Simple Queries**: Start with basic queries like `{ me { id } }`
+2. **Check Token Metadata**: Verify token creation date and scopes
+3. **Review Audit Logs**: Check audit logs for authentication events
+4. **Use GraphQL Introspection**: Explore available queries and mutations
+
+Personal Access Tokens provide secure, user-specific API access that enables powerful personal automation while maintaining proper security controls and audit traceability within the Openlane platform.

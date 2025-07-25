@@ -1,0 +1,8 @@
+{
+  "label": "Contacts",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Contact management and stakeholder relationship tracking within Openlane."
+  }
+}
