@@ -9,11 +9,15 @@ import TabItem from '@theme/TabItem';
 
 # Controls
 
-According to ISACA, “internal controls” include the policies, standards, procedures and other organizational structures that are designed to provide reasonable assurance that business objectives will be achieved and undesired events will be prevented, detected and corrected.
+Controls are the core building blocks of compliance management in Openlane. They represent specific security, privacy, or operational requirements that organizations must implement to meet compliance standards and manage risks effectively.
+
+According to ISACA, "internal controls" include the policies, standards, procedures and other organizational structures that are designed to provide reasonable assurance that business objectives will be achieved and undesired events will be prevented, detected and corrected.
 
 The Institute of Internal Auditors (IIA) defines control, the control environment, and control processes as follows: A control is any action taken by management, the board, and other parties to manage risk and increase the likelihood that established objectives and goals will be achieved.
 
-A Control is a measure that is put in place to mitigate risk.
+## What is a Control?
+
+A Control in Openlane represents a specific compliance requirement, security safeguard, or operational procedure that an organization implements to achieve compliance with standards and manage risks. Controls define what needs to be done, how it should be implemented, and how it will be tested or verified.
 
 ## Control Types
 
@@ -40,14 +44,34 @@ A Control is a measure that is put in place to mitigate risk.
   </TabItem>
 </Tabs>
 
+## Compliance Significance
+
+| Aspect | Purpose | Benefit |
+|--------|---------|----------|
+| **Requirements Implementation** | Translate standards into actionable controls | Converts abstract compliance into specific, testable requirements |
+| **Evidence Foundation** | Enable systematic evidence collection | Provides clear audit trail and compliance demonstration |
+| **Risk Management** | Address specific threats through controls | Reduces organizational risk through preventive/detective measures |
+| **Assessment Framework** | Enable systematic compliance evaluation | Allows measurement and improvement of compliance posture |
+| **Certification Support** | Provide foundation for formal certifications | Enables SOC 2, ISO 27001, and other compliance certifications |
+
 ## Relationship Diagram
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+graph TD
+    A[Standards] --> B[Controls]
+    B --> C[Control Implementations]
+    B --> D[Evidence]
+    B --> E[Subcontrols]
+    F[Risks] --> B
+    G[Programs] --> B
+    B --> H[Tasks]
+    I[Groups] --> B
+    B --> J[Audit Reports]
+
+    style B fill:#e1f5fe
+    style A fill:#f3e5f5
+    style F fill:#ffebee
+    style G fill:#e8f5e8
 ```
 
 
@@ -67,3 +91,50 @@ graph TD;
     * Controls are the actual mechanisms or processes used to manage risks, including things like approvals, verifications, monitoring systems, and security protocols.
 * Procedures provide the steps:
     * Procedures outline the specific actions and steps employees need to take to follow the policies and implement the controls effectively.
+
+## Control Classifications
+
+### By Function
+| Type | Purpose | Example |
+|------|---------|----------|
+| **Preventive** | Prevent incidents before they occur | Multi-factor authentication, firewalls |
+| **Detective** | Identify incidents when they happen | Log monitoring, intrusion detection |
+| **Corrective** | Fix issues after detection | Incident response, patch management |
+| **Deterrent** | Discourage potential violations | Security awareness, penalty policies |
+
+### By Source
+| Type | Use Case | Examples |
+|------|----------|----------|
+| **Framework** | Standard compliance requirements | SOC 2 CC6.1, ISO 27001 A.9.1.1 |
+| **Custom** | Organization-specific needs | Cryptocurrency controls, industry-specific |
+| **Template** | Common implementation patterns | Basic access control template |
+| **Imported** | External or legacy systems | Previous audit controls, vendor controls |
+
+## Control Status Lifecycle
+
+```mermaid
+stateDiagram-v2
+    [*] --> PREPARING: Create Control
+    PREPARING --> NEEDS_APPROVAL: Submit for Review
+    NEEDS_APPROVAL --> APPROVED: Management Approval
+    NEEDS_APPROVAL --> CHANGES_REQUESTED: Request Modifications
+    CHANGES_REQUESTED --> PREPARING: Address Feedback
+    APPROVED --> NOT_IMPLEMENTED: Ready for Implementation
+    NOT_IMPLEMENTED --> APPROVED: Implementation Complete
+    APPROVED --> ARCHIVED: No Longer Needed
+    ARCHIVED --> [*]
+
+    note right of PREPARING: Design phase
+    note right of NEEDS_APPROVAL: Review phase
+    note right of APPROVED: Active control
+    note right of ARCHIVED: End of lifecycle
+```
+
+| Status | Meaning | Next Actions |
+|--------|---------|-------------|
+| `PREPARING` | Control being designed and planned | Complete implementation guidance, assign owners |
+| `NEEDS_APPROVAL` | Ready for management review | Review requirements, approve or request changes |
+| `CHANGES_REQUESTED` | Requires modifications before approval | Address feedback, resubmit for approval |
+| `APPROVED` | Approved and ready for implementation | Begin implementation, collect evidence |
+| `NOT_IMPLEMENTED` | Approved but not yet active | Complete implementation activities |
+| `ARCHIVED` | No longer active or relevant | Document reason for archival |

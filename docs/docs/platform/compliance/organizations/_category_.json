@@ -1,8 +1,0 @@
-{
-  "label": "Organizations",
-  "position": 14,
-  "link": {
-    "type": "generated-index",
-    "description": "Core organizational entities and multi-tenant management"
-  }
-}

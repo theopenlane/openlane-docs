@@ -1,8 +1,0 @@
-{
-  "label": "Control Implementations",
-  "position": 11,
-  "link": {
-    "type": "generated-index",
-    "description": "Implementation details and verification status for security controls"
-  }
-}

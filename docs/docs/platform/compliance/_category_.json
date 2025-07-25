@@ -1,8 +1,0 @@
-{
-  "label": "Compliance Objects",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Comprehensive documentation for Openlane's compliance management objects including controls, standards, evidence, risks, and workflows."
-  }
-}

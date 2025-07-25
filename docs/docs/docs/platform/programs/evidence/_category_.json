@@ -1,9 +1,4 @@
 {
   "label": "Evidence",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Manage evidence uploads related to programs"
-  },
-  "collapsed": true
+  "position": 3
 }

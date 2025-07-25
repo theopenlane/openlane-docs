@@ -1,0 +1,595 @@
+---
+title: Overview
+description: Contact management and stakeholder relationship tracking
+sidebar_position: 1
+---
+
+# Contacts
+
+Contacts in Openlane represent people and stakeholder information that can be associated with various compliance activities across the platform. The `Contact` object provides comprehensive contact management for tracking stakeholders, vendors, auditors, and other individuals involved in compliance programs.
+
+## What Are Contacts?
+
+Contacts are individual person records that can be linked to organizations, programs, controls, and other platform entities. They provide a centralized way to manage stakeholder information and track relationships across compliance activities.
+
+## Key Features
+
+- **Personal Information**: Name, title, company, email, phone
+- **Address Management**: Complete address information including international addresses
+- **Relationship Tracking**: Associate contacts with programs, controls, entities, and other objects
+- **Status Management**: Track contact status and availability
+- **Communication History**: Link notes and communications to specific contacts
+
+## Contact Types
+
+### Internal Contacts
+- **Employees**: Internal staff members responsible for compliance activities
+- **Compliance Team**: Dedicated compliance officers and managers
+- **Executives**: Leadership and decision-makers involved in compliance oversight
+- **IT Personnel**: Technical staff supporting compliance infrastructure
+
+### External Contacts
+- **Auditors**: External auditors conducting compliance assessments
+- **Vendors**: Third-party service providers and suppliers
+- **Consultants**: External compliance consultants and advisors
+- **Regulatory Officials**: Contacts at regulatory bodies and agencies
+
+### Stakeholder Contacts
+- **Customers**: Key customer contacts for compliance coordination
+- **Partners**: Business partners requiring compliance coordination
+- **Board Members**: Board members involved in compliance oversight
+- **Legal Counsel**: Legal advisors and attorneys
+
+## Properties
+
+### Personal Information
+- **Full Name**: First, middle, and last name
+- **Title**: Professional title and role
+- **Company**: Organization/company affiliation
+- **Email**: Primary email address
+- **Phone**: Primary phone number
+
+### Address Information
+- **Street Address**: Complete street address
+- **City**: City name
+- **State/Province**: State or province
+- **Postal Code**: ZIP or postal code
+- **Country**: Country name
+
+### Status and Metadata
+- **Status**: Contact status (active, inactive, archived)
+- **Tags**: Custom tags for categorization
+- **Notes**: Associated notes and comments
+- **Created/Updated**: Timestamp information
+
+## GraphQL Operations
+
+### Query Contacts
+
+```graphql
+query GetContacts($first: Int, $where: ContactWhereInput) {
+  contacts(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        fullName
+        title
+        company
+        email
+        phoneNumber
+        address
+        status
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+```
+
+### Create Contact
+
+```graphql
+mutation CreateContact($input: CreateContactInput!) {
+  createContact(input: $input) {
+    contact {
+      id
+      fullName
+      title
+      company
+      email
+      phoneNumber
+      address
+      status
+      createdAt
+    }
+  }
+}
+```
+
+**Input Example:**
+```json
+{
+  "input": {
+    "fullName": "Jane Smith",
+    "title": "Senior Compliance Officer",
+    "company": "Example Corp",
+    "email": "jane.smith@example.com",
+    "phoneNumber": "+1-555-0123",
+    "address": "123 Main St, Anytown, ST 12345, USA",
+    "status": "ACTIVE"
+  }
+}
+```
+
+### Update Contact
+
+```graphql
+mutation UpdateContact($id: ID!, $input: UpdateContactInput!) {
+  updateContact(id: $id, input: $input) {
+    contact {
+      id
+      fullName
+      title
+      company
+      email
+      phoneNumber
+      address
+      status
+      updatedAt
+    }
+  }
+}
+```
+
+### Get Contact with Relationships
+
+```graphql
+query GetContactWithRelationships($id: ID!) {
+  contact(id: $id) {
+    id
+    fullName
+    title
+    company
+    email
+    phoneNumber
+    address
+    status
+
+    # Associated entities
+    entities {
+      edges {
+        node {
+          id
+          name
+          entityType
+        }
+      }
+    }
+
+    # Associated notes
+    notes {
+      edges {
+        node {
+          id
+          text
+          createdAt
+        }
+      }
+    }
+  }
+}
+```
+
+## API Usage Examples
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+### Contact Management
+
+<Tabs>
+<TabItem value="golang" label="Go">
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "log"
+
+    "github.com/theopenlane/core/pkg/openlaneclient"
+)
+
+// ContactManager handles contact operations
+type ContactManager struct {
+    client *openlaneclient.OpenlaneClient
+}
+
+// CreateContact creates a new contact with comprehensive information
+func (cm *ContactManager) CreateContact(ctx context.Context, contactData *ContactData) (*generated.Contact, error) {
+    input := openlaneclient.CreateContactInput{
+        FullName:    contactData.FullName,
+        Title:       openlaneclient.Ptr(contactData.Title),
+        Company:     openlaneclient.Ptr(contactData.Company),
+        Email:       openlaneclient.Ptr(contactData.Email),
+        PhoneNumber: openlaneclient.Ptr(contactData.PhoneNumber),
+        Address:     openlaneclient.Ptr(contactData.Address),
+        Status:      openlaneclient.ContactStatusACTIVE,
+    }
+
+    contact, err := cm.client.CreateContact(ctx, input)
+    if err != nil {
+        return nil, fmt.Errorf("failed to create contact: %w", err)
+    }
+
+    log.Printf("Created contact: %s (%s)", contact.FullName, contact.ID)
+    return contact, nil
+}
+
+// AssociateContactWithEntity links a contact to a business entity
+func (cm *ContactManager) AssociateContactWithEntity(ctx context.Context, contactID, entityID string) error {
+    // Update entity to include the contact
+    updateInput := openlaneclient.UpdateEntityInput{
+        ContactIDs: []string{contactID},
+    }
+
+    _, err := cm.client.UpdateEntity(ctx, entityID, updateInput)
+    if err != nil {
+        return fmt.Errorf("failed to associate contact with entity: %w", err)
+    }
+
+    log.Printf("Associated contact %s with entity %s", contactID, entityID)
+    return nil
+}
+
+// GetContactsByCompany retrieves all contacts from a specific company
+func (cm *ContactManager) GetContactsByCompany(ctx context.Context, company string) ([]*generated.Contact, error) {
+    where := openlaneclient.ContactWhereInput{
+        Company: &openlaneclient.StringFilterInput{
+            Eq: &company,
+        },
+    }
+
+    result, err := cm.client.GetContacts(ctx, &where)
+    if err != nil {
+        return nil, fmt.Errorf("failed to get contacts by company: %w", err)
+    }
+
+    var contacts []*generated.Contact
+    for _, edge := range result.Contacts.Edges {
+        contacts = append(contacts, edge.Node)
+    }
+
+    return contacts, nil
+}
+
+// CreateAuditorContact creates a contact specifically for auditor information
+func (cm *ContactManager) CreateAuditorContact(ctx context.Context, auditorData *AuditorContactData) (*generated.Contact, error) {
+    input := openlaneclient.CreateContactInput{
+        FullName:    auditorData.FullName,
+        Title:       openlaneclient.Ptr("External Auditor"),
+        Company:     openlaneclient.Ptr(auditorData.AuditFirm),
+        Email:       openlaneclient.Ptr(auditorData.Email),
+        PhoneNumber: openlaneclient.Ptr(auditorData.PhoneNumber),
+        Status:      openlaneclient.ContactStatusACTIVE,
+    }
+
+    contact, err := cm.client.CreateContact(ctx, input)
+    if err != nil {
+        return nil, fmt.Errorf("failed to create auditor contact: %w", err)
+    }
+
+    // Create a note indicating this is an auditor contact
+    noteInput := openlaneclient.CreateNoteInput{
+        Text: fmt.Sprintf("External auditor from %s. Responsible for compliance audit activities.", auditorData.AuditFirm),
+        ContactIDs: []string{contact.ID},
+    }
+
+    _, err = cm.client.CreateNote(ctx, noteInput)
+    if err != nil {
+        log.Printf("Warning: failed to create note for auditor contact: %v", err)
+    }
+
+    return contact, nil
+}
+
+// BulkImportContacts imports multiple contacts from a data source
+func (cm *ContactManager) BulkImportContacts(ctx context.Context, contacts []ContactData) ([]*generated.Contact, error) {
+    var createdContacts []*generated.Contact
+    var errors []error
+
+    for _, contactData := range contacts {
+        contact, err := cm.CreateContact(ctx, &contactData)
+        if err != nil {
+            errors = append(errors, fmt.Errorf("failed to create contact %s: %w", contactData.FullName, err))
+            continue
+        }
+        createdContacts = append(createdContacts, contact)
+    }
+
+    if len(errors) > 0 {
+        log.Printf("Bulk import completed with %d errors out of %d contacts", len(errors), len(contacts))
+        for _, err := range errors {
+            log.Printf("Import error: %v", err)
+        }
+    }
+
+    return createdContacts, nil
+}
+
+// ContactData represents contact information for creation
+type ContactData struct {
+    FullName    string
+    Title       string
+    Company     string
+    Email       string
+    PhoneNumber string
+    Address     string
+}
+
+// AuditorContactData represents auditor-specific contact information
+type AuditorContactData struct {
+    FullName    string
+    AuditFirm   string
+    Email       string
+    PhoneNumber string
+}
+```
+
+</TabItem>
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+// Contact management and stakeholder tracking
+class ContactManager {
+  constructor(client) {
+    this.client = client;
+  }
+
+  async createContact(contactData) {
+    const input = {
+      fullName: contactData.fullName,
+      title: contactData.title,
+      company: contactData.company,
+      email: contactData.email,
+      phoneNumber: contactData.phoneNumber,
+      address: contactData.address,
+      status: 'ACTIVE'
+    };
+
+    const contact = await this.client.createContact(input);
+    console.log(`Created contact: ${contact.fullName} (${contact.id})`);
+    return contact;
+  }
+
+  async associateContactWithEntity(contactId, entityId) {
+    await this.client.updateEntity(entityId, {
+      contactIds: [contactId]
+    });
+
+    console.log(`Associated contact ${contactId} with entity ${entityId}`);
+  }
+
+  async getContactsByCompany(company) {
+    const where = {
+      company: { eq: company }
+    };
+
+    const result = await this.client.getContacts({ where });
+    return result.contacts.edges.map(edge => edge.node);
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Contact Search and Filtering
+
+<Tabs>
+<TabItem value="golang" label="Go">
+
+```go
+// SearchContacts performs advanced contact search with multiple criteria
+func (cm *ContactManager) SearchContacts(ctx context.Context, searchCriteria *ContactSearchCriteria) ([]*generated.Contact, error) {
+    where := openlaneclient.ContactWhereInput{}
+
+    // Add search filters based on criteria
+    if searchCriteria.FullName != "" {
+        where.FullName = &openlaneclient.StringFilterInput{
+            ContainsFold: &searchCriteria.FullName,
+        }
+    }
+
+    if searchCriteria.Company != "" {
+        where.Company = &openlaneclient.StringFilterInput{
+            ContainsFold: &searchCriteria.Company,
+        }
+    }
+
+    if searchCriteria.Email != "" {
+        where.Email = &openlaneclient.StringFilterInput{
+            ContainsFold: &searchCriteria.Email,
+        }
+    }
+
+    if len(searchCriteria.Statuses) > 0 {
+        where.Status = &openlaneclient.ContactStatusFilterInput{
+            In: searchCriteria.Statuses,
+        }
+    }
+
+    result, err := cm.client.GetContacts(ctx, &where)
+    if err != nil {
+        return nil, fmt.Errorf("failed to search contacts: %w", err)
+    }
+
+    var contacts []*generated.Contact
+    for _, edge := range result.Contacts.Edges {
+        contacts = append(contacts, edge.Node)
+    }
+
+    return contacts, nil
+}
+
+// ContactSearchCriteria defines search parameters for contacts
+type ContactSearchCriteria struct {
+    FullName string
+    Company  string
+    Email    string
+    Statuses []openlaneclient.ContactStatus
+}
+
+// GetContactsForCompliance retrieves contacts relevant to compliance activities
+func (cm *ContactManager) GetContactsForCompliance(ctx context.Context, programID string) ([]*ContactComplianceInfo, error) {
+    // This would involve complex queries to find contacts associated with:
+    // - Programs
+    // - Controls
+    // - Entities
+    // - Risks
+    // - Evidence
+
+    // For now, this is a simplified example
+    where := openlaneclient.ContactWhereInput{
+        Status: &openlaneclient.ContactStatusFilterInput{
+            Eq: openlaneclient.Ptr(openlaneclient.ContactStatusACTIVE),
+        },
+    }
+
+    result, err := cm.client.GetContacts(ctx, &where)
+    if err != nil {
+        return nil, fmt.Errorf("failed to get compliance contacts: %w", err)
+    }
+
+    var complianceContacts []*ContactComplianceInfo
+    for _, edge := range result.Contacts.Edges {
+        contact := edge.Node
+
+        // Determine compliance role based on title and company
+        role := determineComplianceRole(contact.Title, contact.Company)
+
+        complianceContacts = append(complianceContacts, &ContactComplianceInfo{
+            Contact:        contact,
+            ComplianceRole: role,
+            // Additional compliance-specific information would be populated here
+        })
+    }
+
+    return complianceContacts, nil
+}
+
+// ContactComplianceInfo combines contact information with compliance context
+type ContactComplianceInfo struct {
+    Contact        *generated.Contact
+    ComplianceRole string
+    Programs       []string
+    Responsibilities []string
+}
+
+// determineComplianceRole analyzes contact information to determine compliance role
+func determineComplianceRole(title, company *string) string {
+    if title == nil {
+        return "Unknown"
+    }
+
+    titleLower := strings.ToLower(*title)
+
+    switch {
+    case strings.Contains(titleLower, "auditor"):
+        return "External Auditor"
+    case strings.Contains(titleLower, "compliance"):
+        return "Compliance Officer"
+    case strings.Contains(titleLower, "ciso") || strings.Contains(titleLower, "security"):
+        return "Security Officer"
+    case strings.Contains(titleLower, "legal"):
+        return "Legal Counsel"
+    case strings.Contains(titleLower, "ceo") || strings.Contains(titleLower, "president"):
+        return "Executive Leadership"
+    default:
+        return "Stakeholder"
+    }
+}
+```
+
+</TabItem>
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+// Advanced contact search and filtering
+async searchContacts(searchCriteria) {
+  const where = {};
+
+  if (searchCriteria.fullName) {
+    where.fullName = { containsFold: searchCriteria.fullName };
+  }
+
+  if (searchCriteria.company) {
+    where.company = { containsFold: searchCriteria.company };
+  }
+
+  if (searchCriteria.email) {
+    where.email = { containsFold: searchCriteria.email };
+  }
+
+  if (searchCriteria.statuses?.length > 0) {
+    where.status = { in: searchCriteria.statuses };
+  }
+
+  const result = await this.client.getContacts({ where });
+  return result.contacts.edges.map(edge => edge.node);
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Integration with Other Platform Objects
+
+### Contact-Entity Relationships
+Contacts can be associated with business entities to track responsible parties, stakeholders, and points of contact for specific organizational units.
+
+### Contact-Program Relationships
+Link contacts to compliance programs to identify program managers, auditors, and other key stakeholders involved in compliance activities.
+
+### Contact-Control Relationships
+Associate contacts with specific controls to identify control owners, implementers, and reviewers responsible for control effectiveness.
+
+### Contact-Risk Relationships
+Connect contacts to risk records to track risk owners, assessors, and mitigation coordinators responsible for risk management activities.
+
+## Best Practices
+
+### Contact Data Quality
+1. **Standardize Information**: Use consistent formats for names, titles, and addresses
+2. **Regular Updates**: Keep contact information current and accurate
+3. **Verification**: Implement processes to verify contact information accuracy
+4. **Deduplication**: Prevent duplicate contact records through validation
+
+### Privacy and Security
+1. **Data Protection**: Implement appropriate privacy controls for personal information
+2. **Access Controls**: Restrict access to contact information based on business need
+3. **Audit Trails**: Maintain logs of contact information access and modifications
+4. **Data Retention**: Establish policies for contact data retention and deletion
+
+### Relationship Management
+1. **Clear Associations**: Clearly define relationships between contacts and other objects
+2. **Role Definition**: Explicitly define each contact's role and responsibilities
+3. **Communication Tracking**: Link notes and communications to relevant contacts
+4. **Status Management**: Keep contact status current and accurate
+
+### Compliance Context
+1. **Role Identification**: Clearly identify each contact's role in compliance activities
+2. **Responsibility Mapping**: Map specific compliance responsibilities to appropriate contacts
+3. **Communication Protocols**: Establish clear communication protocols with external contacts
+4. **Documentation**: Maintain comprehensive documentation of contact relationships and interactions
+
+Contacts provide essential stakeholder management capabilities that support effective compliance program coordination and communication across all platform activities.

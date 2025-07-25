@@ -1,9 +1,9 @@
 {
-  "label": "Deploying Openlane",
+  "label": "Deployment",
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Resources for running the Openlane stack"
+    "description": "Comprehensive guides for deploying and managing Openlane infrastructure and applications using Helm charts"
   },
   "collapsed": true
 }
