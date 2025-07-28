@@ -7,35 +7,35 @@ This page provides developer-focused information about Openlane's compliance obj
 For detailed implementation information, refer to these files in the [Openlane core repository](https://github.com/theopenlane/core):
 
 ### Configuration and Automation
-- **[Configuration Management](/Users/manderson/core/config/README.md)** - Auto-generated configuration files, secret management, and deployment automation
-- **[Domain Inheritance System](/Users/manderson/core/config/README.md#global-domain-inheritance-system)** - Global domain configuration for compliance environments
-- **[Buildkite Automation](/Users/manderson/core/.buildkite/helm-automation.sh)** - Automated compliance configuration deployment
+- **Configuration Management** - Auto-generated configuration files, secret management, and deployment automation
+- **Domain Inheritance System** - Global domain configuration for compliance environments
+- **Buildkite Automation** - Automated compliance configuration deployment
 
 ### Database Schemas
-- **[Ent Schemas](/Users/manderson/core/internal/ent/schema/)** - Database entity definitions for all compliance objects
-- **[Schema Generator](/Users/manderson/core/jsonschema/schema_generator.go)** - Automated schema and configuration generation
+- **Ent Schemas** - Database entity definitions for all compliance objects
+- **Schema Generator** - Automated schema and configuration generation
 
 ### API Implementation
-- **[GraphQL API](/Users/manderson/core/internal/graphapi/)** - Complete GraphQL schema and resolvers
-- **[HTTP Handlers](/Users/manderson/core/internal/httpserve/)** - REST endpoints and authentication
+- **GraphQL API** - Complete GraphQL schema and resolvers
+- **HTTP Handlers** - REST endpoints and authentication
 
 ## Compliance Object Categories
 
 ### Core Compliance Management
-- **[Standards](../platform/compliance/standards/overview.mdx)** - Compliance frameworks (SOC 2, ISO 27001, NIST)
-- **[Controls](../platform/compliance/controls/overview.mdx)** - Specific compliance controls and requirements
-- **[Evidence](../platform/compliance/evidence/overview.mdx)** - Audit evidence collection and management
-- **[Risks](../platform/compliance/risks/overview.mdx)** - Risk identification and mitigation
+- **[Standards](../docs/platform/standards/overview.mdx)** - Compliance frameworks (SOC 2, ISO 27001, NIST)
+- **[Controls](../docs/platform/controls/overview.mdx)** - Specific compliance controls and requirements
+- **[Evidence](../docs/platform/programs/evidence/overview.mdx)** - Audit evidence collection and management
+- **[Risks](../docs/platform/risks/overview.mdx)** - Risk identification and mitigation
 
 ### Program Management
-- **[Programs](../platform/compliance/programs/overview.mdx)** - Compliance program organization
-- **[Control Objectives](../platform/compliance/control-objectives/overview.mdx)** - High-level control objectives
-- **[Control Implementations](../platform/compliance/control-implementations/overview.mdx)** - Implementation tracking
+- **[Programs](../docs/platform/programs/overview.mdx)** - Compliance program organization
+- **[Control Objectives](../docs/platform/controls/overview.mdx)** - High-level control objectives
+- **[Control Implementations](../docs/platform/controls/implementations.mdx)** - Implementation tracking
 
 ### Governance and Documentation
-- **[Internal Policies](../platform/compliance/internal-policies/overview.mdx)** - Policy management
-- **[Procedures](../platform/compliance/procedures/overview.mdx)** - Operational procedures
-- **[Narratives](../platform/compliance/narratives/overview.mdx)** - Compliance narratives
+- **[Internal Policies](../docs/platform/policies/overview.mdx)** - Policy management
+- **[Procedures](../docs/platform/policies/overview.mdx)** - Operational procedures
+- **[Narratives](../docs/platform/programs/narratives/overview.mdx)** - Compliance narratives
 
 ## Development Patterns
 

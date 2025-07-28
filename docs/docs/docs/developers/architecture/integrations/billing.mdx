@@ -23,7 +23,7 @@ The billing system consists of several interconnected components:
 graph TD
     A[Catalog YAML] --> B[Server Startup]
     B --> C[Ensure Prices in Stripe]
-    C --> D[/v1/catalog Endpoint]
+    C --> D[Catalog Endpoint]
     D --> E[UI Fetches Catalog]
     E --> F[User Purchases Module]
     F --> G[Stripe Webhook]

@@ -4,9 +4,8 @@ description: Visual representation of all primary relationships between complian
 sidebar_position: 1
 ---
 
-# Platform Relationships Overview
-
-This page provides comprehensive visual representations of all primary relationships between compliance objects in the Openlane platform, making it easier to understand how different components interact and depend on each other.
+This page provides comprehensive visual representations of all primary relationships between compliance objects in the Openlane platform,
+making it easier to understand how different components interact and depend on each other.
 
 ## Primary Relationships Table
 
@@ -177,7 +176,7 @@ graph TB
 
 ### 1. Hierarchical Relationships
 
-```
+```text
 Organizations
 ├── Groups
 │   └── Users
@@ -205,21 +204,21 @@ Organizations
 
 ### Primary Functional Relationships
 
-- [Controls Overview](./controls/overview.mdx)
-- [Evidence Overview](./programs/evidence/overview.mdx)
-- [Risks Overview](./risks/overview.mdx)
-- [Programs Overview](./programs/overview.mdx)
+- [Controls Overview](../../../platform/controls/overview.mdx)
+- [Evidence Overview](../../../platform/programs/evidence/overview.mdx)
+- [Risks Overview](../../../platform/risks/overview.mdx)
+- [Programs Overview](../../../platform/programs/overview.mdx)
 
 ### Organizational Relationships
 
-- [Organizations Overview](./organizations/overview.mdx)
-- [Groups Overview](./groups/overview.mdx)
-- [Entities Overview](./entities/overview.mdx)
+- [Organizations Overview](../../../platform/organizations/overview.mdx)
+- [Groups Overview](../../../platform/groups/overview.mdx)
+- [Entities Overview](../../../platform/entities/overview.mdx)
 
 ### Operational Relationships
 
-- [Tasks Overview](./tasks/overview.mdx)
-- [Standards Overview](./standards/overview.mdx)
+- [Tasks Overview](../../../platform/tasks/overview.mdx)
+- [Standards Overview](../../../platform/standards/overview.mdx)
 
 ## Usage Tips
 

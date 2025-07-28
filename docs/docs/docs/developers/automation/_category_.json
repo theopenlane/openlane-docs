@@ -1,0 +1,9 @@
+{
+  "label": "Automation",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Job automation system built on Windmill"
+  },
+  "collapsed": true
+}
