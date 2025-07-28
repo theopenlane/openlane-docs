@@ -1,0 +1,81 @@
+---
+title: GraphQL Examples
+sidebar_position: 10
+---
+
+# Example GraphQL Operations
+
+### Query Tasks
+```graphql
+query GetTasks($first: Int, $where: TaskWhereInput, $orderBy: [TaskOrder!]) {
+  tasks(first: $first, where: $where, orderBy: $orderBy) {
+    edges {
+      node {
+        id
+        displayID
+        title
+        details
+        category
+        status
+        due
+        createdAt
+        updatedAt
+        owner {
+          id
+          name
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+  }
+}
+```
+
+### Create Task
+```graphql
+mutation CreateTask($input: CreateTaskInput!) {
+  createTask(input: $input) {
+    task {
+      id
+      displayID
+      title
+      details
+      category
+      status
+      due
+      createdAt
+    }
+  }
+}
+```
+
+### Update Task
+```graphql
+mutation UpdateTask($id: ID!, $input: UpdateTaskInput!) {
+  updateTask(id: $id, input: $input) {
+    task {
+      id
+      displayID
+      title
+      details
+      status
+      updatedAt
+    }
+  }
+}
+```
+
+### Delete Task
+```graphql
+mutation DeleteTask($id: ID!) {
+  deleteTask(id: $id) {
+    deletedID
+  }
+}
+```

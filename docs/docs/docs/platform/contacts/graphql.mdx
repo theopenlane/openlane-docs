@@ -1,0 +1,130 @@
+---
+title: GraphQL Examples
+sidebar_position: 10
+---
+
+# Example GraphQL Operations
+
+### Query Contacts
+
+```graphql
+query GetContacts($first: Int, $where: ContactWhereInput) {
+  contacts(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        fullName
+        title
+        company
+        email
+        phoneNumber
+        address
+        status
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+```
+
+### Create Contact
+
+```graphql
+mutation CreateContact($input: CreateContactInput!) {
+  createContact(input: $input) {
+    contact {
+      id
+      fullName
+      title
+      company
+      email
+      phoneNumber
+      address
+      status
+      createdAt
+    }
+  }
+}
+```
+
+**Input Example:**
+```json
+{
+  "input": {
+    "fullName": "Jane Smith",
+    "title": "Senior Compliance Officer",
+    "company": "Example Corp",
+    "email": "jane.smith@example.com",
+    "phoneNumber": "+1-555-0123",
+    "address": "123 Main St, Anytown, ST 12345, USA",
+    "status": "ACTIVE"
+  }
+}
+```
+
+### Update Contact
+
+```graphql
+mutation UpdateContact($id: ID!, $input: UpdateContactInput!) {
+  updateContact(id: $id, input: $input) {
+    contact {
+      id
+      fullName
+      title
+      company
+      email
+      phoneNumber
+      address
+      status
+      updatedAt
+    }
+  }
+}
+```
+
+### Get Contact with Relationships
+
+```graphql
+query GetContactWithRelationships($id: ID!) {
+  contact(id: $id) {
+    id
+    fullName
+    title
+    company
+    email
+    phoneNumber
+    address
+    status
+
+    # Associated entities
+    entities {
+      edges {
+        node {
+          id
+          name
+          entityType
+        }
+      }
+    }
+
+    # Associated notes
+    notes {
+      edges {
+        node {
+          id
+          text
+          createdAt
+        }
+      }
+    }
+  }
+}
+```

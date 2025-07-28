@@ -16,20 +16,19 @@ The architecture diagram above illustrates the key components and their relation
    - Script source and platform
    - Default configurations
    - Base schedules
-   These templates are stored in both the core database and Windmill as flows.
 
-2. **Scheduled Jobs** are instances created from templates that:
+1. **Scheduled Jobs** are instances created from templates that:
    - Reference a specific Job Template
    - Can override configurations and schedules
    - Can be linked to specific Job Runners
    - Are synchronized with Windmill's scheduler
 
-3. **Job Runners** are execution environments that:
+1. **Job Runners** are execution environments that:
    - Authenticate using Job Runner Tokens
    - Execute jobs based on their assigned schedules
    - Report execution status and results back to the system
 
-4. **Job Results** capture execution outcomes:
+1. **Job Results** capture execution outcomes:
    - Link back to the Scheduled Job
    - Store execution metrics (start/end times, exit codes)
    - Maintain references to output files and logs
@@ -52,9 +51,10 @@ Job Templates (`JobTemplate`) are the core objects that define the jobs availabl
 - **Cron Schedule**: Optional default cron schedule (6-field syntax) used when creating scheduled jobs
 
 When a Job Template is created or updated:
+
 1. The system validates the information
-2. If Windmill integration is enabled, creates/updates a corresponding Windmill flow
-3. The flow path is stored on the template for future reference
+1. If Windmill integration is enabled, creates/updates a corresponding Windmill flow
+1. The flow path is stored on the template for future reference
 
 ### Scheduled Jobs
 
@@ -89,6 +89,7 @@ Job Runner Tokens (`JobRunnerToken`) are used to authenticate and authorize job 
   - **Revoked Reason**: Reason for revocation
 
 Key features:
+
 - Tokens are organization-scoped
 - Each token is linked to a specific job runner
 - Tokens can be revoked at any time
@@ -96,6 +97,7 @@ Key features:
 - Support for token expiration (optional)
 
 Security considerations:
+
 - Tokens are immutable once created
 - Revoked tokens cannot be reactivated
 - Token validation checks for expiration and active status
@@ -121,17 +123,17 @@ Job Results (`JobResult`) track the execution outcomes of scheduled jobs. Each r
     task docker:windmill
     ```
 
-2. Login to [windmill](http://localhost:8090/) and create a workspace
+1. Login to [windmill](http://localhost:8090/) and create a workspace
 
-3. Copy the windmill example config and add the license keys**
+1. Copy the windmill example config and add the license keys**
     ```bash
     cp docker/configs/windmill/.env-example docker/configs/windmill/.env
     ```
     This doesn't seem to quite work, and you may have to manually enter the enterprise key in [super-admin instance settings](http://localhost:8090/#superadmin-settings). Set both the enterprise key and set as a `non-prod` instance
 
-4. Get a [token](http://localhost:8090/workspace_settings#user-settings) from user settings
+1. Get a [token](http://localhost:8090/workspace_settings#user-settings) from user settings
 
-5. Ensure the following settings are in your `.config.yaml`
+1. Ensure the following settings are in your `.config.yaml`
     ```yaml
     entConfig:
         windmill:
@@ -144,9 +146,9 @@ Job Results (`JobResult`) track the execution outcomes of scheduled jobs. Each r
             onSuccessScript: "" # leave empty until these scripts are setup
     ```
 
-6. Run the normal `task run-dev` to setup the core api
+1. Run the normal `task run-dev` to setup the core api
 
-7. From `core-startup` run the following to seed some test job templates and scheduled jobs:
+1. From `core-startup` run the following to seed some test job templates and scheduled jobs:
     ```bash
     task setup
     task startup:create:jobs
@@ -161,12 +163,12 @@ The below is what is intended to happen, it is not all currently implemented
    - The job is assigned to a runner
    - The job status is set to PENDING
 
-2. During execution:
+1. During execution:
    - The runner executes the job's script
    - Output and logs are captured
    - Start time is recorded
 
-3. (TODO) After execution:
+1. (TODO) After execution:
    - End time is recorded
    - Exit code is captured
    - Status is updated (SUCCESS/FAILED)
@@ -337,17 +339,20 @@ mutation CreateJobRunnerToken($input: CreateJobRunnerTokenInput!) {
 ## Security Considerations
 
 ### Token Security
+
 - Job runner tokens are prefixed with "runner_" for easy identification
 - Tokens are organization-scoped and cannot access other organizations
 - Token revocation is immediate and cannot be undone
 - All token usage is logged for audit purposes
 
 ### Job Isolation
+
 - Jobs run in isolated environments through Windmill
 - Customer runners are isolated using queue tags
 - Organization-level access controls prevent cross-tenant access
 
 ### Secret Management
+
 - Job configuration can include encrypted secrets
 - Integration with Hush secrets system for sensitive data
 - Environment variables passed securely to job runners
@@ -355,35 +360,15 @@ mutation CreateJobRunnerToken($input: CreateJobRunnerTokenInput!) {
 ## Monitoring and Observability
 
 ### Job Metrics
+
 - Execution time tracking
 - Success/failure rates
 - Resource utilization monitoring
 - Error rate alerts
 
 ### Audit Trail
+
 - Complete audit log of all job operations
 - Token usage tracking
 - Job result history
 - Configuration change tracking
-
-## Best Practices
-
-### Job Template Design
-1. **Idempotent Scripts**: Design jobs to be safely re-runnable
-2. **Error Handling**: Include comprehensive error handling and logging
-3. **Resource Limits**: Set appropriate timeouts and resource constraints
-4. **Documentation**: Include clear descriptions and configuration examples
-
-### Security
-1. **Principle of Least Privilege**: Grant minimal necessary permissions
-2. **Token Rotation**: Regularly rotate job runner tokens
-3. **Audit Monitoring**: Monitor job execution for anomalies
-4. **Secret Management**: Use proper secret management for sensitive data
-
-### Operations
-1. **Monitoring**: Set up alerts for job failures and performance issues
-2. **Backup**: Backup job configurations and critical results
-3. **Testing**: Test jobs in development before production deployment
-4. **Documentation**: Maintain up-to-date documentation for custom jobs
-
-The compliance automation job system provides a powerful foundation for automated compliance monitoring and task execution, with built-in security, scalability, and extensibility features.

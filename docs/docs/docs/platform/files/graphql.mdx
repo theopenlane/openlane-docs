@@ -1,0 +1,79 @@
+---
+title: GraphQL Examples
+sidebar_position: 10
+---
+
+# Example GraphQL Operations
+
+### Query Files
+```graphql
+query GetFiles($first: Int, $where: FileWhereInput) {
+  files(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        providedFileName
+        providedFileExtension
+        providedFileSize
+        categoryType
+        uri
+        storageScheme
+        storageVolume
+        storagePath
+        fileContents
+        createdAt
+        updatedAt
+        createdBy {
+          id
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}
+```
+
+### Create File
+```graphql
+mutation CreateFile($input: CreateFileInput!) {
+  createFile(input: $input) {
+    file {
+      id
+      providedFileName
+      providedFileExtension
+      providedFileSize
+      categoryType
+      uri
+      storageScheme
+      storageVolume
+      storagePath
+      createdAt
+    }
+  }
+}
+```
+
+### Update File
+```graphql
+mutation UpdateFile($id: ID!, $input: UpdateFileInput!) {
+  updateFile(id: $id, input: $input) {
+    file {
+      id
+      providedFileName
+      providedFileExtension
+      categoryType
+      uri
+      storageScheme
+      updatedAt
+    }
+  }
+}
+```

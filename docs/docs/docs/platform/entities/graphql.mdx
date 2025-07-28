@@ -1,0 +1,150 @@
+---
+title: GraphQL Examples
+sidebar_position: 10
+---
+
+# Example GraphQL Operations
+
+### Query Entities
+```graphql
+query GetEntities($first: Int, $where: EntityWhereInput) {
+  entities(first: $first, where: $where) {
+    edges {
+      node {
+        id
+        name
+        displayName
+        description
+        domains
+        createdAt
+        updatedAt
+        owner {
+          id
+          name
+        }
+        contacts {
+          edges {
+            node {
+              id
+              fullName
+              email
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Get Entity Details
+```graphql
+query GetEntityDetails($id: ID!) {
+  entity(id: $id) {
+    id
+    name
+    displayName
+    description
+    domains
+    entityTypeID
+    status
+    createdAt
+    updatedAt
+    owner {
+      id
+      name
+    }
+    contacts {
+      edges {
+        node {
+          id
+          fullName
+          email
+          phoneNumber
+          address
+        }
+      }
+    }
+    assets {
+      edges {
+        node {
+          id
+          name
+          assetType
+          status
+        }
+      }
+    }
+    notes {
+      edges {
+        node {
+          id
+          text
+          createdAt
+          createdBy {
+            id
+            displayName
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Search Entities
+```graphql
+query SearchEntities($query: String!) {
+  entitySearch(query: $query) {
+    edges {
+      node {
+        id
+        name
+        displayName
+        description
+        domains
+      }
+    }
+  }
+}
+```
+
+### Create Entity
+```graphql
+mutation CreateEntity($input: CreateEntityInput!) {
+  createEntity(input: $input) {
+    entity {
+      id
+      name
+      displayName
+      description
+      domains
+    }
+  }
+}
+```
+
+### Update Entity
+```graphql
+mutation UpdateEntity($id: ID!, $input: UpdateEntityInput!) {
+  updateEntity(id: $id, input: $input) {
+    entity {
+      id
+      name
+      displayName
+      description
+      domains
+      updatedAt
+    }
+  }
+}
+```
+
+### Delete Entity
+```graphql
+mutation DeleteEntity($id: ID!) {
+  deleteEntity(id: $id) {
+    deletedID
+  }
+}
+```

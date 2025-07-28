@@ -23,9 +23,7 @@
   "dependencies": {
     "@apollo/explorer": "^3.7.0",
     "@docusaurus/core": "3.8.1",
-    "@docusaurus/preset-classic": "3.8.1",
-    "@docusaurus/theme-mermaid": "3.8.1",
-    "mermaid": "^11.9.0",
+    "@docusaurus/theme-mermaid": "^3.8.1",
     "@mdx-js/react": "^3.0.0",
     "bufferutil": "^4.0.8",
     "clsx": "^2.0.0",

@@ -17,7 +17,7 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
+  themes: ['docusaurus-theme-openapi-docs','@docusaurus/theme-mermaid'],
   presets: [
     [
       "classic",
@@ -38,7 +38,7 @@ const config: Config = {
   themeConfig:
     {
       mermaid: {
-        theme: { light: 'neutral', dark: 'forest' },
+        theme: { light: 'default', dark: 'default' },
       },
       docs: {
         sidebar: {

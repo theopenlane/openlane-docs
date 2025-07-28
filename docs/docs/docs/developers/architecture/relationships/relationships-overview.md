@@ -137,10 +137,19 @@ graph TB
     classDef compLevel fill:#fff3e0,stroke:#f57c00,stroke-width:2px
     classDef supportLevel fill:#fce4ec,stroke:#c2185b,stroke-width:2px
 
-    class ORG orgLevel
-    class GRP,USR,ENT structLevel
-    class PROG,CTRL,RISK,EVD,TASK compLevel
-    class STD,POL,AST,FIL supportLevel
+    ORG:::orgLevel
+    GRP:::structLevel
+    USR:::structLevel
+    ENT:::structLevel
+    PROG:::compLevel
+    CTRL:::compLevel
+    RISK:::compLevel
+    EVD:::compLevel
+    TASK:::compLevel
+    STD:::supportLevel
+    POL:::supportLevel
+    AST:::supportLevel
+    FIL:::supportLevel
 ```
 
 ## Detailed Relationship Categories

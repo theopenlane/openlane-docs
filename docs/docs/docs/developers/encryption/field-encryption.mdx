@@ -22,84 +22,6 @@ The hush field-level encryption system provides:
 * **Base64 Storage**: Safe database storage of encrypted binary data
 * **Migration Support**: Tools for encrypting existing unencrypted data
 
-### Key Features
-
-* **Zero-Code Changes**: Works transparently with existing Ent operations
-* **Performance Optimized**: Minimal overhead, only encrypts when needed
-* **Secure by Default**: AES-256-GCM encryption via Google Tink
-* **Key Rotation**: Envelope encryption enables key rotation without data migration
-* **Cloud Integration**: Optional GoCloud secrets for additional key management
-* **Backward Compatible**: Graceful handling of existing unencrypted data
-
-## Architecture
-
-### System Architecture
-
-```mermaid
-graph TB
-    subgraph "Schema Layer"
-        ANNOTATION[hush.EncryptField()]
-        MIXIN[Encryption Mixins]
-        SCHEMA[Ent Schema]
-    end
-
-    subgraph "Processing Layer"
-        HOOK[Encryption Hook]
-        INTERCEPTOR[Decryption Interceptor]
-    end
-
-    subgraph "Encryption Layer"
-        TINK[Google Tink]
-        ENVELOPE[Envelope Encryption]
-        BASE64[Base64 Encoding]
-    end
-
-    subgraph "Storage Layer"
-        DATABASE[(Database)]
-        ENV[Environment Variables]
-    end
-
-    ANNOTATION --> SCHEMA
-    MIXIN --> SCHEMA
-    SCHEMA --> HOOK
-    SCHEMA --> INTERCEPTOR
-
-    HOOK --> TINK
-    INTERCEPTOR --> TINK
-
-    TINK --> ENVELOPE
-    ENVELOPE --> BASE64
-    BASE64 --> DATABASE
-
-    ENV --> TINK
-```
-
-### Data Flow
-
-```mermaid
-sequenceDiagram
-    participant App as Application
-    participant Hook as Encryption Hook
-    participant Tink as Tink Library
-    participant DB as Database
-    participant Int as Interceptor
-
-    Note over App,DB: Write Operation
-    App->>Hook: Create/Update with plaintext
-    Hook->>Tink: Encrypt(plaintext)
-    Tink-->>Hook: ciphertext
-    Hook->>Hook: Base64 encode
-    Hook->>DB: Store encoded ciphertext
-
-    Note over App,DB: Read Operation
-    App->>DB: Query data
-    DB-->>Int: Encoded ciphertext
-    Int->>Int: Base64 decode
-    Int->>Tink: Decrypt(ciphertext)
-    Tink-->>Int: plaintext
-    Int-->>App: Return plaintext
-```
-
 ## Quick Start
 
 ### 1. Generate a Tink Keyset
@@ -112,13 +34,13 @@ go run ./internal/ent/hush/cmd/hush generate
 # OPENLANE_TINK_KEYSET=CNnD/p0JEmQKWAowdHlwZS5nb29nbGVhcGlzLmNvbS9nb29nbGUuY3J5cHRvLnRpbmsuQWVzR2NtS2V5EiIaID+JaHu+6zMW3YgphNkpL5lVJMVeZdAjJclgAHyShxUOGAEQARjZw/6dCSAB
 ```
 
-### 2. Set Environment Variable
+### 1. Set Environment Variable
 
 ```bash
 export OPENLANE_TINK_KEYSET=CNnD/p0JEmQKWAowdHlwZS5nb29nbGVhcGlzLmNvbS9nb29nbGUuY3J5cHRvLnRpbmsuQWVzR2NtS2V5EiIaID+JaHu+6zMW3YgphNkpL5lVJMVeZdAjJclgAHyShxUOGAEQARjZw/6dCSAB
 ```
 
-### 3. Add Encryption to Schema
+### 1. Add Encryption to Schema
 
 ```go
 package schema
@@ -241,30 +163,6 @@ Encrypted data is binary and may contain:
 
 Base64 encoding ensures encrypted data is stored safely as text in any database.
 
-### Security Properties
-
-* **Confidentiality**: Data encrypted with AES-256-GCM
-* **Integrity**: AEAD provides authentication and tamper detection
-* **Key Rotation**: Envelope encryption allows key rotation without data re-encryption
-* **Forward Secrecy**: Each encryption uses a unique nonce
-* **Cryptographic Agility**: Tink supports algorithm migration
-
-### Threat Model
-
-**Protects Against**:
-- Database compromise (data at rest encryption)
-- Log file exposure (sensitive fields hidden)
-- Backup/snapshot exposure
-- Unauthorized database access
-- Data tampering (AEAD authentication)
-
-**Does NOT Protect Against**:
-- Application memory dumps
-- Compromise of encryption keys
-- Application-level vulnerabilities
-- Side-channel attacks
-- Malicious application code
-
 ## Key Management
 
 ### Tink Keyset Generation
@@ -276,36 +174,6 @@ go run ./internal/ent/hush/cmd/hush generate
 # Output includes the base64-encoded keyset
 OPENLANE_TINK_KEYSET=<base64-encoded-keyset>
 ```
-
-### Keyset Storage Options
-
-#### Development/Testing (No Keyset)
-```bash
-# Simply don't set OPENLANE_TINK_KEYSET
-# All data will be stored as plaintext
-# Useful for local development and testing
-```
-
-#### Environment Variable (Development)
-```bash
-export OPENLANE_TINK_KEYSET=<keyset>
-```
-
-#### Secrets Manager (Production)
-```bash
-# AWS Secrets Manager
-aws secretsmanager create-secret \
-  --name openlane-tink-keyset \
-  --secret-string "<keyset>"
-
-# Google Secret Manager
-gcloud secrets create openlane-tink-keyset \
-  --data-file=keyset.txt
-
-# HashCorp Vault
-vault kv put secret/openlane tink_keyset="<keyset>"
-```
-
 ### Key Rotation
 
 Tink's envelope encryption enables key rotation without re-encrypting existing data:
@@ -378,48 +246,3 @@ If you remove the `OPENLANE_TINK_KEYSET`:
 - Existing encrypted data appears as base64 strings
 - New data is stored as plaintext
 - The system continues to function but encrypted data is inaccessible
-
-## Best Practices
-
-### Field Selection
-- Only encrypt truly sensitive data (passwords, tokens, keys)
-- Don't encrypt fields used in WHERE clauses
-- Consider performance impact for large fields
-
-### Key Management
-- Use proper key storage in production (not environment variables)
-- Implement key rotation policies
-- Back up keysets securely
-- Use separate keys for different environments
-
-### Schema Design
-```go
-// Good: Specific sensitive fields
-field.String("api_token").
-    Sensitive().
-    Annotations(hush.EncryptField())
-
-// Bad: Encrypting everything
-field.String("user_id").
-    Annotations(hush.EncryptField()) // Don't encrypt IDs!
-```
-
-### Migration Strategy
-- Test migrations on a copy first
-- Implement gradual rollout
-- Have rollback plan ready
-- Monitor for decryption errors
-
-### Monitoring
-- Alert on decryption failures
-- Track encryption/decryption performance
-- Monitor for plaintext leaks in logs
-- Audit field access patterns
-
-### Compliance
-- Document which fields are encrypted
-- Maintain encryption inventory
-- Track key rotation history
-- Implement access controls
-
-For additional support or questions about the field-level encryption system, please refer to the development team or create an issue in the repository.

@@ -483,28 +483,3 @@ Add to commit message:
 
 Create draft PR even for minor changes.
 ```
-
-## Best Practices
-
-### Configuration Development
-
-1. **Use struct tags** for proper field configuration
-2. **Mark sensitive fields** with `sensitive:"true"`
-3. **Add domain inheritance** for environment flexibility
-4. **Include schema annotations** for documentation
-
-### Automation Workflow
-
-1. **Review draft PRs** before merging core changes
-2. **Monitor Slack notifications** for team awareness
-3. **Test configuration locally** before pushing
-4. **Validate Helm charts** after automation runs
-
-### Security Management
-
-1. **Rotate secrets regularly** using PushSecret resources
-2. **Monitor secret access** through GCP audit logs
-3. **Review automation permissions** periodically
-4. **Keep webhook URLs secure** and rotate when needed
-
-This automation system provides a robust, secure, and transparent way to manage the complex relationship between application configuration and infrastructure deployment, ensuring that changes are properly reviewed and deployed with minimal manual intervention.

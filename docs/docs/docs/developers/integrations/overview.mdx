@@ -111,24 +111,6 @@ sequenceDiagram
     API-->>App: Authenticated session
 ```
 
-### Email Processing Pattern
-```mermaid
-sequenceDiagram
-    participant App
-    participant API
-    participant JobQueue
-    participant EmailWorker
-    participant EmailService
-
-    App->>API: Trigger email (registration, reset, etc.)
-    API->>JobQueue: Queue email job with template data
-    JobQueue->>EmailWorker: Process email job
-    EmailWorker->>EmailWorker: Render template with data
-    EmailWorker->>EmailService: Send via configured provider
-    EmailService-->>EmailWorker: Delivery confirmation
-    EmailWorker->>JobQueue: Mark job complete
-```
-
 ## Configuration Management
 
 ### Environment Variables
@@ -149,7 +131,7 @@ CORE_EMAIL_FROMEEMAIL=noreply@your-domain.com
 CORE_EMAIL_COMPANYNAME=Your Company
 
 # External Services
-CORE_SUBSCRIPTION_PRIVATESTRIPEKEY=sk_live_your-stripe-key
+CORE_SUBSCRIPTION_PRIVATESTRIPEKEY=""
 CORE_SLACK_WEBHOOKURL=https://hooks.slack.com/services/your-webhook
 ```
 
@@ -198,13 +180,6 @@ openlane:
 - **Audit logging** for all integration activities
 - **API rate limiting** to prevent abuse
 - **Input validation** on all external data
-
-### Compliance
-- **SOC 2 Type II** compliance for data handling
-- **GDPR compliance** with data retention policies
-- **PCI DSS** compliance for payment processing
-- **Regular security audits** of integration endpoints
-- **Vulnerability scanning** of dependencies
 
 ## Monitoring & Observability
 
@@ -279,28 +254,3 @@ func TestOAuthFlow(t *testing.T) {
 - **Webhook endpoint verification**
 - **SSO integration validation**
 - **Token lifecycle testing**
-
-## Best Practices
-
-### Development
-1. **Use test credentials** for all non-production environments
-2. **Implement circuit breakers** for external API calls
-3. **Log integration events** for debugging and audit
-4. **Handle partial failures** gracefully
-5. **Validate all external input** before processing
-
-### Operations
-1. **Monitor integration health** continuously
-2. **Set up alerting** for critical integration failures
-3. **Rotate credentials** regularly
-4. **Review access scopes** periodically
-5. **Maintain integration documentation** up to date
-
-### Security
-1. **Use least privilege** access for all integrations
-2. **Encrypt sensitive data** at rest and in transit
-3. **Validate OAuth state** parameters
-4. **Implement rate limiting** on all endpoints
-5. **Regular security reviews** of integration code
-
-The following sections provide detailed documentation for each integration category, including setup instructions, configuration examples, and troubleshooting guides.

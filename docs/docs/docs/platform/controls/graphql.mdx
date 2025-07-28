@@ -1,0 +1,136 @@
+---
+title: GraphQL Examples
+sidebar_position: 10
+---
+
+# Example GraphQL Operations
+
+### Query Control Implementations
+
+```graphql
+query GetControlImplementations($first: Int, $where: ControlImplementationWhereInput) {
+  controlImplementations(first: $first, where: $where) {
+    edges {
+      node {
+        id
+        status
+        implementationDate
+        verified
+        verificationDate
+        details
+        createdAt
+        updatedAt
+        owner {
+          id
+          name
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+  }
+}
+```
+
+### Create Control Implementation
+
+```graphql
+mutation CreateControlImplementation($input: CreateControlImplementationInput!) {
+  createControlImplementation(input: $input) {
+    controlImplementation {
+      id
+      status
+      implementationDate
+      verified
+      details
+      createdAt
+    }
+  }
+}
+```
+
+### Update Implementation Status
+
+```graphql
+mutation UpdateControlImplementation($id: ID!, $input: UpdateControlImplementationInput!) {
+  updateControlImplementation(id: $id, input: $input) {
+    controlImplementation {
+      id
+      status
+      verified
+      verificationDate
+      details
+      updatedAt
+    }
+  }
+}
+```
+
+### Query Subcontrols
+
+```graphql
+query GetSubcontrols($first: Int, $where: SubcontrolWhereInput) {
+  subcontrols(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        name
+        description
+        implementationType
+        implementationStatus
+        implementationDate
+        subcontrolNumber
+        source
+        control {
+          id
+          name
+          controlNumber
+        }
+        controlObjectives {
+          edges {
+            node {
+              id
+              name
+              description
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Create Subcontrol
+
+```graphql
+mutation CreateSubcontrol($input: CreateSubcontrolInput!) {
+  createSubcontrol(input: $input) {
+    subcontrol {
+      id
+      name
+      description
+      implementationType
+      subcontrolNumber
+      source
+      control {
+        id
+        name
+        controlNumber
+      }
+    }
+  }
+}
+```

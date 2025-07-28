@@ -52,13 +52,13 @@ Risk management looks a little different at every organization, but it typically
 
 1. **Identify your risks**: Paint a complete picture of all of the risks your organization faces. This can be done through data analysis, stakeholder interviews, review of external media and global trends, and other methods. Use this research to build a list of all your organization risks, known as a risk register.
 
-2. **Assess your risks**: For each risk in your risk register, measure the potential impact it could have on your business if it were to turn into a risk event. You can use qualitative methods, quantitative methods, or both to accomplish this.
+1. **Assess your risks**: For each risk in your risk register, measure the potential impact it could have on your business if it were to turn into a risk event. You can use qualitative methods, quantitative methods, or both to accomplish this.
 
-3. **Prioritize your risks**: Rank your risks in order of their potential business impact.
+1. **Prioritize your risks**: Rank your risks in order of their potential business impact.
 
-4. **Mitigate or exploit your risks**: Using your ranked list, begin exploring ways to either mitigate your risks or, if appropriate, exploit them to drive growth.
+1. **Mitigate or exploit your risks**: Using your ranked list, begin exploring ways to either mitigate your risks or, if appropriate, exploit them to drive growth.
 
-5. **Monitor the results**: Keep a continuous eye on how your mitigation efforts or risk exploitation strategies are performing, and adjust as needed.
+1. **Monitor the results**: Keep a continuous eye on how your mitigation efforts or risk exploitation strategies are performing, and adjust as needed.
 
 Rinse and repeat: Risk management is a marathon, not a sprint. Repeat this process on a regular, ongoing basis.
 
@@ -126,87 +126,9 @@ A Risk in Openlane represents a potential threat, vulnerability, or uncertainty 
 | `ONGOING` | Being actively managed | Continue treatment activities |
 | `ARCHIVED` | No longer relevant or resolved | Document lessons learned |
 
-## Risk Scoring Matrix
-
-Openlane uses a 20-point risk scoring system based on impact and likelihood:
-
-```mermaid
-graph TB
-    subgraph "Risk Assessment Matrix"
-        subgraph " "
-            A1[VL: 0.5] --> B1[2.5]
-            A1 --> B2[2]
-            A1 --> B3[1.5]
-            A1 --> B4[1]
-            A1 --> B5[0.5]
-
-            A2[L: 1] --> C1[5]
-            A2 --> C2[4]
-            A2 --> C3[3]
-            A2 --> C4[2]
-            A2 --> C5[1]
-
-            A3[M: 2] --> D1[10]
-            A3 --> D2[8]
-            A3 --> D3[6]
-            A3 --> D4[4]
-            A3 --> D5[2]
-
-            A4[H: 3] --> E1[15]
-            A4 --> E2[12]
-            A4 --> E3[9]
-            A4 --> E4[6]
-            A4 --> E5[3]
-
-            A5[VH: 4] --> F1[20]
-            A5 --> F2[16]
-            A5 --> F3[12]
-            A5 --> F4[8]
-            A5 --> F5[4]
-        end
-
-        G[Critical: 5] -.-> B1
-        G -.-> C1
-        G -.-> D1
-        G -.-> E1
-        G -.-> F1
-
-        H[High: 4] -.-> B2
-        H -.-> C2
-        H -.-> D2
-        H -.-> E2
-        H -.-> F2
-
-        I[Medium: 3] -.-> B3
-        I -.-> C3
-        I -.-> D3
-        I -.-> E3
-        I -.-> F3
-
-        J[Low: 2] -.-> B4
-        J -.-> C4
-        J -.-> D4
-        J -.-> E4
-        J -.-> F4
-
-        K[Very Low: 1] -.-> B5
-        K -.-> C5
-        K -.-> D5
-        K -.-> E5
-        K -.-> F5
-    end
-
-    style F1 fill:#ffebee
-    style E1 fill:#ffebee
-    style F2 fill:#fff3e0
-    style E2 fill:#fff3e0
-    style D1 fill:#fff3e0
-    style F3 fill:#e8f5e8
-    style E3 fill:#e8f5e8
-    style D2 fill:#e8f5e8
-```
 
 ### Impact Levels
+
 - **Critical (5)**: Severe consequences, major business disruption
 - **High (4)**: Significant consequences, notable business impact
 - **Medium (3)**: Moderate consequences, manageable impact
@@ -214,6 +136,7 @@ graph TB
 - **Very Low (1)**: Minimal consequences, negligible impact
 
 ### Likelihood Levels
+
 - **Very High (4)**: >90% probability of occurrence
 - **High (3)**: 70-90% probability of occurrence
 - **Medium (2)**: 30-70% probability of occurrence
@@ -221,6 +144,7 @@ graph TB
 - **Very Low (0.5)**: < 10% probability of occurrence
 
 ### Risk Score Calculation
+
 **Risk Score = Impact × Likelihood**
 
 | Impact/Likelihood | Very Low (0.5) | Low (1) | Medium (2) | High (3) | Very High (4) |
@@ -231,143 +155,22 @@ graph TB
 | **Low (2)**       | 1             | 2       | 4          | 6        | 8             |
 | **Very Low (1)**  | 0.5           | 1       | 2          | 3        | 4             |
 
-## Common Workflows
-
-### 1. Risk Identification and Assessment
-
-```graphql
-# Create new risk with initial assessment
-mutation CreateNewRisk {
-  createRisk(input: {
-    name: "Cloud Service Provider Outage"
-    details: "Risk of extended service outage due to cloud provider infrastructure failure"
-    category: "AVAILABILITY"
-    riskType: "EXTERNAL"
-    impact: HIGH
-    likelihood: LOW
-    businessCosts: "50000-200000"
-    status: OPEN
-    stakeholderID: "infrastructure-team-id"
-  }) {
-    risk {
-      id
-      name
-      impact
-      likelihood
-      score
-      status
-    }
-  }
-}
-```
-
-### 2. Risk Mitigation Planning
-
-```graphql
-# Create action plan for risk mitigation
-mutation CreateRiskActionPlan($riskId: ID!) {
-  createActionPlan(input: {
-    name: "Implement Multi-Cloud Strategy"
-    details: "Develop and implement multi-cloud architecture to reduce single point of failure risk"
-    priority: HIGH
-    dueDate: "2024-06-30T00:00:00Z"
-    source: "RISK_ASSESSMENT"
-    status: DRAFT
-    riskIDs: [$riskId]
-  }) {
-    actionPlan {
-      id
-      name
-      priority
-      dueDate
-      risks {
-        edges {
-          node {
-            id
-            name
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-### 3. Risk Monitoring and Review
-
-```graphql
-# Find high-priority risks for review
-query RisksForReview {
-  risks(where: {
-    score: { gte: 12 }
-    status: { in: [OPEN, ONGOING] }
-  }, orderBy: [
-    { field: score, direction: DESC }
-    { field: updatedAt, direction: ASC }
-  ]) {
-    edges {
-      node {
-        id
-        name
-        impact
-        likelihood
-        score
-        status
-        updatedAt
-        actionPlans {
-          edges {
-            node {
-              id
-              name
-              dueDate
-              status
-            }
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-### 4. Risk Treatment and Closure
-
-```graphql
-# Update risk status after mitigation
-mutation MitigateRisk($riskId: ID!) {
-  updateRisk(id: $riskId, input: {
-    status: MITIGATED
-    impact: LOW
-    likelihood: LOW
-    mitigation: "Multi-cloud architecture implemented with automated failover capabilities. Regular disaster recovery testing established."
-  }) {
-    risk {
-      id
-      name
-      status
-      impact
-      likelihood
-      score
-      mitigation
-      updatedAt
-    }
-  }
-}
-```
-
 ## Integration Points
 
 ### With Controls
+
 - Controls are implemented to mitigate specific risks
 - Risk assessments drive control selection and prioritization
 - Control effectiveness impacts risk ratings
 
 ### With Action Plans
+
 - Action plans define specific steps to address risks
 - Risk mitigation strategies are implemented through action plans
 - Action plan completion affects risk status
 
 ### With Programs
+
 - Risks are managed within compliance program contexts
 - Program risk assessments inform compliance strategies
 - Risk treatment aligns with program objectives

@@ -14,6 +14,7 @@ API tokens are authentication credentials that allow external systems, applicati
 ## Compliance Significance
 
 API tokens are essential for:
+
 - **Access Control**: Implementing fine-grained access permissions for automated systems
 - **Audit Trail**: Tracking programmatic access to compliance-sensitive data
 - **Security Compliance**: Meeting requirements for secure API authentication (SOC 2, ISO 27001)
@@ -23,12 +24,14 @@ API tokens are essential for:
 ## API Token Types
 
 ### Organization-Level API Tokens
+
 - **Scope**: Organization-wide access with configurable permissions
 - **Prefix**: `tola_` (Token Openlane API)
 - **Use Case**: System integrations, organizational automation
 - **Lifecycle**: Managed by organization administrators
 
 ### Personal Access Tokens
+
 - **Scope**: User-specific access with inherited permissions
 - **Prefix**: `tolp_` (Token Openlane Personal)
 - **Use Case**: User-specific automation, personal tooling
@@ -37,6 +40,7 @@ API tokens are essential for:
 ## Properties
 
 ### Core Information
+
 - **ID**: Unique identifier for the token
 - **Name**: Human-readable token name for identification
 - **Token**: Cryptographically secure token value (write-only)
@@ -44,11 +48,13 @@ API tokens are essential for:
 - **Owner**: Organization or user that owns the token
 
 ### Access Control
+
 - **Scopes**: Array of permission scopes (read, write, admin)
 - **Active Status**: Boolean indicating if token is active
 - **SSO Authorizations**: Organization-specific SSO verification timestamps
 
 ### Lifecycle Management
+
 - **Created At**: Token creation timestamp
 - **Expires At**: Optional expiration date
 - **Last Used At**: Timestamp of most recent usage
@@ -141,18 +147,21 @@ API tokens are managed through GraphQL operations. There are no direct REST endp
 ## Security and Compliance Considerations
 
 ### Access Control
+
 - **Role-Based Permissions**: Tokens inherit permissions from their owner's roles
 - **Scope Limitation**: Restrict token permissions to minimum required access
 - **Organization Boundaries**: Tokens cannot access resources outside their organization
 - **SSO Integration**: Supports organization-level SSO authorization requirements
 
 ### Audit and Monitoring
+
 - **Usage Tracking**: All API token usage is logged for audit purposes
 - **Access Patterns**: Monitor for unusual access patterns or suspicious activity
 - **Revocation Audit**: Complete audit trail for token lifecycle events
 - **Compliance Reporting**: Generate reports on token usage for compliance reviews
 
 ### Security Best Practices
+
 - **Token Rotation**: Implement regular token rotation schedules
 - **Expiration Policies**: Set appropriate expiration dates for all tokens
 - **Secure Storage**: Store tokens securely and never expose in logs
@@ -178,95 +187,26 @@ steps:
 ```
 
 ### Automated Compliance Monitoring
-```javascript
-// Monitor control implementation status via GraphQL
-const response = await fetch('https://api.openlane.io/query', {
-  method: 'POST',
-  headers: {
-    'Authorization': `Bearer ${process.env.OPENLANE_API_TOKEN}`,
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    query: `
-      query {
-        controls {
-          edges {
-            node {
-              id
-              name
-              status
-            }
-          }
-        }
-      }
-    `
-  })
-});
-```
+
+Monitor control implementation status through GraphQL queries using authenticated API requests to retrieve control information including ID, name, and status.
 
 ### Security Scanning Integration
-```javascript
-// Automated vulnerability scan results upload via GraphQL
-const response = await fetch('https://api.openlane.io/query', {
-  method: 'POST',
-  headers: {
-    'Authorization': `Bearer ${process.env.OPENLANE_API_TOKEN}`,
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    query: `
-      mutation CreateScan($input: CreateScanInput!) {
-        createScan(input: $input) {
-          scan {
-            id
-            status
-          }
-        }
-      }
-    `,
-    variables: {
-      input: {
-        scanType: "vulnerability",
-        results: scanResults
-      }
-    }
-  })
-});
-```
+
+Automated vulnerability scan results can be uploaded via GraphQL mutations using the createScan mutation with scan type and results data.
 
 ## Relationships
 
 API tokens integrate with several other Openlane objects:
 
 ### Direct Relationships
+
 - **Organization**: Organizational API tokens belong to organizations
 - **User**: Personal access tokens belong to individual users
 - **Events**: All token operations generate audit events
 
 ### Indirect Relationships
+
 - **Controls**: API tokens can be used to automate control evidence collection
 - **Evidence**: Tokens enable automated evidence upload and management
 - **Risks**: API tokens can trigger risk assessments based on automated findings
 - **Tasks**: Tokens can create and update compliance tasks programmatically
-
-## Best Practices
-
-### Token Management
-1. **Naming Convention**: Use descriptive names indicating token purpose
-2. **Documentation**: Maintain documentation of token usage and ownership
-3. **Inventory Management**: Keep an inventory of all active tokens
-4. **Regular Audits**: Conduct periodic reviews of token usage and permissions
-
-### Security Hygiene
-1. **Immediate Revocation**: Revoke tokens immediately when no longer needed
-2. **Incident Response**: Include token revocation in incident response procedures
-3. **Monitoring**: Implement automated monitoring for token usage anomalies
-4. **Compliance Integration**: Include token management in compliance frameworks
-
-### Integration Guidelines
-1. **Error Handling**: Implement proper error handling for token authentication
-2. **Rate Limiting**: Respect API rate limits to avoid token suspension
-3. **Logging**: Log token usage for debugging and audit purposes
-4. **Fallback Mechanisms**: Implement fallback authentication methods where appropriate
-
-API tokens are fundamental to Openlane's security model, providing secure, auditable access for automated systems while maintaining strict access controls and compliance requirements. All API token operations are performed through GraphQL mutations and queries.
