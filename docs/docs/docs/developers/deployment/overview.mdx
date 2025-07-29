@@ -1,0 +1,171 @@
+---
+title: Deployment Overview
+description: Guide to deploying Openlane infrastructure and applications using Helm charts
+sidebar_position: 1
+---
+
+# Deployment Overview
+
+Openlane provides production-ready Helm charts for deploying the complete platform on Kubernetes, with specialized support for Google Cloud Platform (GCP) infrastructure provisioning through Config Connector.
+
+## Architecture
+
+The deployment architecture uses a GitOps approach powered by **GCP Config Controller**, which includes managed Config Sync and **Config Connector**. This enables unified management of both infrastructure and application resources through Helm charts.
+
+### Core Components
+
+- **GKE Autopilot cluster** - Managed Kubernetes environment
+- **Shared VPC** - Network isolation and connectivity
+- **DNS and Load Balancing** - Traffic routing and SSL termination
+- **CloudSQL** - Managed PostgreSQL database
+- **Memorystore Redis** - Caching and session storage
+- **External Secrets Operator** - Secret management integration
+
+## Helm Chart Structure
+
+### Main Application Chart
+
+The primary Openlane chart is located at `/charts/openlane/` in the [openlane-infra](https://github.com/theopenlane/openlane-infra) repository and includes:
+
+- **Core API server** - Main application services
+- **Riverboat workers** - Job queue processing
+- **RiverUI** - Job monitoring interface
+- **OpenFGA integration** - Authorization service
+- **External secrets** - GCP Secret Manager integration
+
+### Infrastructure Charts
+
+Infrastructure components are provided as separate charts that can be included as dependencies:
+
+- `cert-manager` - SSL certificate management
+- `external-dns` - Automatic DNS record management
+- `gcp-*` charts - GCP resource provisioning (VPC, CloudSQL, Redis, etc.)
+- `grafana` - Monitoring and observability
+- `prometheus` - Metrics collection
+
+## Required Services
+
+### Database (PostgreSQL)
+
+Openlane requires a PostgreSQL 12+ database. Options include:
+
+- **GCP CloudSQL** (recommended for GCP deployments)
+- **Amazon RDS** (for AWS deployments)
+- **Azure Database** (for Azure deployments)
+- **Self-managed PostgreSQL** (for on-premises)
+
+### Cache (Redis)
+
+Redis is used for session storage and feature authorization caching:
+
+- **GCP Memorystore** (recommended for GCP deployments)
+- **Amazon ElastiCache** (for AWS deployments)
+- **Azure Cache** (for Azure deployments)
+- **Self-managed Redis** (for on-premises)
+
+### Authorization (OpenFGA)
+
+OpenFGA handles fine-grained authorization:
+
+```yaml
+# OpenFGA configuration
+openlane:
+  coreConfiguration:
+    authz:
+      enabled: true
+      hostUrl: "https://authz.theopenlane.io"
+      storeName: "openlane"
+```
+
+### Job Queue (River)
+
+Riverboat provides job queue functionality:
+
+```yaml
+riverboat:
+  replicaCount: 2
+  image:
+    repository: ghcr.io/theopenlane/riverboat
+    tag: amd64-latest
+  riverDatabaseHost: ""
+```
+
+## Secret Management
+
+### External Secrets Operator
+
+Openlane integrates with External Secrets Operator for secret management:
+
+```yaml
+openlane:
+  externalSecrets:
+    enabled: true
+    secrets:
+      core-subscription-privatestripekey:
+        enabled: true
+        secretKey: "CORE_SUBSCRIPTION_PRIVATESTRIPEKEY"
+        remoteKey: "core-subscription-privatestripekey"
+```
+
+### Manual Secret Creation
+
+For non-GCP deployments, create secrets manually:
+
+```bash
+kubectl create secret generic openlane-app-secret \
+  --from-literal=CORE_DB_PRIMARYDBSOURCE="postgres://..." \
+  --from-literal=CORE_SESSIONS_SIGNINGKEY="..." \
+  --from-literal=CORE_SESSIONS_ENCRYPTIONKEY="..."
+```
+
+## Monitoring and Observability
+
+### Prometheus Integration
+
+The chart includes PodMonitor resources for Prometheus:
+
+```yaml
+podMonitor:
+  enabled: true
+  interval: "30s"
+  additionalLabels:
+    monitoring: "true"
+```
+
+### Health Checks
+
+Built-in health check endpoints:
+
+- `/healthz` - Application health
+- `/readyz` - Readiness probe
+- `:17609/metrics` - Prometheus metrics
+
+### CORS Configuration
+
+Configure CORS for web applications:
+
+```yaml
+openlane:
+  coreConfiguration:
+    server:
+      cors:
+        enabled: true
+        allowOrigins:
+          - "https://console.your-domain.com"
+          - "https://your-domain.com"
+```
+
+### CSRF Protection
+
+Enable CSRF protection for web traffic:
+
+```yaml
+openlane:
+  coreConfiguration:
+    server:
+      csrfProtection:
+        enabled: true
+        cookie: "ol.csrf-token"
+        secure: true
+        sameSite: "Strict"
+```

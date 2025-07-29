@@ -1,9 +1,0 @@
-{
-  "label": "Authorization",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Information around the authorization models within Openlane"
-  },
-  "collapsed": true
-}

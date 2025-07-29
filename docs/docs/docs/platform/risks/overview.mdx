@@ -4,11 +4,45 @@ description: Using Openlane to document and manage risks
 sidebar_position: 1
 ---
 
-# Overview
+# Risks
+
+Risk management is a foundational element of effective compliance programs. Openlane's risk management system enables organizations to identify, assess, track, and mitigate risks that could impact compliance, security, and business operations.
 
 There are many bodies of thought and frameworks for how to create and define risks, which you can find in the [Risk Frameworks](riskmanagement.mdx) section. Regardless of what framework you choose, Openlane's risk definitions and structure is relatively simple and flexible.
 
 We realize that we cannot accommodate every risk framework and strategy, so we have created a simple and flexible risk management system that can be adapted to your needs.
+
+```mermaid
+graph TD
+    A[Risk Identification] --> B[Risk Assessment]
+    B --> C[Risk Score<br/>Impact × Likelihood]
+    C --> D{Risk Level}
+
+    D --> E[Critical: 16-20<br/>Immediate Action]
+    D --> F[High: 12-15<br/>Priority Treatment]
+    D --> G[Medium: 6-11<br/>Planned Mitigation]
+    D --> H[Low: 1-5<br/>Monitor/Accept]
+
+    E --> I[MITIGATE]
+    F --> I
+    F --> J[TRANSFER]
+    G --> I
+    G --> K[ACCEPT]
+    H --> K
+    H --> L[AVOID]
+
+    I --> M[Controls]
+    I --> N[Action Plans]
+    J --> O[Insurance/Contracts]
+    K --> P[Risk Register]
+    L --> Q[Process Changes]
+
+    style C fill:#e1f5fe
+    style E fill:#ffebee
+    style F fill:#fff3e0
+    style G fill:#e8f5e8
+    style H fill:#f3e5f5
+```
 
 ## What is Risk Management?
 
@@ -16,14 +50,144 @@ Risk management is the process of identifying all of the various risks your orga
 
 Risk management looks a little different at every organization, but it typically follows this general framework:
 
-1. Identify your risks: Paint a complete picture of all of the risks your organization faces. This can be done through data analysis, stakeholder interviews, review of external media and global trends, and other methods. Use this research to build a list of all your organization risks, known as a risk register.
+1. **Identify your risks**: Paint a complete picture of all of the risks your organization faces. This can be done through data analysis, stakeholder interviews, review of external media and global trends, and other methods. Use this research to build a list of all your organization risks, known as a risk register.
 
-1. Assess your risks: For each risk in your risk register, measure the potential impact it could have on your business if it were to turn into a risk event. You can use qualitative methods, quantitative methods, or both to accomplish this.
+1. **Assess your risks**: For each risk in your risk register, measure the potential impact it could have on your business if it were to turn into a risk event. You can use qualitative methods, quantitative methods, or both to accomplish this.
 
-1. Prioritize your risks: Rank your risks in order of their potential business impact.
+1. **Prioritize your risks**: Rank your risks in order of their potential business impact.
 
-1. Mitigate or exploit your risks: Using your ranked list, begin exploring ways to either mitigate your risks or, if appropriate, exploit them to drive growth.
+1. **Mitigate or exploit your risks**: Using your ranked list, begin exploring ways to either mitigate your risks or, if appropriate, exploit them to drive growth.
 
-1. Monitor the results: Keep a continuous eye on how your mitigation efforts or risk exploitation strategies are performing, and adjust as needed.
+1. **Monitor the results**: Keep a continuous eye on how your mitigation efforts or risk exploitation strategies are performing, and adjust as needed.
 
 Rinse and repeat: Risk management is a marathon, not a sprint. Repeat this process on a regular, ongoing basis.
+
+## What is a Risk?
+
+A Risk in Openlane represents a potential threat, vulnerability, or uncertainty that could negatively impact an organization's ability to achieve its objectives, maintain compliance, or protect assets. Risks are assessed based on their likelihood and potential impact, then managed through appropriate controls and mitigation strategies.
+
+## Compliance Significance
+
+| Aspect | Purpose | Benefit |
+|--------|---------|----------|
+| **Threat Identification** | Systematic discovery of compliance and security risks | Comprehensive risk coverage and early threat detection |
+| **Effort Prioritization** | Focus resources on highest-impact risks | Efficient resource allocation and maximum risk reduction |
+| **Control Selection** | Risk-driven control implementation decisions | Targeted controls that address actual threats |
+| **Due Diligence** | Demonstrate systematic risk management to auditors | Regulatory compliance and audit readiness |
+| **Decision Support** | Risk-informed business and security decisions | Better outcomes through risk-aware choices |
+| **Continuous Improvement** | Ongoing identification of enhancement opportunities | Evolving security posture and reduced exposure |
+
+## Risk Classifications
+
+### By Category
+| Type | Scope | Examples |
+|------|-------|----------|
+| **Strategic** | Organizational direction and objectives | Market disruption, competitive threats, regulatory changes |
+| **Operational** | Day-to-day business operations | Process failures, supply chain disruption, staff turnover |
+| **Financial** | Financial assets and reporting | Fraud, market volatility, credit risk |
+| **Technology** | Information systems and infrastructure | Cyber attacks, system failures, data breaches |
+| **Compliance** | Regulatory and contractual obligations | Regulation violations, audit failures, contract breaches |
+| **External** | External environment factors | Natural disasters, economic downturns, vendor failures |
+
+### By Impact Domain
+| Domain | Risk Focus | Business Impact |
+|--------|------------|----------------|
+| **Confidentiality** | Unauthorized data disclosure | Competitive advantage loss, regulatory fines |
+| **Integrity** | Data or system compromise | Decision-making errors, operational failures |
+| **Availability** | Service disruption or downtime | Revenue loss, customer dissatisfaction |
+| **Privacy** | Personal data misuse or breach | Regulatory penalties, reputation damage |
+| **Reputation** | Brand or public perception damage | Customer loss, market devaluation |
+| **Financial** | Direct financial loss or penalties | Immediate monetary impact, cash flow issues |
+
+## Risk Assessment Framework
+
+### Impact Levels
+| Level | Description | Business Consequences |
+|-------|-------------|----------------------|
+| `CRITICAL` | Severe, potentially existential impact | Business shutdown, major regulatory action, massive financial loss |
+| `HIGH` | Significant impact requiring major response | Substantial revenue loss, regulatory fines, operational disruption |
+| `MEDIUM` | Moderate impact, manageable with effort | Limited revenue impact, minor compliance issues, temporary disruption |
+| `LOW` | Minor impact with limited consequences | Minimal financial impact, operational inconvenience only |
+
+### Likelihood Probabilities
+| Level | Probability Range | Timeframe Expectation |
+|-------|------------------|----------------------|
+| `VERY_HIGH` | >90% | Almost certain within 1 year |
+| `HIGH` | 70-90% | Likely within 1-2 years |
+| `MEDIUM` | 30-70% | Possible within 2-5 years |
+| `LOW` | 10-30% | Unlikely within 5 years |
+| `VERY_LOW` | < 10% | Rare or theoretical |
+
+### Risk Status Lifecycle
+| Status | Meaning | Management Action |
+|--------|---------|------------------|
+| `OPEN` | Active risk requiring attention | Implement mitigation strategies |
+| `MITIGATED` | Reduced to acceptable levels | Monitor and maintain controls |
+| `ONGOING` | Being actively managed | Continue treatment activities |
+| `ARCHIVED` | No longer relevant or resolved | Document lessons learned |
+
+
+### Impact Levels
+
+- **Critical (5)**: Severe consequences, major business disruption
+- **High (4)**: Significant consequences, notable business impact
+- **Medium (3)**: Moderate consequences, manageable impact
+- **Low (2)**: Minor consequences, limited impact
+- **Very Low (1)**: Minimal consequences, negligible impact
+
+### Likelihood Levels
+
+- **Very High (4)**: >90% probability of occurrence
+- **High (3)**: 70-90% probability of occurrence
+- **Medium (2)**: 30-70% probability of occurrence
+- **Low (1)**: 10-30% probability of occurrence
+- **Very Low (0.5)**: < 10% probability of occurrence
+
+### Risk Score Calculation
+
+**Risk Score = Impact × Likelihood**
+
+| Impact/Likelihood | Very Low (0.5) | Low (1) | Medium (2) | High (3) | Very High (4) |
+|-------------------|----------------|---------|------------|----------|---------------|
+| **Critical (5)**  | 2.5           | 5       | 10         | 15       | 20            |
+| **High (4)**      | 2             | 4       | 8          | 12       | 16            |
+| **Medium (3)**    | 1.5           | 3       | 6          | 9        | 12            |
+| **Low (2)**       | 1             | 2       | 4          | 6        | 8             |
+| **Very Low (1)**  | 0.5           | 1       | 2          | 3        | 4             |
+
+## Integration Points
+
+### With Controls
+
+- Controls are implemented to mitigate specific risks
+- Risk assessments drive control selection and prioritization
+- Control effectiveness impacts risk ratings
+
+### With Action Plans
+
+- Action plans define specific steps to address risks
+- Risk mitigation strategies are implemented through action plans
+- Action plan completion affects risk status
+
+### With Programs
+
+- Risks are managed within compliance program contexts
+- Program risk assessments inform compliance strategies
+- Risk treatment aligns with program objectives
+
+### Integration Patterns
+
+| Integration | Relationship | Business Value |
+|-------------|--------------|---------------|
+| **Controls** | Risks drive control selection and implementation | Targeted risk mitigation through appropriate controls |
+| **Action Plans** | Risks generate specific mitigation activities | Structured approach to risk treatment |
+| **Programs** | Risks managed within compliance program contexts | Aligned risk management with compliance objectives |
+| **Assets & Entities** | Risks associated with specific business components | Granular risk management and accountability |
+
+For detailed guidance on risk management for specific compliance frameworks, see the framework-specific documentation in the [Standards section](../standards/overview.mdx).
+
+## Related Documentation
+
+- [GraphQL Operations](./overview-graphql.mdx) - Detailed GraphQL API operations for risk management
+- [Risk Management Guide](./risk-management-guide.mdx) - Practical guide for identifying and assessing risks
+- [Risk Frameworks](./riskmanagement.mdx) - Different risk management frameworks and methodologies

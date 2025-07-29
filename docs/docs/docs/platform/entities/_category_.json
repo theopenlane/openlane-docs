@@ -1,9 +1,8 @@
 {
   "label": "Entities",
-  "position": 3,
+  "position": 8,
   "link": {
     "type": "generated-index",
-    "description": "Entities are records of businesses or people outside of your organization that you interact with"
-  },
-  "collapsed": true
+    "description": "Business entities and organizational units for compliance management"
+  }
 }

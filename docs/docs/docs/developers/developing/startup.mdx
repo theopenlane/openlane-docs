@@ -49,7 +49,7 @@ tags:
 The server enforces CSRF protection on all mutating requests. Clients must
 include a valid token in the `X-CSRF-Token` header. Existing client code can
 create a client with the CSRF Token using the following function. This function
-will grab a valid CSRF token from the `/livez` endpoint  and send it for subsequent requests.
+will grab a valid CSRF token from the `/livez` endpoint and send it for subsequent requests.
 
 ```go
  client.ClientWithCSRFToken(ctx, opts...)

@@ -1,0 +1,250 @@
+---
+title: Example GraphQL Operations
+sidebar_position: 9
+---
+
+# Risk GraphQL Operations
+
+## Query Risks
+
+```graphql
+# Get all risks with basic information
+query GetRisks {
+  risks {
+    edges {
+      node {
+        id
+        name
+        details
+        category
+        riskType
+        impact
+        likelihood
+        score
+        status
+        businessCosts
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+```
+
+```graphql
+# Get detailed risk information with relationships
+query GetRiskDetails($id: ID!) {
+  risk(id: $id) {
+    id
+    name
+    details
+    category
+    riskType
+    impact
+    likelihood
+    score
+    businessCosts
+    mitigation
+    satisfies
+    status
+    createdAt
+    updatedAt
+
+    # Related entities
+    stakeholder {
+      id
+      name
+    }
+
+    delegate {
+      id
+      name
+    }
+
+    controls {
+      edges {
+        node {
+          id
+          displayID
+          description
+          status
+          controlType
+        }
+      }
+    }
+
+    procedures {
+      edges {
+        node {
+          id
+          name
+          status
+        }
+      }
+    }
+
+    actionPlans {
+      edges {
+        node {
+          id
+          name
+          dueDate
+          priority
+          status
+        }
+      }
+    }
+
+    tasks {
+      edges {
+        node {
+          id
+          title
+          status
+          due
+          category
+        }
+      }
+    }
+
+    programs {
+      edges {
+        node {
+          id
+          name
+          displayID
+          programType
+        }
+      }
+    }
+  }
+}
+```
+
+## Search Risks
+
+```graphql
+# Search risks by name or details
+query SearchRisks($query: String!) {
+  riskSearch(query: $query) {
+    edges {
+      node {
+        id
+        name
+        details
+        category
+        riskType
+        impact
+        likelihood
+        score
+        status
+      }
+    }
+  }
+}
+```
+
+## Filter Risks
+
+```graphql
+# Filter risks by impact and status
+query HighImpactRisks {
+  risks(where: {
+    impact: { in: [CRITICAL, HIGH] }
+    status: { eq: OPEN }
+  }, orderBy: [
+    { field: score, direction: DESC }
+  ]) {
+    edges {
+      node {
+        id
+        name
+        impact
+        likelihood
+        score
+        status
+        businessCosts
+      }
+    }
+  }
+}
+```
+
+## Create Risk
+
+```graphql
+mutation CreateRisk($input: CreateRiskInput!) {
+  createRisk(input: $input) {
+    risk {
+      id
+      name
+      details
+      category
+      riskType
+      impact
+      likelihood
+      score
+      status
+    }
+  }
+}
+```
+
+**Input Example:**
+```json
+{
+  "input": {
+    "name": "Data Breach from Insufficient Access Controls",
+    "details": "Risk of unauthorized access to sensitive customer data due to inadequate access control mechanisms, potentially resulting in data breach and regulatory penalties",
+    "category": "DATA_SECURITY",
+    "riskType": "OPERATIONAL",
+    "impact": "CRITICAL",
+    "likelihood": "MEDIUM",
+    "businessCosts": "500000-2000000",
+    "mitigation": "Implement multi-factor authentication, regular access reviews, and zero-trust architecture",
+    "satisfies": "MITIGATE",
+    "status": "OPEN",
+    "stakeholderID": "security-team-group-id"
+  }
+}
+```
+
+## Update Risk
+
+```graphql
+mutation UpdateRisk($id: ID!, $input: UpdateRiskInput!) {
+  updateRisk(id: $id, input: $input) {
+    risk {
+      id
+      name
+      impact
+      likelihood
+      score
+      status
+      updatedAt
+    }
+  }
+}
+```
+
+## Risk Assessment Calculation
+
+```graphql
+# Update risk with new assessment
+mutation UpdateRiskAssessment($id: ID!) {
+  updateRisk(id: $id, input: {
+    impact: HIGH
+    likelihood: HIGH
+    # Score automatically calculated: HIGH(4) * HIGH(4) = 16
+  }) {
+    risk {
+      id
+      name
+      impact
+      likelihood
+      score
+      status
+    }
+  }
+}
+```

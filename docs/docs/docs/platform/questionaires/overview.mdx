@@ -1,7 +1,85 @@
 ---
 title: Overview
-description: Overview of policies and procedures within Openlane
+description: Compliance questionnaires and assessment management
 sidebar_position: 1
 ---
 
-# Overview
+# Questionnaires
+
+Questionnaires in Openlane provide structured assessment capabilities for compliance evaluation, vendor assessments, security reviews, and organizational maturity assessments. They enable systematic data collection and evaluation across various compliance domains.
+
+## What Are Questionnaires?
+
+Questionnaires are structured assessment tools that facilitate systematic evaluation of compliance posture, security controls, vendor capabilities, and organizational maturity. They provide standardized frameworks for collecting, analyzing, and reporting assessment data across different compliance contexts.
+
+## Key Features
+
+- **Template Management**: Reusable questionnaire templates for common assessments
+- **Dynamic Questions**: Conditional question logic based on previous responses
+- **Multiple Response Types**: Support for various question types (multiple choice, text, ratings, etc.)
+- **Assessment Scoring**: Automated scoring and risk evaluation
+- **Response Tracking**: Complete audit trail of responses and changes
+- **Reporting**: Comprehensive assessment reports and analytics
+
+## Questionnaire Types
+
+### Security Assessments
+
+- **Control Effectiveness**: Evaluate the effectiveness of security controls
+- **Risk Assessments**: Structured risk evaluation questionnaires
+- **Vulnerability Assessments**: Security posture evaluation
+- **Penetration Test Results**: Structured reporting of security testing
+
+### Vendor Assessments
+
+- **Due Diligence**: Vendor security and compliance evaluation
+- **SIG Questionnaires**: Standard Information Gathering questionnaires
+- **Third-Party Risk**: Supplier and partner risk assessments
+- **Service Provider Evaluation**: Cloud and service provider assessments
+
+### Compliance Evaluations
+
+- **Framework Assessments**: SOC 2, ISO 27001, NIST compliance evaluations
+- **Regulatory Compliance**: Industry-specific compliance questionnaires
+- **Audit Preparation**: Pre-audit assessment questionnaires
+- **Gap Analysis**: Compliance gap identification and analysis
+
+### Organizational Maturity
+
+- **Process Maturity**: Organizational process maturity assessments
+- **Security Awareness**: Employee security awareness evaluations
+- **Training Effectiveness**: Training program effectiveness assessments
+- **Culture Assessment**: Organizational security culture evaluation
+
+## Properties
+
+### Questionnaire Template
+
+- **ID**: Unique identifier for the questionnaire template
+- **Name**: Descriptive name for the questionnaire
+- **Description**: Purpose and scope of the questionnaire
+- **Category**: Assessment category (security, compliance, vendor, etc.)
+- **Version**: Template version for change management
+
+### Question Structure
+
+- **Question ID**: Unique identifier for each question
+- **Question Text**: The actual question content
+- **Question Type**: Type of response expected (multiple choice, text, rating, etc.)
+- **Required**: Whether the question is mandatory
+- **Conditional Logic**: Rules for when the question should be displayed
+
+### Response Management
+
+- **Response ID**: Unique identifier for each response
+- **Question ID**: Reference to the associated question
+- **Response Value**: The actual response data
+- **Respondent**: User who provided the response
+- **Response Date**: When the response was submitted
+
+### Scoring and Evaluation
+
+- **Scoring Rules**: Automated scoring logic for responses
+- **Risk Rating**: Calculated risk level based on responses
+- **Compliance Score**: Overall compliance score
+- **Recommendations**: Automated recommendations based on responses

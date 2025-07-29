@@ -1,19 +1,157 @@
 ---
 title: Overview
-description: Compliance standards
+description: Compliance standards and frameworks
 sidebar_position: 1
 ---
 
-# Overview
+# Standards
+
+Standards represent compliance frameworks and regulations that organizations must adhere to. Openlane supports a wide range of industry standards including SOC 2, ISO 27001, NIST frameworks, and industry-specific regulations.
+
+## What is a Standard?
+
+A Standard in Openlane represents a formal compliance framework, regulation, or set of guidelines that defines security, privacy, or operational requirements. Standards provide the foundation for compliance programs by defining the controls and requirements that organizations must implement.
 
 Compliance standards are a set of guidelines, rules, and best practices established by industry associations, government bodies or regulatory bodies to ensure that organizations operate in an ethical, legal, and responsible manner.
 
-Compliance standards typically address information security, privacy, risk management, and governance aspects of an organization. Here’s a breakdown on the type of compliance standards
+## Compliance Significance
+
+Standards are critical in compliance management because they:
+
+- **Define Requirements**: Establish specific controls and procedures organizations must implement
+- **Provide Structure**: Offer a systematic approach to security and compliance
+- **Enable Certification**: Allow organizations to achieve formal certification or attestation
+- **Facilitate Audits**: Provide clear criteria for audit assessments
+- **Support Risk Management**: Help identify and mitigate compliance risks
+
+## Types of Compliance Standards
+
+Compliance standards typically address information security, privacy, risk management, and governance aspects of an organization. Here's a breakdown on the type of compliance standards:
 
 1. **Regulatory compliance**: These are mandated by law, and non-compliance with these frameworks is a non-starter. For example, GDPR, HIPAA, and PCI DSS.
-1. **Industry-specific compliance**: These are developed by industry associations as a set of best practices for a particular industry. For example, NIST cybersecurity for the technology sector, FISMA for federal agencies.
-1. **Operational compliance**: These standards boost your goodwill as they focus on ensuring reliability, integrity, and efficiency of an organization’s operations and processes. For example, SOC 2, ISO 27001, COBIT for IT and governance.
+2. **Industry-specific compliance**: These are developed by industry associations as a set of best practices for a particular industry. For example, NIST cybersecurity for the technology sector, FISMA for federal agencies.
+3. **Operational compliance**: These standards boost your goodwill as they focus on ensuring reliability, integrity, and efficiency of an organization's operations and processes. For example, SOC 2, ISO 27001, COBIT for IT and governance.
 
+## Standard Properties
+
+### Core Fields
+- **Name**: Full name of the standard (e.g., "Service Organization Control 2")
+- **Short Name**: Common abbreviation (e.g., "SOC 2")
+- **Framework**: Unique identifier with version (e.g., "SOC2-2017")
+- **Governing Body**: Organization that manages the standard (e.g., "AICPA")
+- **Version**: Standard version number
+- **Domains**: Applicable security domains (availability, confidentiality, etc.)
+- **Status**: Current status (active, draft, archived)
+
+### Access Control
+- **Is Public**: Available to all users in the system
+- **Free to Use**: Can be used without licensing restrictions
+- **Organization**: Owner organization for private standards
+
+### Documentation
+- **Description**: Detailed description of the standard's purpose and scope
+- **Details**: Implementation guidance and requirements
+- **References**: External links and documentation
+
+## GraphQL Operations
+
+### Query Standards
+
+```graphql
+# Get all available standards
+query GetStandards {
+  standards {
+    edges {
+      node {
+        id
+        name
+        shortName
+        framework
+        governingBody
+        version
+        domains
+        status
+        isPublic
+        freeToUse
+        description
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+```
+
+```graphql
+# Get a specific standard with its controls
+query GetStandardWithControls($id: ID!) {
+  standard(id: $id) {
+    id
+    name
+    shortName
+    framework
+    governingBody
+    domains
+    description
+    controls {
+      edges {
+        node {
+          id
+          displayID
+          description
+          category
+          subcategory
+          controlType
+          status
+        }
+      }
+    }
+  }
+}
+```
+
+### Create Standard
+
+```graphql
+mutation CreateStandard($input: CreateStandardInput!) {
+  createStandard(input: $input) {
+    standard {
+      id
+      name
+      shortName
+      framework
+      governingBody
+      version
+      domains
+      status
+      isPublic
+      freeToUse
+    }
+  }
+}
+```
+
+**Input Example:**
+```json
+{
+  "input": {
+    "name": "Service Organization Control 2",
+    "shortName": "SOC 2",
+    "framework": "SOC2-2017",
+    "governingBody": "AICPA",
+    "version": "2017",
+    "domains": ["confidentiality", "availability", "security"],
+    "status": "ACTIVE",
+    "isPublic": true,
+    "freeToUse": false,
+    "description": "SOC 2 defines criteria for managing customer data based on five trust service principles"
+  }
+}
+```
+
+## API Access
+
+Standards are managed exclusively through GraphQL operations. There are no REST endpoints for standard CRUD operations.
 
 ## List of Compliance Standards
 

@@ -1,0 +1,121 @@
+---
+title: GraphQL Examples
+sidebar_position: 10
+---
+
+# Example GraphQL Operations
+
+#### Query Questionnaire Templates
+```graphql
+query GetQuestionnaireTemplates($first: Int, $where: QuestionnaireTemplateWhereInput) {
+  questionnaireTemplates(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        name
+        description
+        category
+        version
+        questions {
+          id
+          questionText
+          questionType
+          required
+          options
+        }
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+```
+
+#### Create Questionnaire Template
+```graphql
+mutation CreateQuestionnaireTemplate($input: CreateQuestionnaireTemplateInput!) {
+  createQuestionnaireTemplate(input: $input) {
+    questionnaireTemplate {
+      id
+      name
+      description
+      category
+      version
+      questions {
+        id
+        questionText
+        questionType
+        required
+      }
+      createdAt
+    }
+  }
+}
+```
+
+### Assessment Responses
+
+#### Submit Questionnaire Response
+```graphql
+mutation SubmitQuestionnaireResponse($input: SubmitQuestionnaireResponseInput!) {
+  submitQuestionnaireResponse(input: $input) {
+    questionnaireResponse {
+      id
+      questionnaireTemplateId
+      respondent {
+        id
+        firstName
+        lastName
+      }
+      responses {
+        questionId
+        responseValue
+        responseDate
+      }
+      overallScore
+      riskRating
+      completedAt
+    }
+  }
+}
+```
+
+#### Query Assessment Results
+```graphql
+query GetQuestionnaireResults($templateId: ID!, $first: Int) {
+  questionnaireResponses(
+    where: { questionnaireTemplateId: { eq: $templateId } }
+    first: $first
+  ) {
+    edges {
+      node {
+        id
+        respondent {
+          id
+          firstName
+          lastName
+          email
+        }
+        overallScore
+        riskRating
+        completedAt
+        responses {
+          questionId
+          responseValue
+          question {
+            questionText
+            questionType
+          }
+        }
+      }
+    }
+  }
+}
+```

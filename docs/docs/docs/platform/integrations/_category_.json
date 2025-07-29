@@ -1,9 +1,0 @@
-{
-  "label": "Integrations",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Create and manage integrations with other platforms"
-  },
-  "collapsed": true
-}

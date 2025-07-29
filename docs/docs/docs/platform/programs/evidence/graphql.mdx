@@ -1,0 +1,251 @@
+---
+title: GraphQL Examples
+sidebar_position: 10
+---
+
+# Example GraphQL Operations
+
+### Query Evidence
+
+```graphql
+# Get all evidence with basic information
+query GetEvidence {
+  evidence {
+    edges {
+      node {
+        id
+        name
+        description
+        source
+        status
+        isAutomated
+        creationDate
+        renewalDate
+        url
+        collectionProcedure
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+```
+
+```graphql
+# Get detailed evidence information with relationships
+query GetEvidenceDetails($id: ID!) {
+  evidence(id: $id) {
+    id
+    name
+    description
+    collectionProcedure
+    source
+    url
+    isAutomated
+    creationDate
+    renewalDate
+    status
+    createdAt
+    updatedAt
+
+    # Related controls
+    controls {
+      edges {
+        node {
+          id
+          displayID
+          description
+          category
+          standard {
+            name
+            shortName
+          }
+        }
+      }
+    }
+
+    # Related control objectives
+    controlObjectives {
+      edges {
+        node {
+          id
+          name
+          desiredOutcome
+          status
+        }
+      }
+    }
+
+    # Related programs
+    programs {
+      edges {
+        node {
+          id
+          name
+          displayID
+          programType
+        }
+      }
+    }
+
+    # Associated files
+    files {
+      edges {
+        node {
+          id
+          fileName
+          fileSize
+          categoryType
+          presignedURL
+          mimeType
+        }
+      }
+    }
+
+    # Related tasks
+    tasks {
+      edges {
+        node {
+          id
+          title
+          status
+          category
+          due
+        }
+      }
+    }
+  }
+}
+```
+
+### Search Evidence
+
+```graphql
+# Search evidence by name, description, or source
+query SearchEvidence($query: String!) {
+  evidenceSearch(query: $query) {
+    edges {
+      node {
+        id
+        name
+        description
+        source
+        status
+        isAutomated
+        creationDate
+      }
+    }
+  }
+}
+```
+
+### Filter Evidence
+
+```graphql
+# Filter evidence by status and automation
+query FilterEvidence($status: EvidenceEvidenceStatus!, $automated: Boolean!) {
+  evidence(where: {
+    status: { eq: $status }
+    isAutomated: { eq: $automated }
+  }) {
+    edges {
+      node {
+        id
+        name
+        description
+        source
+        status
+        isAutomated
+        renewalDate
+      }
+    }
+  }
+}
+```
+
+### Create Evidence
+
+```graphql
+mutation CreateEvidence($input: CreateEvidenceInput!, $files: [Upload!]) {
+  createEvidence(input: $input, evidenceFiles: $files) {
+    evidence {
+      id
+      name
+      description
+      source
+      status
+      isAutomated
+      creationDate
+      files {
+        edges {
+          node {
+            id
+            fileName
+            presignedURL
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Input Example:**
+```json
+{
+  "input": {
+    "name": "Access Control Matrix",
+    "description": "Comprehensive matrix showing user access rights and permissions across all systems",
+    "collectionProcedure": "Extract user access data from identity management system and compile into matrix format",
+    "source": "Identity Management System",
+    "isAutomated": true,
+    "creationDate": "2024-01-15T00:00:00Z",
+    "renewalDate": "2024-04-15T00:00:00Z",
+    "status": "READY",
+    "controlIDs": ["control-uuid-1", "control-uuid-2"],
+    "programIDs": ["program-uuid-1"]
+  }
+}
+```
+
+### Update Evidence
+
+```graphql
+mutation UpdateEvidence($id: ID!, $input: UpdateEvidenceInput!) {
+  updateEvidence(id: $id, input: $input) {
+    evidence {
+      id
+      name
+      status
+      renewalDate
+      updatedAt
+    }
+  }
+}
+```
+
+### Create Evidence with File Upload
+
+```graphql
+mutation CreateEvidenceWithFiles($input: CreateEvidenceInput!, $files: [Upload!]!) {
+  createEvidence(input: $input, evidenceFiles: $files) {
+    evidence {
+      id
+      name
+      description
+      status
+      files {
+        edges {
+          node {
+            id
+            fileName
+            fileSize
+            mimeType
+            presignedURL
+          }
+        }
+      }
+    }
+  }
+}
+```
