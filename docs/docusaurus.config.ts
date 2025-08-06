@@ -6,6 +6,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
+const clsx = require('clsx');
+
 const config: Config = {
   title: "Openlane",
   tagline: "Compliance Made Simple",
@@ -17,7 +19,7 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['docusaurus-theme-openapi-docs','@docusaurus/theme-mermaid'],
+  themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid'],
   presets: [
     [
       "classic",
@@ -135,6 +137,31 @@ const config: Config = {
               "https://api.theopenlane.io/api-docs",
             sidebarOptions: {
               groupPathsBy: "tag",
+              categoryLinkSource: 'tag',
+              sidebarGenerators: {
+                createDocItem(
+                  item,
+                  { sidebarOptions: { } }
+                ) {
+                  const label = item.id
+                  const id = item.type === 'schema' ? `schemas/${item.id}` : `api/rest-api/${item.id}`;
+                  const className = item.type === 'api'
+                    ? clsx({
+                      'menu__list-item--deprecated': item.api.deprecated,
+                      'api-method': !!item.api.method,
+                    }, item.api.method)
+                    : clsx({
+                      'menu__list-item--deprecated': item.schema.deprecated,
+                    }, 'schema');
+
+                  return {
+                    type: 'doc',
+                    id: item.id,
+                    label: label,
+                    className,
+                  };
+                },
+              },
             },
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
