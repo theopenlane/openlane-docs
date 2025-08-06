@@ -1,0 +1,70 @@
+---
+id: sso-token-callback
+title: "Handle SSO token callback"
+description: "Handle SSO token callback"
+sidebar_label: "Handle SSO token callback"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVktz2zYQ/isYXnqRRctO2oxPdWS7dtPGrqXUmXQ8GYhcSoghgAVAK6pG/727ACiRoqykPZHAvr59Y5XkYDMjSie0Ss6Sa65yCWw0umVOP4FiGZdywrOnpJfoEgwnvpscOZFlTBzDLUPJDZ+DA2OTs79WO5p55WbaiH+8BpbpHFACvvJ5KYHIkwzPgjj/rsAs8aBQGR4jq81mMOfJ2Spxy5LurTNCTZP1urdryjrugD1zWbVt+PvByekLhjz5oKXHXmLAllpZsEQ/OT6mT6aVA+Xol5elFJn3Mf1iCc2qBuAlbJVlYP1vwNe8c6YCDLOZchXj9FlQqI8H7wafhtejq+Gb04vL8R+vT/+8+unNq0/XF4jWp+lFvuuPP47vRr8j3xxN8Kl3J9pbY+gazpaGEuxEAArGaEM/7dCOZ8A8iUV9TBTM4aUBjKZ1bMEtq1Q0UVSSELaj2Au6P/u8HjBA9P+jfeNoJ397YruHp5GiNrSHGSAWwxCb0q6Da4sqcmzBTbSWwBVp36Zrj+lKPYMRhYAmeSO83ujTky+Qef3C+cqum/E8NhncQymXIcNtJ0Z18nvJq1C9bfpbnrP74FXgGXR5Pqi6mREoMr3ep+gGe8IoLtkIDHrFLn1BeTwFr6TrSngPLWSVEW6JEwS7zfEpzZLEWp08UmrRLFX6FJyfN26GhxSpqY9r2phW1pvdN4luS1CSK2DndzcRHfJXRiJt5lxpz9KUl6KPCdaRtS90+jxIaADUAEfUOKFXkPkdLLsOkX4kMIoWzoc4F3q+cp7wfl5h6UyAcZpVIvd48L4eTzPguYcW59PHI2Q4eucZYiFEyxi3Cbci25MqS0mYow2Vsztu7UKbnCEz5Duw6sHnS84r21ihoHgbwA34oRD+rrSZc0xk8uvDONkttLeeZa/vYbPs895TWkiCyQ4UTXpPuv7eUgewk/4x6+4bVki9YAU2p89hyD8P7dBLiBiy2RQcxiHVuvzwrVIJ6NJNlyS0NwpcHbPvFY3sPhRI9sAM1gMK3+NnC3uBtUiBeaBvfV3Pme+1FsLeHDAhvGu/9HHfD7VSNHG68SbyBYv0nWy/GOuW0m+C7C9AyqMnpRcqpXuRH+HGLcS0MnXl1rBbYMkfoQpdr2geHMB1J6Rfg2Wpjfu5bW3bbvWY6MyGHYHOiK0Ff7DeaxpEAh1nWMkMOcVUYfM5zXDhPoucGsAKeiD4HgVul0SsLC4/GqEFz8AH0p/QB9wVbCGwyqmVNrOslNwh17zPxjMRDOOnaQ5braK2nyzZRKO4qAe0N/s1HjIpMIGWBGqDh6xhcPC9A/ggotDGyJ2XHPuXurATu8Vi0eee3MddnEZZm/52M7x8P7o8Ipn1dq9tDNIP+XTaP8beHpWQ4ZoMVUYFRZM+BP95QByko9TWzblq4Dr0uG2lsPGkOygUy85h9FIMifAb3ju8issprK7YjvjdCOMmmSFA4litaB5jG6zXdB1epX5tCcsnkh4DBZcWDoDc+7jei472y+ZNHZ+guHl7/8Va+319wEz9ot7aeaSDEWSINjxyxi1H/gahc5wSpWtIdd7U6+ZT4JfLMXb6vwTfaTk=
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Handle SSO token callback"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/sso/token/callback"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Handle SSO token callback
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"authorization code","example":"abc","in":"query","name":"code","schema":{"type":"string"}},{"description":"state value","example":"state123","in":"query","name":"state","schema":{"type":"string"}}]}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"organization_id":"01K1ZCHSFC83DETQ53VF784ZHD","token_id":"01K1ZCHSFC83DETQ53VHX6TPSM","message":"success"}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"organization_id":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_id":{"type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"SSOTokenAuthorizeReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

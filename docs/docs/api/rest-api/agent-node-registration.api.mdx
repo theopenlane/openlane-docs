@@ -1,0 +1,70 @@
+---
+id: agent-node-registration
+title: "Register a job runner node"
+description: "Register a job runner node"
+sidebar_label: "Register a job runner node"
+hide_title: true
+hide_table_of_contents: true
+api: eJytF9lu4zbwVwi99MVHnB5o87RJmgLuFpsgziJdBEFASZTFRCZZHta6hv+9MyRlSZbrXWzrB1ua+57xNsmZyTRXlkuRXCT3bMmNZZpQ8ipTop0Q8CJkzpJRIhXTFAnnOZBeLpmwHwATeAIGqDT7yzFjr2S+SS62SSaFBUJ8pEpVPPN001eD+rYJ+0xXqmIGn43LMmb845pWjuEDVy80z7UHJ7Nfziezn36enE1moMjKN4Y2647+Fw8smUZ7BV2BjMSlTlg3Zm5cg13jc2SlS5D3lBhWFeNSgsc5QLsUy0zB95tLmRbMgn3Pu91ulJisZCuKhimN4bA8mN41c3sQ04eSkfkdiXgiC2IBgjElKeNiSXQMujfCbhQaDQ4BKtk1XhwK9SIAg+I20ukj6RpICl4fMw8xpJA6iOqL4ZatvoFtqD0AqNZ0499D+g7lfkJRFGuLdBNLAvlAbitYpq8ss0jBbYWA32V6703qFuh9qE5gRFZIiJLChByen539DwV7z1S16SGtdgx0reAF/AqGdYPVzf/JItuL7oOZ1lIfT5BHkaiZ8FB5sUFJTQ1xIppZuOpY0ryAlwxTekIB4r9Feid+fdGPJQNZmkiMkB3IbaVGilZ4KmXFqEDpTqyZ5gWHsIKCQ/ygcLop2v73MsNU+Wz2PVtElwHxQ6i3Pv6K5mRfo0gzG9J8FNTZUmr+N1bMKPnxmKA5VLEWtCILpiEO5MZXibenoK6yQw7vpWGZ09xCmT09t3MyVCsMQYwRqMb5r2BsQhgUtSW8TRsSFIEKke9Qw61ioqKCkcu7ebQL6J2uAFdaq8zFdEoVn0C+ZSSdcDldz5Ldc2vaAtsjlD4Qv2eboSsoHxAE4wS9HHt45AvpDeArB5WUMthy0Lc89/YAHKcdspeM5t60uEH+HAPB+L0naMZY0AwRS6nh2ZEkGQw/DGgqcnJHjamlzgkQs/zArCR2vC9PL2yvBYPidTCqme/x8PSb1CtqsfgeH5LDErvyJEd990P0qPfNeG0tCSoHpkiUez709/YS4OR8ckaa4gxz28+GopK1XxQ+hyH/NDTCKEFkyGaX8TrOnB7w45dKJVg33feHv0cKGPPl17JGch8KQHvDNNSDP46gOfdm11CLGJhH/G3AzV77Wm0h7N3xEsK789cWHFrXEtoqO9Kt2EvzX0nEH2T7X2PdE/pFIyc1q6rxm5C1mCKc52PYjgVfuv2115jdMxb9wX15356CN2FtDk66OGD3rbZ/359oAfDc3nvt/uCikM3KpiFIsDg5emWcUlLbd32PWj3NKBrMnwOGwQBvGL8zPrI47DgEl0C3EKDkSwENbiWBHb3mOTaZ4ei5nwOMmg0inYF9iQO6oBnzyfJv4APegzWHTsJ23c9LVVELVKsJeSh5UAw/XXXQzg5HS7ohqQR23ox/r/ZzfMkqDkVikKFReEobBAfuHwYHEoY2Ru5SUZgR2OmD2NV1PaEePZF6OY28ZvrH/Prmw+JmjDy7dnPuFeID+vQ9XPZnZKFYBms7VDIWLW6TEPz1DClQBm6fFRUdu07+denlsHPjneaKxW0hflMICg9nBbq8jXuvtxrxjwSCtlsc89Bdux2CoQd03KdrqjlN0fmnZxAV9wwuStw+F8l1sGv8gIpHzVE5vEN3o4bjEjpb2ZO03aV9d7vAhZHGP2crP2QTTWsclPANVwAOiRB5nHwI2yaQpaULx2uQiZ9/ABTJ9kM=
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Register a job runner node"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/runners"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Register a job runner node
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"ip_address":"192.168.0.1","token":"registration_tokenhere","name":"ubuntu-eu-west-2","tags":["self-hosted","eu-west-2","gcp","kubernetes"]}}},"schema":{"properties":{"ip_address":{"description":"The IP address of the node being registered","type":"string"},"name":{"description":"the name of your job runner node","type":"string"},"tags":{"description":"The tags for your runner node","items":{"description":"The tags for your runner node","type":"string"},"type":"array"},"token":{"description":"Your agent registration token","type":"string"}},"type":"object","title":"JobRunnerRegistrationRequest"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"Reply":{"success":true},"message":"Job runner node registered"}}},"schema":{"properties":{"Reply":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"},"message":{"type":"string"}},"type":"object","title":"JobRunnerRegistrationReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

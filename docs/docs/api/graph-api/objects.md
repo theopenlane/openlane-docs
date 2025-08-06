@@ -436,78 +436,6 @@ where<br />
 </tr>
 <tr>
 <td>
-users<br />
-<a href="objects#userconnection"><code>UserConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#userorder"><code>[UserOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Users returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#userwhereinput"><code>UserWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Users returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
 programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
@@ -597,6 +525,36 @@ actionPlans<br />
 </td>
 <td>
 <p>Created actionPlans</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ActionPlanBulkUpdatePayload
+
+Return response for updateBulkActionPlan mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+actionPlans<br />
+<a href="objects#actionplan"><code>[ActionPlan!]</code></a>
+</td>
+<td>
+<p>Updated actionPlans</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated actionPlans</p>
 </td>
 </tr>
 </tbody>
@@ -1253,6 +1211,15 @@ revokedAt<br />
 </td>
 <td>
 <p>when the token was revoked</p>
+</td>
+</tr>
+<tr>
+<td>
+ssoAuthorizations<br />
+<a href="scalars#ssoauthorizationmap"><code>SSOAuthorizationMap</code></a>
+</td>
+<td>
+<p>SSO verification time for the owning organization</p>
 </td>
 </tr>
 <tr>
@@ -2844,6 +2811,36 @@ contacts<br />
 </td>
 <td>
 <p>Created contacts</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ContactBulkUpdatePayload
+
+Return response for updateBulkContact mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+contacts<br />
+<a href="objects#contact"><code>[Contact!]</code></a>
+</td>
+<td>
+<p>Updated contacts</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated contacts</p>
 </td>
 </tr>
 </tbody>
@@ -4612,7 +4609,7 @@ where<br />
 <tr>
 <td>
 scheduledJobs<br />
-<a href="objects#controlscheduledjobconnection"><code>ControlScheduledJobConnection!</code></a>
+<a href="objects#scheduledjobconnection"><code>ScheduledJobConnection!</code></a>
 </td>
 <td>
 
@@ -4661,19 +4658,19 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#controlscheduledjoborder"><code>[ControlScheduledJobOrder!]</code></a>
+<a href="inputObjects#scheduledjoborder"><code>[ScheduledJobOrder!]</code></a>
 </td>
 <td>
-<p>Ordering options for ControlScheduledJobs returned from the connection.</p>
+<p>Ordering options for ScheduledJobs returned from the connection.</p>
 </td>
 </tr>
 <tr>
 <td>
 where<br />
-<a href="inputObjects#controlscheduledjobwhereinput"><code>ControlScheduledJobWhereInput</code></a>
+<a href="inputObjects#scheduledjobwhereinput"><code>ScheduledJobWhereInput</code></a>
 </td>
 <td>
-<p>Filtering options for ControlScheduledJobs returned from the connection.</p>
+<p>Filtering options for ScheduledJobs returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -4700,6 +4697,126 @@ controls<br />
 </td>
 <td>
 <p>Created controls</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlBulkUpdatePayload
+
+Return response for updateBulkControl mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+controls<br />
+<a href="objects#control"><code>[Control!]</code></a>
+</td>
+<td>
+<p>Updated controls</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated controls</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlCategory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+referenceFramework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlCategoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#controlcategoryedge"><code>[ControlCategoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlCategoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#controlcategory"><code>ControlCategory!</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
 </td>
 </tr>
 </tbody>
@@ -4811,6 +4928,87 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlGroup
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlGroupConnection
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#controlgroupedge"><code>[ControlGroupEdge!]!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlGroupEdge
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+node<br />
+<a href="objects#controlgroup"><code>ControlGroup!</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -7492,656 +7690,6 @@ controlObjective<br />
 </td>
 <td>
 <p>Updated controlObjective</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJob
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-jobID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>the scheduled_job id to take the script to run from</p>
-</td>
-</tr>
-<tr>
-<td>
-configuration<br />
-<a href="scalars#jobconfiguration"><code>JobConfiguration!</code></a>
-</td>
-<td>
-<p>the configuration to run this job</p>
-</td>
-</tr>
-<tr>
-<td>
-cadence<br />
-<a href="scalars#jobcadence"><code>JobCadence</code></a>
-</td>
-<td>
-<p>the schedule to run this job. If not provided, it would inherit the cadence of the parent job</p>
-</td>
-</tr>
-<tr>
-<td>
-cron<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cron syntax. If not provided, it would inherit the cron of the parent job</p>
-</td>
-</tr>
-<tr>
-<td>
-jobRunnerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>the runner that this job will run on. If not set, it will scheduled on a general runner instead</p>
-</td>
-</tr>
-<tr>
-<td>
-owner<br />
-<a href="objects#organization"><code>Organization</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-job<br />
-<a href="objects#scheduledjob"><code>ScheduledJob!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controls<br />
-<a href="objects#controlconnection"><code>ControlConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Controls returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Controls returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrols<br />
-<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Subcontrols returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Subcontrols returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-jobRunner<br />
-<a href="objects#jobrunner"><code>JobRunner</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobBulkCreatePayload
-
-Return response for createBulkControlScheduledJob mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-controlScheduledJobs<br />
-<a href="objects#controlscheduledjob"><code>[ControlScheduledJob!]</code></a>
-</td>
-<td>
-<p>Created controlScheduledJobs</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#controlscheduledjobedge"><code>[ControlScheduledJobEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobCreatePayload
-
-Return response for createControlScheduledJob mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-controlScheduledJob<br />
-<a href="objects#controlscheduledjob"><code>ControlScheduledJob!</code></a>
-</td>
-<td>
-<p>Created controlScheduledJob</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobDeletePayload
-
-Return response for deleteControlScheduledJob mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>Deleted controlScheduledJob ID</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#controlscheduledjob"><code>ControlScheduledJob</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#controlscheduledjobhistoryoptype"><code>ControlScheduledJobHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-jobID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the scheduled_job id to take the script to run from</p>
-</td>
-</tr>
-<tr>
-<td>
-configuration<br />
-<a href="scalars#jobconfiguration"><code>JobConfiguration!</code></a>
-</td>
-<td>
-<p>the configuration to run this job</p>
-</td>
-</tr>
-<tr>
-<td>
-cadence<br />
-<a href="scalars#jobcadence"><code>JobCadence</code></a>
-</td>
-<td>
-<p>the schedule to run this job. If not provided, it would inherit the cadence of the parent job</p>
-</td>
-</tr>
-<tr>
-<td>
-cron<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cron syntax. If not provided, it would inherit the cron of the parent job</p>
-</td>
-</tr>
-<tr>
-<td>
-jobRunnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the runner that this job will run on. If not set, it will scheduled on a general runner instead</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#controlscheduledjobhistoryedge"><code>[ControlScheduledJobHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#controlscheduledjobhistory"><code>ControlScheduledJobHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobUpdatePayload
-
-Return response for updateControlScheduledJob mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-controlScheduledJob<br />
-<a href="objects#controlscheduledjob"><code>ControlScheduledJob!</code></a>
-</td>
-<td>
-<p>Updated controlScheduledJob</p>
 </td>
 </tr>
 </tbody>
@@ -12207,7 +11755,7 @@ where<br />
 </tr>
 <tr>
 <td>
-orgmemberships<br />
+orgMemberships<br />
 <a href="objects#orgmembershipconnection"><code>OrgMembershipConnection!</code></a>
 </td>
 <td>
@@ -12279,7 +11827,7 @@ where<br />
 </tr>
 <tr>
 <td>
-groupmemberships<br />
+groupMemberships<br />
 <a href="objects#groupmembershipconnection"><code>GroupMembershipConnection!</code></a>
 </td>
 <td>
@@ -13749,6 +13297,466 @@ evidence<br />
 </tbody>
 </table>
 
+## Export
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+exportType<br />
+<a href="enums#exportexporttype"><code>ExportExportType!</code></a>
+</td>
+<td>
+<p>the type of export, e.g., control, policy, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+format<br />
+<a href="enums#exportexportformat"><code>ExportExportFormat!</code></a>
+</td>
+<td>
+<p>the format of export, e.g., csv and others</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#exportexportstatus"><code>ExportExportStatus!</code></a>
+</td>
+<td>
+<p>the status of the export, e.g., pending, ready, failed</p>
+</td>
+</tr>
+<tr>
+<td>
+requestorID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who initiated the export</p>
+</td>
+</tr>
+<tr>
+<td>
+fields<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>the specific fields to include in the export (defaults to only the id if not provided)</p>
+</td>
+</tr>
+<tr>
+<td>
+filters<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the specific filters to run against the exported data. This should be a well formatted graphql query</p>
+</td>
+</tr>
+<tr>
+<td>
+errorMessage<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>if we try to export and it fails, the error message will be stored here</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+events<br />
+<a href="objects#eventconnection"><code>EventConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#eventorder"><code>[EventOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Events returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#eventwhereinput"><code>EventWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Events returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportBulkCreatePayload
+
+Return response for createBulkExport mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+exports<br />
+<a href="objects#export"><code>[Export!]</code></a>
+</td>
+<td>
+<p>Created exports</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportBulkDeletePayload
+
+Return response for deleteBulkExport mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted export IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#exportedge"><code>[ExportEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportCreatePayload
+
+Return response for createExport mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+export<br />
+<a href="objects#export"><code>Export!</code></a>
+</td>
+<td>
+<p>Created export</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportDeletePayload
+
+Return response for deleteExport mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted export ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#export"><code>Export</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportUpdatePayload
+
+Return response for updateExport mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+export<br />
+<a href="objects#export"><code>Export!</code></a>
+</td>
+<td>
+<p>Updated export</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## File
 
 
@@ -14164,6 +14172,24 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterSetting<br />
+<a href="objects#trustcentersetting"><code>[TrustCenterSetting!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessor<br />
+<a href="objects#subprocessor"><code>[Subprocessor!]</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -15989,6 +16015,222 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+entityEditors<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+entityBlockedGroups<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+entityViewers<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -18858,6 +19100,36 @@ hushes<br />
 </tbody>
 </table>
 
+## HushBulkUpdatePayload
+
+Return response for updateBulkHush mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+hushes<br />
+<a href="objects#hush"><code>[Hush!]</code></a>
+</td>
+<td>
+<p>Updated hushs</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated hushs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## HushConnection
 
 A connection to a list of items.
@@ -19451,27 +19723,6 @@ where<br />
 </tbody>
 </table>
 
-## IntegrationBulkCreatePayload
-
-Return response for createBulkIntegration mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-integrations<br />
-<a href="objects#integration"><code>[Integration!]</code></a>
-</td>
-<td>
-<p>Created integrations</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## IntegrationConnection
 
 A connection to a list of items.
@@ -19506,27 +19757,6 @@ totalCount<br />
 </td>
 <td>
 <p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## IntegrationCreatePayload
-
-Return response for createIntegration mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-integration<br />
-<a href="objects#integration"><code>Integration!</code></a>
-</td>
-<td>
-<p>Created integration</p>
 </td>
 </tr>
 </tbody>
@@ -19780,27 +20010,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## IntegrationUpdatePayload
-
-Return response for updateIntegration mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-integration<br />
-<a href="objects#integration"><code>Integration!</code></a>
-</td>
-<td>
-<p>Updated integration</p>
 </td>
 </tr>
 </tbody>
@@ -20815,6 +21024,36 @@ internalPolicies<br />
 </tbody>
 </table>
 
+## InternalPolicyBulkUpdatePayload
+
+Return response for updateBulkInternalPolicy mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicy"><code>[InternalPolicy!]</code></a>
+</td>
+<td>
+<p>Updated internalPolicys</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated internalPolicys</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## InternalPolicyConnection
 
 A connection to a list of items.
@@ -21486,6 +21725,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+groups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -21765,6 +22076,15 @@ fileID<br />
 </tr>
 <tr>
 <td>
+log<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the log output from the job</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -21775,7 +22095,7 @@ owner<br />
 <tr>
 <td>
 scheduledJob<br />
-<a href="objects#controlscheduledjob"><code>ControlScheduledJob!</code></a>
+<a href="objects#scheduledjob"><code>ScheduledJob!</code></a>
 </td>
 <td>
 
@@ -21832,6 +22152,48 @@ totalCount<br />
 </tbody>
 </table>
 
+## JobResultCreatePayload
+
+Return response for createJobResult mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobResult<br />
+<a href="objects#jobresult"><code>JobResult!</code></a>
+</td>
+<td>
+<p>Created jobResult</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobResultDeletePayload
+
+Return response for deleteJobResult mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted jobResult ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## JobResultEdge
 
 An edge in a connection.
@@ -21857,6 +22219,27 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobResultUpdatePayload
+
+Return response for updateJobResult mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobResult<br />
+<a href="objects#jobresult"><code>JobResult!</code></a>
+</td>
+<td>
+<p>Updated jobResult</p>
 </td>
 </tr>
 </tbody>
@@ -21977,10 +22360,37 @@ status<br />
 <tr>
 <td>
 ipAddress<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the IP address of this runner</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeen<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the last time this runner was seen</p>
+</td>
+</tr>
+<tr>
+<td>
+version<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the version of the runner</p>
+</td>
+</tr>
+<tr>
+<td>
+os<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the operating system of the runner</p>
 </td>
 </tr>
 <tr>
@@ -22101,6 +22511,27 @@ totalCount<br />
 </td>
 <td>
 <p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobRunnerCreatePayload
+
+Return response for createJobRunner mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobRunner<br />
+<a href="objects#jobrunner"><code>JobRunner!</code></a>
+</td>
+<td>
+<p>Created jobRunner</p>
 </td>
 </tr>
 </tbody>
@@ -22793,6 +23224,638 @@ jobRunner<br />
 </td>
 <td>
 <p>Updated jobRunner</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplate
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the title of the job</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the short description of the job and what it does</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="enums#jobtemplatejobplatformtype"><code>JobTemplateJobPlatformType!</code></a>
+</td>
+<td>
+<p>the platform to use to execute this job, e.g. golang, typescript, python, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+downloadURL<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the url from where to download the script from</p>
+</td>
+</tr>
+<tr>
+<td>
+configuration<br />
+<a href="scalars#jobconfiguration"><code>JobConfiguration</code></a>
+</td>
+<td>
+<p>the json configuration to run this job, which could be used to template a job, e.g. &#123; &quot;account_name&quot;: &quot;my-account&quot; &#125;</p>
+</td>
+</tr>
+<tr>
+<td>
+cron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron schedule to run the job in cron 6-field syntax, e.g. 0 0 0 * * *</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobs<br />
+<a href="objects#scheduledjobconnection"><code>ScheduledJobConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scheduledjoborder"><code>[ScheduledJobOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scheduledjobwhereinput"><code>ScheduledJobWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateBulkCreatePayload
+
+Return response for createBulkJobTemplate mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobTemplates<br />
+<a href="objects#jobtemplate"><code>[JobTemplate!]</code></a>
+</td>
+<td>
+<p>Created jobTemplates</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#jobtemplateedge"><code>[JobTemplateEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateCreatePayload
+
+Return response for createJobTemplate mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobTemplate<br />
+<a href="objects#jobtemplate"><code>JobTemplate!</code></a>
+</td>
+<td>
+<p>Created jobTemplate</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateDeletePayload
+
+Return response for deleteJobTemplate mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted jobTemplate ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#jobtemplate"><code>JobTemplate</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#jobtemplatehistoryoptype"><code>JobTemplateHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the title of the job</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the short description of the job and what it does</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="enums#jobtemplatehistoryjobplatformtype"><code>JobTemplateHistoryJobPlatformType!</code></a>
+</td>
+<td>
+<p>the platform to use to execute this job, e.g. golang, typescript, python, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+downloadURL<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the url from where to download the script from</p>
+</td>
+</tr>
+<tr>
+<td>
+configuration<br />
+<a href="scalars#jobconfiguration"><code>JobConfiguration</code></a>
+</td>
+<td>
+<p>the json configuration to run this job, which could be used to template a job, e.g. &#123; &quot;account_name&quot;: &quot;my-account&quot; &#125;</p>
+</td>
+</tr>
+<tr>
+<td>
+cron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron schedule to run the job in cron 6-field syntax, e.g. 0 0 0 * * *</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#jobtemplatehistoryedge"><code>[JobTemplateHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#jobtemplatehistory"><code>JobTemplateHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateUpdatePayload
+
+Return response for updateJobTemplate mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+jobTemplate<br />
+<a href="objects#jobtemplate"><code>JobTemplate!</code></a>
+</td>
+<td>
+<p>Updated jobTemplate</p>
 </td>
 </tr>
 </tbody>
@@ -24210,6 +25273,36 @@ mappedControl<br />
 </td>
 <td>
 <p>Updated mappedControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ModuleBillingURL
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+module<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -29524,7 +30617,79 @@ where<br />
 </tr>
 <tr>
 <td>
-jobs<br />
+jobTemplates<br />
+<a href="objects#jobtemplateconnection"><code>JobTemplateConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#jobtemplateorder"><code>[JobTemplateOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for JobTemplates returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#jobtemplatewhereinput"><code>JobTemplateWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for JobTemplates returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scheduledJobs<br />
 <a href="objects#scheduledjobconnection"><code>ScheduledJobConnection!</code></a>
 </td>
 <td>
@@ -29587,78 +30752,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for ScheduledJobs returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-scheduledJobs<br />
-<a href="objects#controlscheduledjobconnection"><code>ControlScheduledJobConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#controlscheduledjoborder"><code>[ControlScheduledJobOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for ControlScheduledJobs returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#controlscheduledjobwhereinput"><code>ControlScheduledJobWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ControlScheduledJobs returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -30019,6 +31112,150 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessors<br />
+<a href="objects#subprocessorconnection"><code>SubprocessorConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subprocessororder"><code>[SubprocessorOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subprocessors returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subprocessorwhereinput"><code>SubprocessorWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subprocessors returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+exports<br />
+<a href="objects#exportconnection"><code>ExportConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#exportorder"><code>[ExportOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Exports returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#exportwhereinput"><code>ExportWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Exports returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -30639,6 +31876,24 @@ identityProvider<br />
 </tr>
 <tr>
 <td>
+identityProviderClientID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>client ID for SSO integration</p>
+</td>
+</tr>
+<tr>
+<td>
+identityProviderClientSecret<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>client secret for SSO integration</p>
+</td>
+</tr>
+<tr>
+<td>
 identityProviderMetadataEndpoint<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -31089,6 +32344,24 @@ identityProvider<br />
 </td>
 <td>
 <p>SSO provider type for the organization</p>
+</td>
+</tr>
+<tr>
+<td>
+identityProviderClientID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>client ID for SSO integration</p>
+</td>
+</tr>
+<tr>
+<td>
+identityProviderClientSecret<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>client secret for SSO integration</p>
 </td>
 </tr>
 <tr>
@@ -32066,6 +33339,15 @@ cancellation<br />
 
 </td>
 </tr>
+<tr>
+<td>
+moduleBillingURLs<br />
+<a href="objects#modulebillingurl"><code>[ModuleBillingURL!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -32589,6 +33871,15 @@ scopes<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+ssoAuthorizations<br />
+<a href="scalars#ssoauthorizationmap"><code>SSOAuthorizationMap</code></a>
+</td>
+<td>
+<p>SSO authorization timestamps by organization id</p>
 </td>
 </tr>
 <tr>
@@ -33877,6 +35168,36 @@ procedures<br />
 </td>
 <td>
 <p>Created procedures</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ProcedureBulkUpdatePayload
+
+Return response for updateBulkProcedure mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+procedures<br />
+<a href="objects#procedure"><code>[Procedure!]</code></a>
+</td>
+<td>
+<p>Updated procedures</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated procedures</p>
 </td>
 </tr>
 </tbody>
@@ -37866,6 +39187,36 @@ risks<br />
 </tbody>
 </table>
 
+## RiskBulkUpdatePayload
+
+Return response for updateBulkRisk mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+risks<br />
+<a href="objects#risk"><code>[Risk!]</code></a>
+</td>
+<td>
+<p>Updated risks</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated risks</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## RiskConnection
 
 A connection to a list of items.
@@ -38795,6 +40146,36 @@ scans<br />
 </tbody>
 </table>
 
+## ScanBulkUpdatePayload
+
+Return response for updateBulkScan mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+scans<br />
+<a href="objects#scan"><code>[Scan!]</code></a>
+</td>
+<td>
+<p>Updated scans</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated scans</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ScanConnection
 
 A connection to a list of items.
@@ -39207,83 +40588,38 @@ displayID<br />
 </tr>
 <tr>
 <td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
 <td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
+jobID<br />
+<a href="scalars#id"><code>ID!</code></a>
 </td>
 <td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the title of the job</p>
+<p>the scheduled_job id to take the script to run from</p>
 </td>
 </tr>
 <tr>
 <td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
+active<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>the description of the job</p>
-</td>
-</tr>
-<tr>
-<td>
-jobType<br />
-<a href="enums#scheduledjobjobtype"><code>ScheduledJobJobType!</code></a>
-</td>
-<td>
-<p>the type of this job</p>
-</td>
-</tr>
-<tr>
-<td>
-script<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the script to run</p>
+<p>whether the scheduled job is active</p>
 </td>
 </tr>
 <tr>
 <td>
 configuration<br />
-<a href="scalars#jobconfiguration"><code>JobConfiguration!</code></a>
+<a href="scalars#jobconfiguration"><code>JobConfiguration</code></a>
 </td>
 <td>
-<p>the configuration to run this job</p>
-</td>
-</tr>
-<tr>
-<td>
-cadence<br />
-<a href="scalars#jobcadence"><code>JobCadence</code></a>
-</td>
-<td>
-<p>the schedule to run this job</p>
+<p>the json configuration to run this job, which could be used to template a job, e.g. &#123; &quot;account_name&quot;: &quot;my-account&quot; &#125;</p>
 </td>
 </tr>
 <tr>
@@ -39292,13 +40628,184 @@ cron<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>cron syntax</p>
+<p>cron 6-field syntax, defaults to the job template&#39;s cron if not provided</p>
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the runner that this job will run on. If not set, it will scheduled on a general runner instead</p>
 </td>
 </tr>
 <tr>
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobTemplate<br />
+<a href="objects#jobtemplate"><code>JobTemplate!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunner<br />
+<a href="objects#jobrunner"><code>JobRunner</code></a>
 </td>
 <td>
 
@@ -39535,83 +41042,38 @@ displayID<br />
 </tr>
 <tr>
 <td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
 ownerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
 <td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
+jobID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>the title of the job</p>
+<p>the scheduled_job id to take the script to run from</p>
 </td>
 </tr>
 <tr>
 <td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
+active<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>the description of the job</p>
-</td>
-</tr>
-<tr>
-<td>
-jobType<br />
-<a href="enums#scheduledjobhistoryjobtype"><code>ScheduledJobHistoryJobType!</code></a>
-</td>
-<td>
-<p>the type of this job</p>
-</td>
-</tr>
-<tr>
-<td>
-script<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the script to run</p>
+<p>whether the scheduled job is active</p>
 </td>
 </tr>
 <tr>
 <td>
 configuration<br />
-<a href="scalars#jobconfiguration"><code>JobConfiguration!</code></a>
+<a href="scalars#jobconfiguration"><code>JobConfiguration</code></a>
 </td>
 <td>
-<p>the configuration to run this job</p>
-</td>
-</tr>
-<tr>
-<td>
-cadence<br />
-<a href="scalars#jobcadence"><code>JobCadence</code></a>
-</td>
-<td>
-<p>the schedule to run this job</p>
+<p>the json configuration to run this job, which could be used to template a job, e.g. &#123; &quot;account_name&quot;: &quot;my-account&quot; &#125;</p>
 </td>
 </tr>
 <tr>
@@ -39620,7 +41082,16 @@ cron<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>cron syntax</p>
+<p>cron 6-field syntax, defaults to the job template&#39;s cron if not provided</p>
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the runner that this job will run on. If not set, it will scheduled on a general runner instead</p>
 </td>
 </tr>
 </tbody>
@@ -39821,7 +41292,7 @@ owner<br />
 <tr>
 <td>
 scheduledJob<br />
-<a href="objects#controlscheduledjob"><code>ControlScheduledJob!</code></a>
+<a href="objects#scheduledjob"><code>ScheduledJob!</code></a>
 </td>
 <td>
 
@@ -39878,6 +41349,48 @@ totalCount<br />
 </tbody>
 </table>
 
+## ScheduledJobRunCreatePayload
+
+Return response for createScheduledJobRun mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+scheduledJobRun<br />
+<a href="objects#scheduledjobrun"><code>ScheduledJobRun!</code></a>
+</td>
+<td>
+<p>Created scheduledJobRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobRunDeletePayload
+
+Return response for deleteScheduledJobRun mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted scheduledJobRun ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ScheduledJobRunEdge
 
 An edge in a connection.
@@ -39903,6 +41416,27 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ScheduledJobRunUpdatePayload
+
+Return response for updateScheduledJobRun mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+scheduledJobRun<br />
+<a href="objects#scheduledjobrun"><code>ScheduledJobRun!</code></a>
+</td>
+<td>
+<p>Updated scheduledJobRun</p>
 </td>
 </tr>
 </tbody>
@@ -40156,6 +41690,15 @@ jobRunnerTokens<br />
 </tr>
 <tr>
 <td>
+jobTemplates<br />
+<a href="objects#jobtemplateconnection"><code>JobTemplateConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 mappableDomains<br />
 <a href="objects#mappabledomainconnection"><code>MappableDomainConnection</code></a>
 </td>
@@ -40255,15 +41798,6 @@ scans<br />
 </tr>
 <tr>
 <td>
-scheduledJobs<br />
-<a href="objects#scheduledjobconnection"><code>ScheduledJobConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 standards<br />
 <a href="objects#standardconnection"><code>StandardConnection</code></a>
 </td>
@@ -40275,6 +41809,15 @@ standards<br />
 <td>
 subcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessors<br />
+<a href="objects#subprocessorconnection"><code>SubprocessorConnection</code></a>
 </td>
 <td>
 
@@ -40311,6 +41854,15 @@ templates<br />
 <td>
 trustCenters<br />
 <a href="objects#trustcenterconnection"><code>TrustCenterConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterCompliances<br />
+<a href="objects#trustcentercomplianceconnection"><code>TrustCenterComplianceConnection</code></a>
 </td>
 <td>
 
@@ -42065,7 +43617,7 @@ where<br />
 <tr>
 <td>
 scheduledJobs<br />
-<a href="objects#controlscheduledjobconnection"><code>ControlScheduledJobConnection!</code></a>
+<a href="objects#scheduledjobconnection"><code>ScheduledJobConnection!</code></a>
 </td>
 <td>
 
@@ -42114,19 +43666,19 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#controlscheduledjoborder"><code>[ControlScheduledJobOrder!]</code></a>
+<a href="inputObjects#scheduledjoborder"><code>[ScheduledJobOrder!]</code></a>
 </td>
 <td>
-<p>Ordering options for ControlScheduledJobs returned from the connection.</p>
+<p>Ordering options for ScheduledJobs returned from the connection.</p>
 </td>
 </tr>
 <tr>
 <td>
 where<br />
-<a href="inputObjects#controlscheduledjobwhereinput"><code>ControlScheduledJobWhereInput</code></a>
+<a href="inputObjects#scheduledjobwhereinput"><code>ScheduledJobWhereInput</code></a>
 </td>
 <td>
-<p>Filtering options for ControlScheduledJobs returned from the connection.</p>
+<p>Filtering options for ScheduledJobs returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -42658,6 +44210,665 @@ subcontrol<br />
 </td>
 <td>
 <p>Updated subcontrol</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## Subprocessor
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>name of the standard body</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+logoRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the logo</p>
+</td>
+</tr>
+<tr>
+<td>
+logoLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The local logo file id, takes precedence over the logo remote URL</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterSubprocessors<br />
+<a href="objects#trustcentersubprocessorconnection"><code>TrustCenterSubprocessorConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcentersubprocessororder"><code>[TrustCenterSubprocessorOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterSubprocessors returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcentersubprocessorwhereinput"><code>TrustCenterSubprocessorWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterSubprocessors returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorBulkCreatePayload
+
+Return response for createBulkSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+subprocessors<br />
+<a href="objects#subprocessor"><code>[Subprocessor!]</code></a>
+</td>
+<td>
+<p>Created subprocessors</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#subprocessoredge"><code>[SubprocessorEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorCreatePayload
+
+Return response for createSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+subprocessor<br />
+<a href="objects#subprocessor"><code>Subprocessor!</code></a>
+</td>
+<td>
+<p>Created subprocessor</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorDeletePayload
+
+Return response for deleteSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted subprocessor ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#subprocessor"><code>Subprocessor</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#subprocessorhistoryoptype"><code>SubprocessorHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>name of the standard body</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+logoRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the logo</p>
+</td>
+</tr>
+<tr>
+<td>
+logoLocalFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The local logo file id, takes precedence over the logo remote URL</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#subprocessorhistoryedge"><code>[SubprocessorHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#subprocessorhistory"><code>SubprocessorHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorUpdatePayload
+
+Return response for updateSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+subprocessor<br />
+<a href="objects#subprocessor"><code>Subprocessor!</code></a>
+</td>
+<td>
+<p>Updated subprocessor</p>
 </td>
 </tr>
 </tbody>
@@ -43962,6 +46173,36 @@ tasks<br />
 </td>
 <td>
 <p>Created tasks</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TaskBulkUpdatePayload
+
+Return response for updateBulkTask mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tasks<br />
+<a href="objects#task"><code>[Task!]</code></a>
+</td>
+<td>
+<p>Updated tasks</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated tasks</p>
 </td>
 </tr>
 </tbody>
@@ -45370,6 +47611,467 @@ setting<br />
 
 </td>
 </tr>
+<tr>
+<td>
+trustCenterSubprocessors<br />
+<a href="objects#trustcentersubprocessorconnection"><code>TrustCenterSubprocessorConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcentersubprocessororder"><code>[TrustCenterSubprocessorOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterSubprocessors returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcentersubprocessorwhereinput"><code>TrustCenterSubprocessorWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterSubprocessors returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterCompliance
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceBulkCreatePayload
+
+Return response for createBulkTrustCenterCompliance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterCompliances<br />
+<a href="objects#trustcentercompliance"><code>[TrustCenterCompliance!]</code></a>
+</td>
+<td>
+<p>Created trustCenterCompliances</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcentercomplianceedge"><code>[TrustCenterComplianceEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceCreatePayload
+
+Return response for createTrustCenterCompliance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterCompliance<br />
+<a href="objects#trustcentercompliance"><code>TrustCenterCompliance!</code></a>
+</td>
+<td>
+<p>Created trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceDeletePayload
+
+Return response for deleteTrustCenterCompliance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterCompliance ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcentercompliance"><code>TrustCenterCompliance</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#trustcentercompliancehistoryoptype"><code>TrustCenterComplianceHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcentercompliancehistoryedge"><code>[TrustCenterComplianceHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcentercompliancehistory"><code>TrustCenterComplianceHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceUpdatePayload
+
+Return response for updateTrustCenterCompliance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterCompliance<br />
+<a href="objects#trustcentercompliance"><code>TrustCenterCompliance!</code></a>
+</td>
+<td>
+<p>Updated trustCenterCompliance</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -45764,6 +48466,51 @@ overview<br />
 </tr>
 <tr>
 <td>
+logoRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the logo</p>
+</td>
+</tr>
+<tr>
+<td>
+logoLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The local logo file id, takes precedence over the logo remote URL</p>
+</td>
+</tr>
+<tr>
+<td>
+faviconRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the favicon</p>
+</td>
+</tr>
+<tr>
+<td>
+faviconLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The local favicon file id, takes precedence over the favicon remote URL</p>
+</td>
+</tr>
+<tr>
+<td>
+themeMode<br />
+<a href="enums#trustcentersettingtrustcenterthememode"><code>TrustCenterSettingTrustCenterThemeMode</code></a>
+</td>
+<td>
+<p>Theme mode for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
 primaryColor<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -45773,8 +48520,134 @@ primaryColor<br />
 </tr>
 <tr>
 <td>
+font<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>font for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+foregroundColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>foreground color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+backgroundColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>background color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+accentColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>accent/brand color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
 trustCenter<br />
 <a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+faviconFile<br />
+<a href="objects#file"><code>File</code></a>
 </td>
 <td>
 
@@ -46029,11 +48902,92 @@ overview<br />
 </tr>
 <tr>
 <td>
+logoRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the logo</p>
+</td>
+</tr>
+<tr>
+<td>
+logoLocalFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The local logo file id, takes precedence over the logo remote URL</p>
+</td>
+</tr>
+<tr>
+<td>
+faviconRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the favicon</p>
+</td>
+</tr>
+<tr>
+<td>
+faviconLocalFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The local favicon file id, takes precedence over the favicon remote URL</p>
+</td>
+</tr>
+<tr>
+<td>
+themeMode<br />
+<a href="enums#trustcentersettinghistorytrustcenterthememode"><code>TrustCenterSettingHistoryTrustCenterThemeMode</code></a>
+</td>
+<td>
+<p>Theme mode for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
 primaryColor<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>primary color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+font<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>font for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+foregroundColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>foreground color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+backgroundColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>background color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+accentColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>accent/brand color for the trust center</p>
 </td>
 </tr>
 </tbody>
@@ -46124,6 +49078,467 @@ trustCenterSetting<br />
 </td>
 <td>
 <p>Updated trustCenterSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessor
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+countries<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>country codes or country where the subprocessor is located</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Category of the subprocessor, e.g. &#39;Data Warehouse&#39; or &#39;Infrastructure Hosting&#39;</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessor<br />
+<a href="objects#subprocessor"><code>Subprocessor!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorBulkCreatePayload
+
+Return response for createBulkTrustCenterSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterSubprocessors<br />
+<a href="objects#trustcentersubprocessor"><code>[TrustCenterSubprocessor!]</code></a>
+</td>
+<td>
+<p>Created trustCenterSubprocessors</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcentersubprocessoredge"><code>[TrustCenterSubprocessorEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorCreatePayload
+
+Return response for createTrustCenterSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterSubprocessor<br />
+<a href="objects#trustcentersubprocessor"><code>TrustCenterSubprocessor!</code></a>
+</td>
+<td>
+<p>Created trustCenterSubprocessor</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorDeletePayload
+
+Return response for deleteTrustCenterSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterSubprocessor ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcentersubprocessor"><code>TrustCenterSubprocessor</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#trustcentersubprocessorhistoryoptype"><code>TrustCenterSubprocessorHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>ID of the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+countries<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>country codes or country where the subprocessor is located</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Category of the subprocessor, e.g. &#39;Data Warehouse&#39; or &#39;Infrastructure Hosting&#39;</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcentersubprocessorhistoryedge"><code>[TrustCenterSubprocessorHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcentersubprocessorhistory"><code>TrustCenterSubprocessorHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorUpdatePayload
+
+Return response for updateTrustCenterSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterSubprocessor<br />
+<a href="objects#trustcentersubprocessor"><code>TrustCenterSubprocessor!</code></a>
+</td>
+<td>
+<p>Updated trustCenterSubprocessor</p>
 </td>
 </tr>
 </tbody>

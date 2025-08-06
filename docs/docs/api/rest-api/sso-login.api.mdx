@@ -1,0 +1,70 @@
+---
+id: sso-login
+title: "Initiate SSO login flow"
+description: "Initiate SSO login flow"
+sidebar_label: "Initiate SSO login flow"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVtty2zYQ/RUMX/oi6+JL2/FTbVlpHSd2aim13U7GA5GQhJgCGAC0omj07z0LkJIoyrLbJxLYXezZ+y6iRNjYyMxJraLT6FJJJ7kTrN+/YakeS8VGqZ5FjUhnwnDiukzAB/IHooKQccOnwgljo9N/FlvvaTPmSv7wgkwmYBff+TRLBWjtzvvj3v3FycePP7e798cP1w/X7Yte7+ihAzZJ0t9yYeY4KCjYeuzRP2bjiZjy6HQRuXlGLNYZqcbRctnYRmKEy41iuUkZHwEt47mbCOVk7N+rIJs4l9nTVotnWXMq3bAZ6+kLmMKze6F8aYDLZlpZYYl+2G7TJ9bKQT/9Qk9a4Gh9tQR3UaLxEjaPY2H97zNPc1G5cyYXAK9G2sQiKc+Z0c8yEQZAbq4GZwCYSBvrZ4B/hA82jJRJs9BFZraaM5GmB09Kz1QLMVcyOQDSkRznpnTUdhwolFedv7t/9N91fz266A3+PDn66/z4l26724X9y03nABcSyclg2Bammu827VoRh1qngitPNUYb/1Al1oOJYJ7EpnARHwsmRwzRZkYgfNaxGbcsV4ULR3kKo+qa6YHHWCdinwKi/5/Xaz7cYfs6hjuIGzlRxXY3EQBjGMAp7WrA1rAKjjW6DcfmClGRI7nb8cuViB5+FbF/QjpfOmgMfcddbm9Fls5D9Kv4+gVwEI5DJVTp5zxhtwFw4OnUeT4rql5t5A8ABNPJrocuUV9G8ZT1hYE1rOeTxeMZ8Tx1dQlvmRVxbqSbo5uhch0fU1+LrNURjmh0E00ZPxbO9z43waEFaist+qH12nY1wxuUU8qVYGefLgtQ4K9WI89kEyHTBWtT6tZzJ6IeUuLqUy2F8gHzlZjX7aD3QdhqcQ2fC0+4n+ZIhqFgnKGdyMTjwX3Z4iaCJx5a0ePuD8BwcOUZirgXmuGuIbcy3hEhS76fQodK2Cdu7UybhIFZJPXO69uDzzD/2EoLOcXrENyEMgh/77SZcsQven83iLbz69yz7LTd6SehdlrvKRUkQWUNiqZ3D+v23pzhnh0226zMzDDzfH+gEcrQx5iPYYg/D1XQiIgYorkp2C36TuXy82upEtC1VsUR0egZYfpM3ipasHtXgOyBGeQDhG/xWcOeIRfJMXf0La+pMZAn36otuH2znwT3Lv2+gVWjq5WiBlP3N5EvWEHfivaLvq48+irIN4zCEnYFLNkjMbfKKc+DAZiAkjTaPMu0cb9Vta3LrWwTtd6wJVDrrKXgT9ZbTY1IwnCGTGbglGOF4nOaFXMFBWAlzX1fo4LbORFzi3lGnXPEY+Ed6U+wAYOHzSSynEpp1cuylDtwTZtsMJFBMT6b6lBqOZX9cM6GGuKy7Mte7ffiEKcSAbQkUCrcpw3OwcoksFORawvPnWUc9UtVWPPdbDZrck9uYvS2Clnb+nDZ7V33ewcks1yPsZVC+iGbjppt1HY/EzGmYsgySijq9MH5zx3i8GNbWzflagPXy1t1JYAbO+EekSLlHDzXgjtkmNdhfQrzKEwrOMhPJIyOCRDR9WJBDRh5v1zSdVhl/ZySlg9TGvYjnlqxB1d9od+Jh6bJroW9WF8xaRv/Revry/seFKsVfa38Cx2MJO005sFazDxyRpA6Q8/I3IZUbUlfbu4Dv/cGqPt/AbkmnVE=
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Initiate SSO login flow"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/sso/login"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Initiate SSO login flow
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"organization id","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","in":"query","name":"organization_id","schema":{"type":"string"}},{"description":"return url after authentication","example":"https://app.mitb.com","in":"query","name":"return","schema":{"type":"string"}}]}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"enforced":true,"provider":"OKTA","discovery_url":"https://id.example.com/.well-known/openid-configuration","organization_id":"01K1ZCHSFC83DETQ53VB47C0CC"}}},"schema":{"properties":{"discovery_url":{"type":"string"},"enforced":{"type":"boolean"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"organization_id":{"type":"string"},"provider":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"SSOStatusReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

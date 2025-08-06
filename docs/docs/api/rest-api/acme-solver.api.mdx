@@ -1,0 +1,70 @@
+---
+id: acme-solver
+title: "ACME challenge solver for Let's Encrypt certificate validation"
+description: "ACME challenge solver for Let's Encrypt certificate validation"
+sidebar_label: "ACME challenge solver for Let's Encrypt certificate validation"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vklz2zYU/isYXNrOSKKd5RCfasty66yu5UzaenKAyCcRCQWgAChF0fC/9z0A1EbV9kymPlgg8JYPb/uw5gW43ErjpVb8jJ8P341YXoqqAjUD5nS1AMum2rK34H9ybKRyuzKe5WC9nMpceGALUclCBAM9rg3YsL4uyFw+h3GwgUdGWDEHD9bxs/v1geO7EpgRvmReM49rgZpbIKgN38TcVICiJ6evX/z+7v3l+O/h8I+Lu79ePb+4ejW8uHp5iWKSjJEhXCt0t/2y8E8tLSAsb2vocZeXMBf8bM39ypCc81aqGW+az1EYnL/QxYokcq08KE9LYUxF90bY2RdH2NctNkdrV+c5uLDEwNRAixtC8CDwpml2ERlLcfQymozq/1fEDm+/2dGTL5B7kpA+mNlm8zaGh2A3FCxntHIR7IuTky7WC1GwjU4PZU67Mh+VqH2prfyOOUKhl8cMXWMerBIVG4OlyhxZqy1JFzAVdeW7GuFGDvLaSo+5vMfkejGjEuQUMbzeTi07jsdYo6Wm6p2BD2UbkpcNllBV/a9KL1VGmv1NrLM1yTSc/BCqY/X9wYCqhAJ2fnOdwKN8bSs8K7037izLhJEDzKROogOps8Upp3Js8Y+pQmKcUfgNrLr3Jft4wCiYWLKpVHuhRL7i/rx2nk2wXGLfBjy437ZOCaII0FLz/NlHgf6bIJDqInnGsE6Ek/mRTDrKEVajUAW7Ec4ttS0YCkNxAIunoiez0djGCwUl+ABhERA6iasrbecC88xff7rjvcM6CyJH7+71V1BHbx9O9pBElx0omuw+6973wznus2eDE9ZWcPDLcl0Am1Z6GQZoyGHMv4gjosfpMGZzV3GIep3Nj4+VSkSXbZoojLwp9mb5VNUkHkKBxwGYxXpA5Vv82cJeYi1SYD7Rb7tNg4Mi+VRvMey78yaGtwkkgvwx1ErRAOrGm44vWTo/yPZ/xnrP6KMgd7ud9mXRRxKYyllt28ptYe+BpfsQLdxuCWTUzuEnEQH14VS3pCPi/ZEWJAF2tTHa+l/3wW67tZ0yndFyoNAcNk6riBRPQaM5JjFuDBuBoaScKexdJBokpoUsqH+cpEuFFgfhVnRYO2CSBvRU5BDyEL7wDsgsbCmJq7ATN6PQVMKj1HzA7koZHePPrjvs1JqmxmTFJhrVZTv+g9tv6SOvJObfkULr8CFvGBxkcEDCotCmyJ0bge1PTdyJ3XK5HIhwPNB2liVdl729Ho7ej0d90mm2LLlxSAu60/PBCY6GsYE8sgxGnOqRiCIGf3FKEmTDaOfnQu3i+tEH2V6ed14yP2451b/HPGQYXKSPJoVunUjznu+0EWrs0yZunAU5JLgSL07y6zXRBHZn09A29pBNpL0QVooJRZi4VTpa42SaisrBA7f8+TY9+35hjz6Yjl6oJT1FDJhedByXxJnpbdl8RrlEnIQuHg0jhv4dGdiqdt6Pze6T47cRkdokPTvngQi4FUsa5vg/eNYmlhBNZ9pbcyy3WS1mJBtN0t+/hy4Rcw==
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ACME challenge solver for Let's Encrypt certificate validation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/.well-known/acme-challenge/{path}"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+ACME challenge solver for Let's Encrypt certificate validation
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"The path to the acme challenge","example":"01J4HMNDSZCCQBTY93BF9CBF5D","in":"path","name":"path","required":true,"schema":{"type":"string"}}]}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"Path":"01J4HMNDSZCCQBTY93BF9CBF5D"}}},"schema":{"properties":{"Path":{"description":"The path to the acme challenge","example":"01J4HMNDSZCCQBTY93BF9CBF5D","type":"string"}},"type":"object","title":"AcmeSolverRequest"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

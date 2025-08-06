@@ -1,0 +1,70 @@
+---
+id: o-auth-register
+title: "Register a user via OAuth provider authentication"
+description: "Register a user via OAuth provider authentication"
+sidebar_label: "Register a user via OAuth provider authentication"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV0tv2zgQ/iuELnuxpSRt9+FT0zQLeFs0QZygCwQ50BItM5FELUnZdQ39950ZUrIsKWmQHGKJnPfjm9E+SISJtSytVEUwC25EKo0VmnFWGfjZSM6uziu7ZqVWG5ngDbyJwsqYE88kUKXQ9DxPQAJRN2LgVov/KmHsJ5Xsgtk+iFVhgRsfeVlmXkr0aFD9PhA/eF5mwuCzqeJYGHrc8KwS+FDwHH6Df1TBFoXagnyRc5nB0aOB94+eP4xVDndo6rW3G0hSpdJMIM8PsK3g2R24SEafnr17/+H3P/7866R3+83pI+FwFWcSjL9VTwKD5ZVN3enU4vGURAGpzHmKrGtrSzOLoo5lEd9wy3X4WKZBXdeTwMRrcAP9gyhDNK10ETi2f9/L1e1aHLIC2UqYVd3sCAaPlMYJE2EaMuf/hKXSrqslHNo4JH/Jsm6A7K7Ed2O1LMDGnuNjhpDzjTkJW+5IeRPK1s4x2T6DY1LpivEk0VAITK1aj47MHkv9UEsv52Pq5p+7OthKq/xZNw7qj4rnRb2umsY0oz6s7bfob4pzoNqX4Jg+umJ3N19fr3AgvnjWm74nR+Z2ercnsm5P1PJRxBYppCWmK6xrKr8bhyfYODWiiylVYVy7vD85GdrziSes5ZkAzemQ5q5A8UrLnyJBog9jguaFj8lC6A0E61JrpZE6ESteZXbIQR4ZEVdaWgC/+wfwh6dg6n2gUKFHqA6YAkUuwBLEpFIZjEDJgXAWRMQR6QOwGjIDpfX1XpWiyHgh2Pn13FsL9JXOOnDESxmCauVJQ6mizWlQPxwMXiAoeRwq5RexGzqI8uGiNxImlPcnOM8rY9lSwDABAJcJ2QPniI7IvhbclZZH9X+nQDD9QgS+ELxmiOOSGxmPpK5pHF4k7Jobs1Ua4IcjHA4mFeEsinXCWi0YFNIhuHZI657+VjrnFmv2+20w6RcWkYz67sBwzHu6ObLEqRyYQuk+G/rrhvFZeMKakiW9LFaJYKtMbdlKaUY5dPnnbohOArxsp0rLeAF8g8O7X5WKsy5qu4bm/Aqacf1aVk9OoYBrMkxDPdAOAi3bmr2FWsTAfMff5hiRAiP5Wm0u7F2AceGtaXuBxeVCFQUizjDeeP2Z+ftetp+N9ZHQXxoZbkWWTZ8AE4sIz2UyhTVpJdNKN5XbmH1kLPqDi9PNYcW6bGC2vzwcZvvxDuOx9+U96s37UrMEtVr6+xtOqWKlms2QuxQ0tpiqLJW2H4/jdRDTAN0A3XoMdb93G8bfDOUNoVRC6hj0IgNKmRZum/LjD1rYSIwHoYzgZoeXMNmYxKGw4rGgUqA38AF8ZVtYsggMWjQuM26BKg/Z7Vo6xfDTVbcUbo+D7WmpgF02I4fUNjPZJdAgQ6PwJW0QHFizBQzJzgJ9XnJAIMSRQey2223I6TpUOo08r4m+zi8uvy0up8hTdyZzoxAf0Kd34Qmg06IUsVz5PsGWwFnlgr85RQqUgSMu50XHrrd8fxyltvOF8SZhvtEsRDuCEMKcqn2A9n4UH4Z3O4xhaq5xWsPdfo+zB1q+rvEYGlP70b/hWvIlxuz+AWT64YfTG0fiLLhwdk9v0YJJ88kz/Eqqu0vC9dUCJ9PSf13lhOaB5th8+B+WEEQjlwSEWDzbB5CwtHKt6WTi3//eOd+t
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Register a user via OAuth provider authentication"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/oauth/register"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Register a user via OAuth provider authentication
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"name":"Jon Snow","email":"jsnow@example.com","authProvider":"google","externalUserId":"1234567890","externalUserName":"jsnow","clientToken":"example-client-token-12345","image":"https://example.com/avatar.jpg"}}},"schema":{"properties":{"authProvider":{"description":"The provider used to authenticate the user, e.g. google, github, etc.","example":"google","type":"string"},"clientToken":{"description":"The token provided by the external provider","type":"string"},"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"externalUserId":{"description":"The ID of the user from the external provider","example":"1234567890","type":"string"},"externalUserName":{"description":"The username of the user from the external provider","example":"jsnow","type":"string"},"image":{"description":"The image URL of the user from the external provider","type":"string"},"name":{"description":"The name of the user","example":"Jon Snow","type":"string"}},"type":"object","title":"OauthTokenRequest"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

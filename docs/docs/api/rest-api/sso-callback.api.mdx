@@ -1,0 +1,70 @@
+---
+id: sso-callback
+title: "Complete SSO login flow callback"
+description: "Complete SSO login flow callback"
+sidebar_label: "Complete SSO login flow callback"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV01z2zYQ/SsYXnqR9WE7bcen2rLSOm7s1FJqu52MByIhCTEFMABoRdXov/ctQEqkKDtOThKwu9i3i9234CpKhI2NzJzUKjqJ+nqepcIJNhxes1RPpWKTVC9YzNN0zOPHqBXpTBhO6hcJDKDX38oybvgc5sZGJ/+uds7muZtpI//zxizWiYCF+MrJI4nHMdaSNL/kwiyxUDgMy0LVxjMx59HJKnLLjPatM1JNo/W6tevKOo4Ynnia1334/d7h0TOOvPj7PGkz5aqMSSY1b93eu+PB3fmb9+9/7vbvju+v7q+654PB0X3vGf/Vwx78Yc8j+dSKjLCZVlZYkh92u/QTa+WEcvSXZ1kqY39Y57MltKsSnLeweRwL6/+GTFX3nMkFYlETbWKRlOvM6CeZCAMg15ejUwBMpI31E6J4yE2K7ZlzmT3pdGTSLny1Yz3vtBciTQ8elV6oDgpIyeQASCdymodaorraCZ7yd9n7p//H8G3/16PzweivN0d/nx3/0u/2+4h/XU0OcKEqnQyB7WBq5K4a10Y41joVXHmpMdr4g2pXPZoJ5kVsjhTxqWBywhw2jcA9WscW3LJcFSmc5CmCanqmAx58Rb/ggOQ/cnojh3ti397hHmGlJurYbmcCYAwDOKVdA9gWVqGxRVdJbK5wK3Ii9yd+vTHR488i9kdI5zsJLDNEb+b2RmTpMtx+Hd+wAA7BceiEuvyMJ+wmAA46vabOR1VSFABC6c2+gy7QX0bxlA2FQTRs4IvF45nwPHVNCx+ZFXFupFuCF9G5jk+JISNrdYQlKHOmqeKnwnkWdTMsOpB2KsRrvcN9zHqNjkq5Euz0w0WBC/r1huSZbOPWdKHalrrz1IuIRkpoQ2qn0EFQvhTLZih0PgSM8gSWKdil5cvhEfvzHPUwFowT98rE48F+SXczwRMPreC7uwMoHFx6heLqC8/I2JhbGe+5JEvpn8OHStgHbu1Cm4RBWSQ7sEr69EXmD9t4oaR4H4Kb0Anh31tt5hxXGL27HUW7JXbmVfbG7vSjUHuj95IakuCyAUXTuYfNeK9Psc8O213WnJ9hNoPKmL/DcP88NEIrImG4zaphv6Ce2ubHb5VKQNfZ9EdE02eCATR7rWmh7lMBsQdmUA8wvsHPFvYCtUiJuaXfcpu4gTL5Wm8h7VVKCeld+/cLni59rRRxTDPfJD5nhXzntp/Nde3Qb4J8xTQsYdfAUjwSo6sc9DwEgCEoyaPNs0wb91vd27bdSppocMOOQYNcS8OfrI+aiEgicIZKZtCUU4Xmc5oVowUNYCWNft+jgtslCXOLkUbkOeGx8In0K8SA2cMWElVOrbThsizlDlrzNhvNZHCMn6o7tFpObT9esrGGuSyp2bv9WiziVOICLRmUDl/yhuTg1STwrKLUFpk7zTj6l7qwkbvFYtHmXtzG9O0Utrbz50V/cDUcHJDNejvJNg7pD8V01O6it4eZiDEYQ5VRQRHTh+Q/9UjDT25t3ZyrCq5XPNdrN1l5H77GtihCh1x2kCAZhnh4U4UhFUZYK9oYYZ7MAJMkqxWxMpphvabt8Nb1w0taPk7pETDhqRUvYNz7ybAXFU2ZzZdC8ZzF5G19j7f6V8MLbsrvhB/00/xmeMFX85tg6/UTLYwkt/SugE0xYSnLwfwUDJW5ilXjq2BdfYD8PhiBZf4Hli3fBA==
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Complete SSO login flow callback"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/sso/callback"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Complete SSO login flow callback
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"authorization code","example":"abc","in":"query","name":"code","schema":{"type":"string"}},{"description":"state value","example":"state123","in":"query","name":"state","schema":{"type":"string"}},{"description":"organization id","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","in":"query","name":"organization_id","schema":{"type":"string"}}]}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"enforced":true,"provider":"OKTA","discovery_url":"https://id.example.com/.well-known/openid-configuration","organization_id":"01K1ZCHSFC83DETQ53VB47C0CC"}}},"schema":{"properties":{"discovery_url":{"type":"string"},"enforced":{"type":"boolean"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"organization_id":{"type":"string"},"provider":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"SSOStatusReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

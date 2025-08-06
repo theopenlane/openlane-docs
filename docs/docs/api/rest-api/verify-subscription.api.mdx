@@ -1,0 +1,70 @@
+---
+id: verify-subscription
+title: "Verify a subscription"
+description: "Verify a subscription"
+sidebar_label: "Verify a subscription"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1z2zYQ/SsoLr1Iou22F59qu27HTafJRE7dGY+nA5IrCTEJoAAoRtHov3cXACVSlJ20Ux9MCLuLffuwH9jyElxhpfFSK37J/wArFxsmmGvyw/6EawNW0Pqu3GvNhyoW/m7A+WtdbvjllhdaeVCelsKYShbBPPvoyM+WwydRmwocrV1TFODCci2qBmhxr5+BAPnw3e12E+6KFdSChMYSHi+jeVLdHoVyvwIWrPE/y4E1DkparmOIHsX9ICdJWTrmEDdbS8HQnawwNL8xCIo7b6VacsKSdnT+EQpPGtJXcMxMDu8jJ4R/Rww5o5WLqC/Ozv4HmvZ73jYw4TWuxZKA9C+HoZOFtDWUE1Zp/YxBsIW2rbCBEAy3pK2NblhjSuHBffM642CttqcZDyKWcDC5CDyn1GCtcKxRCfOiOUHtJJ79V6FLeM0Byf/L6XuCtmNZj9+h24cVoB/L0K/SfuTz4DFpHBznWlcgFJ3eqJB4Esqe873836SUqTbxeoYo5wk+Cr6PuTWUX4uS7fORdM7HOh+UaPxKW/kZYaLSD6cOusOMtUpUbA4WY2K3IRsCnoVoKj+2CPE5KBorPTaHxyeMTiyR6Uc+6DNPdEHon3rMEogEI/wKf2SuCz+L5cvpPPJOhxy7e2tAVUIBu3p3l0CifmMrlK28N+4yy4SRM7xInVRnUmfrc757OuCcU/LHfEflN7AZx0Xno4ARaVjEqXgnIUOecb9uMEWw9QiGBSvLgAf3EYwk8xWIMkBToqab/nOKCtM3QSFlQ/KM9OXCyeLEjTm6ixp9qJK9E861GqsalbHZDWHxVM8h78Jhey9ESvABwkIo7Lj6Wdta4H3yXx/u+XG+XQeVk7HHTnoq+tjO+0iiyxEUTedejON9e4X77GJ2xrpMFanFYUNYVLqlzsbCHcb7F7EqJpyE8Tb7hjep0Qw2P3wpVSK6bF8sYfwtsL+vvtY0qQcqUByAWcwHNH6PnwPsFnORiHmgb7dN7YKY/Fpv3RQ9dJlI7y5MdhzqN1opajtjvkn8E0vyo9t+kevBoV8EOWuhqqbPSrcqo31ZTsPEWja2y9wO9gAsxUOD8v3h5XEb52X/BXFo8FItdDdzRQw2TnhUaozR1v84RHYoza6ljPrIkcGoK3eG37rAEDUtiSQxzHqGmnKp4qsEB+xallQsTlIEoZ5BuA0J8enCJHXdhSggkB5+YQw0t1uJFUFlt+97phIeteoZu1/J6Bg/fXfdeyjfsFyjuex6enD7Kf0oKomX7cigc/iaNyQHHzCALxyiNjF3ZQTWOlXsiLu2bWciiGfaLrNk67Lf7m5uf5/fTslmdxiEe4e0oJi+m51hH5gbKHCuxoyk5KOpEMlfn5MGnWG087VQPVwvvXQH19d7n71okFLTI2sZUiHjtKdAt2l87adcDhEeDTCcNCsERdLtlvo1lsluR9uYzDZNybWwUuQU/eMTnpoGBk08GiOX/Caim94Thkn3LBy/JHeTzuIKS9T4V3X7U/iXW2r8eXrT16FZcitaanj4H0c7FXtknjoY7W053tKyie/QeCT9/QPdtljx
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Verify a subscription"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/subscribe/verify"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Verify a subscription
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"Token":"token"}}},"schema":{"properties":{"Token":{"description":"The token to be used to verify the subscription, token is sent via email","type":"string"}},"type":"object","title":"VerifySubscribeRequest"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"message":"Subscription confirmed, looking forward to sending you updates!"}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"VerifySubscribeReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

@@ -1,0 +1,70 @@
+---
+id: register
+title: "Register creates a new user in the database with the specified password, allowing the user to login to Openlane. This endpoint requires a 'strong' password and a valid register request, otherwise a 400 reply is returned. The password is stored in the database as an argon2 derived key so it is impossible for a hacker to get access to raw passwords. A personal organization is created for the user registering based on the organization data in the register request and the user is assigned the Owner role"
+description: "Register creates a new user in the database with the specified password, allowing the user to login to Openlane. This endpoint requires a 'strong' password and a valid register request, otherwise a 400 reply is returned. The password is stored in the database as an argon2 derived key so it is impossible for a hacker to get access to raw passwords. A personal organization is created for the user registering based on the organization data in the register request and the user is assigned the Owner role"
+sidebar_label: "Register creates a new user in the database with the specified password, allowing the user to login to Openlane. This endpoint requires a 'strong' password and a valid register request, otherwise a 400 reply is returned. The password is stored in the database as an argon2 derived key so it is impossible for a hacker to get access to raw passwords. A personal organization is created for the user registering based on the organization data in the register request and the user is assigned the Owner role"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Register creates a new user in the database with the specified password, allowing the user to login to Openlane. This endpoint requires a 'strong' password and a valid register request, otherwise a 400 reply is returned. The password is stored in the database as an argon2 derived key so it is impossible for a hacker to get access to raw passwords. A personal organization is created for the user registering based on the organization data in the register request and the user is assigned the Owner role"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/register"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Register creates a new user in the database with the specified password, allowing the user to login to Openlane. This endpoint requires a 'strong' password and a valid register request, otherwise a 400 reply is returned. The password is stored in the database as an argon2 derived key so it is impossible for a hacker to get access to raw passwords. A personal organization is created for the user registering based on the organization data in the register request and the user is assigned the Owner role
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"first_name":"Sarah","last_name":"Funk","email":"sfunky@theopenlane.io","password":"mitb!","token":null}}},"schema":{"properties":{"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"first_name":{"description":"The first name of the user","example":"Jon","type":"string"},"last_name":{"description":"The last name of the user","example":"Snow","type":"string"},"password":{"description":"The password to be used for authentication after registration","example":"Wint3rIsC0ming123!","type":"string"},"token":{"description":"A newly invited user can use this to join a org as at the same time they are creating their account","nullable":true,"type":"string"}},"type":"object","title":"RegisterRequest"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"user_id":"1234","email":"","message":"Welcome to Openlane!"}}},"schema":{"properties":{"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"},"user_id":{"description":"The ID of the user that was created","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","type":"string"}},"type":"object","title":"RegisterReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

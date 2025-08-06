@@ -83,6 +83,11 @@ The `Price` scalar type represents a monetary value for a subscription, includin
 
 The `Reference` represents are links to external sources that can be used to gain more information about the control
 
+## SSOAuthorizationMap
+
+SSOAuthorizationMap is a map of organization IDs to SSO verification timestamps.
+This scalar is used to track SSO verification times for organizations in the context of token authorization.
+
 ## String
 
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
