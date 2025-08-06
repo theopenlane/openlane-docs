@@ -237,29 +237,6 @@ input<br />
 </tbody>
 </table>
 
-## createBulkControlScheduledJob
-
-**Type:** [ControlScheduledJobBulkCreatePayload!](objects#controlscheduledjobbulkcreatepayload)
-
-Create multiple new controlScheduledJobs
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createcontrolscheduledjobinput"><code>[CreateControlScheduledJobInput!]</code></a>
-</td>
-<td>
-<p>values of the controlScheduledJob</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createBulkCSVActionPlan
 
 **Type:** [ActionPlanBulkCreatePayload!](objects#actionplanbulkcreatepayload)
@@ -416,29 +393,6 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the controlObjective</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createBulkCSVControlScheduledJob
-
-**Type:** [ControlScheduledJobBulkCreatePayload!](objects#controlscheduledjobbulkcreatepayload)
-
-Create multiple new controlScheduledJobs via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the controlScheduledJob</p>
 </td>
 </tr>
 </tbody>
@@ -674,29 +628,6 @@ input<br />
 </tbody>
 </table>
 
-## createBulkCSVIntegration
-
-**Type:** [IntegrationBulkCreatePayload!](objects#integrationbulkcreatepayload)
-
-Create multiple new integrations via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the integration</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createBulkCSVInternalPolicy
 
 **Type:** [InternalPolicyBulkCreatePayload!](objects#internalpolicybulkcreatepayload)
@@ -738,6 +669,29 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVJobTemplate
+
+**Type:** [JobTemplateBulkCreatePayload!](objects#jobtemplatebulkcreatepayload)
+
+Create multiple new jobTemplates via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the jobTemplate</p>
 </td>
 </tr>
 </tbody>
@@ -1019,6 +973,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVSubprocessor
+
+**Type:** [SubprocessorBulkCreatePayload!](objects#subprocessorbulkcreatepayload)
+
+Create multiple new subprocessors via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the subprocessor</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVSubscriber
 
 **Type:** [SubscriberBulkCreatePayload!](objects#subscriberbulkcreatepayload)
@@ -1083,6 +1060,52 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the template</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVTrustCenterCompliance
+
+**Type:** [TrustCenterComplianceBulkCreatePayload!](objects#trustcentercompliancebulkcreatepayload)
+
+Create multiple new trustCenterCompliances via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVTrustCenterSubprocessor
+
+**Type:** [TrustCenterSubprocessorBulkCreatePayload!](objects#trustcentersubprocessorbulkcreatepayload)
+
+Create multiple new trustCenterSubprocessors via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the trustCenterSubprocessor</p>
 </td>
 </tr>
 </tbody>
@@ -1341,29 +1364,6 @@ input<br />
 </tbody>
 </table>
 
-## createBulkIntegration
-
-**Type:** [IntegrationBulkCreatePayload!](objects#integrationbulkcreatepayload)
-
-Create multiple new integrations
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createintegrationinput"><code>[CreateIntegrationInput!]</code></a>
-</td>
-<td>
-<p>values of the integration</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createBulkInternalPolicy
 
 **Type:** [InternalPolicyBulkCreatePayload!](objects#internalpolicybulkcreatepayload)
@@ -1405,6 +1405,29 @@ input<br />
 </td>
 <td>
 <p>values of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkJobTemplate
+
+**Type:** [JobTemplateBulkCreatePayload!](objects#jobtemplatebulkcreatepayload)
+
+Create multiple new jobTemplates
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createjobtemplateinput"><code>[CreateJobTemplateInput!]</code></a>
+</td>
+<td>
+<p>values of the jobTemplate</p>
 </td>
 </tr>
 </tbody>
@@ -1686,6 +1709,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkSubprocessor
+
+**Type:** [SubprocessorBulkCreatePayload!](objects#subprocessorbulkcreatepayload)
+
+Create multiple new subprocessors
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createsubprocessorinput"><code>[CreateSubprocessorInput!]</code></a>
+</td>
+<td>
+<p>values of the subprocessor</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkSubscriber
 
 **Type:** [SubscriberBulkCreatePayload!](objects#subscriberbulkcreatepayload)
@@ -1750,6 +1796,52 @@ input<br />
 </td>
 <td>
 <p>values of the template</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkTrustCenterCompliance
+
+**Type:** [TrustCenterComplianceBulkCreatePayload!](objects#trustcentercompliancebulkcreatepayload)
+
+Create multiple new trustCenterCompliances
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcentercomplianceinput"><code>[CreateTrustCenterComplianceInput!]</code></a>
+</td>
+<td>
+<p>values of the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkTrustCenterSubprocessor
+
+**Type:** [TrustCenterSubprocessorBulkCreatePayload!](objects#trustcentersubprocessorbulkcreatepayload)
+
+Create multiple new trustCenterSubprocessors
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcentersubprocessorinput"><code>[CreateTrustCenterSubprocessorInput!]</code></a>
+</td>
+<td>
+<p>values of the trustCenterSubprocessor</p>
 </td>
 </tr>
 </tbody>
@@ -1888,29 +1980,6 @@ input<br />
 </td>
 <td>
 
-</td>
-</tr>
-</tbody>
-</table>
-
-## createControlScheduledJob
-
-**Type:** [ControlScheduledJobCreatePayload!](objects#controlscheduledjobcreatepayload)
-
-Create a new controlScheduledJob
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createcontrolscheduledjobinput"><code>CreateControlScheduledJobInput!</code></a>
-</td>
-<td>
-<p>values of the controlScheduledJob</p>
 </td>
 </tr>
 </tbody>
@@ -2104,6 +2173,29 @@ evidenceFiles<br />
 </td>
 <td>
 
+</td>
+</tr>
+</tbody>
+</table>
+
+## createExport
+
+**Type:** [ExportCreatePayload!](objects#exportcreatepayload)
+
+Create a new export
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createexportinput"><code>CreateExportInput!</code></a>
+</td>
+<td>
+<p>values of the export</p>
 </td>
 </tr>
 </tbody>
@@ -2308,29 +2400,6 @@ input<br />
 </tbody>
 </table>
 
-## createIntegration
-
-**Type:** [IntegrationCreatePayload!](objects#integrationcreatepayload)
-
-Create a new integration
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createintegrationinput"><code>CreateIntegrationInput!</code></a>
-</td>
-<td>
-<p>values of the integration</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createInternalPolicy
 
 **Type:** [InternalPolicyCreatePayload!](objects#internalpolicycreatepayload)
@@ -2369,6 +2438,52 @@ Create a new invite
 <td>
 input<br />
 <a href="inputObjects#createinviteinput"><code>CreateInviteInput!</code></a>
+</td>
+<td>
+<p>values of the invite</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createJobResult
+
+**Type:** [JobResultCreatePayload!](objects#jobresultcreatepayload)
+
+Create a new jobResult
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createjobresultinput"><code>CreateJobResultInput!</code></a>
+</td>
+<td>
+<p>values of the jobResult</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createJobRunner
+
+**Type:** [JobRunnerCreatePayload!](objects#jobrunnercreatepayload)
+
+Create a new invite
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createjobrunnerinput"><code>CreateJobRunnerInput!</code></a>
 </td>
 <td>
 <p>values of the invite</p>
@@ -2418,6 +2533,29 @@ input<br />
 </td>
 <td>
 <p>values of the jobRunnerToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createJobTemplate
+
+**Type:** [JobTemplateCreatePayload!](objects#jobtemplatecreatepayload)
+
+Create a new jobTemplate
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createjobtemplateinput"><code>CreateJobTemplateInput!</code></a>
+</td>
+<td>
+<p>values of the jobTemplate</p>
 </td>
 </tr>
 </tbody>
@@ -2818,6 +2956,29 @@ input<br />
 </tbody>
 </table>
 
+## createScheduledJobRun
+
+**Type:** [ScheduledJobRunCreatePayload!](objects#scheduledjobruncreatepayload)
+
+Create a new scheduledJobRun
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createscheduledjobruninput"><code>CreateScheduledJobRunInput!</code></a>
+</td>
+<td>
+<p>values of the scheduledJobRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createStandard
 
 **Type:** [StandardCreatePayload!](objects#standardcreatepayload)
@@ -2859,6 +3020,38 @@ input<br />
 </td>
 <td>
 <p>values of the subcontrol</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createSubprocessor
+
+**Type:** [SubprocessorCreatePayload!](objects#subprocessorcreatepayload)
+
+Create a new subprocessor
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createsubprocessorinput"><code>CreateSubprocessorInput!</code></a>
+</td>
+<td>
+<p>values of the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -2979,6 +3172,29 @@ input<br />
 </tbody>
 </table>
 
+## createTrustCenterCompliance
+
+**Type:** [TrustCenterComplianceCreatePayload!](objects#trustcentercompliancecreatepayload)
+
+Create a new trustCenterCompliance
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcentercomplianceinput"><code>CreateTrustCenterComplianceInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createTrustCenterSetting
 
 **Type:** [TrustCenterSettingCreatePayload!](objects#trustcentersettingcreatepayload)
@@ -2997,6 +3213,47 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterSetting</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+faviconFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## createTrustCenterSubprocessor
+
+**Type:** [TrustCenterSubprocessorCreatePayload!](objects#trustcentersubprocessorcreatepayload)
+
+Create a new trustCenterSubprocessor
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcentersubprocessorinput"><code>CreateTrustCenterSubprocessorInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterSubprocessor</p>
 </td>
 </tr>
 </tbody>
@@ -3126,6 +3383,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteBulkExport
+
+**Type:** [ExportBulkDeletePayload!](objects#exportbulkdeletepayload)
+
+Delete multiple exports
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the exports to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteContact
 
 **Type:** [ContactDeletePayload!](objects#contactdeletepayload)
@@ -3213,29 +3493,6 @@ id<br />
 </td>
 <td>
 <p>ID of the controlObjective</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## deleteControlScheduledJob
-
-**Type:** [ControlScheduledJobDeletePayload!](objects#controlscheduledjobdeletepayload)
-
-Delete an existing controlScheduledJob
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the controlScheduledJob</p>
 </td>
 </tr>
 </tbody>
@@ -3397,6 +3654,29 @@ id<br />
 </td>
 <td>
 <p>ID of the evidence</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteExport
+
+**Type:** [ExportDeletePayload!](objects#exportdeletepayload)
+
+Delete an existing export
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the export</p>
 </td>
 </tr>
 </tbody>
@@ -3586,6 +3866,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteJobResult
+
+**Type:** [JobResultDeletePayload!](objects#jobresultdeletepayload)
+
+Delete an existing jobResult
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the jobResult</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteJobRunner
 
 **Type:** [JobRunnerDeletePayload!](objects#jobrunnerdeletepayload)
@@ -3650,6 +3953,29 @@ id<br />
 </td>
 <td>
 <p>ID of the jobRunnerToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteJobTemplate
+
+**Type:** [JobTemplateDeletePayload!](objects#jobtemplatedeletepayload)
+
+Delete an existing jobTemplate
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the jobTemplate</p>
 </td>
 </tr>
 </tbody>
@@ -3954,6 +4280,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteScheduledJobRun
+
+**Type:** [ScheduledJobRunDeletePayload!](objects#scheduledjobrundeletepayload)
+
+Delete an existing scheduledJobRun
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the scheduledJobRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteStandard
 
 **Type:** [StandardDeletePayload!](objects#standarddeletepayload)
@@ -3995,6 +4344,29 @@ id<br />
 </td>
 <td>
 <p>ID of the subcontrol</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteSubprocessor
+
+**Type:** [SubprocessorDeletePayload!](objects#subprocessordeletepayload)
+
+Delete an existing subprocessor
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the subprocessor</p>
 </td>
 </tr>
 </tbody>
@@ -4101,6 +4473,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteTrustCenterCompliance
+
+**Type:** [TrustCenterComplianceDeletePayload!](objects#trustcentercompliancedeletepayload)
+
+Delete an existing trustCenterCompliance
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteTrustCenterSetting
 
 **Type:** [TrustCenterSettingDeletePayload!](objects#trustcentersettingdeletepayload)
@@ -4119,6 +4514,29 @@ id<br />
 </td>
 <td>
 <p>ID of the trustCenterSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteTrustCenterSubprocessor
+
+**Type:** [TrustCenterSubprocessorDeletePayload!](objects#trustcentersubprocessordeletepayload)
+
+Delete an existing trustCenterSubprocessor
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterSubprocessor</p>
 </td>
 </tr>
 </tbody>
@@ -4266,6 +4684,294 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkActionPlan
+
+**Type:** [ActionPlanBulkUpdatePayload!](objects#actionplanbulkupdatepayload)
+
+Update multiple existing actionPlans
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the actionPlans to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateactionplaninput"><code>UpdateActionPlanInput!</code></a>
+</td>
+<td>
+<p>values to update the actionPlans with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkContact
+
+**Type:** [ContactBulkUpdatePayload!](objects#contactbulkupdatepayload)
+
+Update multiple existing contacts
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the contacts to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatecontactinput"><code>UpdateContactInput!</code></a>
+</td>
+<td>
+<p>values to update the contacts with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkControl
+
+**Type:** [ControlBulkUpdatePayload!](objects#controlbulkupdatepayload)
+
+Update multiple existing controls
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the controls to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatecontrolinput"><code>UpdateControlInput!</code></a>
+</td>
+<td>
+<p>values to update the controls with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkHush
+
+**Type:** [HushBulkUpdatePayload!](objects#hushbulkupdatepayload)
+
+Update multiple existing hushs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the hushs to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatehushinput"><code>UpdateHushInput!</code></a>
+</td>
+<td>
+<p>values to update the hushs with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkInternalPolicy
+
+**Type:** [InternalPolicyBulkUpdatePayload!](objects#internalpolicybulkupdatepayload)
+
+Update multiple existing internalPolicys
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the internalPolicys to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateinternalpolicyinput"><code>UpdateInternalPolicyInput!</code></a>
+</td>
+<td>
+<p>values to update the internalPolicys with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkProcedure
+
+**Type:** [ProcedureBulkUpdatePayload!](objects#procedurebulkupdatepayload)
+
+Update multiple existing procedures
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the procedures to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateprocedureinput"><code>UpdateProcedureInput!</code></a>
+</td>
+<td>
+<p>values to update the procedures with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkRisk
+
+**Type:** [RiskBulkUpdatePayload!](objects#riskbulkupdatepayload)
+
+Update multiple existing risks
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the risks to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateriskinput"><code>UpdateRiskInput!</code></a>
+</td>
+<td>
+<p>values to update the risks with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkScan
+
+**Type:** [ScanBulkUpdatePayload!](objects#scanbulkupdatepayload)
+
+Update multiple existing scans
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the scans to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatescaninput"><code>UpdateScanInput!</code></a>
+</td>
+<td>
+<p>values to update the scans with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkTask
+
+**Type:** [TaskBulkUpdatePayload!](objects#taskbulkupdatepayload)
+
+Update multiple existing tasks
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the tasks to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetaskinput"><code>UpdateTaskInput!</code></a>
+</td>
+<td>
+<p>values to update the tasks with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateContact
 
 **Type:** [ContactUpdatePayload!](objects#contactupdatepayload)
@@ -4389,38 +5095,6 @@ input<br />
 </td>
 <td>
 <p>New values for the controlObjective</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## updateControlScheduledJob
-
-**Type:** [ControlScheduledJobUpdatePayload!](objects#controlscheduledjobupdatepayload)
-
-Update an existing controlScheduledJob
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the controlScheduledJob</p>
-</td>
-</tr>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#updatecontrolscheduledjobinput"><code>UpdateControlScheduledJobInput!</code></a>
-</td>
-<td>
-<p>New values for the controlScheduledJob</p>
 </td>
 </tr>
 </tbody>
@@ -4659,6 +5333,47 @@ evidenceFiles<br />
 </tbody>
 </table>
 
+## updateExport
+
+**Type:** [ExportUpdatePayload!](objects#exportupdatepayload)
+
+Update an existing export
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the export</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateexportinput"><code>UpdateExportInput!</code></a>
+</td>
+<td>
+<p>New values for the export</p>
+</td>
+</tr>
+<tr>
+<td>
+exportFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the export</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateGroup
 
 **Type:** [GroupUpdatePayload!](objects#groupupdatepayload)
@@ -4787,38 +5502,6 @@ input<br />
 </tbody>
 </table>
 
-## updateIntegration
-
-**Type:** [IntegrationUpdatePayload!](objects#integrationupdatepayload)
-
-Update an existing integration
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the integration</p>
-</td>
-</tr>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#updateintegrationinput"><code>UpdateIntegrationInput!</code></a>
-</td>
-<td>
-<p>New values for the integration</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## updateInternalPolicy
 
 **Type:** [InternalPolicyUpdatePayload!](objects#internalpolicyupdatepayload)
@@ -4883,6 +5566,38 @@ input<br />
 </tbody>
 </table>
 
+## updateJobResult
+
+**Type:** [JobResultUpdatePayload!](objects#jobresultupdatepayload)
+
+Update an existing jobResult
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the jobResult</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatejobresultinput"><code>UpdateJobResultInput!</code></a>
+</td>
+<td>
+<p>New values for the jobResult</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateJobRunner
 
 **Type:** [JobRunnerUpdatePayload!](objects#jobrunnerupdatepayload)
@@ -4910,6 +5625,38 @@ input<br />
 </td>
 <td>
 <p>New values for the jobRunner</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateJobTemplate
+
+**Type:** [JobTemplateUpdatePayload!](objects#jobtemplateupdatepayload)
+
+Update an existing jobTemplate
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the jobTemplate</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatejobtemplateinput"><code>UpdateJobTemplateInput!</code></a>
+</td>
+<td>
+<p>New values for the jobTemplate</p>
 </td>
 </tr>
 </tbody>
@@ -5340,6 +6087,38 @@ input<br />
 </tbody>
 </table>
 
+## updateScheduledJobRun
+
+**Type:** [ScheduledJobRunUpdatePayload!](objects#scheduledjobrunupdatepayload)
+
+Update an existing scheduledJobRun
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the scheduledJobRun</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatescheduledjobruninput"><code>UpdateScheduledJobRunInput!</code></a>
+</td>
+<td>
+<p>New values for the scheduledJobRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateStandard
 
 **Type:** [StandardUpdatePayload!](objects#standardupdatepayload)
@@ -5399,6 +6178,47 @@ input<br />
 </td>
 <td>
 <p>New values for the subcontrol</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateSubprocessor
+
+**Type:** [SubprocessorUpdatePayload!](objects#subprocessorupdatepayload)
+
+Update an existing subprocessor
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatesubprocessorinput"><code>UpdateSubprocessorInput!</code></a>
+</td>
+<td>
+<p>New values for the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -5596,6 +6416,38 @@ input<br />
 </tbody>
 </table>
 
+## updateTrustCenterCompliance
+
+**Type:** [TrustCenterComplianceUpdatePayload!](objects#trustcentercomplianceupdatepayload)
+
+Update an existing trustCenterCompliance
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterCompliance</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcentercomplianceinput"><code>UpdateTrustCenterComplianceInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateTrustCenterSetting
 
 **Type:** [TrustCenterSettingUpdatePayload!](objects#trustcentersettingupdatepayload)
@@ -5623,6 +6475,56 @@ input<br />
 </td>
 <td>
 <p>New values for the trustCenterSetting</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+faviconFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTrustCenterSubprocessor
+
+**Type:** [TrustCenterSubprocessorUpdatePayload!](objects#trustcentersubprocessorupdatepayload)
+
+Update an existing trustCenterSubprocessor
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterSubprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcentersubprocessorinput"><code>UpdateTrustCenterSubprocessorInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenterSubprocessor</p>
 </td>
 </tr>
 </tbody>

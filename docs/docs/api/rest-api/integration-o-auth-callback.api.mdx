@@ -1,0 +1,70 @@
+---
+id: integration-o-auth-callback
+title: "Handle OAuth callback for integration"
+description: "Handle OAuth callback for integration"
+sidebar_label: "Handle OAuth callback for integration"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV19v4zYM/yqCX7YBid12tz30aWmW3eVu2G5NDx1QFINsy4laW/IkOW4W+LuPlOTYTtxeMKwPtS2SIvnj3+yDlOlE8dJwKYLr4AMVac7I77PKbEhC8zymyTPJpCJcGLZW1PJNAlky975MQWrZ0azk3AsCo2J/V0ybG5nugut9kEhgFQZfaVnmPLFC0ZNG7fuAvdCizJnGd10lCdP2dUvzijnxFJ4B3KsNNfa1aRr4SjasoMhRKjTNcHeH498fOem8o/BPKv6PtYBYzklrADC9iy5mf+RhGMKp2ZV4pI3iYh2APtCy5SlTr93d0sm37MUomhiWkkzJglizvxsoWnOzqeIxLd7HcRWWSEqqaMEMWNK/ku0+bpMi/Xg7X/64fJq9rBajfjSHExk/scQgBzf2hkEYb10MEeoGI6pLKbQD+Ori4n8I6+HMqIpNggLe6RrNWDlCVuX5DkIkBLNQvufmQxUPUvLNNGBKyZFY3W0YsSTiNRKeEQOHPmlJTTWphD4YMRYke8Ff44nWKUD6f7m97+Lo9YlikAdpVJUpPvuYEB/Vpofo8RUeYAImDpAYpNP5URhL4i7eQ9X3GwZoKAvJUb9BZCCCKAd6dE99pyGWMmdUoIpKbJniGWcpajmmn5/lLq9dKo3ChMreuYwf0m9oSg5VgjyXpzxfRNtxwE5g+mHsIuykStCcrJgCp8jCZq61J6NVbk4lrIOaJZXiBlrswyO4R9eA90M/eXTwiFkA+rFfrxmiUFKzgY+ozxZJNDJKugaurSF430kfKpnIqWBk9nnp7QX+SuVA2xhT6usooiUPIcDSs4ZcRtvLoHnsTF5hzboyBeZPbHfqIt4PBNuxocv47jKxmfMM50UF1RQzQgl0FJ5ae+A8wPJBWxhNrWkCWiV8/zkFhukn1ksmrxmQjKnmyUjwNIalAB0iJZ+p1rVUKQFmyM+hWYFvQzYH7WUHLQiK1cGocrPDvf0iVUEhtMHH+7vgOPVuLMuo70Y+MzHqvaUMLHEqT0yx4b56bcZchRcjY5JkuaztTmBj6OJPXYFMAiS6aPYF574/Dg6/fC1VnHXRoW7sPpHBANqcK+rZLRRAtoZBx8QiuIVHZ3YNuYjA3OOzPcbWgUieq83B3u84Dt7GLkywK81d8xzBG8k/E08/ivarWA8u/aqRYc3yfPosZC0iPOfpFJp5xtfVcfceGov+4CS/7Va5RTsbDitZf13qtqNuuWn3tfHVxE66TLarBHUQwSzn6JOuylIq89PQn66g20Z00n2OBE7aeiv4jba4YqvjAC2BWiHAydcCytvIdp2DEtMc/bZdgFG9Q2KlmZ2BKqMJO6zKuPTBBCQ1AOBGXNsty5wa4CpCcrfhTjE8+uqgmCtsLPGOxBLEeTsUrNoX/5HkHFJEo0Cr8C1tAA7sZQwHHEDrkZuVFDoE1vkJdnVdh9SSQ6nWkZfV0a/L+eK31WKKMk1vlLYK8QV9+j68gO6xKlkCkznxQ2gS4Cxx4G8vkcNu01KbgoqeXef+DBmEs7eGnn2BT3gDqEYAFXf7BAKx9/PxaIz6lgnPw4yEYbYBD5B1v8eRAJXYNHgM9aL8TN5SxWmMUD08ggo/k3Co4qS6DubO9OkdGjRpV+PTbbqZtBIz6AKleZO3P/PfL3C2xP53WOGqVtEaeyr8tz+qZOmcxCaJZ/sAQrqu3C7ursS/fwHw3vPK
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Handle OAuth callback for integration"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/integrations/oauth/callback"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Handle OAuth callback for integration
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"code":"","state":""}}},"schema":{"properties":{"code":{"description":"OAuth authorization code","example":"4/0AQl...","type":"string"},"provider":{"description":"OAuth provider (extracted from state)","example":"github","type":"string"},"state":{"description":"OAuth state parameter","example":"eyJvcmdJRCI6IjAxSE...","type":"string"}},"type":"object","title":"OAuthCallbackRequest"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"success":true,"message":"Successfully connected GitHub integration"}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"integration":{"description":"The created/updated integration object"},"message":{"description":"Success or error message","example":"Successfully connected GitHub integration","type":"string"},"success":{"description":"Whether the OAuth callback was processed successfully","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"OAuthCallbackResponse"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

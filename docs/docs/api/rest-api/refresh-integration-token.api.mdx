@@ -1,0 +1,70 @@
+---
+id: refresh-integration-token
+title: "Refresh integration token"
+description: "Refresh integration token"
+sidebar_label: "Refresh integration token"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktz2zYQ/isYXJrMUKKdthed6jjOjJtO47GcSWcyPkAkJCKmABQAxSgc/vfu4kFRouL40IsEAgvst7vfPjpaclsYoZ1Qki7oPV8bbisipOMbw3CXOPXEJc2o0jzs3JYHyduD4EOU08ywLXfcWLr40p0o+HjVuIpoo3ai5Ia82ghXNauM2JoVTxnhrpi/hjf4N7bVNYcLQQC2BF7XzFWwlqAAv+IzsGP4v40wHJA50/CM2qLiW0YXHXV7jbLWGSE3tO8fgzC37q0q9yhRKDBCOlwyrWtReHPyrxYRdwmLxbVtioJbv9yxuuG4uEsoBrB9348RAExwnRPhiYP4/+ebUxuHHbX6yguHEsL5Kz8I233wCCLv0T9WK2kD3t8uLqZQ37KSDHcykLmcynySDOxRRnyHsIDQ7+ceQiBGsposudmB0TfGKIPSJV+zpnbTG948y4vGCLf3DFtxZtCfXx77rKMKtb5JXytmRZE+mBYf+N5/AQsc2yBD6YjrlsI+cLdSSHGtrPN8Bs4taD6Wy7sUpj43waUUUaENZ2mvuayZ5OTq7jaaCvKNqeGsck7bRZ4DurmruIqic6Hy3SVFpMnaJVIqRCWZcqoI34cDgk4ATkcuZwS+yBPsbxvryIoTRoC/ovR4YD/lV8VZyKeYYf/MQGD2wQtESkXNEITo20ncLUZ0CzpkSe6Yta0yJQFhXp7AojFL8Nnw2KAFneJ1xNimKL9XZsuAFfTPzw80O2WlFzlruy9iZ61P5e2AJKicQEnEOp+2b+YXJPE91M1ClZysa9WStTLExzDEn4UaklE8DNEcX7yGe5PNTz+jSkCXDynna6In5kuvjnhcwLEHZoAPvmpAvg+wW+AiOuYz/qdtrDnoyZdqC24fl6rg3t43Gugx10pKrF1Tf+PxOxLPT6L9Q18fPfpTkPOW1/XsSapW5rgvyhl0ibXYNCYxN8E+Aov2YN+4P3SYm1Suz3YKzLu1Sl2IBXuhbwgEaButlXF/HIM7ZGeqKpNScnKhP02UdPEX652EdUuAnwgQn4Ck2EjIVadSL4J8sQKN8CnNmd3jYWO5nxPMmhXc+91/gQ3QhEgLBvrMG0qfrpkDqe2cPFQiKIa/sTrIzAarxGpPVsqFKcQ3B6/2W/woagHxtnghKXxOGzgHWjqHdoaujZ670gzSHZN24ru2befMH8+V2eTxrs3/ur2++Xt5M8M7/aGhDgpxgTb9Or+AUrDUvBDrSErkHzaG4PzdJUrgG9hgtkyOcD03fx2FcDS1PHspstSB93JwCRT5PhrcxcZ20gAzujgaq0JNgCZUYTcE6a7DUg4Z1Pe4DTw3vqWCicwItkKvYP8TFtdQPdastvwZ+K/u4+z2mrxwAjprVGpPEntVHM4oLLG7jUbFHiaB1OYQZzi+DmhmD/jI4fpkHOzH88HdxyX2oFUcI7e+blPDWnQc/Hr1Sge/YjHFvY4CWzYN26BseBOLBlax0bQ69KBhtunOGwjR8BJ+ioOIJHtjeX2Ex/8D1A4hrA==
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Refresh integration token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/integrations/{provider}/refresh"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Refresh integration token
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"OAuth provider (github, slack, etc.)","example":"github","in":"path","name":"provider","required":true,"schema":{"type":"string"}}]}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"Provider":"github"}}},"schema":{"properties":{"Provider":{"description":"OAuth provider (github, slack, etc.)","example":"github","type":"string"}},"type":"object","title":"RefreshIntegrationTokenRequest"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
+

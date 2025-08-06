@@ -889,6 +889,30 @@ ContactUserStatus is enum for the field status
 </tbody>
 </table>
 
+## ControlCategoryOrderField
+
+Properties by which ControlCategory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>referenceFramework</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlControlSource
 
 ControlControlSource is enum for the field source
@@ -1816,86 +1840,8 @@ Properties by which Control connections can be ordered.
 
 </td>
 </tr>
-</tbody>
-</table>
-
-## ControlScheduledJobHistoryOpType
-
-ControlScheduledJobHistoryOpType is enum for the field operation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
 <tr>
-<td>INSERT</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>UPDATE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobHistoryOrderField
-
-Properties by which ControlScheduledJobHistory connections can be ordered.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>history_time</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>created_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>updated_at</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlScheduledJobOrderField
-
-Properties by which ControlScheduledJob connections can be ordered.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>created_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>updated_at</td>
+<td>DELEGATE_name</td>
 <td>
 
 </td>
@@ -2938,6 +2884,18 @@ EvidenceEvidenceStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>SUBMITTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IN_REVIEW</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2976,6 +2934,18 @@ EvidenceHistoryEvidenceStatus is enum for the field status
 </tr>
 <tr>
 <td>NEEDS_RENEWAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SUBMITTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IN_REVIEW</td>
 <td>
 
 </td>
@@ -3108,6 +3078,156 @@ Properties by which Evidence connections can be ordered.
 </tr>
 <tr>
 <td>STATUS</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportExportFormat
+
+ExportExportFormat is enum for the field format
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>CSV</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportExportStatus
+
+ExportExportStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>READY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NODATA</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportExportType
+
+ExportExportType is enum for the field export_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>CONTROL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>EVIDENCE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INTERNALPOLICY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PROCEDURE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>RISK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SUBSCRIBER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TASK</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## ExportOrderField
+
+Properties by which Export connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>export_type</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>format</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>status</td>
 <td>
 
 </td>
@@ -4500,6 +4620,162 @@ Properties by which JobRunnerToken connections can be ordered.
 </tr>
 <tr>
 <td>last_used_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateHistoryJobPlatformType
+
+JobTemplateHistoryJobPlatformType is enum for the field platform
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>GO</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TS</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateHistoryOpType
+
+JobTemplateHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateHistoryOrderField
+
+Properties by which JobTemplateHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PLATFORM</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateJobPlatformType
+
+JobTemplateJobPlatformType is enum for the field platform
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>GO</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TS</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## JobTemplateOrderField
+
+Properties by which JobTemplate connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PLATFORM</td>
 <td>
 
 </td>
@@ -7207,24 +7483,6 @@ ScanScanType is enum for the field scan_type
 </tbody>
 </table>
 
-## ScheduledJobHistoryJobType
-
-ScheduledJobHistoryJobType is enum for the field job_type
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>SSL</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ScheduledJobHistoryOpType
 
 ScheduledJobHistoryOpType is enum for the field operation
@@ -7282,36 +7540,6 @@ Properties by which ScheduledJobHistory connections can be ordered.
 
 </td>
 </tr>
-<tr>
-<td>title</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>JOB_TYPE</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## ScheduledJobJobType
-
-ScheduledJobJobType is enum for the field job_type
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>SSL</td>
-<td>
-
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -7332,18 +7560,6 @@ Properties by which ScheduledJob connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>title</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>JOB_TYPE</td>
 <td>
 
 </td>
@@ -8038,6 +8254,108 @@ Properties by which Subcontrol connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>DELEGATE_name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorHistoryOpType
+
+SubprocessorHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorHistoryOrderField
+
+Properties by which SubprocessorHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorOrderField
+
+Properties by which Subprocessor connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>name</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8497,6 +8815,90 @@ Properties by which TFASetting connections can be ordered.
 </tbody>
 </table>
 
+## TrustCenterComplianceHistoryOpType
+
+TrustCenterComplianceHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceHistoryOrderField
+
+Properties by which TrustCenterComplianceHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterComplianceOrderField
+
+Properties by which TrustCenterCompliance connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TrustCenterHistoryOpType
 
 TrustCenterHistoryOpType is enum for the field operation
@@ -8641,9 +9043,141 @@ Properties by which TrustCenterSettingHistory connections can be ordered.
 </tbody>
 </table>
 
+## TrustCenterSettingHistoryTrustCenterThemeMode
+
+TrustCenterSettingHistoryTrustCenterThemeMode is enum for the field theme_mode
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>EASY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ADVANCED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TrustCenterSettingOrderField
 
 Properties by which TrustCenterSetting connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSettingTrustCenterThemeMode
+
+TrustCenterSettingTrustCenterThemeMode is enum for the field theme_mode
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>EASY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ADVANCED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorHistoryOpType
+
+TrustCenterSubprocessorHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorHistoryOrderField
+
+Properties by which TrustCenterSubprocessorHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorOrderField
+
+Properties by which TrustCenterSubprocessor connections can be ordered.
 
 <p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
 
@@ -8698,6 +9232,12 @@ UserAuthProvider is enum for the field last_login_provider
 
 </td>
 </tr>
+<tr>
+<td>OIDC</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8730,6 +9270,12 @@ UserHistoryAuthProvider is enum for the field last_login_provider
 </tr>
 <tr>
 <td>WEBAUTHN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OIDC</td>
 <td>
 
 </td>
