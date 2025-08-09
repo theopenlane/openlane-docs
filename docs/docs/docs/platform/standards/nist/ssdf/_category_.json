@@ -1,9 +1,0 @@
-{
-  "label": "SSDF",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Information around NIST Secure Software Development Framework (SSDF) compliance standards"
-  },
-  "collapsed": true
-}

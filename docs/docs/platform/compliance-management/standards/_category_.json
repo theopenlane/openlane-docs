@@ -1,0 +1,9 @@
+{
+  "label": "Compliance Standards",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Information around the respective compliance standards supported by the Openlane system"
+  },
+  "collapsed": true
+}

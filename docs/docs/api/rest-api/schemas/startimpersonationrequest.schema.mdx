@@ -1,0 +1,32 @@
+---
+id: startimpersonationrequest
+title: "StartImpersonationRequest"
+description: ""
+sidebar_label: "StartImpersonationRequest"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"duration_hours":0,"organization_id":"string","reason":"string","scopes":["string"],"target_user_id":"string","type":"string"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"StartImpersonationRequest"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"duration_hours":{"description":"Duration in hours (optional, defaults to 1 hour)","nullable":true,"type":"integer"},"organization_id":{"description":"Organization context for impersonation","type":"string"},"reason":{"description":"Reason for the impersonation","type":"string"},"scopes":{"description":"Specific scopes for the impersonation session","items":{"description":"Specific scopes for the impersonation session","type":"string"},"type":"array"},"target_user_id":{"description":"The ID of the user to impersonate","type":"string"},"type":{"description":"The type of impersonation (support, job, admin)","type":"string"}},"type":"object","title":"StartImpersonationRequest"}}
+  schemaType={"response"}
+>
+
+</Schema>

@@ -1,0 +1,9 @@
+{
+  "label": "Controls",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Controls are used to manage specific compliance requirements with an organization"
+  },
+  "collapsed": true
+}

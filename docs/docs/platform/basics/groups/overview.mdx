@@ -1,0 +1,170 @@
+---
+title: Overview
+description: User groups and access management for compliance teams
+sidebar_position: 1
+---
+
+# Groups
+
+Groups provide a mechanism for organizing users, managing permissions, and implementing role-based access control (RBAC) within Openlane's compliance management platform.
+
+Groups in this system are entities that manage collections of users and control their permissions across various objects such as programs, controls, internal policies, and more. Groups can have different roles and permissions, which dictate what actions their members can perform on these objects.
+
+## What Are Groups?
+
+Groups are collections of users with shared responsibilities, permissions, or organizational functions. They enable efficient management of access controls, assignment of compliance tasks, and coordination of compliance activities across teams and departments.
+
+## Compliance Significance
+
+Groups are essential for:
+
+- **Access Control**: Implementing role-based access control (RBAC) for compliance systems
+- **Segregation of Duties**: Ensuring proper separation of responsibilities in compliance processes
+- **Audit Trail**: Tracking group-based permissions and access for compliance auditing
+- **Organizational Structure**: Mapping compliance responsibilities to organizational units
+- **Workflow Management**: Enabling group-based task assignment and collaboration
+
+## Group Types
+
+### Functional Groups
+
+- **Purpose**: Groups based on job functions or expertise areas
+- **Examples**: Security Team, Compliance Officers, IT Administrators
+- **Permissions**: Role-specific access to relevant compliance objects
+- **Responsibilities**: Functional compliance activities and oversight
+
+### Organizational Groups
+
+- **Purpose**: Groups based on organizational structure
+- **Examples**: Regional Teams, Department Groups, Business Units
+- **Permissions**: Organization-level access to relevant entities and programs
+- **Responsibilities**: Entity-specific compliance activities
+
+### Project Groups
+
+- **Purpose**: Temporary groups for specific compliance projects
+- **Examples**: SOC 2 Audit Team, Risk Assessment Team, Implementation Team
+- **Permissions**: Project-specific access to relevant objects and evidence
+- **Responsibilities**: Project deliverables and compliance milestones
+
+### Approval Groups
+
+- **Purpose**: Groups with approval authority for compliance activities
+- **Examples**: Risk Committee, Compliance Committee, Executive Team
+- **Permissions**: Approval rights for policies, risk assessments, and remediation plans
+- **Responsibilities**: Governance and approval of compliance decisions
+
+## Properties
+
+### Core Information
+
+- **ID**: Unique identifier for the group
+- **Name**: Descriptive name for the group
+- **Display Name**: User-friendly display name
+- **Description**: Purpose and scope of the group
+- **Group Type**: Classification of the group (functional, organizational, etc.)
+
+### Configuration
+
+- **Settings**: Group configuration options and preferences
+- **Permissions**: Fine-grained permissions and access controls
+- **Visibility**: Group visibility and discoverability settings
+- **Status**: Active, inactive, or archived status
+
+### Membership Management
+
+- **Members**: Users who belong to the group
+- **Membership Roles**: Roles within the group (member, admin, etc.)
+- **Join Policy**: How users can join the group (invitation, request, automatic)
+- **Membership History**: Audit trail of membership changes
+
+### Organizational Context
+
+- **Organization**: Parent organization that owns the group
+- **Parent Groups**: Hierarchical relationship to parent groups
+- **Child Groups**: Subordinate groups under this group
+- **Related Entities**: Associated business entities or departments
+
+## Group Permissions and Access Control
+
+### Permission Types
+
+Common permission types for compliance groups include object-level permissions for controls, evidence, risks, policies, and programs, as well as system-level permissions for administration and organization management.
+
+### Role-Based Permission Templates
+```yaml
+# Permission templates for common compliance roles
+roles:
+  compliance_officer:
+    permissions:
+      - object: "control"
+        relations: ["can_view", "can_edit", "can_approve"]
+      - object: "evidence"
+        relations: ["can_view", "can_upload", "can_edit"]
+      - object: "risk"
+        relations: ["can_view", "can_assess", "can_edit"]
+      - object: "policy"
+        relations: ["can_view", "can_edit", "can_approve"]
+
+  auditor:
+    permissions:
+      - object: "control"
+        relations: ["can_view"]
+      - object: "evidence"
+        relations: ["can_view", "can_download"]
+      - object: "risk"
+        relations: ["can_view"]
+      - object: "program"
+        relations: ["can_audit"]
+
+  security_admin:
+    permissions:
+      - object: "control"
+        relations: ["can_view", "can_edit", "can_delete"]
+      - object: "evidence"
+        relations: ["can_view", "can_upload", "can_edit", "can_delete"]
+      - object: "scan"
+        relations: ["can_view", "can_execute", "can_configure"]
+```
+
+## Group Workflows
+
+### Compliance Team Setup
+
+Compliance team setup involves creating a main compliance group with full access permissions, followed by specialized subgroups for specific functions like audit coordination and risk management.
+
+### Project-Based Group Management
+
+Project-specific compliance groups can be created with appropriate settings including visibility controls, join policies, and automatic archiving based on project duration.
+
+### Dynamic Permission Management
+
+Group permissions can be dynamically updated based on compliance requirements using GraphQL mutations to modify group settings, permissions, and effective dates.
+
+## Group Membership Management
+
+### Membership Lifecycle
+
+Group membership lifecycle management includes adding members with specific roles, removing members when needed, and updating member roles using GraphQL mutations for group membership operations.
+
+### Bulk Membership Operations
+
+Bulk membership management enables efficient addition of multiple users to groups with specific roles using iterative GraphQL mutation calls for large team management.
+
+## Relationships
+
+Groups integrate with several other Openlane objects:
+
+### Direct Relationships
+- **Organization**: Groups belong to organizations
+- **Group Membership**: Links users to groups with specific roles
+- **Group Settings**: Configuration and preferences for groups
+- **Group Permissions**: Fine-grained access controls for groups
+
+### Indirect Relationships
+- **Users**: Group members who participate in compliance activities
+- **Controls**: Groups may have specific permissions for control management
+- **Evidence**: Groups may be responsible for evidence collection and review
+- **Risks**: Groups may be assigned risk assessment and management responsibilities
+- **Tasks**: Groups can be assigned compliance tasks and activities
+- **Programs**: Groups may be responsible for specific compliance programs

@@ -1,0 +1,32 @@
+---
+id: oauthflowrequest
+title: "OAuthFlowRequest"
+description: ""
+sidebar_label: "OAuthFlowRequest"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"provider":"github","redirectUri":"https://app.example.com/integrations","scopes":["string"]}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OAuthFlowRequest"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"provider":{"description":"OAuth provider (github, slack, etc.)","example":"github","type":"string"},"redirectUri":{"description":"Custom redirect URI after OAuth flow","example":"https://app.example.com/integrations","type":"string"},"scopes":{"description":"Additional OAuth scopes to request","items":{"description":"Additional OAuth scopes to request","type":"string"},"type":"array"}},"type":"object","title":"OAuthFlowRequest"}}
+  schemaType={"response"}
+>
+
+</Schema>

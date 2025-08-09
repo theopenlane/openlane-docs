@@ -1,0 +1,32 @@
+---
+id: startimpersonationreply
+title: "StartImpersonationReply"
+description: ""
+sidebar_label: "StartImpersonationReply"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"error":"string","error_code":"string","expires_at":"2024-07-29T15:51:28.071Z","message":"string","session_id":"string","success":true,"token":"string","unverified":true}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"StartImpersonationReply"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"expires_at":{"description":"When the impersonation token expires","format":"date-time","type":"string"},"message":{"description":"Success message","type":"string"},"session_id":{"description":"The impersonation session ID","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token":{"description":"The impersonation token","type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"StartImpersonationReply"}}
+  schemaType={"response"}
+>
+
+</Schema>

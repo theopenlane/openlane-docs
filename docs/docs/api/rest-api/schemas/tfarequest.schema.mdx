@@ -1,0 +1,32 @@
+---
+id: tfarequest
+title: "TFARequest"
+description: ""
+sidebar_label: "TFARequest"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"recovery_code":"8VM7AL91","totp_code":"113371"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"TFARequest"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"recovery_code":{"description":"The recovery code to validate, only used if TOTP code is not provided","example":"8VM7AL91","type":"string"},"totp_code":{"description":"The TOTP code to validate, always takes precedence over recovery code","example":"113371","type":"string"}},"type":"object","title":"TFARequest"}}
+  schemaType={"response"}
+>
+
+</Schema>
