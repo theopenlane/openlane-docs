@@ -1,0 +1,32 @@
+---
+id: accountfeaturesreply
+title: "AccountFeaturesReply"
+description: ""
+sidebar_label: "AccountFeaturesReply"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"error":"string","error_code":"string","features":["string"],"organization_id":"01J4HMNDSZCCQBTY93BF9CBF5D","success":true,"unverified":true}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AccountFeaturesReply"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"features":{"description":"The features the user has access to in the organization, e.g. policy-and-procedure-module, compliance-module","items":{"description":"The features the user has access to in the organization, e.g. policy-and-procedure-module, compliance-module","type":"string"},"type":"array"},"organization_id":{"description":"The ID of the organization the user has features in","example":"01J4HMNDSZCCQBTY93BF9CBF5D","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"AccountFeaturesReply"}}
+  schemaType={"response"}
+>
+
+</Schema>

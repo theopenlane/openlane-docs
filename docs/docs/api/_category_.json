@@ -1,6 +1,6 @@
 {
   "label": "Openlane API",
-  "position": 3,
+  "position": 1,
   "link": {
     "description": "Interacting with the Openlane API",
     "id": "api/index"

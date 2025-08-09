@@ -1,0 +1,32 @@
+---
+id: webauthnbeginregistrationresponse
+title: "WebauthnBeginRegistrationResponse"
+description: ""
+sidebar_label: "WebauthnBeginRegistrationResponse"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"Reply":{"error":"string","error_code":"string","success":true,"unverified":true},"mediation":"string","publicKey":{"attestation":"string","attestationFormats":["string"],"authenticatorSelection":{"authenticatorAttachment":"string","requireResidentKey":true,"residentKey":"string","userVerification":"string"},"challenge":"string","excludeCredentials":[{"id":"string","transports":["string"],"type":"string"}],"extensions":{},"hints":["string"],"pubKeyCredParams":[{"alg":0,"type":"string"}],"rp":{"id":"string","name":"string"},"timeout":0,"user":{"displayName":"string","id":{},"name":"string"}},"session":"string"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"WebauthnBeginRegistrationResponse"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"Reply":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"},"mediation":{"type":"string"},"publicKey":{"properties":{"attestation":{"type":"string"},"attestationFormats":{"items":{"type":"string"},"type":"array"},"authenticatorSelection":{"properties":{"authenticatorAttachment":{"type":"string"},"requireResidentKey":{"nullable":true,"type":"boolean"},"residentKey":{"type":"string"},"userVerification":{"type":"string"}},"type":"object"},"challenge":{"format":"byte","type":"string"},"excludeCredentials":{"items":{"properties":{"id":{"format":"byte","type":"string"},"transports":{"items":{"type":"string"},"type":"array"},"type":{"type":"string"}},"type":"object"},"type":"array"},"extensions":{"additionalProperties":{},"type":"object"},"hints":{"items":{"type":"string"},"type":"array"},"pubKeyCredParams":{"items":{"properties":{"alg":{"type":"integer"},"type":{"type":"string"}},"type":"object"},"type":"array"},"rp":{"properties":{"id":{"type":"string"},"name":{"type":"string"}},"type":"object"},"timeout":{"type":"integer"},"user":{"properties":{"displayName":{"type":"string"},"id":{},"name":{"type":"string"}},"type":"object"}},"type":"object"},"session":{"type":"string"}},"type":"object","title":"WebauthnBeginRegistrationResponse"}}
+  schemaType={"response"}
+>
+
+</Schema>

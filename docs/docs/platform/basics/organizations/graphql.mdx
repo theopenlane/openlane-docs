@@ -1,0 +1,176 @@
+---
+title: GraphQL Examples
+sidebar_position: 2
+---
+
+# Example GraphQL Operations
+
+### Query Organizations
+```graphql
+query GetOrganizations($first: Int, $where: OrganizationWhereInput) {
+  organizations(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        name
+        displayName
+        description
+        personalOrg
+        avatarRemoteURL
+        dedicatedDb
+        createdAt
+        updatedAt
+        setting {
+          id
+          domains
+          billingContact
+          billingEmail
+          billingPhone
+          billingAddress
+          taxIdentifier
+        }
+      }
+    }
+  }
+}
+```
+
+### Create Organization
+```graphql
+mutation CreateOrganization($input: CreateOrganizationInput!) {
+  createOrganization(input: $input) {
+    organization {
+      id
+      name
+      displayName
+      description
+      personalOrg
+      avatarRemoteURL
+      createdAt
+      setting {
+        id
+        domains
+        billingContact
+        billingEmail
+      }
+    }
+  }
+}
+```
+
+### Update Organization
+```graphql
+mutation UpdateOrganization($id: ID!, $input: UpdateOrganizationInput!) {
+  updateOrganization(id: $id, input: $input) {
+    organization {
+      id
+      name
+      displayName
+      description
+      personalOrg
+      avatarRemoteURL
+      updatedAt
+    }
+  }
+}
+```
+
+### Get Organization with Members
+```graphql
+query GetOrganizationWithMembers($id: ID!) {
+  organization(id: $id) {
+    id
+    name
+    displayName
+    description
+    members {
+      edges {
+        node {
+          id
+          role
+          user {
+            id
+            firstName
+            lastName
+            email
+          }
+        }
+      }
+    }
+    groups {
+      edges {
+        node {
+          id
+          name
+          displayID
+          description
+        }
+      }
+    }
+  }
+}
+```
+
+## Organization Membership
+
+Organization membership involves associating users with an organization and assigning them roles. Membership details include:
+
+- Roles: Roles assigned to members determine their access level and permissions within the organization.
+- Membership Management: Members can be added, updated, or removed using mutations like `createOrgMembership`, `updateOrgMembership`, and `deleteOrgMembership`.
+
+### Update Organization roles
+
+Example:
+
+```graphql
+mutation UpdateUserRoleInOrg($updateOrgMemberId: ID!, $input: UpdateOrgMembershipInput!) {
+  updateOrgMembership(id: $updateOrgMemberId, input: $input) {
+    orgMembership {
+      id
+      role
+      userID
+      organizationID
+    }
+  }
+}
+```
+
+### Adding a User to an Existing Organization
+
+```graphql
+mutation {
+  createOrgMembership(
+    input: {
+      organizationID: "org1",
+      userID: "user3",
+      role: MEMBER
+    }
+  ) {
+    orgMembership {
+      id
+      userID
+      role
+    }
+  }
+}
+```
+
+## Updating Organization Settings
+
+```graphql
+mutation UpdateOrganization($updateOrganizationId: ID!, $input: UpdateOrganizationInput!, $avatarFile: Upload) {
+  updateOrganization(id: $updateOrganizationId, input: $input, avatarFile: $avatarFile) {
+    organization {
+      id
+    }
+  }
+}
+```
+

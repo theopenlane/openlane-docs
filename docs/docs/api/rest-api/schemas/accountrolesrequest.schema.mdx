@@ -1,0 +1,32 @@
+---
+id: accountrolesrequest
+title: "AccountRolesRequest"
+description: ""
+sidebar_label: "AccountRolesRequest"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"object_id":"01J4EXD5MM60CX4YNYN0DEE3Y1","object_type":"organization","relations":["string"],"subject_type":"user"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AccountRolesRequest"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"object_id":{"description":"The ID of the object to check roles for","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","type":"string"},"object_type":{"description":"The type of object to check roles for, e.g. organization, program, procedure, etc","example":"organization","type":"string"},"relations":{"description":"The relations to check roles for, e.g. can_view, can_edit","items":{"description":"The relations to check roles for, e.g. can_view, can_edit","type":"string"},"type":"array"},"subject_type":{"description":"The type of subject to check roles for, e.g. service, user","example":"user","type":"string"}},"type":"object","title":"AccountRolesRequest"}}
+  schemaType={"response"}
+>
+
+</Schema>

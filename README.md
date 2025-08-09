@@ -13,7 +13,7 @@ After installing the needed dependencies, you can run `task dev` to bring up a l
 ### Guidance
 
 When creating new documentation there is very likely a section which already exists that the docs should fit into, try and find it first. If you believe you need to create a new section,
-be certain to follow the documented [style guide](docs/docs/docs/platform/contributing/styleguide.mdx) as well as ensuring:
+be certain to follow the documented [style guide](docs/platform/contributing/styleguide.mdx) as well as ensuring:
 
 * Markdown files are created with the extension `.mdx`
 * Your directory contains a `_category_.json` file with the respective configurations (an empty one of these files can be found [here](templates/_category_.json))
@@ -23,4 +23,4 @@ be certain to follow the documented [style guide](docs/docs/docs/platform/contri
 
 ## Contributing
 
-See the stock [contributing guide](.github/CONTRIBUTING.md) and the documentation specific [contributing guide](docs/docs/docs/platform/contributing/styleguide.mdx) for more information.
+See the stock [contributing guide](.github/CONTRIBUTING.md) and the documentation specific [contributing guide](docs/platform/contributing/styleguide.mdx) for more information.
