@@ -82,7 +82,7 @@ const config: Config = {
               { label: 'Basic Concepts', to: 'docs/platform/basics/overview' },
               { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
               { label: 'Compliance Automation', to: 'docs/platform/compliance-automation/overview' },
-              { label: 'Policy Management', to: 'docs/platform/policy-and-procedure-management/overview' },
+              { label: 'Policy Management', to: 'docs/platform/policy-and-procedure-management/policies/overview' },
               { label: 'Risk Management', to: 'docs/platform/risk-management/overview' },
               { label: 'Trust Center', to: 'docs/platform/trust-center/overview' },
               { label: 'Audit Preparation', to: 'docs/platform/audit/overview' },
@@ -145,7 +145,7 @@ const config: Config = {
               },
               {
                 label: 'OpenAPI Reference',
-                to: `/docs/api/rest-api/openlane-openapi-3-0-0-specifications.info.mdx`,
+                to: `/docs/api`,
               },
               {
                 label: 'Client for Golang',
