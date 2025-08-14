@@ -1,0 +1,27 @@
+---
+title: Integrations
+sidebar_label: Integrations
+displayed_sidebar: platformIntegrations
+description: Overview of available integrations within Openlane
+sidebar_position: 0
+keywords:
+    - slack
+    - github
+    - integration
+---
+
+Openlane supports integrations with popular tools to enhance your workflow and collaboration.
+
+import React from 'react';
+import DocCardList from '@theme/DocCardList';
+import { useCurrentSidebarCategory } from '@docusaurus/theme-common';
+
+export default function AuditDocCards() {
+  const category = useCurrentSidebarCategory();
+
+  const filteredItems = category.items.filter(
+    (item) => item.label != "Integrations"
+  );
+
+  return <DocCardList items={filteredItems} />;
+}

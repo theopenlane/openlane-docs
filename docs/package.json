@@ -37,7 +37,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "use-deep-compare-effect": "^1.8.1",
-    "utf-8-validate": "^6.0.5"
+    "utf-8-validate": "^6.0.5",
+    "@fontsource/outfit": "^5.2.5",
+    "lucide-react": "^0.539.0"
   },
   "browserslist": {
     "production": [

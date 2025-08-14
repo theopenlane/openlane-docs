@@ -1,0 +1,9 @@
+{
+  "label": "Evidence",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Evidence is used to track and manage compliance evidence for a given program"
+  },
+  "collapsed": true
+}

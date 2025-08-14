@@ -1,0 +1,255 @@
+---
+title: Practical Risk Management Guide
+description: Practical guide for identifying, assessing, and managing risks
+sidebar_position: 3
+---
+
+# Practical Risk Management Guide
+
+## Risk Identification Techniques
+
+### Threat Modeling Approach
+**When to use:** New systems, applications, or significant changes
+
+**Process:**
+1. **Asset Inventory**: List what you're protecting (data, systems, processes)
+2. **Threat Actor Analysis**: Who might attack (internal, external, nation-state, criminals)
+3. **Attack Vector Mapping**: How they might attack (network, application, physical, social)
+4. **Impact Analysis**: What happens if they succeed
+
+**Example Output:**
+```
+Asset: Customer Credit Card Database
+Threat: External cybercriminals
+Attack Vectors:
+- SQL injection through web application
+- Privilege escalation through stolen credentials
+- Network lateral movement from compromised workstation
+Impact:
+- $2M+ in PCI fines
+- $500K+ in incident response costs
+- Brand reputation damage
+- Customer churn
+```
+
+### Compliance Gap Analysis
+**When to use:** Preparing for new regulations or standards
+
+**Process:**
+1. **Requirement Mapping**: Map each compliance requirement to current controls
+2. **Gap Identification**: Find requirements without adequate controls
+3. **Risk Assessment**: Evaluate risks of non-compliance
+4. **Prioritization**: Focus on highest-risk gaps first
+
+**Example:**
+```
+GDPR Article 32 - Security of Processing
+Current State: Basic encryption, no key rotation
+Gap: Lack of encryption key management
+Risk: €20M fine potential + data breach exposure
+Priority: High (implement within 90 days)
+```
+
+### Business Process Risk Review
+**When to use:** Regular business reviews or process changes
+
+**Focus Areas:**
+- **Financial processes**: Fraud, errors, unauthorized transactions
+- **HR processes**: Insider threats, privileged access abuse
+- **IT operations**: System failures, data loss, security breaches
+- **Vendor relationships**: Third-party failures, data exposure
+
+## Risk Assessment Methodologies
+
+### Quantitative Risk Assessment
+**Best for:** Financial risks, business-critical systems
+
+**Formula:** `Risk = Probability × Impact (in dollars)`
+
+**Example Calculation:**
+```
+Scenario: Ransomware Attack
+Probability: 15% per year (based on industry data)
+Impact Components:
+- System downtime: $50,000/day × 3 days = $150,000
+- Recovery costs: $75,000
+- Regulatory fines: $200,000
+- Reputation damage: $300,000
+Total Impact: $725,000
+
+Annual Risk Exposure: 15% × $725,000 = $108,750
+```
+
+**Decision Making:**
+- If mitigation costs < $108,750, implement controls
+- If mitigation costs > $108,750, consider accepting or transferring risk
+
+### Qualitative Risk Assessment
+**Best for:** Emerging threats, reputation risks, complex scenarios
+
+**Assessment Matrix:**
+```
+           Very Low  Low    Medium  High   Very High
+Critical      5      10      15      20       25
+High         4       8       12      16       20
+Medium       3       6        9      12       15
+Low          2       4        6       8       10
+Very Low     1       2        3       4        5
+```
+
+**Scoring Guidelines:**
+
+**Impact Levels:**
+- **Critical (5)**: Existential threat to organization
+- **High (4)**: Severe operational or financial impact
+- **Medium (3)**: Moderate impact, manageable consequences
+- **Low (2)**: Minor impact, minimal disruption
+- **Very Low (1)**: Negligible impact
+
+**Likelihood Levels:**
+- **Very High**: Almost certain to occur within 1 year
+- **High**: Likely to occur within 1-2 years
+- **Medium**: Possible within 2-5 years
+- **Low**: Unlikely within 5 years
+- **Very Low**: Rare or theoretical
+
+## Risk Treatment Decision Framework
+
+### When to ACCEPT Risk
+**Criteria:**
+- Risk score ≤ 6 (Low × Medium or below)
+- Cost of mitigation > potential impact
+- Risk aligns with organization's risk appetite
+- No regulatory requirements for mitigation
+
+**Example:**
+```
+Risk: Employee personal device theft
+Impact: Low (devices have remote wipe capability)
+Likelihood: Medium (theft does happen)
+Score: 6
+Decision: Accept with monitoring
+Rationale: Remote wipe capability limits exposure
+```
+
+### When to MITIGATE Risk
+**Criteria:**
+- Risk score ≥ 12 (High impact or likelihood)
+- Cost-effective mitigation available
+- Regulatory compliance requires it
+- Risk affects critical business operations
+
+**Example:**
+```
+Risk: Database SQL injection
+Impact: Critical (customer data exposure)
+Likelihood: High (common attack vector)
+Score: 20
+Decision: Implement parameterized queries + WAF
+Cost: $50,000 implementation + $20,000/year
+Benefit: Reduces risk score to 4
+```
+
+### When to TRANSFER Risk
+**Criteria:**
+- High financial impact but low likelihood
+- Specialized risks outside expertise
+- Cost of insurance < cost of mitigation
+- Contractual requirements allow transfer
+
+**Example:**
+```
+Risk: Natural disaster affecting data center
+Impact: Critical ($2M+ business interruption)
+Likelihood: Very Low (1 in 100 year event)
+Decision: Business interruption insurance
+Cost: $25,000/year premium
+Coverage: $5M business interruption
+```
+
+### When to AVOID Risk
+**Criteria:**
+- Risk is unacceptable and unmitigatable
+- Activity provides low business value
+- Regulatory environment too risky
+- Reputational risks too high
+
+**Example:**
+```
+Risk: Cryptocurrency trading platform
+Regulatory Risk: Unclear/changing regulations
+Reputational Risk: Association with criminal activity
+Decision: Avoid - don't enter this market
+Rationale: Risk/reward ratio unfavorable
+```
+
+## Risk Monitoring and KPIs
+
+### Leading Indicators (Predict Future Risk)
+- **Security awareness training completion rates**
+- **Patch management timelines**
+- **Configuration drift detection**
+- **Vendor security assessment scores**
+- **Employee security incident reporting rates**
+
+### Lagging Indicators (Show Past Performance)
+- **Actual security incidents**
+- **Audit findings and violations**
+- **Insurance claims filed**
+- **Regulatory fines and penalties**
+- **Customer complaints related to security/privacy**
+
+### Risk Trend Analysis
+**Monthly Risk Dashboard:**
+```
+New Risks Identified: 5
+Risks Closed/Mitigated: 3
+Risk Score Trends:
+- Critical risks: 2 (no change)
+- High risks: 8 (+2 from last month)
+- Medium risks: 15 (-1 from last month)
+- Low risks: 22 (+3 from last month)
+
+Top Emerging Risks:
+1. Supply chain compromise (new vendor)
+2. Remote work security gaps
+3. Cloud misconfiguration drift
+```
+
+## Risk Communication Strategies
+
+### Executive Risk Reporting
+**Format:** One-page dashboard with:
+- Top 5 risks by score
+- Risk trend over last 6 months
+- Key risk indicators (green/yellow/red)
+- Required decisions or approvals
+- Budget implications
+
+**Sample Executive Summary:**
+```
+Q1 2024 Risk Summary:
+🔴 CRITICAL: Vendor X security incident affecting our data
+🟡 HIGH: Increasing phishing attacks (25% uptick)
+🟢 MEDIUM: Cloud migration risks well-managed
+
+Action Required:
+- Approve $100K for vendor security assessment
+- Decision needed on cyber insurance increase
+```
+
+### Operational Risk Reporting
+**Format:** Detailed risk register with:
+- Current mitigation status
+- Control effectiveness metrics
+- Action plan progress
+- Resource requirements
+- Timeline updates
+
+### Board-Level Risk Reporting
+**Format:** Quarterly strategic overview:
+- Enterprise risk landscape
+- Risk appetite vs. actual exposure
+- Regulatory compliance status
+- Competitive risk positioning
+- Long-term risk strategy

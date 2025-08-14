@@ -1,9 +1,0 @@
-{
-  "label": "Developing",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "Resources for developing the Openlane stack"
-  },
-  "collapsed": true
-}

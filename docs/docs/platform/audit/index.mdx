@@ -1,0 +1,22 @@
+---
+sidebar_label: Audit Preparation
+title: Audit Preparation
+displayed_sidebar: audit
+sidebar_position: 0
+---
+
+This section provides comprehensive information about the necessary pre-requisites, documentation, and procedural requirements essential for achieving compliance and preparing for audits. It covers best practices, required evidence, and step-by-step guidance to ensure your organization is fully prepared for a successful audit process.
+
+import React from 'react';
+import DocCardList from '@theme/DocCardList';
+import { useCurrentSidebarCategory } from '@docusaurus/theme-common';
+
+export default function AuditDocCards() {
+  const category = useCurrentSidebarCategory();
+
+  const filteredItems = category.items.filter(
+    (item) => item.label != "Audit Preparation"
+  );
+
+  return <DocCardList items={filteredItems} />;
+}

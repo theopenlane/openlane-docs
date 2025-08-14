@@ -6,18 +6,20 @@ import type { Config } from "@docusaurus/types";
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
+const path = require('path');
+
 const config: Config = {
   title: "Openlane",
-  tagline: "Compliance Made Simple",
+  tagline: "Simplify your compliance journey",
   url: "https://www.theopenlane.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon.ico",
   markdown: {
     mermaid: true,
   },
-  themes: ['docusaurus-theme-openapi-docs','@docusaurus/theme-mermaid'],
+  themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid'],
   presets: [
     [
       "classic",
@@ -27,6 +29,7 @@ const config: Config = {
           docItemComponent: "@theme/ApiItem",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          breadcrumbs: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -40,13 +43,34 @@ const config: Config = {
       mermaid: {
         theme: { light: 'default', dark: 'default' },
       },
+      metadata: [
+        { name: 'keywords', content: 'soc2, cyber security, risk management, compliance, audit, openlane, nist, iso27001, fedramp, continuous, grc' },
+
+        // HTML
+        { name: 'description', content: 'The Openlane Documentation has everything you need to build and automate your compliance needs.' },
+        // Open Graph
+        { property: 'og:url', content: 'https://docs.theopenlane.io' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: 'Openlane Documentation' },
+        { property: 'og:description', content: 'The Openlane Documentation has everything you need to build and automate your compliance needs.' },
+        { property: 'og:image', content: 'https://docs.theopenlane.io/img/logo_full.png' },
+
+        // Twitter
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:domain', content: 'docs.theopenlane.io' },
+        { name: 'twitter:url', content: 'https://docs.theopenlane.io' },
+        { name: 'twitter:title', content: 'Openlane Documentation' },
+        { name: 'twitter:description', content: 'The Openlane Documentation has everything you need to build and automate your compliance needs.' },
+        { name: 'twitter:image', content: 'https://docs.theopenlane.io/img/logo_full.png' },
+      ],
       docs: {
         sidebar: {
-          hideable: false,
+          hideable: true,
+          autoCollapseCategories: true,
         },
       },
       navbar: {
-        hideOnScroll: true,
+        hideOnScroll: false,
         title: "",
         logo: {
           alt: "Openlane Logo",
@@ -54,26 +78,47 @@ const config: Config = {
         },
         items: [
           {
-            type: "doc",
+            type: "dropdown",
             docId: "docs/platform/overview",
             position: "left",
             label: "Platform",
+            items: [
+              { label: 'Overview', to: 'docs/platform/overview' },
+              { label: 'Audit Preparation', to: 'docs/platform/audit' },
+              { label: 'Basic Concepts', to: 'docs/platform/basics/overview' },
+              { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
+              { label: 'Compliance Automation', to: 'docs/platform/compliance-automation/overview' },
+              { label: 'Policy Management', to: 'docs/platform/policy-and-procedure-management/policies' },
+              { label: 'Risk Management', to: 'docs/platform/risk-management/overview' },
+              { label: 'Trust Center', to: 'docs/platform/trust-center/overview' },
+              { label: 'Integrations', to: 'docs/platform/integrations/integrations' },
+              { label: 'Glossary', to: 'docs/platform/glossary' },
+            ],
           },
           {
-            type: "doc",
-            docId: "docs/developers/overview",
+            type: "dropdown",
+            docId: "developers/overview",
             position: "left",
             label: "Developers",
+            items: [
+              { label: 'Overview', to: 'docs/developers/overview' },
+              { label: 'Developing', to: 'docs/developers/developing/startup' },
+              { label: 'Security', to: 'docs/developers/security/authentication/sso-setup' },
+              { label: 'Integrations', to: 'docs/developers/integrations/overview' },
+              { label: 'Deployment', to: 'docs/developers/deployment/overview' },
+              { label: 'Documentation Contributions', to: 'docs/developers/contributing/references' },
+
+            ],
           },
           {
-            label: "API Specifications",
-            position: "left",
-            to: "/docs/api",
-          },
-          {
-            label: "GraphQL Explorer",
-            position: "left",
-            to: "/graphql",
+            type: 'dropdown',
+            label: 'API Specifications',
+            position: 'left',
+            items: [
+              { label: 'GraphQL', to: '/docs/api/graph-api' },
+              { label: 'OpenAPI Spec', to: '/docs/api/rest-api' },
+              { label: 'GraphQL Explorer', to: '/graphql' },
+            ],
           },
           {
             href: "https://github.com/theopenlane",
@@ -82,16 +127,85 @@ const config: Config = {
           },
         ],
       },
+
       footer: {
+        links: [
+          {
+            title: 'Learn',
+            items: [
+              {
+                label: 'Platform',
+                href: `/docs/platform/overview`,
+              },
+              {
+                label: 'Developers',
+                href: `/docs/developers/overview`,
+              },
+            ],
+          },
+          {
+            title: 'API',
+            items: [
+              {
+                label: 'GraphQL API Reference',
+                to: `/docs/api/graph-api`,
+              },
+              {
+                label: 'OpenAPI Reference',
+                to: `/docs/api/rest-api`,
+              },
+              {
+                label: 'Client for Golang',
+                href: `https://github.com/theopenlane/core/tree/main/pkg/openlaneclient`,
+                target: '_self',
+                rel: 'dofollow',
+              },
+              {
+                label: 'CLI Client',
+                href: `https://github.com/theopenlane/core/releases`,
+                target: '_self',
+                rel: 'dofollow',
+              },
+            ],
+          },
+          {
+            title: 'Help',
+            items: [
+              {
+                label: 'Support',
+                href: 'https://support.devrev.ai/openlane',
+              },
+              {
+                href: 'https://www.theopenlane.io/company/contact',
+                label: 'Contact',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/theopenlane',
+              },
+              {
+                href: 'https://discord.com/invite/4fq2sxDk7D',
+                label: 'Discord',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/theopenlane',
+              },
+            ],
+          },
+        ],
         logo: {
           alt: 'Openlane Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo_ful.png',
           href: 'https://www.theopenlane.io',
           width: 160,
           height: 51,
         },
-        links: [
-        ],
       },
       prism: {
         defaultLanguage: "bash",
@@ -127,15 +241,18 @@ const config: Config = {
       {
         id: "openapi",
         docsPluginId: "classic",
+
         config: {
-          openlane: {
+          v1: {
+            /** @type {import('docusaurus-plugin-openapi-docs').Options} */
             specPath: "https://api.theopenlane.io/api-docs",
-            outputDir: "docs/api/rest-api",
+            outputDir: "docs/rest-api",
+            showSchemas: true,
+            showExtensions: true,
             downloadUrl:
               "https://api.theopenlane.io/api-docs",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
+            template: path.resolve(__dirname, '../templates/api.mdx'),
+            // infoTemplate: path.resolve(__dirname, '../templates/api-info.mdx'),
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
@@ -158,9 +275,9 @@ const config: Config = {
       {
         name: "openlane-core-startup",
         sourceBaseUrl: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/",
-        outDir: "docs/docs/developers/developing",
+        outDir: "docs/developers/developing",
         documents: ["README.md"],
-        modifyContent(filename, content) {
+        modifyContent(filename: any, content: any) {
           if (filename.includes("README")) {
             return {
               filename: `startup.mdx`,
@@ -186,7 +303,7 @@ ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")
   ],
   customFields: {
     pirschKey: process.env.PIRSCH_KEY,
-  }
+  },
 };
 
 export default async function createConfig() {
@@ -200,3 +317,4 @@ function excerpt(str: string, startString: string, endString: string) {
   const indexEnd = str.indexOf(endString)
   return str.slice(indexStart, indexEnd)
 }
+

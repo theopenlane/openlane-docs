@@ -1,0 +1,36 @@
+.cardContainer {
+    --ifm-link-color: var(--ifm-color-emphasis-800);
+    --ifm-link-hover-color: var(--ifm-color-emphasis-700);
+    --ifm-link-hover-decoration: none;
+
+    box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    transition: all var(--ifm-transition-fast) ease;
+    transition-property: border, box-shadow;
+}
+
+.cardContainer:hover {
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+}
+
+.cardContainer *:last-child {
+    margin-bottom: -4px;
+}
+
+.cardTitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.cardDescription {
+    font-size: 0.8rem;
+}
+
+.DocCardList-hidden .card h2 {
+    margin-bottom: 0;
+}
+
+.DocCardList-hidden {
+    display: none;
+}

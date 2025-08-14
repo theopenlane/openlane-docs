@@ -1,0 +1,9 @@
+{
+  "label": "Authentication Methods",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Authentication methods when interacting with the Openlane stack"
+  },
+  "collapsed": true
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Tenancy",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Tenancy constructs within Openlane"
+  },
+  "collapsed": true
+}

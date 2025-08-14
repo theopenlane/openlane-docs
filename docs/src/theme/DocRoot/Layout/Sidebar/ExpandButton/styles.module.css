@@ -1,0 +1,24 @@
+@media (min-width: 997px) {
+    .expandButton {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex !important;
+        align-items: flex-end;
+        justify-content: right;
+        color: var(--ifm-menu-color) !important;
+        height: 40px;
+        position: sticky;
+        border-radius: 0;
+        border: 0px;
+    }
+
+    .expandButton:hover,
+    .expandButton:focus {
+        background-color: var(--ifm-navbar-background-color);
+    }
+
+    .expandButtonIcon {
+        transform: rotate(180deg);
+    }
+}
