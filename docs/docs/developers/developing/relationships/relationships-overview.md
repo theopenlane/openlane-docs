@@ -1,7 +1,9 @@
 ---
-title: Platform Relationships Overview
+title: Platform Relationships
 description: Visual representation of all primary relationships between compliance objects
 sidebar_position: 1
+sidebar_custom_props:
+    icon: RelationshipsIcon
 ---
 
 This page provides comprehensive visual representations of all primary relationships between compliance objects in the Openlane platform,

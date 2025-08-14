@@ -47,6 +47,7 @@
   --ifm-background-color: #f8fbfc;
   --ifm-footer-background-color: #ffffff;
   --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-link-hover-color: #cc3600;
 
   --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical)* 0.5);
   --ifm-hero-background-color: transparent;
@@ -178,8 +179,7 @@ html[data-theme='dark'] {
   --ifm-background-color: #030607;
   --ifm-footer-background-color: #11171c;
   --ifm-navbar-background-color: #11171c;
-
-
+  --ifm-footer-link-hover-color: #ff6933;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
@@ -428,10 +428,6 @@ article .card h2 {
   color: #f2f3fb;
 }
 
-aside button[class*="collapseSidebarButton"] svg {
-  transform: scale(.7) rotate(180deg);
-}
-
 html .plugin-pages h2 {
   font-size: 36px;
   line-height: 48px;
@@ -525,6 +521,7 @@ html .plugin-docs .theme-doc-markdown h3 {
 
 html .theme-doc-sidebar-container {
   border: 0;
+  padding-top: 20px;
 }
 
 html .table-of-contents {
@@ -561,17 +558,6 @@ html .table-of-contents ul {
 
 .actionLink:hover::after {
   margin-left: 8px;
-}
-
-
-.card {
-  [class*="cardTitle"] {
-    font-size: 1.6rem !important;
-  }
-
-  [class*="cardDescription"] {
-    font-size: 1.2rem !important;
-  }
 }
 
 .cardContentWrapper {
@@ -672,6 +658,15 @@ html[data-theme='dark'] .beta-chip {
 
 a.tsd-anchor[href^="https://undefined"] {
   display: none;
+}
+
+.text--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .runnable-code-block .code-block.no-title pre+div {

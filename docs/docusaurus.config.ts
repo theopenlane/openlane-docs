@@ -5,6 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
+
 const path = require('path');
 
 const config: Config = {
@@ -28,6 +29,7 @@ const config: Config = {
           docItemComponent: "@theme/ApiItem",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          breadcrumbs: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -42,6 +44,8 @@ const config: Config = {
         theme: { light: 'default', dark: 'default' },
       },
       metadata: [
+        { name: 'keywords', content: 'soc2, cyber security, risk management, compliance, audit, openlane, nist, iso27001, fedramp, continuous, grc' },
+
         // HTML
         { name: 'description', content: 'The Openlane Documentation has everything you need to build and automate your compliance needs.' },
         // Open Graph
@@ -61,12 +65,13 @@ const config: Config = {
       ],
       docs: {
         sidebar: {
-          hideable: false,
+          hideable: true,
+          autoCollapseCategories: true,
         },
       },
       navbar: {
         hideOnScroll: false,
-        title: "Openlane",
+        title: "",
         logo: {
           alt: "Openlane Logo",
           src: "img/logo.svg",
@@ -79,15 +84,15 @@ const config: Config = {
             label: "Platform",
             items: [
               { label: 'Overview', to: 'docs/platform/overview' },
+              { label: 'Audit Preparation', to: 'docs/platform/audit' },
               { label: 'Basic Concepts', to: 'docs/platform/basics/overview' },
               { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
               { label: 'Compliance Automation', to: 'docs/platform/compliance-automation/overview' },
-              { label: 'Policy Management', to: 'docs/platform/policy-and-procedure-management/policies/overview' },
+              { label: 'Policy Management', to: 'docs/platform/policy-and-procedure-management/policies' },
               { label: 'Risk Management', to: 'docs/platform/risk-management/overview' },
               { label: 'Trust Center', to: 'docs/platform/trust-center/overview' },
-              { label: 'Audit Preparation', to: 'docs/platform/audit/overview' },
-              // { label: 'Integrations', to: 'platform/integrations' },
-              { label: 'Glossary', to: 'docs/platform/glossary ' },
+              { label: 'Integrations', to: 'docs/platform/integrations/integrations' },
+              { label: 'Glossary', to: 'docs/platform/glossary' },
             ],
           },
           {
@@ -100,6 +105,7 @@ const config: Config = {
               { label: 'Developing', to: 'docs/developers/developing/startup' },
               { label: 'Security', to: 'docs/developers/security/authentication/sso-setup' },
               { label: 'Integrations', to: 'docs/developers/integrations/overview' },
+              { label: 'Deployment', to: 'docs/developers/deployment/overview' },
               { label: 'Documentation Contributions', to: 'docs/developers/contributing/references' },
 
             ],
@@ -110,7 +116,7 @@ const config: Config = {
             position: 'left',
             items: [
               { label: 'GraphQL', to: '/docs/api/graph-api' },
-              { label: 'OpenAPI Spec', to: '/docs/api' },
+              { label: 'OpenAPI Spec', to: '/docs/api/rest-api' },
               { label: 'GraphQL Explorer', to: '/graphql' },
             ],
           },
@@ -121,6 +127,7 @@ const config: Config = {
           },
         ],
       },
+
       footer: {
         links: [
           {
@@ -128,7 +135,7 @@ const config: Config = {
             items: [
               {
                 label: 'Platform',
-                to: `/docs/platform/overview`,
+                href: `/docs/platform/overview`,
               },
               {
                 label: 'Developers',
@@ -145,7 +152,7 @@ const config: Config = {
               },
               {
                 label: 'OpenAPI Reference',
-                to: `/docs/api`,
+                to: `/docs/api/rest-api`,
               },
               {
                 label: 'Client for Golang',
@@ -158,6 +165,19 @@ const config: Config = {
                 href: `https://github.com/theopenlane/core/releases`,
                 target: '_self',
                 rel: 'dofollow',
+              },
+            ],
+          },
+          {
+            title: 'Help',
+            items: [
+              {
+                label: 'Support',
+                href: 'https://support.devrev.ai/openlane',
+              },
+              {
+                href: 'https://www.theopenlane.io/company/contact',
+                label: 'Contact',
               },
             ],
           },
@@ -226,7 +246,7 @@ const config: Config = {
           v1: {
             /** @type {import('docusaurus-plugin-openapi-docs').Options} */
             specPath: "https://api.theopenlane.io/api-docs",
-            outputDir: "docs/api/rest-api",
+            outputDir: "docs/rest-api",
             showSchemas: true,
             showExtensions: true,
             downloadUrl:
@@ -297,3 +317,4 @@ function excerpt(str: string, startString: string, endString: string) {
   const indexEnd = str.indexOf(endString)
   return str.slice(indexStart, indexEnd)
 }
+

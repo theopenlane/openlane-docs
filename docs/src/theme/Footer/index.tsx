@@ -39,11 +39,9 @@ function Footer() {
                     }
                 </div>
                 <div className={clsx('row', styles.bottom)}>
-                    <div className={clsx('col col-1')}>
-                        <a href="https://www.theopenlane.io" target={'_blank'} rel={'dofollow noreferrer'}>
-                            <span className={styles.logo}></span>
-                        </a>
-                    </div>
+                    <a href="https://www.theopenlane.io" target={'_blank'} rel={'dofollow noreferrer'}>
+                        <img src="/img/logo.svg" alt="Logo" className={styles.logo} />
+                    </a>
                 </div>
             </div>
         </footer>

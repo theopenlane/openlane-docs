@@ -38,9 +38,7 @@
     "react-dom": "^19.0.0",
     "use-deep-compare-effect": "^1.8.1",
     "utf-8-validate": "^6.0.5",
-    "@fontsource/outfit": "^5.2.5",
-    "@apify/ui-library": "1.90.1",
-    "styled-components": "6.1.19"
+    "@fontsource/outfit": "^5.2.5"
   },
   "browserslist": {
     "production": [

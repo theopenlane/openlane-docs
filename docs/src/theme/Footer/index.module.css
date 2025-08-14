@@ -12,10 +12,10 @@
 }
 
 .title {
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.2em;
+    font-weight: 600;
     line-height: 2.4rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1rem;
 }
 
 .top {
@@ -24,6 +24,7 @@
 
 .bottom {
     padding-top: 2rem;
+    display: block !important;
 
     :global(.col) {
         display: flex;
@@ -32,12 +33,12 @@
     }
 }
 
-
 .logo {
-    justify-content: center;
-    display: inline-flex;
-    width: 150px;
+    display: block !important;
+    margin: auto;
+    width: 100%;
     height: 40px;
-    background-image: url('/img/logo.svg');
-    background-repeat: no-repeat;
+    align-items: center;
+    text-align: center;
+    opacity: 0.3;
 }
