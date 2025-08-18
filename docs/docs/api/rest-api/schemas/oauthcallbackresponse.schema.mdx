@@ -1,0 +1,32 @@
+---
+id: oauthcallbackresponse
+title: "OAuthCallbackResponse"
+description: ""
+sidebar_label: "OAuthCallbackResponse"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"error":"string","error_code":"string","message":"Successfully connected GitHub integration","success":true,"unverified":true}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OAuthCallbackResponse"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"integration":{"description":"The created/updated integration object"},"message":{"description":"Success or error message","example":"Successfully connected GitHub integration","type":"string"},"success":{"description":"Whether the OAuth callback was processed successfully","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"OAuthCallbackResponse"}}
+  schemaType={"response"}
+>
+
+</Schema>

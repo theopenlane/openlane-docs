@@ -1,0 +1,9 @@
+{
+  "label": "Programs",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Programs are used to track a compliance initiative for a given period"
+  },
+  "collapsed": true
+}

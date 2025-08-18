@@ -1,0 +1,9 @@
+{
+  "label": "Policy and Procedure Management",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Policies and procedures to help manage your organization's compliance and risk"
+  },
+  "collapsed": true
+}

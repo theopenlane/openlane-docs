@@ -1,0 +1,450 @@
+---
+title: GraphQL Examples
+sidebar_position: 5
+---
+
+## Query Groups
+```graphql
+query GetGroups($first: Int, $where: GroupWhereInput) {
+  groups(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        name
+        displayID
+        description
+        settings {
+          visibility
+          joinPolicy
+        }
+        members {
+          edges {
+            node {
+              id
+              user {
+                id
+                firstName
+                lastName
+                email
+              }
+              role
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+
+## Creating Groups
+
+Groups can be created in several ways:
+
+* Basic Creation: Using the `createGroup` mutation.
+* With Members: Using the `createGroupWithMembers` mutation, which allows specifying members at the time of creation.
+* By Cloning: Using the `createGroupByClone` mutation, which allows creating a new group by cloning the permissions and/or members of an existing group.
+
+### Basic Group Creation Mutation
+
+```graphql
+mutation CreateGroup($input: CreateGroupInput!) {
+  createGroup(input: $input) {
+    group {
+      id
+      name
+      displayName
+      owner {
+        id
+        displayName
+      }
+      setting {
+        id
+        joinPolicy
+        syncToGithub
+        syncToSlack
+        visibility
+      }
+      permissions {
+        id
+        objectType
+        permissions
+      }
+      members {
+        id
+        role
+        user {
+          id
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}
+```
+
+# Add Group Member
+```graphql
+mutation CreateGroupMembership($input: CreateGroupMembershipInput!) {
+  createGroupMembership(input: $input) {
+    groupMembership {
+      id
+      role
+      user {
+        id
+        firstName
+        lastName
+        email
+      }
+      group {
+        id
+        name
+        displayID
+      }
+    }
+  }
+}
+```
+
+## Updating Groups
+
+Groups can be updated using the `updateGroup` mutation. This mutation allows modifying various attributes of the group, including its name, description, and settings. Additionally, it supports adding or removing members and inheriting permissions from another group.
+
+### Update Group Mutation
+
+```graphql
+mutation UpdateGroup($id: ID!, $input: UpdateGroupInput!) {
+  updateGroup(id: $id, input: $input) {
+    group {
+      id
+      name
+      displayName
+      description
+      setting {
+        id
+        joinPolicy
+        syncToGithub
+        syncToSlack
+        visibility
+      }
+      permissions {
+        id
+        objectType
+        permissions
+      }
+      members {
+        id
+        role
+        user {
+          id
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}
+```
+
+## Permissions Management
+
+**Use Case**: Create a Program where the user can view the program only but edit controls
+
+1. Create a Program and Control Objects:
+    1. Create a program object and a control object
+    1. Add the member to the program with a role of member (viewer)
+    1. Assign the user to groups as an editor or owner of the control
+
+### Create a Program
+
+```graphql
+mutation CreateProgram($input: CreateProgramInput!) {
+  createProgram(input: $input) {
+    program {
+      id
+      name
+      description
+      status
+      framework
+      owner {
+        id
+        displayName
+      }
+    }
+  }
+}
+```
+
+### Create a Control
+
+```graphql
+mutation CreateControl($input: CreateControlInput!) {
+  createControl(input: $input) {
+    control {
+      id
+      name
+      description
+      status
+      owner {
+        id
+        displayName
+      }
+    }
+  }
+}
+```
+
+### Assign Permissions
+
+Add user as viewer of the program:
+
+```graphql
+mutation AssignViewerToProgram {
+  updateProgram(id: "program1-id", input: {
+    viewers: ["group-id"]
+  }) {
+    program {
+      id
+      name
+      viewers {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+Add user as editor of control:
+
+```graphql
+mutation AssignEditorToControl {
+  updateControl(id: "control1-id", input: {
+    editors: ["group-id"]
+  }) {
+    control {
+      id
+      name
+      editors {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+
+### Permission Inheritance
+
+1. Group Membership:
+    * A user is added as a member of a group
+    * The group has editor permissions of a program
+1. Inherited Permissions:
+    * The user inherits editor permissions for the program through their membership in the group.
+
+**Example**
+
+Create a group:
+
+```graphql
+mutation CreateGroup {
+  createGroup(input: {
+    name: "Group1",
+    description: "A sample group"
+  }) {
+    group {
+      id
+      name
+    }
+  }
+}
+```
+
+Add user to group:
+
+```graphql
+mutation AddUserToGroup {
+  updateGroup(id: "group1-id", input: {
+    members: ["user1-id"]
+  }) {
+    group {
+      id
+      name
+      members {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+Assign group as editor of the program:
+
+```graphql
+mutation AssignEditorToProgram {
+  updateProgram(id: "program1-id", input: {
+    editors: ["group1-id"]
+  }) {
+    program {
+      id
+      name
+      editors {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+## Permission Overlap
+
+When a user is in multiple groups with different permissions for the same object, the most permissive set of permissions typically applies. In this case, if a user is in one group that can edit a program and another group that can only view the program, the user will have the higher level of access, which is the ability to edit the program.
+
+**Example Scenario**:
+    * **Group A**: Has editor permissions for `Program1`.
+    * **Group B**: Has viewer permissions for `Program1`.
+    * **User1**: Is a member of both `Group A` and `Group B`.
+
+Resulting Permissions for `User1`
+    * **Program1**: `User1` will have editor permissions because the editor permission is more permissive than the viewer permission.
+
+
+**Example**
+
+Create groups:
+
+```graphql
+mutation CreateGroups {
+  createGroup(input: {
+    name: "GroupA",
+    description: "Group with editor permissions"
+  }) {
+    group {
+      id
+      name
+    }
+  }
+  createGroup(input: {
+    name: "GroupB",
+    description: "Group with viewer permissions"
+  }) {
+    group {
+      id
+      name
+    }
+  }
+}
+```
+
+Add user to groups:
+
+```graphql
+mutation AddUserToGroups {
+  updateGroup(id: "groupa-id", input: {
+    members: ["user1-id"]
+  }) {
+    group {
+      id
+      name
+      members {
+        id
+        name
+      }
+    }
+  }
+  updateGroup(id: "groupb-id", input: {
+    members: ["user1-id"]
+  }) {
+    group {
+      id
+      name
+      members {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+Assign permissions to groups:
+
+```graphql
+mutation AssignPermissionsToGroups {
+  updateProgram(id: "program1-id", input: {
+    editors: ["groupa-id"],
+    viewers: ["groupb-id"]
+  }) {
+    program {
+      id
+      name
+      editors {
+        id
+        name
+      }
+      viewers {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+In a scenario where a user is in multiple groups with different permissions for the same object, the user will inherit the most permissive set of permissions. If a user is in a group with editor permissions and another group with viewer permissions for the same program, the user will have editor permissions for that program. This ensures that the user has the highest level of access granted by any of their group memberships.
+
+## Revoking Permissions
+
+To revoke specific permissions from a user or group, you can use GraphQL mutations to update the permissions of the relevant objects. This involves removing the user or group from the list of entities that have the specified permissions.
+
+**Examples**
+
+Remove user from the list of editors for a control:
+
+```graphql
+mutation RemoveEditorFromControl {
+  updateControl(id: "control1-id", input: {
+    editors: []
+  }) {
+    control {
+      id
+      name
+      editors {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+Remove group from the list of viewers for a program:
+
+```graphql
+mutation RemoveViewerFromProgram {
+  updateProgram(id: "program1-id", input: {
+    viewers: []
+  }) {
+    program {
+      id
+      name
+      viewers {
+        id
+        name
+      }
+    }
+  }
+}
+```

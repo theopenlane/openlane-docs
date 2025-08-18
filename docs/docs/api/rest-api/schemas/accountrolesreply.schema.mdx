@@ -1,0 +1,32 @@
+---
+id: accountrolesreply
+title: "AccountRolesReply"
+description: ""
+sidebar_label: "AccountRolesReply"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"error":"string","error_code":"string","roles":["string"],"success":true,"unverified":true}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AccountRolesReply"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"roles":{"items":{"type":"string"},"type":"array"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"AccountRolesReply"}}
+  schemaType={"response"}
+>
+
+</Schema>

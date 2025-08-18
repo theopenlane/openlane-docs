@@ -1,0 +1,9 @@
+{
+  "label": "SOC 2",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "All of the things related to SOC 2"
+  },
+  "collapsed": true
+}

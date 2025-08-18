@@ -1,0 +1,183 @@
+---
+title: GraphQL Examples
+sidebar_position: 3
+---
+## GraphQL Operations
+
+### Query Programs
+
+```graphql
+# Get all programs with basic information
+query GetPrograms {
+  programs {
+    edges {
+      node {
+        id
+        name
+        displayID
+        description
+        status
+        programType
+        frameworkName
+        startDate
+        endDate
+        auditorReady
+        auditFirm
+        auditor
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+```
+
+```graphql
+# Get detailed program information with relationships
+query GetProgramDetails($id: ID!) {
+  program(id: $id) {
+    id
+    name
+    displayID
+    description
+    status
+    programType
+    frameworkName
+    frameworkVersion
+    startDate
+    endDate
+    auditorReady
+    auditFirm
+    auditor
+    auditDate
+    createdAt
+    updatedAt
+
+    # Related controls
+    controls {
+      edges {
+        node {
+          id
+          displayID
+          description
+          status
+          category
+          controlType
+          standard {
+            name
+            shortName
+          }
+        }
+      }
+    }
+
+    # Program evidence
+    evidence {
+      edges {
+        node {
+          id
+          name
+          description
+          status
+          source
+          creationDate
+        }
+      }
+    }
+
+    # Program risks
+    risks {
+      edges {
+        node {
+          id
+          name
+          impact
+          likelihood
+          score
+          status
+        }
+      }
+    }
+
+    # Program tasks
+    tasks {
+      edges {
+        node {
+          id
+          title
+          status
+          category
+          due
+          completed
+        }
+      }
+    }
+
+    # Program team
+    users {
+      edges {
+        node {
+          id
+          displayName
+          email
+        }
+      }
+    }
+  }
+}
+```
+
+### Create Program
+
+```graphql
+mutation CreateProgram($input: CreateProgramInput!) {
+  createProgram(input: $input) {
+    program {
+      id
+      name
+      displayID
+      description
+      status
+      programType
+      frameworkName
+      startDate
+      endDate
+    }
+  }
+}
+```
+
+**Input Example:**
+```json
+{
+  "input": {
+    "name": "SOC 2 Type II Audit 2024",
+    "displayID": "SOC2-2024",
+    "description": "Annual SOC 2 Type II audit program covering security, availability, and confidentiality trust service criteria",
+    "status": "IN_PROGRESS",
+    "programType": "FRAMEWORK",
+    "frameworkName": "SOC 2",
+    "frameworkVersion": "2017",
+    "startDate": "2024-01-01T00:00:00Z",
+    "endDate": "2024-12-31T23:59:59Z",
+    "auditFirm": "External Audit Partners",
+    "auditorReady": false
+  }
+}
+```
+
+### Update Program
+
+```graphql
+mutation UpdateProgram($id: ID!, $input: UpdateProgramInput!) {
+  updateProgram(id: $id, input: $input) {
+    program {
+      id
+      name
+      status
+      auditorReady
+      updatedAt
+    }
+  }
+}
+```

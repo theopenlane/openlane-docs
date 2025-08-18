@@ -1,0 +1,9 @@
+{
+  "label": "Relationships",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Openlane object relationships and their interactions"
+  },
+  "collapsed": true
+}

@@ -15,7 +15,7 @@ gitignore: true
 
 # Define glob expressions to ignore
 ignores:
-  - "docs/docs/api/**/**"
+  - "docs/api/**/**"
 
 # Disable progress on stdout (only valid at root)
 noProgress: false

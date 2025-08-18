@@ -17919,6 +17919,24 @@ hasSubcontrolsWith<br />
 
 </td>
 </tr>
+<tr>
+<td>
+hasTasks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>tasks edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTasksWith<br />
+<a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -25502,6 +25520,15 @@ subcontrolIDs<br />
 
 </td>
 </tr>
+<tr>
+<td>
+taskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -26839,6 +26866,15 @@ controlObjectiveIDs<br />
 </tr>
 <tr>
 <td>
+controlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 controlIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -28068,6 +28104,15 @@ delegateID<br />
 <tr>
 <td>
 controlObjectiveIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -31991,6 +32036,15 @@ programIDs<br />
 <tr>
 <td>
 riskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -51060,6 +51114,24 @@ hasControlObjectives<br />
 <td>
 hasControlObjectivesWith<br />
 <a href="inputObjects#controlobjectivewhereinput"><code>[ControlObjectiveWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasControlImplementations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>control_implementations edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasControlImplementationsWith<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>[ControlImplementationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -73864,6 +73936,24 @@ hasControlObjectives<br />
 <td>
 hasControlObjectivesWith<br />
 <a href="inputObjects#controlobjectivewhereinput"><code>[ControlObjectiveWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasControlImplementations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>control_implementations edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasControlImplementationsWith<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>[ControlImplementationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -148676,6 +148766,24 @@ hasRisksWith<br />
 </tr>
 <tr>
 <td>
+hasControlImplementations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>control_implementations edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasControlImplementationsWith<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>[ControlImplementationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasEvidence<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -164242,6 +164350,33 @@ clearSubcontrols<br />
 
 </td>
 </tr>
+<tr>
+<td>
+addTaskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTaskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTasks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -167124,6 +167259,33 @@ clearControlObjectives<br />
 </tr>
 <tr>
 <td>
+addControlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeControlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControlImplementations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addControlIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -169782,6 +169944,33 @@ removeControlObjectiveIDs<br />
 <tr>
 <td>
 clearControlObjectives<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addControlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeControlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControlImplementations<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -177996,6 +178185,33 @@ removeRiskIDs<br />
 <tr>
 <td>
 clearRisks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addControlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeControlImplementationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearControlImplementations<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
