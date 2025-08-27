@@ -53,7 +53,7 @@ const config: Config = {
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'Openlane Documentation' },
         { property: 'og:description', content: 'The Openlane Documentation has everything you need to build and automate your compliance needs.' },
-        { property: 'og:image', content: 'https://docs.theopenlane.io/img/logo_full.png' },
+        { property: 'og:image', content: 'https://docs.theopenlane.io/img/openlane_docs.png' },
 
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
@@ -61,7 +61,7 @@ const config: Config = {
         { name: 'twitter:url', content: 'https://docs.theopenlane.io' },
         { name: 'twitter:title', content: 'Openlane Documentation' },
         { name: 'twitter:description', content: 'The Openlane Documentation has everything you need to build and automate your compliance needs.' },
-        { name: 'twitter:image', content: 'https://docs.theopenlane.io/img/logo_full.png' },
+        { name: 'twitter:image', content: 'https://docs.theopenlane.io/img/openlane_docs.png' },
       ],
       docs: {
         sidebar: {
@@ -116,7 +116,7 @@ const config: Config = {
             position: 'left',
             items: [
               { label: 'GraphQL', to: '/docs/api/graph-api' },
-              { label: 'OpenAPI Spec', to: '/docs/api/rest-api' },
+              { label: 'OpenAPI Spec', to: '/docs/api' },
               { label: 'GraphQL Explorer', to: '/graphql' },
             ],
           },
@@ -152,7 +152,7 @@ const config: Config = {
               },
               {
                 label: 'OpenAPI Reference',
-                to: `/docs/api/rest-api`,
+                to: `/docs/api`,
               },
               {
                 label: 'Client for Golang',
@@ -201,7 +201,7 @@ const config: Config = {
         ],
         logo: {
           alt: 'Openlane Logo',
-          src: 'img/logo_ful.png',
+          src: 'img/logo_full.png',
           href: 'https://www.theopenlane.io',
           width: 160,
           height: 51,
@@ -246,7 +246,7 @@ const config: Config = {
           v1: {
             /** @type {import('docusaurus-plugin-openapi-docs').Options} */
             specPath: "https://api.theopenlane.io/api-docs",
-            outputDir: "docs/rest-api",
+            outputDir: "docs/api/rest-api",
             showSchemas: true,
             showExtensions: true,
             downloadUrl:

@@ -2466,6 +2466,15 @@ input<br />
 <p>values of the jobResult</p>
 </td>
 </tr>
+<tr>
+<td>
+jobResultFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>files to upload as jobResult attachments</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5593,6 +5602,15 @@ input<br />
 </td>
 <td>
 <p>New values for the jobResult</p>
+</td>
+</tr>
+<tr>
+<td>
+jobResultFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>files to upload as jobResult attachments</p>
 </td>
 </tr>
 </tbody>

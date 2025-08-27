@@ -12518,150 +12518,6 @@ owner<br />
 </tr>
 <tr>
 <td>
-controlObjectives<br />
-<a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#controlobjectiveorder"><code>[ControlObjectiveOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for ControlObjectives returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#controlobjectivewhereinput"><code>ControlObjectiveWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ControlObjectives returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-controlImplementations<br />
-<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for ControlImplementations returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ControlImplementations returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
 controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
@@ -12797,6 +12653,150 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlObjectives<br />
+<a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlobjectiveorder"><code>[ControlObjectiveOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlObjectives returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlobjectivewhereinput"><code>ControlObjectiveWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlObjectives returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlImplementations<br />
+<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlimplementationorder"><code>[ControlImplementationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlImplementations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlimplementationwhereinput"><code>ControlImplementationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlImplementations returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -27197,6 +27197,15 @@ dedicatedDb<br />
 </tr>
 <tr>
 <td>
+stripeCustomerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the stripe customer ID this organization is associated to</p>
+</td>
+</tr>
+<tr>
+<td>
 controlCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
@@ -31852,6 +31861,15 @@ dedicatedDb<br />
 <p>Whether the organization has a dedicated database</p>
 </td>
 </tr>
+<tr>
+<td>
+stripeCustomerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the stripe customer ID this organization is associated to</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -32151,6 +32169,15 @@ complianceWebhookToken<br />
 </td>
 <td>
 <p>unique token used to receive compliance webhook events</p>
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAdded<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether or not a payment method has been added to the account</p>
 </td>
 </tr>
 <tr>
@@ -32623,6 +32650,15 @@ complianceWebhookToken<br />
 </td>
 <td>
 <p>unique token used to receive compliance webhook events</p>
+</td>
+</tr>
+<tr>
+<td>
+paymentMethodAdded<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether or not a payment method has been added to the account</p>
 </td>
 </tr>
 </tbody>
@@ -33341,29 +33377,11 @@ stripeSubscriptionID<br />
 </tr>
 <tr>
 <td>
-productTier<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the common name of the product tier the subscription is associated with, e.g. starter tier</p>
-</td>
-</tr>
-<tr>
-<td>
 productPrice<br />
 <a href="scalars#price"><code>Price</code></a>
 </td>
 <td>
 <p>the price of the product tier</p>
-</td>
-</tr>
-<tr>
-<td>
-stripeProductTierID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the product id that represents the tier in stripe</p>
 </td>
 </tr>
 <tr>
@@ -33382,15 +33400,6 @@ active<br />
 </td>
 <td>
 <p>indicates if the subscription is active</p>
-</td>
-</tr>
-<tr>
-<td>
-stripeCustomerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the customer ID the subscription is associated to</p>
 </td>
 </tr>
 <tr>
@@ -33418,15 +33427,6 @@ daysUntilDue<br />
 </td>
 <td>
 <p>number of days until there is a due payment</p>
-</td>
-</tr>
-<tr>
-<td>
-paymentMethodAdded<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether or not a payment method has been added to the account</p>
 </td>
 </tr>
 <tr>
@@ -33750,29 +33750,11 @@ stripeSubscriptionID<br />
 </tr>
 <tr>
 <td>
-productTier<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the common name of the product tier the subscription is associated with, e.g. starter tier</p>
-</td>
-</tr>
-<tr>
-<td>
 productPrice<br />
 <a href="scalars#price"><code>Price</code></a>
 </td>
 <td>
 <p>the price of the product tier</p>
-</td>
-</tr>
-<tr>
-<td>
-stripeProductTierID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the product id that represents the tier in stripe</p>
 </td>
 </tr>
 <tr>
@@ -33791,15 +33773,6 @@ active<br />
 </td>
 <td>
 <p>indicates if the subscription is active</p>
-</td>
-</tr>
-<tr>
-<td>
-stripeCustomerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the customer ID the subscription is associated to</p>
 </td>
 </tr>
 <tr>
@@ -33827,15 +33800,6 @@ daysUntilDue<br />
 </td>
 <td>
 <p>number of days until there is a due payment</p>
-</td>
-</tr>
-<tr>
-<td>
-paymentMethodAdded<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether or not a payment method has been added to the account</p>
 </td>
 </tr>
 <tr>
@@ -42406,6 +42370,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+trustCenterCompliances<br />
+<a href="objects#trustcentercomplianceconnection"><code>TrustCenterComplianceConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcentercomplianceorder"><code>[TrustCenterComplianceOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterCompliances returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcentercompliancewhereinput"><code>TrustCenterComplianceWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterCompliances returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -47971,6 +48007,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+trustCenterCompliances<br />
+<a href="objects#trustcentercomplianceconnection"><code>TrustCenterComplianceConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcentercomplianceorder"><code>[TrustCenterComplianceOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterCompliances returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcentercompliancewhereinput"><code>TrustCenterComplianceWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterCompliances returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -48039,6 +48147,42 @@ tags<br />
 </td>
 <td>
 <p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+standardID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the standard</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standard<br />
+<a href="objects#standard"><code>Standard!</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -48268,6 +48412,24 @@ tags<br />
 </td>
 <td>
 <p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+standardID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>ID of the standard</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
 </td>
 </tr>
 </tbody>
