@@ -116,7 +116,7 @@ const config: Config = {
             position: 'left',
             items: [
               { label: 'GraphQL', to: '/docs/api/graph-api' },
-              { label: 'OpenAPI Spec', to: '/docs/api/rest-api' },
+              { label: 'OpenAPI Spec', to: '/docs/api' },
               { label: 'GraphQL Explorer', to: '/graphql' },
             ],
           },
@@ -152,7 +152,7 @@ const config: Config = {
               },
               {
                 label: 'OpenAPI Reference',
-                to: `/docs/api/rest-api`,
+                to: `/docs/api`,
               },
               {
                 label: 'Client for Golang',
