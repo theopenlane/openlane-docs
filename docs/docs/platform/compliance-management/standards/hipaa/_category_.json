@@ -1,9 +1,9 @@
 {
-  "label": "HIPPA",
+  "label": "HIPAA",
   "position": 8,
   "link": {
     "type": "generated-index",
-    "description": "Information around HIPPA compliance standards"
+    "description": "Information around HIPAA compliance standards"
   },
   "collapsed": true
 }
