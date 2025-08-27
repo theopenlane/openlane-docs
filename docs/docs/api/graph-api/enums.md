@@ -5897,12 +5897,6 @@ Properties by which OrgSubscriptionHistory connections can be ordered.
 </td>
 </tr>
 <tr>
-<td>product_tier</td>
-<td>
-
-</td>
-</tr>
-<tr>
 <td>stripe_subscription_status</td>
 <td>
 
@@ -5952,12 +5946,6 @@ Properties by which OrgSubscription connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>product_tier</td>
 <td>
 
 </td>
@@ -6497,6 +6485,12 @@ ProgramHistoryProgramStatus is enum for the field status
 </td>
 </tr>
 <tr>
+<td>ACTION_REQUIRED</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>READY_FOR_AUDITOR</td>
 <td>
 
@@ -6509,7 +6503,7 @@ ProgramHistoryProgramStatus is enum for the field status
 </td>
 </tr>
 <tr>
-<td>ACTION_REQUIRED</td>
+<td>ARCHIVED</td>
 <td>
 
 </td>
@@ -6779,6 +6773,12 @@ ProgramProgramStatus is enum for the field status
 </td>
 </tr>
 <tr>
+<td>ACTION_REQUIRED</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>READY_FOR_AUDITOR</td>
 <td>
 
@@ -6791,7 +6791,7 @@ ProgramProgramStatus is enum for the field status
 </td>
 </tr>
 <tr>
-<td>ACTION_REQUIRED</td>
+<td>ARCHIVED</td>
 <td>
 
 </td>
@@ -9654,4 +9654,3 @@ Properties by which Webauthn connections can be ordered.
 </tr>
 </tbody>
 </table>
-

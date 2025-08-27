@@ -246,7 +246,7 @@ const config: Config = {
           v1: {
             /** @type {import('docusaurus-plugin-openapi-docs').Options} */
             specPath: "https://api.theopenlane.io/api-docs",
-            outputDir: "docs/rest-api",
+            outputDir: "docs/api/rest-api",
             showSchemas: true,
             showExtensions: true,
             downloadUrl:
