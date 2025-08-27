@@ -9,6 +9,8 @@ sidebar_position: 4
 
 ## ActionPlan
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -295,6 +297,7 @@ risks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -366,6 +369,7 @@ controls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -436,6 +440,7 @@ programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -667,6 +672,8 @@ cursor<br />
 </table>
 
 ## ActionPlanHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -1042,6 +1049,8 @@ actionPlan<br />
 
 ## APIToken
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -1380,6 +1389,8 @@ apiToken<br />
 
 ## Asset
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -1531,6 +1542,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -1601,6 +1613,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -1673,6 +1686,7 @@ viewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -1743,6 +1757,7 @@ scans<br />
 <a href="objects#scanconnection"><code>ScanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -1815,6 +1830,7 @@ entities<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -1885,6 +1901,7 @@ controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -2086,6 +2103,8 @@ cursor<br />
 </table>
 
 ## AssetHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -2344,6 +2363,8 @@ asset<br />
 
 ## AuditLog
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -2480,6 +2501,8 @@ cursor<br />
 </table>
 
 ## Contact
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -2632,6 +2655,7 @@ entities<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -2702,6 +2726,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -2933,6 +2958,8 @@ cursor<br />
 </table>
 
 ## ContactHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -3190,6 +3217,8 @@ contact<br />
 </table>
 
 ## Control
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -3468,6 +3497,7 @@ evidence<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -3538,6 +3568,7 @@ controlObjectives<br />
 <a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -3610,6 +3641,7 @@ tasks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -3680,6 +3712,7 @@ narratives<br />
 <a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -3752,6 +3785,7 @@ risks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -3822,6 +3856,7 @@ actionPlans<br />
 <a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -3894,6 +3929,7 @@ procedures<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -3964,6 +4000,7 @@ internalPolicies<br />
 <a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -4063,6 +4100,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -4133,6 +4171,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -4214,6 +4253,7 @@ programs<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -4284,6 +4324,7 @@ assets<br />
 <a href="objects#assetconnection"><code>AssetConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -4356,6 +4397,7 @@ scans<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -4426,6 +4468,7 @@ controlImplementations<br />
 <a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -4498,6 +4541,7 @@ subcontrols<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -4568,6 +4612,7 @@ scheduledJobs<br />
 <a href="objects#scheduledjobconnection"><code>ScheduledJobConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -4688,6 +4733,8 @@ updatedIDs<br />
 </table>
 
 ## ControlCategory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -4888,6 +4935,8 @@ cursor<br />
 
 ## ControlGroup
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
 <table>
@@ -4916,6 +4965,8 @@ controls<br />
 
 ## ControlGroupConnection
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
 <table>
@@ -4934,6 +4985,8 @@ edges<br />
 </table>
 
 ## ControlGroupEdge
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -4962,6 +5015,8 @@ node<br />
 </table>
 
 ## ControlHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -5334,6 +5389,8 @@ cursor<br />
 
 ## ControlImplementation
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -5467,6 +5524,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -5537,6 +5595,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -5609,6 +5668,7 @@ viewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -5679,6 +5739,7 @@ controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -5751,6 +5812,7 @@ subcontrols<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -5821,6 +5883,7 @@ tasks<br />
 <a href="objects#taskconnection"><code>TaskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -6022,6 +6085,8 @@ cursor<br />
 </table>
 
 ## ControlImplementationHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -6262,6 +6327,8 @@ controlImplementation<br />
 
 ## ControlObjective
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -6431,6 +6498,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -6501,6 +6569,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -6573,6 +6642,7 @@ viewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -6643,6 +6713,7 @@ programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -6715,6 +6786,7 @@ evidence<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -6785,6 +6857,7 @@ controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -6857,6 +6930,7 @@ subcontrols<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -6927,6 +7001,7 @@ internalPolicies<br />
 <a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -6999,6 +7074,7 @@ procedures<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -7069,6 +7145,7 @@ risks<br />
 <a href="objects#riskconnection"><code>RiskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -7141,6 +7218,7 @@ narratives<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -7211,6 +7289,7 @@ tasks<br />
 <a href="objects#taskconnection"><code>TaskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -7412,6 +7491,8 @@ cursor<br />
 </table>
 
 ## ControlObjectiveHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -7709,6 +7790,8 @@ control<br />
 
 ## CustomDomain
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -7972,6 +8055,8 @@ cursor<br />
 
 ## CustomDomainHistory
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -8193,6 +8278,8 @@ customDomain<br />
 
 ## DNSVerification
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -8361,6 +8448,7 @@ customDomains<br />
 <a href="objects#customdomainconnection"><code>CustomDomainConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -8562,6 +8650,8 @@ cursor<br />
 </table>
 
 ## DNSVerificationHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -8838,6 +8928,8 @@ dnsVerification<br />
 
 ## DocumentData
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -8953,6 +9045,7 @@ entities<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -9023,6 +9116,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -9224,6 +9318,8 @@ cursor<br />
 </table>
 
 ## DocumentDataHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -9437,6 +9533,8 @@ documentData<br />
 
 ## Entity
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -9579,6 +9677,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -9649,6 +9748,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -9721,6 +9821,7 @@ viewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -9791,6 +9892,7 @@ contacts<br />
 <a href="objects#contactconnection"><code>ContactConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -9863,6 +9965,7 @@ documents<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -9933,6 +10036,7 @@ notes<br />
 <a href="objects#noteconnection"><code>NoteConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -10005,6 +10109,7 @@ files<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -10076,6 +10181,7 @@ assets<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -10146,6 +10252,7 @@ scans<br />
 <a href="objects#scanconnection"><code>ScanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -10356,6 +10463,8 @@ cursor<br />
 </table>
 
 ## EntityHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -10584,6 +10693,8 @@ cursor<br />
 
 ## EntityType
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -10680,6 +10791,7 @@ entities<br />
 <a href="objects#entityconnection"><code>EntityConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -10881,6 +10993,8 @@ cursor<br />
 </table>
 
 ## EntityTypeHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -11106,6 +11220,8 @@ entity<br />
 
 ## Event
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -11212,6 +11328,7 @@ users<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -11282,6 +11399,7 @@ groups<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -11354,6 +11472,7 @@ integrations<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -11424,6 +11543,7 @@ organizations<br />
 <a href="objects#organizationconnection"><code>OrganizationConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -11496,6 +11616,7 @@ invites<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -11566,6 +11687,7 @@ personalAccessTokens<br />
 <a href="objects#personalaccesstokenconnection"><code>PersonalAccessTokenConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -11638,6 +11760,7 @@ secrets<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -11708,6 +11831,7 @@ orgMemberships<br />
 <a href="objects#orgmembershipconnection"><code>OrgMembershipConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -11780,6 +11904,7 @@ groupMemberships<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -11850,6 +11975,7 @@ subscribers<br />
 <a href="objects#subscriberconnection"><code>SubscriberConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -11922,6 +12048,7 @@ files<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -11992,6 +12119,7 @@ orgSubscriptions<br />
 <a href="objects#orgsubscriptionconnection"><code>OrgSubscriptionConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -12215,6 +12343,8 @@ event<br />
 
 ## Evidence
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -12393,6 +12523,7 @@ controls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -12463,6 +12594,7 @@ subcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -12535,6 +12667,7 @@ controlObjectives<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -12605,6 +12738,7 @@ controlImplementations<br />
 <a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -12677,6 +12811,7 @@ files<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -12748,6 +12883,7 @@ programs<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -12818,6 +12954,7 @@ tasks<br />
 <a href="objects#taskconnection"><code>TaskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -13019,6 +13156,8 @@ cursor<br />
 </table>
 
 ## EvidenceHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -13304,6 +13443,8 @@ evidence<br />
 
 ## Export
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -13446,6 +13587,7 @@ events<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -13516,6 +13658,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -13760,6 +13903,8 @@ export<br />
 
 ## File
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -13965,6 +14110,7 @@ groups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -14107,6 +14253,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -14293,6 +14440,8 @@ cursor<br />
 </table>
 
 ## FileHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -14575,6 +14724,8 @@ cursor<br />
 
 ## Group
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -14726,6 +14877,7 @@ programEditors<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -14796,6 +14948,7 @@ programBlockedGroups<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -14868,6 +15021,7 @@ programViewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -14938,6 +15092,7 @@ riskEditors<br />
 <a href="objects#riskconnection"><code>RiskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -15010,6 +15165,7 @@ riskBlockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -15080,6 +15236,7 @@ riskViewers<br />
 <a href="objects#riskconnection"><code>RiskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -15152,6 +15309,7 @@ controlObjectiveEditors<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -15222,6 +15380,7 @@ controlObjectiveBlockedGroups<br />
 <a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -15294,6 +15453,7 @@ controlObjectiveViewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -15364,6 +15524,7 @@ narrativeEditors<br />
 <a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -15436,6 +15597,7 @@ narrativeBlockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -15506,6 +15668,7 @@ narrativeViewers<br />
 <a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -15578,6 +15741,7 @@ controlImplementationEditors<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -15648,6 +15812,7 @@ controlImplementationBlockedGroups<br />
 <a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -15720,6 +15885,7 @@ controlImplementationViewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -15790,6 +15956,7 @@ scanEditors<br />
 <a href="objects#scanconnection"><code>ScanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -15862,6 +16029,7 @@ scanBlockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -15932,6 +16100,7 @@ scanViewers<br />
 <a href="objects#scanconnection"><code>ScanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -16004,6 +16173,7 @@ entityEditors<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -16074,6 +16244,7 @@ entityBlockedGroups<br />
 <a href="objects#entityconnection"><code>EntityConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -16146,6 +16317,7 @@ entityViewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -16216,6 +16388,7 @@ procedureEditors<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -16288,6 +16461,7 @@ procedureBlockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -16358,6 +16532,7 @@ internalPolicyEditors<br />
 <a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -16430,6 +16605,7 @@ internalPolicyBlockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -16500,6 +16676,7 @@ controlEditors<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -16572,6 +16749,7 @@ controlBlockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -16643,6 +16821,7 @@ mappedControlEditors<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -16713,6 +16892,7 @@ mappedControlBlockedGroups<br />
 <a href="objects#mappedcontrolconnection"><code>MappedControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -16794,6 +16974,7 @@ users<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -16864,6 +17045,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -16936,6 +17118,7 @@ integrations<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -17006,6 +17189,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -17078,6 +17262,7 @@ tasks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -17148,6 +17333,7 @@ members<br />
 <a href="objects#groupmembershipconnection"><code>GroupMembershipConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -17404,6 +17590,8 @@ cursor<br />
 
 ## GroupHistory
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -17640,6 +17828,8 @@ cursor<br />
 
 ## GroupMembership
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -17745,6 +17935,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -17946,6 +18137,8 @@ cursor<br />
 </table>
 
 ## GroupMembershipHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -18282,6 +18475,8 @@ cursor<br />
 
 ## GroupSetting
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -18527,6 +18722,8 @@ cursor<br />
 
 ## GroupSettingHistory
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -18769,6 +18966,8 @@ group<br />
 
 ## Hush
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -18884,6 +19083,7 @@ integrations<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -18954,6 +19154,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -19186,6 +19387,8 @@ cursor<br />
 
 ## HushHistory
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -19407,6 +19610,8 @@ hush<br />
 
 ## Integration
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -19522,6 +19727,7 @@ secrets<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -19592,6 +19798,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -19751,6 +19958,8 @@ cursor<br />
 </table>
 
 ## IntegrationHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -19951,6 +20160,8 @@ cursor<br />
 </table>
 
 ## InternalPolicy
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -20202,6 +20413,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -20272,6 +20484,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -20362,6 +20575,7 @@ controlObjectives<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -20432,6 +20646,7 @@ controlImplementations<br />
 <a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -20504,6 +20719,7 @@ controls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -20574,6 +20790,7 @@ subcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -20646,6 +20863,7 @@ procedures<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -20716,6 +20934,7 @@ narratives<br />
 <a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -20788,6 +21007,7 @@ tasks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -20859,6 +21079,7 @@ risks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -20929,6 +21150,7 @@ programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -21160,6 +21382,8 @@ cursor<br />
 </table>
 
 ## InternalPolicyHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -21517,6 +21741,8 @@ internalPolicy<br />
 
 ## Invite
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -21650,6 +21876,7 @@ events<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -21720,6 +21947,7 @@ groups<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -21942,6 +22170,8 @@ invite<br />
 </table>
 
 ## JobResult
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -22233,6 +22463,8 @@ jobResult<br />
 
 ## JobRunner
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -22392,6 +22624,7 @@ jobRunnerTokens<br />
 <a href="objects#jobrunnertokenconnection"><code>JobRunnerTokenConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -22572,6 +22805,8 @@ cursor<br />
 </table>
 
 ## JobRunnerRegistrationToken
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -22836,6 +23071,8 @@ cursor<br />
 
 ## JobRunnerToken
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -22986,6 +23223,7 @@ jobRunners<br />
 <a href="objects#jobrunnerconnection"><code>JobRunnerConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -23209,6 +23447,8 @@ jobRunner<br />
 
 ## JobTemplate
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -23368,6 +23608,7 @@ scheduledJobs<br />
 <a href="objects#scheduledjobconnection"><code>ScheduledJobConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -23569,6 +23810,8 @@ cursor<br />
 </table>
 
 ## JobTemplateHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -23836,6 +24079,8 @@ jobTemplate<br />
 
 ## MappableDomain
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -23923,6 +24168,7 @@ customDomains<br />
 <a href="objects#customdomainconnection"><code>CustomDomainConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -24124,6 +24370,8 @@ cursor<br />
 </table>
 
 ## MappableDomainHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -24328,6 +24576,8 @@ mappableDomain<br />
 
 ## MappedControl
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -24452,6 +24702,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -24522,6 +24773,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -24594,6 +24846,7 @@ fromControls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -24664,6 +24917,7 @@ toControls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -24736,6 +24990,7 @@ fromSubcontrols<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -24806,6 +25061,7 @@ toSubcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -25007,6 +25263,8 @@ cursor<br />
 </table>
 
 ## MappedControlHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -25238,6 +25496,8 @@ mappedControl<br />
 
 ## ModuleBillingURL
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
 <table>
@@ -25265,6 +25525,8 @@ url<br />
 </table>
 
 ## Narrative
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -25390,6 +25652,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -25460,6 +25723,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -25532,6 +25796,7 @@ viewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -25602,6 +25867,7 @@ satisfies<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -25674,6 +25940,7 @@ programs<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -25745,6 +26012,7 @@ internalPolicies<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -25815,6 +26083,7 @@ procedures<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -26016,6 +26285,8 @@ cursor<br />
 </table>
 
 ## NarrativeHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -26247,6 +26518,8 @@ narrative<br />
 
 ## Note
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -26352,6 +26625,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -26490,6 +26764,8 @@ cursor<br />
 </table>
 
 ## NoteHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -26673,6 +26949,8 @@ cursor<br />
 
 ## Onboarding
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -26779,6 +27057,8 @@ onboarding<br />
 </table>
 
 ## Organization
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -26931,6 +27211,7 @@ controlCreators<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -27001,6 +27282,7 @@ controlImplementationCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -27073,6 +27355,7 @@ controlObjectiveCreators<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -27143,6 +27426,7 @@ evidenceCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -27215,6 +27499,7 @@ groupCreators<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -27285,6 +27570,7 @@ internalPolicyCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -27357,6 +27643,7 @@ mappedControlCreators<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -27427,6 +27714,7 @@ narrativeCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -27499,6 +27787,7 @@ procedureCreators<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -27569,6 +27858,7 @@ programCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -27641,6 +27931,7 @@ riskCreators<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -27711,6 +28002,7 @@ scheduledJobCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -27783,6 +28075,7 @@ standardCreators<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -27853,6 +28146,7 @@ templateCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -27934,6 +28228,7 @@ children<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -28014,6 +28309,7 @@ personalAccessTokens<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -28084,6 +28380,7 @@ apiTokens<br />
 <a href="objects#apitokenconnection"><code>APITokenConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -28156,6 +28453,7 @@ users<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -28226,6 +28524,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -28298,6 +28597,7 @@ events<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -28368,6 +28668,7 @@ secrets<br />
 <a href="objects#hushconnection"><code>HushConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -28449,6 +28750,7 @@ groups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -28519,6 +28821,7 @@ templates<br />
 <a href="objects#templateconnection"><code>TemplateConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -28591,6 +28894,7 @@ integrations<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -28661,6 +28965,7 @@ documents<br />
 <a href="objects#documentdataconnection"><code>DocumentDataConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -28742,6 +29047,7 @@ invites<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -28812,6 +29118,7 @@ subscribers<br />
 <a href="objects#subscriberconnection"><code>SubscriberConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -28884,6 +29191,7 @@ entities<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -28954,6 +29262,7 @@ entityTypes<br />
 <a href="objects#entitytypeconnection"><code>EntityTypeConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -29026,6 +29335,7 @@ contacts<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -29096,6 +29406,7 @@ notes<br />
 <a href="objects#noteconnection"><code>NoteConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -29168,6 +29479,7 @@ tasks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -29238,6 +29550,7 @@ programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -29310,6 +29623,7 @@ procedures<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -29380,6 +29694,7 @@ internalPolicies<br />
 <a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -29452,6 +29767,7 @@ risks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -29522,6 +29838,7 @@ controlObjectives<br />
 <a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -29594,6 +29911,7 @@ narratives<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -29664,6 +29982,7 @@ controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -29736,6 +30055,7 @@ subcontrols<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -29806,6 +30126,7 @@ controlImplementations<br />
 <a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -29878,6 +30199,7 @@ mappedControls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -29948,6 +30270,7 @@ evidence<br />
 <a href="objects#evidenceconnection"><code>EvidenceConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -30020,6 +30343,7 @@ standards<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -30090,6 +30414,7 @@ actionPlans<br />
 <a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -30162,6 +30487,7 @@ customDomains<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -30232,6 +30558,7 @@ jobRunners<br />
 <a href="objects#jobrunnerconnection"><code>JobRunnerConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -30304,6 +30631,7 @@ jobRunnerTokens<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -30374,6 +30702,7 @@ jobRunnerRegistrationTokens<br />
 <a href="objects#jobrunnerregistrationtokenconnection"><code>JobRunnerRegistrationTokenConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -30446,6 +30775,7 @@ dnsVerifications<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -30516,6 +30846,7 @@ jobTemplates<br />
 <a href="objects#jobtemplateconnection"><code>JobTemplateConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -30588,6 +30919,7 @@ scheduledJobs<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -30658,6 +30990,7 @@ jobResults<br />
 <a href="objects#jobresultconnection"><code>JobResultConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -30730,6 +31063,7 @@ scheduledJobRuns<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -30800,6 +31134,7 @@ trustCenters<br />
 <a href="objects#trustcenterconnection"><code>TrustCenterConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -30872,6 +31207,7 @@ assets<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -30942,6 +31278,7 @@ scans<br />
 <a href="objects#scanconnection"><code>ScanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -31014,6 +31351,7 @@ subprocessors<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -31085,6 +31423,7 @@ exports<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -31155,6 +31494,7 @@ members<br />
 <a href="objects#orgmembershipconnection"><code>OrgMembershipConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -31356,6 +31696,8 @@ cursor<br />
 </table>
 
 ## OrganizationHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -31601,6 +31943,8 @@ cursor<br />
 </table>
 
 ## OrganizationSetting
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -31852,6 +32196,7 @@ files<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -32052,6 +32397,8 @@ cursor<br />
 </table>
 
 ## OrganizationSettingHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -32430,6 +32777,8 @@ organization<br />
 
 ## OrgMembership
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -32535,6 +32884,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -32736,6 +33086,8 @@ cursor<br />
 </table>
 
 ## OrgMembershipHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -32940,6 +33292,8 @@ orgMembership<br />
 
 ## OrgSubscription
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -33108,6 +33462,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -33282,6 +33637,8 @@ cursor<br />
 </table>
 
 ## OrgSubscriptionHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -33538,7 +33895,7 @@ cursor<br />
 ## PageInfo
 
 Information about pagination in a connection.
-<https://relay.dev/graphql/connections.htm#sec-undefined.PageInfo>
+https://relay.dev/graphql/connections.htm#sec-undefined.PageInfo
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -33585,6 +33942,8 @@ endCursor<br />
 </table>
 
 ## PersonalAccessToken
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -33764,6 +34123,7 @@ organizations<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -33834,6 +34194,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -34056,6 +34417,8 @@ personalAccessToken<br />
 </table>
 
 ## Procedure
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -34307,6 +34670,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -34377,6 +34741,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -34467,6 +34832,7 @@ controls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -34537,6 +34903,7 @@ subcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -34609,6 +34976,7 @@ internalPolicies<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -34679,6 +35047,7 @@ programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -34751,6 +35120,7 @@ narratives<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -34822,6 +35192,7 @@ risks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -34892,6 +35263,7 @@ tasks<br />
 <a href="objects#taskconnection"><code>TaskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -35123,6 +35495,8 @@ cursor<br />
 </table>
 
 ## ProcedureHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -35480,6 +35854,8 @@ procedure<br />
 
 ## Program
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -35694,6 +36070,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -35764,6 +36141,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -35836,6 +36214,7 @@ viewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -35906,6 +36285,7 @@ controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -35978,6 +36358,7 @@ subcontrols<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -36048,6 +36429,7 @@ controlObjectives<br />
 <a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -36120,6 +36502,7 @@ internalPolicies<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -36190,6 +36573,7 @@ procedures<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -36262,6 +36646,7 @@ risks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -36332,6 +36717,7 @@ tasks<br />
 <a href="objects#taskconnection"><code>TaskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -36404,6 +36790,7 @@ notes<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -36474,6 +36861,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -36546,6 +36934,7 @@ evidence<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -36616,6 +37005,7 @@ narratives<br />
 <a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -36688,6 +37078,7 @@ actionPlans<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -36759,6 +37150,7 @@ users<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -36829,6 +37221,7 @@ members<br />
 <a href="objects#programmembershipconnection"><code>ProgramMembershipConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -37030,6 +37423,8 @@ cursor<br />
 </table>
 
 ## ProgramHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -37330,6 +37725,8 @@ cursor<br />
 
 ## ProgramMembership
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -37566,6 +37963,8 @@ cursor<br />
 
 ## ProgramMembershipHistory
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -37790,6 +38189,8 @@ program<br />
 
 ## Risk
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -37995,6 +38396,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -38065,6 +38467,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -38137,6 +38540,7 @@ viewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -38207,6 +38611,7 @@ controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -38279,6 +38684,7 @@ subcontrols<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -38349,6 +38755,7 @@ procedures<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -38421,6 +38828,7 @@ internalPolicies<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -38491,6 +38899,7 @@ programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -38563,6 +38972,7 @@ actionPlans<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -38633,6 +39043,7 @@ tasks<br />
 <a href="objects#taskconnection"><code>TaskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -38705,6 +39116,7 @@ assets<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -38776,6 +39188,7 @@ entities<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -38846,6 +39259,7 @@ scans<br />
 <a href="objects#scanconnection"><code>ScanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -39095,6 +39509,8 @@ cursor<br />
 </table>
 
 ## RiskHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -39407,6 +39823,8 @@ risk<br />
 
 ## Scan
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -39531,6 +39949,7 @@ blockedGroups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -39601,6 +40020,7 @@ editors<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -39673,6 +40093,7 @@ viewers<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -39744,6 +40165,7 @@ assets<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -39814,6 +40236,7 @@ entities<br />
 <a href="objects#entityconnection"><code>EntityConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -40046,6 +40469,8 @@ cursor<br />
 
 ## ScanHistory
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -40276,6 +40701,8 @@ scan<br />
 
 ## ScheduledJob
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -40418,6 +40845,7 @@ controls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -40488,6 +40916,7 @@ subcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -40698,6 +41127,8 @@ cursor<br />
 </table>
 
 ## ScheduledJobHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -40916,6 +41347,8 @@ cursor<br />
 </table>
 
 ## ScheduledJobRun
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -41211,6 +41644,8 @@ scheduledJob<br />
 </table>
 
 ## SearchResults
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -41645,6 +42080,8 @@ webauthns<br />
 
 ## Standard
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -41868,6 +42305,7 @@ controls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -41938,6 +42376,7 @@ trustCenterCompliances<br />
 <a href="objects#trustcentercomplianceconnection"><code>TrustCenterComplianceConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -42139,6 +42578,8 @@ cursor<br />
 </table>
 
 ## StandardHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -42469,6 +42910,8 @@ standard<br />
 
 ## Subcontrol
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -42746,6 +43189,7 @@ evidence<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -42816,6 +43260,7 @@ controlObjectives<br />
 <a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -42888,6 +43333,7 @@ tasks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -42958,6 +43404,7 @@ narratives<br />
 <a href="objects#narrativeconnection"><code>NarrativeConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -43030,6 +43477,7 @@ risks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -43100,6 +43548,7 @@ actionPlans<br />
 <a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -43172,6 +43621,7 @@ procedures<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -43242,6 +43692,7 @@ internalPolicies<br />
 <a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -43350,6 +43801,7 @@ controlImplementations<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -43420,6 +43872,7 @@ scheduledJobs<br />
 <a href="objects#scheduledjobconnection"><code>ScheduledJobConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -43621,6 +44074,8 @@ cursor<br />
 </table>
 
 ## SubcontrolHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -44014,6 +44469,8 @@ subcontrol<br />
 
 ## Subprocessor
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -44147,6 +44604,7 @@ files<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -44226,6 +44684,7 @@ trustCenterSubprocessors<br />
 <a href="objects#trustcentersubprocessorconnection"><code>TrustCenterSubprocessorConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -44427,6 +44886,8 @@ cursor<br />
 </table>
 
 ## SubprocessorHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -44667,6 +45128,8 @@ subprocessor<br />
 
 ## Subscriber
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -44817,6 +45280,7 @@ events<br />
 <a href="objects#eventconnection"><code>EventConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -45040,6 +45504,8 @@ subscriber<br />
 
 ## Task
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -45227,6 +45693,7 @@ comments<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -45297,6 +45764,7 @@ groups<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -45369,6 +45837,7 @@ internalPolicies<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -45439,6 +45908,7 @@ procedures<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -45511,6 +45981,7 @@ controls<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -45581,6 +46052,7 @@ subcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -45653,6 +46125,7 @@ controlObjectives<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -45723,6 +46196,7 @@ programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -45795,6 +46269,7 @@ risks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -45866,6 +46341,7 @@ controlImplementations<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -45936,6 +46412,7 @@ evidence<br />
 <a href="objects#evidenceconnection"><code>EvidenceConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -46167,6 +46644,8 @@ cursor<br />
 </table>
 
 ## TaskHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -46443,6 +46922,8 @@ task<br />
 
 ## Template
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -46576,6 +47057,7 @@ documents<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -46646,6 +47128,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -46847,6 +47330,8 @@ cursor<br />
 </table>
 
 ## TemplateHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -47086,6 +47571,8 @@ template<br />
 </table>
 
 ## TFASetting
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -47329,6 +47816,8 @@ recoveryCodes<br />
 
 ## TrustCenter
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -47453,6 +47942,7 @@ trustCenterSubprocessors<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -47524,6 +48014,7 @@ trustCenterCompliances<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -47592,6 +48083,8 @@ where<br />
 </table>
 
 ## TrustCenterCompliance
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -47828,6 +48321,8 @@ cursor<br />
 </table>
 
 ## TrustCenterComplianceHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -48143,6 +48638,8 @@ cursor<br />
 
 ## TrustCenterHistory
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -48334,6 +48831,8 @@ cursor<br />
 
 ## TrustCenterSetting
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -48520,6 +49019,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -48739,6 +49239,8 @@ cursor<br />
 </table>
 
 ## TrustCenterSettingHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -49033,6 +49535,8 @@ trustCenterSetting<br />
 
 ## TrustCenterSubprocessor
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -49278,6 +49782,8 @@ cursor<br />
 
 ## TrustCenterSubprocessorHistory
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -49511,6 +50017,8 @@ trustCenter<br />
 
 ## User
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -49698,6 +50206,7 @@ personalAccessTokens<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -49768,6 +50277,7 @@ tfaSettings<br />
 <a href="objects#tfasettingconnection"><code>TFASettingConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -49849,6 +50359,7 @@ groups<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -49919,6 +50430,7 @@ organizations<br />
 <a href="objects#organizationconnection"><code>OrganizationConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -49991,6 +50503,7 @@ webauthns<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -50061,6 +50574,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -50142,6 +50656,7 @@ events<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -50212,6 +50727,7 @@ actionPlans<br />
 <a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -50284,6 +50800,7 @@ subcontrols<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -50354,6 +50871,7 @@ assignerTasks<br />
 <a href="objects#taskconnection"><code>TaskConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -50426,6 +50944,7 @@ assigneeTasks<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -50496,6 +51015,7 @@ programs<br />
 <a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -50568,6 +51088,7 @@ groupMemberships<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -50639,6 +51160,7 @@ orgMemberships<br />
 </td>
 <td>
 
+
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
 <table>
@@ -50709,6 +51231,7 @@ programMemberships<br />
 <a href="objects#programmembershipconnection"><code>ProgramMembershipConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -50910,6 +51433,8 @@ cursor<br />
 </table>
 
 ## UserHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -51192,6 +51717,8 @@ cursor<br />
 
 ## UserSetting
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -51351,6 +51878,7 @@ files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
 <td>
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -51531,6 +52059,8 @@ cursor<br />
 </table>
 
 ## UserSettingHistory
+
+
 
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
@@ -51810,6 +52340,8 @@ user<br />
 
 ## Webauthn
 
+
+
 <p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
 
 - [Node](interfaces#node)
@@ -52001,3 +52533,4 @@ cursor<br />
 </tr>
 </tbody>
 </table>
+
