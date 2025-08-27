@@ -6,6 +6,7 @@
       "dependencies": {
         "@apollo/explorer": "^3.7.0",
         "@docusaurus/core": "3.8.1",
+        "@docusaurus/plugin-debug": "^3.6.3",
         "@docusaurus/preset-classic": "^3.8.1",
         "@docusaurus/theme-mermaid": "^3.8.1",
         "@fontsource/outfit": "^5.2.5",
