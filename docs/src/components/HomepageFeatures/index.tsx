@@ -3,8 +3,8 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Compliance Automation',
-    href: '/docs/platform/compliance-automation/overview',
+    title: 'Compliance Management',
+    href: '/docs/platform/compliance-management/overview',
     Svg: require('@site/static/img/visibility.svg').default,
     description: (
       <>
