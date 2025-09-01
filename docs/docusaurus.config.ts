@@ -5,6 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
+import { themes as prismThemes } from 'prism-react-renderer';
 
 const path = require('path');
 
@@ -206,6 +207,8 @@ const config: Config = {
       },
       prism: {
         defaultLanguage: "bash",
+        theme: prismThemes.vsLight,
+        darkTheme: prismThemes.vsDark,
       },
       languageTabs: [
         {
