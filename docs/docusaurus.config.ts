@@ -41,7 +41,7 @@ const config: Config = {
   themeConfig:
     {
       mermaid: {
-        theme: { light: 'default', dark: 'default' },
+        theme: { light: 'default', dark: 'forest' },
       },
       metadata: [
         { name: 'keywords', content: 'soc2, cyber security, risk management, compliance, audit, openlane, nist, iso27001, fedramp, continuous, grc' },
@@ -79,19 +79,14 @@ const config: Config = {
         items: [
           {
             type: "dropdown",
-            docId: "docs/platform/overview",
             position: "left",
             label: "Platform",
             items: [
               { label: 'Overview', to: 'docs/platform/overview' },
-              { label: 'Audit Preparation', to: 'docs/platform/audit' },
               { label: 'Basic Concepts', to: 'docs/platform/basics/overview' },
               { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
-              { label: 'Compliance Automation', to: 'docs/platform/compliance-automation/overview' },
-              { label: 'Policy Management', to: 'docs/platform/policy-and-procedure-management/policies' },
-              { label: 'Risk Management', to: 'docs/platform/risk-management/overview' },
               { label: 'Trust Center', to: 'docs/platform/trust-center/overview' },
-              { label: 'Integrations', to: 'docs/platform/integrations/integrations' },
+              { label: 'Integrations', to: 'docs/platform/integrations' },
               { label: 'Glossary', to: 'docs/platform/glossary' },
             ],
           },
@@ -115,8 +110,8 @@ const config: Config = {
             label: 'API Specifications',
             position: 'left',
             items: [
-              { label: 'GraphQL', to: '/docs/api/graph-api' },
-              { label: 'OpenAPI Spec', to: '/docs/api' },
+              { label: 'GraphQL', to: '/docs/api/graph-api', activeBasePath: '/docs/api/graph-api' },
+              { label: 'OpenAPI Spec', to: '/docs/api', activeBasePath: '/docs/api/rest-api' },
               { label: 'GraphQL Explorer', to: '/graphql' },
             ],
           },
@@ -149,10 +144,12 @@ const config: Config = {
               {
                 label: 'GraphQL API Reference',
                 to: `/docs/api/graph-api`,
+                activeBasePath: `/docs/api/graph-api`,
               },
               {
                 label: 'OpenAPI Reference',
                 to: `/docs/api`,
+                activeBasePath: `/docs/api/rest-api`,
               },
               {
                 label: 'Client for Golang',

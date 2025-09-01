@@ -6,5 +6,5 @@
     "description": "An overview of the Openlane platform, its components, and architecture",
     "slug": "platform/overview"
   },
-  "collapsed": false
+  "collapsed": true
 }

@@ -1,6 +1,6 @@
 {
   "label": "Deployment",
-  "position": 12,
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "Comprehensive guides for deploying and managing Openlane infrastructure and applications using Helm charts"

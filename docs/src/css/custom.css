@@ -25,29 +25,31 @@
   --ifm-color-primary-lighter: #9eebdd;
   --ifm-color-primary-light: #6ddbcb;
   --ifm-color-primary: #3fc2b4;
-  --ifm-color-primary-dark: #26a69a;
+  --ifm-color-primary-dark: #60E8C8;
   --ifm-color-primary-darker: #1b867d;
   --ifm-color-primary-darkest: #1a6b66;
 
-  --ifm-navbar-link-color: #2e2e2e;
-  --ifm-navbar-link-hover-color: #cc3600;
-  --ifm-menu-color-active: #cc3600;
-  --ifm-toc-link-hover-color: #cc3600;
-  --ifm-breadcrumb-color-active: #cc3600;
+  --ifm-navbar-link-color: #09151D;
+  --ifm-navbar-link-hover-color: #3fc2b4;
+  --ifm-menu-color-active: #3fc2b4;
+  --ifm-toc-link-hover-color: #3fc2b4;
+  --ifm-breadcrumb-color-active: #3fc2b4;
 
   --ifm-navbar-shadow: none;
 
-  --ifm-link-color: #cc3600;
-  --ifm-link-hover-color: #cc3600;
+  --ifm-link-color: #09151D;
+  --ifm-link-hover-color: #3fc2b4;
   --ifm-link-hover-decoration: none;
   --ifm-heading-color: #2e2e2e;
 
   --ifm-global-spacing: 1.6rem !important;
 
-  --ifm-background-color: #f8fbfc;
+  --ifm-background-color: #EFF4F5;
+  --ifm-card-background-color: #ffffff;
   --ifm-footer-background-color: #ffffff;
   --ifm-navbar-background-color: #ffffff;
-  --ifm-footer-link-hover-color: #cc3600;
+  --ifm-footer-link-hover-color: #60E8C8;
+  --ifm-dropdown-background-color: #ffffff;
 
   --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical)* 0.5);
   --ifm-hero-background-color: transparent;
@@ -161,25 +163,27 @@ html[data-theme='dark'] {
   --ifm-color-primary-lighter: #31d0a9;
   --ifm-color-primary-light: #18b491;
   --ifm-color-primary: #109176;
-  --ifm-color-primary-dark: #127361;
+  --ifm-color-primary-dark: #60E8C9;
   --ifm-color-primary-darker: #146153;
   --ifm-color-primary-darkest: #154c43;
 
-  --ifm-navbar-link-color: #f0f0f0;
-  --ifm-navbar-link-hover-color: #ff6933;
-  --ifm-menu-color-active: #ff6933;
-  --ifm-toc-link-hover-color: #ff6933;
-  --ifm-breadcrumb-color-active: #ff6933;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #60E8C9;
+  --ifm-menu-color-active: #60E8C9;
+  --ifm-toc-link-hover-color: #60E8C9;
+  --ifm-breadcrumb-color-active: #60E8C9;
 
-  --ifm-link-color: #ff6933;
-  --ifm-link-hover-color: #ff6933;
+  --ifm-link-color: #ffffff;
+  --ifm-link-hover-color: #60E8C9;
   --ifm-link-hover-decoration: none;
   --ifm-heading-color: #f0f0f0;
 
-  --ifm-background-color: #030607;
-  --ifm-footer-background-color: #11171c;
-  --ifm-navbar-background-color: #11171c;
-  --ifm-footer-link-hover-color: #ff6933;
+  --ifm-background-color: #162431;
+  --ifm-footer-background-color: #09151D;
+  --ifm-navbar-background-color: #09151D;
+  --ifm-card-background-color: #233440;
+  --ifm-footer-link-hover-color: #60E8C9;
+  --ifm-dropdown-background-color: #09151D;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 

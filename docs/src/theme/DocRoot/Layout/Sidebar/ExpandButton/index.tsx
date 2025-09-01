@@ -1,9 +1,9 @@
-import { type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { translate } from '@docusaurus/Translate';
+import IconArrow from '@theme/Icon/Arrow';
 import type { Props } from '@theme/DocRoot/Layout/Sidebar/ExpandButton';
 
 import styles from './styles.module.css';
-import { PanelRightOpenIcon } from 'lucide-react';
 
 export default function DocRootLayoutSidebarExpandButton({
     toggleSidebar,
@@ -27,7 +27,7 @@ export default function DocRootLayoutSidebarExpandButton({
             role="button"
             onKeyDown={toggleSidebar}
             onClick={toggleSidebar}>
-            <PanelRightOpenIcon className={styles.expandButtonIcon} />
+            <IconArrow className={styles.expandButtonIcon} />
         </div>
     );
 }

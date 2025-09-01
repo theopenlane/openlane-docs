@@ -1,25 +1,36 @@
-@media (min-width: 768px) {
+:root {
+    --docusaurus-collapse-button-bg: transparent;
+    --docusaurus-collapse-button-bg-hover: rgb(0 0 0 / 10%);
+}
+
+[data-theme='dark']:root {
+    --docusaurus-collapse-button-bg: rgb(255 255 255 / 5%);
+    --docusaurus-collapse-button-bg-hover: rgb(255 255 255 / 10%);
+}
+
+@media (min-width: 997px) {
     .collapseSidebarButton {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        display: flex !important;
-        align-items: flex-end;
-        justify-content: right;
-        color: var(--ifm-menu-color) !important;
+        display: block !important;
+        background-color: var(--docusaurus-collapse-button-bg);
         height: 40px;
         position: sticky;
+        bottom: 0;
         border-radius: 0;
-        border: 0px;
+        border: 1px solid var(--ifm-toc-border-color);
     }
 
     .collapseSidebarButtonIcon {
+        transform: rotate(180deg);
         margin-top: 4px;
+    }
+
+    [dir='rtl'] .collapseSidebarButtonIcon {
+        transform: rotate(0);
     }
 
     .collapseSidebarButton:hover,
     .collapseSidebarButton:focus {
-        background-color: var(--ifm-navbar-background-color);
+        background-color: var(--docusaurus-collapse-button-bg-hover);
     }
 }
 

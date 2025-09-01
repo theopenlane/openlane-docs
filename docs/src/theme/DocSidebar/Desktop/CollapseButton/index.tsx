@@ -4,8 +4,7 @@ import { translate } from '@docusaurus/Translate';
 import IconArrow from '@theme/Icon/Arrow';
 import type { Props } from '@theme/DocSidebar/Desktop/CollapseButton';
 
-import styles from './styles.module.css'
-import { PanelLeftCloseIcon } from 'lucide-react';
+import styles from './styles.module.css';
 
 export default function CollapseButton({ onClick }: Props): ReactNode {
     return (
@@ -26,7 +25,7 @@ export default function CollapseButton({ onClick }: Props): ReactNode {
                 styles.collapseSidebarButton,
             )}
             onClick={onClick}>
-            <PanelLeftCloseIcon className={styles.collapseSidebarButtonIcon} />
+            <IconArrow className={styles.collapseSidebarButtonIcon} />
         </button>
     );
 }
