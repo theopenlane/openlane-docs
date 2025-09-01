@@ -207,7 +207,8 @@ const config: Config = {
       },
       prism: {
         defaultLanguage: "bash",
-        theme: prismThemes.github,
+        theme: prismThemes.oneLight,
+        darkTheme: prismThemes.oneDark,
       },
       languageTabs: [
         {
