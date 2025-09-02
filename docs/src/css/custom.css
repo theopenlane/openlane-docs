@@ -245,3 +245,8 @@ html .table-of-contents ul {
 .theme-doc-sidebar-menu .menu__link {
   font-weight: 400;
 }
+
+/* Removes the next + previous controls from bottom of pages */
+.pagination-nav {
+  display: none;
+}
