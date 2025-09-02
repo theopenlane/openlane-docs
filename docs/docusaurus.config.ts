@@ -42,7 +42,7 @@ const config: Config = {
   themeConfig:
     {
       mermaid: {
-        theme: { light: 'default', dark: 'forest' },
+        theme: { light: 'default', dark: 'dark' },
       },
       metadata: [
         { name: 'keywords', content: 'soc2, cyber security, risk management, compliance, audit, openlane, nist, iso27001, fedramp, continuous, grc' },
