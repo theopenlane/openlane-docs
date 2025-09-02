@@ -1,0 +1,8 @@
+{
+  "label": "API Schemas",
+  "position": 99,
+  "link": {
+    "description": "Schemas for the Openlane REST API",
+    "id": "api/rest-api/schemas"
+  }
+}
