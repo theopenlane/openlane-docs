@@ -217,7 +217,7 @@ Organizations
 
 - [Controls Overview](docs/platform/compliance-management/controls/overview.mdx)
 - [Evidence Overview](docs/platform/compliance-management/evidence/overview.mdx)
-- [Risks Overview](docs/platform/risk-management/overview.mdx)
+- [Risks Overview](docs/platform/compliance-management/risk-management/overview.mdx)
 - [Programs Overview](docs/platform/compliance-management/programs/overview.mdx)
 
 ### Organizational Relationships

@@ -1,9 +1,9 @@
 {
-  "label": "Base Objects",
+  "label": "Basic Concepts",
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Base objects that are used throughout the Openlane system, such as users, organizations, and projects. These objects form the foundation of the Openlane platform and are essential for managing compliance and security standards."
+    "description": "Basic Concepts that are used throughout the Openlane system, such as users, organizations, and projects. These objects form the foundation of the Openlane platform and are essential for managing compliance and security standards."
   },
   "collapsed": true
 }

@@ -3,8 +3,8 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Compliance Automation',
-    href: '/docs/platform/compliance-automation/overview',
+    title: 'Compliance Management',
+    href: '/docs/platform/compliance-management/overview',
     Svg: require('@site/static/img/visibility.svg').default,
     description: (
       <>
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Policy and Procedure Management',
-    href: '/docs/platform/policy-and-procedure-management/policies',
+    href: '/docs/platform/compliance-management/policy-and-procedure-management/policies',
     Svg: require('@site/static/img/document.svg').default,
     description: (
       <>
@@ -71,19 +71,9 @@ export default function HomepageFeatures() {
             <li>Real-time control validation</li>
           </ul>
           <a href="/docs/platform/overview" className={styles.ctaButton}>
-            Get Started
+            Getting Started
           </a>
-        </div>
 
-        <div className={styles.heroVideo}>
-          <div className={styles.videoFrame}>
-            <iframe
-              src="https://customer-z87tlj9ktpj11m2t.cloudflarestream.com/3b146dbe7ac6ca6e831a0151ffb79300/iframe?poster=https%3A%2F%2Fcustomer-z87tlj9ktpj11m2t.cloudflarestream.com%2F3b146dbe7ac6ca6e831a0151ffb79300%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
-              loading="lazy"
-              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-            ></iframe>
-          </div>
-          <p className={styles.videoCaption}>Quick demo of Openlane in action.</p>
         </div>
       </div>
 
