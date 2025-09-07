@@ -20399,6 +20399,24 @@ dismissedImprovementSuggestions<br />
 </tr>
 <tr>
 <td>
+fileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>This will contain the most recent file id if this policy was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create/update the policy</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -21216,6 +21234,15 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+file<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -21644,6 +21671,24 @@ dismissedImprovementSuggestions<br />
 </td>
 <td>
 <p>improvement suggestions dismissed by the user for the policy</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the most recent file id if this policy was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create/update the policy</p>
 </td>
 </tr>
 </tbody>
@@ -34656,6 +34701,24 @@ dismissedImprovementSuggestions<br />
 </tr>
 <tr>
 <td>
+fileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>This will contain the most recent file id if this procedure was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create/update the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -35329,6 +35392,15 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+file<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -35757,6 +35829,24 @@ dismissedImprovementSuggestions<br />
 </td>
 <td>
 <p>improvement suggestions dismissed by the user for the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the most recent file id if this procedure was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create/update the procedure</p>
 </td>
 </tr>
 </tbody>
@@ -48601,6 +48691,27 @@ deletedID<br />
 </td>
 <td>
 <p>Deleted trustCenter ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDomainCreatePayload
+
+Return response for createTrustCenterDomain mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+customDomain<br />
+<a href="objects#customdomain"><code>CustomDomain!</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
