@@ -3204,6 +3204,29 @@ input<br />
 </tbody>
 </table>
 
+## createTrustCenterDomain
+
+**Type:** [TrustCenterDomainCreatePayload!](objects#trustcenterdomaincreatepayload)
+
+Create a new trustCenterSetting
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterdomaininput"><code>CreateTrustCenterDomainInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createTrustCenterSetting
 
 **Type:** [TrustCenterSettingCreatePayload!](objects#trustcentersettingcreatepayload)
@@ -3263,6 +3286,70 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterSubprocessor</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createUploadInternalPolicy
+
+**Type:** [InternalPolicyCreatePayload!](objects#internalpolicycreatepayload)
+
+Create a new internalPolicy via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+policyFile<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>file containing values of the internalPolicy</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the owner organization</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createUploadProcedure
+
+**Type:** [ProcedureCreatePayload!](objects#procedurecreatepayload)
+
+Create a new procedure via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+procedureFile<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>file containing values of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the owner organization</p>
 </td>
 </tr>
 </tbody>

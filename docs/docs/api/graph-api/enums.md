@@ -3161,7 +3161,7 @@ ExportExportType is enum for the field export_type
 </td>
 </tr>
 <tr>
-<td>INTERNALPOLICY</td>
+<td>INTERNAL_POLICY</td>
 <td>
 
 </td>
