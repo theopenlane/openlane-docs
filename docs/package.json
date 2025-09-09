@@ -40,7 +40,7 @@
     "use-deep-compare-effect": "^1.8.1",
     "utf-8-validate": "^6.0.5",
     "@fontsource/outfit": "^5.2.5",
-    "lucide-react": "^0.542.0"
+    "lucide-react": "^0.543.0"
   },
   "browserslist": {
     "production": [
