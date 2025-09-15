@@ -14087,6 +14087,42 @@ storagePath<br />
 </tr>
 <tr>
 <td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the file</p>
+</td>
+</tr>
+<tr>
+<td>
+storageRegion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the region the file is stored in, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+storageProvider<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the storage provider the file is stored in, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+lastAccessedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 user<br />
 <a href="objects#user"><code>[User!]</code></a>
 </td>
@@ -14334,6 +14370,150 @@ subprocessor<br />
 <a href="objects#subprocessor"><code>[Subprocessor!]</code></a>
 </td>
 <td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrations<br />
+<a href="objects#integrationconnection"><code>IntegrationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#integrationorder"><code>[IntegrationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#integrationwhereinput"><code>IntegrationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+secrets<br />
+<a href="objects#hushconnection"><code>HushConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#hushorder"><code>[HushOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Hushes returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#hushwhereinput"><code>HushWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Hushes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -14648,6 +14828,42 @@ storagePath<br />
 </td>
 <td>
 <p>the storage path is the second-level directory of the file path, typically the correlating logical object ID the file is associated with; files can be stand alone objects and not always correlated to a logical one, so this path of the tree may be empty</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the file</p>
+</td>
+</tr>
+<tr>
+<td>
+storageRegion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the region the file is stored in, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+storageProvider<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the storage provider the file is stored in, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+lastAccessedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -19069,6 +19285,42 @@ secretName<br />
 </tr>
 <tr>
 <td>
+credentialSet<br />
+<a href="scalars#credentialset"><code>CredentialSet</code></a>
+</td>
+<td>
+<p>a credential set, typically where you have multiple tokens or keys that compose one credential such as when accessing s3 and using access key ID, secret key, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the credential</p>
+</td>
+</tr>
+<tr>
+<td>
+lastUsedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+expiresAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token expires</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -19141,6 +19393,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -19515,6 +19839,42 @@ secretName<br />
 <p>the generic name of a secret associated with the organization</p>
 </td>
 </tr>
+<tr>
+<td>
+credentialSet<br />
+<a href="scalars#credentialset"><code>CredentialSet</code></a>
+</td>
+<td>
+<p>a credential set, typically where you have multiple tokens or keys that compose one credential such as when accessing s3 and using access key ID, secret key, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the credential</p>
+</td>
+</tr>
+<tr>
+<td>
+lastUsedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+expiresAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the token expires</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -19690,7 +20050,7 @@ name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>the name of the integration - must be unique within the organization</p>
+<p>the name of the integration</p>
 </td>
 </tr>
 <tr>
@@ -19708,7 +20068,25 @@ kind<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-
+<p>the kind of integration, such as github, slack, s3 etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationType<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the type of integration, such as communicattion, storage, SCM, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the integration</p>
 </td>
 </tr>
 <tr>
@@ -19785,6 +20163,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Hushes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -20066,7 +20516,7 @@ name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>the name of the integration - must be unique within the organization</p>
+<p>the name of the integration</p>
 </td>
 </tr>
 <tr>
@@ -20084,7 +20534,25 @@ kind<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-
+<p>the kind of integration, such as github, slack, s3 etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationType<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the type of integration, such as communicattion, storage, SCM, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the integration</p>
 </td>
 </tr>
 </tbody>
@@ -47115,6 +47583,15 @@ description<br />
 </tr>
 <tr>
 <td>
+kind<br />
+<a href="enums#templatetemplatekind"><code>TemplateTemplateKind</code></a>
+</td>
+<td>
+<p>the kind of template, e.g. questionnaire</p>
+</td>
+</tr>
+<tr>
+<td>
 jsonconfig<br />
 <a href="scalars#map"><code>Map!</code></a>
 </td>
@@ -47547,6 +48024,15 @@ description<br />
 </td>
 <td>
 <p>the description of the template</p>
+</td>
+</tr>
+<tr>
+<td>
+kind<br />
+<a href="enums#templatehistorytemplatekind"><code>TemplateHistoryTemplateKind</code></a>
+</td>
+<td>
+<p>the kind of template, e.g. questionnaire</p>
 </td>
 </tr>
 <tr>

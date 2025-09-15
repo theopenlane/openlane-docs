@@ -3292,6 +3292,12 @@ Properties by which FileHistory connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>last_accessed_at</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3312,6 +3318,12 @@ Properties by which File connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>last_accessed_at</td>
 <td>
 
 </td>
@@ -3874,6 +3886,18 @@ Properties by which HushHistory connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>last_used_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>expires_at</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3906,6 +3930,18 @@ Properties by which Hush connections can be ordered.
 </tr>
 <tr>
 <td>kind</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>last_used_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>expires_at</td>
 <td>
 
 </td>
@@ -3982,6 +4018,12 @@ Properties by which IntegrationHistory connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>integration_type</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -4014,6 +4056,12 @@ Properties by which Integration connections can be ordered.
 </tr>
 <tr>
 <td>kind</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>integration_type</td>
 <td>
 
 </td>
@@ -5549,13 +5597,13 @@ OrganizationSettingHistorySSOProvider is enum for the field identity_provider
 </td>
 </tr>
 <tr>
-<td>ONELOGIN</td>
+<td>ONE_LOGIN</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>GOOGLEWORKSPACE</td>
+<td>GOOGLE_WORKSPACE</td>
 <td>
 
 </td>
@@ -5651,13 +5699,13 @@ OrganizationSettingSSOProvider is enum for the field identity_provider
 </td>
 </tr>
 <tr>
-<td>ONELOGIN</td>
+<td>ONE_LOGIN</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>GOOGLEWORKSPACE</td>
+<td>GOOGLE_WORKSPACE</td>
 <td>
 
 </td>
@@ -8752,6 +8800,30 @@ Properties by which TemplateHistory connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>KIND</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TemplateHistoryTemplateKind
+
+TemplateHistoryTemplateKind is enum for the field kind
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>QUESTIONNAIRE</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8784,6 +8856,30 @@ Properties by which Template connections can be ordered.
 </tr>
 <tr>
 <td>TEMPLATE_TYPE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>KIND</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TemplateTemplateKind
+
+TemplateTemplateKind is enum for the field kind
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>QUESTIONNAIRE</td>
 <td>
 
 </td>
