@@ -27,6 +27,38 @@ Each level supports a common set of roles (Admin and Member), which provide eith
 - **Auditor**: Granular read access to specific objects as defined by the organization owner or admins
 - **Audit Log Viewer**: Read access to audit logs only
 
+### Default Organization Roles and Permissions
+
+| **Permission / Action**                          | **Owner** | **Admin** | **Member** |
+|--------------------------------------------------|-----------|-----------|-----------|
+| **Manage organization settings**                 | ✅        | ✅        | -       |
+| **Setup and enforce SSO**                        | ✅        | ✅        | -       |
+| **Manage billing and subscriptions**                | ✅        | ✅        | -       |
+| **Add and remove organization admins**             | ✅        | ✅        | -       |
+| **Invite organization members**                  | ✅        | ✅        | ✅      |
+| **Assign org level permissions**                 | ✅        | ✅        | -       |
+| **Bypass SSO requirements**                      | ✅        | -       | -       |
+| **View audit logs**                              | ✅        | -       | -       |
+| **Transfer ownership / delete organization**     | ✅        | -       | -       |
+| **Create programs**                     | ✅        | ✅         | -       |
+| **Manage existing programs**                     | ✅        | ✅ (program admins only)         | -       |
+| **View all programs**                            | ✅        | -         | -       |
+| **Create groups**                       | ✅        | ✅ | - |
+| **Manage group membership**                      | ✅        | ✅ (group admins only)         | -       |
+| **Create policies and procedures**     | ✅        | ✅        | -       |
+| **View existing policies and procedures**      | ✅        | ✅        | ✅  |
+| **Create risks**                        | ✅        | ✅        | -       |
+| **View existing risks**                          | ✅        | ✅        | - |
+| **Import or create controls**            | ✅        | ✅        | -       |
+| **View existing controls**                       | ✅        | ✅        | ✅   |
+| **Create tasks, comments**    | ✅        | ✅        | ✅        |
+| **Upload evidence**                      | ✅        | ✅        | ✅ (limited)      |
+
+
+The above are the default permissions associated with each role. Additional permissions can be granted to members or groups for specific objects, allowing for more granular control over access and actions within the organization.
+
+## Role Details
+
 ### Owner  (Organization-Level Only)
 
 The organization owner has the highest level of access and can perform all actions, including:
@@ -66,7 +98,8 @@ Members have read access by default, with limited write actions:
 
 - View all public groups in the organization
 - View all policies, procedures, and controls (unless explicitly restricted)
-- Create tasks, comments, and evidence uploads
+- Create tasks and add comments
+- Upload evidence to controls they have access to or by task assignment
 - Invite other members (but cannot assign roles or invite admins)
 - Gain additional access through group membership or program-level roles
 
@@ -107,6 +140,54 @@ For example:
 
 - A **program admin** can manage controls, policies, and evidence within that program
 - A **group member** can gain read or write access to objects assigned to the group (inheritance)
+
+```mermaid
+flowchart TB
+ subgraph ORG["Organization Roles"]
+    direction TB
+        OMember["Member (Org) — RO"]
+  end
+ subgraph GRP["Group: Engineering Roles"]
+    direction TB
+        GMember["Member (Group) — RO"]
+        GGrant[["Group Grant:
+        Edit specific Policies A/B/..."]]
+  end
+ subgraph PRG["Program: SOC 2 Roles"]
+    direction TB
+        PAdmin["Admin (Program) — R/W"]
+  end
+ subgraph OBJS["Objects in Program: SOC 2"]
+    direction TB
+        Policies[["Policies"]]
+        Controls[["Controls"]]
+        Evidence[["Evidence"]]
+        Risks[["Risks"]]
+        Tasks[["Tasks & Comments"]]
+  end
+ subgraph RESULT["Effective Permissions - Union"]
+    direction TB
+        Eff["Alex =
+    **Read** across organization
+    **Read/Write** in Program SOC 2
+    **Edit** on specific Policies via Group"]
+  end
+    User["User: Alex"] --> OMember & GMember & PAdmin
+    OMember -. global read .-> OBJS
+    GGrant -. edit policies .-> OBJS
+    PAdmin -- write/manage --> OBJS
+    GMember --> GGrant
+    OBJS --> Eff
+     OMember:::ro
+     GMember:::ro
+     GGrant:::rw
+     PAdmin:::rw
+     Eff:::rw
+     User:::user
+    classDef user fill:#90caf9,stroke:#1e88e5,color:#333
+    classDef rw fill:#a5d6a7,stroke:#388e3c,color:#333
+    classDef ro stroke-dasharray:4 2
+```
 
 See [Groups and Permissions](../groups/permissions.mdx) for detailed guidance.
 
