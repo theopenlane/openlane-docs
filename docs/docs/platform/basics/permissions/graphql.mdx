@@ -1,0 +1,78 @@
+---
+title: GraphQL Examples
+sidebar_position: 5
+---
+## Graphql Collection
+
+For an extensive collection of GraphQL queries and mutations, please refer to our [GraphQL Collection](https://docs.theopenlane.io/graphql?collectionId=b241ca57-3428-4266-b8d3-3ed28cf7adce&focusCollectionId=b241ca57-3428-4266-b8d3-3ed28cf7adce). This collection includes examples for managing permissions, groups, users, and various objects within the Openlane platform.
+
+## Add Internal Policy Creators to an Organization
+
+Using the `updateOrganization` mutation, you can add a group as a object x creator. In this example, we are adding a group as an internal policy creator for the organization. This will allow any member of the group to create policies within the organization.
+
+There are similar fields for adding other object type creators such as:
+- `addProcedureCreatorIDs`
+- `addRiskCreatorIDs`
+- ...etc
+
+
+```graphql
+mutation UpdateOrganization($updateOrganizationId: ID!, $input: UpdateOrganizationInput!) {
+  updateOrganization(id: $updateOrganizationId, input: $input) {
+    organization {
+      internalPolicyCreators {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  "updateOrganizationId": <Organization ID>,
+  "input": {
+    "addInternalPolicyCreatorIDs": <Group ID>
+  }
+}
+```
+
+## Assign Members to a program
+
+Using the `updateProgram` mutation, you can assign members to a program. In this example, we are adding a user as a member of the program with a specific role, either `admin` or `member`. Similar to the organization level, an admin will have read and write access to all objects within the program, while a member will have read-only access by default.
+
+```graphql
+mutation UpdateProgram($updateProgramId: ID!, $input: UpdateProgramInput!) {
+  updateProgram(id: $updateProgramId, input: $input) {
+    program {
+      members {
+        edges {
+          node {
+            id
+            role
+            user {
+              id
+              displayName
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  "updateProgramId": <Program ID>,
+  "input": {
+    "addProgramMembers": [
+      {
+        "userID": <User ID>,
+        "role": <Role> // "admin", "member"
+      }
+    ]
+  }
+}
+```
