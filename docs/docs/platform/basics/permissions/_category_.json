@@ -1,0 +1,9 @@
+{
+  "label": "Permissions",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about permissions in the platform, including how to manage and configure them for your organization."
+  },
+  "collapsed": true
+}

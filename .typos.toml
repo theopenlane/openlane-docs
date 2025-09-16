@@ -1,5 +1,5 @@
 [files]
-extend-exclude = ["docs/docs/api/**"]
+extend-exclude = ["docs/docs/api/**", "docs/bun.lock"]
 ignore-hidden = true
 ignore-files = true
 ignore-dot = true

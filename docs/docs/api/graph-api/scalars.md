@@ -34,6 +34,10 @@ The `Boolean` scalar type represents `true` or `false`.
 Change is a difference between two updates to an object used by
 the audit history resolvers
 
+## CredentialSet
+
+CredentialSet is a json of of credential keys that are used to authenticate to a third party
+
 ## Cursor
 
 Define a Relay Cursor type:
