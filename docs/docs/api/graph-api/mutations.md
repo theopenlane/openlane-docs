@@ -1088,6 +1088,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVTrustCenterDoc
+
+**Type:** [TrustCenterDocBulkCreatePayload!](objects#trustcenterdocbulkcreatepayload)
+
+Create multiple new trustCenterDocs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the trustCenterDoc</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVTrustCenterSubprocessor
 
 **Type:** [TrustCenterSubprocessorBulkCreatePayload!](objects#trustcentersubprocessorbulkcreatepayload)
@@ -1819,6 +1842,29 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkTrustCenterDoc
+
+**Type:** [TrustCenterDocBulkCreatePayload!](objects#trustcenterdocbulkcreatepayload)
+
+Create multiple new trustCenterDocs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterdocinput"><code>[CreateTrustCenterDocInput!]</code></a>
+</td>
+<td>
+<p>values of the trustCenterDoc</p>
 </td>
 </tr>
 </tbody>
@@ -3199,6 +3245,29 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createTrustCenterDoc
+
+**Type:** [TrustCenterDocCreatePayload!](objects#trustcenterdoccreatepayload)
+
+Create a new trustCenterDoc
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterdocinput"><code>CreateTrustCenterDocInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterDoc</p>
 </td>
 </tr>
 </tbody>
@@ -4587,6 +4656,29 @@ id<br />
 </td>
 <td>
 <p>ID of the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteTrustCenterDoc
+
+**Type:** [TrustCenterDocDeletePayload!](objects#trustcenterdocdeletepayload)
+
+Delete an existing trustCenterDoc
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterDoc</p>
 </td>
 </tr>
 </tbody>
@@ -6548,6 +6640,38 @@ input<br />
 </td>
 <td>
 <p>New values for the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTrustCenterDoc
+
+**Type:** [TrustCenterDocUpdatePayload!](objects#trustcenterdocupdatepayload)
+
+Update an existing trustCenterDoc
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterDoc</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcenterdocinput"><code>UpdateTrustCenterDocInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenterDoc</p>
 </td>
 </tr>
 </tbody>
