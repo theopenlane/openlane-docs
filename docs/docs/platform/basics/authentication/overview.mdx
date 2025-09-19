@@ -12,11 +12,11 @@ Openlane gives organizations flexible and secure ways to authenticate users, ran
 
 All organizations can configure **OIDC-based SSO** with providers like Okta, OneLogin, Google Workspace, and more. This allows users to log in with their corporate credentials and enables centralized access control.
 
-- **Best for:** Organizations that need centralized access control and compliance.
+- **Best for** organizations that need centralized access control and compliance with ease of onboarding and offboarding
 - **Pros:**
   - Centralized identity management
   - Enforce MFA, password policy, and conditional access
-  - Automatic provisioning/de-provisioning with SCIM (if supported)
+  - Automatic provisioning de-provisioning of users via SCIM (if supported by IdP)
 - **Considerations:**
   - Requires admin setup in your IdP.
   - May require extra configuration for group/role claims
@@ -26,21 +26,22 @@ All organizations can configure **OIDC-based SSO** with providers like Okta, One
 
 Passkeys provide a passwordless login experience using device-based public-key cryptography (Face ID, Touch ID, YubiKey, Windows Hello).
 
-- **Best for:** Security-focused teams who do not want to set up single sign-on.
+- **Best for** security-focused teams who do not want to set up single sign-on but want strong, phishing-resistant authentication
 - **Pros:**
   - Phishing-resistant
   - No shared secret to leak
   - Works across browsers and devices
 - **Considerations:**
   - Users must have at least one enrolled device or hardware key.
-  - Recommended to set up a backup passkey.
+  - Recommended to set up a backup passkey
+  - Requires manual user management
 
 ## Social Login
 
 We support sign-in with **Google** and **GitHub**.
 
-- **Best for:** Small teams, contractors, open-source contributors.
-- **Pros:** No password to manage, uses trusted provider MFA settings.
+- **Best for** Small teams, contractors, open-source contributors.
+- **Pros:** No password to manage, uses trusted provider MFA settings
 - **Considerations:**
   - Limited control over user lifecycle (e.g., must remove users manually if they leave your company).
 
@@ -48,8 +49,8 @@ We support sign-in with **Google** and **GitHub**.
 
 Users can create a traditional **email + password** login.
 
-- **Best for:** Legacy scenarios or as a fallback when other methods are unavailable.
-- **Pros:** Universal and simple.
+- **Best for** legacy scenarios or as a fallback when other methods are unavailable.
+- **Pros:** universal and simple
 - **Considerations:**
-  - **Not recommended** — weakest security posture.
-  - Encourage users to enable MFA where possible or migrate to passkeys/SSO.
+  - **Not recommended** due to the weakest security posture
+  - Encourage users to enable MFA where possible or migrate to passkeys or single sign-on

@@ -9,11 +9,14 @@ import TabItem from '@theme/TabItem';
 
 Openlane supports **OIDC (OpenID Connect)** for Single Sign-On (SSO). You will need these values from your identity provider (IdP) to configure SSO in Openlane:
 
-- **Client ID**
-- **Client Secret**
-- **OIDC Discovery Endpoint** (the `/.well-known/openid-configuration` URL)
+| **Field**                       | **Definition** |
+|---------------------------------|----------------|
+| **Client ID** | The public identifier for your application, obtained from your IdP. |
+| **Client Secret** | A confidential secret known only to your application and the IdP, used to authenticate your application. |
+| **OIDC Discovery Endpoint** | The URL where Openlane can retrieve the IdP's configuration, typically ending with `/.well-known/openid-configuration`. |
 
-Once you have these, go to **Organization Settings** → [**Authentication**](https://console.theopenlane.io/organization-settings/authentication) in Openlane and paste them into the fields.
+Once you have these, go to **Organization Settings** → [**Authentication**](https://console.theopenlane.io/organization-settings/authentication) in Openlane and enter the values.
+
 
 ## Redirect URI
 
@@ -28,9 +31,9 @@ https://console.theopenlane.io/login/sso
 <TabItem value="google" label="Google">
 
 1. Google Cloud Console → **APIs & Services → Credentials** → **Create Credentials → OAuth client ID (Web Application)**.
-2. Add `https://console.theopenlane.io/login/sso` to **Authorized redirect URIs**.
-3. Copy **Client ID** and **Client Secret**.
-4. **OIDC Discovery Endpoint:**
+1. Add `https://console.theopenlane.io/login/sso` to **Authorized redirect URIs**.
+1. Copy **Client ID** and **Client Secret**.
+1. **OIDC Discovery Endpoint:**
 
 ```text
 https://accounts.google.com/.well-known/openid-configuration
@@ -41,10 +44,10 @@ https://accounts.google.com/.well-known/openid-configuration
 <TabItem value="okta" label="Okta">
 
 1. Okta Admin → **Applications → Create App Integration** → **OIDC - Web Application**.
-2. Redirect URIs: `https://console.theopenlane.io/login/sso`.
-3. Assign users and groups who should have access.
-4. Copy **Client ID** and **Client Secret**.
-5. **OIDC Discovery Endpoint:**
+1. Redirect URIs: `https://console.theopenlane.io/login/sso`.
+1. Assign users and groups who should have access.
+1. Copy **Client ID** and **Client Secret**.
+1. **OIDC Discovery Endpoint:**
 
 ```text
 https://<your-okta-domain>/oauth2/default/.well-known/openid-configuration
@@ -61,9 +64,9 @@ https://dev-123456.okta.com/oauth2/default/.well-known/openid-configuration
 <TabItem value="onelogin" label="OneLogin">
 
 1. OneLogin Admin → **Applications → Add App** → choose **OpenID Connect (OIDC)**.
-2. Redirect URI: `https://console.theopenlane.io/login/sso`.
-3. Copy **Client ID** and **Client Secret**.
-4. **OIDC Discovery Endpoint:**
+1. Redirect URI: `https://console.theopenlane.io/login/sso`.
+1. Copy **Client ID** and **Client Secret**.
+1. **OIDC Discovery Endpoint:**
 
 ```text
 https://<your-subdomain>.onelogin.com/oidc/.well-known/openid-configuration
@@ -74,10 +77,10 @@ https://<your-subdomain>.onelogin.com/oidc/.well-known/openid-configuration
 <TabItem value="slack" label="Slack">
 
 1. Go to https://api.slack.com/apps → **Create New App**.
-2. **OAuth & Permissions → Redirect URLs** → add `https://console.theopenlane.io/login/sso`.
-3. Install the app to your workspace.
-4. Copy **Client ID** and **Client Secret** (from **Basic Information**).
-5. **OIDC Discovery Endpoint:**
+1. **OAuth & Permissions → Redirect URLs** → add `https://console.theopenlane.io/login/sso`.
+1. Install the app to your workspace.
+1. Copy **Client ID** and **Client Secret** (from **Basic Information**).
+1. **OIDC Discovery Endpoint:**
 
 ```text
 https://slack.com/.well-known/openid-configuration
@@ -91,9 +94,15 @@ https://slack.com/.well-known/openid-configuration
 
 ## Finish in Openlane
 1. Go to **Organization Settings** → [**Authentication**](https://console.theopenlane.io/organization-settings/authentication).
-2. Paste **Client ID**, **Client Secret**, **OIDC Discovery Endpoint**.
-3. **Save** and click **Test Connection**.
-4. (Optional) **Enforce SSO** once everyone can sign in.
+
+    ![SSO Settings](../../../../static/img/screenshots/auth/sso_console.png)
+
+1. Choose the Identity Provider from the dropdown
+1. Enter the **Client ID**, **Client Secret**, and **OIDC Discovery Endpoint** from above.
+1. **Save Configuration** and then click **Test Connection**. This will redirect you to your IdP to authenticate, if successful, you will be redirected back to Openlane and see a success message.
+1. **Enforce SSO** once you have tested the connection. This will require all users to authenticate via SSO. Users without SSO access will be unable to log in, so ensure your IdP is configured correctly before enforcing. Only the organization owner can bypass SSO if needed.
+
+    ![SSO Configured](../../../../static/img/screenshots/auth/sso_configured.png)
 
 ## Troubleshooting
 
