@@ -8995,6 +8995,90 @@ Properties by which TrustCenterCompliance connections can be ordered.
 </tbody>
 </table>
 
+## TrustCenterDocHistoryOpType
+
+TrustCenterDocHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocHistoryOrderField
+
+Properties by which TrustCenterDocHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocOrderField
+
+Properties by which TrustCenterDoc connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TrustCenterHistoryOpType
 
 TrustCenterHistoryOpType is enum for the field operation

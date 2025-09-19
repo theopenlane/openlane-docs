@@ -110,6 +110,8 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [TrustCenter](objects#trustcenter)
 - [TrustCenterCompliance](objects#trustcentercompliance)
 - [TrustCenterComplianceHistory](objects#trustcentercompliancehistory)
+- [TrustCenterDoc](objects#trustcenterdoc)
+- [TrustCenterDocHistory](objects#trustcenterdochistory)
 - [TrustCenterHistory](objects#trustcenterhistory)
 - [TrustCenterSetting](objects#trustcentersetting)
 - [TrustCenterSettingHistory](objects#trustcentersettinghistory)
