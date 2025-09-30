@@ -2703,6 +2703,65 @@ last<br />
 </tbody>
 </table>
 
+## adminTrustCenterDocSearch
+
+**Type:** [TrustCenterDocConnection](objects#trustcenterdocconnection)
+
+Search across TrustCenterDoc objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## adminTrustCenterSearch
 
 **Type:** [TrustCenterConnection](objects#trustcenterconnection)
@@ -12947,6 +13006,224 @@ last<br />
 </tbody>
 </table>
 
+## trustCenterDoc
+
+**Type:** [TrustCenterDoc!](objects#trustcenterdoc)
+
+Look up trustCenterDoc by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterDoc</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterDocHistories
+
+**Type:** [TrustCenterDocHistoryConnection!](objects#trustcenterdochistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterdochistoryorder"><code>TrustCenterDocHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterDocHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterdochistorywhereinput"><code>TrustCenterDocHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterDocHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterDocs
+
+**Type:** [TrustCenterDocConnection!](objects#trustcenterdocconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterdocorder"><code>[TrustCenterDocOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterdocwhereinput"><code>TrustCenterDocWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterDocSearch
+
+**Type:** [TrustCenterDocConnection](objects#trustcenterdocconnection)
+
+Search across TrustCenterDoc objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## trustCenterHistories
 
 **Type:** [TrustCenterHistoryConnection!](objects#trustcenterhistoryconnection)
@@ -13455,6 +13732,165 @@ where<br />
 </td>
 <td>
 <p>Filtering options for TrustCenterSubprocessors returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterWatermarkConfig
+
+**Type:** [TrustCenterWatermarkConfig!](objects#trustcenterwatermarkconfig)
+
+Look up trustCenterWatermarkConfig by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterWatermarkConfig</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterWatermarkConfigHistories
+
+**Type:** [TrustCenterWatermarkConfigHistoryConnection!](objects#trustcenterwatermarkconfighistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterwatermarkconfighistoryorder"><code>TrustCenterWatermarkConfigHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterWatermarkConfigHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterwatermarkconfighistorywhereinput"><code>TrustCenterWatermarkConfigHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterWatermarkConfigHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterWatermarkConfigs
+
+**Type:** [TrustCenterWatermarkConfigConnection!](objects#trustcenterwatermarkconfigconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterwatermarkconfigorder"><code>[TrustCenterWatermarkConfigOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterWatermarkConfigs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterwatermarkconfigwhereinput"><code>TrustCenterWatermarkConfigWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterWatermarkConfigs returned from the connection.</p>
 </td>
 </tr>
 </tbody>

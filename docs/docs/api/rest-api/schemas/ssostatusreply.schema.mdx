@@ -6,7 +6,7 @@ sidebar_label: "SSOStatusReply"
 hide_title: true
 hide_table_of_contents: true
 schema: true
-sample: {"discovery_url":"string","enforced":true,"error":"string","error_code":"string","organization_id":"string","provider":"string","success":true,"unverified":true}
+sample: {"discovery_url":"string","enforced":true,"error":"string","error_code":"string","is_org_owner":true,"organization_id":"string","provider":"string","saml_signin_url":"string","success":true,"tfa_enforced":true,"unverified":true,"user_tfa_enabled":true}
 custom_edit_url: null
 ---
 
@@ -25,7 +25,7 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"discovery_url":{"type":"string"},"enforced":{"type":"boolean"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"organization_id":{"type":"string"},"provider":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"SSOStatusReply"}}
+  schema={{"properties":{"discovery_url":{"type":"string"},"enforced":{"type":"boolean"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"is_org_owner":{"type":"boolean"},"organization_id":{"type":"string"},"provider":{"type":"string"},"saml_signin_url":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"tfa_enforced":{"type":"boolean"},"unverified":{"type":"boolean"},"user_tfa_enabled":{"type":"boolean"}},"type":"object","title":"SSOStatusReply"}}
   schemaType={"response"}
 >
 

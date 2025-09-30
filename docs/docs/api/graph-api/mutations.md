@@ -1088,6 +1088,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVTrustCenterDoc
+
+**Type:** [TrustCenterDocBulkCreatePayload!](objects#trustcenterdocbulkcreatepayload)
+
+Create multiple new trustCenterDocs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the trustCenterDoc</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVTrustCenterSubprocessor
 
 **Type:** [TrustCenterSubprocessorBulkCreatePayload!](objects#trustcentersubprocessorbulkcreatepayload)
@@ -1819,6 +1842,29 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterCompliance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkTrustCenterDoc
+
+**Type:** [TrustCenterDocBulkCreatePayload!](objects#trustcenterdocbulkcreatepayload)
+
+Create multiple new trustCenterDocs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterdocinput"><code>[CreateTrustCenterDocInput!]</code></a>
+</td>
+<td>
+<p>values of the trustCenterDoc</p>
 </td>
 </tr>
 </tbody>
@@ -3132,6 +3178,15 @@ input<br />
 <p>values of the template</p>
 </td>
 </tr>
+<tr>
+<td>
+templateFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3204,6 +3259,38 @@ input<br />
 </tbody>
 </table>
 
+## createTrustCenterDoc
+
+**Type:** [TrustCenterDocCreatePayload!](objects#trustcenterdoccreatepayload)
+
+Create a new trustCenterDoc
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterdocinput"><code>CreateTrustCenterDocInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterDoc</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocFile<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createTrustCenterDomain
 
 **Type:** [TrustCenterDomainCreatePayload!](objects#trustcenterdomaincreatepayload)
@@ -3222,6 +3309,38 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createTrustCenterNDA
+
+**Type:** [TrustCenterNDACreatePayload!](objects#trustcenterndacreatepayload)
+
+Create a Trust Center NDA Template
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterndainput"><code>CreateTrustCenterNDAInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterNDA</p>
+</td>
+</tr>
+<tr>
+<td>
+templateFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>NDA file</p>
 </td>
 </tr>
 </tbody>
@@ -3286,6 +3405,38 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterSubprocessor</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createTrustCenterWatermarkConfig
+
+**Type:** [TrustCenterWatermarkConfigCreatePayload!](objects#trustcenterwatermarkconfigcreatepayload)
+
+Create a new trustCenterWatermarkConfig
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterwatermarkconfiginput"><code>CreateTrustCenterWatermarkConfigInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterWatermarkConfig</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -4592,6 +4743,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteTrustCenterDoc
+
+**Type:** [TrustCenterDocDeletePayload!](objects#trustcenterdocdeletepayload)
+
+Delete an existing trustCenterDoc
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterDoc</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteTrustCenterSetting
 
 **Type:** [TrustCenterSettingDeletePayload!](objects#trustcentersettingdeletepayload)
@@ -4638,6 +4812,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteTrustCenterWatermarkConfig
+
+**Type:** [TrustCenterWatermarkConfigDeletePayload!](objects#trustcenterwatermarkconfigdeletepayload)
+
+Delete an existing trustCenterWatermarkConfig
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterWatermarkConfig</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteUser
 
 **Type:** [UserDeletePayload!](objects#userdeletepayload)
@@ -4679,6 +4876,52 @@ id<br />
 </td>
 <td>
 <p>ID of the webauthn</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## sendTrustCenterNDAEmail
+
+**Type:** [SendTrustCenterNDAEmailPayload!](objects#sendtrustcenterndaemailpayload)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#sendtrustcenterndainput"><code>SendTrustCenterNDAInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterNDA</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## submitTrustCenterNDAResponse
+
+**Type:** [SubmitTrustCenterNDAResponsePayload!](objects#submittrustcenterndaresponsepayload)
+
+Submit a response to a Trust Center NDA
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#submittrustcenterndaresponseinput"><code>SubmitTrustCenterNDAResponseInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterNDA submission</p>
 </td>
 </tr>
 </tbody>
@@ -6463,6 +6706,15 @@ input<br />
 <p>New values for the template</p>
 </td>
 </tr>
+<tr>
+<td>
+templateFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6553,6 +6805,88 @@ input<br />
 </tbody>
 </table>
 
+## updateTrustCenterDoc
+
+**Type:** [TrustCenterDocUpdatePayload!](objects#trustcenterdocupdatepayload)
+
+Update an existing trustCenterDoc
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterDoc</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcenterdocinput"><code>UpdateTrustCenterDocInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenterDoc</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+watermarkedTrustCenterDocFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTrustCenterNDA
+
+**Type:** [TrustCenterNDAUpdatePayload!](objects#trustcenterndaupdatepayload)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+templateFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>NDA file</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateTrustCenterSetting
 
 **Type:** [TrustCenterSettingUpdatePayload!](objects#trustcentersettingupdatepayload)
@@ -6630,6 +6964,47 @@ input<br />
 </td>
 <td>
 <p>New values for the trustCenterSubprocessor</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTrustCenterWatermarkConfig
+
+**Type:** [TrustCenterWatermarkConfigUpdatePayload!](objects#trustcenterwatermarkconfigupdatepayload)
+
+Update an existing trustCenterWatermarkConfig
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterWatermarkConfig</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcenterwatermarkconfiginput"><code>UpdateTrustCenterWatermarkConfigInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenterWatermarkConfig</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>

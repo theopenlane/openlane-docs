@@ -6,7 +6,7 @@ sidebar_label: "SwitchOrganizationReply"
 hide_title: true
 hide_table_of_contents: true
 schema: true
-sample: {"access_token":"string","error":"string","error_code":"string","refresh_token":"string","session":"string","success":true,"token_type":"bearer","unverified":true}
+sample: {"access_token":"string","error":"string","error_code":"string","needs_sso":true,"needs_tfa":true,"redirect_uri":"string","refresh_token":"string","session":"string","success":true,"token_type":"bearer","unverified":true}
 custom_edit_url: null
 ---
 
@@ -25,7 +25,7 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"SwitchOrganizationReply"}}
+  schema={{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"needs_sso":{"type":"boolean"},"needs_tfa":{"type":"boolean"},"redirect_uri":{"type":"string"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"SwitchOrganizationReply"}}
   schemaType={"response"}
 >
 
