@@ -238,6 +238,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 dueDate<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -929,6 +956,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 dueDate<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -1461,6 +1515,33 @@ ownerID<br />
 </td>
 <td>
 <p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -2203,6 +2284,33 @@ ownerID<br />
 </td>
 <td>
 <p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -3470,6 +3578,33 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -5299,6 +5434,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 refCode<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -5461,6 +5623,33 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -6189,6 +6378,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 status<br />
 <a href="enums#controlimplementationhistorydocumentstatus"><code>ControlImplementationHistoryDocumentStatus</code></a>
 </td>
@@ -6417,6 +6633,33 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -7613,6 +7856,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -7862,6 +8132,33 @@ ownerID<br />
 </td>
 <td>
 <p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -8154,6 +8451,33 @@ ownerID<br />
 </td>
 <td>
 <p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -9609,6 +9933,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -10567,6 +10918,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -10765,6 +11143,33 @@ ownerID<br />
 </td>
 <td>
 <p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -11093,6 +11498,33 @@ ownerID<br />
 </td>
 <td>
 <p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -13970,6 +14402,33 @@ tags<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 providedFileName<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -14711,6 +15170,33 @@ tags<br />
 </td>
 <td>
 <p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -19249,6 +19735,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -19805,6 +20318,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -20042,6 +20582,33 @@ ownerID<br />
 </td>
 <td>
 <p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -20512,6 +21079,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -20719,6 +21313,33 @@ ownerID<br />
 </td>
 <td>
 <p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -21999,6 +22620,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -23070,6 +23718,24 @@ systemOwned<br />
 </tr>
 <tr>
 <td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -24054,6 +24720,24 @@ systemOwned<br />
 </tr>
 <tr>
 <td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -24441,6 +25125,24 @@ systemOwned<br />
 </td>
 <td>
 <p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -25152,6 +25854,33 @@ tags<br />
 </td>
 <td>
 <p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -25871,6 +26600,33 @@ tags<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -26007,36 +26763,6 @@ mappedControl<br />
 </tbody>
 </table>
 
-## ModuleBillingURL
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-module<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## Narrative
 
 
@@ -26120,6 +26846,33 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -26907,6 +27660,33 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -32003,6 +32783,78 @@ where<br />
 </tr>
 <tr>
 <td>
+trustCenterWatermarkConfigs<br />
+<a href="objects#trustcenterwatermarkconfigconnection"><code>TrustCenterWatermarkConfigConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterwatermarkconfigorder"><code>[TrustCenterWatermarkConfigOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterWatermarkConfigs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterwatermarkconfigwhereinput"><code>TrustCenterWatermarkConfigWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterWatermarkConfigs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 members<br />
 <a href="objects#orgmembershipconnection"><code>OrgMembershipConnection!</code></a>
 </td>
@@ -32614,6 +33466,15 @@ allowedEmailDomains<br />
 </tr>
 <tr>
 <td>
+allowMatchingDomainsAutojoin<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>allow users who can successfully confirm their email or who login via social providers with an email that matches the organizations configured allowed domain to auto-join the organization</p>
+</td>
+</tr>
+<tr>
+<td>
 identityProvider<br />
 <a href="enums#organizationsettingssoprovider"><code>OrganizationSettingSSOProvider</code></a>
 </td>
@@ -32650,6 +33511,15 @@ identityProviderMetadataEndpoint<br />
 </tr>
 <tr>
 <td>
+identityProviderAuthTested<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>has this sso configuration been tested to verify it works? SSO cannot be enforced unless this is done</p>
+</td>
+</tr>
+<tr>
+<td>
 identityProviderEntityID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -32668,11 +33538,47 @@ oidcDiscoveryEndpoint<br />
 </tr>
 <tr>
 <td>
+samlSigninURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the sign in URL to be used for SAML-based authentication</p>
+</td>
+</tr>
+<tr>
+<td>
+samlIssuer<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SAML issuer</p>
+</td>
+</tr>
+<tr>
+<td>
+samlCert<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the x509 certificate used to validate SAML responses</p>
+</td>
+</tr>
+<tr>
+<td>
 identityProviderLoginEnforced<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
 <p>enforce SSO authentication for organization members</p>
+</td>
+</tr>
+<tr>
+<td>
+multifactorAuthEnforced<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>enforce 2fa / multifactor authentication for organization members</p>
 </td>
 </tr>
 <tr>
@@ -33095,6 +34001,15 @@ allowedEmailDomains<br />
 </tr>
 <tr>
 <td>
+allowMatchingDomainsAutojoin<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>allow users who can successfully confirm their email or who login via social providers with an email that matches the organizations configured allowed domain to auto-join the organization</p>
+</td>
+</tr>
+<tr>
+<td>
 identityProvider<br />
 <a href="enums#organizationsettinghistoryssoprovider"><code>OrganizationSettingHistorySSOProvider</code></a>
 </td>
@@ -33131,6 +34046,15 @@ identityProviderMetadataEndpoint<br />
 </tr>
 <tr>
 <td>
+identityProviderAuthTested<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>has this sso configuration been tested to verify it works? SSO cannot be enforced unless this is done</p>
+</td>
+</tr>
+<tr>
+<td>
 identityProviderEntityID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -33149,11 +34073,47 @@ oidcDiscoveryEndpoint<br />
 </tr>
 <tr>
 <td>
+samlSigninURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the sign in URL to be used for SAML-based authentication</p>
+</td>
+</tr>
+<tr>
+<td>
+samlIssuer<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SAML issuer</p>
+</td>
+</tr>
+<tr>
+<td>
+samlCert<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the x509 certificate used to validate SAML responses</p>
+</td>
+</tr>
+<tr>
+<td>
 identityProviderLoginEnforced<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
 <p>enforce SSO authentication for organization members</p>
+</td>
+</tr>
+<tr>
+<td>
+multifactorAuthEnforced<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>enforce 2fa / multifactor authentication for organization members</p>
 </td>
 </tr>
 <tr>
@@ -33890,15 +34850,6 @@ stripeSubscriptionID<br />
 </tr>
 <tr>
 <td>
-productPrice<br />
-<a href="scalars#price"><code>Price</code></a>
-</td>
-<td>
-<p>the price of the product tier</p>
-</td>
-</tr>
-<tr>
-<td>
 stripeSubscriptionStatus<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -33940,24 +34891,6 @@ daysUntilDue<br />
 </td>
 <td>
 <p>number of days until there is a due payment</p>
-</td>
-</tr>
-<tr>
-<td>
-features<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>the features associated with the subscription</p>
-</td>
-</tr>
-<tr>
-<td>
-featureLookupKeys<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>the feature lookup keys associated with the subscription</p>
 </td>
 </tr>
 <tr>
@@ -34043,35 +34976,8 @@ where<br />
 </tr>
 <tr>
 <td>
-subscriptionURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 managePaymentMethods<br />
 <a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-cancellation<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-moduleBillingURLs<br />
-<a href="objects#modulebillingurl"><code>[ModuleBillingURL!]</code></a>
 </td>
 <td>
 
@@ -34263,15 +35169,6 @@ stripeSubscriptionID<br />
 </tr>
 <tr>
 <td>
-productPrice<br />
-<a href="scalars#price"><code>Price</code></a>
-</td>
-<td>
-<p>the price of the product tier</p>
-</td>
-</tr>
-<tr>
-<td>
 stripeSubscriptionStatus<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -34313,24 +35210,6 @@ daysUntilDue<br />
 </td>
 <td>
 <p>number of days until there is a due payment</p>
-</td>
-</tr>
-<tr>
-<td>
-features<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>the features associated with the subscription</p>
-</td>
-</tr>
-<tr>
-<td>
-featureLookupKeys<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>the feature lookup keys associated with the subscription</p>
 </td>
 </tr>
 </tbody>
@@ -35165,6 +36044,33 @@ dismissedImprovementSuggestions<br />
 </td>
 <td>
 <p>improvement suggestions dismissed by the user for the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -36297,6 +37203,33 @@ dismissedImprovementSuggestions<br />
 </td>
 <td>
 <p>improvement suggestions dismissed by the user for the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -42608,6 +43541,15 @@ trustCenterCompliances<br />
 </tr>
 <tr>
 <td>
+trustCenterDocs<br />
+<a href="objects#trustcenterdocconnection"><code>TrustCenterDocConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 users<br />
 <a href="objects#userconnection"><code>UserConnection</code></a>
 </td>
@@ -42628,6 +43570,27 @@ userSettings<br />
 <td>
 webauthns<br />
 <a href="objects#webauthnconnection"><code>WebauthnConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SendTrustCenterNDAEmailPayload
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+success<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
 
@@ -42728,6 +43691,24 @@ systemOwned<br />
 </td>
 <td>
 <p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -43258,6 +44239,24 @@ systemOwned<br />
 </tr>
 <tr>
 <td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -43720,6 +44719,33 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -44916,6 +45942,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 refCode<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -45025,6 +46078,27 @@ subcontrol<br />
 </tbody>
 </table>
 
+## SubmitTrustCenterNDAResponsePayload
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+documentData<br />
+<a href="objects#documentdata"><code>DocumentData!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Subprocessor
 
 
@@ -45108,6 +46182,24 @@ systemOwned<br />
 </td>
 <td>
 <p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -45553,6 +46645,24 @@ systemOwned<br />
 </td>
 <td>
 <p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -47551,7 +48661,34 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -47606,6 +48743,15 @@ uischema<br />
 </td>
 <td>
 <p>the uischema for the template to render in the UI</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the trust center this template is associated with</p>
 </td>
 </tr>
 <tr>
@@ -47758,6 +48904,15 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -47996,7 +49151,34 @@ ownerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
 </td>
 </tr>
 <tr>
@@ -48051,6 +49233,15 @@ uischema<br />
 </td>
 <td>
 <p>the uischema for the template to render in the UI</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the trust center this template is associated with</p>
 </td>
 </tr>
 </tbody>
@@ -48513,6 +49704,15 @@ setting<br />
 </tr>
 <tr>
 <td>
+watermarkConfig<br />
+<a href="objects#trustcenterwatermarkconfig"><code>TrustCenterWatermarkConfig</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 trustCenterSubprocessors<br />
 <a href="objects#trustcentersubprocessorconnection"><code>TrustCenterSubprocessorConnection!</code></a>
 </td>
@@ -48585,6 +49785,78 @@ where<br />
 </tr>
 <tr>
 <td>
+trustCenterDocs<br />
+<a href="objects#trustcenterdocconnection"><code>TrustCenterDocConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterdocorder"><code>[TrustCenterDocOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterdocwhereinput"><code>TrustCenterDocWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 trustCenterCompliances<br />
 <a href="objects#trustcentercomplianceconnection"><code>TrustCenterComplianceConnection!</code></a>
 </td>
@@ -48648,6 +49920,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for TrustCenterCompliances returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+templates<br />
+<a href="objects#templateconnection"><code>TemplateConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#templateorder"><code>[TemplateOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Templates returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#templatewhereinput"><code>TemplateWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Templates returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -49182,6 +50526,566 @@ deletedID<br />
 </tbody>
 </table>
 
+## TrustCenterDoc
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>title of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>category of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the file containing the document</p>
+</td>
+</tr>
+<tr>
+<td>
+originalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the file containing the document, before any watermarking</p>
+</td>
+</tr>
+<tr>
+<td>
+watermarkingEnabled<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether watermarking is enabled for the document. this will only take effect if watermarking is configured for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+watermarkStatus<br />
+<a href="enums#trustcenterdocwatermarkstatus"><code>TrustCenterDocWatermarkStatus</code></a>
+</td>
+<td>
+<p>status of the watermarking</p>
+</td>
+</tr>
+<tr>
+<td>
+visibility<br />
+<a href="enums#trustcenterdoctrustcenterdocumentvisibility"><code>TrustCenterDocTrustCenterDocumentVisibility</code></a>
+</td>
+<td>
+<p>visibility of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+file<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+<p>the file containing the document content</p>
+</td>
+</tr>
+<tr>
+<td>
+originalFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+<p>the file containing the document content, pre watermarking</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocBulkCreatePayload
+
+Return response for createBulkTrustCenterDoc mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterDocs<br />
+<a href="objects#trustcenterdoc"><code>[TrustCenterDoc!]</code></a>
+</td>
+<td>
+<p>Created trustCenterDocs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcenterdocedge"><code>[TrustCenterDocEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocCreatePayload
+
+Return response for createTrustCenterDoc mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterDoc<br />
+<a href="objects#trustcenterdoc"><code>TrustCenterDoc!</code></a>
+</td>
+<td>
+<p>Created trustCenterDoc</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocDeletePayload
+
+Return response for deleteTrustCenterDoc mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterDoc ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcenterdoc"><code>TrustCenterDoc</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#trustcenterdochistoryoptype"><code>TrustCenterDocHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>title of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>category of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the file containing the document</p>
+</td>
+</tr>
+<tr>
+<td>
+originalFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the file containing the document, before any watermarking</p>
+</td>
+</tr>
+<tr>
+<td>
+watermarkingEnabled<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether watermarking is enabled for the document. this will only take effect if watermarking is configured for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+watermarkStatus<br />
+<a href="enums#trustcenterdochistorywatermarkstatus"><code>TrustCenterDocHistoryWatermarkStatus</code></a>
+</td>
+<td>
+<p>status of the watermarking</p>
+</td>
+</tr>
+<tr>
+<td>
+visibility<br />
+<a href="enums#trustcenterdochistorytrustcenterdocumentvisibility"><code>TrustCenterDocHistoryTrustCenterDocumentVisibility</code></a>
+</td>
+<td>
+<p>visibility of the document</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcenterdochistoryedge"><code>[TrustCenterDocHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcenterdochistory"><code>TrustCenterDocHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocUpdatePayload
+
+Return response for updateTrustCenterDoc mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterDoc<br />
+<a href="objects#trustcenterdoc"><code>TrustCenterDoc!</code></a>
+</td>
+<td>
+<p>Updated trustCenterDoc</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TrustCenterDomainCreatePayload
 
 Return response for createTrustCenterDomain mutation
@@ -49421,6 +51325,48 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDACreatePayload
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+template<br />
+<a href="objects#template"><code>Template!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDAUpdatePayload
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+template<br />
+<a href="objects#template"><code>Template!</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -50607,6 +52553,566 @@ trustCenter<br />
 </td>
 <td>
 <p>Updated trustCenter</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfig
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+logoID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the file containing the document</p>
+</td>
+</tr>
+<tr>
+<td>
+text<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>text to watermark the document with</p>
+</td>
+</tr>
+<tr>
+<td>
+fontSize<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>font size of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+opacity<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>opacity of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+rotation<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>rotation of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+color<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>color of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+font<br />
+<a href="enums#trustcenterwatermarkconfigfont"><code>TrustCenterWatermarkConfigFont</code></a>
+</td>
+<td>
+<p>font of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>[TrustCenter!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+file<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+<p>the file containing the image for watermarking, if applicable</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigBulkCreatePayload
+
+Return response for createBulkTrustCenterWatermarkConfig mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterWatermarkConfigs<br />
+<a href="objects#trustcenterwatermarkconfig"><code>[TrustCenterWatermarkConfig!]</code></a>
+</td>
+<td>
+<p>Created trustCenterWatermarkConfigs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcenterwatermarkconfigedge"><code>[TrustCenterWatermarkConfigEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigCreatePayload
+
+Return response for createTrustCenterWatermarkConfig mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterWatermarkConfig<br />
+<a href="objects#trustcenterwatermarkconfig"><code>TrustCenterWatermarkConfig!</code></a>
+</td>
+<td>
+<p>Created trustCenterWatermarkConfig</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigDeletePayload
+
+Return response for deleteTrustCenterWatermarkConfig mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterWatermarkConfig ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcenterwatermarkconfig"><code>TrustCenterWatermarkConfig</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#trustcenterwatermarkconfighistoryoptype"><code>TrustCenterWatermarkConfigHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+logoID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the file containing the document</p>
+</td>
+</tr>
+<tr>
+<td>
+text<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>text to watermark the document with</p>
+</td>
+</tr>
+<tr>
+<td>
+fontSize<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>font size of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+opacity<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>opacity of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+rotation<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>rotation of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+color<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>color of the watermark text</p>
+</td>
+</tr>
+<tr>
+<td>
+font<br />
+<a href="enums#trustcenterwatermarkconfighistoryfont"><code>TrustCenterWatermarkConfigHistoryFont</code></a>
+</td>
+<td>
+<p>font of the watermark text</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcenterwatermarkconfighistoryedge"><code>[TrustCenterWatermarkConfigHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcenterwatermarkconfighistory"><code>TrustCenterWatermarkConfigHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterWatermarkConfigUpdatePayload
+
+Return response for updateTrustCenterWatermarkConfig mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterWatermarkConfig<br />
+<a href="objects#trustcenterwatermarkconfig"><code>TrustCenterWatermarkConfig!</code></a>
+</td>
+<td>
+<p>Updated trustCenterWatermarkConfig</p>
 </td>
 </tr>
 </tbody>
