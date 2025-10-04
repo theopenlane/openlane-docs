@@ -25,6 +25,10 @@ located for the API.
         ```bash
         go run main.go serve --debug --pretty
         ```
+
+        :::tip
+        You can use `task run-dev` to run the server with the default options
+        :::
     </TabItem>
     <TabItem value="cli">
         Located in `cmd/cli/cmd` this directory includes all the CRUD operations for the openlane cli. As these follow a pretty similar pattern throughout
@@ -34,7 +38,13 @@ located for the API.
         If you are developing the `cli` or related functionality, instead of using the brew installed cli, you can use:
 
         ```bash
-        go run cmd/cli/main.go [command] [subcommand] <flags>
+        go run --tags cli cmd/cli/main.go [command] [subcommand] <flags>
+        ```
+
+        You can add the following alias to your shell profile to make this easier:
+
+        ```bash
+        alias ol="go run -tags cli cmd/cli/main.go"
         ```
         :::
     </TabItem>
@@ -83,7 +93,11 @@ Located in `internal/ent` this directory contains all the code related to the sc
     <TabItem value="schema">
         This include all schemas for the database. When generating a new schema, refer to the [new schema](../ent/create_schema) documentation.
 
-        When generating a new schema, a template is used that includes the basic structure of any new schema used in Openlane
+        When generating a new schema, a template is used that includes the basic structure of any new schema used in Openlane.
+
+        :::tip
+        You can use `task db:newschema` to generate a new schema using the template
+        :::
         ```go
             package schema
 
@@ -95,9 +109,29 @@ Located in `internal/ent` this directory contains all the code related to the sc
                 "github.com/theopenlane/core/internal/ent/mixin"
             )
 
-            // Meow holds the schema definition for the Meow entity
+            // Meow defines the meow schema.
             type Meow struct {
+                SchemaFuncs
+
                 ent.Schema
+            }
+
+            // SchemaMeow is the name of the meow schema.
+            const SchemaMeow = "meow"
+
+            // Name returns the name of the meow schema.
+            func (Meow) Name() string {
+                return SchemaMeow
+            }
+
+            // GetType returns the type of the meow schema.
+            func (Meow) GetType() any {
+                return Meow.Type
+            }
+
+            // PluralName returns the plural name of the meow schema.
+            func (Meow) PluralName() string {
+                return pluralize.NewClient().Plural(SchemaMeow)
             }
 
             // Fields of the Meow
@@ -109,18 +143,17 @@ Located in `internal/ent` this directory contains all the code related to the sc
 
             // Mixin of the Meow
             func (Meow) Mixin() []ent.Mixin {
-                return []ent.Mixin{
-                    emixin.AuditMixin{},
-                    emixin.IDMixin{},
-                    mixin.SoftDeleteMixin{},
-                    emixin.TagMixin{},
-                }
+                // getDefaultMixins returns the default mixins for all entities
+                // see mixingConfig{} for more configuration options
+                return getDefaultMixins(Meow{})
             }
 
             // Edges of the Meow
-            func (Meow) Edges() []ent.Edge {
+            func (m Meow) Edges() []ent.Edge {
                 return []ent.Edge{
                     // Edges go here
+                    // see defaultEdgeToWithPagination(m, Woof{}) and similar functions
+                    // in default.go for helper functions
                 }
             }
 
@@ -132,18 +165,19 @@ Located in `internal/ent` this directory contains all the code related to the sc
             // Annotations of the Meow
             func (Meow) Annotations() []schema.Annotation {
                 return []schema.Annotation{
-                    entgql.QueryField(),
-                    entgql.RelayConnection(),
-                    entgql.Mutations(entgql.MutationCreate(), (entgql.MutationUpdate())),
+                    // the AnnotationMixin provides the common annotations for
+                    // to create all the graphQL goodness; if you need the schema only and not the endpoints, use the below annotation instead and set the mixinConfig to `excludeAnnotations: true
 
-                    // the above annotations create all the graphQL goodness; if you need the schema only and not the endpoints, use the below annotation instead
-                    // if you do not need the graphql bits, also be certain to add an exclusion to scripts/files_to_skip.txt
+                    // if you do not need the graphql bits
                     // entgql.Skip(entgql.SkipAll),
+                    // entx.SchemaGenSkip(true),
+                    // entx.QueryGenSkip(true)
 
                     // the below annotation adds the entfga policy that will check access to the entity
                     // remove this annotation (or replace with another policy) if you want checks to be defined
                     // by another object
-                    entfga.SelfAccessChecks(),
+                    // uncomment after the first run
+                    // entfga.SelfAccessChecks(),
                 }
             }
 
@@ -159,17 +193,15 @@ Located in `internal/ent` this directory contains all the code related to the sc
 
             // Policy of the Meow
             func (Meow) Policy() ent.Policy {
-                // add the new policy here, the default post-policy is to deny all
+               // add the new policy here, the default post-policy is to deny all
                 // so you need to ensure there are rules in place to allow the actions you want
                 return policy.NewPolicy(
-                    policy.WithQueryRules(
-                        // add query rules here, the below is the recommended default
-                        entfga.CheckReadAccess[*generated.MeowQuery](),
-                    ),
                     policy.WithMutationRules(
                         // add mutation rules here, the below is the recommended default
                         policy.CheckCreateAccess(),
-                        entfga.CheckEditAccess[*generated.MeowMutation](),
+                        // this needs to be commented out for the first run that had the entfga annotation
+                        // the first run will generate the functions required based on the entfa annotation
+                        // entfga.CheckEditAccess[*generated.{{ $name }}Mutation](),
                     ),
                 )
             }
@@ -279,7 +311,7 @@ All graphapi resolvers require authentication, this is handled by the auth middl
         resolvers will be located in `group.resolvers.go.`
     </TabItem>
     <TabItem value="query">
-        The `internal/graphapi/query` directory contains queries and mutations used to generate the `openlaneclient` using [gqlgenc](https://github.com/Yamashou/gqlgenc)
+        The `internal/graphapi/query/simple` directory contains queries and mutations used to generate the `openlaneclient` using [gqlgenc](https://github.com/Yamashou/gqlgenc)
 
         :::info
         Basic queries are generated as part of the gqlgen process, however, these only include direct fields and no edges. These are **not** regenerated after
@@ -343,14 +375,9 @@ All graphapi resolvers require authentication, this is handled by the auth middl
         ```go
         func (h *Handler) ExampleHandler(ctx echo.Context) error {
             // bind the input
-            var in models.ExampleRequest
-            if err := ctx.Bind(&in); err != nil {
-                return h.InvalidInput(ctx, err)
-            }
-
-            // validate the input
-            if err := in.Validate(); err != nil {
-                return h.InvalidInput(ctx, err)
+           in, err := BindAndValidateWithAutoRegistry(ctx, h, openapi.Operation, models.ExampleSuccessRequest, models.ExampleResponse, openapi.Registry)
+            if err != nil {
+                return h.InvalidInput(ctx, err, openapi)
             }
 
             //
@@ -359,27 +386,12 @@ All graphapi resolvers require authentication, this is handled by the auth middl
 
 
             // return the response
-            out := models.ExampleReply{
-                Reply:    rout.Reply{Success: true},
-                Message:  "success",
+            out := &models.ExampleReply{
+                Reply:   rout.Reply{Success: true},
+                Message: "Example works!",
             }
 
-            return h.Success(ctx, out)
-        }
-
-        // BindExampleHandler binds the example request to the OpenAPI schema
-        func (h *Handler) BindExampleHandler() *openapi3.Operation {
-            example := openapi3.NewOperation()
-            example.Description = "Example is ... "
-            example.Tags = []string{"example"}
-            example.OperationID = "ExampleHandler"
-
-            h.AddRequestBody("ExampleRequest", models.ExampleExampleSuccessRequest, example)
-            h.AddResponse("ExampleReply", "success", models.ExampleExampleSuccessResponse, example, http.StatusOK)
-            example.AddResponse(http.StatusInternalServerError, internalServerError())
-            example.AddResponse(http.StatusBadRequest, badRequest())
-
-            return example
+            return h.Success(ctx, out, openapi)
         }
         ```
     </TabItem>
@@ -389,31 +401,23 @@ All graphapi resolvers require authentication, this is handled by the auth middl
 
         ```go
         func registerExampleHandler(router *Router) (err error) {
-            path := "/example"
-            method := http.MethodPost
-            name := "Example"
-
-            route := echo.Route{
-                Name:        name,
-                Method:      method,
-                Path:        path,
-                Middlewares: mw,
-                Handler: func(c echo.Context) error {
-                    return router.Handler.ExampleHandler(c)
-                },
+            config := Config{
+                Path:        "/example",
+                Method:      http.MethodGet,
+                Name:        "Example",
+                Description: "Get example data",
+                Tags:        []string{"example"},
+                OperationID: "Example",
+                Security:    handlers.PublicSecurity,
+                Middlewares: *publicEndpoint,
+                Handler:     router.Handler.ExampleHandler,
             }
 
-            op := router.Handler.BindExampleHandler()
-
-            if err := router.Addv1Route(path, method, op, route); err != nil {
-                return err
-            }
-
-            return nil
+            return router.AddUnversionedHandlerRoute(config)
         }
         ```
         :::info
-        The default middleware (`mw`) is an unauthenticated route. If the REST endpoint should require authentication `authMW` should be used instead.
+        The default middleware (`publicEndpoint`) is an unauthenticated route. If the REST endpoint should require authentication `authenticatedEndpoint` should be used instead.
         :::
     </TabItem>
     <TabItem value="server opts">
@@ -461,5 +465,5 @@ All REST endpoints should include an entry in the `models` package with:
 
 ### openlaneclient
 
-Located in `pkg/openlaneclient` this includes the generated golang API client used to interact with the API. The queries added to `internal/graphapi/query`
+Located in `pkg/openlaneclient` this includes the generated golang API client used to interact with the API. The queries added to `internal/graphapi/query/simple`
 are used as input to `gqlgenc` for the graphclient. The restclient is manually maintained.
