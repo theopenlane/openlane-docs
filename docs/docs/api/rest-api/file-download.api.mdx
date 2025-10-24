@@ -1,0 +1,69 @@
+---
+id: file-download
+title: "Download files via proxy-signed URLs. Requires authentication."
+description: "Download files via proxy-signed URLs. Requires authentication."
+sidebar_label: FileDownload
+hide_title: true
+hide_table_of_contents: true
+api: eJztV11zGjcU/SsavbSdAdZ2kofwVIPt1kmapAZP2mb8IHYFKFlWW0kLpsz+954rafla6mQm7VtfQEhX9577da7Y8Eza1KjSKV3wPr/SqyLXImNTlUvLlkqw0ujHddeqWSEzdn/3xvbYnfyzUgbnonJzWTiVCrrf4x2uS2n8j9sM6m6gpVGJw1IYsZBOGsv7HzdHpqHJW2W3VxCVj2JR5hL7Z+evnv/8y9ur0R/D4a+D8e8vnw1uXg4HNy9ITNHNUrg51gV045ciSyYgBAZnKtnhNp3LheD9DXfrkqSsM6qY8bp+CMLSuoHO1iSR6sLBKVqKssyjc8knSzA3DTJLa1ulqbR+uRR5JWkB+H0OCGP9WRI62Kj3ASCeiJFTQQNJ/yuROPJra/9Y+RjKHR3hk00kqyzSiuVSGjVdM7INoCpnIsuQYtuJ0soyi6j4kvACbZv1dkdPPsnUkYRyHvpBIdQ+IlBe6sKGMFycnf0HoffI/4//ifh3jlCNYjRx8Dyk4vB8AEq4C20SZM7bMvcF0YE26i/0HYRenFJ0iwSbQuRsJA1cZtfGaMM9nqmocte+4f2yMq2McmvPGxMpjDRYPlD3OjEjOuGesTg2wDBzTewzk86TDtihz5PleeJFko3K6iTbsZL1SE5R0rtSFrkoJLt8fxsBQ74yOc7mzpW2nySiVD0kTUfRntKcUDWAR1R3odQg+Vqu2w6SchwckWnHl8Jn7C8q66hSBEOhq8yDwX7DfnMpMo8r8t9vXQh0X3uBWA7RMuI4EValJ1JnKSkL2Cgy9l5Yu9ImYxBGbR7C4rGVSG1QtrVCEfE2YnqaRN1osxBILH/1YcyPC2/gRU76Hur+lPehr/eRBJMtKJr0XrT9fXeJfXbRO2NNyXq7LNUZWj/XKzbVhvkchuSL0B4dTochm/sXh7jX2rz/Qp0kAV2y7Ro/t6Zo+vnXXo3iPhQ49sAM6gGX7/C1g71CLVJgPtB3s018QZH8WmsNne5oJoS39mMfE3+oi4J4px1vOr5i8fwo2/8Y6wOlXwTZW8k8734u0NgJ7ausi3EyVbPKNJXbwD4AS/7QgLnbvQKuG8qPI+VJ4m+GzY75VTHVzTQTIRyBsSFUlaU27scjxtg2b8M4LZo5ppjjPmoufmd9DInTVEovNAQVkuH1hjGD6bdUGbWTVeSj73gp7JoOMYuYIoKeilT6tPhf8AGesZVCz1BjbmmxzIWD1KLHxnMVDONr31wz4CZrNtG4rhr692Yf4480VygHSxcag09ZQ3DwNJB4O1BoY+QuSwE2oJ5uxW61WvWEP+5pM0viXZu8uR1evx1dd+lOvZuVW4O0IJ+e9c7AFKNSpmoaa5bKk4ZGCP7ynCRIR6mtW4hiD9c3v6gP8rz3RPp2zbEdHPKQILiYJnUM3SZOzY9wjUjPj9YO7/u39XZ0YszN4S+JbTY0LNCjdU3b6CRDsxrLpTBKTCiwNF6VpTX4aSpyK59w7vuIO/uBHT7HToJu5lxBQy8+B+khSGPS/yOoHyAVJyUBCQfDYK47puu7i62nZ91pblyCm0r3pOz+C+Sna5p4k/jHYuGnBDdiRUyPT49Rl6GgiLppb8NRfLNKzEg2qCSKovTt/X/ZTrztY2hzOgrIjJfwNIXsNEGJZP4A5X8DdkjKAA==
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-0-0-specifications
+show_extensions: true
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download files via proxy-signed URLs. Requires authentication."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/files/{id}/download"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Download files via proxy-signed URLs. Requires authentication.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"the file ID","example":"01J4HMNDSZCCQBTY93BF9CBF5D","in":"path","name":"id","required":true,"schema":{"type":"string"}}]}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"ID":"","Token":""}}},"schema":{"properties":{"ID":{"description":"the file ID","example":"01J4HMNDSZCCQBTY93BF9CBF5D","type":"string"},"Token":{"description":"The token to be used to verify the email address, token is sent via email","type":"string"}},"type":"object","title":"FileDownload"}}}}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"ID":"","Token":"token"}}},"schema":{"properties":{"ID":{"description":"the file ID","example":"01J4HMNDSZCCQBTY93BF9CBF5D","type":"string"},"Token":{"description":"The token to be used to verify the email address, token is sent via email","type":"string"}},"type":"object","title":"FileDownload"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+

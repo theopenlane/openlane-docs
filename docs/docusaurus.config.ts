@@ -88,6 +88,7 @@ const config: Config = {
             items: [
               { label: 'Overview', to: 'docs/platform/overview' },
               { label: 'Basic Concepts', to: 'docs/platform/basics/overview' },
+              { label: 'Security', to: 'docs/platform/security/authentication/overview' },
               { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
               { label: 'Trust Center', to: 'docs/platform/trust-center/overview' },
               { label: 'Integrations', to: 'docs/platform/integrations' },

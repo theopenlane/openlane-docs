@@ -8,15 +8,32 @@ tags:
 
 # Program Wizard
 
-We've created a wizard to walk you through the steps of creating a program; these are the high level steps that the wizard will guide you through:
+We've created a wizard to walk you through the steps of creating a program to fit your compliance needs. To help with programs of a variety of different frameworks and sizes, there are five different paths you can take when creating a program:
 
-1. Step 1: Initialization
-    1. This step collects basic information about the program. You'll select the program type, enter the program name and description, choose the framework, and set the program's status. This foundational information is essential for defining the program's identity and scope.
-1. Step 2: Details
-    1. In this step, you will configure detailed information about the program. This includes setting auditor permissions and providing details about audit partners. These configurations ensure that the program has the necessary oversight and collaboration settings in place.
-1. Step 3: Team Invitation
-    1. This step allows users to invite team members to the program. Users can specify the roles of the invitees, such as members or admins. This step is crucial for assembling the team that will work on the program and defining their responsibilities.
-1. Step 4: Object Association
-    1. Users associate existing objects, such as policies, procedures, and risks, with the program in this step. This association helps in linking relevant resources and documentation to the program, ensuring that all necessary elements are connected and accessible.
-1. Summary and Submission
-    1. The final step provides a summary of all the information entered in the previous steps. Users can review the summary to ensure accuracy and completeness before submitting the program creation form. This step is important for final validation and confirmation of the program details.
+![Program Creation screenshot](../../../../static/img/screenshots/program/create_program.png)
+
+1. **SOC 2**: Create a program based on the SOC 2 framework based on system defaults to get you started quickly.
+1. **Risk Assessment**: Create a custom program focused on risk assessments, allowing you to define your own risks and score them based on likelihood and impact.
+1. **Framework Based**: Create a program based on a specific compliance framework, such as ISO 27001 or HIPAA, with pre-defined controls and requirements.
+1. **Generic Program**: Create a blank program where you can define your own structure, controls, and requirements from scratch.
+1. **Advanced**: Create a program with advanced options, allowing for more customization and configuration of the program settings.
+
+
+## Creating a Program
+
+To create a new program, follow these steps:
+
+1. From any page within the Openlane console, click the `+` button in the top left of the side navigation bar.
+1. Select `Create Program` from the dropdown menu.
+1. Choose one of the five program creation paths listed above.
+1. Follow the prompts in the wizard to configure your program settings, based on the path you selected.
+1. Once you've completed the wizard, click `Create` to finalize the creation of your program.
+
+:::info
+Programs based on specific frameworks (e.g., SOC 2, ISO 27001) will come pre-populated with relevant controls and requirements to help you get started quickly. For a SOC 2 program, you will additionally have the option during creation to only include specific domains (e.g., Security, Availability) if you do not wish to include all Trust Service Criteria.
+
+Controls can always be added or removed after program creation to better fit your organization's needs using the program settings or from the [standards catalog](https://console.theopenlane.io/standards).
+:::
+
+After program creation, you can change any of the fields you set during the creation via the main programs page or the program settings page.
+

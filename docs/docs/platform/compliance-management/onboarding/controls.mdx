@@ -1,0 +1,164 @@
+---
+title: Import Controls
+description: How to import existing controls into Openlane
+sidebar_position: 1
+---
+
+# Control Importing
+
+To help you get started quickly with your compliance program, Openlane provides the ability to import existing controls from CSV files. This allows you to bring in controls that you may have already defined in other systems or spreadsheets.
+
+## Import from Existing Standards
+
+Even if you are coming with controls from another system, it's best to clone them from our existing standards to ensure you will be able to leverage future updates to the standards and maintain alignment with best practices.
+
+### CSV Fields
+
+| Field Name                 | Description                                                                                                                                                 | Example / Notes                                                                                                                                | Required |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **StandardShortName**      | The short name of the standard.                                                                                                                             | Possible values: <br />• `SOC 2`<br />• `NIST CSF`<br />• `NIST 800-53`<br />• `ISO 27001`<br />• `HIPAA`<br />• `NIST 800-171`<br />• `GDPR`<br />• `PCI DSS` | ✅ Yes    |
+| **StandardVersion**        | Optional. Only required if there are multiple versions of the same standard (not applicable today).                                                         | e.g. `2017 - with revised points of focus 2022`, `5.1.1` versions                                                                                | ❌ No     |
+| **RefCode**                | Reference code or ID from the standard. Both the stored ref code and any known aliases will be matched.                                                     | Example for NIST 800-53: <br /> `"refCode": "AC-17.3"` <br /> `"aliases": ["AC-17(03)", "AC-17(3)", "ac-17.03"]`                            | ✅ Yes    |
+| **ControlImplementation**  | Implementation details of how the control is met.                                                                                                           | Free text                                                                                                              | ✅ Yes    |
+| **ControlObjective**       | The objective or intended outcome of the control.                                                                                                           | Free Text                                                                                                            | ❌ No     |
+| **ImplementationGuidance** | Additional guidance or instructions for implementing the control.                                                                                           | e.g. frequency, responsible roles, procedures                                                                                                  | ❌ No     |
+| **Comment**                | Additional context or commentary.                                                                                                                           | Internal notes, caveats, reviewer feedback, etc.                                                                                               | ❌ No     |
+| **Status**                 | The current status of the control.                                                                                                                          | Common values include `NOT_IMPLEMENTED`, `PREPARING`, `NEEDS_APPROVAL`, `APPROVED`, See all values in our [documentation](docs/api/graph-api/enums#controlcontrolstatus).                                                       | ❌ No     |
+| **ReferenceID**            | Internal reference ID of the control object.                                                                                                                | Useful for linking to external systems                                                                                          | ❌ No     |
+| **All control fields**     | All other fields on the [`control` object](docs/api/graph-api/objects#control) are supported except for a few list-type fields. | Refer to documentation for the complete list.                                                                                                  | ❌ No     |
+
+:::tip
+Refer to our documentation for a list of all fields supported on [controls](docs/api/graph-api/objects#control). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `MappedCategories` they need to be in as JSON, for example `["Security"]`. If the field is JSON, such as `ExampleEvidence` you need to escape the quotes, for example: `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`
+:::
+
+Example CSV Format
+```csv
+StandardShortName,RefCode,ControlInput.Status,ControlInput.ReferenceID,ControlImplementation,ImplementationGuidance,Comment
+NIST 800-53,AC-1,NEEDS_APPROVAL,INT-0001,The organization has implemented technical and administrative controls to address this requirement. Automated tooling and manual oversight are combined to meet the control objectives. Access and configuration are reviewed regularly to maintain compliance.,The organization has implemented technical and administrative controls to address this requirement.,No exceptions are currently documented for this control. Further enhancements may be planned as the environment evolves.
+```
+
+The above will clone the `AC-1` control from `NIST 800-53`, set the status of the control to `NEEDS_APPROVAL` and there reference id to `INT-0001`, add implementation guidance to what is provided by the standard. It will additionally create a control implementation and comment linked back to the created control.
+
+:::note
+The cases of the field matters. All field names _must_ be in `UpperCamelCase` and any field directly on the control object must be prefixed with `ControlInput`. For example `status` would be `ControlInput.Status`.
+:::
+
+### Upload Through Console
+
+1. Login to [console](https://console.theopenlane.io/)
+1. Navigate to the [controls table](https://console.theopenlane.io/controls?tab=controls) by clicking on `Controls` and then toggle to the table view.
+1. Click the `...` and select `Upload From Standard`
+1. You should now have a dialog where you can either use the file selector or drag and drop your csv
+1. Once you've selected your csv, click `Upload`. Depending on the number of controls this make take a little bit of time. If you have issues with timeouts, try breaking your csv into smaller chunks and uploading multiple times.
+1. When it is complete the dialog will close and you should see a success message and the table should now be populated with your controls
+
+### Upload through the API
+
+:::info
+You'll need an API token to follow these steps. You can create an api token in console in [developer settings](https://console.theopenlane.io/organization-settings/developers)
+:::
+
+1. Using a GraphQL tool such as Apollo Explorer, you can send an API request:
+    ```graphql
+    mutation CloneBulkCSVControl($input: Upload!) {
+    cloneBulkCSVControl(input: $input) {
+        controls {
+        id
+        refCode
+        referenceFramework
+        referenceFrameworkRevision
+        description
+        status
+        subcontrols {
+            edges {
+            node {
+                id
+                refCode
+                referenceFramework
+                referenceFrameworkRevision
+                description
+                status
+            }
+            }
+        }
+        }
+    }
+    }
+    ```
+
+    :::tip
+    See our `Compliance` collection in Apollo Studio for quick access to the [query](https://studio.apollographql.com/graph/Openlane-0dedz/variant/current/explorer?explorerURLState=N4IgzghgbgpgJgYQPYBsUwMYBcCWSB2AknCAFwhwCMEVAzAGwAMAtAEyOMTMAsEfzADm4YAnMzgQBMCKxgAzGAFZFjEABpw0eMjSZcBAKL4sAJwCexMiG4B2JvVq1KzSgy7dKw5hBGK5zemUJCAw4EVYBRXVwAAsIE21UdGw8fAB5ExwAcxx8ADV4nAhjACV5KzSABxh8FGKYZkY4eAAvAAEMAFcTBOMQAF8gA&referrer=operation_collections)
+    :::
+
+1. Add your API key to the `Authorization` header as `Bearer tola_` where your api token is `tola_xxxx`
+1. Add the `.csv` file using `Add files` and set the key to `input`
+1. Run the query, controls should be created + response returned such as:
+
+```json
+  "data": {
+    "cloneBulkCSVControl": {
+      "controls": [
+        {
+          "id": "01K7321328TSZAND058QNNBK54",
+          "refCode": "AC-1",
+          "referenceFramework": "NIST 800-53",
+          "referenceFrameworkRevision": "v0.0.1",
+```
+
+
+## Import custom controls
+
+### CSV Fields
+
+All other fields on the [`control` object](docs/api/graph-api/objects#control) are supported. The `RefCode` is the only required field.
+
+:::tip
+Refer to our documentation for a list of all fields supported on [controls](docs/api/graph-api/objects#control). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `MappedCategories` they need to be in as JSON, for example `["Security"]`. If the field is JSON, such as `ExampleEvidence` you need to escape the quotes, for example: `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`
+:::
+
+Example CSV Format
+```csv
+RefCode,Description,Category,AuditorReferenceID,MappedCategories
+CO-07,Company has established core values (Code of Conduct) that are communicated to employees (and contractors) during onboarding and on an ongoing basis thereafter.,Organizational Governance and Structure,AU-07,["Security"]
+```
+
+The above will create a control with the `RefCode` `CO-07`, with an auditor reference ID `AU-07`.
+
+:::note
+The cases of the field matters. All field names _must_ be in `UpperCamelCase`.
+:::
+
+### Through Console
+
+1. Login to [console](https://console.theopenlane.io/)
+1. Navigate to the [controls table](https://console.theopenlane.io/controls?tab=controls) by clicking on `Controls` and then toggle to the table view.
+1. Click the `...` and select `Upload Custom Controls`
+1. You should now have a dialog where you can either use the file selector or drag and drop your csv
+1. Once you've selected your csv, click `Upload`. Depending on the number of controls this make take a little bit of time.
+1. When it is complete the dialog will close and you should see a success message and the table should now be populated with your controls
+1. Now that your custom controls are imported, you'll most likely want to associate them to a program as well. You can filter by `Custom` standard from the control table view:
+1. Click `View Results`
+1. Select the checkbox on the top of each page until you have selected all controls:
+1. Select `Bulk Edit (count)`
+1. Choose the `Program` field and select your program
+1. Click `Save`
+
+## Import Control Mappings
+
+If you are importing custom controls, but want to map them to existing standard controls to show alignment, you can do so via CSV as well.
+
+Prior to creating the mappings, you must ensure all the expected controls exist in your organization. For example, if you imported you custom controls, but are mapping them to SOC 2 controls, you must first add the SOC 2 controls to your organization. This can be done by adding them from the standards catalog or creating a SOC 2 program which will automatically add them to your organization.
+
+### CSV Fields
+
+The CSV can contain any of the fields from the [MappedControl](docs/api/graph-api/objects#mappedcontrol) object, again in the `UpperCamelCase`format. For example:
+
+```
+FromControlRefCodes,ToControlRefCodes,MappingType,Confidence,Source,Relation,
+["CUSTOM::CO-07"],["SOC 2::CC1.1"],SUBSET,100,IMPORTED,Mapping between SOC2 controls and our custom controls,
+```
+
+1. Go to the same menu as when importing the custom controls, but instead click `Upload Control Mappings`
+1. Select the mapping csv file
+1. Click `Upload`
+1. After successful upload, you should see the mappings on the `Related Controls` panel on the control view screens.
