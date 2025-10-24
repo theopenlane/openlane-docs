@@ -1,0 +1,70 @@
+---
+title: Programmatic Authentication
+description: Using API tokens and personal access tokens for authentication in Openlane
+sidebar_position: 2
+---
+
+# Programmatic Authentication
+
+## API Tokens
+
+API Tokens provide organization-level programmatic access to Openlane APIs. They are designed for automation, integrations, and services that need to interact with Openlane on behalf of the organization.
+
+:::info
+In order to create any tokens, your organization must have a payment method on file.
+:::
+
+### Creating an API Token
+
+1. Navigation to **Developer Settings** in the Openlane console
+1. Select [API Tokens](https://console.theopenlane.io/organization-settings/developers) from the sidebar
+1. Click **Create**
+1. Fill in the required fields:
+   - **Name**: A human-readable name for the token
+   - **Description**: Optional description of the token's purpose
+   - **Scopes**: Select the appropriate permission scopes for the token
+   - **Expires At**: Expiration date for automatic revocation or choose to never expire
+1. Click **Create Token** to generate the token. Make sure to copy the token value as it will only be shown once.
+1. If your organization requires SSO enforcement, authorize the token for SSO access.
+
+
+### Using the API Token
+
+Include the API token in the `Authorization` header of your HTTP requests:
+
+```http
+Authorization: Bearer tola_YOUR_API_TOKEN
+```
+
+## Personal Access Tokens
+
+Personal Access Tokens (PATs) provide user-specific programmatic access to Openlane APIs. They inherit the permissions of the user who created them and are intended for personal automation, development tools, and user-specific integrations.
+
+### Creating a Personal Access Token
+
+1. Navigate to **Developer Settings** in the Openlane console
+1. Select [Personal Access Tokens](https://console.theopenlane.io/user-settings/developers) from the sidebar
+1. Click **Create**
+1. Fill in the required fields:
+   - **Name**: A human-readable name for the token
+   - **Description**: Optional description of the token's purpose
+   - **Authorized Organizations**: Select which organizations the token can access
+   - **Expires At**: Expiration date for automatic revocation or choose to never expire
+1. Click **Create Token** to generate the token. Make sure to copy the token value as it will only be shown once.
+1. If a selected organization requires SSO enforcement, authorize the token for SSO access.
+
+### Using the Personal Access Token
+
+Include the Personal Access Token in the `Authorization` header of your HTTP requests:
+
+```http
+Authorization: Bearer tolp_YOUR_PERSONAL_ACCESS_TOKEN
+```
+
+:::tip
+When using a Personal Access Token that is authorized for multiple organizations, ensure the `owner_id` is always included in the request, or add the `X-Organization-ID` header to specify which organization context to use for the request.
+:::
+
+## Additional Information
+
+For more details on tokens, including properties, GraphQL operations, and security considerations, refer to the our [developer documentation](/docs/category/api-tokens).
