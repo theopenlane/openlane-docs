@@ -23,12 +23,12 @@ Even if you are coming with controls from another system, it's best to clone the
 | **ControlObjective**       | The objective or intended outcome of the control.                                                                                                           | Free Text                                                                                                            | ❌ No     |
 | **ImplementationGuidance** | Additional guidance or instructions for implementing the control.                                                                                           | e.g. frequency, responsible roles, procedures                                                                                                  | ❌ No     |
 | **Comment**                | Additional context or commentary.                                                                                                                           | Internal notes, caveats, reviewer feedback, etc.                                                                                               | ❌ No     |
-| **Status**                 | The current status of the control.                                                                                                                          | Common values include `NOT_IMPLEMENTED`, `PREPARING`, `NEEDS_APPROVAL`, `APPROVED`, See all values in our [documentation](docs/api/graph-api/enums#controlcontrolstatus).                                                       | ❌ No     |
+| **Status**                 | The current status of the control.                                                                                                                          | Common values include `NOT_IMPLEMENTED`, `PREPARING`, `NEEDS_APPROVAL`, `APPROVED`, See all values in our [documentation](/docs/api/graph-api/enums#controlcontrolstatus).                                                       | ❌ No     |
 | **ReferenceID**            | Internal reference ID of the control object.                                                                                                                | Useful for linking to external systems                                                                                          | ❌ No     |
-| **All control fields**     | All other fields on the [`control` object](docs/api/graph-api/objects#control) are supported except for a few list-type fields. | Refer to documentation for the complete list.                                                                                                  | ❌ No     |
+| **All control fields**     | All other fields on the [`control` object](/docs/api/graph-api/objects#control) are supported except for a few list-type fields. | Refer to documentation for the complete list.                                                                                                  | ❌ No     |
 
 :::tip
-Refer to our documentation for a list of all fields supported on [controls](docs/api/graph-api/objects#control). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `MappedCategories` they need to be in as JSON, for example `["Security"]`. If the field is JSON, such as `ExampleEvidence` you need to escape the quotes, for example: `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`
+Refer to our documentation for a list of all fields supported on [controls](/docs/api/graph-api/objects#control). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `MappedCategories` they need to be in as JSON, for example `["Security"]`. If the field is JSON, such as `ExampleEvidence` you need to escape the quotes, for example: `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`
 :::
 
 Example CSV Format
@@ -110,10 +110,10 @@ You'll need an API token to follow these steps. You can create an api token in c
 
 ### CSV Fields
 
-All other fields on the [`control` object](docs/api/graph-api/objects#control) are supported. The `RefCode` is the only required field.
+All other fields on the [`control` object](/docs/api/graph-api/objects#control) are supported. The `RefCode` is the only required field.
 
 :::tip
-Refer to our documentation for a list of all fields supported on [controls](docs/api/graph-api/objects#control). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `MappedCategories` they need to be in as JSON, for example `["Security"]`. If the field is JSON, such as `ExampleEvidence` you need to escape the quotes, for example: `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`
+Refer to our documentation for a list of all fields supported on [controls](/docs/api/graph-api/objects#control). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `MappedCategories` they need to be in as JSON, for example `["Security"]`. If the field is JSON, such as `ExampleEvidence` you need to escape the quotes, for example: `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`
 :::
 
 Example CSV Format
@@ -151,7 +151,7 @@ Prior to creating the mappings, you must ensure all the expected controls exist 
 
 ### CSV Fields
 
-The CSV can contain any of the fields from the [MappedControl](docs/api/graph-api/objects#mappedcontrol) object, again in the `UpperCamelCase`format. For example:
+The CSV can contain any of the fields from the [MappedControl](/docs/api/graph-api/objects#mappedcontrol) object, again in the `UpperCamelCase`format. For example:
 
 ```
 FromControlRefCodes,ToControlRefCodes,MappingType,Confidence,Source,Relation,
