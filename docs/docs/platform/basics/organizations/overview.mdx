@@ -4,125 +4,217 @@ description: Core organizational entities and multi-tenant management
 sidebar_position: 1
 ---
 
-# Organizations
+# Managing Your Organization
 
-Organizations represent the fundamental tenant structure in Openlane, serving as the primary container for all compliance activities, resources, and data within the platform. The `Organization` object represents a central entity within the system, encapsulating various resources, settings, and members.
+## What is an Organization?
 
-## What Are Organizations?
+Your organization is your workspace in Openlane. It's where you manage your team members, control access to resources, configure security settings, and handle billing. Everything you create in Openlane belongs to an organization.
 
-Organizations are the top-level entities in Openlane's multi-tenant architecture. They provide complete data isolation, resource management, and compliance program coordination for distinct business entities, companies, or organizational units.
+When you sign up for Openlane, a personal organization is automatically created for you. You can also create additional organizations for your teams or companies.
 
-## Resource Ownership
+## Setting Up Your Organization Profile
 
-Organizations are the holders / owners of resources created within the tenancy model, but a confirmed user in active state must be associated with the Organization ownership role. A user will always be the owner of their Personal Organization, they will very commonly be members of Organizations other than their Personal, and they will likely be the owner of other Organizations or Child Organizations depending on desired system configuration(s).
+### Updating Organization Name and Details
 
-## Membership
+Navigate to Organization Settings in the console. Here you can update:
 
-Users will hold "memberships" to objects such as Groups, Organizations, Projects, etc. They will also hold ownership of resources which is the assignment of a role-level within openlane's authorization constructs, as the "parent" of resources within openlane are always the tenant(s) of the associated tree.
+- **Organization Name**: Your organization's unique identifier (note: this may be restricted after initial creation)
+- **Display Name**: The friendly name shown throughout the console
+- **Description**: An optional description of your organization
 
-## Personal Organizations
+### Adding an Organization Avatar
 
-After being created, a user can be granted access to a tenant, which allows them to perform operations and access resources within that tenant and all its sub-tenants. Users can be granted access to one or more tenants, as needed, and can be managed through the user and permissions APIs exposed / provided by openlane.
+You can personalize your organization with a custom avatar that appears in the console:
 
-## Compliance Significance
+1. Go to Organization Settings
+2. Navigate to the Profile section
+3. Upload an image file, or provide a URL to an image hosted elsewhere
+4. Save your changes
 
-Organizations are essential for:
+If you provide both an uploaded file and a URL, the uploaded file will be used.
 
-- **Multi-Tenant Isolation**: Ensuring complete data separation between different organizations
-- **Compliance Program Management**: Coordinating comprehensive compliance programs across all organizational activities
-- **Resource Allocation**: Managing compliance resources, budgets, and personnel assignments
-- **Audit Scope Definition**: Defining clear audit boundaries and organizational responsibilities
-- **Regulatory Compliance**: Managing organization-specific regulatory requirements and jurisdictions
+## Inviting Users to Your Organization
 
-## Organization Types
+You can invite people to join your organization by sending them email invitations.
 
-### Enterprise Organizations
+To invite a user:
 
-- **Scope**: Large enterprises with complex compliance requirements
-- **Characteristics**: Multiple subsidiaries, diverse regulatory requirements, extensive audit programs
-- **Resources**: Dedicated compliance teams, significant compliance budgets, comprehensive control frameworks
-- **Use Cases**: Public companies, highly regulated industries, multinational corporations
+1. Navigate to Organization Settings
+2. Go to the Members section
+3. Click "Invite Member"
+4. Enter the person's email address
+5. Select their role (Member, Admin, or Owner)
+6. Optionally assign them to specific groups
+7. Click "Send Invitation"
 
-### Small-Medium Organizations
+The person will receive an email with a link to accept the invitation. This link is valid for 14 days. If they don't accept within that time, you can resend the invitation or create a new one.
 
-- **Scope**: Growing organizations with emerging compliance needs
-- **Characteristics**: Single entity focus, specific compliance requirements, structured compliance programs
-- **Resources**: Limited compliance staff, focused compliance initiatives, targeted control implementations
-- **Use Cases**: Private companies, service providers, technology startups
+### Understanding Roles
 
-### Subsidiary Organizations
+When inviting users, you assign them a role that determines what they can do:
 
-- **Scope**: Child organizations within larger enterprise structures
-- **Characteristics**: Inherited compliance requirements, shared resources, coordinated programs
-- **Resources**: Shared compliance resources, aligned compliance programs, centralized oversight
-- **Use Cases**: Regional offices, business units, acquired companies
+- **Member**: Can access organization resources and perform standard tasks
+- **Admin**: Can manage organization settings and invite other members
+- **Owner**: Has full control over the organization, including deleting it and managing billing
 
-### Service Organizations
+## Restricting Access by Email Domain
 
-- **Scope**: Organizations providing services to other organizations
-- **Characteristics**: Service-specific compliance requirements, customer-facing compliance programs
-- **Resources**: Service-oriented compliance teams, customer compliance support, trust center management
-- **Use Cases**: Cloud service providers, managed service providers, outsourcing organizations
+You can configure your organization to only allow users with specific email domains. This is useful when you want to ensure only people from your company can join.
 
-## Properties
+To configure allowed domains:
 
-### Core Information
+1. Go to Organization Settings
+2. Navigate to Security
+3. Find the "Allowed Email Domains" section
+4. Add your domains (for example: yourcompany.com)
+5. Save your changes
 
-- **ID**: Unique identifier for the organization
-- **Name**: Official organization name
-- **Display Name**: User-friendly organization name
-- **Description**: Organization description and purpose
-- **Website**: Organization website URL
+Once configured, only users with email addresses from these domains can be invited or join your organization. Note that free email providers like Gmail and Yahoo cannot be used as allowed domains for security reasons.
 
-### Business Information
+## Enabling Auto-Join for Your Domain
 
-- **Industry**: Industry classification
-- **Size**: Organization size (employees, revenue)
-- **Headquarters**: Primary business location
-- **Jurisdictions**: Legal jurisdictions where organization operates
-- **Business Type**: Type of business entity (corporation, LLC, partnership, etc.)
+If you want to let anyone with your company email domain join your organization automatically without requiring individual invitations, you can enable auto-join.
 
-### Configuration
+To enable auto-join:
 
-- **Settings**: Organization-specific configuration settings
-- **Features**: Enabled features and capabilities
-- **Subscription**: Subscription plan and billing information
-- **Limits**: Resource limits and usage quotas
-- **Preferences**: Organization preferences and defaults
+1. First, configure your allowed email domains (see above)
+2. Go to Organization Settings
+3. Navigate to Security
+4. Find the "Auto-Join" setting
+5. Enable "Allow users with matching domains to auto-join"
+6. Save your changes
 
-### Compliance Context
+With auto-join enabled, anyone who signs up for Openlane with an email address matching your configured domains will automatically become a member of your organization when they verify their email or log in via a social provider.
 
-- **Compliance Frameworks**: Applicable compliance frameworks and standards
-- **Regulatory Requirements**: Specific regulatory requirements
-- **Audit Schedule**: Planned audit activities and schedules
-- **Risk Profile**: Organization risk profile and appetite
-- **Compliance Maturity**: Current compliance maturity level
+Important: Only enable this for email domains that you fully control. Users who auto-join will have the Member role by default.
 
-## Permissions at an Organization Level
+## Setting Up Single Sign-On (SSO)
 
-Permissions within an organization are managed through roles and specific permissions:
+You can find more information on setting up SSO [here](../../security/authentication/sso.mdx)
 
-- Roles: Roles such as `owner`, `admin`, `member` define the level of access a user has within an organization.
-- Permissions: Specific permissions like `can_view`, `can_edit`, `audit_log_viewer`, and `can_invite_members` are assigned to roles to control access to various resources and actions within the organization.
+## Requiring Multi-Factor Authentication
 
-## Relationships
+You can require all members of your organization to enable two-factor authentication (2FA) for added security.
 
-Organizations serve as the root entity and relate to all other Openlane objects:
+To enable MFA enforcement:
 
-### Direct Relationships
+1. Go to Organization Settings
+2. Navigate to Security
+3. Enable "Require Multi-Factor Authentication"
+4. Save your changes
 
-- **Users**: Members of the organization
-- **Groups**: User groups within the organization
-- **Organization Settings**: Configuration and preferences
-- **Subscriptions**: Billing and subscription information
+Once enabled, all organization members will be prompted to set up 2FA the next time they log in. You can enforce MFA independently or alongside SSO.
 
-### Owned Resources
+## Managing Organization Members
 
-- **Programs**: Compliance programs managed by the organization
-- **Controls**: Security controls implemented by the organization
-- **Evidence**: Evidence collected by the organization
-- **Risks**: Risks managed by the organization
-- **Policies**: Policies created by the organization
-- **Tasks**: Tasks assigned within the organization
-- **Files**: Documents and files owned by the organization
-- **Entities**: Business entities within the organization
+### Viewing Your Team
+
+To see all members of your organization:
+
+1. Go to Organization Settings
+2. Navigate to the Members section
+
+Here you'll see a list of all current members, their roles, and when they joined.
+
+### Changing Member Roles
+
+To update a member's role:
+
+1. In the Members section, find the user
+2. Click on their current role
+3. Select the new role from the dropdown
+4. Confirm the change
+
+### Removing Members
+
+To remove someone from your organization:
+
+1. In the Members section, find the user
+2. Click the remove/delete option
+3. Confirm the removal
+
+Note: Members can also leave the organization themselves at any time.
+
+## Setting Up Billing
+
+### Adding Billing Contact Information
+
+Keep your billing information up to date so we can reach you about payments and invoices.
+
+To update billing details:
+
+1. Go to Organization Settings
+2. Navigate to Billing
+3. Enter or update:
+   - Billing contact name
+   - Billing email address
+   - Phone number (in international format, e.g., +12025551234)
+   - Billing address
+   - Tax ID (if applicable, such as your VAT number or business registration number)
+4. Save your changes
+
+### Adding a Payment Method
+
+To add a payment method for your subscription:
+
+1. Go to Organization Settings
+2. Navigate to Billing
+3. Click "Add Payment Method"
+4. Enter your payment details
+5. Submit the form
+
+Your payment information is securely processed through Stripe and is never stored directly in Openlane.
+
+### Viewing Your Subscription
+
+To see your current subscription status, trial information, and payment details:
+
+1. Go to Organization Settings
+2. Navigate to Billing
+3. View the Subscription section
+
+Here you can see:
+- Your current plan and status
+- Trial expiration date (if applicable)
+- Next payment due date
+- Subscription expiration (if you've cancelled)
+
+## Managing Feature Modules
+
+Openlane offers additional feature modules that you can add to your organization to access more capabilities.
+
+### Enabling Feature Modules
+
+To add features to your organization:
+
+1. Go to Organization Settings
+2. Navigate to Billing, then Subscriptions
+3. Browse available feature modules
+4. Click "Enable" on any module you want to add
+5. Review pricing and confirm
+
+Some modules may be available as part of your plan, while others require an additional subscription fee.
+
+### Viewing Active Modules
+
+To see which features are currently enabled:
+
+1. Go to Organization Settings
+2. Navigate to Billing, then Subscriptions
+3. View the "Active Modules" section
+
+Here you can see the status of each module (active, trial, inactive) and manage your module subscriptions.
+
+## Deleting Your Organization
+
+Deleting an organization is permanent and cannot be undone. All data, resources, and member associations will be deleted.
+
+To delete your organization:
+
+1. Go to Organization Settings
+2. Navigate to the Danger Zone or Delete section
+3. Click "Delete Organization"
+4. Confirm by typing the organization name
+5. Confirm the deletion
+
+Only organization Owners can delete an organization.

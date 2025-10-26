@@ -2,8 +2,8 @@
   "label": "Organizations",
   "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "Information on what Organizations are and their relationshipo to other objects in the system"
+    "type": "doc",
+    "id": "platform/basics/organizations/overview"
   },
   "collapsed": true
 }
