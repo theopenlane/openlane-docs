@@ -2,8 +2,8 @@
   "label": "Policies and Procedures",
   "position": 5,
   "link": {
-    "type": "generated-index",
-    "description": "Policies and procedures to help manage your organization's compliance and risk"
+    "type": "doc",
+    "id": "platform/compliance-management/policy-and-procedure-management/policies"
   },
   "collapsed": true
 }

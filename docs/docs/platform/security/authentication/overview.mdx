@@ -8,49 +8,9 @@ sidebar_position: 0
 
 Openlane gives organizations flexible and secure ways to authenticate users, ranging from developer-friendly options to enterprise-grade SSO. This page provides a high-level overview of the methods we support and when to use each.
 
-## SSO (Single Sign-On)
-
-All organizations can configure **OIDC-based SSO** with providers like Okta, OneLogin, Google Workspace, and more. This allows users to log in with their corporate credentials and enables centralized access control.
-
-- **Best for** organizations that need centralized access control and compliance with ease of onboarding and offboarding
-- **Pros:**
-  - Centralized identity management
-  - Enforce MFA, password policy, and conditional access
-  - Automatic provisioning de-provisioning of users via SCIM (if supported by IdP)
-- **Considerations:**
-  - Requires admin setup in your IdP.
-  - May require extra configuration for group/role claims
-
-
-## Passkeys (WebAuthn)
-
-Passkeys provide a passwordless login experience using device-based public-key cryptography (Face ID, Touch ID, YubiKey, Windows Hello).
-
-- **Best for** security-focused teams who do not want to set up single sign-on but want strong, phishing-resistant authentication
-- **Pros:**
-  - Phishing-resistant
-  - No shared secret to leak
-  - Works across browsers and devices
-- **Considerations:**
-  - Users must have at least one enrolled device or hardware key.
-  - Recommended to set up a backup passkey
-  - Requires manual user management
-
-## Social Login
-
-We support sign-in with **Google** and **GitHub**.
-
-- **Best for** Small teams, contractors, open-source contributors.
-- **Pros:** No password to manage, uses trusted provider MFA settings
-- **Considerations:**
-  - Limited control over user lifecycle (e.g., must remove users manually if they leave your company).
-
-## Credentials (Password)
-
-Users can create a traditional **email + password** login.
-
-- **Best for** legacy scenarios or as a fallback when other methods are unavailable.
-- **Pros:** universal and simple
-- **Considerations:**
-  - **Not recommended** due to the weakest security posture
-  - Encourage users to enable MFA where possible or migrate to passkeys or single sign-on
+| Method                | Best For                                                                 | Pros                                                                                                         | Considerations                                                                                       |
+|-----------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| SSO (Single Sign-On)  | Organizations needing centralized access control, easy onboarding/offboarding | Centralized identity management<br/>Enforce MFA, password policy, conditional access<br/>Automatic provisioning/de-provisioning via SCIM (if IdP supports) | Requires admin setup in IdP<br/>May require extra configuration for group/role claims             |
+| Passkeys (WebAuthn)   | Security-focused teams wanting strong, phishing-resistant authentication      | Phishing-resistant<br/>No shared secret to leak<br/>Works across browsers and devices                   | Users must have at least one enrolled device or hardware key<br/>Recommended to set up backup passkey<br/>Requires manual user management |
+| Social Login          | Small teams, contractors, open-source contributors                           | No password to manage<br/>Uses trusted provider MFA settings                                              | Limited control over user lifecycle (must remove users manually if they leave your company)         |
+| Credentials (Password)| Legacy scenarios or fallback when other methods unavailable                  | Universal and simple                                                                                       | Not recommended (weakest security posture)<br/>Encourage MFA or migration to passkeys/SSO         |
