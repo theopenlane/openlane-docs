@@ -994,6 +994,12 @@ ControlControlStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>NOT_APPLICABLE</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1114,6 +1120,12 @@ ControlHistoryControlStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>NOT_APPLICABLE</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1206,6 +1218,12 @@ Properties by which ControlHistory connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>title</td>
 <td>
 
 </td>
@@ -1793,6 +1811,12 @@ Properties by which Control connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>title</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>STATUS</td>
 <td>
 
@@ -1842,6 +1866,12 @@ Properties by which Control connections can be ordered.
 </tr>
 <tr>
 <td>DELEGATE_name</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>RESPONSIBLE_PARTY_name</td>
 <td>
 
 </td>
@@ -7972,6 +8002,12 @@ SubcontrolControlStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>NOT_APPLICABLE</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8092,6 +8128,12 @@ SubcontrolHistoryControlStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>NOT_APPLICABLE</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8189,6 +8231,12 @@ Properties by which SubcontrolHistory connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>title</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>STATUS</td>
 <td>
 
@@ -8255,6 +8303,12 @@ Properties by which Subcontrol connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>title</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>STATUS</td>
 <td>
 
@@ -8304,6 +8358,12 @@ Properties by which Subcontrol connections can be ordered.
 </tr>
 <tr>
 <td>DELEGATE_name</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>RESPONSIBLE_PARTY_name</td>
 <td>
 
 </td>
@@ -9545,91 +9605,79 @@ TrustCenterWatermarkConfigFont is enum for the field font
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
-<td>arial</td>
+<td>COURIER</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>helvetica</td>
+<td>COURIER_BOLD</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>times</td>
+<td>COURIER_BOLDOBLIQUE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>times_new_roman</td>
+<td>COURIER_OBLIQUE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>georgia</td>
+<td>HELVETICA</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>verdana</td>
+<td>HELVETICA_BOLD</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>courier</td>
+<td>HELVETICA_BOLDOBLIQUE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>courier_new</td>
+<td>HELVETICA_OBLIQUE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>trebuchet_ms</td>
+<td>SYMBOL</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>comic_sans_ms</td>
+<td>TIMES_BOLD</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>impact</td>
+<td>TIMES_BOLDITALIC</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>palatino</td>
+<td>TIMES_ITALIC</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>garamond</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>bookman</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>avant_garde</td>
+<td>TIMES_ROMAN</td>
 <td>
 
 </td>
@@ -9647,91 +9695,79 @@ TrustCenterWatermarkConfigHistoryFont is enum for the field font
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
-<td>arial</td>
+<td>COURIER</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>helvetica</td>
+<td>COURIER_BOLD</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>times</td>
+<td>COURIER_BOLDOBLIQUE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>times_new_roman</td>
+<td>COURIER_OBLIQUE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>georgia</td>
+<td>HELVETICA</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>verdana</td>
+<td>HELVETICA_BOLD</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>courier</td>
+<td>HELVETICA_BOLDOBLIQUE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>courier_new</td>
+<td>HELVETICA_OBLIQUE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>trebuchet_ms</td>
+<td>SYMBOL</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>comic_sans_ms</td>
+<td>TIMES_BOLD</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>impact</td>
+<td>TIMES_BOLDITALIC</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>palatino</td>
+<td>TIMES_ITALIC</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>garamond</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>bookman</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>avant_garde</td>
+<td>TIMES_ROMAN</td>
 <td>
 
 </td>

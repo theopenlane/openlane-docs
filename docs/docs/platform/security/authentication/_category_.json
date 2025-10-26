@@ -1,0 +1,9 @@
+{
+  "label": "Authentication",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about the authentication methods supported by Openlane, including Single Sign-On (SSO), passwordless login with Passkeys, social login options, and traditional email/password authentication."
+  },
+  "collapsed": true
+}

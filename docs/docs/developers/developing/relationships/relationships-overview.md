@@ -18,11 +18,6 @@ making it easier to understand how different components interact and depend on e
 | **Controls** | Risks | Mitigation | Controls are implemented to mitigate specific risks |
 | **Controls** | Programs | Organization | Controls are organized and managed within compliance programs |
 | **Controls** | Tasks | Execution | Tasks track the work required to implement and maintain controls |
-| **Entities** | Organizations | Ownership | Entities belong to and are managed by organizations |
-| **Entities** | Assets | Association | Assets are associated with specific entities |
-| **Entities** | Groups | Structure | Groups represent teams within entities |
-| **Entities** | Controls | Implementation | Controls are implemented at the entity level |
-| **Entities** | Risks | Assessment | Risks are assessed and managed at the entity level |
 | **Evidence** | Controls | Support | Evidence demonstrates that controls are implemented effectively |
 | **Evidence** | Programs | Organization | Evidence collection is organized within compliance programs |
 | **Evidence** | Standards | Requirements | Evidence requirements are defined by compliance standards |
@@ -224,12 +219,11 @@ Organizations
 
 - [Organizations Overview](docs/platform/basics/organizations/overview.mdx)
 - [Groups Overview](docs/platform/basics/groups/overview.mdx)
-- [Entities Overview](docs/platform/basics/entities/overview.mdx)
 
 ### Operational Relationships
 
 - [Tasks Overview](docs/platform/basics/tasks/overview.mdx)
-- [Standards Overview](docs/platform/compliance-management/standards/overview.mdx)
+- [Standards Overview](docs/platform/standards/overview.mdx)
 
 ## Usage Tips
 

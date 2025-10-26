@@ -229,6 +229,24 @@ dismissedImprovementSuggestions<br />
 </tr>
 <tr>
 <td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create or update the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>This will contain the most recent file id if this action_plan was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -533,6 +551,15 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+file<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -552,6 +579,27 @@ actionPlans<br />
 </td>
 <td>
 <p>Created actionPlans</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ActionPlanBulkDeletePayload
+
+Return response for deleteBulkActionPlan mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted actionPlan IDs</p>
 </td>
 </tr>
 </tbody>
@@ -947,6 +995,24 @@ dismissedImprovementSuggestions<br />
 </tr>
 <tr>
 <td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create or update the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the most recent file id if this action_plan was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -1304,6 +1370,27 @@ apiTokens<br />
 </td>
 <td>
 <p>Created apiTokens</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## APITokenBulkDeletePayload
+
+Return response for deleteBulkAPIToken mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted apiToken IDs</p>
 </td>
 </tr>
 </tbody>
@@ -2067,6 +2154,27 @@ assets<br />
 </td>
 <td>
 <p>Created assets</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssetBulkDeletePayload
+
+Return response for deleteBulkAsset mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted asset IDs</p>
 </td>
 </tr>
 </tbody>
@@ -2924,6 +3032,27 @@ contacts<br />
 </tbody>
 </table>
 
+## ContactBulkDeletePayload
+
+Return response for deleteBulkContact mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted contact IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ContactBulkUpdatePayload
 
 Return response for updateBulkContact mutation
@@ -3402,11 +3531,29 @@ tags<br />
 </tr>
 <tr>
 <td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>human readable title of the control for quick identification</p>
+</td>
+</tr>
+<tr>
+<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>description of what the control is supposed to accomplish</p>
+</td>
+</tr>
+<tr>
+<td>
+aliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>additional names (ref_codes) for the control</p>
 </td>
 </tr>
 <tr>
@@ -3425,6 +3572,15 @@ auditorReferenceID<br />
 </td>
 <td>
 <p>external auditor id of the control, can be used to map to external audit partner mappings</p>
+</td>
+</tr>
+<tr>
+<td>
+responsiblePartyID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the party responsible for the control, usually used when the control is implemented by a third party</p>
 </td>
 </tr>
 <tr>
@@ -3452,6 +3608,15 @@ referenceFramework<br />
 </td>
 <td>
 <p>the reference framework for the control if it came from a standard, empty if not associated with a standard</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFrameworkRevision<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
 </td>
 </tr>
 <tr>
@@ -4203,6 +4368,78 @@ where<br />
 </tr>
 <tr>
 <td>
+comments<br />
+<a href="objects#noteconnection"><code>NoteConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#noteorder"><code>[NoteOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Notes returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notewhereinput"><code>NoteWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 controlOwner<br />
 <a href="objects#group"><code>Group</code></a>
 </td>
@@ -4217,6 +4454,15 @@ delegate<br />
 </td>
 <td>
 <p>temporary delegate for the control, used for temporary control ownership</p>
+</td>
+</tr>
+<tr>
+<td>
+responsibleParty<br />
+<a href="objects#entity"><code>Entity</code></a>
+</td>
+<td>
+<p>the entity who is responsible for the control implementation when it is a third party</p>
 </td>
 </tr>
 <tr>
@@ -4837,6 +5083,27 @@ controls<br />
 </tbody>
 </table>
 
+## ControlBulkDeletePayload
+
+Return response for deleteBulkControl mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted control IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlBulkUpdatePayload
 
 Return response for updateBulkControl mutation
@@ -5254,11 +5521,29 @@ tags<br />
 </tr>
 <tr>
 <td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>human readable title of the control for quick identification</p>
+</td>
+</tr>
+<tr>
+<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>description of what the control is supposed to accomplish</p>
+</td>
+</tr>
+<tr>
+<td>
+aliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>additional names (ref_codes) for the control</p>
 </td>
 </tr>
 <tr>
@@ -5277,6 +5562,15 @@ auditorReferenceID<br />
 </td>
 <td>
 <p>external auditor id of the control, can be used to map to external audit partner mappings</p>
+</td>
+</tr>
+<tr>
+<td>
+responsiblePartyID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the party responsible for the control, usually used when the control is implemented by a third party</p>
 </td>
 </tr>
 <tr>
@@ -5304,6 +5598,15 @@ referenceFramework<br />
 </td>
 <td>
 <p>the reference framework for the control if it came from a standard, empty if not associated with a standard</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFrameworkRevision<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
 </td>
 </tr>
 <tr>
@@ -6157,6 +6460,27 @@ controlImplementations<br />
 </td>
 <td>
 <p>Created controlImplementations</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlImplementationBulkDeletePayload
+
+Return response for deleteBulkControlImplementation mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted controlImplementation IDs</p>
 </td>
 </tr>
 </tbody>
@@ -7622,6 +7946,27 @@ controlObjectives<br />
 </tbody>
 </table>
 
+## ControlObjectiveBulkDeletePayload
+
+Return response for deleteBulkControlObjective mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted controlObjective IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlObjectiveConnection
 
 A connection to a list of items.
@@ -8234,6 +8579,27 @@ customDomains<br />
 </td>
 <td>
 <p>Created customDomains</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomDomainBulkDeletePayload
+
+Return response for deleteBulkCustomDomain mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted customDomain IDs</p>
 </td>
 </tr>
 </tbody>
@@ -8857,6 +9223,27 @@ dnsVerifications<br />
 </td>
 <td>
 <p>Created dnsVerifications</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DNSVerificationBulkDeletePayload
+
+Return response for deleteBulkDNSVerification mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted dnsVerification IDs</p>
 </td>
 </tr>
 </tbody>
@@ -9525,6 +9912,27 @@ documentData<br />
 </td>
 <td>
 <p>Created documentData</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DocumentDataBulkDeletePayload
+
+Return response for deleteBulkDocumentData mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted documentData IDs</p>
 </td>
 </tr>
 </tbody>
@@ -10702,6 +11110,27 @@ entities<br />
 </tbody>
 </table>
 
+## EntityBulkDeletePayload
+
+Return response for deleteBulkEntity mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted entity IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## EntityConnection
 
 A connection to a list of items.
@@ -11281,6 +11710,27 @@ entityTypes<br />
 </td>
 <td>
 <p>Created entityTypes</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EntityTypeBulkDeletePayload
+
+Return response for deleteBulkEntityType mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted entityType IDs</p>
 </td>
 </tr>
 </tbody>
@@ -12636,6 +13086,27 @@ events<br />
 </td>
 <td>
 <p>Created events</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EventBulkDeletePayload
+
+Return response for deleteBulkEvent mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted event IDs</p>
 </td>
 </tr>
 </tbody>
@@ -18179,6 +18650,27 @@ groups<br />
 </tbody>
 </table>
 
+## GroupBulkDeletePayload
+
+Return response for deleteBulkGroup mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted group IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## GroupConnection
 
 A connection to a list of items.
@@ -18722,6 +19214,27 @@ groupMemberships<br />
 </td>
 <td>
 <p>Created groupMemberships</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## GroupMembershipBulkDeletePayload
+
+Return response for deleteBulkGroupMembership mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted groupMembership IDs</p>
 </td>
 </tr>
 </tbody>
@@ -19306,6 +19819,27 @@ groupSettings<br />
 </td>
 <td>
 <p>Created groupSettings</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## GroupSettingBulkDeletePayload
+
+Return response for deleteBulkGroupSetting mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted groupSetting IDs</p>
 </td>
 </tr>
 </tbody>
@@ -20076,6 +20610,27 @@ hushes<br />
 </td>
 <td>
 <p>Created hushs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## HushBulkDeletePayload
+
+Return response for deleteBulkHush mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted hush IDs</p>
 </td>
 </tr>
 </tbody>
@@ -21488,20 +22043,20 @@ dismissedImprovementSuggestions<br />
 </tr>
 <tr>
 <td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create or update the policy</p>
+</td>
+</tr>
+<tr>
+<td>
 fileID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>This will contain the most recent file id if this policy was created from a file</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the url used to create/update the policy</p>
 </td>
 </tr>
 <tr>
@@ -22332,6 +22887,78 @@ file<br />
 
 </td>
 </tr>
+<tr>
+<td>
+comments<br />
+<a href="objects#noteconnection"><code>NoteConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#noteorder"><code>[NoteOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Notes returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notewhereinput"><code>NoteWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -22351,6 +22978,27 @@ internalPolicies<br />
 </td>
 <td>
 <p>Created internalPolicys</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## InternalPolicyBulkDeletePayload
+
+Return response for deleteBulkInternalPolicy mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted internalPolicy IDs</p>
 </td>
 </tr>
 </tbody>
@@ -22791,20 +23439,20 @@ dismissedImprovementSuggestions<br />
 </tr>
 <tr>
 <td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create or update the policy</p>
+</td>
+</tr>
+<tr>
+<td>
 fileID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>This will contain the most recent file id if this policy was created from a file</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the url used to create/update the policy</p>
 </td>
 </tr>
 </tbody>
@@ -23193,6 +23841,27 @@ invites<br />
 </td>
 <td>
 <p>Created invites</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## InviteBulkDeletePayload
+
+Return response for deleteBulkInvite mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted invite IDs</p>
 </td>
 </tr>
 </tbody>
@@ -24895,6 +25564,27 @@ jobTemplates<br />
 </tbody>
 </table>
 
+## JobTemplateBulkDeletePayload
+
+Return response for deleteBulkJobTemplate mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted jobTemplate IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## JobTemplateConnection
 
 A connection to a list of items.
@@ -25468,6 +26158,27 @@ mappableDomains<br />
 </td>
 <td>
 <p>Created mappableDomains</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappableDomainBulkDeletePayload
+
+Return response for deleteBulkMappableDomain mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted mappableDomain IDs</p>
 </td>
 </tr>
 </tbody>
@@ -26388,6 +27099,27 @@ mappedControls<br />
 </td>
 <td>
 <p>Created mappedControls</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## MappedControlBulkDeletePayload
+
+Return response for deleteBulkMappedControl mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted mappedControl IDs</p>
 </td>
 </tr>
 </tbody>
@@ -27439,6 +28171,27 @@ narratives<br />
 </tbody>
 </table>
 
+## NarrativeBulkDeletePayload
+
+Return response for deleteBulkNarrative mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted narrative IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## NarrativeConnection
 
 A connection to a list of items.
@@ -27914,6 +28667,51 @@ task<br />
 </tr>
 <tr>
 <td>
+control<br />
+<a href="objects#control"><code>Control</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrol<br />
+<a href="objects#subcontrol"><code>Subcontrol</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+procedure<br />
+<a href="objects#procedure"><code>Procedure</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+risk<br />
+<a href="objects#risk"><code>Risk</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicy<br />
+<a href="objects#internalpolicy"><code>InternalPolicy</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 files<br />
 <a href="objects#fileconnection"><code>FileConnection!</code></a>
 </td>
@@ -28021,6 +28819,27 @@ totalCount<br />
 </td>
 <td>
 <p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## NoteDeletePayload
+
+Return response for deleteComment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted comment ID</p>
 </td>
 </tr>
 </tbody>
@@ -33704,6 +34523,27 @@ organizationSettings<br />
 </tbody>
 </table>
 
+## OrganizationSettingBulkDeletePayload
+
+Return response for deleteBulkOrganizationSetting mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted organizationSetting IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## OrganizationSettingConnection
 
 A connection to a list of items.
@@ -34442,6 +35282,27 @@ orgMemberships<br />
 </td>
 <td>
 <p>Created orgMemberships</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## OrgMembershipBulkDeletePayload
+
+Return response for deleteBulkOrgMembership mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted orgMembership IDs</p>
 </td>
 </tr>
 </tbody>
@@ -36048,6 +36909,24 @@ dismissedImprovementSuggestions<br />
 </tr>
 <tr>
 <td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create or update the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>This will contain the most recent file id if this procedure was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
 systemOwned<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -36071,24 +36950,6 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-fileID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>This will contain the most recent file id if this procedure was created from a file</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the url used to create/update the procedure</p>
 </td>
 </tr>
 <tr>
@@ -36768,6 +37629,78 @@ where<br />
 </tr>
 <tr>
 <td>
+comments<br />
+<a href="objects#noteconnection"><code>NoteConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#noteorder"><code>[NoteOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Notes returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notewhereinput"><code>NoteWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 file<br />
 <a href="objects#file"><code>File</code></a>
 </td>
@@ -36794,6 +37727,27 @@ procedures<br />
 </td>
 <td>
 <p>Created procedures</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ProcedureBulkDeletePayload
+
+Return response for deleteBulkProcedure mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted export IDs</p>
 </td>
 </tr>
 </tbody>
@@ -37207,6 +38161,24 @@ dismissedImprovementSuggestions<br />
 </tr>
 <tr>
 <td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the url used to create or update the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+fileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>This will contain the most recent file id if this procedure was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
 systemOwned<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -37230,24 +38202,6 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-fileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the most recent file id if this procedure was created from a file</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the url used to create/update the procedure</p>
 </td>
 </tr>
 </tbody>
@@ -37543,6 +38497,15 @@ auditorEmail<br />
 </td>
 <td>
 <p>the email of the auditor conducting the audit</p>
+</td>
+</tr>
+<tr>
+<td>
+programOwnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the user who is responsible for this program</p>
 </td>
 </tr>
 <tr>
@@ -38708,6 +39671,15 @@ where<br />
 </tr>
 <tr>
 <td>
+user<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 members<br />
 <a href="objects#programmembershipconnection"><code>ProgramMembershipConnection!</code></a>
 </td>
@@ -38797,6 +39769,27 @@ programs<br />
 </td>
 <td>
 <p>Created programs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ProgramBulkDeletePayload
+
+Return response for deleteBulkProgram mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted program IDs</p>
 </td>
 </tr>
 </tbody>
@@ -39142,6 +40135,15 @@ auditorEmail<br />
 <p>the email of the auditor conducting the audit</p>
 </td>
 </tr>
+<tr>
+<td>
+programOwnerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the user who is responsible for this program</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -39336,6 +40338,27 @@ programMemberships<br />
 </td>
 <td>
 <p>Created programMemberships</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ProgramMembershipBulkDeletePayload
+
+Return response for deleteBulkProgramMembership mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted programMembership IDs</p>
 </td>
 </tr>
 </tbody>
@@ -40834,6 +41857,78 @@ delegate<br />
 <p>temporary delegates for the risk, used for temporary ownership</p>
 </td>
 </tr>
+<tr>
+<td>
+comments<br />
+<a href="objects#noteconnection"><code>NoteConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#noteorder"><code>[NoteOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Notes returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notewhereinput"><code>NoteWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -40853,6 +41948,27 @@ risks<br />
 </td>
 <td>
 <p>Created risks</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## RiskBulkDeletePayload
+
+Return response for deleteBulkRisk mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted risk IDs</p>
 </td>
 </tr>
 </tbody>
@@ -41817,6 +42933,27 @@ scans<br />
 </tbody>
 </table>
 
+## ScanBulkDeletePayload
+
+Return response for deleteBulkScan mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted scan IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ScanBulkUpdatePayload
 
 Return response for updateBulkScan mutation
@@ -42506,6 +43643,27 @@ scheduledJobs<br />
 </tbody>
 </table>
 
+## ScheduledJobBulkDeletePayload
+
+Return response for deleteBulkScheduledJob mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted scheduledJob IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ScheduledJobConnection
 
 A connection to a list of items.
@@ -43134,6 +44292,54 @@ scheduledJob<br />
 </tbody>
 </table>
 
+## SearchContext
+
+SearchContext provides information about why a particular entity matched the search query
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+entityID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The ID of the entity that matched</p>
+</td>
+</tr>
+<tr>
+<td>
+entityType<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The type of entity (e.g., &quot;ActionPlan&quot;, &quot;Control&quot;, &quot;User&quot;)</p>
+</td>
+</tr>
+<tr>
+<td>
+matchedFields<br />
+<a href="scalars#string"><code>[String!]!</code></a>
+</td>
+<td>
+<p>The fields that matched the search query</p>
+</td>
+</tr>
+<tr>
+<td>
+snippets<br />
+<a href="objects#searchsnippet"><code>[SearchSnippet!]</code></a>
+</td>
+<td>
+<p>Optional snippets showing the matched content with context</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## SearchResults
 
 
@@ -43573,6 +44779,45 @@ webauthns<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+searchContext<br />
+<a href="objects#searchcontext"><code>[SearchContext!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SearchSnippet
+
+SearchSnippet represents a piece of matched content with surrounding context
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+field<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The field name where the match occurred</p>
+</td>
+</tr>
+<tr>
+<td>
+text<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The matched text with surrounding context (with highlighting markers if applicable)</p>
 </td>
 </tr>
 </tbody>
@@ -44543,11 +45788,29 @@ tags<br />
 </tr>
 <tr>
 <td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>human readable title of the control for quick identification</p>
+</td>
+</tr>
+<tr>
+<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>description of what the control is supposed to accomplish</p>
+</td>
+</tr>
+<tr>
+<td>
+aliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>additional names (ref_codes) for the control</p>
 </td>
 </tr>
 <tr>
@@ -44566,6 +45829,15 @@ auditorReferenceID<br />
 </td>
 <td>
 <p>external auditor id of the control, can be used to map to external audit partner mappings</p>
+</td>
+</tr>
+<tr>
+<td>
+responsiblePartyID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the party responsible for the control, usually used when the control is implemented by a third party</p>
 </td>
 </tr>
 <tr>
@@ -44593,6 +45865,15 @@ referenceFramework<br />
 </td>
 <td>
 <p>the reference framework for the control if it came from a standard, empty if not associated with a standard</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFrameworkRevision<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
 </td>
 </tr>
 <tr>
@@ -45344,6 +46625,78 @@ where<br />
 </tr>
 <tr>
 <td>
+comments<br />
+<a href="objects#noteconnection"><code>NoteConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#noteorder"><code>[NoteOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Notes returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notewhereinput"><code>NoteWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 controlOwner<br />
 <a href="objects#group"><code>Group</code></a>
 </td>
@@ -45358,6 +46711,15 @@ delegate<br />
 </td>
 <td>
 <p>temporary delegate for the control, used for temporary control ownership</p>
+</td>
+</tr>
+<tr>
+<td>
+responsibleParty<br />
+<a href="objects#entity"><code>Entity</code></a>
+</td>
+<td>
+<p>the entity who is responsible for the control implementation when it is a third party</p>
 </td>
 </tr>
 <tr>
@@ -45541,6 +46903,27 @@ subcontrols<br />
 </td>
 <td>
 <p>Created subcontrols</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubcontrolBulkDeletePayload
+
+Return response for deleteBulkSubcontrol mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted subcontrol IDs</p>
 </td>
 </tr>
 </tbody>
@@ -45762,11 +47145,29 @@ tags<br />
 </tr>
 <tr>
 <td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>human readable title of the control for quick identification</p>
+</td>
+</tr>
+<tr>
+<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>description of what the control is supposed to accomplish</p>
+</td>
+</tr>
+<tr>
+<td>
+aliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>additional names (ref_codes) for the control</p>
 </td>
 </tr>
 <tr>
@@ -45785,6 +47186,15 @@ auditorReferenceID<br />
 </td>
 <td>
 <p>external auditor id of the control, can be used to map to external audit partner mappings</p>
+</td>
+</tr>
+<tr>
+<td>
+responsiblePartyID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the party responsible for the control, usually used when the control is implemented by a third party</p>
 </td>
 </tr>
 <tr>
@@ -45812,6 +47222,15 @@ referenceFramework<br />
 </td>
 <td>
 <p>the reference framework for the control if it came from a standard, empty if not associated with a standard</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFrameworkRevision<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
 </td>
 </tr>
 <tr>
@@ -46419,6 +47838,27 @@ subprocessors<br />
 </td>
 <td>
 <p>Created subprocessors</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SubprocessorBulkDeletePayload
+
+Return response for deleteBulkSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted subprocessor IDs</p>
 </td>
 </tr>
 </tbody>
@@ -48170,6 +49610,27 @@ tasks<br />
 </tbody>
 </table>
 
+## TaskBulkDeletePayload
+
+Return response for deleteBulkTask mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted task IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TaskBulkUpdatePayload
 
 Return response for updateBulkTask mutation
@@ -48935,6 +50396,27 @@ templates<br />
 </td>
 <td>
 <p>Created templates</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TemplateBulkDeletePayload
+
+Return response for deleteBulkTemplate mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted template IDs</p>
 </td>
 </tr>
 </tbody>
@@ -50129,6 +51611,27 @@ trustCenterCompliances<br />
 </tbody>
 </table>
 
+## TrustCenterComplianceBulkDeletePayload
+
+Return response for deleteBulkTrustCenterCompliance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterCompliance IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TrustCenterComplianceConnection
 
 A connection to a list of items.
@@ -50711,6 +52214,27 @@ trustCenterDocs<br />
 </td>
 <td>
 <p>Created trustCenterDocs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocBulkDeletePayload
+
+Return response for deleteBulkTrustCenterDoc mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterDoc IDs</p>
 </td>
 </tr>
 </tbody>
@@ -51549,6 +53073,24 @@ accentColor<br />
 </tr>
 <tr>
 <td>
+secondaryBackgroundColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>secondary background color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+secondaryForegroundColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>secondary foreground color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
 trustCenter<br />
 <a href="objects#trustcenter"><code>TrustCenter</code></a>
 </td>
@@ -51983,6 +53525,24 @@ accentColor<br />
 <p>accent/brand color for the trust center</p>
 </td>
 </tr>
+<tr>
+<td>
+secondaryBackgroundColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>secondary background color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+secondaryForegroundColor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>secondary foreground color for the trust center</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -52207,6 +53767,27 @@ trustCenterSubprocessors<br />
 </td>
 <td>
 <p>Created trustCenterSubprocessors</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorBulkDeletePayload
+
+Return response for deleteBulkTrustCenterSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterSubprocessor IDs</p>
 </td>
 </tr>
 </tbody>
@@ -54186,6 +55767,15 @@ where<br />
 </tr>
 <tr>
 <td>
+programOwner<br />
+<a href="objects#program"><code>Program</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 groupMemberships<br />
 <a href="objects#groupmembershipconnection"><code>GroupMembershipConnection!</code></a>
 </td>
@@ -55066,6 +56656,27 @@ userSettings<br />
 </td>
 <td>
 <p>Created userSettings</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## UserSettingBulkDeletePayload
+
+Return response for deleteBulkUserSetting mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted userSetting IDs</p>
 </td>
 </tr>
 </tbody>

@@ -89,8 +89,9 @@ const config: Config = {
               { label: 'Overview', to: 'docs/platform/overview' },
               { label: 'Basic Concepts', to: 'docs/platform/basics/overview' },
               { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
+              { label: 'Frameworks & Standards', to: 'docs/platform/standards/overview' },
               { label: 'Trust Center', to: 'docs/platform/trust-center/overview' },
-              { label: 'Integrations', to: 'docs/platform/integrations' },
+              { label: 'Security', to: 'docs/platform/security/authentication/overview' },
               { label: 'Glossary', to: 'docs/platform/glossary' },
             ],
           },
@@ -320,4 +321,3 @@ function excerpt(str: string, startString: string, endString: string) {
   const indexEnd = str.indexOf(endString)
   return str.slice(indexStart, indexEnd)
 }
-

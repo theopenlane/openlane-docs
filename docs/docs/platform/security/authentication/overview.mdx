@@ -1,0 +1,16 @@
+---
+title: Overview
+description: Comprehensive overview of authentication methods supported by the Openlane platform
+sidebar_position: 0
+---
+
+# Authentication in Openlane
+
+Openlane gives organizations flexible and secure ways to authenticate users, ranging from developer-friendly options to enterprise-grade SSO. This page provides a high-level overview of the methods we support and when to use each.
+
+| Method                | Best For                                                                 | Pros                                                                                                         | Considerations                                                                                       |
+|-----------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| SSO (Single Sign-On)  | Organizations needing centralized access control, easy onboarding/offboarding | Centralized identity management<br/>Enforce MFA, password policy, conditional access<br/>Automatic provisioning/de-provisioning via SCIM (if IdP supports) | Requires admin setup in IdP<br/>May require extra configuration for group/role claims             |
+| Passkeys (WebAuthn)   | Security-focused teams wanting strong, phishing-resistant authentication      | Phishing-resistant<br/>No shared secret to leak<br/>Works across browsers and devices                   | Users must have at least one enrolled device or hardware key<br/>Recommended to set up backup passkey<br/>Requires manual user management |
+| Social Login          | Small teams, contractors, open-source contributors                           | No password to manage<br/>Uses trusted provider MFA settings                                              | Limited control over user lifecycle (must remove users manually if they leave your company)         |
+| Credentials (Password)| Legacy scenarios or fallback when other methods unavailable                  | Universal and simple                                                                                       | Not recommended (weakest security posture)<br/>Encourage MFA or migration to passkeys/SSO         |
