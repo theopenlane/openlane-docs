@@ -107,6 +107,8 @@ actionPlanType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `action_plan_kind_name` instead.</blockquote>
+
 <p>type of the action_plan, e.g. compliance, operational, health and safety, etc.</p>
 </td>
 </tr>
@@ -283,6 +285,24 @@ systemInternalID<br />
 </tr>
 <tr>
 <td>
+actionPlanKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
+actionPlanKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
 dueDate<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -330,6 +350,15 @@ delegate<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+actionPlanKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -873,6 +902,8 @@ actionPlanType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `action_plan_kind_name` instead.</blockquote>
+
 <p>type of the action_plan, e.g. compliance, operational, health and safety, etc.</p>
 </td>
 </tr>
@@ -1045,6 +1076,24 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+actionPlanKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
+actionPlanKindID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the action_plan</p>
 </td>
 </tr>
 <tr>
@@ -1523,6 +1572,1348 @@ apiToken<br />
 </td>
 <td>
 <p>Updated apiToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## Assessment
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the assessment, e.g. cloud providers, marketing team</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentType<br />
+<a href="enums#assessmentassessmenttype"><code>AssessmentAssessmentType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the template id associated with the assessment</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentOwnerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group that owns the assessment</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+template<br />
+<a href="objects#template"><code>Template!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponses<br />
+<a href="objects#assessmentresponseconnection"><code>AssessmentResponseConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentresponseorder"><code>[AssessmentResponseOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentresponsewhereinput"><code>AssessmentResponseWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#assessmentedge"><code>[AssessmentEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentCreatePayload
+
+Return response for createAssessment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+assessment<br />
+<a href="objects#assessment"><code>Assessment!</code></a>
+</td>
+<td>
+<p>Created assessment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentDeletePayload
+
+Return response for deleteAssessment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted assessment ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#assessment"><code>Assessment</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#assessmenthistoryoptype"><code>AssessmentHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the assessment, e.g. cloud providers, marketing team</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentType<br />
+<a href="enums#assessmenthistoryassessmenttype"><code>AssessmentHistoryAssessmentType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the template id associated with the assessment</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentOwnerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the id of the group that owns the assessment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#assessmenthistoryedge"><code>[AssessmentHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#assessmenthistory"><code>AssessmentHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponse
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the assessment this response is for</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the email address of the recipient</p>
+</td>
+</tr>
+<tr>
+<td>
+sendAttempts<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>the number of attempts made to perform email send to the recipient about this assessment, maximum of 5</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#assessmentresponseassessmentresponsestatus"><code>AssessmentResponseAssessmentResponseStatus!</code></a>
+</td>
+<td>
+<p>the current status of the assessment for this user</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>when the assessment was assigned to the user</p>
+</td>
+</tr>
+<tr>
+<td>
+startedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>when the user started the assessment</p>
+</td>
+</tr>
+<tr>
+<td>
+completedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the user completed the assessment</p>
+</td>
+</tr>
+<tr>
+<td>
+dueDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the assessment is due</p>
+</td>
+</tr>
+<tr>
+<td>
+documentDataID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the document containing the user&#39;s response data</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+document<br />
+<a href="objects#documentdata"><code>DocumentData</code></a>
+</td>
+<td>
+<p>the document containing the user&#39;s response data</p>
+</td>
+</tr>
+<tr>
+<td>
+assessment<br />
+<a href="objects#assessment"><code>Assessment!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseBulkCreatePayload
+
+Return response for createBulkAssessmentResponse mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+assessmentResponses<br />
+<a href="objects#assessmentresponse"><code>[AssessmentResponse!]</code></a>
+</td>
+<td>
+<p>Created assessmentResponses</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#assessmentresponseedge"><code>[AssessmentResponseEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseCreatePayload
+
+Return response for createAssessmentResponse mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+assessmentResponse<br />
+<a href="objects#assessmentresponse"><code>AssessmentResponse!</code></a>
+</td>
+<td>
+<p>Created assessmentResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseDeletePayload
+
+Return response for deleteAssessmentResponse mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted assessmentResponse ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#assessmentresponse"><code>AssessmentResponse</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#assessmentresponsehistoryoptype"><code>AssessmentResponseHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the assessment this response is for</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the email address of the recipient</p>
+</td>
+</tr>
+<tr>
+<td>
+sendAttempts<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>the number of attempts made to perform email send to the recipient about this assessment, maximum of 5</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#assessmentresponsehistoryassessmentresponsestatus"><code>AssessmentResponseHistoryAssessmentResponseStatus!</code></a>
+</td>
+<td>
+<p>the current status of the assessment for this user</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>when the assessment was assigned to the user</p>
+</td>
+</tr>
+<tr>
+<td>
+startedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>when the user started the assessment</p>
+</td>
+</tr>
+<tr>
+<td>
+completedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the user completed the assessment</p>
+</td>
+</tr>
+<tr>
+<td>
+dueDate<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the assessment is due</p>
+</td>
+</tr>
+<tr>
+<td>
+documentDataID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the document containing the user&#39;s response data</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#assessmentresponsehistoryedge"><code>[AssessmentResponseHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#assessmentresponsehistory"><code>AssessmentResponseHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseUpdatePayload
+
+Return response for updateAssessmentResponse mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+assessmentResponse<br />
+<a href="objects#assessmentresponse"><code>AssessmentResponse!</code></a>
+</td>
+<td>
+<p>Updated assessmentResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentUpdatePayload
+
+Return response for updateAssessment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+assessment<br />
+<a href="objects#assessment"><code>Assessment!</code></a>
+</td>
+<td>
+<p>Updated assessment</p>
 </td>
 </tr>
 </tbody>
@@ -3625,6 +5016,8 @@ controlType<br />
 <a href="enums#controlcontroltype"><code>ControlControlType</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `control_kind_name` instead.</blockquote>
+
 <p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
@@ -3770,6 +5163,24 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+controlKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the control</p>
 </td>
 </tr>
 <tr>
@@ -4615,6 +6026,15 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+controlKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -5615,6 +7035,8 @@ controlType<br />
 <a href="enums#controlhistorycontroltype"><code>ControlHistoryControlType</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `control_kind_name` instead.</blockquote>
+
 <p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
@@ -5760,6 +7182,24 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+controlKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlKindID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the control</p>
 </td>
 </tr>
 <tr>
@@ -8961,6 +10401,958 @@ customDomain<br />
 </td>
 <td>
 <p>Updated customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomTypeEnum
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+objectType<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the kind of object the type applies to, for example task</p>
+</td>
+</tr>
+<tr>
+<td>
+field<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the field on the object the type applies to, for example kind or category</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The name of the enum value, for example evidence request</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The description of the custom type</p>
+</td>
+</tr>
+<tr>
+<td>
+color<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The color of the tag definition in hex format</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tasks<br />
+<a href="objects#taskconnection"><code>TaskConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#taskorder"><code>[TaskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#taskwhereinput"><code>TaskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+risks<br />
+<a href="objects#riskconnection"><code>RiskConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#riskorder"><code>[RiskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Risks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#riskwhereinput"><code>RiskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Risks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+riskCategories<br />
+<a href="objects#riskconnection"><code>RiskConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#riskorder"><code>[RiskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Risks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#riskwhereinput"><code>RiskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Risks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+procedures<br />
+<a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#procedureorder"><code>[ProcedureOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Procedures returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#procedurewhereinput"><code>ProcedureWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Procedures returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+actionPlans<br />
+<a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#actionplanorder"><code>[ActionPlanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#actionplanwhereinput"><code>ActionPlanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+programs<br />
+<a href="objects#programconnection"><code>ProgramConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Programs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#programwhereinput"><code>ProgramWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomTypeEnumBulkCreatePayload
+
+Return response for createBulkCustomTypeEnum mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+customTypeEnums<br />
+<a href="objects#customtypeenum"><code>[CustomTypeEnum!]</code></a>
+</td>
+<td>
+<p>Created customTypeEnums</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomTypeEnumConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#customtypeenumedge"><code>[CustomTypeEnumEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomTypeEnumCreatePayload
+
+Return response for createCustomTypeEnum mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+customTypeEnum<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum!</code></a>
+</td>
+<td>
+<p>Created customTypeEnum</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomTypeEnumDeletePayload
+
+Return response for deleteCustomTypeEnum mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted customTypeEnum ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomTypeEnumEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomTypeEnumUpdatePayload
+
+Return response for updateCustomTypeEnum mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+customTypeEnum<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum!</code></a>
+</td>
+<td>
+<p>Updated customTypeEnum</p>
 </td>
 </tr>
 </tbody>
@@ -16036,6 +18428,42 @@ displayName<br />
 </tr>
 <tr>
 <td>
+scimExternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM external ID for the group</p>
+</td>
+</tr>
+<tr>
+<td>
+scimDisplayName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM displayname for the group</p>
+</td>
+</tr>
+<tr>
+<td>
+scimActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the SCIM group is marked as active</p>
+</td>
+</tr>
+<tr>
+<td>
+scimGroupMailing<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM group mailing list email</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -18946,6 +21374,42 @@ displayName<br />
 </td>
 <td>
 <p>The group&#39;s displayed &#39;friendly&#39; name</p>
+</td>
+</tr>
+<tr>
+<td>
+scimExternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM external ID for the group</p>
+</td>
+</tr>
+<tr>
+<td>
+scimDisplayName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM displayname for the group</p>
+</td>
+</tr>
+<tr>
+<td>
+scimActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the SCIM group is marked as active</p>
+</td>
+</tr>
+<tr>
+<td>
+scimGroupMailing<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM group mailing list email</p>
 </td>
 </tr>
 </tbody>
@@ -21921,6 +24385,8 @@ policyType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `policy_kind_name` instead.</blockquote>
+
 <p>type of the policy, e.g. compliance, operational, health and safety, etc.</p>
 </td>
 </tr>
@@ -22057,6 +24523,24 @@ fileID<br />
 </td>
 <td>
 <p>This will contain the most recent file id if this policy was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the internal_policy</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the internal_policy</p>
 </td>
 </tr>
 <tr>
@@ -22228,6 +24712,15 @@ delegate<br />
 </td>
 <td>
 <p>temporary delegates for the policy, used for temporary approval</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -23317,6 +25810,8 @@ policyType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `policy_kind_name` instead.</blockquote>
+
 <p>type of the policy, e.g. compliance, operational, health and safety, etc.</p>
 </td>
 </tr>
@@ -23453,6 +25948,24 @@ fileID<br />
 </td>
 <td>
 <p>This will contain the most recent file id if this policy was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the internal_policy</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyKindID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the internal_policy</p>
 </td>
 </tr>
 </tbody>
@@ -23667,6 +26180,15 @@ requestorID<br />
 </td>
 <td>
 <p>the user who initiated the invitation</p>
+</td>
+</tr>
+<tr>
+<td>
+ownershipTransfer<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes admin and invitee becomes owner</p>
 </td>
 </tr>
 <tr>
@@ -33674,6 +36196,294 @@ where<br />
 </tr>
 <tr>
 <td>
+assessments<br />
+<a href="objects#assessmentconnection"><code>AssessmentConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentorder"><code>[AssessmentOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentwhereinput"><code>AssessmentWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponses<br />
+<a href="objects#assessmentresponseconnection"><code>AssessmentResponseConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentresponseorder"><code>[AssessmentResponseOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentresponsewhereinput"><code>AssessmentResponseWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+customTypeEnums<br />
+<a href="objects#customtypeenumconnection"><code>CustomTypeEnumConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#customtypeenumorder"><code>[CustomTypeEnumOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CustomTypeEnums returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#customtypeenumwhereinput"><code>CustomTypeEnumWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CustomTypeEnums returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+tagDefinitions<br />
+<a href="objects#tagdefinitionconnection"><code>TagDefinitionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#tagdefinitionorder"><code>[TagDefinitionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TagDefinitions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#tagdefinitionwhereinput"><code>TagDefinitionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TagDefinitions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 members<br />
 <a href="objects#orgmembershipconnection"><code>OrgMembershipConnection!</code></a>
 </td>
@@ -35062,6 +37872,36 @@ organizationSetting<br />
 </td>
 <td>
 <p>Updated organizationSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## OrganizationTransferOwnershipPayload
+
+Return response for transferOrganizationOwnership mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+organization<br />
+<a href="objects#organization"><code>Organization!</code></a>
+</td>
+<td>
+<p>Updated organization</p>
+</td>
+</tr>
+<tr>
+<td>
+invitationSent<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether an invitation was sent (true if new owner wasn&#39;t a member)</p>
 </td>
 </tr>
 </tbody>
@@ -36787,6 +39627,8 @@ procedureType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `procedure_kind_name` instead.</blockquote>
+
 <p>type of the procedure, e.g. compliance, operational, health and safety, etc.</p>
 </td>
 </tr>
@@ -36950,6 +39792,24 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+procedureKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+procedureKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the procedure</p>
 </td>
 </tr>
 <tr>
@@ -37121,6 +39981,15 @@ delegate<br />
 </td>
 <td>
 <p>temporary delegates for the procedure, used for temporary approval</p>
+</td>
+</tr>
+<tr>
+<td>
+procedureKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -38039,6 +40908,8 @@ procedureType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `procedure_kind_name` instead.</blockquote>
+
 <p>type of the procedure, e.g. compliance, operational, health and safety, etc.</p>
 </td>
 </tr>
@@ -38202,6 +41073,24 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+procedureKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+procedureKindID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the procedure</p>
 </td>
 </tr>
 </tbody>
@@ -38384,6 +41273,24 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+programKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+programKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the program</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -38415,6 +41322,8 @@ programType<br />
 <a href="enums#programprogramtype"><code>ProgramProgramType!</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `program_kind` instead.</blockquote>
+
 <p>the type of the program</p>
 </td>
 </tr>
@@ -38730,6 +41639,15 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+programKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -40020,6 +42938,24 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+programKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the program</p>
+</td>
+</tr>
+<tr>
+<td>
+programKindID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the program</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -40051,6 +42987,8 @@ programType<br />
 <a href="enums#programhistoryprogramtype"><code>ProgramHistoryProgramType!</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `program_kind` instead.</blockquote>
+
 <p>the type of the program</p>
 </td>
 </tr>
@@ -40788,6 +43726,42 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+riskKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+riskKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+riskCategoryName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+riskCategoryID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the category of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -40810,6 +43784,8 @@ riskType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `risk_kind_name` instead.</blockquote>
+
 <p>type of the risk, e.g. strategic, operational, financial, external, etc.</p>
 </td>
 </tr>
@@ -40819,6 +43795,8 @@ category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `risk_category_name` instead.</blockquote>
+
 <p>category of the risk, e.g. human resources, operations, IT, etc.</p>
 </td>
 </tr>
@@ -41116,6 +44094,24 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+riskKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskCategory<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -42229,6 +45225,42 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+riskKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+riskKindID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+riskCategoryName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+riskCategoryID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -42251,6 +45283,8 @@ riskType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `risk_kind_name` instead.</blockquote>
+
 <p>type of the risk, e.g. strategic, operational, financial, external, etc.</p>
 </td>
 </tr>
@@ -42260,6 +45294,8 @@ category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `risk_category_name` instead.</blockquote>
+
 <p>category of the risk, e.g. human resources, operations, IT, etc.</p>
 </td>
 </tr>
@@ -44387,6 +47423,24 @@ actionPlans<br />
 </tr>
 <tr>
 <td>
+assessments<br />
+<a href="objects#assessmentconnection"><code>AssessmentConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponses<br />
+<a href="objects#assessmentresponseconnection"><code>AssessmentResponseConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 assets<br />
 <a href="objects#assetconnection"><code>AssetConnection</code></a>
 </td>
@@ -44434,6 +47488,15 @@ controlObjectives<br />
 <td>
 customDomains<br />
 <a href="objects#customdomainconnection"><code>CustomDomainConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+customTypeEnums<br />
+<a href="objects#customtypeenumconnection"><code>CustomTypeEnumConnection</code></a>
 </td>
 <td>
 
@@ -44704,6 +47767,15 @@ subprocessors<br />
 <td>
 subscribers<br />
 <a href="objects#subscriberconnection"><code>SubscriberConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tagDefinitions<br />
+<a href="objects#tagdefinitionconnection"><code>TagDefinitionConnection</code></a>
 </td>
 <td>
 
@@ -45882,6 +48954,8 @@ controlType<br />
 <a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `control_kind_name` instead.</blockquote>
+
 <p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
@@ -46027,6 +49101,24 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrolKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the subcontrol</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrolKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the subcontrol</p>
 </td>
 </tr>
 <tr>
@@ -46733,6 +49825,15 @@ owner<br />
 </tr>
 <tr>
 <td>
+subcontrolKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 control<br />
 <a href="objects#control"><code>Control!</code></a>
 </td>
@@ -47239,6 +50340,8 @@ controlType<br />
 <a href="enums#subcontrolhistorycontroltype"><code>SubcontrolHistoryControlType</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `control_kind_name` instead.</blockquote>
+
 <p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
@@ -47384,6 +50487,24 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrolKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the subcontrol</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrolKindID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the subcontrol</p>
 </td>
 </tr>
 <tr>
@@ -48610,6 +51731,310 @@ subscriber<br />
 </tbody>
 </table>
 
+## TagDefinition
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The name of the tag definition</p>
+</td>
+</tr>
+<tr>
+<td>
+aliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>common aliases or misspellings for the tag definition</p>
+</td>
+</tr>
+<tr>
+<td>
+slug<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The slug of the tag definition, derived from the name, unique per organization</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The description of the tag definition</p>
+</td>
+</tr>
+<tr>
+<td>
+color<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The color of the tag definition in hex format</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TagDefinitionBulkCreatePayload
+
+Return response for createBulkTagDefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tagDefinitions<br />
+<a href="objects#tagdefinition"><code>[TagDefinition!]</code></a>
+</td>
+<td>
+<p>Created tagDefinitions</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TagDefinitionConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#tagdefinitionedge"><code>[TagDefinitionEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TagDefinitionCreatePayload
+
+Return response for createTagDefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tagDefinition<br />
+<a href="objects#tagdefinition"><code>TagDefinition!</code></a>
+</td>
+<td>
+<p>Created tagDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TagDefinitionDeletePayload
+
+Return response for deleteTagDefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted tagDefinition ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TagDefinitionEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#tagdefinition"><code>TagDefinition</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TagDefinitionUpdatePayload
+
+Return response for updateTagDefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tagDefinition<br />
+<a href="objects#tagdefinition"><code>TagDefinition!</code></a>
+</td>
+<td>
+<p>Updated tagDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Task
 
 
@@ -48697,6 +52122,24 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+taskKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+taskKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the task</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -48728,6 +52171,8 @@ category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `task_kind_name` instead.</blockquote>
+
 <p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
 </td>
 </tr>
@@ -48769,8 +52214,44 @@ assignerID<br />
 </tr>
 <tr>
 <td>
+systemGenerated<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>indicates if the task was generated by the system</p>
+</td>
+</tr>
+<tr>
+<td>
+idempotencyKey<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>key to prevent duplicates for auto-generated task based on rules</p>
+</td>
+</tr>
+<tr>
+<td>
+externalReferenceURL<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>an optional external reference URL for the task</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+taskKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -49886,6 +53367,24 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+taskKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+taskKindID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the task</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -49917,6 +53416,8 @@ category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: Use `task_kind_name` instead.</blockquote>
+
 <p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
 </td>
 </tr>
@@ -49954,6 +53455,33 @@ assignerID<br />
 </td>
 <td>
 <p>the id of the user who assigned the task, can be left empty if created by the system or a service token</p>
+</td>
+</tr>
+<tr>
+<td>
+systemGenerated<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>indicates if the task was generated by the system</p>
+</td>
+</tr>
+<tr>
+<td>
+idempotencyKey<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>key to prevent duplicates for auto-generated task based on rules</p>
+</td>
+</tr>
+<tr>
+<td>
+externalReferenceURL<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>an optional external reference URL for the task</p>
 </td>
 </tr>
 </tbody>
@@ -54885,6 +58413,51 @@ role<br />
 </tr>
 <tr>
 <td>
+scimExternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM external ID for the user</p>
+</td>
+</tr>
+<tr>
+<td>
+scimUsername<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM username for the user</p>
+</td>
+</tr>
+<tr>
+<td>
+scimActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the SCIM user is active</p>
+</td>
+</tr>
+<tr>
+<td>
+scimPreferredLanguage<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM preferred language for the user</p>
+</td>
+</tr>
+<tr>
+<td>
+scimLocale<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM locale for the user</p>
+</td>
+</tr>
+<tr>
+<td>
 personalAccessTokens<br />
 <a href="objects#personalaccesstokenconnection"><code>PersonalAccessTokenConnection!</code></a>
 </td>
@@ -56334,6 +59907,51 @@ role<br />
 </td>
 <td>
 <p>the user&#39;s role</p>
+</td>
+</tr>
+<tr>
+<td>
+scimExternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM external ID for the user</p>
+</td>
+</tr>
+<tr>
+<td>
+scimUsername<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM username for the user</p>
+</td>
+</tr>
+<tr>
+<td>
+scimActive<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the SCIM user is active</p>
+</td>
+</tr>
+<tr>
+<td>
+scimPreferredLanguage<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM preferred language for the user</p>
+</td>
+</tr>
+<tr>
+<td>
+scimLocale<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the SCIM locale for the user</p>
 </td>
 </tr>
 </tbody>

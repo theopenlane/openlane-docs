@@ -76,6 +76,52 @@ input<br />
 </tbody>
 </table>
 
+## createAssessment
+
+**Type:** [AssessmentCreatePayload!](objects#assessmentcreatepayload)
+
+Create a new assessment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createassessmentinput"><code>CreateAssessmentInput!</code></a>
+</td>
+<td>
+<p>values of the assessment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createAssessmentResponse
+
+**Type:** [AssessmentResponseCreatePayload!](objects#assessmentresponsecreatepayload)
+
+Create a new assessmentResponse
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createassessmentresponseinput"><code>CreateAssessmentResponseInput!</code></a>
+</td>
+<td>
+<p>values of the assessmentResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createAsset
 
 **Type:** [AssetCreatePayload!](objects#assetcreatepayload)
@@ -439,6 +485,29 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVCustomTypeEnum
+
+**Type:** [CustomTypeEnumBulkCreatePayload!](objects#customtypeenumbulkcreatepayload)
+
+Create multiple new customTypeEnums via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the customTypeEnum</p>
 </td>
 </tr>
 </tbody>
@@ -1042,6 +1111,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVTagDefinition
+
+**Type:** [TagDefinitionBulkCreatePayload!](objects#tagdefinitionbulkcreatepayload)
+
+Create multiple new tagDefinitions via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the tagDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVTask
 
 **Type:** [TaskBulkCreatePayload!](objects#taskbulkcreatepayload)
@@ -1198,6 +1290,29 @@ input<br />
 </td>
 <td>
 <p>values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCustomTypeEnum
+
+**Type:** [CustomTypeEnumBulkCreatePayload!](objects#customtypeenumbulkcreatepayload)
+
+Create multiple new customTypeEnums
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcustomtypeenuminput"><code>[CreateCustomTypeEnumInput!]</code></a>
+</td>
+<td>
+<p>values of the customTypeEnum</p>
 </td>
 </tr>
 </tbody>
@@ -1801,6 +1916,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkTagDefinition
+
+**Type:** [TagDefinitionBulkCreatePayload!](objects#tagdefinitionbulkcreatepayload)
+
+Create multiple new tagDefinitions
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtagdefinitioninput"><code>[CreateTagDefinitionInput!]</code></a>
+</td>
+<td>
+<p>values of the tagDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkTask
 
 **Type:** [TaskBulkCreatePayload!](objects#taskbulkcreatepayload)
@@ -2095,6 +2233,29 @@ input<br />
 </td>
 <td>
 <p>values of the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createCustomTypeEnum
+
+**Type:** [CustomTypeEnumCreatePayload!](objects#customtypeenumcreatepayload)
+
+Create a new customTypeEnum
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcustomtypeenuminput"><code>CreateCustomTypeEnumInput!</code></a>
+</td>
+<td>
+<p>values of the customTypeEnum</p>
 </td>
 </tr>
 </tbody>
@@ -3158,6 +3319,29 @@ input<br />
 </tbody>
 </table>
 
+## createTagDefinition
+
+**Type:** [TagDefinitionCreatePayload!](objects#tagdefinitioncreatepayload)
+
+Create a new tagDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtagdefinitioninput"><code>CreateTagDefinitionInput!</code></a>
+</td>
+<td>
+<p>values of the tagDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createTask
 
 **Type:** [TaskCreatePayload!](objects#taskcreatepayload)
@@ -3625,6 +3809,52 @@ id<br />
 </td>
 <td>
 <p>ID of the apiToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteAssessment
+
+**Type:** [AssessmentDeletePayload!](objects#assessmentdeletepayload)
+
+Delete an existing assessment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the assessment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteAssessmentResponse
+
+**Type:** [AssessmentResponseDeletePayload!](objects#assessmentresponsedeletepayload)
+
+Delete an existing assessmentResponse
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the assessmentResponse</p>
 </td>
 </tr>
 </tbody>
@@ -4688,6 +4918,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteCustomTypeEnum
+
+**Type:** [CustomTypeEnumDeletePayload!](objects#customtypeenumdeletepayload)
+
+Delete an existing customTypeEnum
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the customTypeEnum</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteDNSVerification
 
 **Type:** [DNSVerificationDeletePayload!](objects#dnsverificationdeletepayload)
@@ -5594,6 +5847,29 @@ ownerID<br />
 </tbody>
 </table>
 
+## deleteTagDefinition
+
+**Type:** [TagDefinitionDeletePayload!](objects#tagdefinitiondeletepayload)
+
+Delete an existing tagDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the tagDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteTask
 
 **Type:** [TaskDeletePayload!](objects#taskdeletepayload)
@@ -5870,6 +6146,29 @@ input<br />
 </tbody>
 </table>
 
+## transferOrganizationOwnership
+
+**Type:** [OrganizationTransferOwnershipPayload!](objects#organizationtransferownershippayload)
+
+Transfer ownership of an organization to another user
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+newOwnerEmail<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Email of the new owner</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateActionPlan
 
 **Type:** [ActionPlanUpdatePayload!](objects#actionplanupdatepayload)
@@ -5929,6 +6228,70 @@ input<br />
 </td>
 <td>
 <p>New values for the apiToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateAssessment
+
+**Type:** [AssessmentUpdatePayload!](objects#assessmentupdatepayload)
+
+Update an existing assessment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the assessment</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateassessmentinput"><code>UpdateAssessmentInput!</code></a>
+</td>
+<td>
+<p>New values for the assessment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateAssessmentResponse
+
+**Type:** [AssessmentResponseUpdatePayload!](objects#assessmentresponseupdatepayload)
+
+Update an existing assessmentResponse
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the assessmentResponse</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateassessmentresponseinput"><code>UpdateAssessmentResponseInput!</code></a>
+</td>
+<td>
+<p>New values for the assessmentResponse</p>
 </td>
 </tr>
 </tbody>
@@ -6450,6 +6813,38 @@ input<br />
 </td>
 <td>
 <p>New values for the customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateCustomTypeEnum
+
+**Type:** [CustomTypeEnumUpdatePayload!](objects#customtypeenumupdatepayload)
+
+Update an existing customTypeEnum
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the customTypeEnum</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatecustomtypeenuminput"><code>UpdateCustomTypeEnumInput!</code></a>
+</td>
+<td>
+<p>New values for the customTypeEnum</p>
 </td>
 </tr>
 </tbody>
@@ -7747,6 +8142,38 @@ input<br />
 </td>
 <td>
 <p>New values for the subscriber</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTagDefinition
+
+**Type:** [TagDefinitionUpdatePayload!](objects#tagdefinitionupdatepayload)
+
+Update an existing tagDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the tagDefinition</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetagdefinitioninput"><code>UpdateTagDefinitionInput!</code></a>
+</td>
+<td>
+<p>New values for the tagDefinition</p>
 </td>
 </tr>
 </tbody>
