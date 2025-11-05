@@ -463,6 +463,378 @@ Properties by which APIToken connections can be ordered.
 </tbody>
 </table>
 
+## AssessmentAssessmentType
+
+AssessmentAssessmentType is enum for the field assessment_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INTERNAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>EXTERNAL</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentHistoryAssessmentType
+
+AssessmentHistoryAssessmentType is enum for the field assessment_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INTERNAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>EXTERNAL</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentHistoryOpType
+
+AssessmentHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentHistoryOrderField
+
+Properties by which AssessmentHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>name</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>assessment_type</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentOrderField
+
+Properties by which Assessment connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>name</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>assessment_type</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseAssessmentResponseStatus
+
+AssessmentResponseAssessmentResponseStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>NOT_STARTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OVERDUE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseHistoryAssessmentResponseStatus
+
+AssessmentResponseHistoryAssessmentResponseStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>NOT_STARTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OVERDUE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseHistoryOpType
+
+AssessmentResponseHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseHistoryOrderField
+
+Properties by which AssessmentResponseHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>send_attempts</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>status</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ASSIGNED_AT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>STARTED_AT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED_AT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DUE_DATE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## AssessmentResponseOrderField
+
+Properties by which AssessmentResponse connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>send_attempts</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>status</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ASSIGNED_AT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>STARTED_AT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED_AT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DUE_DATE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## AssetAssetType
 
 AssetAssetType is enum for the field asset_type
@@ -1968,6 +2340,30 @@ Properties by which CustomDomain connections can be ordered.
 </tr>
 <tr>
 <td>cname_record</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomTypeEnumOrderField
+
+Properties by which CustomTypeEnum connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
 <td>
 
 </td>
@@ -4494,6 +4890,12 @@ InviteRole is enum for the field role
 </tr>
 <tr>
 <td>MEMBER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OWNER</td>
 <td>
 
 </td>
@@ -8508,6 +8910,30 @@ Properties by which Subscriber connections can be ordered.
 </tr>
 <tr>
 <td>send_attempts</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TagDefinitionOrderField
+
+Properties by which TagDefinition connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
 <td>
 
 </td>

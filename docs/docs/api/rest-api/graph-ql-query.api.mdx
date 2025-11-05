@@ -1,0 +1,69 @@
+---
+id: graph-ql-query
+title: "GraphQL Endpoint"
+description: "Handles all GraphQL queries, mutations, and subscriptions"
+sidebar_label: GraphQLQuery
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vk1vGzcQ/SsEL20BWbLdm091DCd1EthO5CAFHB+o3ZHEeHdJk1zLqqD/3jckV99IXBTVQcsl5/PNzOMuZEm+cNoGbRp5Jv9UTVmRF6qqxDun7PTTR/HUktPke6Jug2I5LCEmfDtaqXrZk8aSi+dXJSxl7U9QnuPQEcz48MaUc3m2kIVpAjWBl8raShdRcfDdcxQL6Ysp1YpX9KJqWxEvn6Kps/QU7wjGzKMXi2+NEKP1UghdpmfQoSJeLr81S8TwrJxWI6QHa8tlT1rHIQcdN9bhX6s6+ttG5m5KosGJMGMRsF6Ji2AEvVDRBhK/miiuqt/gLswt7EgfnG4mEv5yAocsb2I9F1nlgInNFHbMnIv3w5trYUbfqQiCAVa6gZpY6YixcTH2p1yUbD6pSIZkdwdb2162A81VzfXVjlD54Fpa8oa36IsU6enx8b+q+nZlShXUYdj4BEGE1jVUitE8ZteFuKrQfqY9Sc4ZF63rQPUhOBuhnFNzrncUzsh6oXcbYKx0hcwPeMkb0dDr8B22RUHej9v1/HVIyig8Vm0V9sNN1tUEmdzLCWs+VfKhJ2sKU8PzaE2sk1VhirdB1wKe3DMxEPe7Fm8sNZVqSJzfXolhFIN86yqcTUOw/mwwUFb3gYXJon1t5PKBjRat02E+5IKmGkLyAx1ofjaOA6Fa2GlCboleRPgR+3XrgxiRUGjjSpcxGOwjEs3qU1JljKuJQyv/OoLA0Qfa6O7sGfCMlNfFfghfgEGcbCa1W+X9zDg0k/Joqe2wGK+YErSSsZUXRiT6IOUQEJyk1VvjaoV6yfdf7+Rusd9EkYO5B/NIzcHs48lWJMnlXiiG7Z7u53tzjn1x2j+Ojo3Tf6c2LkxJYlyZWeSJWMNUfBVbEg74MFVzU/ECenubX37SJ4MU3aBTosghY/T69LWqWTxCgeMYmEM/QPkzHuuwZ+hFBuYrP7ttHhdG8rXeEuybM5zg5R0msM/rC+7yf7yzdDM2HZWqIhIBOFNzDr611rjwx85ArmajG+i9Kd6d4N027RR/8bEdmDJ0wR8J6A9I6gmTL25BsPazLrlbvWYA4kCR8nM+bD0JDfp3Y1VQ7LD4hhz4jppptCT3/Yp1bKUCpOq+uJvq5BiPTXeYi9Yn2h8ZqEd7uHuT25f8UlQas+VZoXP4I28AB/cSMd0C2ozcuVUYNh6ZPexms1lfxeO+cZNB1vWDj1cXl9fDyyPW4Z7hsm6SKi84p9/7J/0TMbRU6HEmAG5Z5uQE/vNJ/zjZYAavVbMRV3dDXDalNchul2A2btz/9GWXOz4A1AGQAvMuMw6LfKHc504H+U/5osHGYsEUivFaLnk7T8L9w7qn+Q2GMofzDcTMfiYvUtBHd+yWxas2EfnOJ8Oy12mcY6Zt+KHs5l14ezNkMh7lj9E6Eph0asYkhH9cp/w5m9JnVuG9hUThJq2asGyyyb9/AOrK6Xs=
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-1-1-specifications
+show_extensions: true
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"GraphQL Endpoint"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/query"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Handles all GraphQL queries, mutations, and subscriptions
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"example":{"query":"query GetBooks {\n  books {\n    id\n    title\n  }\n}","variables":{}},"properties":{"operationName":{"description":"The name of the operation to execute (optional)","type":"string"},"query":{"description":"The GraphQL query string","type":"string"},"variables":{"description":"A JSON object containing variables for the query","type":"object"}},"type":"object"}}},"description":"GraphQL query request","required":true}}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"properties":{"data":{"description":"The data returned by the GraphQL operation","type":"object"},"errors":{"items":{"description":"An array of error objects if the operation failed","type":"object"},"type":"array"}},"type":"object"}}},"description":"Successful GraphQL response"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+
