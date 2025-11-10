@@ -4,7 +4,7 @@ Please read the [contributing](.github/CONTRIBUTING.md) guide as well as the [De
 project, so if you're unfamiliar with how to set that up, see [github's documentation](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).
 
 Given external users will not have write to the branches in this repository, you'll need to follow the forking process to open a PR -
-[here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) is a guide from github on how to
+there is a [github guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) on how to
 do so.
 
 ## Licensing
