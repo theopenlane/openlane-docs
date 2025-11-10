@@ -39,12 +39,12 @@ jobs:
       - name: Set up Openlane CLI
         uses: theopenlane/setup-openlane@v0.0.1
         with:
-          version: 'latest'
-          # token: ${{ secrets.OPENLANE_TOKEN }}   # if needed
+          version: 'v0.45.10'
+          token: ${{ secrets.OPENLANE_TOKEN }}
 
       - name: Verify installation
         run: |
-          openlane --version
+          openlane version
 ```
 
 :::note
@@ -53,34 +53,24 @@ Replace `v0.0.1` with the appropriate version tag of the action you wish to use
 
 ### Inputs
 
-Here are the commonly supported input parameters (update with exact names your action supports):
-
 | Input          | Required? | Description                                                                      |
 | -------------- | --------- | -------------------------------------------------------------------------------- |
 | `version`      | Yes       | The version of the Openlane CLI to install (e.g., `latest`, `v1.2.3`).           |
 | `token`        | No        | API or personal access token for the Openlane CLI if authentication is required. |
-| `add_to_path`  | No         | Whether to add the CLI to the system `PATH` (default: `true`).                   |
+| `add_to_path`  | No        | Whether to add the CLI to the system `PATH` (default: `true`).                   |
 
-
-### Outputs
-
-The action may optionally emit:
-
-| Output              | Description                        |
-| ------------------- | ---------------------------------- |
-| `openlane-path`     | Path to the installed CLI binary.  |
-| `version-installed` | Actual version that got installed. |
 
 ## Best practices
 
 When using the `theopenlane/setup-openlane` action, consider these best practices:
 
-1. **Pin the action version** rather than `@main` to avoid surprises when breaking changes are introduced.
+1. **Pin the action version** rather than `@main` to avoid surprises when breaking changes are introduced
 1. **Pin the openlane CLI version** input to a specific version for reproducible builds
-1.  Use **secrets** for tokens (e.g., `secrets.OPENLANE_API_TOKEN`) so you don’t expose credentials in logs.
-1. To test the setup, **verify** the CLI by running `openlane version` or a small smoke command to ensure it's correctly installed.
+1. Use [renovate](https://docs.renovatebot.com/) to keep both the action and CLI versions up to date automatically
+1. Use **secrets** for tokens (e.g., `secrets.OPENLANE_API_TOKEN`) so you don’t expose credentials in logs
+1. To test the setup, **verify** the CLI by running `openlane version` or a small smoke command to ensure it's correctly installed. The `openlane version` does not require authentication so it is a good test command.
 
 ## Compatibility & Requirements
 
 * Runs on GitHub Actions runners (e.g., `ubuntu-latest`, `macos-latest`)
-* If you use self-hosted runners, ensure they meet any OS / architecture requirements of the CLI.
+* If you use self-hosted runners, ensure they meet any OS / architecture requirements of the CLI
