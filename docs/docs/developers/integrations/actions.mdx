@@ -1,0 +1,86 @@
+---
+title: Github Actions
+description: Overview of the Openlane GitHub Action for setting up the Openlane CLI in CI/CD workflows
+sidebar_position: 3
+---
+
+# Setup Openlane Action
+:::note
+This document describes the [theopenlane/setup-openlane](https://github.com/theopenlane/setup-openlane) GitHub Action, which automates the installation and configuration of the Openlane CLI tool within GitHub Actions workflows.
+:::
+
+## How it works
+This GitHub Action automates the installation and setup of the Openlane CLI tool within your GitHub Actions workflows. It typically does the following:
+1. Downloads and installs the Openlane CLI tool in your GitHub Actions job
+1. Adds it to `PATH` so that subsequent workflow steps can use the CLI.
+1. Optionally configures environment variables, tokens, or default settings for the CLI.
+1. Simplifies your workflow so you don’t have to manually script install/setup each time.
+
+## Getting Started
+
+Here is how to use the action in your GitHub workflow.
+
+### Example usage
+
+```yaml
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Openlane CLI
+        uses: theopenlane/setup-openlane@v0.0.1
+        with:
+          version: 'latest'
+          # token: ${{ secrets.OPENLANE_TOKEN }}   # if needed
+
+      - name: Verify installation
+        run: |
+          openlane --version
+```
+
+:::note
+Replace `v0.0.1` with the appropriate version tag of the action you wish to use
+:::
+
+### Inputs
+
+Here are the commonly supported input parameters (update with exact names your action supports):
+
+| Input          | Required? | Description                                                                      |
+| -------------- | --------- | -------------------------------------------------------------------------------- |
+| `version`      | Yes       | The version of the Openlane CLI to install (e.g., `latest`, `v1.2.3`).           |
+| `token`        | No        | API or personal access token for the Openlane CLI if authentication is required. |
+| `add_to_path`  | No         | Whether to add the CLI to the system `PATH` (default: `true`).                   |
+
+
+### Outputs
+
+The action may optionally emit:
+
+| Output              | Description                        |
+| ------------------- | ---------------------------------- |
+| `openlane-path`     | Path to the installed CLI binary.  |
+| `version-installed` | Actual version that got installed. |
+
+## Best practices
+
+When using the `theopenlane/setup-openlane` action, consider these best practices:
+
+1. **Pin the action version** rather than `@main` to avoid surprises when breaking changes are introduced.
+1. **Pin the openlane CLI version** input to a specific version for reproducible builds
+1.  Use **secrets** for tokens (e.g., `secrets.OPENLANE_API_TOKEN`) so you don’t expose credentials in logs.
+1. To test the setup, **verify** the CLI by running `openlane version` or a small smoke command to ensure it's correctly installed.
+
+## Compatibility & Requirements
+
+* Runs on GitHub Actions runners (e.g., `ubuntu-latest`, `macos-latest`)
+* If you use self-hosted runners, ensure they meet any OS / architecture requirements of the CLI.

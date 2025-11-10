@@ -27,5 +27,37 @@ To import your existing policies and procedures, follow these steps:
 1. Click `Upload` to start the import process
 
 :::tip
-    The object names will be derived from the file names, for example `access_control_policy.md` will create a policy named `Access Control Policy`. You can rename the objects after import if needed.
+    The object names will be derived from the file names, for example `access_control_policy.md` will create a policy named `Access Control Policy`. You can rename the objects after import if needed. If using markdown, you can include `title:` in the frontmatter to set a custom title during import.
+ :::
+
+
+## Continuous Sync from GitHub
+
+If your policies and procedures are stored in a GitHub repository, you can set up a sync to automatically import and keep them updated in Openlane.
+
+:::tip
+Refer to the [automation demo - internal policies sync](https://github.com/theopenlane/automation-demo/blob/main/.github/workflows/ol-policy-sync.yml) for a complete example of how to set this up
 :::
+
+1. Create a github action workflow using the [theopenlane/setup-openlane](https://github.com/theopenlane/setup-openlane) action and run the `sync` command to sync your documents from GitHub to Openlane:
+    ```bash
+    openlane internal-policy sync --file example.md -z json --host https://api.theopenlane.io
+    ```
+1. Create an [api token](/docs/platform/security/authentication/programmatic#creating-an-api-token) with the `write` scope and store it as a secret in your GitHub repository
+1. In your workflow, ensure the `setup-openlane` step specifies the `token` input using the secret you created
+1. Add policies to the repository in either `.md` or .`mdx` format and commit them to the repository
+1. When the workflow runs, it will create or update the policies in Openlane based on the files in the repository that have been added or changed and the content, minus the frontmatter, will be used as the policies details.
+
+### Frontmatter
+
+When syncing policies into Openlane from GitHub, the frontmatter will be used to track the `openlane_id` of the policies and has additional optional fields you can set such as `title` or `status` to sync these fields as well. Here is an example of frontmatter you can use in your markdown files:
+
+```yaml
+---
+openlane_id: 01K9QKFM6SGN7TTY3MA7SC6K17
+title: Access Control Policy
+status: DRAFT
+---
+```
+
+When a new policy is added to your repo, the frontmatter can be empty and it will be populated after the first sync with the assigned `openlane_id`, `title`, and `status` of the created policy. Additional fields that are not supported will be ignored during the sync process.
