@@ -51,6 +51,36 @@ Openlane's API services are designed to provide a simple and easy to use interfa
     className={"openapi-tabs__security-schemes"}
   >
     <TabItem
+      label={"HTTP: Bearer Auth"}
+      value={"BearerAuth"}
+    >
+
+
+      Bearer token authentication using API tokens.
+      The token identifies the organization and grants permissions to manage
+      users and groups within that organization's scope.
+
+
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Security Scheme Type:
+              </th><td>
+                http
+              </td>
+            </tr><tr>
+              <th>
+                HTTP Authorization Scheme:
+              </th><td>
+                bearer
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </TabItem><TabItem
       label={"API Key: apiKey"}
       value={"apiKey"}
     >
