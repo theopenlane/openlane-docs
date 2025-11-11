@@ -628,6 +628,52 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVFinding
+
+**Type:** [FindingBulkCreatePayload!](objects#findingbulkcreatepayload)
+
+Create multiple new findings via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the finding</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVFindingControl
+
+**Type:** [FindingControlBulkCreatePayload!](objects#findingcontrolbulkcreatepayload)
+
+Create multiple new findingControls via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the findingControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVGroup
 
 **Type:** [GroupBulkCreatePayload!](objects#groupbulkcreatepayload)
@@ -973,6 +1019,52 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVRemediation
+
+**Type:** [RemediationBulkCreatePayload!](objects#remediationbulkcreatepayload)
+
+Create multiple new remediations via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the remediation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVReview
+
+**Type:** [ReviewBulkCreatePayload!](objects#reviewbulkcreatepayload)
+
+Create multiple new reviews via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the review</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVRisk
 
 **Type:** [RiskBulkCreatePayload!](objects#riskbulkcreatepayload)
@@ -1272,6 +1364,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVVulnerability
+
+**Type:** [VulnerabilityBulkCreatePayload!](objects#vulnerabilitybulkcreatepayload)
+
+Create multiple new vulnerabilitys via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the vulnerability</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCustomDomain
 
 **Type:** [CustomDomainBulkCreatePayload!](objects#customdomainbulkcreatepayload)
@@ -1428,6 +1543,52 @@ input<br />
 </td>
 <td>
 <p>values of the event</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkFinding
+
+**Type:** [FindingBulkCreatePayload!](objects#findingbulkcreatepayload)
+
+Create multiple new findings
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createfindinginput"><code>[CreateFindingInput!]</code></a>
+</td>
+<td>
+<p>values of the finding</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkFindingControl
+
+**Type:** [FindingControlBulkCreatePayload!](objects#findingcontrolbulkcreatepayload)
+
+Create multiple new findingControls
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createfindingcontrolinput"><code>[CreateFindingControlInput!]</code></a>
+</td>
+<td>
+<p>values of the findingControl</p>
 </td>
 </tr>
 </tbody>
@@ -1778,6 +1939,52 @@ input<br />
 </tbody>
 </table>
 
+## createBulkRemediation
+
+**Type:** [RemediationBulkCreatePayload!](objects#remediationbulkcreatepayload)
+
+Create multiple new remediations
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createremediationinput"><code>[CreateRemediationInput!]</code></a>
+</td>
+<td>
+<p>values of the remediation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkReview
+
+**Type:** [ReviewBulkCreatePayload!](objects#reviewbulkcreatepayload)
+
+Create multiple new reviews
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createreviewinput"><code>[CreateReviewInput!]</code></a>
+</td>
+<td>
+<p>values of the review</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkRisk
 
 **Type:** [RiskBulkCreatePayload!](objects#riskbulkcreatepayload)
@@ -2072,6 +2279,29 @@ input<br />
 </td>
 <td>
 <p>values of the userSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkVulnerability
+
+**Type:** [VulnerabilityBulkCreatePayload!](objects#vulnerabilitybulkcreatepayload)
+
+Create multiple new vulnerabilitys
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createvulnerabilityinput"><code>[CreateVulnerabilityInput!]</code></a>
+</td>
+<td>
+<p>values of the vulnerability</p>
 </td>
 </tr>
 </tbody>
@@ -2426,6 +2656,52 @@ input<br />
 </td>
 <td>
 <p>values of the export</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createFinding
+
+**Type:** [FindingCreatePayload!](objects#findingcreatepayload)
+
+Create a new finding
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createfindinginput"><code>CreateFindingInput!</code></a>
+</td>
+<td>
+<p>values of the finding</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createFindingControl
+
+**Type:** [FindingControlCreatePayload!](objects#findingcontrolcreatepayload)
+
+Create a new findingControl
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createfindingcontrolinput"><code>CreateFindingControlInput!</code></a>
+</td>
+<td>
+<p>values of the findingControl</p>
 </td>
 </tr>
 </tbody>
@@ -3126,6 +3402,52 @@ input<br />
 </tbody>
 </table>
 
+## createRemediation
+
+**Type:** [RemediationCreatePayload!](objects#remediationcreatepayload)
+
+Create a new remediation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createremediationinput"><code>CreateRemediationInput!</code></a>
+</td>
+<td>
+<p>values of the remediation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createReview
+
+**Type:** [ReviewCreatePayload!](objects#reviewcreatepayload)
+
+Create a new review
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createreviewinput"><code>CreateReviewInput!</code></a>
+</td>
+<td>
+<p>values of the review</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createRisk
 
 **Type:** [RiskCreatePayload!](objects#riskcreatepayload)
@@ -3763,6 +4085,29 @@ input<br />
 </td>
 <td>
 <p>values of the userSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createVulnerability
+
+**Type:** [VulnerabilityCreatePayload!](objects#vulnerabilitycreatepayload)
+
+Create a new vulnerability
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createvulnerabilityinput"><code>CreateVulnerabilityInput!</code></a>
+</td>
+<td>
+<p>values of the vulnerability</p>
 </td>
 </tr>
 </tbody>
@@ -5125,6 +5470,52 @@ id<br />
 </tbody>
 </table>
 
+## deleteFinding
+
+**Type:** [FindingDeletePayload!](objects#findingdeletepayload)
+
+Delete an existing finding
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the finding</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteFindingControl
+
+**Type:** [FindingControlDeletePayload!](objects#findingcontroldeletepayload)
+
+Delete an existing findingControl
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the findingControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteGroup
 
 **Type:** [GroupDeletePayload!](objects#groupdeletepayload)
@@ -5654,6 +6045,52 @@ id<br />
 </tbody>
 </table>
 
+## deleteRemediation
+
+**Type:** [RemediationDeletePayload!](objects#remediationdeletepayload)
+
+Delete an existing remediation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the remediation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteReview
+
+**Type:** [ReviewDeletePayload!](objects#reviewdeletepayload)
+
+Delete an existing review
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the review</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteRisk
 
 **Type:** [RiskDeletePayload!](objects#riskdeletepayload)
@@ -6072,6 +6509,29 @@ id<br />
 </td>
 <td>
 <p>ID of the user</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteVulnerability
+
+**Type:** [VulnerabilityDeletePayload!](objects#vulnerabilitydeletepayload)
+
+Delete an existing vulnerability
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the vulnerability</p>
 </td>
 </tr>
 </tbody>
@@ -7092,6 +7552,70 @@ exportFiles<br />
 </tbody>
 </table>
 
+## updateFinding
+
+**Type:** [FindingUpdatePayload!](objects#findingupdatepayload)
+
+Update an existing finding
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatefindinginput"><code>UpdateFindingInput!</code></a>
+</td>
+<td>
+<p>New values for the finding</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateFindingControl
+
+**Type:** [FindingControlUpdatePayload!](objects#findingcontrolupdatepayload)
+
+Update an existing findingControl
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the findingControl</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatefindingcontrolinput"><code>UpdateFindingControlInput!</code></a>
+</td>
+<td>
+<p>New values for the findingControl</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateGroup
 
 **Type:** [GroupUpdatePayload!](objects#groupupdatepayload)
@@ -7247,6 +7771,15 @@ input<br />
 </td>
 <td>
 <p>New values for the internalPolicy</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+<p>file containing values of the internalPolicy</p>
 </td>
 </tr>
 </tbody>
@@ -7692,6 +8225,15 @@ input<br />
 <p>New values for the procedure</p>
 </td>
 </tr>
+<tr>
+<td>
+procedureFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+<p>file containing values of the procedure</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -7795,6 +8337,70 @@ input<br />
 </td>
 <td>
 <p>New values for the programMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateRemediation
+
+**Type:** [RemediationUpdatePayload!](objects#remediationupdatepayload)
+
+Update an existing remediation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the remediation</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateremediationinput"><code>UpdateRemediationInput!</code></a>
+</td>
+<td>
+<p>New values for the remediation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateReview
+
+**Type:** [ReviewUpdatePayload!](objects#reviewupdatepayload)
+
+Update an existing review
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the review</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatereviewinput"><code>UpdateReviewInput!</code></a>
+</td>
+<td>
+<p>New values for the review</p>
 </td>
 </tr>
 </tbody>
@@ -8462,6 +9068,47 @@ templateFiles<br />
 </tbody>
 </table>
 
+## updateTrustCenterPost
+
+**Type:** [TrustCenterUpdatePayload!](objects#trustcenterupdatepayload)
+
+Update an existing trust center post
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatenoteinput"><code>UpdateNoteInput!</code></a>
+</td>
+<td>
+<p>New values for the post</p>
+</td>
+</tr>
+<tr>
+<td>
+noteFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the post</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateTrustCenterSetting
 
 **Type:** [TrustCenterSettingUpdatePayload!](objects#trustcentersettingupdatepayload)
@@ -8653,6 +9300,38 @@ input<br />
 </td>
 <td>
 <p>New values for the userSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateVulnerability
+
+**Type:** [VulnerabilityUpdatePayload!](objects#vulnerabilityupdatepayload)
+
+Update an existing vulnerability
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatevulnerabilityinput"><code>UpdateVulnerabilityInput!</code></a>
+</td>
+<td>
+<p>New values for the vulnerability</p>
 </td>
 </tr>
 </tbody>

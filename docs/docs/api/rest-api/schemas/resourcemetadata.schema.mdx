@@ -1,0 +1,32 @@
+---
+id: resourcemetadata
+title: "ResourceMetadata"
+description: "Resource metadata as defined in RFC 7643 Section 3.1"
+sidebar_label: "ResourceMetadata"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"created":"2024-07-29T15:51:28.071Z","lastModified":"2024-07-29T15:51:28.071Z","location":"string","resourceType":"string","version":"string"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ResourceMetadata"}
+>
+</Heading>
+
+
+
+Resource metadata as defined in RFC 7643 Section 3.1
+
+<Schema
+  schema={{"description":"Resource metadata as defined in RFC 7643 Section 3.1","properties":{"created":{"description":"The timestamp when the resource was created","format":"date-time","type":"string"},"lastModified":{"description":"The timestamp when the resource was last modified","format":"date-time","type":"string"},"location":{"description":"The URI of the resource","format":"uri","type":"string"},"resourceType":{"description":"The name of the resource type (e.g., User, Group)","type":"string"},"version":{"description":"The version of the resource. Used for ETag-based versioning.\nWeak ETags are prefixed with W/\n","type":"string"}},"readOnly":true,"type":"object","title":"ResourceMetadata"}}
+  schemaType={"response"}
+>
+
+</Schema>

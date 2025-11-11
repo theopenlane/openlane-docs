@@ -2,18 +2,17 @@ default_stages: [pre-commit]
 fail_fast: true
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
         exclude: jsonschema/api-docs.md
       - id: detect-private-key
   - repo: https://github.com/google/yamlfmt
-    rev: v0.17.2
+    rev: v0.20.0
     hooks:
       - id: yamlfmt
-  - repo: https://github.com/crate-ci/typos
-    # ensure this stays in this format, the auto-updater might update to something like typos-dict-v0.11.35 which is not correct
-    rev: v1.29.4
+  - repo: https://github.com/adhtruong/mirrors-typos
+    rev: v1.39.0
     hooks:
       - id: typos
   - repo: https://github.com/codespell-project/codespell # another spell checker because typos is not perfect and neither is codespell

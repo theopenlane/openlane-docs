@@ -1,0 +1,34 @@
+---
+id: group
+title: "Group"
+description: "SCIM Group resource as defined in RFC 7643 Section 4.2."
+sidebar_label: "Group"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"displayName":"string","externalId":"string","id":"string","members":[{"$ref":"string","display":"string","type":"User","value":"string"}],"meta":{"created":"2024-07-29T15:51:28.071Z","lastModified":"2024-07-29T15:51:28.071Z","location":"string","resourceType":"string","version":"string"},"schemas":["urn:ietf:params:scim:schemas:core:2.0:Group"]}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Group"}
+>
+</Heading>
+
+
+
+SCIM Group resource as defined in RFC 7643 Section 4.2.
+Represents a group of users.
+
+
+<Schema
+  schema={{"description":"SCIM Group resource as defined in RFC 7643 Section 4.2.\nRepresents a group of users.\n","properties":{"displayName":{"description":"A human-readable name for the group. REQUIRED","type":"string"},"externalId":{"description":"Identifier for the group as defined by the provisioning client.\nAllows the client to maintain their own identifier.\n","type":"string"},"id":{"description":"Unique identifier for the group. Assigned by the service provider.\nMUST be unique across the entire set of resources. Immutable.\n","readOnly":true,"type":"string"},"members":{"description":"Members of the group (users or nested groups)","items":{"properties":{"$ref":{"description":"The URI of the corresponding User or Group resource","format":"uri","type":"string"},"display":{"description":"A human-readable name for the member","type":"string"},"type":{"description":"The type of member","enum":["User","Group"],"type":"string"},"value":{"description":"The identifier of the member (user or group ID)","type":"string"}},"type":"object"},"type":"array"},"meta":{"description":"Resource metadata as defined in RFC 7643 Section 3.1","properties":{"created":{"description":"The timestamp when the resource was created","format":"date-time","type":"string"},"lastModified":{"description":"The timestamp when the resource was last modified","format":"date-time","type":"string"},"location":{"description":"The URI of the resource","format":"uri","type":"string"},"resourceType":{"description":"The name of the resource type (e.g., User, Group)","type":"string"},"version":{"description":"The version of the resource. Used for ETag-based versioning.\nWeak ETags are prefixed with W/\n","type":"string"}},"readOnly":true,"type":"object","title":"ResourceMetadata"},"schemas":{"description":"The schema URIs that define this resource","items":{"enum":["urn:ietf:params:scim:schemas:core:2.0:Group"],"type":"string"},"type":"array"}},"required":["schemas","displayName"],"type":"object","title":"Group"}}
+  schemaType={"response"}
+>
+
+</Schema>
