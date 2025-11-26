@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/visibility.svg').default,
     description: (
       <>
-        Automate and scale your compliance program using our pre-built controls (or bring your own) and track their status - plus the progress against mapped frameworks. We support SOC 2, ISO 27001, NIST, and more (or customize your own!) and automate up to 90% of the work associated with them.
+        Automate and scale your compliance program using our pre-built controls (or bring your own) and track their status - plus the progress against mapped frameworks. We support SOC 2, ISO 27001, NIST, and more (or customize your own!).
       </>
     ),
   },
