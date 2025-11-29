@@ -3,7 +3,24 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Comprehensive documentation for compliance management"
+    "description": "Centralized platform for managing compliance requirements, policies, procedures, and audit reporting with dynamic tracking and task assignment capabilities",
+    "keywords": [
+      "compliance management",
+      "regulatory compliance",
+      "policy management",
+      "audit management",
+      "compliance tracking",
+      "compliance repository",
+      "compliance monitoring",
+      "compliance reporting",
+      "compliance workflows",
+      "compliance documentation",
+      "compliance automation",
+      "risk management",
+      "governance",
+      "compliance audits",
+      "compliance tasks"
+    ]
   },
   "collapsed": true
 }

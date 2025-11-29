@@ -3,7 +3,24 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Resources for developing the Openlane stack"
+    "description": "Resources for developing the Openlane stack, including architecture, API development, database management, and contributing guidelines.",
+    "keywords": [
+      "openlane development",
+      "developer guide",
+      "API development",
+      "GraphQL API",
+      "database schema",
+      "architecture",
+      "contributing",
+      "open source development",
+      "backend development",
+      "Go development",
+      "ent framework",
+      "schema design",
+      "API documentation",
+      "development workflow",
+      "code contributions"
+    ]
   },
   "collapsed": true
 }

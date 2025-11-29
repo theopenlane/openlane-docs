@@ -3,7 +3,27 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "Documentation for the Trust Center"
+    "description": "Public-facing Trust Center for sharing security and compliance information with customers, including certifications, security practices, and compliance reports.",
+    "keywords": [
+      "trust center",
+      "security transparency",
+      "compliance transparency",
+      "security documentation",
+      "compliance reports",
+      "certifications",
+      "security practices",
+      "privacy practices",
+      "customer trust",
+      "public compliance",
+      "security posture",
+      "compliance status",
+      "audit reports",
+      "SOC 2 reports",
+      "ISO certifications",
+      "security questionnaires",
+      "vendor security",
+      "third-party assurance"
+    ]
   },
   "collapsed": true
 }

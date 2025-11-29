@@ -3,7 +3,24 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "Information around the respective compliance standards supported by the Openlane system"
+    "description": "Comprehensive guides to compliance standards and frameworks including SOC 2, ISO 27001, NIST, GDPR, HIPAA, PCI-DSS, and SOX. Learn requirements, implementation strategies, and best practices.",
+    "keywords": [
+      "compliance standards",
+      "compliance frameworks",
+      "SOC 2",
+      "ISO 27001",
+      "NIST 800-53",
+      "GDPR",
+      "HIPAA",
+      "PCI-DSS",
+      "SOX",
+      "regulatory compliance",
+      "security standards",
+      "cybersecurity frameworks",
+      "information security standards",
+      "data protection standards",
+      "compliance requirements"
+    ]
   },
   "collapsed": true
 }

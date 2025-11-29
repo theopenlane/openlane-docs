@@ -1,6 +1,24 @@
 ---
 sidebar_position: 1
 sidebar_label: Openlane API
+title: Openlane API Documentation - GraphQL & REST API Guide
+description: Complete guide to using the Openlane API including GraphQL queries, mutations, REST endpoints, authentication, and integration examples for compliance management
+keywords:
+  - Openlane API
+  - GraphQL API
+  - REST API
+  - API documentation
+  - API authentication
+  - GraphQL queries
+  - GraphQL mutations
+  - API integration
+  - compliance API
+  - API reference
+  - GraphQL explorer
+  - API endpoints
+  - token authentication
+  - API tutorial
+  - developer API
 tags:
     - api
     - openapi
@@ -9,6 +27,34 @@ tags:
     - openlane-api
     - rest
 ---
+
+<head>
+  <meta name="keywords" content="Openlane API, GraphQL API, REST API, API documentation, authentication, API integration" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:title" content="Openlane API Documentation - GraphQL & REST API Guide" />
+  <meta property="og:description" content="Complete guide to using the Openlane API including GraphQL and REST endpoints, authentication, and integration examples" />
+  <meta property="og:type" content="article" />
+  <link rel="canonical" href="https://docs.theopenlane.io/docs/api/graph-api" />
+  <script type="application/ld+json">
+    {JSON.stringify({
+      '@context': 'https://schema.org/',
+      '@type': 'TechArticle',
+      headline: 'Using the Openlane API',
+      description: 'Complete guide to GraphQL and REST API integration with Openlane platform',
+      keywords: ['Openlane API', 'GraphQL', 'REST API', 'API documentation', 'authentication'],
+      author: {
+        '@type': 'Organization',
+        name: 'Openlane',
+        url: 'https://theopenlane.io/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Openlane',
+        url: 'https://theopenlane.io/',
+      }
+    })}
+  </script>
+</head>
 
 # Using the Openlane API
 
@@ -23,6 +69,10 @@ For an interactive experience, you can explore the GraphQL API using the [GraphQ
 To use the REST API, you can refer to the endpoints available in the [Openlane REST API Documentation](docs/api/rest-api/openlane-openapi-3-1-1-specifications.info.mdx). This documentation provides detailed information about the available endpoints, request methods, parameters, and responses.
 
 ## Authentication
+
+:::info
+   In order to create any tokens, your organization must have a payment method on file
+:::
 
 All Openlane APIs use token-based authentication. You need to include an `Authorization` header with your token in each request:
 

@@ -1,0 +1,32 @@
+---
+id: integrationconfigpayload
+title: "IntegrationConfigPayload"
+description: ""
+sidebar_label: "IntegrationConfigPayload"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"Provider":"gcp_scc","payload":{"audience":"string","findingFilter":"string","organizationId":"string","projectId":"string","serviceAccountEmail":"string","workloadIdentityProvider":"string"}}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"IntegrationConfigPayload"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"Provider":{"description":"Integration provider identifier","example":"gcp_scc","type":"string"},"payload":{"properties":{"audience":{"type":"string"},"findingFilter":{"type":"string"},"organizationId":{"type":"string"},"projectId":{"type":"string"},"serviceAccountEmail":{"type":"string"},"workloadIdentityProvider":{"type":"string"}},"type":"object"}},"type":"object","title":"IntegrationConfigPayload"}}
+  schemaType={"response"}
+>
+
+</Schema>

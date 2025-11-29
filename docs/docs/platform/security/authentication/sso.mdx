@@ -2,6 +2,26 @@
 title: Single Sign-On (SSO)
 description: Overview of Single Sign-On (SSO) capabilities within the Openlane platform
 sidebar_position: 1
+tags:
+  - sso
+  - authentication
+  - oidc
+  - single sign-on
+  - identity provider
+  - idp
+  - oauth2
+  - openid connect
+  - faq
+keywords:
+  - sso
+  - authentication
+  - oidc
+  - single sign-on
+  - identity provider
+  - idp
+  - oauth2
+  - openid connect
+  - faq
 ---
 
 # Overview
@@ -34,7 +54,7 @@ We'll use Google as an example for creating this configuration:
 ![SSO Settings](../../../../static/img/screenshots/auth/sso_console.png)
 
 1. Choose the Identity Provider from the dropdown
-1. Enter the **Client ID**, **Client Secret**, and **OIDC Discovery Endpoint** from the step where you created them within the Google Console (Google's Disocvery endpoint is `https://accounts.google.com/.well-known/openid-configuration` for reference)
+1. Enter the **Client ID**, **Client Secret**, and **OIDC Discovery Endpoint** from the step where you created them within the Google Console (Google's Discovery endpoint is `https://accounts.google.com/.well-known/openid-configuration` for reference)
 1. **Save Configuration** and then click **Test Connection**. This will redirect you to your IdP to authenticate and after authentication you will be redirected back to Openlane and see a success message if you've configured everything successfully
 1. **Enforce SSO** only once you have tested the connection! This will require all users in your organization to authenticate via SSO. Users without SSO access will be unable to log in, so ensure your IdP is configured correctly before enforcing. Only the organization owner can bypass SSO.
 

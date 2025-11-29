@@ -3,7 +3,24 @@
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "How to contribute to the Openlane project documentation"
+    "description": "How to contribute to the Openlane project - guidelines for code contributions, documentation, bug reports, and community participation in open source development",
+    "keywords": [
+      "contributing",
+      "open source contribution",
+      "code contributions",
+      "documentation contributions",
+      "pull requests",
+      "bug reports",
+      "feature requests",
+      "contribution guidelines",
+      "developer guide",
+      "community participation",
+      "open source development",
+      "GitHub contributions",
+      "code review",
+      "development workflow",
+      "contributor guide"
+    ]
   },
   "collapsed": true
 }

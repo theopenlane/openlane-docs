@@ -34,6 +34,10 @@ The `Boolean` scalar type represents `true` or `false`.
 Change is a difference between two updates to an object used by
 the audit history resolvers
 
+## Channel
+
+Channel notifications will be sent to including in-app, slack, etc
+
 ## CredentialSet
 
 CredentialSet is a json of of credential keys that are used to authenticate to a third party
@@ -112,4 +116,20 @@ This scalar is typically used to handle file uploads in GraphQL mutations.
 ## VersionBump
 
 VersionBump allows a revision to automatically be bumped based on "Major", "Minor", "Patch", or "Draft"
+
+## WorkflowDefinitionDocument
+
+WorkflowDefinitionDocument captures triggers, conditions, actions, and selectors that define a workflow.
+
+## WorkflowDefinitionSchema
+
+WorkflowDefinitionSchema is a JSON schema describing the shape of workflow definitions for validation.
+
+## WorkflowEventPayload
+
+WorkflowEventPayload stores payloads emitted by workflow events and actions.
+
+## WorkflowInstanceContext
+
+WorkflowInstanceContext contains runtime context for a workflow instance including assignments and object info.
 

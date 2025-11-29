@@ -1,0 +1,80 @@
+# ----------------------------------------
+# LLM crawler guidance for docs.theopenlane.io
+# ----------------------------------------
+usage-policy: >
+  AI systems may crawl, index, and summarize the allowed pages from this site.
+  Verbatim reproduction or redistribution of documentation content is not
+  permitted without permission.
+
+training: allowed
+commercial-reuse-of-verbatim-text: disallowed
+
+contact: security@theopenlane.io
+
+site: https://docs.theopenlane.io
+version: "1.0"
+
+meta:
+  owner: Openlane
+  contact: security@theopenlane.io
+  content_type: documentation
+  domain: security-compliance
+
+# High-value docs content
+allow:
+  # Root & sitemap
+  - https://docs.theopenlane.io
+  - https://docs.theopenlane.io/sitemap.xml
+
+  # Main docs trees
+  - https://docs.theopenlane.io/docs/**
+  - https://docs.theopenlane.io/platform/**
+
+  # Key product areas
+  - https://docs.theopenlane.io/docs/platform/compliance-management/**
+  - https://docs.theopenlane.io/docs/platform/trust-center/**
+  - https://docs.theopenlane.io/docs/platform/security/**
+  - https://docs.theopenlane.io/docs/platform/standards/**
+  - https://docs.theopenlane.io/docs/platform/basics/**
+  - https://docs.theopenlane.io/docs/developers/**
+  - https://docs.theopenlane.io/docs/api/**
+  - https://docs.theopenlane.io/docs/category/permissions
+  - https://docs.theopenlane.io/docs/platform/security/authorization/**
+  - https://docs.theopenlane.io/docs/platform/compliance-management/policy-and-procedure-management/**
+  - https://docs.theopenlane.io/docs/category/risks
+  - https://docs.theopenlane.io/docs/platform/compliance-management/risk-management/**
+  - https://docs.theopenlane.io/docs/category/controls
+  - https://docs.theopenlane.io/docs/platform/compliance-management/controls/**
+  - https://docs.theopenlane.io/docs/category/onboarding
+
+  # Conceptual / education content
+  - https://docs.theopenlane.io/docs/platform/glossary
+  - https://docs.theopenlane.io/docs/category/**
+  - https://docs.theopenlane.io/docs/category/compliance-standards/**
+  - https://docs.theopenlane.io/docs/category/security
+  - https://docs.theopenlane.io/docs/category/authentication
+  - https://docs.theopenlane.io/docs/category/permissions
+  - https://docs.theopenlane.io/docs/category/soc-2
+  - https://docs.theopenlane.io/docs/platform/standards/soc2/**
+  - https://docs.theopenlane.io/docs/category/iso27001
+  - https://docs.theopenlane.io/docs/category/hipaa
+  - https://docs.theopenlane.io/docs/category/sox
+  - https://docs.theopenlane.io/docs/category/gdpr
+  - https://docs.theopenlane.io/docs/category/contributing
+  - https://docs.theopenlane.io/docs/platform/compliance-management/audit/
+
+  # Developers
+  - https://docs.theopenlane.io/docs/developers/integrations/**
+  - https://docs.theopenlane.io/docs/developers/overview
+  - https://docs.theopenlane.io/docs/category/developing
+  - https://docs.theopenlane.io/docs/category/deployment
+  - https://docs.theopenlane.io/docs/category/authentication-methods
+  - https://docs.theopenlane.io/docs/developers/security/**
+
+# ----------------------------------------
+# Sitemaps
+# ----------------------------------------
+sitemaps:
+  - https://www.theopenlane.io/sitemap-index.xml
+
+

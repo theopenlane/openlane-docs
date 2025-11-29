@@ -3,7 +3,27 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "Controls are used to manage specific compliance requirements with an organization"
+    "description": "Controls are used to manage specific compliance requirements with an organization. Learn how to implement, monitor, and manage security controls across compliance frameworks.",
+    "keywords": [
+      "compliance controls",
+      "security controls",
+      "control management",
+      "control requirements",
+      "control implementation",
+      "control monitoring",
+      "control testing",
+      "control frameworks",
+      "SOC 2 controls",
+      "ISO 27001 controls",
+      "NIST controls",
+      "access controls",
+      "technical controls",
+      "administrative controls",
+      "physical controls",
+      "control evidence",
+      "control effectiveness",
+      "control mapping"
+    ]
   },
   "collapsed": true
 }

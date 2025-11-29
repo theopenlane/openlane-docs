@@ -3,7 +3,24 @@
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Working with the Openlane GraphQL API"
+    "description": "Working with the Openlane GraphQL API - comprehensive guide to queries, mutations, subscriptions, authentication, and API integration for compliance management",
+    "keywords": [
+      "GraphQL API",
+      "Openlane API",
+      "GraphQL queries",
+      "GraphQL mutations",
+      "API documentation",
+      "GraphQL schema",
+      "API integration",
+      "GraphQL subscriptions",
+      "API authentication",
+      "GraphQL endpoint",
+      "API reference",
+      "compliance API",
+      "GraphQL best practices",
+      "API development",
+      "GraphQL tutorial"
+    ]
   },
   "collapsed": true
 }
