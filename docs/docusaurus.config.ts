@@ -20,6 +20,72 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
+  headTags: [
+    // Preconnects for performance
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://docs.theopenlane.io',
+      },
+    },
+
+    // Openlane organization structured data
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Openlane',
+        url: 'https://www.theopenlane.io',
+        logo: 'https://www.theopenlane.io/img/openlane-logo.png',
+        sameAs: [
+          'https://github.com/theopenlane',
+          'https://www.linkedin.com/company/theopenlane',
+          'https://openlane.fyi',
+        ],
+      }),
+    },
+
+    // Website metadata (improves rich results & LLM indexing)
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'Openlane Documentation',
+        url: 'https://docs.theopenlane.io',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target:
+            'https://www.google.com/search?q=site:docs.theopenlane.io+{search_term_string}',
+          'query-input': 'required name=search_term_string',
+        },
+      }),
+    },
+
+    // Optional: LLM indexing hints
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'llm:content-type',
+        content: 'documentation',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'llm:domain',
+        content: 'security-compliance',
+      },
+    },
+  ],
   themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid'],
   presets: [
     [

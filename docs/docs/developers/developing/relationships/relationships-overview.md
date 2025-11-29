@@ -12,7 +12,7 @@ making it easier to understand how different components interact and depend on e
 ## Primary Relationships Table
 
 | Source Object | Related Object | Relationship Type | Description |
-|---------------|----------------|-------------------|-------------|
+| ------------- | -------------- | ----------------- | ----------- |
 | **Controls** | Standards | Implementation | Controls implement specific requirements from compliance standards |
 | **Controls** | Evidence | Demonstration | Evidence demonstrates that controls are properly implemented |
 | **Controls** | Risks | Mitigation | Controls are implemented to mitigate specific risks |

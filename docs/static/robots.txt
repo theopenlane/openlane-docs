@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Block Docusaurus preview paths
+Disallow: /.docusaurus/*

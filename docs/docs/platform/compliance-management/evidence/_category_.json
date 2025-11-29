@@ -3,7 +3,27 @@
   "position": 8,
   "link": {
     "type": "generated-index",
-    "description": "Evidence is used to track and manage compliance evidence for a given program"
+    "description": "Evidence is used to track and manage compliance evidence for a given program. Learn how to collect, organize, and maintain audit evidence across compliance frameworks.",
+    "keywords": [
+      "compliance evidence",
+      "audit evidence",
+      "evidence collection",
+      "evidence management",
+      "evidence tracking",
+      "evidence documentation",
+      "evidence repository",
+      "control evidence",
+      "audit artifacts",
+      "evidence retention",
+      "evidence organization",
+      "compliance documentation",
+      "audit trail",
+      "evidence types",
+      "evidence validation",
+      "SOC 2 evidence",
+      "ISO 27001 evidence",
+      "evidence storage"
+    ]
   },
   "collapsed": true
 }

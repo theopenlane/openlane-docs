@@ -3,7 +3,24 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "All of the things related to SOC 2"
+    "description": "SOC 2 compliance framework documentation including Trust Service Criteria, security controls, audit requirements, and implementation guidance for service organizations",
+    "keywords": [
+      "SOC 2",
+      "SOC 2 compliance",
+      "Trust Service Criteria",
+      "AICPA",
+      "security controls",
+      "SOC 2 Type 1",
+      "SOC 2 Type 2",
+      "service organization controls",
+      "data security",
+      "privacy controls",
+      "availability",
+      "processing integrity",
+      "confidentiality",
+      "SOC 2 audit",
+      "cloud compliance"
+    ]
   },
   "collapsed": true
 }

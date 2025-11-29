@@ -3,7 +3,24 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Learn how to import your existing compliance data into Openlane and get started with managing your compliance program effectively."
+    "description": "Learn how to import your existing compliance data into Openlane and get started with managing your compliance program effectively.",
+    "keywords": [
+      "compliance onboarding",
+      "getting started",
+      "data import",
+      "compliance setup",
+      "initial configuration",
+      "compliance migration",
+      "openlane setup",
+      "program setup",
+      "import compliance data",
+      "onboarding guide",
+      "compliance implementation",
+      "setup wizard",
+      "first steps",
+      "compliance kickoff",
+      "platform onboarding"
+    ]
   },
   "collapsed": true
 }

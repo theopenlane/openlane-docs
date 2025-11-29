@@ -3,8 +3,25 @@
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "An overview of the Openlane platform, its components, and architecture",
-    "slug": "platform/overview"
+    "description": "An overview of the Openlane platform, its components, and architecture. Learn about compliance management, security controls, and platform capabilities.",
+    "slug": "platform/overview",
+    "keywords": [
+      "openlane platform",
+      "platform overview",
+      "compliance platform",
+      "security platform",
+      "platform architecture",
+      "compliance management platform",
+      "platform components",
+      "openlane features",
+      "compliance automation",
+      "security automation",
+      "platform capabilities",
+      "enterprise compliance",
+      "compliance software",
+      "GRC platform",
+      "governance risk compliance"
+    ]
   },
   "collapsed": true
 }
