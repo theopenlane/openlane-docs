@@ -225,3251 +225,6 @@ last<br />
 </tbody>
 </table>
 
-## adminActionPlanSearch
-
-**Type:** [ActionPlanConnection](objects#actionplanconnection)
-
-Search across ActionPlan objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminAPITokenSearch
-
-**Type:** [APITokenConnection](objects#apitokenconnection)
-
-Search across APIToken objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminAssessmentResponseSearch
-
-**Type:** [AssessmentResponseConnection](objects#assessmentresponseconnection)
-
-Search across AssessmentResponse objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminAssessmentSearch
-
-**Type:** [AssessmentConnection](objects#assessmentconnection)
-
-Search across Assessment objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminAssetSearch
-
-**Type:** [AssetConnection](objects#assetconnection)
-
-Search across Asset objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminContactSearch
-
-**Type:** [ContactConnection](objects#contactconnection)
-
-Search across Contact objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminControlImplementationSearch
-
-**Type:** [ControlImplementationConnection](objects#controlimplementationconnection)
-
-Search across ControlImplementation objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminControlObjectiveSearch
-
-**Type:** [ControlObjectiveConnection](objects#controlobjectiveconnection)
-
-Search across ControlObjective objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminControlSearch
-
-**Type:** [ControlConnection](objects#controlconnection)
-
-Search across Control objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminCustomDomainSearch
-
-**Type:** [CustomDomainConnection](objects#customdomainconnection)
-
-Search across CustomDomain objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminCustomTypeEnumSearch
-
-**Type:** [CustomTypeEnumConnection](objects#customtypeenumconnection)
-
-Search across CustomTypeEnum objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminDNSVerificationSearch
-
-**Type:** [DNSVerificationConnection](objects#dnsverificationconnection)
-
-Search across DNSVerification objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminDocumentDataSearch
-
-**Type:** [DocumentDataConnection](objects#documentdataconnection)
-
-Search across DocumentData objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminEntitySearch
-
-**Type:** [EntityConnection](objects#entityconnection)
-
-Search across Entity objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminEntityTypeSearch
-
-**Type:** [EntityTypeConnection](objects#entitytypeconnection)
-
-Search across EntityType objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminEventSearch
-
-**Type:** [EventConnection](objects#eventconnection)
-
-Search across Event objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminEvidenceSearch
-
-**Type:** [EvidenceConnection](objects#evidenceconnection)
-
-Search across Evidence objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminFileSearch
-
-**Type:** [FileConnection](objects#fileconnection)
-
-Search across File objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminFindingSearch
-
-**Type:** [FindingConnection](objects#findingconnection)
-
-Search across Finding objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminGroupSearch
-
-**Type:** [GroupConnection](objects#groupconnection)
-
-Search across Group objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminIntegrationSearch
-
-**Type:** [IntegrationConnection](objects#integrationconnection)
-
-Search across Integration objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminInternalPolicySearch
-
-**Type:** [InternalPolicyConnection](objects#internalpolicyconnection)
-
-Search across InternalPolicy objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminInviteSearch
-
-**Type:** [InviteConnection](objects#inviteconnection)
-
-Search across Invite objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminJobRunnerRegistrationTokenSearch
-
-**Type:** [JobRunnerRegistrationTokenConnection](objects#jobrunnerregistrationtokenconnection)
-
-Search across JobRunnerRegistrationToken objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminJobRunnerSearch
-
-**Type:** [JobRunnerConnection](objects#jobrunnerconnection)
-
-Search across JobRunner objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminJobRunnerTokenSearch
-
-**Type:** [JobRunnerTokenConnection](objects#jobrunnertokenconnection)
-
-Search across JobRunnerToken objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminJobTemplateSearch
-
-**Type:** [JobTemplateConnection](objects#jobtemplateconnection)
-
-Search across JobTemplate objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminMappableDomainSearch
-
-**Type:** [MappableDomainConnection](objects#mappabledomainconnection)
-
-Search across MappableDomain objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminMappedControlSearch
-
-**Type:** [MappedControlConnection](objects#mappedcontrolconnection)
-
-Search across MappedControl objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminNarrativeSearch
-
-**Type:** [NarrativeConnection](objects#narrativeconnection)
-
-Search across Narrative objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminOrganizationSearch
-
-**Type:** [OrganizationConnection](objects#organizationconnection)
-
-Search across Organization objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminOrganizationSettingSearch
-
-**Type:** [OrganizationSettingConnection](objects#organizationsettingconnection)
-
-Search across OrganizationSetting objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminOrgSubscriptionSearch
-
-**Type:** [OrgSubscriptionConnection](objects#orgsubscriptionconnection)
-
-Search across OrgSubscription objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminPersonalAccessTokenSearch
-
-**Type:** [PersonalAccessTokenConnection](objects#personalaccesstokenconnection)
-
-Search across PersonalAccessToken objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminProcedureSearch
-
-**Type:** [ProcedureConnection](objects#procedureconnection)
-
-Search across Procedure objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminProgramSearch
-
-**Type:** [ProgramConnection](objects#programconnection)
-
-Search across Program objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminRemediationSearch
-
-**Type:** [RemediationConnection](objects#remediationconnection)
-
-Search across Remediation objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminReviewSearch
-
-**Type:** [ReviewConnection](objects#reviewconnection)
-
-Search across Review objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminRiskSearch
-
-**Type:** [RiskConnection](objects#riskconnection)
-
-Search across Risk objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminScanSearch
-
-**Type:** [ScanConnection](objects#scanconnection)
-
-Search across Scan objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminSearch
-
-**Type:** [SearchResults](objects#searchresults)
-
-Admin search across all objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminStandardSearch
-
-**Type:** [StandardConnection](objects#standardconnection)
-
-Search across Standard objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminSubcontrolSearch
-
-**Type:** [SubcontrolConnection](objects#subcontrolconnection)
-
-Search across Subcontrol objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminSubprocessorSearch
-
-**Type:** [SubprocessorConnection](objects#subprocessorconnection)
-
-Search across Subprocessor objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminSubscriberSearch
-
-**Type:** [SubscriberConnection](objects#subscriberconnection)
-
-Search across Subscriber objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminTagDefinitionSearch
-
-**Type:** [TagDefinitionConnection](objects#tagdefinitionconnection)
-
-Search across TagDefinition objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminTaskSearch
-
-**Type:** [TaskConnection](objects#taskconnection)
-
-Search across Task objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminTemplateSearch
-
-**Type:** [TemplateConnection](objects#templateconnection)
-
-Search across Template objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminTrustCenterComplianceSearch
-
-**Type:** [TrustCenterComplianceConnection](objects#trustcentercomplianceconnection)
-
-Search across TrustCenterCompliance objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminTrustCenterDocSearch
-
-**Type:** [TrustCenterDocConnection](objects#trustcenterdocconnection)
-
-Search across TrustCenterDoc objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminTrustCenterSearch
-
-**Type:** [TrustCenterConnection](objects#trustcenterconnection)
-
-Search across TrustCenter objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminUserSearch
-
-**Type:** [UserConnection](objects#userconnection)
-
-Search across User objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminUserSettingSearch
-
-**Type:** [UserSettingConnection](objects#usersettingconnection)
-
-Search across UserSetting objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminVulnerabilitySearch
-
-**Type:** [VulnerabilityConnection](objects#vulnerabilityconnection)
-
-Search across Vulnerability objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## adminWebauthnSearch
-
-**Type:** [WebauthnConnection](objects#webauthnconnection)
-
-Search across Webauthn objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## apiToken
 
 **Type:** [APIToken!](objects#apitoken)
@@ -3556,65 +311,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for APITokens returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## apiTokenSearch
-
-**Type:** [APITokenConnection](objects#apitokenconnection)
-
-Search across APIToken objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -4848,65 +1544,6 @@ where<br />
 </tbody>
 </table>
 
-## controlImplementationSearch
-
-**Type:** [ControlImplementationConnection](objects#controlimplementationconnection)
-
-Search across ControlImplementation objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## controlObjective
 
 **Type:** [ControlObjective!](objects#controlobjective)
@@ -5526,65 +2163,6 @@ where<br />
 </tbody>
 </table>
 
-## customDomainSearch
-
-**Type:** [CustomDomainConnection](objects#customdomainconnection)
-
-Search across CustomDomain objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## customTypeEnum
 
 **Type:** [CustomTypeEnum!](objects#customtypeenum)
@@ -5730,6 +2308,574 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryAccount
+
+**Type:** [DirectoryAccount!](objects#directoryaccount)
+
+Look up directoryAccount by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryAccount</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryAccountHistories
+
+**Type:** [DirectoryAccountHistoryConnection!](objects#directoryaccounthistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccounthistoryorder"><code>DirectoryAccountHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccountHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccounthistorywhereinput"><code>DirectoryAccountHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccountHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryAccounts
+
+**Type:** [DirectoryAccountConnection!](objects#directoryaccountconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccountorder"><code>[DirectoryAccountOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>DirectoryAccountWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryGroup
+
+**Type:** [DirectoryGroup!](objects#directorygroup)
+
+Look up directoryGroup by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryGroup</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryGroupHistories
+
+**Type:** [DirectoryGroupHistoryConnection!](objects#directorygrouphistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorygrouphistoryorder"><code>DirectoryGroupHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryGroupHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorygrouphistorywhereinput"><code>DirectoryGroupHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryGroupHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryGroups
+
+**Type:** [DirectoryGroupConnection!](objects#directorygroupconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorygrouporder"><code>[DirectoryGroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorygroupwhereinput"><code>DirectoryGroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryMembership
+
+**Type:** [DirectoryMembership!](objects#directorymembership)
+
+Look up directoryMembership by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryMembershipHistories
+
+**Type:** [DirectoryMembershipHistoryConnection!](objects#directorymembershiphistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorymembershiphistoryorder"><code>DirectoryMembershipHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryMembershipHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorymembershiphistorywhereinput"><code>DirectoryMembershipHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryMembershipHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directoryMemberships
+
+**Type:** [DirectoryMembershipConnection!](objects#directorymembershipconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorymembershiporder"><code>[DirectoryMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorymembershipwhereinput"><code>DirectoryMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directorySyncRun
+
+**Type:** [DirectorySyncRun!](objects#directorysyncrun)
+
+Look up directorySyncRun by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directorySyncRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## directorySyncRuns
+
+**Type:** [DirectorySyncRunConnection!](objects#directorysyncrunconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorysyncrunorder"><code>[DirectorySyncRunOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectorySyncRuns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorysyncrunwhereinput"><code>DirectorySyncRunWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectorySyncRuns returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -5894,65 +3040,6 @@ where<br />
 </tbody>
 </table>
 
-## dnsVerificationSearch
-
-**Type:** [DNSVerificationConnection](objects#dnsverificationconnection)
-
-Search across DNSVerification objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## documentData
 
 **Type:** [DocumentData!](objects#documentdata)
@@ -6039,65 +3126,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for DocumentDataHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## documentDataSearch
-
-**Type:** [DocumentDataConnection](objects#documentdataconnection)
-
-Search across DocumentData objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -6548,65 +3576,6 @@ where<br />
 </tbody>
 </table>
 
-## entityTypeSearch
-
-**Type:** [EntityTypeConnection](objects#entitytypeconnection)
-
-Search across EntityType objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## event
 
 **Type:** [Event!](objects#event)
@@ -6693,65 +3662,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Events returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## eventSearch
-
-**Type:** [EventConnection](objects#eventconnection)
-
-Search across Event objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -7220,65 +4130,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Files returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## fileSearch
-
-**Type:** [FileConnection](objects#fileconnection)
-
-Search across File objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -8515,65 +5366,6 @@ where<br />
 </tbody>
 </table>
 
-## integrationSearch
-
-**Type:** [IntegrationConnection](objects#integrationconnection)
-
-Search across Integration objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## internalPolicies
 
 **Type:** [InternalPolicyConnection!](objects#internalpolicyconnection)
@@ -9147,65 +5939,6 @@ where<br />
 </tbody>
 </table>
 
-## jobRunnerRegistrationTokenSearch
-
-**Type:** [JobRunnerRegistrationTokenConnection](objects#jobrunnerregistrationtokenconnection)
-
-Search across JobRunnerRegistrationToken objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## jobRunners
 
 **Type:** [JobRunnerConnection!](objects#jobrunnerconnection)
@@ -9419,65 +6152,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for JobRunnerTokens returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## jobRunnerTokenSearch
-
-**Type:** [JobRunnerTokenConnection](objects#jobrunnertokenconnection)
-
-Search across JobRunnerToken objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -9860,65 +6534,6 @@ where<br />
 </tbody>
 </table>
 
-## mappableDomainSearch
-
-**Type:** [MappableDomainConnection](objects#mappabledomainconnection)
-
-Search across MappableDomain objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## mappedControl
 
 **Type:** [MappedControl!](objects#mappedcontrol)
@@ -10073,65 +6688,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for MappedControls returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## mappedControlSearch
-
-**Type:** [MappedControlConnection](objects#mappedcontrolconnection)
-
-Search across MappedControl objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -10937,65 +7493,6 @@ where<br />
 </tbody>
 </table>
 
-## organizationSettingSearch
-
-**Type:** [OrganizationSettingConnection](objects#organizationsettingconnection)
-
-Search across OrganizationSetting objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## orgMembership
 
 **Type:** [OrgMembership!](objects#orgmembership)
@@ -11314,65 +7811,6 @@ where<br />
 </tbody>
 </table>
 
-## orgSubscriptionSearch
-
-**Type:** [OrgSubscriptionConnection](objects#orgsubscriptionconnection)
-
-Search across OrgSubscription objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## personalAccessToken
 
 **Type:** [PersonalAccessToken!](objects#personalaccesstoken)
@@ -11459,65 +7897,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for PersonalAccessTokens returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## personalAccessTokenSearch
-
-**Type:** [PersonalAccessTokenConnection](objects#personalaccesstokenconnection)
-
-Search across PersonalAccessToken objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -14968,65 +11347,6 @@ where<br />
 </tbody>
 </table>
 
-## trustCenterComplianceSearch
-
-**Type:** [TrustCenterComplianceConnection](objects#trustcentercomplianceconnection)
-
-Search across TrustCenterCompliance objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## trustCenterDoc
 
 **Type:** [TrustCenterDoc!](objects#trustcenterdoc)
@@ -15186,11 +11506,170 @@ where<br />
 </tbody>
 </table>
 
-## trustCenterDocSearch
+## trustcenterEntities
 
-**Type:** [TrustCenterDocConnection](objects#trustcenterdocconnection)
+**Type:** [TrustcenterEntityConnection!](objects#trustcenterentityconnection)
 
-Search across TrustCenterDoc objects
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterentityorder"><code>[TrustcenterEntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustcenterEntities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterentitywhereinput"><code>TrustcenterEntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustcenterEntities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustcenterEntity
+
+**Type:** [TrustcenterEntity!](objects#trustcenterentity)
+
+Look up trustcenterEntity by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustcenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustcenterEntityHistories
+
+**Type:** [TrustcenterEntityHistoryConnection!](objects#trustcenterentityhistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterentityhistoryorder"><code>TrustcenterEntityHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for TrustcenterEntityHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterentityhistorywhereinput"><code>TrustcenterEntityHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustcenterEntityHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustcenterEntitySearch
+
+**Type:** [TrustcenterEntityConnection](objects#trustcenterentityconnection)
+
+Search across TrustcenterEntity objects
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -15376,65 +11855,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for TrustCenters returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## trustCenterSearch
-
-**Type:** [TrustCenterConnection](objects#trustcenterconnection)
-
-Search across TrustCenter objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -16076,65 +12496,6 @@ where<br />
 </tbody>
 </table>
 
-## userSearch
-
-**Type:** [UserConnection](objects#userconnection)
-
-Search across User objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## userSetting
 
 **Type:** [UserSetting!](objects#usersetting)
@@ -16289,65 +12650,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for UserSettings returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## userSettingSearch
-
-**Type:** [UserSettingConnection](objects#usersettingconnection)
-
-Search across UserSetting objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -16639,11 +12941,11 @@ where<br />
 </tbody>
 </table>
 
-## webauthnSearch
+## workflowAssignment
 
-**Type:** [WebauthnConnection](objects#webauthnconnection)
+**Type:** [WorkflowAssignment!](objects#workflowassignment)
 
-Search across Webauthn objects
+Look up workflowAssignment by ID
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -16652,13 +12954,27 @@ Search across Webauthn objects
 <tbody>
 <tr>
 <td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
 </td>
 <td>
-<p>Query string to search across objects</p>
+<p>ID of the workflowAssignment</p>
 </td>
 </tr>
+</tbody>
+</table>
+
+## workflowAssignmentHistories
+
+**Type:** [WorkflowAssignmentHistoryConnection!](objects#workflowassignmenthistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
 <tr>
 <td>
 after<br />
@@ -16693,6 +13009,887 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmenthistoryorder"><code>WorkflowAssignmentHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowAssignmentHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmenthistorywhereinput"><code>WorkflowAssignmentHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowAssignmentHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowAssignments
+
+**Type:** [WorkflowAssignmentConnection!](objects#workflowassignmentconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmentorder"><code>[WorkflowAssignmentOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowAssignments returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmentwhereinput"><code>WorkflowAssignmentWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowAssignments returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowAssignmentTarget
+
+**Type:** [WorkflowAssignmentTarget!](objects#workflowassignmenttarget)
+
+Look up workflowAssignmentTarget by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowAssignmentTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowAssignmentTargetHistories
+
+**Type:** [WorkflowAssignmentTargetHistoryConnection!](objects#workflowassignmenttargethistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmenttargethistoryorder"><code>WorkflowAssignmentTargetHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowAssignmentTargetHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmenttargethistorywhereinput"><code>WorkflowAssignmentTargetHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowAssignmentTargetHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowAssignmentTargets
+
+**Type:** [WorkflowAssignmentTargetConnection!](objects#workflowassignmenttargetconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmenttargetorder"><code>[WorkflowAssignmentTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowAssignmentTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmenttargetwhereinput"><code>WorkflowAssignmentTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowAssignmentTargets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowDefinition
+
+**Type:** [WorkflowDefinition!](objects#workflowdefinition)
+
+Look up workflowDefinition by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowDefinitionHistories
+
+**Type:** [WorkflowDefinitionHistoryConnection!](objects#workflowdefinitionhistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowdefinitionhistoryorder"><code>WorkflowDefinitionHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowDefinitionHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowdefinitionhistorywhereinput"><code>WorkflowDefinitionHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowDefinitionHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowDefinitions
+
+**Type:** [WorkflowDefinitionConnection!](objects#workflowdefinitionconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowdefinitionorder"><code>[WorkflowDefinitionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowDefinitions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowdefinitionwhereinput"><code>WorkflowDefinitionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowDefinitions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowEvent
+
+**Type:** [WorkflowEvent!](objects#workflowevent)
+
+Look up workflowEvent by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowEvent</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowEventHistories
+
+**Type:** [WorkflowEventHistoryConnection!](objects#workfloweventhistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventhistoryorder"><code>WorkflowEventHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowEventHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventhistorywhereinput"><code>WorkflowEventHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowEventHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowEvents
+
+**Type:** [WorkflowEventConnection!](objects#workfloweventconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowEvents returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowEvents returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowInstance
+
+**Type:** [WorkflowInstance!](objects#workflowinstance)
+
+Look up workflowInstance by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowInstance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowInstanceHistories
+
+**Type:** [WorkflowInstanceHistoryConnection!](objects#workflowinstancehistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowinstancehistoryorder"><code>WorkflowInstanceHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowInstanceHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowinstancehistorywhereinput"><code>WorkflowInstanceHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowInstanceHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowInstances
+
+**Type:** [WorkflowInstanceConnection!](objects#workflowinstanceconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowinstanceorder"><code>[WorkflowInstanceOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowInstances returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowinstancewhereinput"><code>WorkflowInstanceWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowInstances returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowObjectRef
+
+**Type:** [WorkflowObjectRef!](objects#workflowobjectref)
+
+Look up workflowObjectRef by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowObjectRef</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowObjectRefHistories
+
+**Type:** [WorkflowObjectRefHistoryConnection!](objects#workflowobjectrefhistoryconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectrefhistoryorder"><code>WorkflowObjectRefHistoryOrder</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefHistories returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefhistorywhereinput"><code>WorkflowObjectRefHistoryWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefHistories returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowObjectRefs
+
+**Type:** [WorkflowObjectRefConnection!](objects#workflowobjectrefconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
 </td>
 </tr>
 </tbody>

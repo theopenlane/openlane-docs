@@ -592,6 +592,12 @@ Properties by which AssessmentHistory connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>response_due_duration</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -628,6 +634,12 @@ Properties by which Assessment connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>response_due_duration</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -642,6 +654,12 @@ AssessmentResponseAssessmentResponseStatus is enum for the field status
 <tbody>
 <tr>
 <td>NOT_STARTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SENT</td>
 <td>
 
 </td>
@@ -672,6 +690,12 @@ AssessmentResponseHistoryAssessmentResponseStatus is enum for the field status
 <tbody>
 <tr>
 <td>NOT_STARTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SENT</td>
 <td>
 
 </td>
@@ -749,6 +773,12 @@ Properties by which AssessmentResponseHistory connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>email</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>send_attempts</td>
 <td>
 
@@ -761,25 +791,25 @@ Properties by which AssessmentResponseHistory connections can be ordered.
 </td>
 </tr>
 <tr>
-<td>ASSIGNED_AT</td>
+<td>assigned_at</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>STARTED_AT</td>
+<td>started_at</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>COMPLETED_AT</td>
+<td>completed_at</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>DUE_DATE</td>
+<td>due_date</td>
 <td>
 
 </td>
@@ -809,6 +839,12 @@ Properties by which AssessmentResponse connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>email</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>send_attempts</td>
 <td>
 
@@ -821,25 +857,25 @@ Properties by which AssessmentResponse connections can be ordered.
 </td>
 </tr>
 <tr>
-<td>ASSIGNED_AT</td>
+<td>assigned_at</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>STARTED_AT</td>
+<td>started_at</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>COMPLETED_AT</td>
+<td>completed_at</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>DUE_DATE</td>
+<td>due_date</td>
 <td>
 
 </td>
@@ -2383,6 +2419,804 @@ Properties by which CustomTypeEnum connections can be ordered.
 </tbody>
 </table>
 
+## DirectoryAccountDirectoryAccountMFAState
+
+DirectoryAccountDirectoryAccountMFAState is enum for the field mfa_state
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>UNKNOWN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ENABLED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ENFORCED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountDirectoryAccountStatus
+
+DirectoryAccountDirectoryAccountStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SUSPENDED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountDirectoryAccountType
+
+DirectoryAccountDirectoryAccountType is enum for the field account_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SERVICE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SHARED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GUEST</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountHistoryDirectoryAccountMFAState
+
+DirectoryAccountHistoryDirectoryAccountMFAState is enum for the field mfa_state
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>UNKNOWN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ENABLED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ENFORCED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountHistoryDirectoryAccountStatus
+
+DirectoryAccountHistoryDirectoryAccountStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SUSPENDED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountHistoryDirectoryAccountType
+
+DirectoryAccountHistoryDirectoryAccountType is enum for the field account_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SERVICE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SHARED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GUEST</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountHistoryOpType
+
+DirectoryAccountHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountHistoryOrderField
+
+Properties by which DirectoryAccountHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>canonical_email</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>display_name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountOrderField
+
+Properties by which DirectoryAccount connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>canonical_email</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>display_name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupDirectoryGroupClassification
+
+DirectoryGroupDirectoryGroupClassification is enum for the field classification
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>SECURITY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DISTRIBUTION</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEAM</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DYNAMIC</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupDirectoryGroupStatus
+
+DirectoryGroupDirectoryGroupStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupHistoryDirectoryGroupClassification
+
+DirectoryGroupHistoryDirectoryGroupClassification is enum for the field classification
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>SECURITY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DISTRIBUTION</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEAM</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DYNAMIC</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupHistoryDirectoryGroupStatus
+
+DirectoryGroupHistoryDirectoryGroupStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INACTIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupHistoryOpType
+
+DirectoryGroupHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupHistoryOrderField
+
+Properties by which DirectoryGroupHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>email</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>display_name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupOrderField
+
+Properties by which DirectoryGroup connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>email</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>display_name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipDirectoryMembershipRole
+
+DirectoryMembershipDirectoryMembershipRole is enum for the field role
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>MEMBER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MANAGER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OWNER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipHistoryDirectoryMembershipRole
+
+DirectoryMembershipHistoryDirectoryMembershipRole is enum for the field role
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>MEMBER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MANAGER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OWNER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipHistoryOpType
+
+DirectoryMembershipHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipHistoryOrderField
+
+Properties by which DirectoryMembershipHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipOrderField
+
+Properties by which DirectoryMembership connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRunDirectorySyncRunStatus
+
+DirectorySyncRunDirectorySyncRunStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>RUNNING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRunOrderField
+
+Properties by which DirectorySyncRun connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>started_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## DNSVerificationDNSVerificationStatus
 
 DNSVerificationDNSVerificationStatus is enum for the field dns_verification_status
@@ -3293,13 +4127,25 @@ EvidenceEvidenceStatus is enum for the field status
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
-<td>APPROVED</td>
+<td>SUBMITTED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>READY</td>
+<td>READY_FOR_AUDITOR</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>AUDITOR_APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IN_REVIEW</td>
 <td>
 
 </td>
@@ -3311,25 +4157,13 @@ EvidenceEvidenceStatus is enum for the field status
 </td>
 </tr>
 <tr>
-<td>REJECTED</td>
-<td>
-
-</td>
-</tr>
-<tr>
 <td>NEEDS_RENEWAL</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>SUBMITTED</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>IN_REVIEW</td>
+<td>REJECTED</td>
 <td>
 
 </td>
@@ -3347,13 +4181,25 @@ EvidenceHistoryEvidenceStatus is enum for the field status
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
-<td>APPROVED</td>
+<td>SUBMITTED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>READY</td>
+<td>READY_FOR_AUDITOR</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>AUDITOR_APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IN_REVIEW</td>
 <td>
 
 </td>
@@ -3365,25 +4211,13 @@ EvidenceHistoryEvidenceStatus is enum for the field status
 </td>
 </tr>
 <tr>
-<td>REJECTED</td>
-<td>
-
-</td>
-</tr>
-<tr>
 <td>NEEDS_RENEWAL</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>SUBMITTED</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>IN_REVIEW</td>
+<td>REJECTED</td>
 <td>
 
 </td>
@@ -3593,6 +4427,12 @@ ExportExportType is enum for the field export_type
 </td>
 </tr>
 <tr>
+<td>DIRECTORY_MEMBERSHIP</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>EVIDENCE</td>
 <td>
 
@@ -3630,6 +4470,12 @@ ExportExportType is enum for the field export_type
 </tr>
 <tr>
 <td>RISK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SUBPROCESSOR</td>
 <td>
 
 </td>
@@ -6043,6 +6889,30 @@ Properties by which Note connections can be ordered.
 </tbody>
 </table>
 
+## NotificationNotificationType
+
+NotificationNotificationType is enum for the field notification_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ORGANIZATION</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## OrderDirection
 
 Possible directions in which to order a list of items when provided an `orderBy` argument.
@@ -6305,6 +7175,18 @@ OrganizationSettingHistorySSOProvider is enum for the field identity_provider
 </td>
 </tr>
 <tr>
+<td>MICROSOFT_ENTRA_ID</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GENERIC_OIDC</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>NONE</td>
 <td>
 
@@ -6402,6 +7284,18 @@ OrganizationSettingSSOProvider is enum for the field identity_provider
 </tr>
 <tr>
 <td>GITHUB</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MICROSOFT_ENTRA_ID</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GENERIC_OIDC</td>
 <td>
 
 </td>
@@ -10237,6 +11131,102 @@ TrustCenterDocWatermarkStatus is enum for the field watermark_status
 </tbody>
 </table>
 
+## TrustcenterEntityHistoryOpType
+
+TrustcenterEntityHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityHistoryOrderField
+
+Properties by which TrustcenterEntityHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityOrderField
+
+Properties by which TrustcenterEntity connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TrustCenterHistoryOpType
 
 TrustCenterHistoryOpType is enum for the field operation
@@ -10290,6 +11280,48 @@ Properties by which TrustCenterHistory connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterHistoryTrustCenterPreviewStatus
+
+TrustCenterHistoryTrustCenterPreviewStatus is enum for the field preview_status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PROVISIONING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>READY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DEPROVISIONING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
 <td>
 
 </td>
@@ -10381,6 +11413,30 @@ Properties by which TrustCenterSettingHistory connections can be ordered.
 </tbody>
 </table>
 
+## TrustCenterSettingHistoryTrustCenterEnvironment
+
+TrustCenterSettingHistoryTrustCenterEnvironment is enum for the field environment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>LIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PREVIEW</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TrustCenterSettingHistoryTrustCenterThemeMode
 
 TrustCenterSettingHistoryTrustCenterThemeMode is enum for the field theme_mode
@@ -10422,6 +11478,30 @@ Properties by which TrustCenterSetting connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSettingTrustCenterEnvironment
+
+TrustCenterSettingTrustCenterEnvironment is enum for the field environment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>LIVE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PREVIEW</td>
 <td>
 
 </td>
@@ -10530,6 +11610,48 @@ Properties by which TrustCenterSubprocessor connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterTrustCenterPreviewStatus
+
+TrustCenterTrustCenterPreviewStatus is enum for the field preview_status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PROVISIONING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>READY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DEPROVISIONING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
 <td>
 
 </td>
@@ -11380,6 +12502,834 @@ Properties by which Vulnerability connections can be ordered.
 ## WebauthnOrderField
 
 Properties by which Webauthn connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentHistoryOpType
+
+WorkflowAssignmentHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentHistoryOrderField
+
+Properties by which WorkflowAssignmentHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentHistoryWorkflowAssignmentStatus
+
+WorkflowAssignmentHistoryWorkflowAssignmentStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>REJECTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentOrderField
+
+Properties by which WorkflowAssignment connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetHistoryOpType
+
+WorkflowAssignmentTargetHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetHistoryOrderField
+
+Properties by which WorkflowAssignmentTargetHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetHistoryWorkflowTargetType
+
+WorkflowAssignmentTargetHistoryWorkflowTargetType is enum for the field target_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GROUP</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ROLE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>RESOLVER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetOrderField
+
+Properties by which WorkflowAssignmentTarget connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetWorkflowTargetType
+
+WorkflowAssignmentTargetWorkflowTargetType is enum for the field target_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>GROUP</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ROLE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>RESOLVER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentWorkflowAssignmentStatus
+
+WorkflowAssignmentWorkflowAssignmentStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>REJECTED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionHistoryOpType
+
+WorkflowDefinitionHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionHistoryOrderField
+
+Properties by which WorkflowDefinitionHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionHistoryWorkflowKind
+
+WorkflowDefinitionHistoryWorkflowKind is enum for the field workflow_kind
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>APPROVAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LIFECYCLE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NOTIFICATION</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionOrderField
+
+Properties by which WorkflowDefinition connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionWorkflowKind
+
+WorkflowDefinitionWorkflowKind is enum for the field workflow_kind
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>APPROVAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LIFECYCLE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NOTIFICATION</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventHistoryOpType
+
+WorkflowEventHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventHistoryOrderField
+
+Properties by which WorkflowEventHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventHistoryWorkflowEventType
+
+WorkflowEventHistoryWorkflowEventType is enum for the field event_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ACTION</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIGGER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DECISION</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventOrderField
+
+Properties by which WorkflowEvent connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventWorkflowEventType
+
+WorkflowEventWorkflowEventType is enum for the field event_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ACTION</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIGGER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DECISION</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceHistoryOpType
+
+WorkflowInstanceHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceHistoryOrderField
+
+Properties by which WorkflowInstanceHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceHistoryWorkflowInstanceState
+
+WorkflowInstanceHistoryWorkflowInstanceState is enum for the field state
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>RUNNING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PAUSED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceOrderField
+
+Properties by which WorkflowInstance connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceWorkflowInstanceState
+
+WorkflowInstanceWorkflowInstanceState is enum for the field state
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>RUNNING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PAUSED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefHistoryOpType
+
+WorkflowObjectRefHistoryOpType is enum for the field operation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefHistoryOrderField
+
+Properties by which WorkflowObjectRefHistory connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>history_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefOrderField
+
+Properties by which WorkflowObjectRef connections can be ordered.
 
 <p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
 

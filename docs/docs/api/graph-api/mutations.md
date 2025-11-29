@@ -513,6 +513,98 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVDirectoryAccount
+
+**Type:** [DirectoryAccountBulkCreatePayload!](objects#directoryaccountbulkcreatepayload)
+
+Create multiple new directoryAccounts via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the directoryAccount</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVDirectoryGroup
+
+**Type:** [DirectoryGroupBulkCreatePayload!](objects#directorygroupbulkcreatepayload)
+
+Create multiple new directoryGroups via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the directoryGroup</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVDirectoryMembership
+
+**Type:** [DirectoryMembershipBulkCreatePayload!](objects#directorymembershipbulkcreatepayload)
+
+Create multiple new directoryMemberships via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the directoryMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVDirectorySyncRun
+
+**Type:** [DirectorySyncRunBulkCreatePayload!](objects#directorysyncrunbulkcreatepayload)
+
+Create multiple new directorySyncRuns via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the directorySyncRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVDNSVerification
 
 **Type:** [DNSVerificationBulkCreatePayload!](objects#dnsverificationbulkcreatepayload)
@@ -1318,6 +1410,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVTrustcenterEntity
+
+**Type:** [TrustcenterEntityBulkCreatePayload!](objects#trustcenterentitybulkcreatepayload)
+
+Create multiple new trustcenterEntitys via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the trustcenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVTrustCenterSubprocessor
 
 **Type:** [TrustCenterSubprocessorBulkCreatePayload!](objects#trustcentersubprocessorbulkcreatepayload)
@@ -1387,6 +1502,144 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVWorkflowAssignment
+
+**Type:** [WorkflowAssignmentBulkCreatePayload!](objects#workflowassignmentbulkcreatepayload)
+
+Create multiple new workflowAssignments via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the workflowAssignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVWorkflowAssignmentTarget
+
+**Type:** [WorkflowAssignmentTargetBulkCreatePayload!](objects#workflowassignmenttargetbulkcreatepayload)
+
+Create multiple new workflowAssignmentTargets via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the workflowAssignmentTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVWorkflowDefinition
+
+**Type:** [WorkflowDefinitionBulkCreatePayload!](objects#workflowdefinitionbulkcreatepayload)
+
+Create multiple new workflowDefinitions via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the workflowDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVWorkflowEvent
+
+**Type:** [WorkflowEventBulkCreatePayload!](objects#workfloweventbulkcreatepayload)
+
+Create multiple new workflowEvents via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the workflowEvent</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVWorkflowInstance
+
+**Type:** [WorkflowInstanceBulkCreatePayload!](objects#workflowinstancebulkcreatepayload)
+
+Create multiple new workflowInstances via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the workflowInstance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVWorkflowObjectRef
+
+**Type:** [WorkflowObjectRefBulkCreatePayload!](objects#workflowobjectrefbulkcreatepayload)
+
+Create multiple new workflowObjectRefs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the workflowObjectRef</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCustomDomain
 
 **Type:** [CustomDomainBulkCreatePayload!](objects#customdomainbulkcreatepayload)
@@ -1428,6 +1681,98 @@ input<br />
 </td>
 <td>
 <p>values of the customTypeEnum</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkDirectoryAccount
+
+**Type:** [DirectoryAccountBulkCreatePayload!](objects#directoryaccountbulkcreatepayload)
+
+Create multiple new directoryAccounts
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createdirectoryaccountinput"><code>[CreateDirectoryAccountInput!]</code></a>
+</td>
+<td>
+<p>values of the directoryAccount</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkDirectoryGroup
+
+**Type:** [DirectoryGroupBulkCreatePayload!](objects#directorygroupbulkcreatepayload)
+
+Create multiple new directoryGroups
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createdirectorygroupinput"><code>[CreateDirectoryGroupInput!]</code></a>
+</td>
+<td>
+<p>values of the directoryGroup</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkDirectoryMembership
+
+**Type:** [DirectoryMembershipBulkCreatePayload!](objects#directorymembershipbulkcreatepayload)
+
+Create multiple new directoryMemberships
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createdirectorymembershipinput"><code>[CreateDirectoryMembershipInput!]</code></a>
+</td>
+<td>
+<p>values of the directoryMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkDirectorySyncRun
+
+**Type:** [DirectorySyncRunBulkCreatePayload!](objects#directorysyncrunbulkcreatepayload)
+
+Create multiple new directorySyncRuns
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createdirectorysyncruninput"><code>[CreateDirectorySyncRunInput!]</code></a>
+</td>
+<td>
+<p>values of the directorySyncRun</p>
 </td>
 </tr>
 </tbody>
@@ -2238,6 +2583,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkTrustcenterEntity
+
+**Type:** [TrustcenterEntityBulkCreatePayload!](objects#trustcenterentitybulkcreatepayload)
+
+Create multiple new trustcenterEntitys
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterentityinput"><code>[CreateTrustcenterEntityInput!]</code></a>
+</td>
+<td>
+<p>values of the trustcenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkTrustCenterSubprocessor
 
 **Type:** [TrustCenterSubprocessorBulkCreatePayload!](objects#trustcentersubprocessorbulkcreatepayload)
@@ -2302,6 +2670,144 @@ input<br />
 </td>
 <td>
 <p>values of the vulnerability</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkWorkflowAssignment
+
+**Type:** [WorkflowAssignmentBulkCreatePayload!](objects#workflowassignmentbulkcreatepayload)
+
+Create multiple new workflowAssignments
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowassignmentinput"><code>[CreateWorkflowAssignmentInput!]</code></a>
+</td>
+<td>
+<p>values of the workflowAssignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkWorkflowAssignmentTarget
+
+**Type:** [WorkflowAssignmentTargetBulkCreatePayload!](objects#workflowassignmenttargetbulkcreatepayload)
+
+Create multiple new workflowAssignmentTargets
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowassignmenttargetinput"><code>[CreateWorkflowAssignmentTargetInput!]</code></a>
+</td>
+<td>
+<p>values of the workflowAssignmentTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkWorkflowDefinition
+
+**Type:** [WorkflowDefinitionBulkCreatePayload!](objects#workflowdefinitionbulkcreatepayload)
+
+Create multiple new workflowDefinitions
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowdefinitioninput"><code>[CreateWorkflowDefinitionInput!]</code></a>
+</td>
+<td>
+<p>values of the workflowDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkWorkflowEvent
+
+**Type:** [WorkflowEventBulkCreatePayload!](objects#workfloweventbulkcreatepayload)
+
+Create multiple new workflowEvents
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkfloweventinput"><code>[CreateWorkflowEventInput!]</code></a>
+</td>
+<td>
+<p>values of the workflowEvent</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkWorkflowInstance
+
+**Type:** [WorkflowInstanceBulkCreatePayload!](objects#workflowinstancebulkcreatepayload)
+
+Create multiple new workflowInstances
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowinstanceinput"><code>[CreateWorkflowInstanceInput!]</code></a>
+</td>
+<td>
+<p>values of the workflowInstance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkWorkflowObjectRef
+
+**Type:** [WorkflowObjectRefBulkCreatePayload!](objects#workflowobjectrefbulkcreatepayload)
+
+Create multiple new workflowObjectRefs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowobjectrefinput"><code>[CreateWorkflowObjectRefInput!]</code></a>
+</td>
+<td>
+<p>values of the workflowObjectRef</p>
 </td>
 </tr>
 </tbody>
@@ -2486,6 +2992,98 @@ input<br />
 </td>
 <td>
 <p>values of the customTypeEnum</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createDirectoryAccount
+
+**Type:** [DirectoryAccountCreatePayload!](objects#directoryaccountcreatepayload)
+
+Create a new directoryAccount
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createdirectoryaccountinput"><code>CreateDirectoryAccountInput!</code></a>
+</td>
+<td>
+<p>values of the directoryAccount</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createDirectoryGroup
+
+**Type:** [DirectoryGroupCreatePayload!](objects#directorygroupcreatepayload)
+
+Create a new directoryGroup
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createdirectorygroupinput"><code>CreateDirectoryGroupInput!</code></a>
+</td>
+<td>
+<p>values of the directoryGroup</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createDirectoryMembership
+
+**Type:** [DirectoryMembershipCreatePayload!](objects#directorymembershipcreatepayload)
+
+Create a new directoryMembership
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createdirectorymembershipinput"><code>CreateDirectoryMembershipInput!</code></a>
+</td>
+<td>
+<p>values of the directoryMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createDirectorySyncRun
+
+**Type:** [DirectorySyncRunCreatePayload!](objects#directorysyncruncreatepayload)
+
+Create a new directorySyncRun
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createdirectorysyncruninput"><code>CreateDirectorySyncRunInput!</code></a>
+</td>
+<td>
+<p>values of the directorySyncRun</p>
 </td>
 </tr>
 </tbody>
@@ -3560,6 +4158,15 @@ input<br />
 <p>values of the standard</p>
 </td>
 </tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+<p>file to upload as the logo to represent the standard</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3612,7 +4219,7 @@ logoFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
 <td>
-
+<p>file to upload as the logo of the subprocessor</p>
 </td>
 </tr>
 </tbody>
@@ -3838,6 +4445,38 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createTrustcenterEntity
+
+**Type:** [TrustcenterEntityCreatePayload!](objects#trustcenterentitycreatepayload)
+
+Create a new trustcenterEntity
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterentityinput"><code>CreateTrustcenterEntityInput!</code></a>
+</td>
+<td>
+<p>values of the trustcenterEntity</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+<p>logo file for the trustcenterEntity</p>
 </td>
 </tr>
 </tbody>
@@ -4108,6 +4747,144 @@ input<br />
 </td>
 <td>
 <p>values of the vulnerability</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createWorkflowAssignment
+
+**Type:** [WorkflowAssignmentCreatePayload!](objects#workflowassignmentcreatepayload)
+
+Create a new workflowAssignment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowassignmentinput"><code>CreateWorkflowAssignmentInput!</code></a>
+</td>
+<td>
+<p>values of the workflowAssignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createWorkflowAssignmentTarget
+
+**Type:** [WorkflowAssignmentTargetCreatePayload!](objects#workflowassignmenttargetcreatepayload)
+
+Create a new workflowAssignmentTarget
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowassignmenttargetinput"><code>CreateWorkflowAssignmentTargetInput!</code></a>
+</td>
+<td>
+<p>values of the workflowAssignmentTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createWorkflowDefinition
+
+**Type:** [WorkflowDefinitionCreatePayload!](objects#workflowdefinitioncreatepayload)
+
+Create a new workflowDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowdefinitioninput"><code>CreateWorkflowDefinitionInput!</code></a>
+</td>
+<td>
+<p>values of the workflowDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createWorkflowEvent
+
+**Type:** [WorkflowEventCreatePayload!](objects#workfloweventcreatepayload)
+
+Create a new workflowEvent
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkfloweventinput"><code>CreateWorkflowEventInput!</code></a>
+</td>
+<td>
+<p>values of the workflowEvent</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createWorkflowInstance
+
+**Type:** [WorkflowInstanceCreatePayload!](objects#workflowinstancecreatepayload)
+
+Create a new workflowInstance
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowinstanceinput"><code>CreateWorkflowInstanceInput!</code></a>
+</td>
+<td>
+<p>values of the workflowInstance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createWorkflowObjectRef
+
+**Type:** [WorkflowObjectRefCreatePayload!](objects#workflowobjectrefcreatepayload)
+
+Create a new workflowObjectRef
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createworkflowobjectrefinput"><code>CreateWorkflowObjectRefInput!</code></a>
+</td>
+<td>
+<p>values of the workflowObjectRef</p>
 </td>
 </tr>
 </tbody>
@@ -5286,6 +6063,98 @@ id<br />
 </tbody>
 </table>
 
+## deleteDirectoryAccount
+
+**Type:** [DirectoryAccountDeletePayload!](objects#directoryaccountdeletepayload)
+
+Delete an existing directoryAccount
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryAccount</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteDirectoryGroup
+
+**Type:** [DirectoryGroupDeletePayload!](objects#directorygroupdeletepayload)
+
+Delete an existing directoryGroup
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryGroup</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteDirectoryMembership
+
+**Type:** [DirectoryMembershipDeletePayload!](objects#directorymembershipdeletepayload)
+
+Delete an existing directoryMembership
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteDirectorySyncRun
+
+**Type:** [DirectorySyncRunDeletePayload!](objects#directorysyncrundeletepayload)
+
+Delete an existing directorySyncRun
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directorySyncRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteDNSVerification
 
 **Type:** [DNSVerificationDeletePayload!](objects#dnsverificationdeletepayload)
@@ -6422,6 +7291,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteTrustcenterEntity
+
+**Type:** [TrustcenterEntityDeletePayload!](objects#trustcenterentitydeletepayload)
+
+Delete an existing trustcenterEntity
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustcenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteTrustCenterSetting
 
 **Type:** [TrustCenterSettingDeletePayload!](objects#trustcentersettingdeletepayload)
@@ -6559,6 +7451,150 @@ id<br />
 </tr>
 </tbody>
 </table>
+
+## deleteWorkflowAssignment
+
+**Type:** [WorkflowAssignmentDeletePayload!](objects#workflowassignmentdeletepayload)
+
+Delete an existing workflowAssignment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowAssignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteWorkflowAssignmentTarget
+
+**Type:** [WorkflowAssignmentTargetDeletePayload!](objects#workflowassignmenttargetdeletepayload)
+
+Delete an existing workflowAssignmentTarget
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowAssignmentTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteWorkflowDefinition
+
+**Type:** [WorkflowDefinitionDeletePayload!](objects#workflowdefinitiondeletepayload)
+
+Delete an existing workflowDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteWorkflowEvent
+
+**Type:** [WorkflowEventDeletePayload!](objects#workfloweventdeletepayload)
+
+Delete an existing workflowEvent
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowEvent</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteWorkflowInstance
+
+**Type:** [WorkflowInstanceDeletePayload!](objects#workflowinstancedeletepayload)
+
+Delete an existing workflowInstance
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowInstance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteWorkflowObjectRef
+
+**Type:** [WorkflowObjectRefDeletePayload!](objects#workflowobjectrefdeletepayload)
+
+Delete an existing workflowObjectRef
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowObjectRef</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## publishTrustCenterSetting
+
+**Type:** [TrustCenterSettingUpdatePayload!](objects#trustcentersettingupdatepayload)
+
+Publish changes from preview to live environment
 
 ## sendTrustCenterNDAEmail
 
@@ -6720,38 +7756,6 @@ input<br />
 </td>
 <td>
 <p>New values for the assessment</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## updateAssessmentResponse
-
-**Type:** [AssessmentResponseUpdatePayload!](objects#assessmentresponseupdatepayload)
-
-Update an existing assessmentResponse
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the assessmentResponse</p>
-</td>
-</tr>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#updateassessmentresponseinput"><code>UpdateAssessmentResponseInput!</code></a>
-</td>
-<td>
-<p>New values for the assessmentResponse</p>
 </td>
 </tr>
 </tbody>
@@ -7077,6 +8081,38 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkTrustCenterDoc
+
+**Type:** [TrustCenterDocBulkUpdatePayload!](objects#trustcenterdocbulkupdatepayload)
+
+Update multiple existing trust center docs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the trust center docs to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcenterdocinput"><code>UpdateTrustCenterDocInput!</code></a>
+</td>
+<td>
+<p>values to update the trust center docs with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateContact
 
 **Type:** [ContactUpdatePayload!](objects#contactupdatepayload)
@@ -7305,6 +8341,134 @@ input<br />
 </td>
 <td>
 <p>New values for the customTypeEnum</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateDirectoryAccount
+
+**Type:** [DirectoryAccountUpdatePayload!](objects#directoryaccountupdatepayload)
+
+Update an existing directoryAccount
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryAccount</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatedirectoryaccountinput"><code>UpdateDirectoryAccountInput!</code></a>
+</td>
+<td>
+<p>New values for the directoryAccount</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateDirectoryGroup
+
+**Type:** [DirectoryGroupUpdatePayload!](objects#directorygroupupdatepayload)
+
+Update an existing directoryGroup
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryGroup</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatedirectorygroupinput"><code>UpdateDirectoryGroupInput!</code></a>
+</td>
+<td>
+<p>New values for the directoryGroup</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateDirectoryMembership
+
+**Type:** [DirectoryMembershipUpdatePayload!](objects#directorymembershipupdatepayload)
+
+Update an existing directoryMembership
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directoryMembership</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatedirectorymembershipinput"><code>UpdateDirectoryMembershipInput!</code></a>
+</td>
+<td>
+<p>New values for the directoryMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateDirectorySyncRun
+
+**Type:** [DirectorySyncRunUpdatePayload!](objects#directorysyncrunupdatepayload)
+
+Update an existing directorySyncRun
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the directorySyncRun</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatedirectorysyncruninput"><code>UpdateDirectorySyncRunInput!</code></a>
+</td>
+<td>
+<p>New values for the directorySyncRun</p>
 </td>
 </tr>
 </tbody>
@@ -8604,6 +9768,15 @@ input<br />
 <p>New values for the standard</p>
 </td>
 </tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+<p>file to upload as the logo to represent the standard</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8715,7 +9888,7 @@ logoFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
 <td>
-
+<p>file to upload as the logo of the subprocessor</p>
 </td>
 </tr>
 </tbody>
@@ -9036,6 +10209,47 @@ watermarkedTrustCenterDocFile<br />
 </tbody>
 </table>
 
+## updateTrustcenterEntity
+
+**Type:** [TrustcenterEntityUpdatePayload!](objects#trustcenterentityupdatepayload)
+
+Update an existing trustcenterEntity
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustcenterEntity</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcenterentityinput"><code>UpdateTrustcenterEntityInput!</code></a>
+</td>
+<td>
+<p>New values for the trustcenterEntity</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+<p>logo file for the trustcenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateTrustCenterNDA
 
 **Type:** [TrustCenterNDAUpdatePayload!](objects#trustcenterndaupdatepayload)
@@ -9109,11 +10323,52 @@ noteFiles<br />
 </tbody>
 </table>
 
+## updateTrustCenterPreviewSetting
+
+**Type:** [TrustCenterSettingUpdatePayload!](objects#trustcentersettingupdatepayload)
+
+Update an existing trustCenterSetting preview settings
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcentersettinginput"><code>UpdateTrustCenterSettingInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenterSetting</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+faviconFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateTrustCenterSetting
 
 **Type:** [TrustCenterSettingUpdatePayload!](objects#trustcentersettingupdatepayload)
 
-Update an existing trustCenterSetting
+Update an existing trustCenterSetting by targeting the ID
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -9332,6 +10587,198 @@ input<br />
 </td>
 <td>
 <p>New values for the vulnerability</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateWorkflowAssignment
+
+**Type:** [WorkflowAssignmentUpdatePayload!](objects#workflowassignmentupdatepayload)
+
+Update an existing workflowAssignment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowAssignment</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateworkflowassignmentinput"><code>UpdateWorkflowAssignmentInput!</code></a>
+</td>
+<td>
+<p>New values for the workflowAssignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateWorkflowAssignmentTarget
+
+**Type:** [WorkflowAssignmentTargetUpdatePayload!](objects#workflowassignmenttargetupdatepayload)
+
+Update an existing workflowAssignmentTarget
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowAssignmentTarget</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateworkflowassignmenttargetinput"><code>UpdateWorkflowAssignmentTargetInput!</code></a>
+</td>
+<td>
+<p>New values for the workflowAssignmentTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateWorkflowDefinition
+
+**Type:** [WorkflowDefinitionUpdatePayload!](objects#workflowdefinitionupdatepayload)
+
+Update an existing workflowDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowDefinition</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateworkflowdefinitioninput"><code>UpdateWorkflowDefinitionInput!</code></a>
+</td>
+<td>
+<p>New values for the workflowDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateWorkflowEvent
+
+**Type:** [WorkflowEventUpdatePayload!](objects#workfloweventupdatepayload)
+
+Update an existing workflowEvent
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowEvent</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateworkfloweventinput"><code>UpdateWorkflowEventInput!</code></a>
+</td>
+<td>
+<p>New values for the workflowEvent</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateWorkflowInstance
+
+**Type:** [WorkflowInstanceUpdatePayload!](objects#workflowinstanceupdatepayload)
+
+Update an existing workflowInstance
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowInstance</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateworkflowinstanceinput"><code>UpdateWorkflowInstanceInput!</code></a>
+</td>
+<td>
+<p>New values for the workflowInstance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateWorkflowObjectRef
+
+**Type:** [WorkflowObjectRefUpdatePayload!](objects#workflowobjectrefupdatepayload)
+
+Update an existing workflowObjectRef
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflowObjectRef</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateworkflowobjectrefinput"><code>UpdateWorkflowObjectRefInput!</code></a>
+</td>
+<td>
+<p>New values for the workflowObjectRef</p>
 </td>
 </tr>
 </tbody>

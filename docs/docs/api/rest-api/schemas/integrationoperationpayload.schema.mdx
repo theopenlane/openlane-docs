@@ -1,0 +1,32 @@
+---
+id: integrationoperationpayload
+title: "IntegrationOperationPayload"
+description: ""
+sidebar_label: "IntegrationOperationPayload"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"Provider":"gcp_scc","payload":{"config":{},"force":true,"operation":"string"}}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"IntegrationOperationPayload"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"properties":{"Provider":{"description":"Integration provider identifier","example":"gcp_scc","type":"string"},"payload":{"properties":{"config":{"additionalProperties":{},"type":"object"},"force":{"type":"boolean"},"operation":{"type":"string"}},"type":"object"}},"type":"object","title":"IntegrationOperationPayload"}}
+  schemaType={"response"}
+>
+
+</Schema>

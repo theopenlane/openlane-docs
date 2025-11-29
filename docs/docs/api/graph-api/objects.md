@@ -2250,19 +2250,37 @@ assessmentType<br />
 <tr>
 <td>
 templateID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the template id associated with the assessment</p>
+<p>the template id associated with this assessment. You can either provide this alone or provide both the jsonconfig and uischema</p>
 </td>
 </tr>
 <tr>
 <td>
-assessmentOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
+jsonconfig<br />
+<a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
-<p>the id of the group that owns the assessment</p>
+<p>the jsonschema object of the questionnaire. If not provided it will be inherited from the template.</p>
+</td>
+</tr>
+<tr>
+<td>
+uischema<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>the uischema for the template to render in the UI. If not provided, it will be inherited from the template</p>
+</td>
+</tr>
+<tr>
+<td>
+responseDueDuration<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>the duration in seconds that the user has to complete the assessment response, defaults to 7 days</p>
 </td>
 </tr>
 <tr>
@@ -2493,7 +2511,7 @@ where<br />
 <tr>
 <td>
 template<br />
-<a href="objects#template"><code>Template!</code></a>
+<a href="objects#template"><code>Template</code></a>
 </td>
 <td>
 
@@ -2809,19 +2827,37 @@ assessmentType<br />
 <tr>
 <td>
 templateID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>the template id associated with the assessment</p>
+<p>the template id associated with this assessment. You can either provide this alone or provide both the jsonconfig and uischema</p>
 </td>
 </tr>
 <tr>
 <td>
-assessmentOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
+jsonconfig<br />
+<a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
-<p>the id of the group that owns the assessment</p>
+<p>the jsonschema object of the questionnaire. If not provided it will be inherited from the template.</p>
+</td>
+</tr>
+<tr>
+<td>
+uischema<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>the uischema for the template to render in the UI. If not provided, it will be inherited from the template</p>
+</td>
+</tr>
+<tr>
+<td>
+responseDueDuration<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>the duration in seconds that the user has to complete the assessment response, defaults to 7 days</p>
 </td>
 </tr>
 </tbody>
@@ -3032,7 +3068,7 @@ dueDate<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
-<p>when the assessment is due</p>
+<p>when the assessment response is due</p>
 </td>
 </tr>
 <tr>
@@ -3055,15 +3091,6 @@ owner<br />
 </tr>
 <tr>
 <td>
-document<br />
-<a href="objects#documentdata"><code>DocumentData</code></a>
-</td>
-<td>
-<p>the document containing the user&#39;s response data</p>
-</td>
-</tr>
-<tr>
-<td>
 assessment<br />
 <a href="objects#assessment"><code>Assessment!</code></a>
 </td>
@@ -3071,25 +3098,13 @@ assessment<br />
 
 </td>
 </tr>
-</tbody>
-</table>
-
-## AssessmentResponseBulkCreatePayload
-
-Return response for createBulkAssessmentResponse mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
 <tr>
 <td>
-assessmentResponses<br />
-<a href="objects#assessmentresponse"><code>[AssessmentResponse!]</code></a>
+document<br />
+<a href="objects#documentdata"><code>DocumentData</code></a>
 </td>
 <td>
-<p>Created assessmentResponses</p>
+
 </td>
 </tr>
 </tbody>
@@ -3369,7 +3384,7 @@ dueDate<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
-<p>when the assessment is due</p>
+<p>when the assessment response is due</p>
 </td>
 </tr>
 <tr>
@@ -3448,27 +3463,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AssessmentResponseUpdatePayload
-
-Return response for updateAssessmentResponse mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-assessmentResponse<br />
-<a href="objects#assessmentresponse"><code>AssessmentResponse!</code></a>
-</td>
-<td>
-<p>Updated assessmentResponse</p>
 </td>
 </tr>
 </tbody>
@@ -7120,6 +7114,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for ScheduledJobs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -11267,6 +11333,15 @@ color<br />
 </tr>
 <tr>
 <td>
+icon<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The icon of the custom type enum in SVG format</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -12078,6 +12153,3340 @@ customTypeEnum<br />
 </tbody>
 </table>
 
+## DirectoryAccount
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>integration that owns this directory account</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>stable identifier from the directory system</p>
+</td>
+</tr>
+<tr>
+<td>
+secondaryKey<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>optional secondary identifier such as Azure immutable ID</p>
+</td>
+</tr>
+<tr>
+<td>
+canonicalEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>lower-cased primary email address, if present</p>
+</td>
+</tr>
+<tr>
+<td>
+displayName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>provider supplied display name</p>
+</td>
+</tr>
+<tr>
+<td>
+givenName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>first name reported by the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+familyName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>last name reported by the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+jobTitle<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>title captured at sync time</p>
+</td>
+</tr>
+<tr>
+<td>
+department<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>department captured at sync time</p>
+</td>
+</tr>
+<tr>
+<td>
+organizationUnit<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>organizational unit or OU path the account lives under</p>
+</td>
+</tr>
+<tr>
+<td>
+accountType<br />
+<a href="enums#directoryaccountdirectoryaccounttype"><code>DirectoryAccountDirectoryAccountType</code></a>
+</td>
+<td>
+<p>type of principal represented in the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#directoryaccountdirectoryaccountstatus"><code>DirectoryAccountDirectoryAccountStatus!</code></a>
+</td>
+<td>
+<p>lifecycle status returned by the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+mfaState<br />
+<a href="enums#directoryaccountdirectoryaccountmfastate"><code>DirectoryAccountDirectoryAccountMFAState!</code></a>
+</td>
+<td>
+<p>multi-factor authentication state reported by the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenIP<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>last IP address observed by the provider, if any</p>
+</td>
+</tr>
+<tr>
+<td>
+lastLoginAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>timestamp of the most recent login reported by the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>time when this snapshot was recorded</p>
+</td>
+</tr>
+<tr>
+<td>
+profileHash<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>hash of the normalized profile payload for change detection</p>
+</td>
+</tr>
+<tr>
+<td>
+profile<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+rawProfileFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>object storage file identifier that holds the raw upstream payload</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceVersion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cursor or ETag supplied by the source system for auditing</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integration<br />
+<a href="objects#integration"><code>Integration!</code></a>
+</td>
+<td>
+<p>integration that owns this directory account</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRun<br />
+<a href="objects#directorysyncrun"><code>DirectorySyncRun!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+groups<br />
+<a href="objects#directorygroupconnection"><code>DirectoryGroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorygrouporder"><code>[DirectoryGroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorygroupwhereinput"><code>DirectoryGroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+memberships<br />
+<a href="objects#directorymembershipconnection"><code>DirectoryMembershipConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorymembershiporder"><code>[DirectoryMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorymembershipwhereinput"><code>DirectoryMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountBulkCreatePayload
+
+Return response for createBulkDirectoryAccount mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryAccounts<br />
+<a href="objects#directoryaccount"><code>[DirectoryAccount!]</code></a>
+</td>
+<td>
+<p>Created directoryAccounts</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#directoryaccountedge"><code>[DirectoryAccountEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountCreatePayload
+
+Return response for createDirectoryAccount mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryAccount<br />
+<a href="objects#directoryaccount"><code>DirectoryAccount!</code></a>
+</td>
+<td>
+<p>Created directoryAccount</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountDeletePayload
+
+Return response for deleteDirectoryAccount mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted directoryAccount ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#directoryaccount"><code>DirectoryAccount</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#directoryaccounthistoryoptype"><code>DirectoryAccountHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>integration that owns this directory account</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>stable identifier from the directory system</p>
+</td>
+</tr>
+<tr>
+<td>
+secondaryKey<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>optional secondary identifier such as Azure immutable ID</p>
+</td>
+</tr>
+<tr>
+<td>
+canonicalEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>lower-cased primary email address, if present</p>
+</td>
+</tr>
+<tr>
+<td>
+displayName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>provider supplied display name</p>
+</td>
+</tr>
+<tr>
+<td>
+givenName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>first name reported by the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+familyName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>last name reported by the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+jobTitle<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>title captured at sync time</p>
+</td>
+</tr>
+<tr>
+<td>
+department<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>department captured at sync time</p>
+</td>
+</tr>
+<tr>
+<td>
+organizationUnit<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>organizational unit or OU path the account lives under</p>
+</td>
+</tr>
+<tr>
+<td>
+accountType<br />
+<a href="enums#directoryaccounthistorydirectoryaccounttype"><code>DirectoryAccountHistoryDirectoryAccountType</code></a>
+</td>
+<td>
+<p>type of principal represented in the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#directoryaccounthistorydirectoryaccountstatus"><code>DirectoryAccountHistoryDirectoryAccountStatus!</code></a>
+</td>
+<td>
+<p>lifecycle status returned by the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+mfaState<br />
+<a href="enums#directoryaccounthistorydirectoryaccountmfastate"><code>DirectoryAccountHistoryDirectoryAccountMFAState!</code></a>
+</td>
+<td>
+<p>multi-factor authentication state reported by the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenIP<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>last IP address observed by the provider, if any</p>
+</td>
+</tr>
+<tr>
+<td>
+lastLoginAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>timestamp of the most recent login reported by the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>time when this snapshot was recorded</p>
+</td>
+</tr>
+<tr>
+<td>
+profileHash<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>hash of the normalized profile payload for change detection</p>
+</td>
+</tr>
+<tr>
+<td>
+profile<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+rawProfileFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>object storage file identifier that holds the raw upstream payload</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceVersion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cursor or ETag supplied by the source system for auditing</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#directoryaccounthistoryedge"><code>[DirectoryAccountHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#directoryaccounthistory"><code>DirectoryAccountHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryAccountUpdatePayload
+
+Return response for updateDirectoryAccount mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryAccount<br />
+<a href="objects#directoryaccount"><code>DirectoryAccount!</code></a>
+</td>
+<td>
+<p>Updated directoryAccount</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroup
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>integration that owns this directory group</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>stable identifier from the directory system</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>primary group email address, when applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+displayName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory supplied display name</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>free-form description captured at sync time</p>
+</td>
+</tr>
+<tr>
+<td>
+classification<br />
+<a href="enums#directorygroupdirectorygroupclassification"><code>DirectoryGroupDirectoryGroupClassification!</code></a>
+</td>
+<td>
+<p>provider classification such as security, distribution, or dynamic</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#directorygroupdirectorygroupstatus"><code>DirectoryGroupDirectoryGroupStatus!</code></a>
+</td>
+<td>
+<p>lifecycle status reported by the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+externalSharingAllowed<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>true when directory settings allow sharing outside the tenant</p>
+</td>
+</tr>
+<tr>
+<td>
+memberCount<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>member count reported by the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>time when this snapshot was recorded</p>
+</td>
+</tr>
+<tr>
+<td>
+profileHash<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>hash of the normalized payload for diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+profile<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+rawProfileFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>object storage file identifier containing the raw upstream payload</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceVersion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cursor or ETag supplied by the source system for auditing</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integration<br />
+<a href="objects#integration"><code>Integration!</code></a>
+</td>
+<td>
+<p>integration that owns this directory group</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRun<br />
+<a href="objects#directorysyncrun"><code>DirectorySyncRun!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+accounts<br />
+<a href="objects#directoryaccountconnection"><code>DirectoryAccountConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccountorder"><code>[DirectoryAccountOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>DirectoryAccountWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+members<br />
+<a href="objects#directorymembershipconnection"><code>DirectoryMembershipConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorymembershiporder"><code>[DirectoryMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorymembershipwhereinput"><code>DirectoryMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupBulkCreatePayload
+
+Return response for createBulkDirectoryGroup mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryGroups<br />
+<a href="objects#directorygroup"><code>[DirectoryGroup!]</code></a>
+</td>
+<td>
+<p>Created directoryGroups</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#directorygroupedge"><code>[DirectoryGroupEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupCreatePayload
+
+Return response for createDirectoryGroup mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryGroup<br />
+<a href="objects#directorygroup"><code>DirectoryGroup!</code></a>
+</td>
+<td>
+<p>Created directoryGroup</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupDeletePayload
+
+Return response for deleteDirectoryGroup mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted directoryGroup ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#directorygroup"><code>DirectoryGroup</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#directorygrouphistoryoptype"><code>DirectoryGroupHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>integration that owns this directory group</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>stable identifier from the directory system</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>primary group email address, when applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+displayName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory supplied display name</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>free-form description captured at sync time</p>
+</td>
+</tr>
+<tr>
+<td>
+classification<br />
+<a href="enums#directorygrouphistorydirectorygroupclassification"><code>DirectoryGroupHistoryDirectoryGroupClassification!</code></a>
+</td>
+<td>
+<p>provider classification such as security, distribution, or dynamic</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#directorygrouphistorydirectorygroupstatus"><code>DirectoryGroupHistoryDirectoryGroupStatus!</code></a>
+</td>
+<td>
+<p>lifecycle status reported by the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+externalSharingAllowed<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>true when directory settings allow sharing outside the tenant</p>
+</td>
+</tr>
+<tr>
+<td>
+memberCount<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>member count reported by the directory</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>time when this snapshot was recorded</p>
+</td>
+</tr>
+<tr>
+<td>
+profileHash<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>hash of the normalized payload for diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+profile<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+rawProfileFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>object storage file identifier containing the raw upstream payload</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceVersion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cursor or ETag supplied by the source system for auditing</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#directorygrouphistoryedge"><code>[DirectoryGroupHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#directorygrouphistory"><code>DirectoryGroupHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryGroupUpdatePayload
+
+Return response for updateDirectoryGroup mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryGroup<br />
+<a href="objects#directorygroup"><code>DirectoryGroup!</code></a>
+</td>
+<td>
+<p>Updated directoryGroup</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembership
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>integration that owns this directory membership</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryAccountID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>directory account participating in this membership</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryGroupID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>directory group associated with this membership</p>
+</td>
+</tr>
+<tr>
+<td>
+role<br />
+<a href="enums#directorymembershipdirectorymembershiprole"><code>DirectoryMembershipDirectoryMembershipRole</code></a>
+</td>
+<td>
+<p>membership role reported by the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+source<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>mechanism used to populate the membership (api, scim, csv, etc)</p>
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>first time the membership was detected</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>most recent time the membership was detected</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>time when this record was created</p>
+</td>
+</tr>
+<tr>
+<td>
+lastConfirmedRunID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>sync run identifier that most recently confirmed this membership</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>raw metadata associated with this membership from the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integration<br />
+<a href="objects#integration"><code>Integration!</code></a>
+</td>
+<td>
+<p>integration that owns this directory membership</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRun<br />
+<a href="objects#directorysyncrun"><code>DirectorySyncRun!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryAccount<br />
+<a href="objects#directoryaccount"><code>DirectoryAccount!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryGroup<br />
+<a href="objects#directorygroup"><code>DirectoryGroup!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+events<br />
+<a href="objects#eventconnection"><code>EventConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#eventorder"><code>[EventOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Events returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#eventwhereinput"><code>EventWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Events returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipBulkCreatePayload
+
+Return response for createBulkDirectoryMembership mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryMemberships<br />
+<a href="objects#directorymembership"><code>[DirectoryMembership!]</code></a>
+</td>
+<td>
+<p>Created directoryMemberships</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#directorymembershipedge"><code>[DirectoryMembershipEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipCreatePayload
+
+Return response for createDirectoryMembership mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryMembership<br />
+<a href="objects#directorymembership"><code>DirectoryMembership!</code></a>
+</td>
+<td>
+<p>Created directoryMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipDeletePayload
+
+Return response for deleteDirectoryMembership mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted directoryMembership ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#directorymembership"><code>DirectoryMembership</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#directorymembershiphistoryoptype"><code>DirectoryMembershipHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>integration that owns this directory membership</p>
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryAccountID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>directory account participating in this membership</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryGroupID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>directory group associated with this membership</p>
+</td>
+</tr>
+<tr>
+<td>
+role<br />
+<a href="enums#directorymembershiphistorydirectorymembershiprole"><code>DirectoryMembershipHistoryDirectoryMembershipRole</code></a>
+</td>
+<td>
+<p>membership role reported by the provider</p>
+</td>
+</tr>
+<tr>
+<td>
+source<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>mechanism used to populate the membership (api, scim, csv, etc)</p>
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>first time the membership was detected</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>most recent time the membership was detected</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>time when this record was created</p>
+</td>
+</tr>
+<tr>
+<td>
+lastConfirmedRunID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>sync run identifier that most recently confirmed this membership</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>raw metadata associated with this membership from the provider</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#directorymembershiphistoryedge"><code>[DirectoryMembershipHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#directorymembershiphistory"><code>DirectoryMembershipHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectoryMembershipUpdatePayload
+
+Return response for updateDirectoryMembership mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directoryMembership<br />
+<a href="objects#directorymembership"><code>DirectoryMembership!</code></a>
+</td>
+<td>
+<p>Updated directoryMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRun
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>integration this sync run executed for</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#directorysyncrundirectorysyncrunstatus"><code>DirectorySyncRunDirectorySyncRunStatus!</code></a>
+</td>
+<td>
+<p>current state of the sync run</p>
+</td>
+</tr>
+<tr>
+<td>
+startedAt<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+<p>time the sync started</p>
+</td>
+</tr>
+<tr>
+<td>
+completedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time the sync finished</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceCursor<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cursor or checkpoint returned by the provider for the next run</p>
+</td>
+</tr>
+<tr>
+<td>
+fullCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>total records processed during this run</p>
+</td>
+</tr>
+<tr>
+<td>
+deltaCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>number of records that changed compared to the prior run</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>serialized error information when the run failed</p>
+</td>
+</tr>
+<tr>
+<td>
+rawManifestFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>object storage file identifier for the manifest captured during the run</p>
+</td>
+</tr>
+<tr>
+<td>
+stats<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional provider-specific stats for the run</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integration<br />
+<a href="objects#integration"><code>Integration!</code></a>
+</td>
+<td>
+<p>integration that executed this sync run</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryAccounts<br />
+<a href="objects#directoryaccountconnection"><code>DirectoryAccountConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccountorder"><code>[DirectoryAccountOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>DirectoryAccountWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryGroups<br />
+<a href="objects#directorygroupconnection"><code>DirectoryGroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorygrouporder"><code>[DirectoryGroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorygroupwhereinput"><code>DirectoryGroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryMemberships<br />
+<a href="objects#directorymembershipconnection"><code>DirectoryMembershipConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorymembershiporder"><code>[DirectoryMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorymembershipwhereinput"><code>DirectoryMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRunBulkCreatePayload
+
+Return response for createBulkDirectorySyncRun mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directorySyncRuns<br />
+<a href="objects#directorysyncrun"><code>[DirectorySyncRun!]</code></a>
+</td>
+<td>
+<p>Created directorySyncRuns</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRunConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#directorysyncrunedge"><code>[DirectorySyncRunEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRunCreatePayload
+
+Return response for createDirectorySyncRun mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directorySyncRun<br />
+<a href="objects#directorysyncrun"><code>DirectorySyncRun!</code></a>
+</td>
+<td>
+<p>Created directorySyncRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRunDeletePayload
+
+Return response for deleteDirectorySyncRun mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted directorySyncRun ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRunEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#directorysyncrun"><code>DirectorySyncRun</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DirectorySyncRunUpdatePayload
+
+Return response for updateDirectorySyncRun mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+directorySyncRun<br />
+<a href="objects#directorysyncrun"><code>DirectorySyncRun!</code></a>
+</td>
+<td>
+<p>Updated directorySyncRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## DNSVerification
 
 
@@ -12828,7 +16237,7 @@ ownerID<br />
 <tr>
 <td>
 templateID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the template id of the document</p>
@@ -12855,7 +16264,7 @@ owner<br />
 <tr>
 <td>
 template<br />
-<a href="objects#template"><code>Template!</code></a>
+<a href="objects#template"><code>Template</code></a>
 </td>
 <td>
 
@@ -13267,7 +16676,7 @@ ownerID<br />
 <tr>
 <td>
 templateID<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the template id of the document</p>
@@ -18165,15 +21574,6 @@ lastAccessedAt<br />
 </tr>
 <tr>
 <td>
-user<br />
-<a href="objects#user"><code>[User!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 organization<br />
 <a href="objects#organization"><code>[Organization!]</code></a>
 </td>
@@ -18266,15 +21666,6 @@ contact<br />
 <td>
 entity<br />
 <a href="objects#entity"><code>[Entity!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userSetting<br />
-<a href="objects#usersetting"><code>[UserSetting!]</code></a>
 </td>
 <td>
 
@@ -18401,15 +21792,6 @@ where<br />
 <td>
 trustCenterSetting<br />
 <a href="objects#trustcentersetting"><code>[TrustCenterSetting!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subprocessor<br />
-<a href="objects#subprocessor"><code>[Subprocessor!]</code></a>
 </td>
 <td>
 
@@ -18552,6 +21934,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Hushes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustcenterEntities<br />
+<a href="objects#trustcenterentityconnection"><code>TrustcenterEntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterentityorder"><code>[TrustcenterEntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustcenterEntities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterentitywhereinput"><code>TrustcenterEntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustcenterEntities returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -20750,6 +24204,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Files returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -28134,6 +31660,294 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+directoryAccounts<br />
+<a href="objects#directoryaccountconnection"><code>DirectoryAccountConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccountorder"><code>[DirectoryAccountOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>DirectoryAccountWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryGroups<br />
+<a href="objects#directorygroupconnection"><code>DirectoryGroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorygrouporder"><code>[DirectoryGroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorygroupwhereinput"><code>DirectoryGroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryMemberships<br />
+<a href="objects#directorymembershipconnection"><code>DirectoryMembershipConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorymembershiporder"><code>[DirectoryMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorymembershipwhereinput"><code>DirectoryMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRuns<br />
+<a href="objects#directorysyncrunconnection"><code>DirectorySyncRunConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorysyncrunorder"><code>[DirectorySyncRunOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectorySyncRuns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorysyncrunwhereinput"><code>DirectorySyncRunWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectorySyncRuns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -29679,6 +33493,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -35824,6 +39710,175 @@ cursor<br />
 </tbody>
 </table>
 
+## Notification
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+userID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user this notification is for</p>
+</td>
+</tr>
+<tr>
+<td>
+notificationType<br />
+<a href="enums#notificationnotificationtype"><code>NotificationNotificationType!</code></a>
+</td>
+<td>
+<p>the type of notification - organization or user</p>
+</td>
+</tr>
+<tr>
+<td>
+objectType<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the event type this notification is related to (e.g., task.created, control.updated)</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the title of the notification</p>
+</td>
+</tr>
+<tr>
+<td>
+body<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the body text of the notification</p>
+</td>
+</tr>
+<tr>
+<td>
+data<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>structured payload containing IDs, links, and other notification data</p>
+</td>
+</tr>
+<tr>
+<td>
+readAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time the notification was read</p>
+</td>
+</tr>
+<tr>
+<td>
+channels<br />
+<a href="scalars#channel"><code>[Channel!]</code></a>
+</td>
+<td>
+<p>the channels this notification should be sent to (IN_APP, SLACK, EMAIL)</p>
+</td>
+</tr>
+<tr>
+<td>
+topic<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the topic of the notification</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Onboarding
 
 
@@ -37020,6 +41075,222 @@ where<br />
 <tr>
 <td>
 templateCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterSubprocessorCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
@@ -41006,6 +45277,726 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowDefinitions<br />
+<a href="objects#workflowdefinitionconnection"><code>WorkflowDefinitionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowdefinitionorder"><code>[WorkflowDefinitionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowDefinitions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowdefinitionwhereinput"><code>WorkflowDefinitionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowDefinitions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowInstances<br />
+<a href="objects#workflowinstanceconnection"><code>WorkflowInstanceConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowinstanceorder"><code>[WorkflowInstanceOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowInstances returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowinstancewhereinput"><code>WorkflowInstanceWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowInstances returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowEvents<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowEvents returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowEvents returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowAssignments<br />
+<a href="objects#workflowassignmentconnection"><code>WorkflowAssignmentConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmentorder"><code>[WorkflowAssignmentOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowAssignments returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmentwhereinput"><code>WorkflowAssignmentWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowAssignments returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowAssignmentTargets<br />
+<a href="objects#workflowassignmenttargetconnection"><code>WorkflowAssignmentTargetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmenttargetorder"><code>[WorkflowAssignmentTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowAssignmentTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmenttargetwhereinput"><code>WorkflowAssignmentTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowAssignmentTargets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryAccounts<br />
+<a href="objects#directoryaccountconnection"><code>DirectoryAccountConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccountorder"><code>[DirectoryAccountOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>DirectoryAccountWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryGroups<br />
+<a href="objects#directorygroupconnection"><code>DirectoryGroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorygrouporder"><code>[DirectoryGroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorygroupwhereinput"><code>DirectoryGroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryMemberships<br />
+<a href="objects#directorymembershipconnection"><code>DirectoryMembershipConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorymembershiporder"><code>[DirectoryMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorymembershipwhereinput"><code>DirectoryMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRuns<br />
+<a href="objects#directorysyncrunconnection"><code>DirectorySyncRunConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorysyncrunorder"><code>[DirectorySyncRunOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectorySyncRuns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorysyncrunwhereinput"><code>DirectorySyncRunWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectorySyncRuns returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -56017,15 +61008,6 @@ totalCount<br />
 </tr>
 <tr>
 <td>
-apiTokens<br />
-<a href="objects#apitokenconnection"><code>APITokenConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 actionPlans<br />
 <a href="objects#actionplanconnection"><code>ActionPlanConnection</code></a>
 </td>
@@ -56080,26 +61062,8 @@ controls<br />
 </tr>
 <tr>
 <td>
-controlImplementations<br />
-<a href="objects#controlimplementationconnection"><code>ControlImplementationConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 controlObjectives<br />
 <a href="objects#controlobjectiveconnection"><code>ControlObjectiveConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-customDomains<br />
-<a href="objects#customdomainconnection"><code>CustomDomainConnection</code></a>
 </td>
 <td>
 
@@ -56116,24 +61080,6 @@ customTypeEnums<br />
 </tr>
 <tr>
 <td>
-dnsVerifications<br />
-<a href="objects#dnsverificationconnection"><code>DNSVerificationConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-documentData<br />
-<a href="objects#documentdataconnection"><code>DocumentDataConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 entities<br />
 <a href="objects#entityconnection"><code>EntityConnection</code></a>
 </td>
@@ -56143,35 +61089,8 @@ entities<br />
 </tr>
 <tr>
 <td>
-entityTypes<br />
-<a href="objects#entitytypeconnection"><code>EntityTypeConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-events<br />
-<a href="objects#eventconnection"><code>EventConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 evidences<br />
 <a href="objects#evidenceconnection"><code>EvidenceConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-files<br />
-<a href="objects#fileconnection"><code>FileConnection</code></a>
 </td>
 <td>
 
@@ -56190,15 +61109,6 @@ findings<br />
 <td>
 groups<br />
 <a href="objects#groupconnection"><code>GroupConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-integrations<br />
-<a href="objects#integrationconnection"><code>IntegrationConnection</code></a>
 </td>
 <td>
 
@@ -56233,44 +61143,8 @@ jobRunners<br />
 </tr>
 <tr>
 <td>
-jobRunnerRegistrationTokens<br />
-<a href="objects#jobrunnerregistrationtokenconnection"><code>JobRunnerRegistrationTokenConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-jobRunnerTokens<br />
-<a href="objects#jobrunnertokenconnection"><code>JobRunnerTokenConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 jobTemplates<br />
 <a href="objects#jobtemplateconnection"><code>JobTemplateConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappableDomains<br />
-<a href="objects#mappabledomainconnection"><code>MappableDomainConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-mappedControls<br />
-<a href="objects#mappedcontrolconnection"><code>MappedControlConnection</code></a>
 </td>
 <td>
 
@@ -56287,35 +61161,8 @@ narratives<br />
 </tr>
 <tr>
 <td>
-orgSubscriptions<br />
-<a href="objects#orgsubscriptionconnection"><code>OrgSubscriptionConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 organizations<br />
 <a href="objects#organizationconnection"><code>OrganizationConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-organizationSettings<br />
-<a href="objects#organizationsettingconnection"><code>OrganizationSettingConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-personalAccessTokens<br />
-<a href="objects#personalaccesstokenconnection"><code>PersonalAccessTokenConnection</code></a>
 </td>
 <td>
 
@@ -56440,44 +61287,8 @@ templates<br />
 </tr>
 <tr>
 <td>
-trustCenters<br />
-<a href="objects#trustcenterconnection"><code>TrustCenterConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-trustCenterCompliances<br />
-<a href="objects#trustcentercomplianceconnection"><code>TrustCenterComplianceConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-trustCenterDocs<br />
-<a href="objects#trustcenterdocconnection"><code>TrustCenterDocConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-users<br />
-<a href="objects#userconnection"><code>UserConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userSettings<br />
-<a href="objects#usersettingconnection"><code>UserSettingConnection</code></a>
+trustcenterEntities<br />
+<a href="objects#trustcenterentityconnection"><code>TrustcenterEntityConnection</code></a>
 </td>
 <td>
 
@@ -56487,15 +61298,6 @@ userSettings<br />
 <td>
 vulnerabilities<br />
 <a href="objects#vulnerabilityconnection"><code>VulnerabilityConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-webauthns<br />
-<a href="objects#webauthnconnection"><code>WebauthnConnection</code></a>
 </td>
 <td>
 
@@ -56795,6 +61597,15 @@ version<br />
 </tr>
 <tr>
 <td>
+logoFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>URL of the logo</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -56943,6 +61754,87 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocs<br />
+<a href="objects#trustcenterdocconnection"><code>TrustCenterDocConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterdocorder"><code>[TrustCenterDocOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterdocwhereinput"><code>TrustCenterDocWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -57335,6 +62227,15 @@ version<br />
 </td>
 <td>
 <p>version of the standard</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the logo</p>
 </td>
 </tr>
 </tbody>
@@ -59419,7 +64320,7 @@ logoRemoteURL<br />
 </tr>
 <tr>
 <td>
-logoLocalFileID<br />
+logoFileID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -59432,78 +64333,6 @@ owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
-
-</td>
-</tr>
-<tr>
-<td>
-files<br />
-<a href="objects#fileconnection"><code>FileConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Files returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Files returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
 
 </td>
 </tr>
@@ -59903,7 +64732,7 @@ logoRemoteURL<br />
 </tr>
 <tr>
 <td>
-logoLocalFileID<br />
+logoFileID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -61787,6 +66616,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -62625,6 +67526,78 @@ trustCenter<br />
 
 </td>
 </tr>
+<tr>
+<td>
+assessments<br />
+<a href="objects#assessmentconnection"><code>AssessmentConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentorder"><code>[AssessmentOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentwhereinput"><code>AssessmentWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -63407,6 +68380,15 @@ customDomainID<br />
 </tr>
 <tr>
 <td>
+previewDomainID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>preview domain id for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
 pirschDomainID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -63421,6 +68403,15 @@ pirschIdentificationCode<br />
 </td>
 <td>
 <p>Pirsch ID code</p>
+</td>
+</tr>
+<tr>
+<td>
+previewStatus<br />
+<a href="enums#trustcentertrustcenterpreviewstatus"><code>TrustCenterTrustCenterPreviewStatus</code></a>
+</td>
+<td>
+<p>preview status of the trust center</p>
 </td>
 </tr>
 <tr>
@@ -63443,7 +68434,25 @@ customDomain<br />
 </tr>
 <tr>
 <td>
+previewDomain<br />
+<a href="objects#customdomain"><code>CustomDomain</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 setting<br />
+<a href="objects#trustcentersetting"><code>TrustCenterSetting</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+previewSetting<br />
 <a href="objects#trustcentersetting"><code>TrustCenterSetting</code></a>
 </td>
 <td>
@@ -63812,6 +68821,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustcenterEntities<br />
+<a href="objects#trustcenterentityconnection"><code>TrustcenterEntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterentityorder"><code>[TrustcenterEntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustcenterEntities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterentitywhereinput"><code>TrustcenterEntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustcenterEntities returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -64508,8 +69589,26 @@ visibility<br />
 </tr>
 <tr>
 <td>
+standardID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the standard</p>
+</td>
+</tr>
+<tr>
+<td>
 trustCenter<br />
 <a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+standard<br />
+<a href="objects#standard"><code>Standard</code></a>
 </td>
 <td>
 
@@ -64573,6 +69672,36 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted trustCenterDoc IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterDocBulkUpdatePayload
+
+Return response for updateBulkTrustCenterDoc mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterDocs<br />
+<a href="objects#trustcenterdoc"><code>[TrustCenterDoc!]</code></a>
+</td>
+<td>
+<p>Updated trust center docs</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated trust center docs</p>
 </td>
 </tr>
 </tbody>
@@ -64855,6 +69984,15 @@ visibility<br />
 <p>visibility of the document</p>
 </td>
 </tr>
+<tr>
+<td>
+standardID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ID of the standard</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -64999,6 +70137,494 @@ cursor<br />
 </tbody>
 </table>
 
+## TrustcenterEntity
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+logoFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The local logo file id</p>
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of customer&#39;s website</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The trust center this entity belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The name of the tag definition</p>
+</td>
+</tr>
+<tr>
+<td>
+entityTypeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The entity type for the customer entity</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityType<br />
+<a href="objects#entitytype"><code>EntityType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityBulkCreatePayload
+
+Return response for createBulkTrustcenterEntity mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustcenterEntities<br />
+<a href="objects#trustcenterentity"><code>[TrustcenterEntity!]</code></a>
+</td>
+<td>
+<p>Created trustcenterEntitys</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcenterentityedge"><code>[TrustcenterEntityEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityCreatePayload
+
+Return response for createTrustcenterEntity mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustcenterEntity<br />
+<a href="objects#trustcenterentity"><code>TrustcenterEntity!</code></a>
+</td>
+<td>
+<p>Created trustcenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityDeletePayload
+
+Return response for deleteTrustcenterEntity mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted trustcenterEntity ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcenterentity"><code>TrustcenterEntity</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#trustcenterentityhistoryoptype"><code>TrustcenterEntityHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+logoFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The local logo file id</p>
+</td>
+</tr>
+<tr>
+<td>
+url<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of customer&#39;s website</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The trust center this entity belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The name of the tag definition</p>
+</td>
+</tr>
+<tr>
+<td>
+entityTypeID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The entity type for the customer entity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcenterentityhistoryedge"><code>[TrustcenterEntityHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcenterentityhistory"><code>TrustcenterEntityHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustcenterEntityUpdatePayload
+
+Return response for updateTrustcenterEntity mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustcenterEntity<br />
+<a href="objects#trustcenterentity"><code>TrustcenterEntity!</code></a>
+</td>
+<td>
+<p>Updated trustcenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TrustCenterHistory
 
 
@@ -65122,6 +70748,15 @@ customDomainID<br />
 </tr>
 <tr>
 <td>
+previewDomainID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>preview domain id for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
 pirschDomainID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -65136,6 +70771,15 @@ pirschIdentificationCode<br />
 </td>
 <td>
 <p>Pirsch ID code</p>
+</td>
+</tr>
+<tr>
+<td>
+previewStatus<br />
+<a href="enums#trustcenterhistorytrustcenterpreviewstatus"><code>TrustCenterHistoryTrustCenterPreviewStatus</code></a>
+</td>
+<td>
+<p>preview status of the trust center</p>
 </td>
 </tr>
 </tbody>
@@ -65313,7 +70957,7 @@ updatedBy<br />
 <tr>
 <td>
 trustCenterID<br />
-<a href="scalars#id"><code>ID</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the ID of the trust center the settings belong to</p>
@@ -65447,11 +71091,11 @@ secondaryForegroundColor<br />
 </tr>
 <tr>
 <td>
-trustCenter<br />
-<a href="objects#trustcenter"><code>TrustCenter</code></a>
+environment<br />
+<a href="enums#trustcentersettingtrustcenterenvironment"><code>TrustCenterSettingTrustCenterEnvironment</code></a>
 </td>
 <td>
-
+<p>environment of the trust center</p>
 </td>
 </tr>
 <tr>
@@ -65897,6 +71541,15 @@ secondaryForegroundColor<br />
 </td>
 <td>
 <p>secondary foreground color for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="enums#trustcentersettinghistorytrustcenterenvironment"><code>TrustCenterSettingHistoryTrustCenterEnvironment</code></a>
+</td>
+<td>
+<p>environment of the trust center</p>
 </td>
 </tr>
 </tbody>
@@ -66573,6 +72226,15 @@ trustCenterID<br />
 </tr>
 <tr>
 <td>
+isEnabled<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the watermarking is enabled for all trust center documents, default is true</p>
+</td>
+</tr>
+<tr>
+<td>
 logoID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -66897,6 +72559,15 @@ trustCenterID<br />
 </td>
 <td>
 <p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+isEnabled<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the watermarking is enabled for all trust center documents, default is true</p>
 </td>
 </tr>
 <tr>
@@ -67646,78 +73317,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Webauthns returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-files<br />
-<a href="objects#fileconnection"><code>FileConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Files returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Files returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -69072,78 +74671,6 @@ defaultOrg<br />
 </td>
 <td>
 <p>organization to load on user login</p>
-</td>
-</tr>
-<tr>
-<td>
-files<br />
-<a href="objects#fileconnection"><code>FileConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Files returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Files returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 </td>
 </tr>
 </tbody>
@@ -72058,6 +77585,4050 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignment
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowInstanceID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflow instance this assignment belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+assignmentKey<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Unique key for the assignment within the workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+role<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Role assigned to the target, e.g. APPROVER</p>
+</td>
+</tr>
+<tr>
+<td>
+label<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Optional label for the assignment</p>
+</td>
+</tr>
+<tr>
+<td>
+required<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether this assignment is required for workflow progression</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#workflowassignmentworkflowassignmentstatus"><code>WorkflowAssignmentWorkflowAssignmentStatus!</code></a>
+</td>
+<td>
+<p>Current status of the assignment</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>Optional metadata for the assignment</p>
+</td>
+</tr>
+<tr>
+<td>
+decidedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>Timestamp when the assignment was decided</p>
+</td>
+</tr>
+<tr>
+<td>
+actorUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>User who made the decision</p>
+</td>
+</tr>
+<tr>
+<td>
+actorGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Group that acted on the decision (if applicable)</p>
+</td>
+</tr>
+<tr>
+<td>
+notes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Optional notes about the assignment</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance!</code></a>
+</td>
+<td>
+<p>Instance this assignment belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowAssignmentTargets<br />
+<a href="objects#workflowassignmenttargetconnection"><code>WorkflowAssignmentTargetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmenttargetorder"><code>[WorkflowAssignmentTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowAssignmentTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmenttargetwhereinput"><code>WorkflowAssignmentTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowAssignmentTargets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+user<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+<p>User who acted on this assignment</p>
+</td>
+</tr>
+<tr>
+<td>
+group<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>Group that acted on this assignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentBulkCreatePayload
+
+Return response for createBulkWorkflowAssignment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowAssignments<br />
+<a href="objects#workflowassignment"><code>[WorkflowAssignment!]</code></a>
+</td>
+<td>
+<p>Created workflowAssignments</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowassignmentedge"><code>[WorkflowAssignmentEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentCreatePayload
+
+Return response for createWorkflowAssignment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowAssignment<br />
+<a href="objects#workflowassignment"><code>WorkflowAssignment!</code></a>
+</td>
+<td>
+<p>Created workflowAssignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentDeletePayload
+
+Return response for deleteWorkflowAssignment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted workflowAssignment ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowassignment"><code>WorkflowAssignment</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#workflowassignmenthistoryoptype"><code>WorkflowAssignmentHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowInstanceID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>ID of the workflow instance this assignment belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+assignmentKey<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Unique key for the assignment within the workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+role<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Role assigned to the target, e.g. APPROVER</p>
+</td>
+</tr>
+<tr>
+<td>
+label<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Optional label for the assignment</p>
+</td>
+</tr>
+<tr>
+<td>
+required<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether this assignment is required for workflow progression</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#workflowassignmenthistoryworkflowassignmentstatus"><code>WorkflowAssignmentHistoryWorkflowAssignmentStatus!</code></a>
+</td>
+<td>
+<p>Current status of the assignment</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>Optional metadata for the assignment</p>
+</td>
+</tr>
+<tr>
+<td>
+decidedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>Timestamp when the assignment was decided</p>
+</td>
+</tr>
+<tr>
+<td>
+actorUserID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>User who made the decision</p>
+</td>
+</tr>
+<tr>
+<td>
+actorGroupID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Group that acted on the decision (if applicable)</p>
+</td>
+</tr>
+<tr>
+<td>
+notes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Optional notes about the assignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowassignmenthistoryedge"><code>[WorkflowAssignmentHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowassignmenthistory"><code>WorkflowAssignmentHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTarget
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowAssignmentID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Assignment this target belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+targetType<br />
+<a href="enums#workflowassignmenttargetworkflowtargettype"><code>WorkflowAssignmentTargetWorkflowTargetType!</code></a>
+</td>
+<td>
+<p>Type of the target (USER, GROUP, ROLE, RESOLVER)</p>
+</td>
+</tr>
+<tr>
+<td>
+targetUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>User target when target_type is USER</p>
+</td>
+</tr>
+<tr>
+<td>
+targetGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Group target when target_type is GROUP</p>
+</td>
+</tr>
+<tr>
+<td>
+resolverKey<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Resolver key when target_type is RESOLVER</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowAssignment<br />
+<a href="objects#workflowassignment"><code>WorkflowAssignment!</code></a>
+</td>
+<td>
+<p>Assignment this target belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+user<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+<p>User target when target_type is USER</p>
+</td>
+</tr>
+<tr>
+<td>
+group<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>Group target when target_type is GROUP</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetBulkCreatePayload
+
+Return response for createBulkWorkflowAssignmentTarget mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowAssignmentTargets<br />
+<a href="objects#workflowassignmenttarget"><code>[WorkflowAssignmentTarget!]</code></a>
+</td>
+<td>
+<p>Created workflowAssignmentTargets</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowassignmenttargetedge"><code>[WorkflowAssignmentTargetEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetCreatePayload
+
+Return response for createWorkflowAssignmentTarget mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowAssignmentTarget<br />
+<a href="objects#workflowassignmenttarget"><code>WorkflowAssignmentTarget!</code></a>
+</td>
+<td>
+<p>Created workflowAssignmentTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetDeletePayload
+
+Return response for deleteWorkflowAssignmentTarget mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted workflowAssignmentTarget ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowassignmenttarget"><code>WorkflowAssignmentTarget</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#workflowassignmenttargethistoryoptype"><code>WorkflowAssignmentTargetHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowAssignmentID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Assignment this target belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+targetType<br />
+<a href="enums#workflowassignmenttargethistoryworkflowtargettype"><code>WorkflowAssignmentTargetHistoryWorkflowTargetType!</code></a>
+</td>
+<td>
+<p>Type of the target (USER, GROUP, ROLE, RESOLVER)</p>
+</td>
+</tr>
+<tr>
+<td>
+targetUserID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>User target when target_type is USER</p>
+</td>
+</tr>
+<tr>
+<td>
+targetGroupID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Group target when target_type is GROUP</p>
+</td>
+</tr>
+<tr>
+<td>
+resolverKey<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Resolver key when target_type is RESOLVER</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowassignmenttargethistoryedge"><code>[WorkflowAssignmentTargetHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowassignmenttargethistory"><code>WorkflowAssignmentTargetHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentTargetUpdatePayload
+
+Return response for updateWorkflowAssignmentTarget mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowAssignmentTarget<br />
+<a href="objects#workflowassignmenttarget"><code>WorkflowAssignmentTarget!</code></a>
+</td>
+<td>
+<p>Updated workflowAssignmentTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentUpdatePayload
+
+Return response for updateWorkflowAssignment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowAssignment<br />
+<a href="objects#workflowassignment"><code>WorkflowAssignment!</code></a>
+</td>
+<td>
+<p>Updated workflowAssignment</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinition
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Name of the workflow definition</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Optional description of the workflow definition</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowKind<br />
+<a href="enums#workflowdefinitionworkflowkind"><code>WorkflowDefinitionWorkflowKind!</code></a>
+</td>
+<td>
+<p>Kind of workflow, e.g. APPROVAL, LIFECYCLE, NOTIFICATION</p>
+</td>
+</tr>
+<tr>
+<td>
+schemaType<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Type of schema this workflow applies to</p>
+</td>
+</tr>
+<tr>
+<td>
+revision<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Revision number for this definition</p>
+</td>
+</tr>
+<tr>
+<td>
+draft<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether this definition is a draft</p>
+</td>
+</tr>
+<tr>
+<td>
+publishedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>When this definition was published</p>
+</td>
+</tr>
+<tr>
+<td>
+cooldownSeconds<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Suppress duplicate triggers within this window per object/definition</p>
+</td>
+</tr>
+<tr>
+<td>
+isDefault<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether this is the default workflow for the schema type</p>
+</td>
+</tr>
+<tr>
+<td>
+active<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether the workflow definition is active</p>
+</td>
+</tr>
+<tr>
+<td>
+triggerOperations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>Derived: normalized operations from definition for prefiltering; not user editable</p>
+</td>
+</tr>
+<tr>
+<td>
+triggerFields<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>Derived: normalized fields from definition for prefiltering; not user editable</p>
+</td>
+</tr>
+<tr>
+<td>
+definitionJSON<br />
+<a href="scalars#workflowdefinitiondocument"><code>WorkflowDefinitionDocument</code></a>
+</td>
+<td>
+<p>Typed document describing triggers, conditions, and actions</p>
+</td>
+</tr>
+<tr>
+<td>
+trackedFields<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>Cached list of fields that should trigger workflow evaluation</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tagDefinitions<br />
+<a href="objects#tagdefinitionconnection"><code>TagDefinitionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#tagdefinitionorder"><code>[TagDefinitionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TagDefinitions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#tagdefinitionwhereinput"><code>TagDefinitionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TagDefinitions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+groups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionBulkCreatePayload
+
+Return response for createBulkWorkflowDefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowDefinitions<br />
+<a href="objects#workflowdefinition"><code>[WorkflowDefinition!]</code></a>
+</td>
+<td>
+<p>Created workflowDefinitions</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowdefinitionedge"><code>[WorkflowDefinitionEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionCreatePayload
+
+Return response for createWorkflowDefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowDefinition<br />
+<a href="objects#workflowdefinition"><code>WorkflowDefinition!</code></a>
+</td>
+<td>
+<p>Created workflowDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionDeletePayload
+
+Return response for deleteWorkflowDefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted workflowDefinition ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowdefinition"><code>WorkflowDefinition</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#workflowdefinitionhistoryoptype"><code>WorkflowDefinitionHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Name of the workflow definition</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Optional description of the workflow definition</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowKind<br />
+<a href="enums#workflowdefinitionhistoryworkflowkind"><code>WorkflowDefinitionHistoryWorkflowKind!</code></a>
+</td>
+<td>
+<p>Kind of workflow, e.g. APPROVAL, LIFECYCLE, NOTIFICATION</p>
+</td>
+</tr>
+<tr>
+<td>
+schemaType<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Type of schema this workflow applies to</p>
+</td>
+</tr>
+<tr>
+<td>
+revision<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Revision number for this definition</p>
+</td>
+</tr>
+<tr>
+<td>
+draft<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether this definition is a draft</p>
+</td>
+</tr>
+<tr>
+<td>
+publishedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>When this definition was published</p>
+</td>
+</tr>
+<tr>
+<td>
+cooldownSeconds<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Suppress duplicate triggers within this window per object/definition</p>
+</td>
+</tr>
+<tr>
+<td>
+isDefault<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether this is the default workflow for the schema type</p>
+</td>
+</tr>
+<tr>
+<td>
+active<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Whether the workflow definition is active</p>
+</td>
+</tr>
+<tr>
+<td>
+triggerOperations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>Derived: normalized operations from definition for prefiltering; not user editable</p>
+</td>
+</tr>
+<tr>
+<td>
+triggerFields<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>Derived: normalized fields from definition for prefiltering; not user editable</p>
+</td>
+</tr>
+<tr>
+<td>
+definitionJSON<br />
+<a href="scalars#workflowdefinitiondocument"><code>WorkflowDefinitionDocument</code></a>
+</td>
+<td>
+<p>Typed document describing triggers, conditions, and actions</p>
+</td>
+</tr>
+<tr>
+<td>
+trackedFields<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>Cached list of fields that should trigger workflow evaluation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowdefinitionhistoryedge"><code>[WorkflowDefinitionHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowdefinitionhistory"><code>WorkflowDefinitionHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowDefinitionUpdatePayload
+
+Return response for updateWorkflowDefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowDefinition<br />
+<a href="objects#workflowdefinition"><code>WorkflowDefinition!</code></a>
+</td>
+<td>
+<p>Updated workflowDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEvent
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowInstanceID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflow instance that generated the event</p>
+</td>
+</tr>
+<tr>
+<td>
+eventType<br />
+<a href="enums#workfloweventworkfloweventtype"><code>WorkflowEventWorkflowEventType!</code></a>
+</td>
+<td>
+<p>Type of event, typically the action kind</p>
+</td>
+</tr>
+<tr>
+<td>
+payload<br />
+<a href="scalars#workfloweventpayload"><code>WorkflowEventPayload</code></a>
+</td>
+<td>
+<p>Payload for the event; stored raw</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventBulkCreatePayload
+
+Return response for createBulkWorkflowEvent mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowEvents<br />
+<a href="objects#workflowevent"><code>[WorkflowEvent!]</code></a>
+</td>
+<td>
+<p>Created workflowEvents</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workfloweventedge"><code>[WorkflowEventEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventCreatePayload
+
+Return response for createWorkflowEvent mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowEvent<br />
+<a href="objects#workflowevent"><code>WorkflowEvent!</code></a>
+</td>
+<td>
+<p>Created workflowEvent</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventDeletePayload
+
+Return response for deleteWorkflowEvent mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted workflowEvent ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowevent"><code>WorkflowEvent</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#workfloweventhistoryoptype"><code>WorkflowEventHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowInstanceID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>ID of the workflow instance that generated the event</p>
+</td>
+</tr>
+<tr>
+<td>
+eventType<br />
+<a href="enums#workfloweventhistoryworkfloweventtype"><code>WorkflowEventHistoryWorkflowEventType!</code></a>
+</td>
+<td>
+<p>Type of event, typically the action kind</p>
+</td>
+</tr>
+<tr>
+<td>
+payload<br />
+<a href="scalars#workfloweventpayload"><code>WorkflowEventPayload</code></a>
+</td>
+<td>
+<p>Payload for the event; stored raw</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workfloweventhistoryedge"><code>[WorkflowEventHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workfloweventhistory"><code>WorkflowEventHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowEventUpdatePayload
+
+Return response for updateWorkflowEvent mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowEvent<br />
+<a href="objects#workflowevent"><code>WorkflowEvent!</code></a>
+</td>
+<td>
+<p>Updated workflowEvent</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstance
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowDefinitionID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflow definition this instance is based on</p>
+</td>
+</tr>
+<tr>
+<td>
+state<br />
+<a href="enums#workflowinstanceworkflowinstancestate"><code>WorkflowInstanceWorkflowInstanceState!</code></a>
+</td>
+<td>
+<p>Current state of the workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+context<br />
+<a href="scalars#workflowinstancecontext"><code>WorkflowInstanceContext</code></a>
+</td>
+<td>
+<p>Optional context for the workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+lastEvaluatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>Timestamp when the workflow was last evaluated</p>
+</td>
+</tr>
+<tr>
+<td>
+definitionSnapshot<br />
+<a href="scalars#workflowdefinitiondocument"><code>WorkflowDefinitionDocument</code></a>
+</td>
+<td>
+<p>Copy of definition JSON used for this instance</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowDefinition<br />
+<a href="objects#workflowdefinition"><code>WorkflowDefinition!</code></a>
+</td>
+<td>
+<p>Definition driving this instance</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowAssignments<br />
+<a href="objects#workflowassignmentconnection"><code>WorkflowAssignmentConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmentorder"><code>[WorkflowAssignmentOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowAssignments returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmentwhereinput"><code>WorkflowAssignmentWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowAssignments returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowEvents<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowEvents returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowEvents returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceBulkCreatePayload
+
+Return response for createBulkWorkflowInstance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]</code></a>
+</td>
+<td>
+<p>Created workflowInstances</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowinstanceedge"><code>[WorkflowInstanceEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceCreatePayload
+
+Return response for createWorkflowInstance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance!</code></a>
+</td>
+<td>
+<p>Created workflowInstance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceDeletePayload
+
+Return response for deleteWorkflowInstance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted workflowInstance ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#workflowinstancehistoryoptype"><code>WorkflowInstanceHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowDefinitionID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>ID of the workflow definition this instance is based on</p>
+</td>
+</tr>
+<tr>
+<td>
+state<br />
+<a href="enums#workflowinstancehistoryworkflowinstancestate"><code>WorkflowInstanceHistoryWorkflowInstanceState!</code></a>
+</td>
+<td>
+<p>Current state of the workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+context<br />
+<a href="scalars#workflowinstancecontext"><code>WorkflowInstanceContext</code></a>
+</td>
+<td>
+<p>Optional context for the workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+lastEvaluatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>Timestamp when the workflow was last evaluated</p>
+</td>
+</tr>
+<tr>
+<td>
+definitionSnapshot<br />
+<a href="scalars#workflowdefinitiondocument"><code>WorkflowDefinitionDocument</code></a>
+</td>
+<td>
+<p>Copy of definition JSON used for this instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowinstancehistoryedge"><code>[WorkflowInstanceHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowinstancehistory"><code>WorkflowInstanceHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowInstanceUpdatePayload
+
+Return response for updateWorkflowInstance mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance!</code></a>
+</td>
+<td>
+<p>Updated workflowInstance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRef
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowInstanceID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Workflow instance this object is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+controlID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Control referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+taskID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Task referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Policy referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+findingID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Finding referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryAccountID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Directory account referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Directory group referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryMembershipID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Directory membership referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance!</code></a>
+</td>
+<td>
+<p>Workflow instance this object is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+control<br />
+<a href="objects#control"><code>Control</code></a>
+</td>
+<td>
+<p>Control referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+task<br />
+<a href="objects#task"><code>Task</code></a>
+</td>
+<td>
+<p>Task referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicy<br />
+<a href="objects#internalpolicy"><code>InternalPolicy</code></a>
+</td>
+<td>
+<p>Policy referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+finding<br />
+<a href="objects#finding"><code>Finding</code></a>
+</td>
+<td>
+<p>Finding referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryAccount<br />
+<a href="objects#directoryaccount"><code>DirectoryAccount</code></a>
+</td>
+<td>
+<p>Directory account referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryGroup<br />
+<a href="objects#directorygroup"><code>DirectoryGroup</code></a>
+</td>
+<td>
+<p>Directory group referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryMembership<br />
+<a href="objects#directorymembership"><code>DirectoryMembership</code></a>
+</td>
+<td>
+<p>Directory membership referenced by this workflow instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefBulkCreatePayload
+
+Return response for createBulkWorkflowObjectRef mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectref"><code>[WorkflowObjectRef!]</code></a>
+</td>
+<td>
+<p>Created workflowObjectRefs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowobjectrefedge"><code>[WorkflowObjectRefEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefCreatePayload
+
+Return response for createWorkflowObjectRef mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowObjectRef<br />
+<a href="objects#workflowobjectref"><code>WorkflowObjectRef!</code></a>
+</td>
+<td>
+<p>Created workflowObjectRef</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefDeletePayload
+
+Return response for deleteWorkflowObjectRef mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted workflowObjectRef ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowobjectref"><code>WorkflowObjectRef</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefHistory
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+historyTime<br />
+<a href="scalars#time"><code>Time!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ref<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+operation<br />
+<a href="enums#workflowobjectrefhistoryoptype"><code>WorkflowObjectRefHistoryOpType!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowInstanceID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Workflow instance this object is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+controlID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Control referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+taskID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Task referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Policy referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+findingID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Finding referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryAccountID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Directory account referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryGroupID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Directory group referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryMembershipID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Directory membership referenced by this workflow instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefHistoryConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#workflowobjectrefhistoryedge"><code>[WorkflowObjectRefHistoryEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefHistoryEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#workflowobjectrefhistory"><code>WorkflowObjectRefHistory</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectRefUpdatePayload
+
+Return response for updateWorkflowObjectRef mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowObjectRef<br />
+<a href="objects#workflowobjectref"><code>WorkflowObjectRef!</code></a>
+</td>
+<td>
+<p>Updated workflowObjectRef</p>
 </td>
 </tr>
 </tbody>
