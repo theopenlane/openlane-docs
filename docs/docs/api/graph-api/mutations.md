@@ -8049,6 +8049,38 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkSubprocessor
+
+**Type:** [SubprocessorBulkUpdatePayload!](objects#subprocessorbulkupdatepayload)
+
+Update multiple existing subprocessors
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the subprocessors to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatesubprocessorinput"><code>UpdateSubprocessorInput!</code></a>
+</td>
+<td>
+<p>values to update the subprocessors with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkTask
 
 **Type:** [TaskBulkUpdatePayload!](objects#taskbulkupdatepayload)
@@ -8108,6 +8140,38 @@ input<br />
 </td>
 <td>
 <p>values to update the trust center docs with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkTrustCenterSubprocessor
+
+**Type:** [TrustCenterSubprocessorBulkUpdatePayload!](objects#trustcentersubprocessorbulkupdatepayload)
+
+Update multiple existing trustCenterSubprocessors
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the trustCenterSubprocessors to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcentersubprocessorinput"><code>UpdateTrustCenterSubprocessorInput!</code></a>
+</td>
+<td>
+<p>values to update the trustCenterSubprocessors with</p>
 </td>
 </tr>
 </tbody>
@@ -8670,6 +8734,47 @@ evidenceFiles<br />
 </td>
 <td>
 
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateEvidenceComment
+
+**Type:** [EvidenceUpdatePayload!](objects#evidenceupdatepayload)
+
+Update an existing evidence comment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatenoteinput"><code>UpdateNoteInput!</code></a>
+</td>
+<td>
+<p>New values for the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+noteFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the comment</p>
 </td>
 </tr>
 </tbody>

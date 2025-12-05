@@ -17,7 +17,7 @@
 
 :root {
   /* width of left navigation */
-  --doc-sidebar-width: 350px;
+  --doc-sidebar-width: 400px !important;
 
   /* font family */
   --ifm-font-family-base: 'Outfit', sans-serif;
@@ -47,7 +47,6 @@
 
   /* heading color */
   --ifm-heading-color: #2e2e2e;
-
   --ifm-global-spacing: 1.6rem !important;
 
   /* background colors */
@@ -104,7 +103,8 @@ html[data-theme='dark'] {
 .api-method>.menu__link {
   align-items: center;
   justify-content: start;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .api-method>.menu__link::before {
@@ -221,6 +221,12 @@ html[data-theme='dark'] {
 .theme-doc-markdown .openapi__heading {
   font-size: var(--ifm-h1-font-size);
   margin-bottom: calc(var(--ifm-h1-vertical-rhythm-bottom)* var(--ifm-leading)) !important;
+  margin-top: 20px;
+}
+
+
+.markdown h1:first-child {
+  font-size: 1.75rem;
 }
 
 .theme-doc-markdown .openapi-tabs__code-container .openapi-tabs__code-item span {

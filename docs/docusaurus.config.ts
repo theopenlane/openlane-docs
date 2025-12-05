@@ -322,7 +322,6 @@ const config: Config = {
             downloadUrl:
               "https://api.theopenlane.io/api-docs",
             template: path.resolve(__dirname, '../templates/api.mdx'),
-            // infoTemplate: path.resolve(__dirname, '../templates/api-info.mdx'),
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },

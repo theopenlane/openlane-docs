@@ -40956,6 +40956,15 @@ taskIDs<br />
 
 </td>
 </tr>
+<tr>
+<td>
+commentIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -44101,6 +44110,15 @@ riskID<br />
 <tr>
 <td>
 internalPolicyID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidenceID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -89272,6 +89290,24 @@ hasTasks<br />
 <td>
 hasTasksWith<br />
 <a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasComments<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>comments edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCommentsWith<br />
+<a href="inputObjects#notewhereinput"><code>[NoteWhereInput!]</code></a>
 </td>
 <td>
 
@@ -151638,6 +151674,24 @@ hasInternalPolicy<br />
 <td>
 hasInternalPolicyWith<br />
 <a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEvidence<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>evidence edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEvidenceWith<br />
+<a href="inputObjects#evidencewhereinput"><code>[EvidenceWhereInput!]</code></a>
 </td>
 <td>
 
@@ -265274,6 +265328,51 @@ clearTasks<br />
 
 </td>
 </tr>
+<tr>
+<td>
+addCommentIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCommentIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearComments<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addComment<br />
+<a href="inputObjects#createnoteinput"><code>CreateNoteInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+deleteComment<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -271654,6 +271753,24 @@ internalPolicyID<br />
 <tr>
 <td>
 clearInternalPolicy<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidenceID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEvidence<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
