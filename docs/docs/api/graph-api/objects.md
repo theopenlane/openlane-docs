@@ -20444,6 +20444,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+comments<br />
+<a href="objects#noteconnection"><code>NoteConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#noteorder"><code>[NoteOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Notes returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notewhereinput"><code>NoteWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -39347,6 +39419,15 @@ risk<br />
 <td>
 internalPolicy<br />
 <a href="objects#internalpolicy"><code>InternalPolicy</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>Evidence</code></a>
 </td>
 <td>
 
@@ -64462,6 +64543,36 @@ deletedIDs<br />
 </tbody>
 </table>
 
+## SubprocessorBulkUpdatePayload
+
+Return response for updateBulkSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+subprocessors<br />
+<a href="objects#subprocessor"><code>[Subprocessor!]</code></a>
+</td>
+<td>
+<p>Updated subprocessors</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated subprocessors</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## SubprocessorConnection
 
 A connection to a list of items.
@@ -71797,6 +71908,36 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted trustCenterSubprocessor IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterSubprocessorBulkUpdatePayload
+
+Return response for updateBulkTrustCenterSubprocessor mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterSubprocessors<br />
+<a href="objects#trustcentersubprocessor"><code>[TrustCenterSubprocessor!]</code></a>
+</td>
+<td>
+<p>Updated trustCenterSubprocessors</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated trustCenterSubprocessors</p>
 </td>
 </tr>
 </tbody>
