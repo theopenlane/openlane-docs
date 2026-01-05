@@ -30,74 +30,6 @@ id<br />
 </tbody>
 </table>
 
-## actionPlanHistories
-
-**Type:** [ActionPlanHistoryConnection!](objects#actionplanhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#actionplanhistoryorder"><code>ActionPlanHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ActionPlanHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#actionplanhistorywhereinput"><code>ActionPlanHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ActionPlanHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## actionPlans
 
 **Type:** [ActionPlanConnection!](objects#actionplanconnection)
@@ -339,74 +271,6 @@ id<br />
 </tbody>
 </table>
 
-## assessmentHistories
-
-**Type:** [AssessmentHistoryConnection!](objects#assessmenthistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#assessmenthistoryorder"><code>AssessmentHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for AssessmentHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#assessmenthistorywhereinput"><code>AssessmentHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for AssessmentHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## assessmentResponse
 
 **Type:** [AssessmentResponse!](objects#assessmentresponse)
@@ -425,74 +289,6 @@ id<br />
 </td>
 <td>
 <p>ID of the assessmentResponse</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## assessmentResponseHistories
-
-**Type:** [AssessmentResponseHistoryConnection!](objects#assessmentresponsehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#assessmentresponsehistoryorder"><code>AssessmentResponseHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for AssessmentResponseHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#assessmentresponsehistorywhereinput"><code>AssessmentResponseHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for AssessmentResponseHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -775,74 +571,6 @@ id<br />
 </tbody>
 </table>
 
-## assetHistories
-
-**Type:** [AssetHistoryConnection!](objects#assethistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#assethistoryorder"><code>AssetHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for AssetHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#assethistorywhereinput"><code>AssetHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for AssetHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## assets
 
 **Type:** [AssetConnection!](objects#assetconnection)
@@ -970,74 +698,6 @@ last<br />
 </tbody>
 </table>
 
-## auditLogs
-
-**Type:** [AuditLogConnection!](objects#auditlogconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#auditlogwhereinput"><code>AuditLogWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for AuditLogs returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#auditlogorder"><code>AuditLogOrder</code></a>
-</td>
-<td>
-<p>Ordering options for AuditLogs returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## contact
 
 **Type:** [Contact!](objects#contact)
@@ -1056,74 +716,6 @@ id<br />
 </td>
 <td>
 <p>ID of the contact</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## contactHistories
-
-**Type:** [ContactHistoryConnection!](objects#contacthistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#contacthistoryorder"><code>ContactHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ContactHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#contacthistorywhereinput"><code>ContactHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ContactHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -1317,74 +909,6 @@ where<br />
 </tbody>
 </table>
 
-## controlHistories
-
-**Type:** [ControlHistoryConnection!](objects#controlhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#controlhistoryorder"><code>ControlHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ControlHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#controlhistorywhereinput"><code>ControlHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ControlHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## controlImplementation
 
 **Type:** [ControlImplementation!](objects#controlimplementation)
@@ -1403,74 +927,6 @@ id<br />
 </td>
 <td>
 <p>ID of the controlImplementation</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## controlImplementationHistories
-
-**Type:** [ControlImplementationHistoryConnection!](objects#controlimplementationhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#controlimplementationhistoryorder"><code>ControlImplementationHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ControlImplementationHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#controlimplementationhistorywhereinput"><code>ControlImplementationHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ControlImplementationHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -1562,74 +1018,6 @@ id<br />
 </td>
 <td>
 <p>ID of the controlObjective</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## controlObjectiveHistories
-
-**Type:** [ControlObjectiveHistoryConnection!](objects#controlobjectivehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#controlobjectivehistoryorder"><code>ControlObjectiveHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ControlObjectiveHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#controlobjectivehistorywhereinput"><code>ControlObjectiveHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ControlObjectiveHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -2027,74 +1415,6 @@ id<br />
 </tbody>
 </table>
 
-## customDomainHistories
-
-**Type:** [CustomDomainHistoryConnection!](objects#customdomainhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#customdomainhistoryorder"><code>CustomDomainHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for CustomDomainHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#customdomainhistorywhereinput"><code>CustomDomainHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for CustomDomainHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## customDomains
 
 **Type:** [CustomDomainConnection!](objects#customdomainconnection)
@@ -2336,74 +1656,6 @@ id<br />
 </tbody>
 </table>
 
-## directoryAccountHistories
-
-**Type:** [DirectoryAccountHistoryConnection!](objects#directoryaccounthistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#directoryaccounthistoryorder"><code>DirectoryAccountHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for DirectoryAccountHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#directoryaccounthistorywhereinput"><code>DirectoryAccountHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for DirectoryAccountHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## directoryAccounts
 
 **Type:** [DirectoryAccountConnection!](objects#directoryaccountconnection)
@@ -2495,74 +1747,6 @@ id<br />
 </tbody>
 </table>
 
-## directoryGroupHistories
-
-**Type:** [DirectoryGroupHistoryConnection!](objects#directorygrouphistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#directorygrouphistoryorder"><code>DirectoryGroupHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for DirectoryGroupHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#directorygrouphistorywhereinput"><code>DirectoryGroupHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for DirectoryGroupHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## directoryGroups
 
 **Type:** [DirectoryGroupConnection!](objects#directorygroupconnection)
@@ -2649,74 +1833,6 @@ id<br />
 </td>
 <td>
 <p>ID of the directoryMembership</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## directoryMembershipHistories
-
-**Type:** [DirectoryMembershipHistoryConnection!](objects#directorymembershiphistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#directorymembershiphistoryorder"><code>DirectoryMembershipHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for DirectoryMembershipHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#directorymembershiphistorywhereinput"><code>DirectoryMembershipHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for DirectoryMembershipHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -2881,11 +1997,11 @@ where<br />
 </tbody>
 </table>
 
-## dnsVerification
+## discussion
 
-**Type:** [DNSVerification!](objects#dnsverification)
+**Type:** [Discussion!](objects#discussion)
 
-Look up dnsVerification by ID
+Look up discussion by ID
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -2898,15 +2014,15 @@ id<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
 <td>
-<p>ID of the dnsVerification</p>
+<p>ID of the discussion</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## dnsVerificationHistories
+## discussions
 
-**Type:** [DNSVerificationHistoryConnection!](objects#dnsverificationhistoryconnection)
+**Type:** [DiscussionConnection!](objects#discussionconnection)
 
 
 
@@ -2954,19 +2070,42 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#dnsverificationhistoryorder"><code>DNSVerificationHistoryOrder</code></a>
+<a href="inputObjects#discussionorder"><code>[DiscussionOrder!]</code></a>
 </td>
 <td>
-<p>Ordering options for DNSVerificationHistories returned from the connection.</p>
+<p>Ordering options for Discussions returned from the connection.</p>
 </td>
 </tr>
 <tr>
 <td>
 where<br />
-<a href="inputObjects#dnsverificationhistorywhereinput"><code>DNSVerificationHistoryWhereInput</code></a>
+<a href="inputObjects#discussionwhereinput"><code>DiscussionWhereInput</code></a>
 </td>
 <td>
-<p>Filtering options for DNSVerificationHistories returned from the connection.</p>
+<p>Filtering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## dnsVerification
+
+**Type:** [DNSVerification!](objects#dnsverification)
+
+Look up dnsVerification by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the dnsVerification</p>
 </td>
 </tr>
 </tbody>
@@ -3058,74 +2197,6 @@ id<br />
 </td>
 <td>
 <p>ID of the documentData</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## documentDataHistories
-
-**Type:** [DocumentDataHistoryConnection!](objects#documentdatahistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#documentdatahistoryorder"><code>DocumentDataHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for DocumentDataHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#documentdatahistorywhereinput"><code>DocumentDataHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for DocumentDataHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -3290,74 +2361,6 @@ id<br />
 </tbody>
 </table>
 
-## entityHistories
-
-**Type:** [EntityHistoryConnection!](objects#entityhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#entityhistoryorder"><code>EntityHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for EntityHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#entityhistorywhereinput"><code>EntityHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for EntityHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## entitySearch
 
 **Type:** [EntityConnection](objects#entityconnection)
@@ -3435,74 +2438,6 @@ id<br />
 </td>
 <td>
 <p>ID of the entityType</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## entityTypeHistories
-
-**Type:** [EntityTypeHistoryConnection!](objects#entitytypehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#entitytypehistoryorder"><code>EntityTypeHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for EntityTypeHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#entitytypehistorywhereinput"><code>EntityTypeHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for EntityTypeHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -3685,74 +2620,6 @@ id<br />
 </td>
 <td>
 <p>ID of the evidence</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## evidenceHistories
-
-**Type:** [EvidenceHistoryConnection!](objects#evidencehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#evidencehistoryorder"><code>EvidenceHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for EvidenceHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#evidencehistorywhereinput"><code>EvidenceHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for EvidenceHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -3999,74 +2866,6 @@ id<br />
 </tbody>
 </table>
 
-## fileHistories
-
-**Type:** [FileHistoryConnection!](objects#filehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#filehistoryorder"><code>FileHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for FileHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#filehistorywhereinput"><code>FileHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for FileHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## files
 
 **Type:** [FileConnection!](objects#fileconnection)
@@ -4181,74 +2980,6 @@ id<br />
 </tbody>
 </table>
 
-## findingControlHistories
-
-**Type:** [FindingControlHistoryConnection!](objects#findingcontrolhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#findingcontrolhistoryorder"><code>FindingControlHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for FindingControlHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#findingcontrolhistorywhereinput"><code>FindingControlHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for FindingControlHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## findingControls
 
 **Type:** [FindingControlConnection!](objects#findingcontrolconnection)
@@ -4312,74 +3043,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for FindingControls returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## findingHistories
-
-**Type:** [FindingHistoryConnection!](objects#findinghistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#findinghistoryorder"><code>FindingHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for FindingHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#findinghistorywhereinput"><code>FindingHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for FindingHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -4535,74 +3198,6 @@ id<br />
 </tbody>
 </table>
 
-## groupHistories
-
-**Type:** [GroupHistoryConnection!](objects#grouphistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#grouphistoryorder"><code>GroupHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for GroupHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#grouphistorywhereinput"><code>GroupHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for GroupHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## groupMembership
 
 **Type:** [GroupMembership!](objects#groupmembership)
@@ -4621,74 +3216,6 @@ id<br />
 </td>
 <td>
 <p>ID of the groupMembership</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## groupMembershipHistories
-
-**Type:** [GroupMembershipHistoryConnection!](objects#groupmembershiphistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#groupmembershiphistoryorder"><code>GroupMembershipHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for GroupMembershipHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#groupmembershiphistorywhereinput"><code>GroupMembershipHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for GroupMembershipHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -4912,74 +3439,6 @@ id<br />
 </tbody>
 </table>
 
-## groupSettingHistories
-
-**Type:** [GroupSettingHistoryConnection!](objects#groupsettinghistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#groupsettinghistoryorder"><code>GroupSettingHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for GroupSettingHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#groupsettinghistorywhereinput"><code>GroupSettingHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for GroupSettingHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## groupSettings
 
 **Type:** [GroupSettingConnection!](objects#groupsettingconnection)
@@ -5139,74 +3598,6 @@ where<br />
 </tbody>
 </table>
 
-## hushHistories
-
-**Type:** [HushHistoryConnection!](objects#hushhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#hushhistoryorder"><code>HushHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for HushHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#hushhistorywhereinput"><code>HushHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for HushHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## integration
 
 **Type:** [Integration!](objects#integration)
@@ -5225,74 +3616,6 @@ id<br />
 </td>
 <td>
 <p>ID of the integration</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## integrationHistories
-
-**Type:** [IntegrationHistoryConnection!](objects#integrationhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#integrationhistoryorder"><code>IntegrationHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for IntegrationHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#integrationhistorywhereinput"><code>IntegrationHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for IntegrationHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -5452,74 +3775,6 @@ id<br />
 </td>
 <td>
 <p>ID of the internalPolicy</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## internalPolicyHistories
-
-**Type:** [InternalPolicyHistoryConnection!](objects#internalpolicyhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#internalpolicyhistoryorder"><code>InternalPolicyHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for InternalPolicyHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#internalpolicyhistorywhereinput"><code>InternalPolicyHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for InternalPolicyHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -6180,74 +4435,6 @@ id<br />
 </tbody>
 </table>
 
-## jobTemplateHistories
-
-**Type:** [JobTemplateHistoryConnection!](objects#jobtemplatehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#jobtemplatehistoryorder"><code>JobTemplateHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for JobTemplateHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#jobtemplatehistorywhereinput"><code>JobTemplateHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for JobTemplateHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## jobTemplates
 
 **Type:** [JobTemplateConnection!](objects#jobtemplateconnection)
@@ -6398,74 +4585,6 @@ id<br />
 </tbody>
 </table>
 
-## mappableDomainHistories
-
-**Type:** [MappableDomainHistoryConnection!](objects#mappabledomainhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#mappabledomainhistoryorder"><code>MappableDomainHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for MappableDomainHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#mappabledomainhistorywhereinput"><code>MappableDomainHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for MappableDomainHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## mappableDomains
 
 **Type:** [MappableDomainConnection!](objects#mappabledomainconnection)
@@ -6557,74 +4676,6 @@ id<br />
 </tbody>
 </table>
 
-## mappedControlHistories
-
-**Type:** [MappedControlHistoryConnection!](objects#mappedcontrolhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#mappedcontrolhistoryorder"><code>MappedControlHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for MappedControlHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#mappedcontrolhistorywhereinput"><code>MappedControlHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for MappedControlHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## mappedControls
 
 **Type:** [MappedControlConnection!](objects#mappedcontrolconnection)
@@ -6711,74 +4762,6 @@ id<br />
 </td>
 <td>
 <p>ID of the narrative</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## narrativeHistories
-
-**Type:** [NarrativeHistoryConnection!](objects#narrativehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#narrativehistoryorder"><code>NarrativeHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for NarrativeHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#narrativehistorywhereinput"><code>NarrativeHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for NarrativeHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -6980,74 +4963,6 @@ id<br />
 </tbody>
 </table>
 
-## noteHistories
-
-**Type:** [NoteHistoryConnection!](objects#notehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#notehistoryorder"><code>NoteHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for NoteHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#notehistorywhereinput"><code>NoteHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for NoteHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## notes
 
 **Type:** [NoteConnection!](objects#noteconnection)
@@ -7134,74 +5049,6 @@ id<br />
 </td>
 <td>
 <p>ID of the organization</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## organizationHistories
-
-**Type:** [OrganizationHistoryConnection!](objects#organizationhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#organizationhistoryorder"><code>OrganizationHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for OrganizationHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#organizationhistorywhereinput"><code>OrganizationHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for OrganizationHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -7357,74 +5204,6 @@ id<br />
 </tbody>
 </table>
 
-## organizationSettingHistories
-
-**Type:** [OrganizationSettingHistoryConnection!](objects#organizationsettinghistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#organizationsettinghistoryorder"><code>OrganizationSettingHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for OrganizationSettingHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#organizationsettinghistorywhereinput"><code>OrganizationSettingHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for OrganizationSettingHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## organizationSettings
 
 **Type:** [OrganizationSettingConnection!](objects#organizationsettingconnection)
@@ -7516,74 +5295,6 @@ id<br />
 </tbody>
 </table>
 
-## orgMembershipHistories
-
-**Type:** [OrgMembershipHistoryConnection!](objects#orgmembershiphistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#orgmembershiphistoryorder"><code>OrgMembershipHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for OrgMembershipHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#orgmembershiphistorywhereinput"><code>OrgMembershipHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for OrgMembershipHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## orgMemberships
 
 **Type:** [OrgMembershipConnection!](objects#orgmembershipconnection)
@@ -7670,74 +5381,6 @@ id<br />
 </td>
 <td>
 <p>ID of the orgSubscription</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## orgSubscriptionHistories
-
-**Type:** [OrgSubscriptionHistoryConnection!](objects#orgsubscriptionhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#orgsubscriptionhistoryorder"><code>OrgSubscriptionHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for OrgSubscriptionHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#orgsubscriptionhistorywhereinput"><code>OrgSubscriptionHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for OrgSubscriptionHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -7925,74 +5568,6 @@ id<br />
 </tbody>
 </table>
 
-## procedureHistories
-
-**Type:** [ProcedureHistoryConnection!](objects#procedurehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#procedurehistoryorder"><code>ProcedureHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ProcedureHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#procedurehistorywhereinput"><code>ProcedureHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ProcedureHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## procedures
 
 **Type:** [ProcedureConnection!](objects#procedureconnection)
@@ -8143,74 +5718,6 @@ id<br />
 </tbody>
 </table>
 
-## programHistories
-
-**Type:** [ProgramHistoryConnection!](objects#programhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#programhistoryorder"><code>ProgramHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ProgramHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#programhistorywhereinput"><code>ProgramHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ProgramHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## programMembership
 
 **Type:** [ProgramMembership!](objects#programmembership)
@@ -8229,74 +5736,6 @@ id<br />
 </td>
 <td>
 <p>ID of the programMembership</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## programMembershipHistories
-
-**Type:** [ProgramMembershipHistoryConnection!](objects#programmembershiphistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#programmembershiphistoryorder"><code>ProgramMembershipHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ProgramMembershipHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#programmembershiphistorywhereinput"><code>ProgramMembershipHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ProgramMembershipHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -8520,74 +5959,6 @@ id<br />
 </tbody>
 </table>
 
-## remediationHistories
-
-**Type:** [RemediationHistoryConnection!](objects#remediationhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#remediationhistoryorder"><code>RemediationHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for RemediationHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#remediationhistorywhereinput"><code>RemediationHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for RemediationHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## remediations
 
 **Type:** [RemediationConnection!](objects#remediationconnection)
@@ -8733,74 +6104,6 @@ id<br />
 </td>
 <td>
 <p>ID of the review</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## reviewHistories
-
-**Type:** [ReviewHistoryConnection!](objects#reviewhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#reviewhistoryorder"><code>ReviewHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ReviewHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#reviewhistorywhereinput"><code>ReviewHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ReviewHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -8956,74 +6259,6 @@ id<br />
 </tbody>
 </table>
 
-## riskHistories
-
-**Type:** [RiskHistoryConnection!](objects#riskhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#riskhistoryorder"><code>RiskHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for RiskHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#riskhistorywhereinput"><code>RiskHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for RiskHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## risks
 
 **Type:** [RiskConnection!](objects#riskconnection)
@@ -9174,74 +6409,6 @@ id<br />
 </tbody>
 </table>
 
-## scanHistories
-
-**Type:** [ScanHistoryConnection!](objects#scanhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#scanhistoryorder"><code>ScanHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ScanHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#scanhistorywhereinput"><code>ScanHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ScanHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## scans
 
 **Type:** [ScanConnection!](objects#scanconnection)
@@ -9387,74 +6554,6 @@ id<br />
 </td>
 <td>
 <p>ID of the scheduledJob</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## scheduledJobHistories
-
-**Type:** [ScheduledJobHistoryConnection!](objects#scheduledjobhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#scheduledjobhistoryorder"><code>ScheduledJobHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for ScheduledJobHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#scheduledjobhistorywhereinput"><code>ScheduledJobHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for ScheduledJobHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -9707,74 +6806,6 @@ id<br />
 </tbody>
 </table>
 
-## standardHistories
-
-**Type:** [StandardHistoryConnection!](objects#standardhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#standardhistoryorder"><code>StandardHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for StandardHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#standardhistorywhereinput"><code>StandardHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for StandardHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## standards
 
 **Type:** [StandardConnection!](objects#standardconnection)
@@ -9925,74 +6956,6 @@ id<br />
 </tbody>
 </table>
 
-## subcontrolHistories
-
-**Type:** [SubcontrolHistoryConnection!](objects#subcontrolhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#subcontrolhistoryorder"><code>SubcontrolHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for SubcontrolHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#subcontrolhistorywhereinput"><code>SubcontrolHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for SubcontrolHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## subcontrols
 
 **Type:** [SubcontrolConnection!](objects#subcontrolconnection)
@@ -10138,74 +7101,6 @@ id<br />
 </td>
 <td>
 <p>ID of the subprocessor</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## subprocessorHistories
-
-**Type:** [SubprocessorHistoryConnection!](objects#subprocessorhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#subprocessorhistoryorder"><code>SubprocessorHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for SubprocessorHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#subprocessorhistorywhereinput"><code>SubprocessorHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for SubprocessorHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -10661,74 +7556,6 @@ id<br />
 </tbody>
 </table>
 
-## taskHistories
-
-**Type:** [TaskHistoryConnection!](objects#taskhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#taskhistoryorder"><code>TaskHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TaskHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#taskhistorywhereinput"><code>TaskHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TaskHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## tasks
 
 **Type:** [TaskConnection!](objects#taskconnection)
@@ -10874,74 +7701,6 @@ id<br />
 </td>
 <td>
 <p>ID of the template</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## templateHistories
-
-**Type:** [TemplateHistoryConnection!](objects#templatehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#templatehistoryorder"><code>TemplateHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TemplateHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#templatehistorywhereinput"><code>TemplateHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TemplateHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -11211,74 +7970,6 @@ id<br />
 </tbody>
 </table>
 
-## trustCenterComplianceHistories
-
-**Type:** [TrustCenterComplianceHistoryConnection!](objects#trustcentercompliancehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#trustcentercompliancehistoryorder"><code>TrustCenterComplianceHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TrustCenterComplianceHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#trustcentercompliancehistorywhereinput"><code>TrustCenterComplianceHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TrustCenterComplianceHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## trustCenterCompliances
 
 **Type:** [TrustCenterComplianceConnection!](objects#trustcentercomplianceconnection)
@@ -11365,74 +8056,6 @@ id<br />
 </td>
 <td>
 <p>ID of the trustCenterDoc</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## trustCenterDocHistories
-
-**Type:** [TrustCenterDocHistoryConnection!](objects#trustcenterdochistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#trustcenterdochistoryorder"><code>TrustCenterDocHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TrustCenterDocHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#trustcenterdochistorywhereinput"><code>TrustCenterDocHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TrustCenterDocHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -11597,74 +8220,6 @@ id<br />
 </tbody>
 </table>
 
-## trustcenterEntityHistories
-
-**Type:** [TrustcenterEntityHistoryConnection!](objects#trustcenterentityhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#trustcenterentityhistoryorder"><code>TrustcenterEntityHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TrustcenterEntityHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#trustcenterentityhistorywhereinput"><code>TrustcenterEntityHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TrustcenterEntityHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## trustcenterEntitySearch
 
 **Type:** [TrustcenterEntityConnection](objects#trustcenterentityconnection)
@@ -11719,74 +8274,6 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## trustCenterHistories
-
-**Type:** [TrustCenterHistoryConnection!](objects#trustcenterhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#trustcenterhistoryorder"><code>TrustCenterHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TrustCenterHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#trustcenterhistorywhereinput"><code>TrustCenterHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TrustCenterHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -11883,74 +8370,6 @@ id<br />
 </tbody>
 </table>
 
-## trustCenterSettingHistories
-
-**Type:** [TrustCenterSettingHistoryConnection!](objects#trustcentersettinghistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#trustcentersettinghistoryorder"><code>TrustCenterSettingHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TrustCenterSettingHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#trustcentersettinghistorywhereinput"><code>TrustCenterSettingHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TrustCenterSettingHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## trustCenterSettings
 
 **Type:** [TrustCenterSettingConnection!](objects#trustcentersettingconnection)
@@ -12037,74 +8456,6 @@ id<br />
 </td>
 <td>
 <p>ID of the trustCenterSubprocessor</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## trustCenterSubprocessorHistories
-
-**Type:** [TrustCenterSubprocessorHistoryConnection!](objects#trustcentersubprocessorhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#trustcentersubprocessorhistoryorder"><code>TrustCenterSubprocessorHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TrustCenterSubprocessorHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#trustcentersubprocessorhistorywhereinput"><code>TrustCenterSubprocessorHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TrustCenterSubprocessorHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -12201,74 +8552,6 @@ id<br />
 </tbody>
 </table>
 
-## trustCenterWatermarkConfigHistories
-
-**Type:** [TrustCenterWatermarkConfigHistoryConnection!](objects#trustcenterwatermarkconfighistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#trustcenterwatermarkconfighistoryorder"><code>TrustCenterWatermarkConfigHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for TrustCenterWatermarkConfigHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#trustcenterwatermarkconfighistorywhereinput"><code>TrustCenterWatermarkConfigHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for TrustCenterWatermarkConfigHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## trustCenterWatermarkConfigs
 
 **Type:** [TrustCenterWatermarkConfigConnection!](objects#trustcenterwatermarkconfigconnection)
@@ -12360,74 +8643,6 @@ id<br />
 </tbody>
 </table>
 
-## userHistories
-
-**Type:** [UserHistoryConnection!](objects#userhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#userhistoryorder"><code>UserHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for UserHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#userhistorywhereinput"><code>UserHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for UserHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## users
 
 **Type:** [UserConnection!](objects#userconnection)
@@ -12514,74 +8729,6 @@ id<br />
 </td>
 <td>
 <p>ID of the userSetting</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## userSettingHistories
-
-**Type:** [UserSettingHistoryConnection!](objects#usersettinghistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#usersettinghistoryorder"><code>UserSettingHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for UserSettingHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#usersettinghistorywhereinput"><code>UserSettingHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for UserSettingHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -12746,74 +8893,6 @@ id<br />
 </tbody>
 </table>
 
-## vulnerabilityHistories
-
-**Type:** [VulnerabilityHistoryConnection!](objects#vulnerabilityhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#vulnerabilityhistoryorder"><code>VulnerabilityHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for VulnerabilityHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#vulnerabilityhistorywhereinput"><code>VulnerabilityHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for VulnerabilityHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## vulnerabilitySearch
 
 **Type:** [VulnerabilityConnection](objects#vulnerabilityconnection)
@@ -12964,74 +9043,6 @@ id<br />
 </tbody>
 </table>
 
-## workflowAssignmentHistories
-
-**Type:** [WorkflowAssignmentHistoryConnection!](objects#workflowassignmenthistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#workflowassignmenthistoryorder"><code>WorkflowAssignmentHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for WorkflowAssignmentHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#workflowassignmenthistorywhereinput"><code>WorkflowAssignmentHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for WorkflowAssignmentHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## workflowAssignments
 
 **Type:** [WorkflowAssignmentConnection!](objects#workflowassignmentconnection)
@@ -13118,74 +9129,6 @@ id<br />
 </td>
 <td>
 <p>ID of the workflowAssignmentTarget</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## workflowAssignmentTargetHistories
-
-**Type:** [WorkflowAssignmentTargetHistoryConnection!](objects#workflowassignmenttargethistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#workflowassignmenttargethistoryorder"><code>WorkflowAssignmentTargetHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for WorkflowAssignmentTargetHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#workflowassignmenttargethistorywhereinput"><code>WorkflowAssignmentTargetHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for WorkflowAssignmentTargetHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -13282,74 +9225,6 @@ id<br />
 </tbody>
 </table>
 
-## workflowDefinitionHistories
-
-**Type:** [WorkflowDefinitionHistoryConnection!](objects#workflowdefinitionhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#workflowdefinitionhistoryorder"><code>WorkflowDefinitionHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for WorkflowDefinitionHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#workflowdefinitionhistorywhereinput"><code>WorkflowDefinitionHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for WorkflowDefinitionHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## workflowDefinitions
 
 **Type:** [WorkflowDefinitionConnection!](objects#workflowdefinitionconnection)
@@ -13436,74 +9311,6 @@ id<br />
 </td>
 <td>
 <p>ID of the workflowEvent</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## workflowEventHistories
-
-**Type:** [WorkflowEventHistoryConnection!](objects#workfloweventhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#workfloweventhistoryorder"><code>WorkflowEventHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for WorkflowEventHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#workfloweventhistorywhereinput"><code>WorkflowEventHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for WorkflowEventHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -13600,74 +9407,6 @@ id<br />
 </tbody>
 </table>
 
-## workflowInstanceHistories
-
-**Type:** [WorkflowInstanceHistoryConnection!](objects#workflowinstancehistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#workflowinstancehistoryorder"><code>WorkflowInstanceHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for WorkflowInstanceHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#workflowinstancehistorywhereinput"><code>WorkflowInstanceHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for WorkflowInstanceHistories returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## workflowInstances
 
 **Type:** [WorkflowInstanceConnection!](objects#workflowinstanceconnection)
@@ -13754,74 +9493,6 @@ id<br />
 </td>
 <td>
 <p>ID of the workflowObjectRef</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## workflowObjectRefHistories
-
-**Type:** [WorkflowObjectRefHistoryConnection!](objects#workflowobjectrefhistoryconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#workflowobjectrefhistoryorder"><code>WorkflowObjectRefHistoryOrder</code></a>
-</td>
-<td>
-<p>Ordering options for WorkflowObjectRefHistories returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#workflowobjectrefhistorywhereinput"><code>WorkflowObjectRefHistoryWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for WorkflowObjectRefHistories returned from the connection.</p>
 </td>
 </tr>
 </tbody>

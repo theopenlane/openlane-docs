@@ -17,6 +17,10 @@ The `Address` scalar type represents a physical or mailing address.
 This scalar can be used to store and validate address information in the GraphQL schema.
 It contains `Line1`, `Line2`, `City`, `State`, `PostalCode`, and `Country`
 
+## Any
+
+
+
 ## AssessmentMethod
 
 The `AssessmentMethod` scalar type represents methods that can be used during the audit to assess the control implementation
@@ -50,6 +54,10 @@ https://relay.dev/graphql/connections.htm#sec-Cursor
 ## DateTime
 
 DateTime allows clients to use multiple time/date formats ( 2006-01-10 or 2025-04-28T04:00:00Z )
+
+## EvidenceRequests
+
+The EvidenceRequests scalar type that represents documents or artifacts that can be collected to demonstrate compliance with a control
 
 ## ExampleEvidence
 
@@ -103,6 +111,10 @@ This scalar is used to track SSO verification times for organizations in the con
 ## String
 
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
+
+## TestingProcedures
+
+The TestingProcedures scalar type that represents steps to take to test a control; they can come directly from the control source or pulled from external sources
 
 ## Time
 

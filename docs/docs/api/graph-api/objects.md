@@ -123,6 +123,15 @@ details<br />
 </tr>
 <tr>
 <td>
+detailsJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the action_plan in JSON format</p>
+</td>
+</tr>
+<tr>
+<td>
 approvalRequired<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -253,7 +262,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -299,6 +308,15 @@ actionPlanKindID<br />
 </td>
 <td>
 <p>the kind of the action_plan</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -424,6 +442,222 @@ owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -1093,6 +1327,96 @@ file<br />
 
 </td>
 </tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this actionPlan has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+</td>
+<td>
+<p>Returns the active workflow instance for this actionPlan if one is running</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1262,498 +1586,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#actionplan"><code>ActionPlan</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ActionPlanHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#actionplanhistoryoptype"><code>ActionPlanHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-revision<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>revision of the object as a semver (e.g. v1.0.0), by default any update will bump the patch version, unless the revision_bump field is set</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#actionplanhistorydocumentstatus"><code>ActionPlanHistoryDocumentStatus</code></a>
-</td>
-<td>
-<p>status of the action_plan, e.g. draft, published, archived, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-actionPlanType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `action_plan_kind_name` instead.</blockquote>
-
-<p>type of the action_plan, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>details of the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-approvalRequired<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether approval is required for edits to the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-reviewDue<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the date the action_plan should be reviewed, calculated based on the review_frequency if not directly set</p>
-</td>
-</tr>
-<tr>
-<td>
-reviewFrequency<br />
-<a href="enums#actionplanhistoryfrequency"><code>ActionPlanHistoryFrequency</code></a>
-</td>
-<td>
-<p>the frequency at which the action_plan should be reviewed, used to calculate the review_due date</p>
-</td>
-</tr>
-<tr>
-<td>
-approverID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group responsible for approving the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-delegateID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group responsible for approving the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-summary<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tagSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>auto-generated tag suggestions for the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedTagSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tag suggestions dismissed by the user for the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-controlSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>proposed controls referenced in the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedControlSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>control suggestions dismissed by the user for the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-improvementSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>suggested improvements for the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedImprovementSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>improvement suggestions dismissed by the user for the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the url used to create or update the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-fileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the most recent file id if this action_plan was created from a file</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-actionPlanKindName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-actionPlanKindID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the action_plan</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>short title describing the action plan</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>detailed description of remediation steps and objectives</p>
-</td>
-</tr>
-<tr>
-<td>
-dueDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>due date of the action plan</p>
-</td>
-</tr>
-<tr>
-<td>
-completedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>timestamp when the action plan was completed</p>
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="enums#actionplanhistorypriority"><code>ActionPlanHistoryPriority</code></a>
-</td>
-<td>
-<p>priority of the action plan</p>
-</td>
-</tr>
-<tr>
-<td>
-requiresApproval<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>indicates if the action plan requires explicit approval before closure</p>
-</td>
-</tr>
-<tr>
-<td>
-blocked<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>true when the action plan is currently blocked</p>
-</td>
-</tr>
-<tr>
-<td>
-blockerReason<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>context on why the action plan is blocked</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>additional structured metadata for the action plan</p>
-</td>
-</tr>
-<tr>
-<td>
-rawPayload<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw payload received from the integration for auditing and troubleshooting</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>source of the action plan</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ActionPlanHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#actionplanhistoryedge"><code>[ActionPlanHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ActionPlanHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#actionplanhistory"><code>ActionPlanHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -2592,6 +2424,27 @@ where<br />
 </tbody>
 </table>
 
+## AssessmentBulkDeletePayload
+
+Return response for deleteBulkAssessment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted assessment IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## AssessmentConnection
 
 A connection to a list of items.
@@ -2686,235 +2539,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#assessment"><code>Assessment</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AssessmentHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#assessmenthistoryoptype"><code>AssessmentHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the assessment, e.g. cloud providers, marketing team</p>
-</td>
-</tr>
-<tr>
-<td>
-assessmentType<br />
-<a href="enums#assessmenthistoryassessmenttype"><code>AssessmentHistoryAssessmentType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the template id associated with this assessment. You can either provide this alone or provide both the jsonconfig and uischema</p>
-</td>
-</tr>
-<tr>
-<td>
-jsonconfig<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>the jsonschema object of the questionnaire. If not provided it will be inherited from the template.</p>
-</td>
-</tr>
-<tr>
-<td>
-uischema<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>the uischema for the template to render in the UI. If not provided, it will be inherited from the template</p>
-</td>
-</tr>
-<tr>
-<td>
-responseDueDuration<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>the duration in seconds that the user has to complete the assessment response, defaults to 7 days</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AssessmentHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#assessmenthistoryedge"><code>[AssessmentHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AssessmentHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#assessmenthistory"><code>AssessmentHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -3221,253 +2845,6 @@ cursor<br />
 </tbody>
 </table>
 
-## AssessmentResponseHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#assessmentresponsehistoryoptype"><code>AssessmentResponseHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-assessmentID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the assessment this response is for</p>
-</td>
-</tr>
-<tr>
-<td>
-email<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the email address of the recipient</p>
-</td>
-</tr>
-<tr>
-<td>
-sendAttempts<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>the number of attempts made to perform email send to the recipient about this assessment, maximum of 5</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#assessmentresponsehistoryassessmentresponsestatus"><code>AssessmentResponseHistoryAssessmentResponseStatus!</code></a>
-</td>
-<td>
-<p>the current status of the assessment for this user</p>
-</td>
-</tr>
-<tr>
-<td>
-assignedAt<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-<p>when the assessment was assigned to the user</p>
-</td>
-</tr>
-<tr>
-<td>
-startedAt<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-<p>when the user started the assessment</p>
-</td>
-</tr>
-<tr>
-<td>
-completedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>when the user completed the assessment</p>
-</td>
-</tr>
-<tr>
-<td>
-dueDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>when the assessment response is due</p>
-</td>
-</tr>
-<tr>
-<td>
-documentDataID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the document containing the user&#39;s response data</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AssessmentResponseHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#assessmentresponsehistoryedge"><code>[AssessmentResponseHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AssessmentResponseHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#assessmentresponsehistory"><code>AssessmentResponseHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## AssessmentUpdatePayload
 
 Return response for updateAssessment mutation
@@ -3562,7 +2939,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -4252,271 +3629,6 @@ cursor<br />
 </tbody>
 </table>
 
-## AssetHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#assethistoryoptype"><code>AssetHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-assetType<br />
-<a href="enums#assethistoryassettype"><code>AssetHistoryAssetType!</code></a>
-</td>
-<td>
-<p>the type of the asset, e.g. technology, domain, device, etc</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the asset, e.g. matts computer, office router, IP address, etc</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-identifier<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>unique identifier like domain, device id, etc</p>
-</td>
-</tr>
-<tr>
-<td>
-website<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the website of the asset, if applicable</p>
-</td>
-</tr>
-<tr>
-<td>
-cpe<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the CPE (Common Platform Enumeration) of the asset, if applicable</p>
-</td>
-</tr>
-<tr>
-<td>
-categories<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>the categories of the asset, e.g. web server, database, etc</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AssetHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#assethistoryedge"><code>[AssetHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AssetHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#assethistory"><code>AssetHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## AssetUpdatePayload
 
 Return response for updateAsset mutation
@@ -4533,145 +3645,6 @@ asset<br />
 </td>
 <td>
 <p>Updated asset</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AuditLog
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-table<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-time<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-changes<br />
-<a href="scalars#change"><code>[Change!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## AuditLogConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#auditlogedge"><code>[AuditLogEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## AuditLogEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#auditlog"><code>AuditLog</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
 </td>
 </tr>
 </tbody>
@@ -4756,7 +3729,7 @@ ownerID<br />
 <tr>
 <td>
 fullName<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the full name of the contact</p>
@@ -5155,244 +4128,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ContactHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#contacthistoryoptype"><code>ContactHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-fullName<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the full name of the contact</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the title of the contact</p>
-</td>
-</tr>
-<tr>
-<td>
-company<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the company of the contact</p>
-</td>
-</tr>
-<tr>
-<td>
-email<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the email of the contact</p>
-</td>
-</tr>
-<tr>
-<td>
-phoneNumber<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the phone number of the contact</p>
-</td>
-</tr>
-<tr>
-<td>
-address<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the address of the contact</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#contacthistoryuserstatus"><code>ContactHistoryUserStatus!</code></a>
-</td>
-<td>
-<p>status of the contact</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ContactHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#contacthistoryedge"><code>[ContactHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ContactHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#contacthistory"><code>ContactHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ContactUpdatePayload
 
 Return response for updateContact mutation
@@ -5506,6 +4241,15 @@ description<br />
 </td>
 <td>
 <p>description of what the control is supposed to accomplish</p>
+</td>
+</tr>
+<tr>
+<td>
+descriptionJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the control in JSON format</p>
 </td>
 </tr>
 <tr>
@@ -5683,6 +4427,24 @@ references<br />
 </tr>
 <tr>
 <td>
+testingProcedures<br />
+<a href="scalars#testingprocedures"><code>[TestingProcedures!]</code></a>
+</td>
+<td>
+<p>reference steps to take to test the control</p>
+</td>
+</tr>
+<tr>
+<td>
+evidenceRequests<br />
+<a href="scalars#evidencerequests"><code>[EvidenceRequests!]</code></a>
+</td>
+<td>
+<p>list of common evidence requests for the control</p>
+</td>
+</tr>
+<tr>
+<td>
 controlOwnerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -5751,6 +4513,15 @@ controlKindID<br />
 </td>
 <td>
 <p>the kind of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -6412,6 +5183,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+discussions<br />
+<a href="objects#discussionconnection"><code>DiscussionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#discussionorder"><code>[DiscussionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#discussionwhereinput"><code>DiscussionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Discussions returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -7265,6 +6108,24 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this control has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+</td>
+<td>
+<p>Returns the active workflow instance for this control if one is running</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -7622,462 +6483,6 @@ node<br />
 </tbody>
 </table>
 
-## ControlHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#controlhistoryoptype"><code>ControlHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>human readable title of the control for quick identification</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>description of what the control is supposed to accomplish</p>
-</td>
-</tr>
-<tr>
-<td>
-aliases<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>additional names (ref_codes) for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-referenceID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal reference id of the control, can be used for internal tracking</p>
-</td>
-</tr>
-<tr>
-<td>
-auditorReferenceID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>external auditor id of the control, can be used to map to external audit partner mappings</p>
-</td>
-</tr>
-<tr>
-<td>
-responsiblePartyID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the party responsible for the control, usually used when the control is implemented by a third party</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#controlhistorycontrolstatus"><code>ControlHistoryControlStatus</code></a>
-</td>
-<td>
-<p>status of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="enums#controlhistorycontrolsource"><code>ControlHistoryControlSource</code></a>
-</td>
-<td>
-<p>source of the control, e.g. framework, template, custom, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-referenceFramework<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the reference framework for the control if it came from a standard, empty if not associated with a standard</p>
-</td>
-</tr>
-<tr>
-<td>
-referenceFrameworkRevision<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
-</td>
-</tr>
-<tr>
-<td>
-controlType<br />
-<a href="enums#controlhistorycontroltype"><code>ControlHistoryControlType</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `control_kind_name` instead.</blockquote>
-
-<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-categoryID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category id of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-subcategory<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcategory of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedCategories<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>mapped categories of the control to other standards</p>
-</td>
-</tr>
-<tr>
-<td>
-assessmentObjectives<br />
-<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
-</td>
-<td>
-<p>objectives of the audit assessment for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-assessmentMethods<br />
-<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
-</td>
-<td>
-<p>methods used to verify the control implementation during an audit</p>
-</td>
-</tr>
-<tr>
-<td>
-controlQuestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>questions to ask to verify the control</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationGuidance<br />
-<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
-</td>
-<td>
-<p>implementation guidance for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
-<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
-</td>
-<td>
-<p>examples of evidence for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-references<br />
-<a href="scalars#reference"><code>[Reference!]</code></a>
-</td>
-<td>
-<p>references for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-controlOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group that owns the control</p>
-</td>
-</tr>
-<tr>
-<td>
-delegateID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group that is temporarily delegated to own the control</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-controlKindName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-controlKindID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-refCode<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the unique reference code for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-standardID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the standard that the control belongs to, if applicable</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#controlhistoryedge"><code>[ControlHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#controlhistory"><code>ControlHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ControlImplementation
 
 
@@ -8224,6 +6629,15 @@ details<br />
 </td>
 <td>
 <p>details of the control implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+detailsJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the control implementation in JSON format</p>
 </td>
 </tr>
 <tr>
@@ -8823,253 +7237,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ControlImplementationHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#controlimplementationhistoryoptype"><code>ControlImplementationHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#controlimplementationhistorydocumentstatus"><code>ControlImplementationHistoryDocumentStatus</code></a>
-</td>
-<td>
-<p>status of the %s, e.g. draft, published, archived, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>date the control was implemented</p>
-</td>
-</tr>
-<tr>
-<td>
-verified<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>set to true if the control implementation has been verified</p>
-</td>
-</tr>
-<tr>
-<td>
-verificationDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>date the control implementation was verified</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>details of the control implementation</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlImplementationHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#controlimplementationhistoryedge"><code>[ControlImplementationHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlImplementationHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#controlimplementationhistory"><code>ControlImplementationHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ControlImplementationUpdatePayload
 
 Return response for updateControlImplementation mutation
@@ -9228,6 +7395,15 @@ desiredOutcome<br />
 </td>
 <td>
 <p>the desired outcome or target of the control objective</p>
+</td>
+</tr>
+<tr>
+<td>
+desiredOutcomeJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the control objective in JSON format</p>
 </td>
 </tr>
 <tr>
@@ -10304,289 +8480,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ControlObjectiveHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#controlobjectivehistoryoptype"><code>ControlObjectiveHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-revision<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>revision of the object as a semver (e.g. v1.0.0), by default any update will bump the patch version, unless the revision_bump field is set</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-desiredOutcome<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the desired outcome or target of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#controlobjectivehistoryobjectivestatus"><code>ControlObjectiveHistoryObjectiveStatus</code></a>
-</td>
-<td>
-<p>status of the control objective</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="enums#controlobjectivehistorycontrolsource"><code>ControlObjectiveHistoryControlSource</code></a>
-</td>
-<td>
-<p>source of the control, e.g. framework, template, custom, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-controlObjectiveType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the control objective e.g. compliance, financial, operational, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-subcategory<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcategory of the control</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlObjectiveHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#controlobjectivehistoryedge"><code>[ControlObjectiveHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ControlObjectiveHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#controlobjectivehistory"><code>ControlObjectiveHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ControlObjectiveUpdatePayload
 
 Return response for updateControlObjective mutation
@@ -10925,235 +8818,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#customdomain"><code>CustomDomain</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## CustomDomainHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#customdomainhistoryoptype"><code>CustomDomainHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-cnameRecord<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the custom domain</p>
-</td>
-</tr>
-<tr>
-<td>
-mappableDomainID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>The mappable domain id that this custom domain maps to</p>
-</td>
-</tr>
-<tr>
-<td>
-dnsVerificationID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The ID of the dns verification record</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## CustomDomainHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#customdomainhistoryedge"><code>[CustomDomainHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## CustomDomainHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#customdomainhistory"><code>CustomDomainHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -12805,379 +10469,6 @@ cursor<br />
 </tbody>
 </table>
 
-## DirectoryAccountHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#directoryaccounthistoryoptype"><code>DirectoryAccountHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-integrationID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>integration that owns this directory account</p>
-</td>
-</tr>
-<tr>
-<td>
-directorySyncRunID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>sync run that produced this snapshot</p>
-</td>
-</tr>
-<tr>
-<td>
-externalID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>stable identifier from the directory system</p>
-</td>
-</tr>
-<tr>
-<td>
-secondaryKey<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>optional secondary identifier such as Azure immutable ID</p>
-</td>
-</tr>
-<tr>
-<td>
-canonicalEmail<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lower-cased primary email address, if present</p>
-</td>
-</tr>
-<tr>
-<td>
-displayName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>provider supplied display name</p>
-</td>
-</tr>
-<tr>
-<td>
-givenName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>first name reported by the provider</p>
-</td>
-</tr>
-<tr>
-<td>
-familyName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>last name reported by the provider</p>
-</td>
-</tr>
-<tr>
-<td>
-jobTitle<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>title captured at sync time</p>
-</td>
-</tr>
-<tr>
-<td>
-department<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>department captured at sync time</p>
-</td>
-</tr>
-<tr>
-<td>
-organizationUnit<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>organizational unit or OU path the account lives under</p>
-</td>
-</tr>
-<tr>
-<td>
-accountType<br />
-<a href="enums#directoryaccounthistorydirectoryaccounttype"><code>DirectoryAccountHistoryDirectoryAccountType</code></a>
-</td>
-<td>
-<p>type of principal represented in the directory</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#directoryaccounthistorydirectoryaccountstatus"><code>DirectoryAccountHistoryDirectoryAccountStatus!</code></a>
-</td>
-<td>
-<p>lifecycle status returned by the directory</p>
-</td>
-</tr>
-<tr>
-<td>
-mfaState<br />
-<a href="enums#directoryaccounthistorydirectoryaccountmfastate"><code>DirectoryAccountHistoryDirectoryAccountMFAState!</code></a>
-</td>
-<td>
-<p>multi-factor authentication state reported by the directory</p>
-</td>
-</tr>
-<tr>
-<td>
-lastSeenIP<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>last IP address observed by the provider, if any</p>
-</td>
-</tr>
-<tr>
-<td>
-lastLoginAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>timestamp of the most recent login reported by the provider</p>
-</td>
-</tr>
-<tr>
-<td>
-observedAt<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-<p>time when this snapshot was recorded</p>
-</td>
-</tr>
-<tr>
-<td>
-profileHash<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>hash of the normalized profile payload for change detection</p>
-</td>
-</tr>
-<tr>
-<td>
-profile<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>flattened attribute bag used for filtering/diffing</p>
-</td>
-</tr>
-<tr>
-<td>
-rawProfileFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>object storage file identifier that holds the raw upstream payload</p>
-</td>
-</tr>
-<tr>
-<td>
-sourceVersion<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cursor or ETag supplied by the source system for auditing</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DirectoryAccountHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#directoryaccounthistoryedge"><code>[DirectoryAccountHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DirectoryAccountHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#directoryaccounthistory"><code>DirectoryAccountHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## DirectoryAccountUpdatePayload
 
 Return response for updateDirectoryAccount mutation
@@ -13797,325 +11088,6 @@ cursor<br />
 </tbody>
 </table>
 
-## DirectoryGroupHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#directorygrouphistoryoptype"><code>DirectoryGroupHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-integrationID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>integration that owns this directory group</p>
-</td>
-</tr>
-<tr>
-<td>
-directorySyncRunID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>sync run that produced this snapshot</p>
-</td>
-</tr>
-<tr>
-<td>
-externalID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>stable identifier from the directory system</p>
-</td>
-</tr>
-<tr>
-<td>
-email<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>primary group email address, when applicable</p>
-</td>
-</tr>
-<tr>
-<td>
-displayName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>directory supplied display name</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>free-form description captured at sync time</p>
-</td>
-</tr>
-<tr>
-<td>
-classification<br />
-<a href="enums#directorygrouphistorydirectorygroupclassification"><code>DirectoryGroupHistoryDirectoryGroupClassification!</code></a>
-</td>
-<td>
-<p>provider classification such as security, distribution, or dynamic</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#directorygrouphistorydirectorygroupstatus"><code>DirectoryGroupHistoryDirectoryGroupStatus!</code></a>
-</td>
-<td>
-<p>lifecycle status reported by the directory</p>
-</td>
-</tr>
-<tr>
-<td>
-externalSharingAllowed<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when directory settings allow sharing outside the tenant</p>
-</td>
-</tr>
-<tr>
-<td>
-memberCount<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>member count reported by the directory</p>
-</td>
-</tr>
-<tr>
-<td>
-observedAt<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-<p>time when this snapshot was recorded</p>
-</td>
-</tr>
-<tr>
-<td>
-profileHash<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>hash of the normalized payload for diffing</p>
-</td>
-</tr>
-<tr>
-<td>
-profile<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>flattened attribute bag used for filtering/diffing</p>
-</td>
-</tr>
-<tr>
-<td>
-rawProfileFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>object storage file identifier containing the raw upstream payload</p>
-</td>
-</tr>
-<tr>
-<td>
-sourceVersion<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cursor or ETag supplied by the source system for auditing</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DirectoryGroupHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#directorygrouphistoryedge"><code>[DirectoryGroupHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DirectoryGroupHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#directorygrouphistory"><code>DirectoryGroupHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## DirectoryGroupUpdatePayload
 
 Return response for updateDirectoryGroup mutation
@@ -14619,280 +11591,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#directorymembership"><code>DirectoryMembership</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DirectoryMembershipHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#directorymembershiphistoryoptype"><code>DirectoryMembershipHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-integrationID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>integration that owns this directory membership</p>
-</td>
-</tr>
-<tr>
-<td>
-directorySyncRunID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>sync run that produced this snapshot</p>
-</td>
-</tr>
-<tr>
-<td>
-directoryAccountID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>directory account participating in this membership</p>
-</td>
-</tr>
-<tr>
-<td>
-directoryGroupID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>directory group associated with this membership</p>
-</td>
-</tr>
-<tr>
-<td>
-role<br />
-<a href="enums#directorymembershiphistorydirectorymembershiprole"><code>DirectoryMembershipHistoryDirectoryMembershipRole</code></a>
-</td>
-<td>
-<p>membership role reported by the provider</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mechanism used to populate the membership (api, scim, csv, etc)</p>
-</td>
-</tr>
-<tr>
-<td>
-firstSeenAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>first time the membership was detected</p>
-</td>
-</tr>
-<tr>
-<td>
-lastSeenAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>most recent time the membership was detected</p>
-</td>
-</tr>
-<tr>
-<td>
-observedAt<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-<p>time when this record was created</p>
-</td>
-</tr>
-<tr>
-<td>
-lastConfirmedRunID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>sync run identifier that most recently confirmed this membership</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw metadata associated with this membership from the provider</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DirectoryMembershipHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#directorymembershiphistoryedge"><code>[DirectoryMembershipHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DirectoryMembershipHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#directorymembershiphistory"><code>DirectoryMembershipHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -15487,6 +12185,373 @@ directorySyncRun<br />
 </tbody>
 </table>
 
+## Discussion
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the unique discussion identifier from external system, e.g. plate discussion id, only required if synced from external system</p>
+</td>
+</tr>
+<tr>
+<td>
+isResolved<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether the discussion is resolved</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+comments<br />
+<a href="objects#noteconnection"><code>NoteConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#noteorder"><code>[NoteOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Notes returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notewhereinput"><code>NoteWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+control<br />
+<a href="objects#control"><code>Control</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subcontrol<br />
+<a href="objects#subcontrol"><code>Subcontrol</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+procedure<br />
+<a href="objects#procedure"><code>Procedure</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+risk<br />
+<a href="objects#risk"><code>Risk</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicy<br />
+<a href="objects#internalpolicy"><code>InternalPolicy</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## DiscussionBulkCreatePayload
+
+Return response for createBulkDiscussion mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+discussions<br />
+<a href="objects#discussion"><code>[Discussion!]</code></a>
+</td>
+<td>
+<p>Created discussions</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DiscussionConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#discussionedge"><code>[DiscussionEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DiscussionCreatePayload
+
+Return response for createDiscussion mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+discussion<br />
+<a href="objects#discussion"><code>Discussion!</code></a>
+</td>
+<td>
+<p>Created discussion</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DiscussionDeletePayload
+
+Return response for deleteDiscussion mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted discussion ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DiscussionEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#discussion"><code>Discussion</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## DiscussionUpdatePayload
+
+Return response for updateDiscussion mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+discussion<br />
+<a href="objects#discussion"><code>Discussion!</code></a>
+</td>
+<td>
+<p>Updated discussion</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## DNSVerification
 
 
@@ -15864,262 +12929,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#dnsverification"><code>DNSVerification</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DNSVerificationHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#dnsverificationhistoryoptype"><code>DNSVerificationHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-cloudflareHostnameID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>The ID of the custom domain in cloudflare</p>
-</td>
-</tr>
-<tr>
-<td>
-dnsTxtRecord<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the dns txt record</p>
-</td>
-</tr>
-<tr>
-<td>
-dnsTxtValue<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the expected value of the dns txt record</p>
-</td>
-</tr>
-<tr>
-<td>
-dnsVerificationStatus<br />
-<a href="enums#dnsverificationhistorydnsverificationstatus"><code>DNSVerificationHistoryDNSVerificationStatus!</code></a>
-</td>
-<td>
-<p>Status of the domain verification</p>
-</td>
-</tr>
-<tr>
-<td>
-dnsVerificationStatusReason<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Reason of the dns verification status, for giving the user diagnostic info</p>
-</td>
-</tr>
-<tr>
-<td>
-acmeChallengePath<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Path under /.well-known/acme-challenge/ to serve the ACME challenge</p>
-</td>
-</tr>
-<tr>
-<td>
-expectedAcmeChallengeValue<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the expected value of the acme challenge record</p>
-</td>
-</tr>
-<tr>
-<td>
-acmeChallengeStatus<br />
-<a href="enums#dnsverificationhistorysslverificationstatus"><code>DNSVerificationHistorySSLVerificationStatus!</code></a>
-</td>
-<td>
-<p>Status of the ACME challenge validation</p>
-</td>
-</tr>
-<tr>
-<td>
-acmeChallengeStatusReason<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Reason of the ACME status, for giving the user diagnostic info</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DNSVerificationHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#dnsverificationhistoryedge"><code>[DNSVerificationHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DNSVerificationHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#dnsverificationhistory"><code>DNSVerificationHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -16570,199 +13379,6 @@ cursor<br />
 </tbody>
 </table>
 
-## DocumentDataHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#documentdatahistoryoptype"><code>DocumentDataHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-templateID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the template id of the document</p>
-</td>
-</tr>
-<tr>
-<td>
-data<br />
-<a href="scalars#map"><code>Map!</code></a>
-</td>
-<td>
-<p>the json data of the document</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DocumentDataHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#documentdatahistoryedge"><code>[DocumentDataHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## DocumentDataHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#documentdatahistory"><code>DocumentDataHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## DocumentDataUpdatePayload
 
 Return response for updateDocumentData mutation
@@ -16857,7 +13473,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -17763,262 +14379,6 @@ cursor<br />
 </tbody>
 </table>
 
-## EntityHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#entityhistoryoptype"><code>EntityHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the name of the entity</p>
-</td>
-</tr>
-<tr>
-<td>
-displayName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The entity&#39;s displayed &#39;friendly&#39; name</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>An optional description of the entity</p>
-</td>
-</tr>
-<tr>
-<td>
-domains<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>domains associated with the entity</p>
-</td>
-</tr>
-<tr>
-<td>
-entityTypeID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The type of the entity</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>status of the entity</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EntityHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#entityhistoryedge"><code>[EntityHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EntityHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#entityhistory"><code>EntityHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## EntityType
 
 
@@ -18351,217 +14711,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#entitytype"><code>EntityType</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EntityTypeHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#entitytypehistoryoptype"><code>EntityTypeHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the entity</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EntityTypeHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#entitytypehistoryedge"><code>[EntityTypeHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EntityTypeHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#entitytypehistory"><code>EntityTypeHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -19852,6 +16001,15 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -20516,6 +16674,96 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this evidence has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+</td>
+<td>
+<p>Returns the active workflow instance for this evidence if one is running</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -20634,271 +16882,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#evidence"><code>Evidence</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EvidenceHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#evidencehistoryoptype"><code>EvidenceHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the evidence</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the description of the evidence, what is contained in the uploaded file(s) or url(s)</p>
-</td>
-</tr>
-<tr>
-<td>
-collectionProcedure<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>description of how the evidence was collected</p>
-</td>
-</tr>
-<tr>
-<td>
-creationDate<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-<p>the date the evidence was retrieved</p>
-</td>
-</tr>
-<tr>
-<td>
-renewalDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the date the evidence should be renewed, defaults to a year from entry date</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the source of the evidence, e.g. system the evidence was retrieved from (splunk, github, etc)</p>
-</td>
-</tr>
-<tr>
-<td>
-isAutomated<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether the evidence was automatically generated</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the url of the evidence if not uploaded directly to the system</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#evidencehistoryevidencestatus"><code>EvidenceHistoryEvidenceStatus</code></a>
-</td>
-<td>
-<p>the status of the evidence, ready, approved, needs renewal, missing artifact, rejected</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EvidenceHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#evidencehistoryedge"><code>[EvidenceHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EvidenceHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#evidencehistory"><code>EvidenceHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -22094,6 +18077,15 @@ presignedURL<br />
 
 </td>
 </tr>
+<tr>
+<td>
+base64<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -22170,352 +18162,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#file"><code>File</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## FileHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#filehistoryoptype"><code>FileHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-providedFileName<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the file provided in the payload key without the extension</p>
-</td>
-</tr>
-<tr>
-<td>
-providedFileExtension<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the extension of the file provided</p>
-</td>
-</tr>
-<tr>
-<td>
-providedFileSize<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>the computed size of the file in the original http request</p>
-</td>
-</tr>
-<tr>
-<td>
-persistedFileSize<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-detectedMimeType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the mime type detected by the system</p>
-</td>
-</tr>
-<tr>
-<td>
-md5Hash<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the computed md5 hash of the file calculated after we received the contents of the file, but before the file was written to permanent storage</p>
-</td>
-</tr>
-<tr>
-<td>
-detectedContentType<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the content type of the HTTP request - may be different than MIME type as multipart-form can transmit multiple files and different types</p>
-</td>
-</tr>
-<tr>
-<td>
-storeKey<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the key parsed out of a multipart-form request; if we allow multiple files to be uploaded we may want our API specifications to require the use of different keys allowing us to perform easier conditional evaluation on the key and what to do with the file based on key</p>
-</td>
-</tr>
-<tr>
-<td>
-categoryType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the category type of the file, if any (e.g. evidence, invoice, etc.)</p>
-</td>
-</tr>
-<tr>
-<td>
-uri<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the full URI of the file</p>
-</td>
-</tr>
-<tr>
-<td>
-storageScheme<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the storage scheme of the file, e.g. file://, s3://, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-storageVolume<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the storage volume of the file which typically will be the organization ID the file belongs to - this is not a literal volume but the overlay file system mapping</p>
-</td>
-</tr>
-<tr>
-<td>
-storagePath<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the storage path is the second-level directory of the file path, typically the correlating logical object ID the file is associated with; files can be stand alone objects and not always correlated to a logical one, so this path of the tree may be empty</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>additional metadata about the file</p>
-</td>
-</tr>
-<tr>
-<td>
-storageRegion<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the region the file is stored in, if applicable</p>
-</td>
-</tr>
-<tr>
-<td>
-storageProvider<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the storage provider the file is stored in, if applicable</p>
-</td>
-</tr>
-<tr>
-<td>
-lastAccessedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## FileHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#filehistoryedge"><code>[FileHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## FileHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#filehistory"><code>FileHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -24791,244 +20437,6 @@ cursor<br />
 </tbody>
 </table>
 
-## FindingControlHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#findingcontrolhistoryoptype"><code>FindingControlHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-findingID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the id of the finding associated with the control</p>
-</td>
-</tr>
-<tr>
-<td>
-controlID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the id of the control mapped to the finding when it exists in the catalog</p>
-</td>
-</tr>
-<tr>
-<td>
-standardID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the standard that the control belongs to when it exists in the catalog</p>
-</td>
-</tr>
-<tr>
-<td>
-externalStandard<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>external identifier for the standard provided by the source system such as iso or hipaa</p>
-</td>
-</tr>
-<tr>
-<td>
-externalStandardVersion<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version for the external standard provided by the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-externalControlID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>control identifier provided by the source system such as A.5.10</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the integration source that provided the mapping</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>additional metadata about the control mapping from the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-discoveredAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the mapping was first observed</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## FindingControlHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#findingcontrolhistoryedge"><code>[FindingControlHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## FindingControlHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#findingcontrolhistory"><code>FindingControlHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## FindingControlUpdatePayload
 
 Return response for updateFindingControl mutation
@@ -25105,550 +20513,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#finding"><code>Finding</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## FindingHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#findinghistoryoptype"><code>FindingHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-externalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>external identifier from the integration source for the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-externalOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the owner of the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>system that produced the finding, e.g. gcp_scc</p>
-</td>
-</tr>
-<tr>
-<td>
-resourceName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>resource identifier provided by the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-displayName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>display name for the finding when provided by the source</p>
-</td>
-</tr>
-<tr>
-<td>
-state<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>state reported by the source system, such as ACTIVE or INACTIVE</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>primary category of the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-categories<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>normalized categories for the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-findingClass<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>classification provided by the source, e.g. MISCONFIGURATION</p>
-</td>
-</tr>
-<tr>
-<td>
-severity<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>severity label for the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-numericSeverity<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>numeric severity score for the finding if provided</p>
-</td>
-</tr>
-<tr>
-<td>
-score<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>aggregated score such as CVSS for the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-impact<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>impact score or rating for the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-exploitability<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>exploitability score or rating for the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>priority assigned to the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-open<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the finding is still open</p>
-</td>
-</tr>
-<tr>
-<td>
-blocksProduction<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the finding blocks production changes</p>
-</td>
-</tr>
-<tr>
-<td>
-production<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the finding affects production systems</p>
-</td>
-</tr>
-<tr>
-<td>
-public<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the finding is publicly disclosed</p>
-</td>
-</tr>
-<tr>
-<td>
-validated<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the finding has been validated by the security team</p>
-</td>
-</tr>
-<tr>
-<td>
-assessmentID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>identifier for the assessment that generated the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>long form description of the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-recommendation<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>short recommendation text from the source system (deprecated upstream)</p>
-</td>
-</tr>
-<tr>
-<td>
-recommendedActions<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>markdown formatted remediation guidance for the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-references<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>reference links for the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-stepsToReproduce<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>steps required to reproduce the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-targets<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>targets impacted by the finding such as projects or applications</p>
-</td>
-</tr>
-<tr>
-<td>
-targetDetails<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>structured details about the impacted targets</p>
-</td>
-</tr>
-<tr>
-<td>
-vector<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>attack vector string such as a CVSS vector</p>
-</td>
-</tr>
-<tr>
-<td>
-remediationSLA<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>remediation service level agreement in days</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lifecycle status of the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-eventTime<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the finding was last observed by the source</p>
-</td>
-</tr>
-<tr>
-<td>
-reportedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the finding was first reported by the source</p>
-</td>
-</tr>
-<tr>
-<td>
-sourceUpdatedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the source last updated the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-externalURI<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link to the finding in the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw metadata payload for the finding from the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-rawPayload<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw payload received from the integration for auditing and troubleshooting</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## FindingHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#findinghistoryedge"><code>[FindingHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## FindingHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#findinghistory"><code>FindingHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -27385,6 +22249,222 @@ where<br />
 </tr>
 <tr>
 <td>
+actionPlanEditors<br />
+<a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#actionplanorder"><code>[ActionPlanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#actionplanwhereinput"><code>ActionPlanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+actionPlanBlockedGroups<br />
+<a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#actionplanorder"><code>[ActionPlanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#actionplanwhereinput"><code>ActionPlanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+actionPlanViewers<br />
+<a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#actionplanorder"><code>[ActionPlanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#actionplanwhereinput"><code>ActionPlanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 procedureEditors<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
@@ -28610,280 +23690,6 @@ cursor<br />
 </tbody>
 </table>
 
-## GroupHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#grouphistoryoptype"><code>GroupHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the group - must be unique within the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the groups description</p>
-</td>
-</tr>
-<tr>
-<td>
-isManaged<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether the group is managed by the system</p>
-</td>
-</tr>
-<tr>
-<td>
-gravatarLogoURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the URL to an auto generated gravatar image for the group</p>
-</td>
-</tr>
-<tr>
-<td>
-logoURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the URL to an image uploaded by the customer for the groups avatar image</p>
-</td>
-</tr>
-<tr>
-<td>
-displayName<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>The group&#39;s displayed &#39;friendly&#39; name</p>
-</td>
-</tr>
-<tr>
-<td>
-scimExternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the SCIM external ID for the group</p>
-</td>
-</tr>
-<tr>
-<td>
-scimDisplayName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the SCIM displayname for the group</p>
-</td>
-</tr>
-<tr>
-<td>
-scimActive<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether the SCIM group is marked as active</p>
-</td>
-</tr>
-<tr>
-<td>
-scimGroupMailing<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the SCIM group mailing list email</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#grouphistoryedge"><code>[GroupHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#grouphistory"><code>GroupHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## GroupMembership
 
 
@@ -29198,190 +24004,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#groupmembership"><code>GroupMembership</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupMembershipHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#groupmembershiphistoryoptype"><code>GroupMembershipHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-role<br />
-<a href="enums#groupmembershiphistoryrole"><code>GroupMembershipHistoryRole!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-groupID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupMembershipHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#groupmembershiphistoryedge"><code>[GroupMembershipHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupMembershipHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#groupmembershiphistory"><code>GroupMembershipHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -29803,208 +24425,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#groupsetting"><code>GroupSetting</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupSettingHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#groupsettinghistoryoptype"><code>GroupSettingHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-visibility<br />
-<a href="enums#groupsettinghistoryvisibility"><code>GroupSettingHistoryVisibility!</code></a>
-</td>
-<td>
-<p>whether the group is visible to it&#39;s members / owners only or if it&#39;s searchable by anyone within the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-joinPolicy<br />
-<a href="enums#groupsettinghistoryjoinpolicy"><code>GroupSettingHistoryJoinPolicy!</code></a>
-</td>
-<td>
-<p>the policy governing ability to freely join a group, whether it requires an invitation, application, or either</p>
-</td>
-</tr>
-<tr>
-<td>
-syncToSlack<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether to sync group members to slack groups</p>
-</td>
-</tr>
-<tr>
-<td>
-syncToGithub<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether to sync group members to github groups</p>
-</td>
-</tr>
-<tr>
-<td>
-groupID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the group id associated with the settings</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupSettingHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#groupsettinghistoryedge"><code>[GroupSettingHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## GroupSettingHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#groupsettinghistory"><code>GroupSettingHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -30624,271 +25044,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#hush"><code>Hush</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## HushHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#hushhistoryoptype"><code>HushHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the logical name of the corresponding hush secret or it&#39;s general grouping</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>a description of the hush value or purpose, such as github PAT</p>
-</td>
-</tr>
-<tr>
-<td>
-kind<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of secret, such as sshkey, certificate, api token, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-secretName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the generic name of a secret associated with the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-credentialSet<br />
-<a href="scalars#credentialset"><code>CredentialSet</code></a>
-</td>
-<td>
-<p>a credential set, typically where you have multiple tokens or keys that compose one credential such as when accessing s3 and using access key ID, secret key, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>additional metadata about the credential</p>
-</td>
-</tr>
-<tr>
-<td>
-lastUsedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-expiresAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>when the token expires</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## HushHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#hushhistoryedge"><code>[HushHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## HushHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#hushhistory"><code>HushHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -32113,253 +26268,6 @@ cursor<br />
 </tbody>
 </table>
 
-## IntegrationHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#integrationhistoryoptype"><code>IntegrationHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the integration</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>a description of the integration</p>
-</td>
-</tr>
-<tr>
-<td>
-kind<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of integration, such as github, slack, s3 etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-integrationType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the type of integration, such as communicattion, storage, SCM, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>additional metadata about the integration</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## IntegrationHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#integrationhistoryedge"><code>[IntegrationHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## IntegrationHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#integrationhistory"><code>IntegrationHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## InternalPolicy
 
 
@@ -32521,6 +26429,15 @@ details<br />
 </tr>
 <tr>
 <td>
+detailsJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the policy in JSON format</p>
+</td>
+</tr>
+<tr>
+<td>
 approvalRequired<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -32661,6 +26578,15 @@ internalPolicyKindID<br />
 </td>
 <td>
 <p>the kind of the internal_policy</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -33574,6 +27500,78 @@ where<br />
 </tr>
 <tr>
 <td>
+discussions<br />
+<a href="objects#discussionconnection"><code>DiscussionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#discussionorder"><code>[DiscussionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#discussionwhereinput"><code>DiscussionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 workflowObjectRefs<br />
 <a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
 </td>
@@ -33642,6 +27640,24 @@ where<br />
 </tbody>
 </table>
 
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this internalPolicy has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+</td>
+<td>
+<p>Returns the active workflow instance for this internalPolicy if one is running</p>
 </td>
 </tr>
 </tbody>
@@ -33813,408 +27829,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#internalpolicy"><code>InternalPolicy</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## InternalPolicyHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#internalpolicyhistoryoptype"><code>InternalPolicyHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-revision<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>revision of the object as a semver (e.g. v1.0.0), by default any update will bump the patch version, unless the revision_bump field is set</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#internalpolicyhistorydocumentstatus"><code>InternalPolicyHistoryDocumentStatus</code></a>
-</td>
-<td>
-<p>status of the policy, e.g. draft, published, archived, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-policyType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `policy_kind_name` instead.</blockquote>
-
-<p>type of the policy, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>details of the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-approvalRequired<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether approval is required for edits to the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-reviewDue<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the date the policy should be reviewed, calculated based on the review_frequency if not directly set</p>
-</td>
-</tr>
-<tr>
-<td>
-reviewFrequency<br />
-<a href="enums#internalpolicyhistoryfrequency"><code>InternalPolicyHistoryFrequency</code></a>
-</td>
-<td>
-<p>the frequency at which the policy should be reviewed, used to calculate the review_due date</p>
-</td>
-</tr>
-<tr>
-<td>
-approverID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group responsible for approving the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-delegateID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group responsible for approving the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-summary<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tagSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>auto-generated tag suggestions for the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedTagSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tag suggestions dismissed by the user for the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-controlSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>proposed controls referenced in the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedControlSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>control suggestions dismissed by the user for the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-improvementSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>suggested improvements for the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedImprovementSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>improvement suggestions dismissed by the user for the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the url used to create or update the policy</p>
-</td>
-</tr>
-<tr>
-<td>
-fileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the most recent file id if this policy was created from a file</p>
-</td>
-</tr>
-<tr>
-<td>
-internalPolicyKindName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the internal_policy</p>
-</td>
-</tr>
-<tr>
-<td>
-internalPolicyKindID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the internal_policy</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## InternalPolicyHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#internalpolicyhistoryedge"><code>[InternalPolicyHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## InternalPolicyHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#internalpolicyhistory"><code>InternalPolicyHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -36410,271 +30024,6 @@ cursor<br />
 </tbody>
 </table>
 
-## JobTemplateHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#jobtemplatehistoryoptype"><code>JobTemplateHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the title of the job</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the short description of the job and what it does</p>
-</td>
-</tr>
-<tr>
-<td>
-platform<br />
-<a href="enums#jobtemplatehistoryjobplatformtype"><code>JobTemplateHistoryJobPlatformType!</code></a>
-</td>
-<td>
-<p>the platform to use to execute this job, e.g. golang, typescript, python, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-downloadURL<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the url from where to download the script from</p>
-</td>
-</tr>
-<tr>
-<td>
-configuration<br />
-<a href="scalars#jobconfiguration"><code>JobConfiguration</code></a>
-</td>
-<td>
-<p>the json configuration to run this job, which could be used to template a job, e.g. &#123; &quot;account_name&quot;: &quot;my-account&quot; &#125;</p>
-</td>
-</tr>
-<tr>
-<td>
-cron<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cron schedule to run the job in cron 6-field syntax, e.g. 0 0 0 * * *</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## JobTemplateHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#jobtemplatehistoryedge"><code>[JobTemplateHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## JobTemplateHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#jobtemplatehistory"><code>JobTemplateHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## JobTemplateUpdatePayload
 
 Return response for updateJobTemplate mutation
@@ -36992,190 +30341,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#mappabledomain"><code>MappableDomain</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## MappableDomainHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#mappabledomainhistoryoptype"><code>MappableDomainHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Name of the mappable domain</p>
-</td>
-</tr>
-<tr>
-<td>
-zoneID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>DNS Zone ID of the mappable domain.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## MappableDomainHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#mappabledomainhistoryedge"><code>[MappableDomainHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## MappableDomainHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#mappabledomainhistory"><code>MappableDomainHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -37933,244 +31098,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#mappedcontrol"><code>MappedControl</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## MappedControlHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#mappedcontrolhistoryoptype"><code>MappedControlHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-mappingType<br />
-<a href="enums#mappedcontrolhistorymappingtype"><code>MappedControlHistoryMappingType!</code></a>
-</td>
-<td>
-<p>the type of mapping between the two controls, e.g. subset, intersect, equal, superset</p>
-</td>
-</tr>
-<tr>
-<td>
-relation<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>description of how the two controls are related</p>
-</td>
-</tr>
-<tr>
-<td>
-confidence<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>percentage (0-100) of confidence in the mapping</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="enums#mappedcontrolhistorymappingsource"><code>MappedControlHistoryMappingSource</code></a>
-</td>
-<td>
-<p>source of the mapping, e.g. manual, suggested, etc.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## MappedControlHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#mappedcontrolhistoryedge"><code>[MappedControlHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## MappedControlHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#mappedcontrolhistory"><code>MappedControlHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -39017,244 +31944,6 @@ cursor<br />
 </tbody>
 </table>
 
-## NarrativeHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#narrativehistoryoptype"><code>NarrativeHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the narrative</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the description of the narrative</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>text data for the narrative document</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## NarrativeHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#narrativehistoryedge"><code>[NarrativeHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## NarrativeHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#narrativehistory"><code>NarrativeHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## NarrativeUpdatePayload
 
 Return response for updateNarrative mutation
@@ -39363,6 +32052,51 @@ text<br />
 </tr>
 <tr>
 <td>
+textJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the note in JSON format</p>
+</td>
+</tr>
+<tr>
+<td>
+noteRef<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ref location of the note</p>
+</td>
+</tr>
+<tr>
+<td>
+discussionID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the external discussion id this note is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+isEdited<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether the note has been edited</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the trust center this note belongs to, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -39437,6 +32171,15 @@ evidence<br />
 <td>
 trustCenter<br />
 <a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+discussion<br />
+<a href="objects#discussion"><code>Discussion</code></a>
 </td>
 <td>
 
@@ -39590,190 +32333,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#note"><code>Note</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## NoteHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#notehistoryoptype"><code>NoteHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-text<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the text of the note</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## NoteHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#notehistoryedge"><code>[NoteHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## NoteHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#notehistory"><code>NoteHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -40436,6 +32995,222 @@ where<br />
 <tr>
 <td>
 evidenceCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assetCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+findingCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilityCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
@@ -41372,6 +34147,78 @@ where<br />
 <tr>
 <td>
 trustCenterSubprocessorCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+actionPlanCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
@@ -46087,6 +38934,78 @@ where<br />
 </tr>
 <tr>
 <td>
+discussions<br />
+<a href="objects#discussionconnection"><code>DiscussionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#discussionorder"><code>[DiscussionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#discussionwhereinput"><code>DiscussionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 members<br />
 <a href="objects#orgmembershipconnection"><code>OrgMembershipConnection!</code></a>
 </td>
@@ -46275,253 +39194,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#organization"><code>Organization</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrganizationHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#organizationhistoryoptype"><code>OrganizationHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-displayName<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>The organization&#39;s displayed &#39;friendly&#39; name</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>An optional description of the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-personalOrg<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>orgs directly associated with a user</p>
-</td>
-</tr>
-<tr>
-<td>
-avatarRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the user&#39;s remote avatar</p>
-</td>
-</tr>
-<tr>
-<td>
-avatarLocalFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The organizations&#39;s local avatar file id, takes precedence over the avatar remote URL</p>
-</td>
-</tr>
-<tr>
-<td>
-avatarUpdatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>The time the user&#39;s (local) avatar was last updated</p>
-</td>
-</tr>
-<tr>
-<td>
-dedicatedDb<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>Whether the organization has a dedicated database</p>
-</td>
-</tr>
-<tr>
-<td>
-stripeCustomerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the stripe customer ID this organization is associated to</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrganizationHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#organizationhistoryedge"><code>[OrganizationHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrganizationHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#organizationhistory"><code>OrganizationHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -47068,397 +39740,6 @@ cursor<br />
 </tbody>
 </table>
 
-## OrganizationSettingHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#organizationsettinghistoryoptype"><code>OrganizationSettingHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-domains<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>domains associated with the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-billingContact<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Name of the person to contact for billing</p>
-</td>
-</tr>
-<tr>
-<td>
-billingEmail<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Email address of the person to contact for billing</p>
-</td>
-</tr>
-<tr>
-<td>
-billingPhone<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Phone number to contact for billing</p>
-</td>
-</tr>
-<tr>
-<td>
-billingAddress<br />
-<a href="scalars#address"><code>Address</code></a>
-</td>
-<td>
-<p>the billing address to send billing information to</p>
-</td>
-</tr>
-<tr>
-<td>
-taxIdentifier<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Usually government-issued tax ID or business ID such as ABN in Australia</p>
-</td>
-</tr>
-<tr>
-<td>
-geoLocation<br />
-<a href="enums#organizationsettinghistoryregion"><code>OrganizationSettingHistoryRegion</code></a>
-</td>
-<td>
-<p>geographical location of the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-organizationID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization the settings belong to</p>
-</td>
-</tr>
-<tr>
-<td>
-billingNotificationsEnabled<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>should we send email notifications related to billing</p>
-</td>
-</tr>
-<tr>
-<td>
-allowedEmailDomains<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>domains allowed to access the organization, if empty all domains are allowed</p>
-</td>
-</tr>
-<tr>
-<td>
-allowMatchingDomainsAutojoin<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>allow users who can successfully confirm their email or who login via social providers with an email that matches the organizations configured allowed domain to auto-join the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-identityProvider<br />
-<a href="enums#organizationsettinghistoryssoprovider"><code>OrganizationSettingHistorySSOProvider</code></a>
-</td>
-<td>
-<p>SSO provider type for the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-identityProviderClientID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>client ID for SSO integration</p>
-</td>
-</tr>
-<tr>
-<td>
-identityProviderClientSecret<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>client secret for SSO integration</p>
-</td>
-</tr>
-<tr>
-<td>
-identityProviderMetadataEndpoint<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>metadata URL for the SSO provider</p>
-</td>
-</tr>
-<tr>
-<td>
-identityProviderAuthTested<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>has this sso configuration been tested to verify it works? SSO cannot be enforced unless this is done</p>
-</td>
-</tr>
-<tr>
-<td>
-identityProviderEntityID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>SAML entity ID for the SSO provider</p>
-</td>
-</tr>
-<tr>
-<td>
-oidcDiscoveryEndpoint<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>OIDC discovery URL for the SSO provider</p>
-</td>
-</tr>
-<tr>
-<td>
-samlSigninURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the sign in URL to be used for SAML-based authentication</p>
-</td>
-</tr>
-<tr>
-<td>
-samlIssuer<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the SAML issuer</p>
-</td>
-</tr>
-<tr>
-<td>
-samlCert<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the x509 certificate used to validate SAML responses</p>
-</td>
-</tr>
-<tr>
-<td>
-identityProviderLoginEnforced<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>enforce SSO authentication for organization members</p>
-</td>
-</tr>
-<tr>
-<td>
-multifactorAuthEnforced<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>enforce 2fa / multifactor authentication for organization members</p>
-</td>
-</tr>
-<tr>
-<td>
-complianceWebhookToken<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>unique token used to receive compliance webhook events</p>
-</td>
-</tr>
-<tr>
-<td>
-paymentMethodAdded<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>whether or not a payment method has been added to the account</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrganizationSettingHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#organizationsettinghistoryedge"><code>[OrganizationSettingHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrganizationSettingHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#organizationsettinghistory"><code>OrganizationSettingHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## OrganizationSettingUpdatePayload
 
 Return response for updateOrganizationSetting mutation
@@ -47862,190 +40143,6 @@ cursor<br />
 </tbody>
 </table>
 
-## OrgMembershipHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#orgmembershiphistoryoptype"><code>OrgMembershipHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-role<br />
-<a href="enums#orgmembershiphistoryrole"><code>OrgMembershipHistoryRole!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-organizationID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrgMembershipHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#orgmembershiphistoryedge"><code>[OrgMembershipHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrgMembershipHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#orgmembershiphistory"><code>OrgMembershipHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## OrgMembershipUpdatePayload
 
 Return response for updateOrgMembership mutation
@@ -48342,235 +40439,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#orgsubscription"><code>OrgSubscription</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrgSubscriptionHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#orgsubscriptionhistoryoptype"><code>OrgSubscriptionHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-stripeSubscriptionID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the stripe subscription id</p>
-</td>
-</tr>
-<tr>
-<td>
-stripeSubscriptionStatus<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the status of the subscription in stripe -- see <a href="https://docs.stripe.com/api/subscriptions/object#subscription_object-status">https://docs.stripe.com/api/subscriptions/object#subscription_object-status</a></p>
-</td>
-</tr>
-<tr>
-<td>
-active<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>indicates if the subscription is active</p>
-</td>
-</tr>
-<tr>
-<td>
-expiresAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the time the subscription is set to expire; only populated if subscription is cancelled</p>
-</td>
-</tr>
-<tr>
-<td>
-trialExpiresAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the time the trial is set to expire</p>
-</td>
-</tr>
-<tr>
-<td>
-daysUntilDue<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>number of days until there is a due payment</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrgSubscriptionHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#orgsubscriptionhistoryedge"><code>[OrgSubscriptionHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## OrgSubscriptionHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#orgsubscriptionhistory"><code>OrgSubscriptionHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -49246,6 +41114,15 @@ details<br />
 </tr>
 <tr>
 <td>
+detailsJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the procedure in JSON format</p>
+</td>
+</tr>
+<tr>
+<td>
 approvalRequired<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -49413,6 +41290,15 @@ procedureKindID<br />
 </td>
 <td>
 <p>the kind of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -50173,11 +42059,173 @@ where<br />
 </tr>
 <tr>
 <td>
+discussions<br />
+<a href="objects#discussionconnection"><code>DiscussionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#discussionorder"><code>[DiscussionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#discussionwhereinput"><code>DiscussionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 file<br />
 <a href="objects#file"><code>File</code></a>
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this procedure has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+</td>
+<td>
+<p>Returns the active workflow instance for this procedure if one is running</p>
 </td>
 </tr>
 </tbody>
@@ -50349,408 +42397,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#procedure"><code>Procedure</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProcedureHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#procedurehistoryoptype"><code>ProcedureHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-revision<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>revision of the object as a semver (e.g. v1.0.0), by default any update will bump the patch version, unless the revision_bump field is set</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#procedurehistorydocumentstatus"><code>ProcedureHistoryDocumentStatus</code></a>
-</td>
-<td>
-<p>status of the procedure, e.g. draft, published, archived, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-procedureType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `procedure_kind_name` instead.</blockquote>
-
-<p>type of the procedure, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>details of the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-approvalRequired<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether approval is required for edits to the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-reviewDue<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the date the procedure should be reviewed, calculated based on the review_frequency if not directly set</p>
-</td>
-</tr>
-<tr>
-<td>
-reviewFrequency<br />
-<a href="enums#procedurehistoryfrequency"><code>ProcedureHistoryFrequency</code></a>
-</td>
-<td>
-<p>the frequency at which the procedure should be reviewed, used to calculate the review_due date</p>
-</td>
-</tr>
-<tr>
-<td>
-approverID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group responsible for approving the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-delegateID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group responsible for approving the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-summary<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tagSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>auto-generated tag suggestions for the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedTagSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tag suggestions dismissed by the user for the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-controlSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>proposed controls referenced in the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedControlSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>control suggestions dismissed by the user for the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-improvementSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>suggested improvements for the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-dismissedImprovementSuggestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>improvement suggestions dismissed by the user for the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the url used to create or update the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-fileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>This will contain the most recent file id if this procedure was created from a file</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-procedureKindName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the procedure</p>
-</td>
-</tr>
-<tr>
-<td>
-procedureKindID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the procedure</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProcedureHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#procedurehistoryedge"><code>[ProcedureHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProcedureHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#procedurehistory"><code>ProcedureHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -52427,336 +44073,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ProgramHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#programhistoryoptype"><code>ProgramHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-programKindName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-programKindID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the description of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#programhistoryprogramstatus"><code>ProgramHistoryProgramStatus!</code></a>
-</td>
-<td>
-<p>the status of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-programType<br />
-<a href="enums#programhistoryprogramtype"><code>ProgramHistoryProgramType!</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `program_kind` instead.</blockquote>
-
-<p>the type of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-frameworkName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the short name of the compliance standard the program is based on, only used for framework type programs</p>
-</td>
-</tr>
-<tr>
-<td>
-startDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the start date of the period</p>
-</td>
-</tr>
-<tr>
-<td>
-endDate<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the end date of the period</p>
-</td>
-</tr>
-<tr>
-<td>
-auditorReady<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>is the program ready for the auditor</p>
-</td>
-</tr>
-<tr>
-<td>
-auditorWriteComments<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>can the auditor write comments</p>
-</td>
-</tr>
-<tr>
-<td>
-auditorReadComments<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>can the auditor read comments</p>
-</td>
-</tr>
-<tr>
-<td>
-auditFirm<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the name of the audit firm conducting the audit</p>
-</td>
-</tr>
-<tr>
-<td>
-auditor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the full name of the auditor conducting the audit</p>
-</td>
-</tr>
-<tr>
-<td>
-auditorEmail<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the email of the auditor conducting the audit</p>
-</td>
-</tr>
-<tr>
-<td>
-programOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the user who is responsible for this program</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProgramHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#programhistoryedge"><code>[ProgramHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProgramHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#programhistory"><code>ProgramHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ProgramMembership
 
 
@@ -52999,190 +44315,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#programmembership"><code>ProgramMembership</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProgramMembershipHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#programmembershiphistoryoptype"><code>ProgramMembershipHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-role<br />
-<a href="enums#programmembershiphistoryrole"><code>ProgramMembershipHistoryRole!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProgramMembershipHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#programmembershiphistoryedge"><code>[ProgramMembershipHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProgramMembershipHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#programmembershiphistory"><code>ProgramMembershipHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -54893,388 +46025,6 @@ cursor<br />
 </tbody>
 </table>
 
-## RemediationHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#remediationhistoryoptype"><code>RemediationHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-externalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>external identifier from the integration source for the remediation</p>
-</td>
-</tr>
-<tr>
-<td>
-externalOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>external identifier from the integration source for the remediation</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>title or short description of the remediation effort</p>
-</td>
-</tr>
-<tr>
-<td>
-state<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>state of the remediation, such as pending or completed</p>
-</td>
-</tr>
-<tr>
-<td>
-intent<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>intent or goal of the remediation effort</p>
-</td>
-</tr>
-<tr>
-<td>
-summary<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>summary of the remediation approach</p>
-</td>
-</tr>
-<tr>
-<td>
-explanation<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>detailed explanation of the remediation steps</p>
-</td>
-</tr>
-<tr>
-<td>
-instructions<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>specific instructions or steps to implement the remediation</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerReference<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>reference to the owner responsible for remediation</p>
-</td>
-</tr>
-<tr>
-<td>
-repositoryURI<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>source code repository URI associated with the remediation</p>
-</td>
-</tr>
-<tr>
-<td>
-pullRequestURI<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>pull request URI associated with the remediation</p>
-</td>
-</tr>
-<tr>
-<td>
-ticketReference<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>reference to a tracking ticket for the remediation</p>
-</td>
-</tr>
-<tr>
-<td>
-dueAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the remediation is due</p>
-</td>
-</tr>
-<tr>
-<td>
-completedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the remediation was completed</p>
-</td>
-</tr>
-<tr>
-<td>
-prGeneratedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when an automated pull request was generated</p>
-</td>
-</tr>
-<tr>
-<td>
-error<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>details about any errors encountered during remediation automation</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>system that produced the remediation record</p>
-</td>
-</tr>
-<tr>
-<td>
-externalURI<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link to the remediation in the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw metadata payload for the remediation from the source system</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## RemediationHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#remediationhistoryedge"><code>[RemediationHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## RemediationHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#remediationhistory"><code>RemediationHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## RemediationUpdatePayload
 
 Return response for updateRemediation mutation
@@ -56938,370 +47688,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ReviewHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#reviewhistoryoptype"><code>ReviewHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-externalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>external identifier from the integration source for the review</p>
-</td>
-</tr>
-<tr>
-<td>
-externalOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>external identifier from the integration source for the review</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>title of the review</p>
-</td>
-</tr>
-<tr>
-<td>
-state<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>state of the review</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category for the review record</p>
-</td>
-</tr>
-<tr>
-<td>
-classification<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>classification or sensitivity of the review record</p>
-</td>
-</tr>
-<tr>
-<td>
-summary<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>summary text for the review</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>detailed notes captured during the review</p>
-</td>
-</tr>
-<tr>
-<td>
-reporter<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>person or system that created the review</p>
-</td>
-</tr>
-<tr>
-<td>
-approved<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the review has been approved</p>
-</td>
-</tr>
-<tr>
-<td>
-reviewedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the review was completed</p>
-</td>
-</tr>
-<tr>
-<td>
-reportedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the review was reported or opened</p>
-</td>
-</tr>
-<tr>
-<td>
-approvedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the review was approved</p>
-</td>
-</tr>
-<tr>
-<td>
-reviewerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>identifier for the user primarily responsible for the review</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>system that produced the review record</p>
-</td>
-</tr>
-<tr>
-<td>
-externalURI<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link to the review in the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw metadata payload for the review from the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-rawPayload<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw payload received from the integration for auditing and troubleshooting</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ReviewHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#reviewhistoryedge"><code>[ReviewHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ReviewHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#reviewhistory"><code>ReviewHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ReviewUpdatePayload
 
 Return response for updateReview mutation
@@ -57459,7 +47845,7 @@ status<br />
 <a href="enums#riskriskstatus"><code>RiskRiskStatus</code></a>
 </td>
 <td>
-<p>status of the risk - open, mitigated, ongoing, in-progress, and archived.</p>
+<p>status of the risk - identified, mitigated, accepted, closed, transferred, and archived.</p>
 </td>
 </tr>
 <tr>
@@ -57522,6 +47908,15 @@ mitigation<br />
 </tr>
 <tr>
 <td>
+mitigationJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the mitigation in JSON format</p>
+</td>
+</tr>
+<tr>
+<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -57531,11 +47926,29 @@ details<br />
 </tr>
 <tr>
 <td>
+detailsJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the risk in JSON format</p>
+</td>
+</tr>
+<tr>
+<td>
 businessCosts<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>business costs associated with the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+businessCostsJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the business costs in JSON format</p>
 </td>
 </tr>
 <tr>
@@ -58609,6 +49022,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+discussions<br />
+<a href="objects#discussionconnection"><code>DiscussionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#discussionorder"><code>[DiscussionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#discussionwhereinput"><code>DiscussionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -58778,338 +49263,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#risk"><code>Risk</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## RiskHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#riskhistoryoptype"><code>RiskHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-riskKindName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-riskKindID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-riskCategoryName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the category of the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-riskCategoryID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the category of the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#riskhistoryriskstatus"><code>RiskHistoryRiskStatus</code></a>
-</td>
-<td>
-<p>status of the risk - open, mitigated, ongoing, in-progress, and archived.</p>
-</td>
-</tr>
-<tr>
-<td>
-riskType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `risk_kind_name` instead.</blockquote>
-
-<p>type of the risk, e.g. strategic, operational, financial, external, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `risk_category_name` instead.</blockquote>
-
-<p>category of the risk, e.g. human resources, operations, IT, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-impact<br />
-<a href="enums#riskhistoryriskimpact"><code>RiskHistoryRiskImpact</code></a>
-</td>
-<td>
-<p>impact of the risk -critical, high, medium, low</p>
-</td>
-</tr>
-<tr>
-<td>
-likelihood<br />
-<a href="enums#riskhistoryrisklikelihood"><code>RiskHistoryRiskLikelihood</code></a>
-</td>
-<td>
-<p>likelihood of the risk occurring; unlikely, likely, highly likely</p>
-</td>
-</tr>
-<tr>
-<td>
-score<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>score of the risk based on impact and likelihood (1-4 unlikely, 5-9 likely, 10-16 highly likely, 17-20 critical)</p>
-</td>
-</tr>
-<tr>
-<td>
-mitigation<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>mitigation for the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>details of the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-businessCosts<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>business costs associated with the risk</p>
-</td>
-</tr>
-<tr>
-<td>
-stakeholderID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group responsible for risk oversight</p>
-</td>
-</tr>
-<tr>
-<td>
-delegateID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group responsible for risk oversight on behalf of the stakeholder</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## RiskHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#riskhistoryedge"><code>[RiskHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## RiskHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#riskhistory"><code>RiskHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -59815,217 +49968,6 @@ cursor<br />
 </tbody>
 </table>
 
-## ScanHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#scanhistoryoptype"><code>ScanHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-target<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the target of the scan, e.g., a domain name or IP address, codebase</p>
-</td>
-</tr>
-<tr>
-<td>
-scanType<br />
-<a href="enums#scanhistoryscantype"><code>ScanHistoryScanType!</code></a>
-</td>
-<td>
-<p>the type of scan, e.g., domain scan, vulnerability scan, provider scan</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>additional metadata for the scan, e.g., scan configuration, options, etc</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#scanhistoryscanstatus"><code>ScanHistoryScanStatus!</code></a>
-</td>
-<td>
-<p>the status of the scan, e.g., processing, completed, failed</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ScanHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#scanhistoryedge"><code>[ScanHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ScanHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#scanhistory"><code>ScanHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ScanUpdatePayload
 
 Return response for updateScan mutation
@@ -60478,226 +50420,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#scheduledjob"><code>ScheduledJob</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ScheduledJobHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#scheduledjobhistoryoptype"><code>ScheduledJobHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-jobID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the scheduled_job id to take the script to run from</p>
-</td>
-</tr>
-<tr>
-<td>
-active<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>whether the scheduled job is active</p>
-</td>
-</tr>
-<tr>
-<td>
-configuration<br />
-<a href="scalars#jobconfiguration"><code>JobConfiguration</code></a>
-</td>
-<td>
-<p>the json configuration to run this job, which could be used to template a job, e.g. &#123; &quot;account_name&quot;: &quot;my-account&quot; &#125;</p>
-</td>
-</tr>
-<tr>
-<td>
-cron<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cron 6-field syntax, defaults to the job template&#39;s cron if not provided</p>
-</td>
-</tr>
-<tr>
-<td>
-jobRunnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the runner that this job will run on. If not set, it will scheduled on a general runner instead</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ScheduledJobHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#scheduledjobhistoryedge"><code>[ScheduledJobHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## ScheduledJobHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#scheduledjobhistory"><code>ScheduledJobHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -62054,343 +51776,6 @@ cursor<br />
 </tbody>
 </table>
 
-## StandardHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#standardhistoryoptype"><code>StandardHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-revision<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>revision of the object as a semver (e.g. v1.0.0), by default any update will bump the patch version, unless the revision_bump field is set</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the long name of the standard body</p>
-</td>
-</tr>
-<tr>
-<td>
-shortName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>short name of the standard, e.g. SOC 2, ISO 27001, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-framework<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>unique identifier of the standard with version</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>long description of the standard with details of what is covered</p>
-</td>
-</tr>
-<tr>
-<td>
-governingBodyLogoURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL to the logo of the governing body</p>
-</td>
-</tr>
-<tr>
-<td>
-governingBody<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>governing body of the standard, e.g. AICPA, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-domains<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>domains the standard covers, e.g. availability, confidentiality, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-link<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link to the official standard documentation</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#standardhistorystandardstatus"><code>StandardHistoryStandardStatus</code></a>
-</td>
-<td>
-<p>status of the standard - active, draft, and archived</p>
-</td>
-</tr>
-<tr>
-<td>
-isPublic<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the standard should be made available to all users, only for system owned standards</p>
-</td>
-</tr>
-<tr>
-<td>
-freeToUse<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the standard is freely distributable under a trial license, only for system owned standards</p>
-</td>
-</tr>
-<tr>
-<td>
-standardType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the standard - cybersecurity, healthcare , financial, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-version<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>version of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-logoFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the logo</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## StandardHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#standardhistoryedge"><code>[StandardHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## StandardHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#standardhistory"><code>StandardHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## StandardUpdatePayload
 
 Return response for updateStandard mutation
@@ -62504,6 +51889,15 @@ description<br />
 </td>
 <td>
 <p>description of what the control is supposed to accomplish</p>
+</td>
+</tr>
+<tr>
+<td>
+descriptionJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the control in JSON format</p>
 </td>
 </tr>
 <tr>
@@ -62681,6 +52075,24 @@ references<br />
 </tr>
 <tr>
 <td>
+testingProcedures<br />
+<a href="scalars#testingprocedures"><code>[TestingProcedures!]</code></a>
+</td>
+<td>
+<p>reference steps to take to test the control</p>
+</td>
+</tr>
+<tr>
+<td>
+evidenceRequests<br />
+<a href="scalars#evidencerequests"><code>[EvidenceRequests!]</code></a>
+</td>
+<td>
+<p>list of common evidence requests for the control</p>
+</td>
+</tr>
+<tr>
+<td>
 controlOwnerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -62749,6 +52161,15 @@ subcontrolKindID<br />
 </td>
 <td>
 <p>the kind of the subcontrol</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -63419,6 +52840,78 @@ where<br />
 </tr>
 <tr>
 <td>
+discussions<br />
+<a href="objects#discussionconnection"><code>DiscussionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#discussionorder"><code>[DiscussionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#discussionwhereinput"><code>DiscussionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Discussions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 controlOwner<br />
 <a href="objects#group"><code>Group</code></a>
 </td>
@@ -63615,6 +53108,96 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this subcontrol has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstance<br />
+<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+</td>
+<td>
+<p>Returns the active workflow instance for this subcontrol if one is running</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -63754,462 +53337,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#subcontrol"><code>Subcontrol</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## SubcontrolHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#subcontrolhistoryoptype"><code>SubcontrolHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>human readable title of the control for quick identification</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>description of what the control is supposed to accomplish</p>
-</td>
-</tr>
-<tr>
-<td>
-aliases<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>additional names (ref_codes) for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-referenceID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal reference id of the control, can be used for internal tracking</p>
-</td>
-</tr>
-<tr>
-<td>
-auditorReferenceID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>external auditor id of the control, can be used to map to external audit partner mappings</p>
-</td>
-</tr>
-<tr>
-<td>
-responsiblePartyID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the party responsible for the control, usually used when the control is implemented by a third party</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#subcontrolhistorycontrolstatus"><code>SubcontrolHistoryControlStatus</code></a>
-</td>
-<td>
-<p>status of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="enums#subcontrolhistorycontrolsource"><code>SubcontrolHistoryControlSource</code></a>
-</td>
-<td>
-<p>source of the control, e.g. framework, template, custom, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-referenceFramework<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the reference framework for the control if it came from a standard, empty if not associated with a standard</p>
-</td>
-</tr>
-<tr>
-<td>
-referenceFrameworkRevision<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
-</td>
-</tr>
-<tr>
-<td>
-controlType<br />
-<a href="enums#subcontrolhistorycontroltype"><code>SubcontrolHistoryControlType</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `control_kind_name` instead.</blockquote>
-
-<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-categoryID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category id of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-subcategory<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subcategory of the control</p>
-</td>
-</tr>
-<tr>
-<td>
-mappedCategories<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>mapped categories of the control to other standards</p>
-</td>
-</tr>
-<tr>
-<td>
-assessmentObjectives<br />
-<a href="scalars#assessmentobjective"><code>[AssessmentObjective!]</code></a>
-</td>
-<td>
-<p>objectives of the audit assessment for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-assessmentMethods<br />
-<a href="scalars#assessmentmethod"><code>[AssessmentMethod!]</code></a>
-</td>
-<td>
-<p>methods used to verify the control implementation during an audit</p>
-</td>
-</tr>
-<tr>
-<td>
-controlQuestions<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>questions to ask to verify the control</p>
-</td>
-</tr>
-<tr>
-<td>
-implementationGuidance<br />
-<a href="scalars#implementationguidance"><code>[ImplementationGuidance!]</code></a>
-</td>
-<td>
-<p>implementation guidance for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-exampleEvidence<br />
-<a href="scalars#exampleevidence"><code>[ExampleEvidence!]</code></a>
-</td>
-<td>
-<p>examples of evidence for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-references<br />
-<a href="scalars#reference"><code>[Reference!]</code></a>
-</td>
-<td>
-<p>references for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-controlOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group that owns the control</p>
-</td>
-</tr>
-<tr>
-<td>
-delegateID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the group that is temporarily delegated to own the control</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolKindName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-subcontrolKindID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the subcontrol</p>
-</td>
-</tr>
-<tr>
-<td>
-refCode<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the unique reference code for the control</p>
-</td>
-</tr>
-<tr>
-<td>
-controlID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the id of the parent control</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## SubcontrolHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#subcontrolhistoryedge"><code>[SubcontrolHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## SubcontrolHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#subcontrolhistory"><code>SubcontrolHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -64667,244 +53794,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#subprocessor"><code>Subprocessor</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## SubprocessorHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#subprocessorhistoryoptype"><code>SubprocessorHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>name of the standard body</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>description of the subprocessor</p>
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the logo</p>
-</td>
-</tr>
-<tr>
-<td>
-logoFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The local logo file id, takes precedence over the logo remote URL</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## SubprocessorHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#subprocessorhistoryedge"><code>[SubprocessorHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## SubprocessorHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#subprocessorhistory"><code>SubprocessorHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -65746,6 +54635,15 @@ details<br />
 </tr>
 <tr>
 <td>
+detailsJSON<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured details of the task in JSON format</p>
+</td>
+</tr>
+<tr>
+<td>
 status<br />
 <a href="enums#tasktaskstatus"><code>TaskTaskStatus!</code></a>
 </td>
@@ -65825,6 +54723,15 @@ externalReferenceURL<br />
 </td>
 <td>
 <p>an optional external reference URL for the task</p>
+</td>
+</tr>
+<tr>
+<td>
+parentTaskID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the parent task this task belongs to</p>
 </td>
 </tr>
 <tr>
@@ -66799,6 +55706,24 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+parent<br />
+<a href="objects#task"><code>Task</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tasks<br />
+<a href="objects#task"><code>[Task!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -66968,309 +55893,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#task"><code>Task</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TaskHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#taskhistoryoptype"><code>TaskHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-taskKindName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-taskKindID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the kind of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the title of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-details<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the details of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#taskhistorytaskstatus"><code>TaskHistoryTaskStatus!</code></a>
-</td>
-<td>
-<p>the status of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `task_kind_name` instead.</blockquote>
-
-<p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-due<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>the due date of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-completed<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>the completion date of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-assigneeID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the user who was assigned the task</p>
-</td>
-</tr>
-<tr>
-<td>
-assignerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the user who assigned the task, can be left empty if created by the system or a service token</p>
-</td>
-</tr>
-<tr>
-<td>
-systemGenerated<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>indicates if the task was generated by the system</p>
-</td>
-</tr>
-<tr>
-<td>
-idempotencyKey<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>key to prevent duplicates for auto-generated task based on rules</p>
-</td>
-</tr>
-<tr>
-<td>
-externalReferenceURL<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>an optional external reference URL for the task</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TaskHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#taskhistoryedge"><code>[TaskHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TaskHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#taskhistory"><code>TaskHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -67848,271 +56470,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#template"><code>Template</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TemplateHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#templatehistoryoptype"><code>TemplateHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>the name of the template</p>
-</td>
-</tr>
-<tr>
-<td>
-templateType<br />
-<a href="enums#templatehistorydocumenttype"><code>TemplateHistoryDocumentType!</code></a>
-</td>
-<td>
-<p>the type of the template, either a provided template or an implementation (document)</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the description of the template</p>
-</td>
-</tr>
-<tr>
-<td>
-kind<br />
-<a href="enums#templatehistorytemplatekind"><code>TemplateHistoryTemplateKind</code></a>
-</td>
-<td>
-<p>the kind of template, e.g. questionnaire</p>
-</td>
-</tr>
-<tr>
-<td>
-jsonconfig<br />
-<a href="scalars#map"><code>Map!</code></a>
-</td>
-<td>
-<p>the jsonschema object of the template</p>
-</td>
-</tr>
-<tr>
-<td>
-uischema<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>the uischema for the template to render in the UI</p>
-</td>
-</tr>
-<tr>
-<td>
-trustCenterID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the id of the trust center this template is associated with</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TemplateHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#templatehistoryedge"><code>[TemplateHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TemplateHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#templatehistory"><code>TemplateHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -69273,190 +57630,6 @@ cursor<br />
 </tbody>
 </table>
 
-## TrustCenterComplianceHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#trustcentercompliancehistoryoptype"><code>TrustCenterComplianceHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-standardID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>ID of the standard</p>
-</td>
-</tr>
-<tr>
-<td>
-trustCenterID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the trust center</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterComplianceHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#trustcentercompliancehistoryedge"><code>[TrustCenterComplianceHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterComplianceHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#trustcentercompliancehistory"><code>TrustCenterComplianceHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## TrustCenterComplianceUpdatePayload
 
 Return response for updateTrustCenterCompliance mutation
@@ -69674,7 +57847,7 @@ originalFileID<br />
 <tr>
 <td>
 watermarkingEnabled<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 <p>whether watermarking is enabled for the document. this will only take effect if watermarking is configured for the trust center</p>
@@ -69912,253 +58085,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#trustcenterdoc"><code>TrustCenterDoc</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterDocHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#trustcenterdochistoryoptype"><code>TrustCenterDocHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-trustCenterID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>title of the document</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>category of the document</p>
-</td>
-</tr>
-<tr>
-<td>
-fileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the file containing the document</p>
-</td>
-</tr>
-<tr>
-<td>
-originalFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the file containing the document, before any watermarking</p>
-</td>
-</tr>
-<tr>
-<td>
-watermarkingEnabled<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>whether watermarking is enabled for the document. this will only take effect if watermarking is configured for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-watermarkStatus<br />
-<a href="enums#trustcenterdochistorywatermarkstatus"><code>TrustCenterDocHistoryWatermarkStatus</code></a>
-</td>
-<td>
-<p>status of the watermarking</p>
-</td>
-</tr>
-<tr>
-<td>
-visibility<br />
-<a href="enums#trustcenterdochistorytrustcenterdocumentvisibility"><code>TrustCenterDocHistoryTrustCenterDocumentVisibility</code></a>
-</td>
-<td>
-<p>visibility of the document</p>
-</td>
-</tr>
-<tr>
-<td>
-standardID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the standard</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterDocHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#trustcenterdochistoryedge"><code>[TrustCenterDocHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterDocHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#trustcenterdochistory"><code>TrustCenterDocHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -70513,208 +58439,6 @@ cursor<br />
 </tbody>
 </table>
 
-## TrustcenterEntityHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#trustcenterentityhistoryoptype"><code>TrustcenterEntityHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The local logo file id</p>
-</td>
-</tr>
-<tr>
-<td>
-url<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of customer&#39;s website</p>
-</td>
-</tr>
-<tr>
-<td>
-trustCenterID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The trust center this entity belongs to</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>The name of the tag definition</p>
-</td>
-</tr>
-<tr>
-<td>
-entityTypeID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The entity type for the customer entity</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustcenterEntityHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#trustcenterentityhistoryedge"><code>[TrustcenterEntityHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustcenterEntityHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#trustcenterentityhistory"><code>TrustcenterEntityHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## TrustcenterEntityUpdatePayload
 
 Return response for updateTrustcenterEntity mutation
@@ -70731,235 +58455,6 @@ trustcenterEntity<br />
 </td>
 <td>
 <p>Updated trustcenterEntity</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#trustcenterhistoryoptype"><code>TrustCenterHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-slug<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Slug for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-customDomainID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>custom domain id for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-previewDomainID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>preview domain id for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-pirschDomainID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Pirsch domain ID</p>
-</td>
-</tr>
-<tr>
-<td>
-pirschIdentificationCode<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Pirsch ID code</p>
-</td>
-</tr>
-<tr>
-<td>
-previewStatus<br />
-<a href="enums#trustcenterhistorytrustcenterpreviewstatus"><code>TrustCenterHistoryTrustCenterPreviewStatus</code></a>
-</td>
-<td>
-<p>preview status of the trust center</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#trustcenterhistoryedge"><code>[TrustCenterHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#trustcenterhistory"><code>TrustCenterHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
 </td>
 </tr>
 </tbody>
@@ -71002,6 +58497,27 @@ template<br />
 </td>
 <td>
 
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterPreviewSettingCreatePayload
+
+Return response for createTrustCenterPreviewSetting mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterSetting<br />
+<a href="objects#trustcentersetting"><code>TrustCenterSetting!</code></a>
+</td>
+<td>
+<p>Created preview trust center setting</p>
 </td>
 </tr>
 </tbody>
@@ -71434,307 +58950,6 @@ cursor<br />
 </tbody>
 </table>
 
-## TrustCenterSettingHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#trustcentersettinghistoryoptype"><code>TrustCenterSettingHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-trustCenterID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the trust center the settings belong to</p>
-</td>
-</tr>
-<tr>
-<td>
-title<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>title of the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-overview<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>overview of the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the logo</p>
-</td>
-</tr>
-<tr>
-<td>
-logoLocalFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The local logo file id, takes precedence over the logo remote URL</p>
-</td>
-</tr>
-<tr>
-<td>
-faviconRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the favicon</p>
-</td>
-</tr>
-<tr>
-<td>
-faviconLocalFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The local favicon file id, takes precedence over the favicon remote URL</p>
-</td>
-</tr>
-<tr>
-<td>
-themeMode<br />
-<a href="enums#trustcentersettinghistorytrustcenterthememode"><code>TrustCenterSettingHistoryTrustCenterThemeMode</code></a>
-</td>
-<td>
-<p>Theme mode for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-primaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>primary color for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-font<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>font for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-foregroundColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>foreground color for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-backgroundColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background color for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-accentColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>accent/brand color for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-secondaryBackgroundColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>secondary background color for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-secondaryForegroundColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>secondary foreground color for the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-environment<br />
-<a href="enums#trustcentersettinghistorytrustcenterenvironment"><code>TrustCenterSettingHistoryTrustCenterEnvironment</code></a>
-</td>
-<td>
-<p>environment of the trust center</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterSettingHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#trustcentersettinghistoryedge"><code>[TrustCenterSettingHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterSettingHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#trustcentersettinghistory"><code>TrustCenterSettingHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## TrustCenterSettingUpdatePayload
 
 Return response for updateTrustCenterSetting mutation
@@ -72037,199 +59252,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#trustcentersubprocessor"><code>TrustCenterSubprocessor</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterSubprocessorHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#trustcentersubprocessorhistoryoptype"><code>TrustCenterSubprocessorHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subprocessorID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>ID of the subprocessor</p>
-</td>
-</tr>
-<tr>
-<td>
-trustCenterID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-countries<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>country codes or country where the subprocessor is located</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Category of the subprocessor, e.g. &#39;Data Warehouse&#39; or &#39;Infrastructure Hosting&#39;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterSubprocessorHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#trustcentersubprocessorhistoryedge"><code>[TrustCenterSubprocessorHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterSubprocessorHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#trustcentersubprocessorhistory"><code>TrustCenterSubprocessorHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -72582,253 +59604,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#trustcenterwatermarkconfig"><code>TrustCenterWatermarkConfig</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterWatermarkConfigHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#trustcenterwatermarkconfighistoryoptype"><code>TrustCenterWatermarkConfigHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-trustCenterID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-isEnabled<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether the watermarking is enabled for all trust center documents, default is true</p>
-</td>
-</tr>
-<tr>
-<td>
-logoID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the file containing the document</p>
-</td>
-</tr>
-<tr>
-<td>
-text<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>text to watermark the document with</p>
-</td>
-</tr>
-<tr>
-<td>
-fontSize<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>font size of the watermark text</p>
-</td>
-</tr>
-<tr>
-<td>
-opacity<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>opacity of the watermark text</p>
-</td>
-</tr>
-<tr>
-<td>
-rotation<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>rotation of the watermark text</p>
-</td>
-</tr>
-<tr>
-<td>
-color<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>color of the watermark text</p>
-</td>
-</tr>
-<tr>
-<td>
-font<br />
-<a href="enums#trustcenterwatermarkconfighistoryfont"><code>TrustCenterWatermarkConfigHistoryFont</code></a>
-</td>
-<td>
-<p>font of the watermark text</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterWatermarkConfigHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#trustcenterwatermarkconfighistoryedge"><code>[TrustCenterWatermarkConfigHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## TrustCenterWatermarkConfigHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#trustcenterwatermarkconfighistory"><code>TrustCenterWatermarkConfigHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -74329,334 +61104,6 @@ cursor<br />
 </tbody>
 </table>
 
-## UserHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#userhistoryoptype"><code>UserHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-email<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-firstName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-lastName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayName<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>The user&#39;s displayed &#39;friendly&#39; name</p>
-</td>
-</tr>
-<tr>
-<td>
-avatarRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the user&#39;s remote avatar</p>
-</td>
-</tr>
-<tr>
-<td>
-avatarLocalFileID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>The user&#39;s local avatar file id, takes precedence over the avatar remote URL</p>
-</td>
-</tr>
-<tr>
-<td>
-avatarUpdatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>The time the user&#39;s (local) avatar was last updated</p>
-</td>
-</tr>
-<tr>
-<td>
-lastSeen<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>the time the user was last seen</p>
-</td>
-</tr>
-<tr>
-<td>
-lastLoginProvider<br />
-<a href="enums#userhistoryauthprovider"><code>UserHistoryAuthProvider</code></a>
-</td>
-<td>
-<p>the last auth provider used to login</p>
-</td>
-</tr>
-<tr>
-<td>
-sub<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the Subject of the user JWT</p>
-</td>
-</tr>
-<tr>
-<td>
-authProvider<br />
-<a href="enums#userhistoryauthprovider"><code>UserHistoryAuthProvider!</code></a>
-</td>
-<td>
-<p>auth provider used to register the account</p>
-</td>
-</tr>
-<tr>
-<td>
-role<br />
-<a href="enums#userhistoryrole"><code>UserHistoryRole</code></a>
-</td>
-<td>
-<p>the user&#39;s role</p>
-</td>
-</tr>
-<tr>
-<td>
-scimExternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the SCIM external ID for the user</p>
-</td>
-</tr>
-<tr>
-<td>
-scimUsername<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the SCIM username for the user</p>
-</td>
-</tr>
-<tr>
-<td>
-scimActive<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether the SCIM user is active</p>
-</td>
-</tr>
-<tr>
-<td>
-scimPreferredLanguage<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the SCIM preferred language for the user</p>
-</td>
-</tr>
-<tr>
-<td>
-scimLocale<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the SCIM locale for the user</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## UserHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#userhistoryedge"><code>[UserHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## UserHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#userhistory"><code>UserHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## UserSetting
 
 
@@ -74932,244 +61379,6 @@ An edge in a connection.
 <td>
 node<br />
 <a href="objects#usersetting"><code>UserSetting</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## UserSettingHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#usersettinghistoryoptype"><code>UserSettingHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-userID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-locked<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>user account is locked if unconfirmed or explicitly locked</p>
-</td>
-</tr>
-<tr>
-<td>
-silencedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>The time notifications regarding the user were silenced</p>
-</td>
-</tr>
-<tr>
-<td>
-suspendedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>The time the user was suspended</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#usersettinghistoryuserstatus"><code>UserSettingHistoryUserStatus!</code></a>
-</td>
-<td>
-<p>status of the user account</p>
-</td>
-</tr>
-<tr>
-<td>
-emailConfirmed<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>whether the user has confirmed their email address</p>
-</td>
-</tr>
-<tr>
-<td>
-isWebauthnAllowed<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>specifies a user may complete authentication by verifying a WebAuthn capable device</p>
-</td>
-</tr>
-<tr>
-<td>
-isTfaEnabled<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether the user has two factor authentication enabled</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## UserSettingHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#usersettinghistoryedge"><code>[UserSettingHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## UserSettingHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#usersettinghistory"><code>UserSettingHistory</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -77042,478 +63251,6 @@ cursor<br />
 </tbody>
 </table>
 
-## VulnerabilityHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#vulnerabilityhistoryoptype"><code>VulnerabilityHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-externalOwnerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>owner of the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-externalID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>external identifier from the integration source for the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-cveID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>CVE identifier for the vulnerability when applicable</p>
-</td>
-</tr>
-<tr>
-<td>
-source<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>system that produced the vulnerability record</p>
-</td>
-</tr>
-<tr>
-<td>
-displayName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>display name for the vulnerability when provided</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category of the vulnerability such as application or infrastructure</p>
-</td>
-</tr>
-<tr>
-<td>
-severity<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>severity label for the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-score<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>overall score such as CVSS for the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-impact<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>impact score or rating for the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-exploitability<br />
-<a href="scalars#float"><code>Float</code></a>
-</td>
-<td>
-<p>exploitability score or rating for the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-priority<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>priority assigned to the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lifecycle status of the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-summary<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>short summary of the vulnerability details</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>long form description of the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-vector<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>attack vector string such as a CVSS vector</p>
-</td>
-</tr>
-<tr>
-<td>
-remediationSLA<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>remediation service level agreement in days</p>
-</td>
-</tr>
-<tr>
-<td>
-open<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the vulnerability is still open</p>
-</td>
-</tr>
-<tr>
-<td>
-blocking<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the vulnerability blocks production changes</p>
-</td>
-</tr>
-<tr>
-<td>
-production<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the vulnerability affects production systems</p>
-</td>
-</tr>
-<tr>
-<td>
-public<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the vulnerability is publicly disclosed</p>
-</td>
-</tr>
-<tr>
-<td>
-validated<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>true when the vulnerability has been validated by the security team</p>
-</td>
-</tr>
-<tr>
-<td>
-references<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>reference links for the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-impacts<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>targets or assets impacted by the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-publishedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the vulnerability was published</p>
-</td>
-</tr>
-<tr>
-<td>
-discoveredAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the vulnerability was discovered in the environment</p>
-</td>
-</tr>
-<tr>
-<td>
-sourceUpdatedAt<br />
-<a href="scalars#datetime"><code>DateTime</code></a>
-</td>
-<td>
-<p>timestamp when the source last updated the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-externalURI<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link to the vulnerability in the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw metadata payload for the vulnerability from the source system</p>
-</td>
-</tr>
-<tr>
-<td>
-rawPayload<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>raw payload received from the integration for auditing and troubleshooting</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## VulnerabilityHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#vulnerabilityhistoryedge"><code>[VulnerabilityHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## VulnerabilityHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#vulnerabilityhistory"><code>VulnerabilityHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## VulnerabilityUpdatePayload
 
 Return response for updateVulnerability mutation
@@ -77813,7 +63550,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -78158,289 +63895,6 @@ cursor<br />
 </tbody>
 </table>
 
-## WorkflowAssignmentHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#workflowassignmenthistoryoptype"><code>WorkflowAssignmentHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-workflowInstanceID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>ID of the workflow instance this assignment belongs to</p>
-</td>
-</tr>
-<tr>
-<td>
-assignmentKey<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Unique key for the assignment within the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-role<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Role assigned to the target, e.g. APPROVER</p>
-</td>
-</tr>
-<tr>
-<td>
-label<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Optional label for the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-required<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>Whether this assignment is required for workflow progression</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#workflowassignmenthistoryworkflowassignmentstatus"><code>WorkflowAssignmentHistoryWorkflowAssignmentStatus!</code></a>
-</td>
-<td>
-<p>Current status of the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>Optional metadata for the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-decidedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>Timestamp when the assignment was decided</p>
-</td>
-</tr>
-<tr>
-<td>
-actorUserID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>User who made the decision</p>
-</td>
-</tr>
-<tr>
-<td>
-actorGroupID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Group that acted on the decision (if applicable)</p>
-</td>
-</tr>
-<tr>
-<td>
-notes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Optional notes about the assignment</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowAssignmentHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#workflowassignmenthistoryedge"><code>[WorkflowAssignmentHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowAssignmentHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#workflowassignmenthistory"><code>WorkflowAssignmentHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowAssignmentTarget
 
 
@@ -78523,7 +63977,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -78742,235 +64196,6 @@ cursor<br />
 </tbody>
 </table>
 
-## WorkflowAssignmentTargetHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#workflowassignmenttargethistoryoptype"><code>WorkflowAssignmentTargetHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-workflowAssignmentID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Assignment this target belongs to</p>
-</td>
-</tr>
-<tr>
-<td>
-targetType<br />
-<a href="enums#workflowassignmenttargethistoryworkflowtargettype"><code>WorkflowAssignmentTargetHistoryWorkflowTargetType!</code></a>
-</td>
-<td>
-<p>Type of the target (USER, GROUP, ROLE, RESOLVER)</p>
-</td>
-</tr>
-<tr>
-<td>
-targetUserID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>User target when target_type is USER</p>
-</td>
-</tr>
-<tr>
-<td>
-targetGroupID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Group target when target_type is GROUP</p>
-</td>
-</tr>
-<tr>
-<td>
-resolverKey<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Resolver key when target_type is RESOLVER</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowAssignmentTargetHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#workflowassignmenttargethistoryedge"><code>[WorkflowAssignmentTargetHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowAssignmentTargetHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#workflowassignmenttargethistory"><code>WorkflowAssignmentTargetHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowAssignmentTargetUpdatePayload
 
 Return response for updateWorkflowAssignmentTarget mutation
@@ -79095,7 +64320,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -79213,24 +64438,6 @@ active<br />
 </td>
 <td>
 <p>Whether the workflow definition is active</p>
-</td>
-</tr>
-<tr>
-<td>
-triggerOperations<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>Derived: normalized operations from definition for prefiltering; not user editable</p>
-</td>
-</tr>
-<tr>
-<td>
-triggerFields<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>Derived: normalized fields from definition for prefiltering; not user editable</p>
 </td>
 </tr>
 <tr>
@@ -79539,343 +64746,6 @@ cursor<br />
 </tbody>
 </table>
 
-## WorkflowDefinitionHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#workflowdefinitionhistoryoptype"><code>WorkflowDefinitionHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-systemOwned<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>indicates if the record is owned by the the openlane system and not by an organization</p>
-</td>
-</tr>
-<tr>
-<td>
-internalNotes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>internal notes about the object creation, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-systemInternalID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>an internal identifier for the mapping, this field is only available to system admins</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Name of the workflow definition</p>
-</td>
-</tr>
-<tr>
-<td>
-description<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Optional description of the workflow definition</p>
-</td>
-</tr>
-<tr>
-<td>
-workflowKind<br />
-<a href="enums#workflowdefinitionhistoryworkflowkind"><code>WorkflowDefinitionHistoryWorkflowKind!</code></a>
-</td>
-<td>
-<p>Kind of workflow, e.g. APPROVAL, LIFECYCLE, NOTIFICATION</p>
-</td>
-</tr>
-<tr>
-<td>
-schemaType<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Type of schema this workflow applies to</p>
-</td>
-</tr>
-<tr>
-<td>
-revision<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Revision number for this definition</p>
-</td>
-</tr>
-<tr>
-<td>
-draft<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>Whether this definition is a draft</p>
-</td>
-</tr>
-<tr>
-<td>
-publishedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>When this definition was published</p>
-</td>
-</tr>
-<tr>
-<td>
-cooldownSeconds<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Suppress duplicate triggers within this window per object/definition</p>
-</td>
-</tr>
-<tr>
-<td>
-isDefault<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>Whether this is the default workflow for the schema type</p>
-</td>
-</tr>
-<tr>
-<td>
-active<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>Whether the workflow definition is active</p>
-</td>
-</tr>
-<tr>
-<td>
-triggerOperations<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>Derived: normalized operations from definition for prefiltering; not user editable</p>
-</td>
-</tr>
-<tr>
-<td>
-triggerFields<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>Derived: normalized fields from definition for prefiltering; not user editable</p>
-</td>
-</tr>
-<tr>
-<td>
-definitionJSON<br />
-<a href="scalars#workflowdefinitiondocument"><code>WorkflowDefinitionDocument</code></a>
-</td>
-<td>
-<p>Typed document describing triggers, conditions, and actions</p>
-</td>
-</tr>
-<tr>
-<td>
-trackedFields<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>Cached list of fields that should trigger workflow evaluation</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowDefinitionHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#workflowdefinitionhistoryedge"><code>[WorkflowDefinitionHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowDefinitionHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#workflowdefinitionhistory"><code>WorkflowDefinitionHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowDefinitionUpdatePayload
 
 Return response for updateWorkflowDefinition mutation
@@ -79979,7 +64849,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -80162,217 +65032,6 @@ cursor<br />
 </tbody>
 </table>
 
-## WorkflowEventHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#workfloweventhistoryoptype"><code>WorkflowEventHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-workflowInstanceID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>ID of the workflow instance that generated the event</p>
-</td>
-</tr>
-<tr>
-<td>
-eventType<br />
-<a href="enums#workfloweventhistoryworkfloweventtype"><code>WorkflowEventHistoryWorkflowEventType!</code></a>
-</td>
-<td>
-<p>Type of event, typically the action kind</p>
-</td>
-</tr>
-<tr>
-<td>
-payload<br />
-<a href="scalars#workfloweventpayload"><code>WorkflowEventPayload</code></a>
-</td>
-<td>
-<p>Payload for the event; stored raw</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowEventHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#workfloweventhistoryedge"><code>[WorkflowEventHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowEventHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#workfloweventhistory"><code>WorkflowEventHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowEventUpdatePayload
 
 Return response for updateWorkflowEvent mutation
@@ -80476,7 +65135,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -80486,6 +65145,15 @@ workflowDefinitionID<br />
 </td>
 <td>
 <p>ID of the workflow definition this instance is based on</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowProposalID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the workflow proposal this instance is associated with (when approval-before-commit is used)</p>
 </td>
 </tr>
 <tr>
@@ -80526,6 +65194,69 @@ definitionSnapshot<br />
 </tr>
 <tr>
 <td>
+currentActionIndex<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Index of the current action being executed (used for recovery and resumption)</p>
+</td>
+</tr>
+<tr>
+<td>
+controlID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the control this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the internal policy this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+evidenceID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the evidence this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrolID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the subcontrol this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+actionPlanID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the actionplan this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+procedureID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the procedure this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -80540,6 +65271,60 @@ workflowDefinition<br />
 </td>
 <td>
 <p>Definition driving this instance</p>
+</td>
+</tr>
+<tr>
+<td>
+control<br />
+<a href="objects#control"><code>Control</code></a>
+</td>
+<td>
+<p>Control this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicy<br />
+<a href="objects#internalpolicy"><code>InternalPolicy</code></a>
+</td>
+<td>
+<p>Internal policy this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>Evidence</code></a>
+</td>
+<td>
+<p>Evidence this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrol<br />
+<a href="objects#subcontrol"><code>Subcontrol</code></a>
+</td>
+<td>
+<p>Subcontrol this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+actionPlan<br />
+<a href="objects#actionplan"><code>ActionPlan</code></a>
+</td>
+<td>
+<p>ActionPlan this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+procedure<br />
+<a href="objects#procedure"><code>Procedure</code></a>
+</td>
+<td>
+<p>Procedure this workflow instance is associated with</p>
 </td>
 </tr>
 <tr>
@@ -80893,235 +65678,6 @@ cursor<br />
 </tbody>
 </table>
 
-## WorkflowInstanceHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#workflowinstancehistoryoptype"><code>WorkflowInstanceHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-workflowDefinitionID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>ID of the workflow definition this instance is based on</p>
-</td>
-</tr>
-<tr>
-<td>
-state<br />
-<a href="enums#workflowinstancehistoryworkflowinstancestate"><code>WorkflowInstanceHistoryWorkflowInstanceState!</code></a>
-</td>
-<td>
-<p>Current state of the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-context<br />
-<a href="scalars#workflowinstancecontext"><code>WorkflowInstanceContext</code></a>
-</td>
-<td>
-<p>Optional context for the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-lastEvaluatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>Timestamp when the workflow was last evaluated</p>
-</td>
-</tr>
-<tr>
-<td>
-definitionSnapshot<br />
-<a href="scalars#workflowdefinitiondocument"><code>WorkflowDefinitionDocument</code></a>
-</td>
-<td>
-<p>Copy of definition JSON used for this instance</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowInstanceHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#workflowinstancehistoryedge"><code>[WorkflowInstanceHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowInstanceHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#workflowinstancehistory"><code>WorkflowInstanceHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowInstanceUpdatePayload
 
 Return response for updateWorkflowInstance mutation
@@ -81216,7 +65772,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -81289,6 +65845,42 @@ directoryMembershipID<br />
 </td>
 <td>
 <p>Directory membership referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+evidenceID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Evidence referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrolID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Subcontrol referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+actionPlanID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ActionPlan referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+procedureID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Procedure referenced by this workflow instance</p>
 </td>
 </tr>
 <tr>
@@ -81370,6 +65962,42 @@ directoryMembership<br />
 </td>
 <td>
 <p>Directory membership referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidence"><code>Evidence</code></a>
+</td>
+<td>
+<p>Evidence referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrol<br />
+<a href="objects#subcontrol"><code>Subcontrol</code></a>
+</td>
+<td>
+<p>Subcontrol referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+actionPlan<br />
+<a href="objects#actionplan"><code>ActionPlan</code></a>
+</td>
+<td>
+<p>ActionPlan referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+procedure<br />
+<a href="objects#procedure"><code>Procedure</code></a>
+</td>
+<td>
+<p>Procedure referenced by this workflow instance</p>
 </td>
 </tr>
 </tbody>
@@ -81502,274 +66130,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowObjectRefHistory
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-historyTime<br />
-<a href="scalars#time"><code>Time!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ref<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-operation<br />
-<a href="enums#workflowobjectrefhistoryoptype"><code>WorkflowObjectRefHistoryOpType!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-displayID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>a shortened prefixed id field to use as a human readable identifier</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the organization id that owns the object</p>
-</td>
-</tr>
-<tr>
-<td>
-workflowInstanceID<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Workflow instance this object is associated with</p>
-</td>
-</tr>
-<tr>
-<td>
-controlID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Control referenced by this workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-taskID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Task referenced by this workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-internalPolicyID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Policy referenced by this workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-findingID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Finding referenced by this workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-directoryAccountID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Directory account referenced by this workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-directoryGroupID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Directory group referenced by this workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-directoryMembershipID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Directory membership referenced by this workflow instance</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowObjectRefHistoryConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#workflowobjectrefhistoryedge"><code>[WorkflowObjectRefHistoryEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowObjectRefHistoryEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#workflowobjectrefhistory"><code>WorkflowObjectRefHistory</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowObjectRefUpdatePayload
-
-Return response for updateWorkflowObjectRef mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowObjectRef<br />
-<a href="objects#workflowobjectref"><code>WorkflowObjectRef!</code></a>
-</td>
-<td>
-<p>Updated workflowObjectRef</p>
 </td>
 </tr>
 </tbody>

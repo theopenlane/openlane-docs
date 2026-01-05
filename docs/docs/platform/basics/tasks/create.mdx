@@ -28,3 +28,24 @@ In addition to the main Tasks page, tasks can also be created from various other
 
 This feature helps maintain context and relationships between tasks and other entities in the system.
 
+
+### Bulk Task Creation
+
+For scenarios where multiple tasks need to be created at once, Openlane supports bulk task creation. This can be done by importing a CSV file containing the details of each task. To do this, navigate to the Tasks page and select the "Bulk Upload" option. Follow the prompts to upload your CSV file, ensuring that it adheres to the required format.
+
+You can download a sample CSV template directly from the bulk upload interface to ensure your data is structured correctly and what fields are supported.
+
+:::tip
+    Refer to our documentation for a list of all fields supported on [controls](/docs/api/graph-api/objects#tasks). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `Tags` they need to be in as JSON, for example `[""soc2"", ""evidence""]` with double quotes escaped.
+:::
+
+#### Example CSV Format
+
+```csv
+Title,Category,Due,Tags,Details,Status,
+Evidence Request For CC-101,Evidence,2026-01-31T07:00:00Z,"[""other-documentation"", ""soc2""]",Software development life cycle methodology/policy and procedures,OPEN,
+Evidence Request For CC-102,Evidence,2026-01-31T07:00:00Z,"[""other-documentation"", ""soc2""]",Evidence that the mission statement has been communicated to employees during onboarding and annually thereafter,OPEN,
+Evidence Request For CC-103,Evidence,2026-01-31T07:00:00Z,"[""sample"", ""soc2""]",Evidence that data was disposed of in accordance with established policies for a selection of offboarded customers,OPEN,
+```
+
+The above will create three new tasks with the specified details, including title, category, due date, tags, details, and status.
