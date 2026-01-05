@@ -181,8 +181,7 @@ const config: Config = {
             label: 'API Specifications',
             position: 'left',
             items: [
-              { label: 'GraphQL Schemas', to: '/docs/api/graph-api', activeBasePath: '/docs/api/graph-api' },
-              { label: 'GraphQL History Schemas', to: '/docs/api/graph-api/history', activeBasePath: '/docs/api/graph-api/history' },
+              { label: 'GraphQL', to: '/docs/api/graph-api', activeBasePath: '/docs/api/graph-api' },
               { label: 'OpenAPI Spec', to: '/docs/api', activeBasePath: '/docs/api/rest-api' },
               { label: 'GraphQL Explorer', to: '/graphql' },
             ],
@@ -330,17 +329,8 @@ const config: Config = {
     [
       "docusaurus-graphql-plugin",
       {
-        id: "graph-api",
         schema: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/internal/graphapi/clientschema/schema.graphql",
         routeBasePath: "/docs/api/graph-api",
-      },
-    ],
-    [
-       "docusaurus-graphql-plugin",
-      {
-        id: "graph-api-history",
-        schema: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/internal/graphapi/historyschema/schema.graphql",
-        routeBasePath: "/docs/api/graph-api/history",
       },
     ],
     [

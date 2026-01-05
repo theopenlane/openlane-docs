@@ -57,9 +57,7 @@ tasks:
   generate-graphql-docs:
     dir: docs
     desc: generate graphql docs
-    cmds:
-      - npx docusaurus docs:generate:graphql:graph-api
-      - npx docusaurus docs:generate:graphql:graph-api-history
+    cmd: npx docusaurus docs:generate:graphql
 
   generate:
     dir: docs
