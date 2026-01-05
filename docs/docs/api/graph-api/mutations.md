@@ -605,6 +605,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVDiscussion
+
+**Type:** [DiscussionBulkCreatePayload!](objects#discussionbulkcreatepayload)
+
+Create multiple new discussions via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the discussion</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVDNSVerification
 
 **Type:** [DNSVerificationBulkCreatePayload!](objects#dnsverificationbulkcreatepayload)
@@ -1773,6 +1796,29 @@ input<br />
 </td>
 <td>
 <p>values of the directorySyncRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkDiscussion
+
+**Type:** [DiscussionBulkCreatePayload!](objects#discussionbulkcreatepayload)
+
+Create multiple new discussions
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#creatediscussioninput"><code>[CreateDiscussionInput!]</code></a>
+</td>
+<td>
+<p>values of the discussion</p>
 </td>
 </tr>
 </tbody>
@@ -3084,6 +3130,29 @@ input<br />
 </td>
 <td>
 <p>values of the directorySyncRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createDiscussion
+
+**Type:** [DiscussionCreatePayload!](objects#discussioncreatepayload)
+
+Create a new discussion
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#creatediscussioninput"><code>CreateDiscussionInput!</code></a>
+</td>
+<td>
+<p>values of the discussion</p>
 </td>
 </tr>
 </tbody>
@@ -4514,6 +4583,47 @@ templateFiles<br />
 </tbody>
 </table>
 
+## createTrustCenterPreviewSetting
+
+**Type:** [TrustCenterPreviewSettingCreatePayload!](objects#trustcenterpreviewsettingcreatepayload)
+
+Create or replace preview environment trust center settings
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterpreviewsettinginput"><code>CreateTrustCenterPreviewSettingInput!</code></a>
+</td>
+<td>
+<p>values of the preview trust center setting</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+faviconFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createTrustCenterSetting
 
 **Type:** [TrustCenterSettingCreatePayload!](objects#trustcentersettingcreatepayload)
@@ -4600,7 +4710,7 @@ input<br />
 </tr>
 <tr>
 <td>
-logoFile<br />
+watermarkFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
 <td>
@@ -5046,6 +5156,29 @@ ids<br />
 </td>
 <td>
 <p>IDs of the apiTokens to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteBulkAssessment
+
+**Type:** [AssessmentBulkDeletePayload!](objects#assessmentbulkdeletepayload)
+
+Delete multiple assessments
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the assessments to delete</p>
 </td>
 </tr>
 </tbody>
@@ -6150,6 +6283,29 @@ id<br />
 </td>
 <td>
 <p>ID of the directorySyncRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteDiscussion
+
+**Type:** [DiscussionDeletePayload!](objects#discussiondeletepayload)
+
+Delete an existing discussion
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the discussion</p>
 </td>
 </tr>
 </tbody>
@@ -8538,6 +8694,38 @@ input<br />
 </tbody>
 </table>
 
+## updateDiscussion
+
+**Type:** [DiscussionUpdatePayload!](objects#discussionupdatepayload)
+
+Update an existing discussion
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the discussion</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatediscussioninput"><code>UpdateDiscussionInput!</code></a>
+</td>
+<td>
+<p>New values for the discussion</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateDNSVerification
 
 **Type:** [DNSVerificationUpdatePayload!](objects#dnsverificationupdatepayload)
@@ -10582,7 +10770,7 @@ input<br />
 </tr>
 <tr>
 <td>
-logoFile<br />
+watermarkFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
 <td>
@@ -10852,38 +11040,6 @@ input<br />
 </td>
 <td>
 <p>New values for the workflowInstance</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## updateWorkflowObjectRef
-
-**Type:** [WorkflowObjectRefUpdatePayload!](objects#workflowobjectrefupdatepayload)
-
-Update an existing workflowObjectRef
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the workflowObjectRef</p>
-</td>
-</tr>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#updateworkflowobjectrefinput"><code>UpdateWorkflowObjectRefInput!</code></a>
-</td>
-<td>
-<p>New values for the workflowObjectRef</p>
 </td>
 </tr>
 </tbody>
