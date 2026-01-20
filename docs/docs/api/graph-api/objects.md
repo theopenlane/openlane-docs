@@ -103,17 +103,6 @@ status<br />
 </tr>
 <tr>
 <td>
-actionPlanType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `action_plan_kind_name` instead.</blockquote>
-
-<p>type of the action_plan, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -4322,17 +4311,6 @@ referenceFrameworkRevision<br />
 </td>
 <td>
 <p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
-</td>
-</tr>
-<tr>
-<td>
-controlType<br />
-<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `control_kind_name` instead.</blockquote>
-
-<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
 <tr>
@@ -8851,6 +8829,27 @@ customDomain<br />
 </td>
 <td>
 <p>Updated customDomain</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CustomDomainValidatePayload
+
+Return response for validateCustomDomain mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+customDomain<br />
+<a href="objects#customdomain"><code>CustomDomain!</code></a>
+</td>
+<td>
+<p>CustomDomain that validation was triggered for</p>
 </td>
 </tr>
 </tbody>
@@ -16782,7 +16781,58 @@ evidences<br />
 <a href="objects#evidence"><code>[Evidence!]</code></a>
 </td>
 <td>
-<p>Created evidences</p>
+<p>Created evidence</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceBulkDeletePayload
+
+Return response for deleteBulkEvidence mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted evidence IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceBulkUpdatePayload
+
+Return response for updateBulkEvidence mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+evidences<br />
+<a href="objects#evidence"><code>[Evidence!]</code></a>
+</td>
+<td>
+<p>Updated evidences</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated evidence</p>
 </td>
 </tr>
 </tbody>
@@ -16980,6 +17030,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+requestorID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who initiated the request</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -17012,15 +17071,6 @@ status<br />
 </td>
 <td>
 <p>the status of the export, e.g., pending, ready, failed</p>
-</td>
-</tr>
-<tr>
-<td>
-requestorID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the user who initiated the export</p>
 </td>
 </tr>
 <tr>
@@ -17845,15 +17895,6 @@ where<br />
 </tr>
 <tr>
 <td>
-trustCenterSetting<br />
-<a href="objects#trustcentersetting"><code>[TrustCenterSetting!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 integrations<br />
 <a href="objects#integrationconnection"><code>IntegrationConnection!</code></a>
 </td>
@@ -17998,8 +18039,8 @@ where<br />
 </tr>
 <tr>
 <td>
-trustcenterEntities<br />
-<a href="objects#trustcenterentityconnection"><code>TrustcenterEntityConnection!</code></a>
+trustCenterEntities<br />
+<a href="objects#trustcenterentityconnection"><code>TrustCenterEntityConnection!</code></a>
 </td>
 <td>
 
@@ -18048,23 +18089,41 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#trustcenterentityorder"><code>[TrustcenterEntityOrder!]</code></a>
+<a href="inputObjects#trustcenterentityorder"><code>[TrustCenterEntityOrder!]</code></a>
 </td>
 <td>
-<p>Ordering options for TrustcenterEntities returned from the connection.</p>
+<p>Ordering options for TrustCenterEntities returned from the connection.</p>
 </td>
 </tr>
 <tr>
 <td>
 where<br />
-<a href="inputObjects#trustcenterentitywhereinput"><code>TrustcenterEntityWhereInput</code></a>
+<a href="inputObjects#trustcenterentitywhereinput"><code>TrustCenterEntityWhereInput</code></a>
 </td>
 <td>
-<p>Filtering options for TrustcenterEntities returned from the connection.</p>
+<p>Filtering options for TrustCenterEntities returned from the connection.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDoc<br />
+<a href="objects#trustcenterdoc"><code>[TrustCenterDoc!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+originalTrustCenterDoc<br />
+<a href="objects#trustcenterdoc"><code>[TrustCenterDoc!]</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -26409,17 +26468,6 @@ status<br />
 </tr>
 <tr>
 <td>
-policyType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `policy_kind_name` instead.</blockquote>
-
-<p>type of the policy, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -27927,6 +27975,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+requestorID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user who initiated the request</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -27977,15 +28034,6 @@ sendAttempts<br />
 </td>
 <td>
 <p>the number of attempts made to perform email send of the invitation, maximum of 5</p>
-</td>
-</tr>
-<tr>
-<td>
-requestorID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the user who initiated the invitation</p>
 </td>
 </tr>
 <tr>
@@ -32043,6 +32091,15 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the title of the note</p>
+</td>
+</tr>
+<tr>
+<td>
 text<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -32501,10 +32558,10 @@ channels<br />
 <tr>
 <td>
 topic<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#notificationnotificationtopic"><code>NotificationNotificationTopic</code></a>
 </td>
 <td>
-<p>the topic of the notification</p>
+<p>the topic of the notification (TASK_ASSIGNMENT, APPROVAL, MENTION, EXPORT)</p>
 </td>
 </tr>
 <tr>
@@ -41094,17 +41151,6 @@ status<br />
 </tr>
 <tr>
 <td>
-procedureType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `procedure_kind_name` instead.</blockquote>
-
-<p>type of the procedure, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -42563,17 +42609,6 @@ status<br />
 </td>
 <td>
 <p>the status of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-programType<br />
-<a href="enums#programprogramtype"><code>ProgramProgramType!</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `program_kind` instead.</blockquote>
-
-<p>the type of the program</p>
 </td>
 </tr>
 <tr>
@@ -47850,28 +47885,6 @@ status<br />
 </tr>
 <tr>
 <td>
-riskType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `risk_kind_name` instead.</blockquote>
-
-<p>type of the risk, e.g. strategic, operational, financial, external, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `risk_category_name` instead.</blockquote>
-
-<p>category of the risk, e.g. human resources, operations, IT, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 impact<br />
 <a href="enums#riskriskimpact"><code>RiskRiskImpact</code></a>
 </td>
@@ -51090,8 +51103,8 @@ templates<br />
 </tr>
 <tr>
 <td>
-trustcenterEntities<br />
-<a href="objects#trustcenterentityconnection"><code>TrustcenterEntityConnection</code></a>
+trustCenterEntities<br />
+<a href="objects#trustcenterentityconnection"><code>TrustCenterEntityConnection</code></a>
 </td>
 <td>
 
@@ -51970,17 +51983,6 @@ referenceFrameworkRevision<br />
 </td>
 <td>
 <p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
-</td>
-</tr>
-<tr>
-<td>
-controlType<br />
-<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `control_kind_name` instead.</blockquote>
-
-<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
 <tr>
@@ -53469,7 +53471,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -54649,17 +54651,6 @@ status<br />
 </td>
 <td>
 <p>the status of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `task_kind_name` instead.</blockquote>
-
-<p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
 </td>
 </tr>
 <tr>
@@ -56884,10 +56875,163 @@ previewStatus<br />
 </tr>
 <tr>
 <td>
+subprocessorURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>External URL for the trust center subprocessors</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -57298,8 +57442,8 @@ where<br />
 </tr>
 <tr>
 <td>
-trustcenterEntities<br />
-<a href="objects#trustcenterentityconnection"><code>TrustcenterEntityConnection!</code></a>
+trustCenterEntities<br />
+<a href="objects#trustcenterentityconnection"><code>TrustCenterEntityConnection!</code></a>
 </td>
 <td>
 
@@ -57348,19 +57492,91 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#trustcenterentityorder"><code>[TrustcenterEntityOrder!]</code></a>
+<a href="inputObjects#trustcenterentityorder"><code>[TrustCenterEntityOrder!]</code></a>
 </td>
 <td>
-<p>Ordering options for TrustcenterEntities returned from the connection.</p>
+<p>Ordering options for TrustCenterEntities returned from the connection.</p>
 </td>
 </tr>
 <tr>
 <td>
 where<br />
-<a href="inputObjects#trustcenterentitywhereinput"><code>TrustcenterEntityWhereInput</code></a>
+<a href="inputObjects#trustcenterentitywhereinput"><code>TrustCenterEntityWhereInput</code></a>
 </td>
 <td>
-<p>Filtering options for TrustcenterEntities returned from the connection.</p>
+<p>Filtering options for TrustCenterEntities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterNdaRequests<br />
+<a href="objects#trustcenterndarequestconnection"><code>TrustCenterNDARequestConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterndarequestorder"><code>[TrustCenterNDARequestOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterNDARequests returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterndarequestwhereinput"><code>TrustCenterNDARequestWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterNDARequests returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -57454,6 +57670,150 @@ trustCenterID<br />
 </td>
 <td>
 <p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -57801,6 +58161,24 @@ tags<br />
 </tr>
 <tr>
 <td>
+trustCenterDocKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the trust_center_doc</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the trust_center_doc</p>
+</td>
+</tr>
+<tr>
+<td>
 trustCenterID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -57815,15 +58193,6 @@ title<br />
 </td>
 <td>
 <p>title of the document</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>category of the document</p>
 </td>
 </tr>
 <tr>
@@ -57850,7 +58219,7 @@ watermarkingEnabled<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>whether watermarking is enabled for the document. this will only take effect if watermarking is configured for the trust center</p>
+<p>whether watermarking is enabled for the document, this will only take effect if there is a global watermarking config for the trust center</p>
 </td>
 </tr>
 <tr>
@@ -57878,6 +58247,159 @@ standardID<br />
 </td>
 <td>
 <p>ID of the standard</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -58174,7 +58696,7 @@ cursor<br />
 </tbody>
 </table>
 
-## TrustcenterEntity
+## TrustCenterEntity
 
 
 
@@ -58279,6 +58801,150 @@ entityTypeID<br />
 </tr>
 <tr>
 <td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 logoFile<br />
 <a href="objects#file"><code>File</code></a>
 </td>
@@ -58307,9 +58973,9 @@ entityType<br />
 </tbody>
 </table>
 
-## TrustcenterEntityBulkCreatePayload
+## TrustCenterEntityBulkCreatePayload
 
-Return response for createBulkTrustcenterEntity mutation
+Return response for createBulkTrustCenterEntity mutation
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -58318,17 +58984,17 @@ Return response for createBulkTrustcenterEntity mutation
 <tbody>
 <tr>
 <td>
-trustcenterEntities<br />
-<a href="objects#trustcenterentity"><code>[TrustcenterEntity!]</code></a>
+trustCenterEntities<br />
+<a href="objects#trustcenterentity"><code>[TrustCenterEntity!]</code></a>
 </td>
 <td>
-<p>Created trustcenterEntitys</p>
+<p>Created trustCenterEntitys</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## TrustcenterEntityConnection
+## TrustCenterEntityConnection
 
 A connection to a list of items.
 
@@ -58340,7 +59006,7 @@ A connection to a list of items.
 <tr>
 <td>
 edges<br />
-<a href="objects#trustcenterentityedge"><code>[TrustcenterEntityEdge]</code></a>
+<a href="objects#trustcenterentityedge"><code>[TrustCenterEntityEdge]</code></a>
 </td>
 <td>
 <p>A list of edges.</p>
@@ -58367,9 +59033,9 @@ totalCount<br />
 </tbody>
 </table>
 
-## TrustcenterEntityCreatePayload
+## TrustCenterEntityCreatePayload
 
-Return response for createTrustcenterEntity mutation
+Return response for createTrustCenterEntity mutation
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -58378,19 +59044,19 @@ Return response for createTrustcenterEntity mutation
 <tbody>
 <tr>
 <td>
-trustcenterEntity<br />
-<a href="objects#trustcenterentity"><code>TrustcenterEntity!</code></a>
+trustCenterEntity<br />
+<a href="objects#trustcenterentity"><code>TrustCenterEntity!</code></a>
 </td>
 <td>
-<p>Created trustcenterEntity</p>
+<p>Created trustCenterEntity</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## TrustcenterEntityDeletePayload
+## TrustCenterEntityDeletePayload
 
-Return response for deleteTrustcenterEntity mutation
+Return response for deleteTrustCenterEntity mutation
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -58403,13 +59069,13 @@ deletedID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
 <td>
-<p>Deleted trustcenterEntity ID</p>
+<p>Deleted trustCenterEntity ID</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## TrustcenterEntityEdge
+## TrustCenterEntityEdge
 
 An edge in a connection.
 
@@ -58421,7 +59087,7 @@ An edge in a connection.
 <tr>
 <td>
 node<br />
-<a href="objects#trustcenterentity"><code>TrustcenterEntity</code></a>
+<a href="objects#trustcenterentity"><code>TrustCenterEntity</code></a>
 </td>
 <td>
 <p>The item at the end of the edge.</p>
@@ -58439,9 +59105,9 @@ cursor<br />
 </tbody>
 </table>
 
-## TrustcenterEntityUpdatePayload
+## TrustCenterEntityUpdatePayload
 
-Return response for updateTrustcenterEntity mutation
+Return response for updateTrustCenterEntity mutation
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -58450,11 +59116,11 @@ Return response for updateTrustcenterEntity mutation
 <tbody>
 <tr>
 <td>
-trustcenterEntity<br />
-<a href="objects#trustcenterentity"><code>TrustcenterEntity!</code></a>
+trustCenterEntity<br />
+<a href="objects#trustcenterentity"><code>TrustCenterEntity!</code></a>
 </td>
 <td>
-<p>Updated trustcenterEntity</p>
+<p>Updated trustCenterEntity</p>
 </td>
 </tr>
 </tbody>
@@ -58476,6 +59142,526 @@ template<br />
 </td>
 <td>
 
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequest
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+firstName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>first name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+lastName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>last name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>email address of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+companyName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>company name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+reason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>reason for the NDA request</p>
+</td>
+</tr>
+<tr>
+<td>
+accessLevel<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequestaccesslevel"><code>TrustCenterNDARequestTrustCenterNDARequestAccessLevel</code></a>
+</td>
+<td>
+<p>access level requested</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequeststatus"><code>TrustCenterNDARequestTrustCenterNDARequestStatus</code></a>
+</td>
+<td>
+<p>status of the NDA request</p>
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocs<br />
+<a href="objects#trustcenterdocconnection"><code>TrustCenterDocConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterdocorder"><code>[TrustCenterDocOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterdocwhereinput"><code>TrustCenterDocWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestBulkCreatePayload
+
+Return response for createBulkTrustCenterNDARequest mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterNDARequests<br />
+<a href="objects#trustcenterndarequest"><code>[TrustCenterNDARequest!]</code></a>
+</td>
+<td>
+<p>Created trustCenterNDARequests</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#trustcenterndarequestedge"><code>[TrustCenterNDARequestEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestCreatePayload
+
+Return response for createTrustCenterNDARequest mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterNDARequest<br />
+<a href="objects#trustcenterndarequest"><code>TrustCenterNDARequest!</code></a>
+</td>
+<td>
+<p>Created trustCenterNDARequest</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestDeletePayload
+
+Return response for deleteTrustCenterNDARequest mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterNDARequest ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#trustcenterndarequest"><code>TrustCenterNDARequest</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestUpdatePayload
+
+Return response for updateTrustCenterNDARequest mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+trustCenterNDARequest<br />
+<a href="objects#trustcenterndarequest"><code>TrustCenterNDARequest!</code></a>
+</td>
+<td>
+<p>Updated trustCenterNDARequest</p>
 </td>
 </tr>
 </tbody>
@@ -58727,8 +59913,44 @@ environment<br />
 </tr>
 <tr>
 <td>
-files<br />
-<a href="objects#fileconnection"><code>FileConnection!</code></a>
+removeBranding<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether to remove branding from the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
+companyDomain<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL to the company&#39;s homepage</p>
+</td>
+</tr>
+<tr>
+<td>
+securityContact<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>email address for security contact</p>
+</td>
+</tr>
+<tr>
+<td>
+ndaApprovalRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether NDA requests require approval before being processed</p>
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
 
@@ -58777,19 +59999,91 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
 </td>
 <td>
-<p>Ordering options for Files returned from the connection.</p>
+<p>Ordering options for Groups returned from the connection.</p>
 </td>
 </tr>
 <tr>
 <td>
 where<br />
-<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
 </td>
 <td>
-<p>Filtering options for Files returned from the connection.</p>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -59063,6 +60357,150 @@ category<br />
 </td>
 <td>
 <p>Category of the subprocessor, e.g. &#39;Data Warehouse&#39; or &#39;Infrastructure Hosting&#39;</p>
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
@@ -59465,6 +60903,150 @@ owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
 <td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -63618,6 +65200,33 @@ metadata<br />
 </tr>
 <tr>
 <td>
+approvalMetadata<br />
+<a href="scalars#workflowassignmentapproval"><code>WorkflowAssignmentApproval</code></a>
+</td>
+<td>
+<p>structured approval metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+rejectionMetadata<br />
+<a href="scalars#workflowassignmentrejection"><code>WorkflowAssignmentRejection</code></a>
+</td>
+<td>
+<p>structured rejection metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+invalidationMetadata<br />
+<a href="scalars#workflowassignmentinvalidation"><code>WorkflowAssignmentInvalidation</code></a>
+</td>
+<td>
+<p>structured invalidation metadata</p>
+</td>
+</tr>
+<tr>
+<td>
 decidedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -63763,9 +65372,9 @@ group<br />
 </tbody>
 </table>
 
-## WorkflowAssignmentBulkCreatePayload
+## WorkflowAssignmentApprovePayload
 
-Return response for createBulkWorkflowAssignment mutation
+Return response for approveWorkflowAssignment mutation
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -63774,11 +65383,11 @@ Return response for createBulkWorkflowAssignment mutation
 <tbody>
 <tr>
 <td>
-workflowAssignments<br />
-<a href="objects#workflowassignment"><code>[WorkflowAssignment!]</code></a>
+workflowAssignment<br />
+<a href="objects#workflowassignment"><code>WorkflowAssignment!</code></a>
 </td>
 <td>
-<p>Created workflowAssignments</p>
+<p>Approved workflow assignment</p>
 </td>
 </tr>
 </tbody>
@@ -63823,48 +65432,6 @@ totalCount<br />
 </tbody>
 </table>
 
-## WorkflowAssignmentCreatePayload
-
-Return response for createWorkflowAssignment mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowAssignment<br />
-<a href="objects#workflowassignment"><code>WorkflowAssignment!</code></a>
-</td>
-<td>
-<p>Created workflowAssignment</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowAssignmentDeletePayload
-
-Return response for deleteWorkflowAssignment mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>Deleted workflowAssignment ID</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowAssignmentEdge
 
 An edge in a connection.
@@ -63890,6 +65457,27 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowAssignmentRejectPayload
+
+Return response for rejectWorkflowAssignment mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+workflowAssignment<br />
+<a href="objects#workflowassignment"><code>WorkflowAssignment!</code></a>
+</td>
+<td>
+<p>Rejected workflow assignment</p>
 </td>
 </tr>
 </tbody>
@@ -64064,27 +65652,6 @@ group<br />
 </tbody>
 </table>
 
-## WorkflowAssignmentTargetBulkCreatePayload
-
-Return response for createBulkWorkflowAssignmentTarget mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowAssignmentTargets<br />
-<a href="objects#workflowassignmenttarget"><code>[WorkflowAssignmentTarget!]</code></a>
-</td>
-<td>
-<p>Created workflowAssignmentTargets</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowAssignmentTargetConnection
 
 A connection to a list of items.
@@ -64124,48 +65691,6 @@ totalCount<br />
 </tbody>
 </table>
 
-## WorkflowAssignmentTargetCreatePayload
-
-Return response for createWorkflowAssignmentTarget mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowAssignmentTarget<br />
-<a href="objects#workflowassignmenttarget"><code>WorkflowAssignmentTarget!</code></a>
-</td>
-<td>
-<p>Created workflowAssignmentTarget</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowAssignmentTargetDeletePayload
-
-Return response for deleteWorkflowAssignmentTarget mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>Deleted workflowAssignmentTarget ID</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowAssignmentTargetEdge
 
 An edge in a connection.
@@ -64191,48 +65716,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowAssignmentTargetUpdatePayload
-
-Return response for updateWorkflowAssignmentTarget mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowAssignmentTarget<br />
-<a href="objects#workflowassignmenttarget"><code>WorkflowAssignmentTarget!</code></a>
-</td>
-<td>
-<p>Updated workflowAssignmentTarget</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowAssignmentUpdatePayload
-
-Return response for updateWorkflowAssignment mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowAssignment<br />
-<a href="objects#workflowassignment"><code>WorkflowAssignment!</code></a>
-</td>
-<td>
-<p>Updated workflowAssignment</p>
 </td>
 </tr>
 </tbody>
@@ -65053,6 +66536,45 @@ workflowEvent<br />
 </tbody>
 </table>
 
+## WorkflowFieldMetadata
+
+Metadata for a workflow-eligible field
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The field name (snake_case)</p>
+</td>
+</tr>
+<tr>
+<td>
+label<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Human-readable label for the field</p>
+</td>
+</tr>
+<tr>
+<td>
+type<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Field data type</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## WorkflowInstance
 
 
@@ -65546,27 +67068,6 @@ where<br />
 </tbody>
 </table>
 
-## WorkflowInstanceBulkCreatePayload
-
-Return response for createBulkWorkflowInstance mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowInstances<br />
-<a href="objects#workflowinstance"><code>[WorkflowInstance!]</code></a>
-</td>
-<td>
-<p>Created workflowInstances</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowInstanceConnection
 
 A connection to a list of items.
@@ -65606,48 +67107,6 @@ totalCount<br />
 </tbody>
 </table>
 
-## WorkflowInstanceCreatePayload
-
-Return response for createWorkflowInstance mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowInstance<br />
-<a href="objects#workflowinstance"><code>WorkflowInstance!</code></a>
-</td>
-<td>
-<p>Created workflowInstance</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowInstanceDeletePayload
-
-Return response for deleteWorkflowInstance mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>Deleted workflowInstance ID</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowInstanceEdge
 
 An edge in a connection.
@@ -65678,9 +67137,9 @@ cursor<br />
 </tbody>
 </table>
 
-## WorkflowInstanceUpdatePayload
+## WorkflowMetadata
 
-Return response for updateWorkflowInstance mutation
+Workflow metadata including supported object types and their fields
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 
@@ -65689,11 +67148,11 @@ Return response for updateWorkflowInstance mutation
 <tbody>
 <tr>
 <td>
-workflowInstance<br />
-<a href="objects#workflowinstance"><code>WorkflowInstance!</code></a>
+objectTypes<br />
+<a href="objects#workflowobjecttypemetadata"><code>[WorkflowObjectTypeMetadata!]!</code></a>
 </td>
 <td>
-<p>Updated workflowInstance</p>
+<p>Available workflow object types</p>
 </td>
 </tr>
 </tbody>
@@ -66130,6 +67589,63 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## WorkflowObjectTypeMetadata
+
+Metadata for a workflow object type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+type<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The object type name (e.g., CONTROL, EVIDENCE, POLICY)</p>
+</td>
+</tr>
+<tr>
+<td>
+label<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Human-readable label for the type</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Description of the object type</p>
+</td>
+</tr>
+<tr>
+<td>
+eligibleFields<br />
+<a href="objects#workflowfieldmetadata"><code>[WorkflowFieldMetadata!]!</code></a>
+</td>
+<td>
+<p>List of fields that can be tracked in workflows for this type</p>
+</td>
+</tr>
+<tr>
+<td>
+resolverKeys<br />
+<a href="scalars#string"><code>[String!]!</code></a>
+</td>
+<td>
+<p>Available resolver keys for this object type</p>
 </td>
 </tr>
 </tbody>

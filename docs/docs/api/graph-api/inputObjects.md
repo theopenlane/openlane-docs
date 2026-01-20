@@ -922,141 +922,6 @@ statusNotNil<br />
 </tr>
 <tr>
 <td>
-actionPlanType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>action_plan_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanTypeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -17238,60 +17103,6 @@ referenceFrameworkRevisionContainsFold<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
-</td>
-<td>
-<p>control_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNEQ<br />
-<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeIn<br />
-<a href="enums#controlcontroltype"><code>[ControlControlType!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNotIn<br />
-<a href="enums#controlcontroltype"><code>[ControlControlType!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -19501,15 +19312,6 @@ status<br />
 </tr>
 <tr>
 <td>
-actionPlanType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the action_plan, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -20749,15 +20551,6 @@ referenceFrameworkRevision<br />
 </td>
 <td>
 <p>the reference framework revision for the control if it came from a standard, empty if not associated with a standard, allows for pulling in updates when the standard is updated</p>
-</td>
-</tr>
-<tr>
-<td>
-controlType<br />
-<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
-</td>
-<td>
-<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
 </td>
 </tr>
 <tr>
@@ -23583,15 +23376,6 @@ eventIDs<br />
 </tr>
 <tr>
 <td>
-trustCenterSettingIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 integrationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -23610,7 +23394,25 @@ secretIDs<br />
 </tr>
 <tr>
 <td>
-trustcenterEntityIDs<br />
+trustCenterEntityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+originalTrustCenterDocIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -25108,15 +24910,6 @@ status<br />
 </tr>
 <tr>
 <td>
-policyType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the policy, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -25468,15 +25261,6 @@ sendAttempts<br />
 </td>
 <td>
 <p>the number of attempts made to perform email send of the invitation, maximum of 5</p>
-</td>
-</tr>
-<tr>
-<td>
-requestorID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the user who initiated the invitation</p>
 </td>
 </tr>
 <tr>
@@ -26357,6 +26141,15 @@ Input was generated by ent.
 <tbody>
 <tr>
 <td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the title of the note</p>
+</td>
+</tr>
+<tr>
+<td>
 text<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -26578,10 +26371,10 @@ channels<br />
 <tr>
 <td>
 topic<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#notificationnotificationtopic"><code>NotificationNotificationTopic</code></a>
 </td>
 <td>
-<p>the topic of the notification</p>
+<p>the topic of the notification (TASK_ASSIGNMENT, APPROVAL, MENTION, EXPORT)</p>
 </td>
 </tr>
 <tr>
@@ -27978,15 +27771,6 @@ status<br />
 </tr>
 <tr>
 <td>
-procedureType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the procedure, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -28338,15 +28122,6 @@ status<br />
 </td>
 <td>
 <p>the status of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-programType<br />
-<a href="enums#programprogramtype"><code>ProgramProgramType</code></a>
-</td>
-<td>
-<p>the type of the program</p>
 </td>
 </tr>
 <tr>
@@ -29495,24 +29270,6 @@ status<br />
 </tr>
 <tr>
 <td>
-riskType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the risk, e.g. strategic, operational, financial, external, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category of the risk, e.g. human resources, operations, IT, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 impact<br />
 <a href="enums#riskriskimpact"><code>RiskRiskImpact</code></a>
 </td>
@@ -30363,15 +30120,6 @@ referenceFrameworkRevision<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
-</td>
-<td>
-<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
-</td>
-</tr>
-<tr>
-<td>
 category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -30991,15 +30739,6 @@ status<br />
 </tr>
 <tr>
 <td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
 due<br />
 <a href="scalars#datetime"><code>DateTime</code></a>
 </td>
@@ -31390,6 +31129,24 @@ tags<br />
 </tr>
 <tr>
 <td>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 trustCenterID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -31430,6 +31187,15 @@ tags<br />
 </tr>
 <tr>
 <td>
+trustCenterDocKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the trust_center_doc</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -31439,20 +31205,11 @@ title<br />
 </tr>
 <tr>
 <td>
-category<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>category of the document</p>
-</td>
-</tr>
-<tr>
-<td>
 watermarkingEnabled<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>whether watermarking is enabled for the document. this will only take effect if watermarking is configured for the trust center</p>
+<p>whether watermarking is enabled for the document, this will only take effect if there is a global watermarking config for the trust center</p>
 </td>
 </tr>
 <tr>
@@ -31471,6 +31228,33 @@ visibility<br />
 </td>
 <td>
 <p>visibility of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -31542,9 +31326,9 @@ trustCenterID<br />
 </tbody>
 </table>
 
-## CreateTrustcenterEntityInput
+## CreateTrustCenterEntityInput
 
-CreateTrustcenterEntityInput is used for create TrustcenterEntity object.
+CreateTrustCenterEntityInput is used for create TrustCenterEntity object.
 Input was generated by ent.
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
@@ -31568,6 +31352,24 @@ name<br />
 </td>
 <td>
 <p>The name of the tag definition</p>
+</td>
+</tr>
+<tr>
+<td>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -31648,8 +31450,35 @@ previewStatus<br />
 </tr>
 <tr>
 <td>
+subprocessorURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>External URL for the trust center subprocessors</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -31747,7 +31576,16 @@ postIDs<br />
 </tr>
 <tr>
 <td>
-trustcenterEntityIDs<br />
+trustCenterEntityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterNdaRequestIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -31782,6 +31620,118 @@ trustCenterID<br />
 </td>
 <td>
 <p>trust center id</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CreateTrustCenterNDARequestInput
+
+CreateTrustCenterNDARequestInput is used for create TrustCenterNDARequest object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+firstName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>first name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+lastName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>last name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>email address of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+companyName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>company name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+reason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>reason for the NDA request</p>
+</td>
+</tr>
+<tr>
+<td>
+accessLevel<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequestaccesslevel"><code>TrustCenterNDARequestTrustCenterNDARequestAccessLevel</code></a>
+</td>
+<td>
+<p>access level requested</p>
+</td>
+</tr>
+<tr>
+<td>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -32054,7 +32004,43 @@ environment<br />
 </tr>
 <tr>
 <td>
-fileIDs<br />
+companyDomain<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL to the company&#39;s homepage</p>
+</td>
+</tr>
+<tr>
+<td>
+securityContact<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>email address for security contact</p>
+</td>
+</tr>
+<tr>
+<td>
+ndaApprovalRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether NDA requests require approval before being processed</p>
+</td>
+</tr>
+<tr>
+<td>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -32108,6 +32094,24 @@ category<br />
 </td>
 <td>
 <p>Category of the subprocessor, e.g. &#39;Data Warehouse&#39; or &#39;Infrastructure Hosting&#39;</p>
+</td>
+</tr>
+<tr>
+<td>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -32217,6 +32221,24 @@ font<br />
 <td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -33128,221 +33150,6 @@ fileIDs<br />
 </tbody>
 </table>
 
-## CreateWorkflowAssignmentInput
-
-CreateWorkflowAssignmentInput is used for create WorkflowAssignment object.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-assignmentKey<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Unique key for the assignment within the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-role<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Role assigned to the target, e.g. APPROVER</p>
-</td>
-</tr>
-<tr>
-<td>
-label<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Optional label for the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-required<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>Whether this assignment is required for workflow progression</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#workflowassignmentworkflowassignmentstatus"><code>WorkflowAssignmentWorkflowAssignmentStatus</code></a>
-</td>
-<td>
-<p>Current status of the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>Optional metadata for the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-decidedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>Timestamp when the assignment was decided</p>
-</td>
-</tr>
-<tr>
-<td>
-notes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Optional notes about the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowInstanceID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowAssignmentTargetIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-groupID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## CreateWorkflowAssignmentTargetInput
-
-CreateWorkflowAssignmentTargetInput is used for create WorkflowAssignmentTarget object.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-targetType<br />
-<a href="enums#workflowassignmenttargetworkflowtargettype"><code>WorkflowAssignmentTargetWorkflowTargetType!</code></a>
-</td>
-<td>
-<p>Type of the target (USER, GROUP, ROLE, RESOLVER)</p>
-</td>
-</tr>
-<tr>
-<td>
-resolverKey<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Resolver key when target_type is RESOLVER</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowAssignmentID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-groupID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## CreateWorkflowDefinitionInput
 
 CreateWorkflowDefinitionInput is used for create WorkflowDefinition object.
@@ -33568,172 +33375,6 @@ ownerID<br />
 <td>
 workflowInstanceID<br />
 <a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## CreateWorkflowInstanceInput
-
-CreateWorkflowInstanceInput is used for create WorkflowInstance object.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-state<br />
-<a href="enums#workflowinstanceworkflowinstancestate"><code>WorkflowInstanceWorkflowInstanceState</code></a>
-</td>
-<td>
-<p>Current state of the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-context<br />
-<a href="scalars#workflowinstancecontext"><code>WorkflowInstanceContext</code></a>
-</td>
-<td>
-<p>Optional context for the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-lastEvaluatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>Timestamp when the workflow was last evaluated</p>
-</td>
-</tr>
-<tr>
-<td>
-definitionSnapshot<br />
-<a href="scalars#workflowdefinitiondocument"><code>WorkflowDefinitionDocument</code></a>
-</td>
-<td>
-<p>Copy of definition JSON used for this instance</p>
-</td>
-</tr>
-<tr>
-<td>
-currentActionIndex<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Index of the current action being executed (used for recovery and resumption)</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowDefinitionID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-internalPolicyID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-evidenceID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowAssignmentIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowEventIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowObjectRefIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -56154,6 +55795,141 @@ updatedByContainsFold<br />
 </tr>
 <tr>
 <td>
+requestorID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>requestor_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+requestorIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -56390,141 +56166,6 @@ statusIn<br />
 <td>
 statusNotIn<br />
 <a href="enums#exportexportstatus"><code>[ExportExportStatus!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>requestor_id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-requestorIDNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -59923,24 +59564,6 @@ hasEventsWith<br />
 </tr>
 <tr>
 <td>
-hasTrustCenterSetting<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>trust_center_setting edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasTrustCenterSettingWith<br />
-<a href="inputObjects#trustcentersettingwhereinput"><code>[TrustCenterSettingWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasIntegrations<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -59977,17 +59600,53 @@ hasSecretsWith<br />
 </tr>
 <tr>
 <td>
-hasTrustcenterEntities<br />
+hasTrustCenterEntities<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>trustcenter_entities edge predicates</p>
+<p>trust_center_entities edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasTrustcenterEntitiesWith<br />
-<a href="inputObjects#trustcenterentitywhereinput"><code>[TrustcenterEntityWhereInput!]</code></a>
+hasTrustCenterEntitiesWith<br />
+<a href="inputObjects#trustcenterentitywhereinput"><code>[TrustCenterEntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterDoc<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_doc edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterDocWith<br />
+<a href="inputObjects#trustcenterdocwhereinput"><code>[TrustCenterDocWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasOriginalTrustCenterDoc<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>original_trust_center_doc edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasOriginalTrustCenterDocWith<br />
+<a href="inputObjects#trustcenterdocwhereinput"><code>[TrustCenterDocWhereInput!]</code></a>
 </td>
 <td>
 
@@ -75181,141 +74840,6 @@ statusNotNil<br />
 </tr>
 <tr>
 <td>
-policyType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>policy_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-policyTypeNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-policyTypeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -77429,6 +76953,141 @@ updatedByContainsFold<br />
 </tr>
 <tr>
 <td>
+requestorID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>requestor_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+requestorIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+requestorIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -77908,141 +77567,6 @@ sendAttemptsLT<br />
 <td>
 sendAttemptsLTE<br />
 <a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>requestor_id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-requestorIDNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-requestorIDContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -90182,6 +89706,141 @@ ownerIDContainsFold<br />
 </tr>
 <tr>
 <td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>title field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+titleNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+titleContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 text<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -101599,141 +101258,6 @@ statusNotNil<br />
 </tr>
 <tr>
 <td>
-procedureType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>procedure_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureTypeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -105584,42 +105108,6 @@ statusIn<br />
 <td>
 statusNotIn<br />
 <a href="enums#programprogramstatus"><code>[ProgramProgramStatus!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programType<br />
-<a href="enums#programprogramtype"><code>ProgramProgramType</code></a>
-</td>
-<td>
-<p>program_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-programTypeNEQ<br />
-<a href="enums#programprogramtype"><code>ProgramProgramType</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programTypeIn<br />
-<a href="enums#programprogramtype"><code>[ProgramProgramType!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-programTypeNotIn<br />
-<a href="enums#programprogramtype"><code>[ProgramProgramType!]</code></a>
 </td>
 <td>
 
@@ -115557,276 +115045,6 @@ statusNotNil<br />
 </tr>
 <tr>
 <td>
-riskType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>risk_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-riskTypeNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-riskTypeContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-categoryNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 impact<br />
 <a href="enums#riskriskimpact"><code>RiskRiskImpact</code></a>
 </td>
@@ -125126,60 +124344,6 @@ referenceFrameworkRevisionContainsFold<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
-</td>
-<td>
-<p>control_type field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNEQ<br />
-<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeIn<br />
-<a href="enums#subcontrolcontroltype"><code>[SubcontrolControlType!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNotIn<br />
-<a href="enums#subcontrolcontroltype"><code>[SubcontrolControlType!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlTypeNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -133023,141 +132187,6 @@ statusNotIn<br />
 </tr>
 <tr>
 <td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-categoryNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 due<br />
 <a href="scalars#datetime"><code>DateTime</code></a>
 </td>
@@ -137400,6 +136429,42 @@ trustCenterIDContainsFold<br />
 </tr>
 <tr>
 <td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasTrustCenter<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -138046,6 +137111,276 @@ updatedByContainsFold<br />
 </tr>
 <tr>
 <td>
+trustCenterDocKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>trust_center_doc_kind_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>trust_center_doc_kind_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterDocKindIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 trustCenterID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -138290,123 +137625,6 @@ titleEqualFold<br />
 <tr>
 <td>
 titleContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-categoryNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-categoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -138964,6 +138182,60 @@ standardIDContainsFold<br />
 </tr>
 <tr>
 <td>
+hasTrustCenterDocKind<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_doc_kind edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterDocKindWith<br />
+<a href="inputObjects#customtypeenumwhereinput"><code>[CustomTypeEnumWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasTrustCenter<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -139037,9 +138309,9 @@ hasOriginalFileWith<br />
 </tbody>
 </table>
 
-## TrustcenterEntityOrder
+## TrustCenterEntityOrder
 
-Ordering options for TrustcenterEntity connections
+Ordering options for TrustCenterEntity connections
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -139058,18 +138330,18 @@ direction<br />
 <tr>
 <td>
 field<br />
-<a href="enums#trustcenterentityorderfield"><code>TrustcenterEntityOrderField!</code></a>
+<a href="enums#trustcenterentityorderfield"><code>TrustCenterEntityOrderField!</code></a>
 </td>
 <td>
-<p>The field by which to order TrustcenterEntities.</p>
+<p>The field by which to order TrustCenterEntities.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## TrustcenterEntityWhereInput
+## TrustCenterEntityWhereInput
 
-TrustcenterEntityWhereInput is used for filtering TrustcenterEntity objects.
+TrustCenterEntityWhereInput is used for filtering TrustCenterEntity objects.
 Input was generated by ent.
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
@@ -139080,7 +138352,7 @@ Input was generated by ent.
 <tr>
 <td>
 not<br />
-<a href="inputObjects#trustcenterentitywhereinput"><code>TrustcenterEntityWhereInput</code></a>
+<a href="inputObjects#trustcenterentitywhereinput"><code>TrustCenterEntityWhereInput</code></a>
 </td>
 <td>
 
@@ -139089,7 +138361,7 @@ not<br />
 <tr>
 <td>
 and<br />
-<a href="inputObjects#trustcenterentitywhereinput"><code>[TrustcenterEntityWhereInput!]</code></a>
+<a href="inputObjects#trustcenterentitywhereinput"><code>[TrustCenterEntityWhereInput!]</code></a>
 </td>
 <td>
 
@@ -139098,7 +138370,7 @@ and<br />
 <tr>
 <td>
 or<br />
-<a href="inputObjects#trustcenterentitywhereinput"><code>[TrustcenterEntityWhereInput!]</code></a>
+<a href="inputObjects#trustcenterentitywhereinput"><code>[TrustCenterEntityWhereInput!]</code></a>
 </td>
 <td>
 
@@ -139916,6 +139188,141 @@ urlContainsFold<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>trust_center_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -140033,6 +139440,42 @@ nameContainsFold<br />
 </tr>
 <tr>
 <td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasLogoFile<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -140080,6 +139523,1552 @@ hasEntityType<br />
 <td>
 hasEntityTypeWith<br />
 <a href="inputObjects#entitytypewhereinput"><code>[EntityTypeWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestOrder
+
+Ordering options for TrustCenterNDARequest connections
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+direction<br />
+<a href="enums#orderdirection"><code>OrderDirection!</code></a>
+</td>
+<td>
+<p>The ordering direction.</p>
+</td>
+</tr>
+<tr>
+<td>
+field<br />
+<a href="enums#trustcenterndarequestorderfield"><code>TrustCenterNDARequestOrderField!</code></a>
+</td>
+<td>
+<p>The field by which to order TrustCenterNDARequests.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestWhereInput
+
+TrustCenterNDARequestWhereInput is used for filtering TrustCenterNDARequest objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#trustcenterndarequestwhereinput"><code>TrustCenterNDARequestWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#trustcenterndarequestwhereinput"><code>[TrustCenterNDARequestWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#trustcenterndarequestwhereinput"><code>[TrustCenterNDARequestWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>trust_center_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>first_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+firstNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>last_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>email field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+emailNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>company_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+companyNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>reason field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+reasonNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reasonContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+accessLevel<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequestaccesslevel"><code>TrustCenterNDARequestTrustCenterNDARequestAccessLevel</code></a>
+</td>
+<td>
+<p>access_level field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+accessLevelNEQ<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequestaccesslevel"><code>TrustCenterNDARequestTrustCenterNDARequestAccessLevel</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+accessLevelIn<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequestaccesslevel"><code>[TrustCenterNDARequestTrustCenterNDARequestAccessLevel!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+accessLevelNotIn<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequestaccesslevel"><code>[TrustCenterNDARequestTrustCenterNDARequestAccessLevel!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+accessLevelIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+accessLevelNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequeststatus"><code>TrustCenterNDARequestTrustCenterNDARequestStatus</code></a>
+</td>
+<td>
+<p>status field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+statusNEQ<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequeststatus"><code>TrustCenterNDARequestTrustCenterNDARequestStatus</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIn<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequeststatus"><code>[TrustCenterNDARequestTrustCenterNDARequestStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotIn<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequeststatus"><code>[TrustCenterNDARequestTrustCenterNDARequestStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenter<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterWith<br />
+<a href="inputObjects#trustcenterwhereinput"><code>[TrustCenterWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterDocs<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_docs edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterDocsWith<br />
+<a href="inputObjects#trustcenterdocwhereinput"><code>[TrustCenterDocWhereInput!]</code></a>
 </td>
 <td>
 
@@ -142725,17 +143714,377 @@ environmentNotNil<br />
 </tr>
 <tr>
 <td>
-hasFiles<br />
+removeBranding<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>files edge predicates</p>
+<p>remove_branding field predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasFilesWith<br />
-<a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+removeBrandingNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBrandingIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBrandingNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomain<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>company_domain field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+companyDomainNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+companyDomainContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContact<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>security_contact field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+securityContactNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContactContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApprovalRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>nda_approval_required field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ndaApprovalRequiredNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApprovalRequiredIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApprovalRequiredNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
 
@@ -143751,6 +145100,42 @@ categoryEqualFold<br />
 <td>
 categoryContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
 
@@ -145457,6 +146842,42 @@ hasOwnerWith<br />
 </tr>
 <tr>
 <td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasTrustCenter<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146937,6 +148358,141 @@ previewStatusNotNil<br />
 </tr>
 <tr>
 <td>
+subprocessorURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subprocessor_url field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorURLContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146948,6 +148504,42 @@ hasOwner<br />
 <td>
 hasOwnerWith<br />
 <a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
 
@@ -147135,17 +148727,35 @@ hasPostsWith<br />
 </tr>
 <tr>
 <td>
-hasTrustcenterEntities<br />
+hasTrustCenterEntities<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>trustcenter_entities edge predicates</p>
+<p>trust_center_entities edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasTrustcenterEntitiesWith<br />
-<a href="inputObjects#trustcenterentitywhereinput"><code>[TrustcenterEntityWhereInput!]</code></a>
+hasTrustCenterEntitiesWith<br />
+<a href="inputObjects#trustcenterentitywhereinput"><code>[TrustCenterEntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterNdaRequests<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_nda_requests edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterNdaRequestsWith<br />
+<a href="inputObjects#trustcenterndarequestwhereinput"><code>[TrustCenterNDARequestWhereInput!]</code></a>
 </td>
 <td>
 
@@ -147230,24 +148840,6 @@ status<br />
 <tr>
 <td>
 clearStatus<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the action_plan, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearActionPlanType<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -149828,24 +151420,6 @@ referenceFrameworkRevision<br />
 <tr>
 <td>
 clearReferenceFrameworkRevision<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlType<br />
-<a href="enums#controlcontroltype"><code>ControlControlType</code></a>
-</td>
-<td>
-<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearControlType<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -155636,33 +157210,6 @@ clearEvents<br />
 </tr>
 <tr>
 <td>
-addTrustCenterSettingIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeTrustCenterSettingIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearTrustCenterSetting<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addIntegrationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -155717,7 +157264,7 @@ clearSecrets<br />
 </tr>
 <tr>
 <td>
-addTrustcenterEntityIDs<br />
+addTrustCenterEntityIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -155726,7 +157273,7 @@ addTrustcenterEntityIDs<br />
 </tr>
 <tr>
 <td>
-removeTrustcenterEntityIDs<br />
+removeTrustCenterEntityIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -155735,7 +157282,61 @@ removeTrustcenterEntityIDs<br />
 </tr>
 <tr>
 <td>
-clearTrustcenterEntities<br />
+clearTrustCenterEntities<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterDocIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterDocIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterDoc<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addOriginalTrustCenterDocIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeOriginalTrustCenterDocIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearOriginalTrustCenterDoc<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -158887,24 +160488,6 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
-policyType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the policy, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearPolicyType<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -161346,6 +162929,24 @@ Input was generated by ent.
 <table>
 <thead><tr><th>Name</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the title of the note</p>
+</td>
+</tr>
+<tr>
+<td>
+clearTitle<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>
 text<br />
@@ -164887,24 +166488,6 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
-procedureType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the procedure, e.g. compliance, operational, health and safety, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearProcedureType<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -165814,15 +167397,6 @@ status<br />
 </td>
 <td>
 <p>the status of the program</p>
-</td>
-</tr>
-<tr>
-<td>
-programType<br />
-<a href="enums#programprogramtype"><code>ProgramProgramType</code></a>
-</td>
-<td>
-<p>the type of the program</p>
 </td>
 </tr>
 <tr>
@@ -168291,42 +169865,6 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
-riskType<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>type of the risk, e.g. strategic, operational, financial, external, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearRiskType<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category of the risk, e.g. human resources, operations, IT, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearCategory<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 impact<br />
 <a href="enums#riskriskimpact"><code>RiskRiskImpact</code></a>
 </td>
@@ -170157,24 +171695,6 @@ clearReferenceFrameworkRevision<br />
 </tr>
 <tr>
 <td>
-controlType<br />
-<a href="enums#subcontrolcontroltype"><code>SubcontrolControlType</code></a>
-</td>
-<td>
-<p>type of the control e.g. preventive, detective, corrective, or deterrent.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearControlType<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -171151,24 +172671,6 @@ clearLogoRemoteURL<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearOwner<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 logoFileID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -171582,24 +173084,6 @@ status<br />
 </td>
 <td>
 <p>the status of the task</p>
-</td>
-</tr>
-<tr>
-<td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the category of the task, e.g. evidence upload, risk review, policy review, etc.</p>
-</td>
-</tr>
-<tr>
-<td>
-clearCategory<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 <tr>
@@ -172489,8 +173973,8 @@ clearTags<br />
 </tr>
 <tr>
 <td>
-trustCenterID<br />
-<a href="scalars#id"><code>ID</code></a>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -172498,7 +173982,43 @@ trustCenterID<br />
 </tr>
 <tr>
 <td>
-clearTrustCenter<br />
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -172556,6 +174076,24 @@ clearTags<br />
 </tr>
 <tr>
 <td>
+trustCenterDocKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the trust_center_doc</p>
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterDocKindName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -172565,20 +174103,11 @@ title<br />
 </tr>
 <tr>
 <td>
-category<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>category of the document</p>
-</td>
-</tr>
-<tr>
-<td>
 watermarkingEnabled<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>whether watermarking is enabled for the document. this will only take effect if watermarking is configured for the trust center</p>
+<p>whether watermarking is enabled for the document, this will only take effect if there is a global watermarking config for the trust center</p>
 </td>
 </tr>
 <tr>
@@ -172628,7 +174157,7 @@ clearVisibility<br />
 </tr>
 <tr>
 <td>
-trustCenterID<br />
+trustCenterDocKindID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -172637,7 +174166,61 @@ trustCenterID<br />
 </tr>
 <tr>
 <td>
-clearTrustCenter<br />
+clearTrustCenterDocKind<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -172701,9 +174284,9 @@ clearOriginalFile<br />
 </tbody>
 </table>
 
-## UpdateTrustcenterEntityInput
+## UpdateTrustCenterEntityInput
 
-UpdateTrustcenterEntityInput is used for update TrustcenterEntity object.
+UpdateTrustCenterEntityInput is used for update TrustCenterEntity object.
 Input was generated by ent.
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
@@ -172723,6 +174306,60 @@ url<br />
 <tr>
 <td>
 clearURL<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -172843,6 +174480,24 @@ clearPreviewStatus<br />
 </tr>
 <tr>
 <td>
+subprocessorURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>External URL for the trust center subprocessors</p>
+</td>
+</tr>
+<tr>
+<td>
+clearSubprocessorURL<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -172853,6 +174508,60 @@ ownerID<br />
 <tr>
 <td>
 clearOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -173086,7 +174795,7 @@ clearPosts<br />
 </tr>
 <tr>
 <td>
-addTrustcenterEntityIDs<br />
+addTrustCenterEntityIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -173095,7 +174804,7 @@ addTrustcenterEntityIDs<br />
 </tr>
 <tr>
 <td>
-removeTrustcenterEntityIDs<br />
+removeTrustCenterEntityIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -173104,7 +174813,34 @@ removeTrustcenterEntityIDs<br />
 </tr>
 <tr>
 <td>
-clearTrustcenterEntities<br />
+clearTrustCenterEntities<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterNdaRequestIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterNdaRequestIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterNdaRequests<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -173133,6 +174869,226 @@ deletePost<br />
 <td>
 updateTrustCenterSetting<br />
 <a href="inputObjects#updatetrustcentersettinginput"><code>UpdateTrustCenterSettingInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## UpdateTrustCenterNDARequestInput
+
+UpdateTrustCenterNDARequestInput is used for update TrustCenterNDARequest object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+appendTags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTags<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>first name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+lastName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>last name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>email address of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+companyName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>company name of the requester</p>
+</td>
+</tr>
+<tr>
+<td>
+clearCompanyName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>reason for the NDA request</p>
+</td>
+</tr>
+<tr>
+<td>
+clearReason<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+accessLevel<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequestaccesslevel"><code>TrustCenterNDARequestTrustCenterNDARequestAccessLevel</code></a>
+</td>
+<td>
+<p>access level requested</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAccessLevel<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#trustcenterndarequesttrustcenterndarequeststatus"><code>TrustCenterNDARequestTrustCenterNDARequestStatus</code></a>
+</td>
+<td>
+<p>status of the NDA request</p>
+</td>
+</tr>
+<tr>
+<td>
+clearStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterDocIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterDocIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterDocs<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -173387,7 +175343,61 @@ clearSecondaryForegroundColor<br />
 </tr>
 <tr>
 <td>
-addFileIDs<br />
+companyDomain<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL to the company&#39;s homepage</p>
+</td>
+</tr>
+<tr>
+<td>
+clearCompanyDomain<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityContact<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>email address for security contact</p>
+</td>
+</tr>
+<tr>
+<td>
+clearSecurityContact<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApprovalRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether NDA requests require approval before being processed</p>
+</td>
+</tr>
+<tr>
+<td>
+clearNdaApprovalRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -173396,7 +175406,7 @@ addFileIDs<br />
 </tr>
 <tr>
 <td>
-removeFileIDs<br />
+removeBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -173405,7 +175415,34 @@ removeFileIDs<br />
 </tr>
 <tr>
 <td>
-clearFiles<br />
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -173499,6 +175536,60 @@ category<br />
 </tr>
 <tr>
 <td>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 trustCenterID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -173537,24 +175628,6 @@ Input was generated by ent.
 <table>
 <thead><tr><th>Name</th><th>Description</th></tr></thead>
 <tbody>
-<tr>
-<td>
-trustCenterID<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>ID of the trust center</p>
-</td>
-</tr>
-<tr>
-<td>
-clearTrustCenterID<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
 <tr>
 <td>
 isEnabled<br />
@@ -173675,6 +175748,60 @@ font<br />
 <tr>
 <td>
 clearFont<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -175703,338 +177830,6 @@ clearFiles<br />
 </tbody>
 </table>
 
-## UpdateWorkflowAssignmentInput
-
-UpdateWorkflowAssignmentInput is used for update WorkflowAssignment object.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-appendTags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearTags<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-assignmentKey<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Unique key for the assignment within the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-role<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Role assigned to the target, e.g. APPROVER</p>
-</td>
-</tr>
-<tr>
-<td>
-label<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Optional label for the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-clearLabel<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-required<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>Whether this assignment is required for workflow progression</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="enums#workflowassignmentworkflowassignmentstatus"><code>WorkflowAssignmentWorkflowAssignmentStatus</code></a>
-</td>
-<td>
-<p>Current status of the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-metadata<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>Optional metadata for the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-clearMetadata<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-decidedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>Timestamp when the assignment was decided</p>
-</td>
-</tr>
-<tr>
-<td>
-clearDecidedAt<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-notes<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Optional notes about the assignment</p>
-</td>
-</tr>
-<tr>
-<td>
-clearNotes<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowInstanceID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addWorkflowAssignmentTargetIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeWorkflowAssignmentTargetIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearWorkflowAssignmentTargets<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearUser<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-groupID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearGroup<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## UpdateWorkflowAssignmentTargetInput
-
-UpdateWorkflowAssignmentTargetInput is used for update WorkflowAssignmentTarget object.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-appendTags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearTags<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-targetType<br />
-<a href="enums#workflowassignmenttargetworkflowtargettype"><code>WorkflowAssignmentTargetWorkflowTargetType</code></a>
-</td>
-<td>
-<p>Type of the target (USER, GROUP, ROLE, RESOLVER)</p>
-</td>
-</tr>
-<tr>
-<td>
-resolverKey<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Resolver key when target_type is RESOLVER</p>
-</td>
-</tr>
-<tr>
-<td>
-clearResolverKey<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-workflowAssignmentID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-userID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearUser<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-groupID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearGroup<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## UpdateWorkflowDefinitionInput
 
 UpdateWorkflowDefinitionInput is used for update WorkflowDefinition object.
@@ -176386,316 +178181,6 @@ clearPayload<br />
 <td>
 workflowInstanceID<br />
 <a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## UpdateWorkflowInstanceInput
-
-UpdateWorkflowInstanceInput is used for update WorkflowInstance object.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-appendTags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearTags<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-state<br />
-<a href="enums#workflowinstanceworkflowinstancestate"><code>WorkflowInstanceWorkflowInstanceState</code></a>
-</td>
-<td>
-<p>Current state of the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-context<br />
-<a href="scalars#workflowinstancecontext"><code>WorkflowInstanceContext</code></a>
-</td>
-<td>
-<p>Optional context for the workflow instance</p>
-</td>
-</tr>
-<tr>
-<td>
-clearContext<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-lastEvaluatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>Timestamp when the workflow was last evaluated</p>
-</td>
-</tr>
-<tr>
-<td>
-clearLastEvaluatedAt<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-definitionSnapshot<br />
-<a href="scalars#workflowdefinitiondocument"><code>WorkflowDefinitionDocument</code></a>
-</td>
-<td>
-<p>Copy of definition JSON used for this instance</p>
-</td>
-</tr>
-<tr>
-<td>
-clearDefinitionSnapshot<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-currentActionIndex<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Index of the current action being executed (used for recovery and resumption)</p>
-</td>
-</tr>
-<tr>
-<td>
-workflowDefinitionID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-controlID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearControl<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-internalPolicyID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearInternalPolicy<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-evidenceID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEvidence<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-subcontrolID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearSubcontrol<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-actionPlanID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearActionPlan<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-procedureID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearProcedure<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addWorkflowAssignmentIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeWorkflowAssignmentIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearWorkflowAssignments<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addWorkflowEventIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeWorkflowEventIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearWorkflowEvents<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addWorkflowObjectRefIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeWorkflowObjectRefIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearWorkflowObjectRefs<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
