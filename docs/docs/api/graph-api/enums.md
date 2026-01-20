@@ -697,42 +697,6 @@ ControlControlStatus is enum for the field status
 </tbody>
 </table>
 
-## ControlControlType
-
-ControlControlType is enum for the field control_type
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>PREVENTATIVE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>DETECTIVE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>CORRECTIVE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>DETERRENT</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## ControlImplementationDocumentStatus
 
 ControlImplementationDocumentStatus is enum for the field status
@@ -996,12 +960,6 @@ Properties by which Control connections can be ordered.
 </tr>
 <tr>
 <td>REFERENCE_FRAMEWORK</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>CONTROL_TYPE</td>
 <td>
 
 </td>
@@ -1529,97 +1487,97 @@ DNSVerificationDNSVerificationStatus is enum for the field dns_verification_stat
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
-<td>active</td>
+<td>ACTIVE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending</td>
+<td>PENDING</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>active_redeploying</td>
+<td>ACTIVE_REDEPLOYING</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>moved</td>
+<td>MOVED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_deletion</td>
+<td>PENDING_DELETION</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>deleted</td>
+<td>DELETED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_blocked</td>
+<td>PENDING_BLOCKED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_migration</td>
+<td>PENDING_MIGRATION</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_provisioned</td>
+<td>PENDING_PROVISIONED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>test_pending</td>
+<td>TEST_PENDING</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>test_active</td>
+<td>TEST_ACTIVE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>test_active_apex</td>
+<td>TEST_ACTIVE_APEX</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>test_blocked</td>
+<td>TEST_BLOCKED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>test_failed</td>
+<td>TEST_FAILED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>provisioned</td>
+<td>PROVISIONED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>blocked</td>
+<td>BLOCKED</td>
 <td>
 
 </td>
@@ -1661,127 +1619,127 @@ DNSVerificationSSLVerificationStatus is enum for the field acme_challenge_status
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
-<td>initializing</td>
+<td>INITIALIZING</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_validation</td>
+<td>PENDING_VALIDATION</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>deleted</td>
+<td>DELETED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_issuance</td>
+<td>PENDING_ISSUANCE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_deployment</td>
+<td>PENDING_DEPLOYMENT</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_deletion</td>
+<td>PENDING_DELETION</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_expiration</td>
+<td>PENDING_EXPIRATION</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>expired</td>
+<td>EXPIRED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>active</td>
+<td>ACTIVE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>initializing_timed_out</td>
+<td>INITIALIZING_TIMED_OUT</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>validation_timed_out</td>
+<td>VALIDATION_TIMED_OUT</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>issuance_timed_out</td>
+<td>ISSUANCE_TIMED_OUT</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>deployment_timed_out</td>
+<td>DEPLOYMENT_TIMED_OUT</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>deletion_timed_out</td>
+<td>DELETION_TIMED_OUT</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>pending_cleanup</td>
+<td>PENDING_CLEANUP</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>staging_deployment</td>
+<td>STAGING_DEPLOYMENT</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>staging_active</td>
+<td>STAGING_ACTIVE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>deactivating</td>
+<td>DEACTIVATING</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>inactive</td>
+<td>INACTIVE</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>backup_issued</td>
+<td>BACKUP_ISSUED</td>
 <td>
 
 </td>
 </tr>
 <tr>
-<td>holding_deployment</td>
+<td>HOLDING_DEPLOYMENT</td>
 <td>
 
 </td>
@@ -2142,6 +2100,12 @@ ExportExportType is enum for the field export_type
 </tr>
 <tr>
 <td>TASK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRUST_CENTER_SUBPROCESSOR</td>
 <td>
 
 </td>
@@ -3289,6 +3253,42 @@ Properties by which Note connections can be ordered.
 </tbody>
 </table>
 
+## NotificationNotificationTopic
+
+NotificationNotificationTopic is enum for the field topic
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>TASK_ASSIGNMENT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>APPROVAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MENTION</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>EXPORT</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## NotificationNotificationType
 
 NotificationNotificationType is enum for the field notification_type
@@ -3905,12 +3905,6 @@ Properties by which Program connections can be ordered.
 </td>
 </tr>
 <tr>
-<td>PROGRAM_TYPE</td>
-<td>
-
-</td>
-</tr>
-<tr>
 <td>framework</td>
 <td>
 
@@ -3972,42 +3966,6 @@ ProgramProgramStatus is enum for the field status
 </tr>
 <tr>
 <td>ARCHIVED</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## ProgramProgramType
-
-ProgramProgramType is enum for the field program_type
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>FRAMEWORK</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>GAP_ANALYSIS</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>RISK_ASSESSMENT</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>OTHER</td>
 <td>
 
 </td>
@@ -4140,18 +4098,6 @@ Properties by which Risk connections can be ordered.
 </tr>
 <tr>
 <td>STATUS</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>risk_type</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>category</td>
 <td>
 
 </td>
@@ -4681,42 +4627,6 @@ SubcontrolControlStatus is enum for the field status
 </tbody>
 </table>
 
-## SubcontrolControlType
-
-SubcontrolControlType is enum for the field control_type
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>PREVENTATIVE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>DETECTIVE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>CORRECTIVE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>DETERRENT</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## SubcontrolOrderField
 
 Properties by which Subcontrol connections can be ordered.
@@ -4758,12 +4668,6 @@ Properties by which Subcontrol connections can be ordered.
 </tr>
 <tr>
 <td>REFERENCE_FRAMEWORK</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>CONTROL_TYPE</td>
 <td>
 
 </td>
@@ -4950,12 +4854,6 @@ Properties by which Task connections can be ordered.
 </tr>
 <tr>
 <td>STATUS</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>category</td>
 <td>
 
 </td>
@@ -5251,9 +5149,9 @@ TrustCenterDocWatermarkStatus is enum for the field watermark_status
 </tbody>
 </table>
 
-## TrustcenterEntityOrderField
+## TrustCenterEntityOrderField
 
-Properties by which TrustcenterEntity connections can be ordered.
+Properties by which TrustCenterEntity connections can be ordered.
 
 <p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
 
@@ -5274,6 +5172,90 @@ Properties by which TrustcenterEntity connections can be ordered.
 </tr>
 <tr>
 <td>NAME</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestOrderField
+
+Properties by which TrustCenterNDARequest connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestTrustCenterNDARequestAccessLevel
+
+TrustCenterNDARequestTrustCenterNDARequestAccessLevel is enum for the field access_level
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FULL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LIMITED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## TrustCenterNDARequestTrustCenterNDARequestStatus
+
+TrustCenterNDARequestTrustCenterNDARequestStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>REQUESTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NEEDS_APPROVAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>APPROVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SIGNED</td>
 <td>
 
 </td>

@@ -4744,6 +4744,74 @@ where<br />
 </tbody>
 </table>
 
+## myWorkflowAssignments
+
+**Type:** [WorkflowAssignmentConnection!](objects#workflowassignmentconnection)
+
+Get workflow assignments for the current user
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowassignmentorder"><code>[WorkflowAssignmentOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowassignmentwhereinput"><code>WorkflowAssignmentWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## narrative
 
 **Type:** [Narrative!](objects#narrative)
@@ -8129,9 +8197,9 @@ where<br />
 </tbody>
 </table>
 
-## trustcenterEntities
+## trustCenterEntities
 
-**Type:** [TrustcenterEntityConnection!](objects#trustcenterentityconnection)
+**Type:** [TrustCenterEntityConnection!](objects#trustcenterentityconnection)
 
 
 
@@ -8179,29 +8247,29 @@ last<br />
 <tr>
 <td>
 orderBy<br />
-<a href="inputObjects#trustcenterentityorder"><code>[TrustcenterEntityOrder!]</code></a>
+<a href="inputObjects#trustcenterentityorder"><code>[TrustCenterEntityOrder!]</code></a>
 </td>
 <td>
-<p>Ordering options for TrustcenterEntities returned from the connection.</p>
+<p>Ordering options for TrustCenterEntities returned from the connection.</p>
 </td>
 </tr>
 <tr>
 <td>
 where<br />
-<a href="inputObjects#trustcenterentitywhereinput"><code>TrustcenterEntityWhereInput</code></a>
+<a href="inputObjects#trustcenterentitywhereinput"><code>TrustCenterEntityWhereInput</code></a>
 </td>
 <td>
-<p>Filtering options for TrustcenterEntities returned from the connection.</p>
+<p>Filtering options for TrustCenterEntities returned from the connection.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## trustcenterEntity
+## trustCenterEntity
 
-**Type:** [TrustcenterEntity!](objects#trustcenterentity)
+**Type:** [TrustCenterEntity!](objects#trustcenterentity)
 
-Look up trustcenterEntity by ID
+Look up trustCenterEntity by ID
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -8214,17 +8282,17 @@ id<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
 <td>
-<p>ID of the trustcenterEntity</p>
+<p>ID of the trustCenterEntity</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## trustcenterEntitySearch
+## trustCenterEntitySearch
 
-**Type:** [TrustcenterEntityConnection](objects#trustcenterentityconnection)
+**Type:** [TrustCenterEntityConnection](objects#trustcenterentityconnection)
 
-Search across TrustcenterEntity objects
+Search across TrustCenterEntity objects
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -8274,6 +8342,97 @@ last<br />
 </td>
 <td>
 <p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterNDARequest
+
+**Type:** [TrustCenterNDARequest!](objects#trustcenterndarequest)
+
+Look up trustCenterNDARequest by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterNDARequest</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterNdaRequests
+
+**Type:** [TrustCenterNDARequestConnection!](objects#trustcenterndarequestconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterndarequestorder"><code>[TrustCenterNDARequestOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterNDARequests returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterndarequestwhereinput"><code>TrustCenterNDARequestWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterNDARequests returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -9474,6 +9633,12 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+## workflowMetadata
+
+**Type:** [WorkflowMetadata!](objects#workflowmetadata)
+
+Get workflow metadata including available object types and their eligible fields
 
 ## workflowObjectRef
 
