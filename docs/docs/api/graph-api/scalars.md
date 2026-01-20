@@ -19,7 +19,7 @@ It contains `Line1`, `Line2`, `City`, `State`, `PostalCode`, and `Country`
 
 ## Any
 
-
+Any is a generic fallback type
 
 ## AssessmentMethod
 
@@ -128,6 +128,18 @@ This scalar is typically used to handle file uploads in GraphQL mutations.
 ## VersionBump
 
 VersionBump allows a revision to automatically be bumped based on "Major", "Minor", "Patch", or "Draft"
+
+## WorkflowAssignmentApproval
+
+WorkflowAssignmentApproval captures structured metadata for workflow assignment approvals.
+
+## WorkflowAssignmentInvalidation
+
+WorkflowAssignmentInvalidation captures details when an approval is invalidated.
+
+## WorkflowAssignmentRejection
+
+WorkflowAssignmentRejection captures details when an approval is rejected or denied.
 
 ## WorkflowDefinitionDocument
 
