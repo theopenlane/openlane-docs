@@ -1021,6 +1021,78 @@ where<br />
 </tr>
 <tr>
 <td>
+scans<br />
+<a href="objects#scanconnection"><code>ScanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Scans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 reviews<br />
 <a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
 </td>
@@ -1399,11 +1471,101 @@ hasPendingWorkflow<br />
 </tr>
 <tr>
 <td>
-activeWorkflowInstance<br />
-<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>Returns the active workflow instance for this actionPlan if one is running</p>
+<p>Indicates if this actionPlan has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this actionPlan (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this actionPlan across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -2340,6 +2502,150 @@ template<br />
 </tr>
 <tr>
 <td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 assessmentResponses<br />
 <a href="objects#assessmentresponseconnection"><code>AssessmentResponseConnection!</code></a>
 </td>
@@ -2403,6 +2709,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -2623,6 +3001,42 @@ assessmentID<br />
 </tr>
 <tr>
 <td>
+isTest<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether this assessment response is for a test send</p>
+</td>
+</tr>
+<tr>
+<td>
+campaignID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the campaign this response is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolderID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the identity holder record for the recipient</p>
+</td>
+</tr>
+<tr>
+<td>
+entityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the entity associated with this assessment response</p>
+</td>
+</tr>
+<tr>
+<td>
 email<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -2637,6 +3051,69 @@ sendAttempts<br />
 </td>
 <td>
 <p>the number of attempts made to perform email send to the recipient about this assessment, maximum of 5</p>
+</td>
+</tr>
+<tr>
+<td>
+emailDeliveredAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the assessment email was delivered to the recipient</p>
+</td>
+</tr>
+<tr>
+<td>
+emailOpenedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when the assessment email was opened by the recipient</p>
+</td>
+</tr>
+<tr>
+<td>
+emailClickedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when a link in the assessment email was clicked by the recipient</p>
+</td>
+</tr>
+<tr>
+<td>
+emailOpenCount<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>the number of times the assessment email was opened</p>
+</td>
+</tr>
+<tr>
+<td>
+emailClickCount<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>the number of link clicks for the assessment email</p>
+</td>
+</tr>
+<tr>
+<td>
+lastEmailEventAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>the most recent email event timestamp for this assessment response</p>
+</td>
+</tr>
+<tr>
+<td>
+emailMetadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about email delivery events</p>
 </td>
 </tr>
 <tr>
@@ -2706,6 +3183,33 @@ owner<br />
 <td>
 assessment<br />
 <a href="objects#assessment"><code>Assessment!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaign<br />
+<a href="objects#campaign"><code>Campaign</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolder<br />
+<a href="objects#identityholder"><code>IdentityHolder</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entity<br />
+<a href="objects#entity"><code>Entity</code></a>
 </td>
 <td>
 
@@ -2933,6 +3437,177 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+internalOwner<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the internal owner for the asset when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner user id for the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner group id for the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+assetSubtypeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the subtype of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+assetSubtypeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the subtype of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+assetDataClassificationName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the data_classification of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+assetDataClassificationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the data_classification of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+accessModelName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the access_model of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+accessModelID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the access_model of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+encryptionStatusName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the encryption_status of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+encryptionStatusID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the encryption_status of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+securityTierName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the security_tier of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+securityTierID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the security_tier of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+criticalityName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the criticality of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+criticalityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the criticality of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
 systemOwned<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -3001,6 +3676,87 @@ website<br />
 </td>
 <td>
 <p>the website of the asset, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+physicalLocation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>physical location of the asset, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+region<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the region where the asset operates or is hosted</p>
+</td>
+</tr>
+<tr>
+<td>
+containsPii<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the asset stores or processes PII</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceType<br />
+<a href="enums#assetsourcetype"><code>AssetSourceType!</code></a>
+</td>
+<td>
+<p>the source of the asset record, e.g., manual, discovered, imported, api</p>
+</td>
+</tr>
+<tr>
+<td>
+sourcePlatformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the platform that sourced the asset record</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceIdentifier<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the identifier used by the source platform for the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+costCenter<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cost center associated with the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+estimatedMonthlyCost<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>estimated monthly cost for the asset</p>
+</td>
+</tr>
+<tr>
+<td>
+purchaseDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>purchase date for the asset</p>
 </td>
 </tr>
 <tr>
@@ -3248,6 +4004,96 @@ where<br />
 </tr>
 <tr>
 <td>
+internalOwnerUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assetSubtype<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assetDataClassification<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+accessModel<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+encryptionStatus<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityTier<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+criticality<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 scans<br />
 <a href="objects#scanconnection"><code>ScanConnection!</code></a>
 </td>
@@ -3392,6 +4238,222 @@ where<br />
 </tr>
 <tr>
 <td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+outOfScopePlatforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
@@ -3455,6 +4517,159 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+sourcePlatform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+connectedAssets<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+connectedFrom<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -3634,6 +4849,1928 @@ asset<br />
 </td>
 <td>
 <p>Updated asset</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## Campaign
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwner<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the internal owner for the campaign when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner user id for the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner group id for the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the description of the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+campaignType<br />
+<a href="enums#campaigncampaigntype"><code>CampaignCampaignType!</code></a>
+</td>
+<td>
+<p>the type of campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#campaigncampaignstatus"><code>CampaignCampaignStatus!</code></a>
+</td>
+<td>
+<p>the status of the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether the campaign is active</p>
+</td>
+</tr>
+<tr>
+<td>
+scheduledAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the campaign is scheduled to start</p>
+</td>
+</tr>
+<tr>
+<td>
+launchedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the campaign was launched</p>
+</td>
+</tr>
+<tr>
+<td>
+completedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the campaign completed</p>
+</td>
+</tr>
+<tr>
+<td>
+dueDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when responses are due for the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+isRecurring<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether the campaign recurs on a schedule</p>
+</td>
+</tr>
+<tr>
+<td>
+recurrenceFrequency<br />
+<a href="enums#campaignfrequency"><code>CampaignFrequency</code></a>
+</td>
+<td>
+<p>the recurrence cadence for the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+recurrenceInterval<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>the recurrence interval for the campaign, combined with the recurrence frequency</p>
+</td>
+</tr>
+<tr>
+<td>
+recurrenceCron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron schedule to run the campaign in cron 6-field syntax, e.g. 0 0 0 * * *</p>
+</td>
+</tr>
+<tr>
+<td>
+recurrenceTimezone<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>timezone used for the recurrence schedule</p>
+</td>
+</tr>
+<tr>
+<td>
+lastRunAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the campaign was last executed</p>
+</td>
+</tr>
+<tr>
+<td>
+nextRunAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the campaign is scheduled to run next</p>
+</td>
+</tr>
+<tr>
+<td>
+recurrenceEndAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the recurring campaign should stop running</p>
+</td>
+</tr>
+<tr>
+<td>
+recipientCount<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>the number of recipients targeted by the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+resendCount<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>the number of times campaign notifications were resent</p>
+</td>
+</tr>
+<tr>
+<td>
+lastResentAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when campaign notifications were last resent</p>
+</td>
+</tr>
+<tr>
+<td>
+templateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the template associated with the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+entityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the entity associated with the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the assessment associated with the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessment<br />
+<a href="objects#assessment"><code>Assessment</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+template<br />
+<a href="objects#template"><code>Template</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entity<br />
+<a href="objects#entity"><code>Entity</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargets<br />
+<a href="objects#campaigntargetconnection"><code>CampaignTargetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaigntargetorder"><code>[CampaignTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaigntargetwhereinput"><code>CampaignTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponses<br />
+<a href="objects#assessmentresponseconnection"><code>AssessmentResponseConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentresponseorder"><code>[AssessmentResponseOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentresponsewhereinput"><code>AssessmentResponseWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+contacts<br />
+<a href="objects#contactconnection"><code>ContactConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#contactorder"><code>[ContactOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Contacts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#contactwhereinput"><code>ContactWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Contacts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+users<br />
+<a href="objects#userconnection"><code>UserConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#userorder"><code>[UserOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Users returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#userwhereinput"><code>UserWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Users returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+groups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this campaign has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this campaign has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this campaign (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this campaign across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignBulkCreatePayload
+
+Return response for createBulkCampaign mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaign"><code>[Campaign!]</code></a>
+</td>
+<td>
+<p>Created campaigns</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#campaignedge"><code>[CampaignEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignCreatePayload
+
+Return response for createCampaign mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+campaign<br />
+<a href="objects#campaign"><code>Campaign!</code></a>
+</td>
+<td>
+<p>Created campaign</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignDeletePayload
+
+Return response for deleteCampaign mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted campaign ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#campaign"><code>Campaign</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignTarget
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
+</td>
+</tr>
+<tr>
+<td>
+campaignID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>the campaign this target belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+contactID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the contact associated with the campaign target</p>
+</td>
+</tr>
+<tr>
+<td>
+userID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user associated with the campaign target</p>
+</td>
+</tr>
+<tr>
+<td>
+groupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group associated with the campaign target</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the email address targeted by the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+fullName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the name of the campaign target, if known</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#campaigntargetassessmentresponsestatus"><code>CampaignTargetAssessmentResponseStatus!</code></a>
+</td>
+<td>
+<p>the delivery or response status for the campaign target</p>
+</td>
+</tr>
+<tr>
+<td>
+sentAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the campaign target was last sent a request</p>
+</td>
+</tr>
+<tr>
+<td>
+completedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the campaign target completed the request</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the campaign target</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaign<br />
+<a href="objects#campaign"><code>Campaign!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contact<br />
+<a href="objects#contact"><code>Contact</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+user<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+group<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this campaignTarget has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this campaignTarget has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this campaignTarget (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this campaignTarget across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignTargetBulkCreatePayload
+
+Return response for createBulkCampaignTarget mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+campaignTargets<br />
+<a href="objects#campaigntarget"><code>[CampaignTarget!]</code></a>
+</td>
+<td>
+<p>Created campaignTargets</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignTargetConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#campaigntargetedge"><code>[CampaignTargetEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignTargetCreatePayload
+
+Return response for createCampaignTarget mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+campaignTarget<br />
+<a href="objects#campaigntarget"><code>CampaignTarget!</code></a>
+</td>
+<td>
+<p>Created campaignTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignTargetDeletePayload
+
+Return response for deleteCampaignTarget mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted campaignTarget ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignTargetEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#campaigntarget"><code>CampaignTarget</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignTargetUpdatePayload
+
+Return response for updateCampaignTarget mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+campaignTarget<br />
+<a href="objects#campaigntarget"><code>CampaignTarget!</code></a>
+</td>
+<td>
+<p>Updated campaignTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## CampaignUpdatePayload
+
+Return response for updateCampaign mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+campaign<br />
+<a href="objects#campaign"><code>Campaign!</code></a>
+</td>
+<td>
+<p>Updated campaign</p>
 </td>
 </tr>
 </tbody>
@@ -3852,6 +6989,150 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargets<br />
+<a href="objects#campaigntargetconnection"><code>CampaignTargetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaigntargetorder"><code>[CampaignTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaigntargetwhereinput"><code>CampaignTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CampaignTargets returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -4491,6 +7772,42 @@ controlKindID<br />
 </td>
 <td>
 <p>the kind of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the control</p>
 </td>
 </tr>
 <tr>
@@ -5431,6 +8748,24 @@ controlKind<br />
 </tr>
 <tr>
 <td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 standard<br />
 <a href="objects#standard"><code>Standard</code></a>
 </td>
@@ -5503,6 +8838,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -6097,11 +9504,101 @@ hasPendingWorkflow<br />
 </tr>
 <tr>
 <td>
-activeWorkflowInstance<br />
-<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>Returns the active workflow instance for this control if one is running</p>
+<p>Indicates if this control has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this control (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this control across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -8955,7 +12452,7 @@ objectType<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>the kind of object the type applies to, for example task</p>
+<p>the kind of object the type applies to, for example task, leave empty for global enums</p>
 </td>
 </tr>
 <tr>
@@ -9660,6 +13157,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -9903,6 +13472,42 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the directory_account</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the directory_account</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the directory_account</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the directory_account</p>
+</td>
+</tr>
+<tr>
+<td>
 integrationID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
@@ -10094,6 +13699,24 @@ sourceVersion<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -10576,6 +14199,42 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the directory_group</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the directory_group</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the directory_group</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the directory_group</p>
+</td>
+</tr>
+<tr>
+<td>
 integrationID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
@@ -10713,6 +14372,24 @@ sourceVersion<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -11186,6 +14863,42 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the directory_membership</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the directory_membership</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the directory_membership</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the directory_membership</p>
+</td>
+</tr>
+<tr>
+<td>
 integrationID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
@@ -11287,6 +15000,24 @@ metadata<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -11706,6 +15437,42 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the directory_sync_run</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the directory_sync_run</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the directory_sync_run</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the directory_sync_run</p>
+</td>
+</tr>
+<tr>
+<td>
 integrationID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
@@ -11798,6 +15565,24 @@ stats<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -13044,6 +16829,42 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the document</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the document</p>
+</td>
+</tr>
+<tr>
+<td>
 templateID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -13064,6 +16885,24 @@ data<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -13477,6 +17316,69 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+internalOwner<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the internal owner for the entity when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner user id for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner group id for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>who reviewed the entity when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedByUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id that reviewed the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedByGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group id that reviewed the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the entity was last reviewed</p>
+</td>
+</tr>
+<tr>
+<td>
 systemOwned<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -13500,6 +17402,96 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+entityRelationshipStateName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the relationship_state of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+entityRelationshipStateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the relationship_state of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+entitySecurityQuestionnaireStatusName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the security_questionnaire_status of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+entitySecurityQuestionnaireStatusID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the security_questionnaire_status of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+entitySourceTypeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the source_type of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+entitySourceTypeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the source_type of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the entity</p>
 </td>
 </tr>
 <tr>
@@ -13554,6 +17546,231 @@ status<br />
 </td>
 <td>
 <p>status of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+approvedForUse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the entity is approved for use</p>
+</td>
+</tr>
+<tr>
+<td>
+linkedAssetIds<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>asset identifiers linked to the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSoc2<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the entity has an active SOC 2 report</p>
+</td>
+</tr>
+<tr>
+<td>
+soc2PeriodEnd<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>SOC 2 reporting period end date</p>
+</td>
+</tr>
+<tr>
+<td>
+contractStartDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>start date for the entity contract</p>
+</td>
+</tr>
+<tr>
+<td>
+contractEndDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>end date for the entity contract</p>
+</td>
+</tr>
+<tr>
+<td>
+autoRenews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the contract auto-renews</p>
+</td>
+</tr>
+<tr>
+<td>
+terminationNoticeDays<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>number of days required for termination notice</p>
+</td>
+</tr>
+<tr>
+<td>
+annualSpend<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>annual spend associated with the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+spendCurrency<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the currency of the annual spend</p>
+</td>
+</tr>
+<tr>
+<td>
+billingModel<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>billing model for the entity relationship</p>
+</td>
+</tr>
+<tr>
+<td>
+renewalRisk<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>renewal risk rating for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+ssoEnforced<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether SSO is enforced for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+mfaSupported<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether MFA is supported by the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+mfaEnforced<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether MFA is enforced by the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+statusPageURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>status page URL for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+providedServices<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>services provided by the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+links<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>external links associated with the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+riskRating<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the risk rating label for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+riskScore<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>the risk score for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+tier<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the tier classification for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequency<br />
+<a href="enums#entityfrequency"><code>EntityFrequency</code></a>
+</td>
+<td>
+<p>the cadence for reviewing the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+nextReviewAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the entity is due for review</p>
+</td>
+</tr>
+<tr>
+<td>
+contractRenewalAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the entity contract is up for renewal</p>
+</td>
+</tr>
+<tr>
+<td>
+vendorMetadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>vendor metadata such as additional enrichment info, company size, public, etc.</p>
 </td>
 </tr>
 <tr>
@@ -13778,6 +17995,87 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewedByUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewedByGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityRelationshipState<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entitySecurityQuestionnaireStatus<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entitySourceType<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -14206,6 +18504,726 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponses<br />
+<a href="objects#assessmentresponseconnection"><code>AssessmentResponseConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentresponseorder"><code>[AssessmentResponseOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentresponsewhereinput"><code>AssessmentResponseWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+integrations<br />
+<a href="objects#integrationconnection"><code>IntegrationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#integrationorder"><code>[IntegrationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#integrationwhereinput"><code>IntegrationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessors<br />
+<a href="objects#subprocessorconnection"><code>SubprocessorConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subprocessororder"><code>[SubprocessorOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subprocessors returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subprocessorwhereinput"><code>SubprocessorWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subprocessors returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+authMethods<br />
+<a href="objects#customtypeenumconnection"><code>CustomTypeEnumConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#customtypeenumorder"><code>[CustomTypeEnumOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CustomTypeEnums returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#customtypeenumwhereinput"><code>CustomTypeEnumWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CustomTypeEnums returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+employerIdentityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+outOfScopePlatforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+sourcePlatforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -16000,6 +21018,42 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
 workflowEligibleMarker<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -16092,6 +21146,24 @@ status<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -16603,6 +21675,150 @@ where<br />
 </tr>
 <tr>
 <td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scans<br />
+<a href="objects#scanconnection"><code>ScanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Scans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 comments<br />
 <a href="objects#noteconnection"><code>NoteConnection!</code></a>
 </td>
@@ -16756,11 +21972,101 @@ hasPendingWorkflow<br />
 </tr>
 <tr>
 <td>
-activeWorkflowInstance<br />
-<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>Returns the active workflow instance for this evidence if one is running</p>
+<p>Indicates if this evidence has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this evidence (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this evidence across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -17526,6 +22832,42 @@ systemInternalID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the file</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the file</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the file</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the file</p>
+</td>
+</tr>
+<tr>
+<td>
 providedFileName<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -17679,6 +23021,24 @@ lastAccessedAt<br />
 </tr>
 <tr>
 <td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 organization<br />
 <a href="objects#organization"><code>[Organization!]</code></a>
 </td>
@@ -17814,8 +23174,26 @@ program<br />
 </tr>
 <tr>
 <td>
+platform<br />
+<a href="objects#platform"><code>[Platform!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 evidence<br />
 <a href="objects#evidence"><code>[Evidence!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scan<br />
+<a href="objects#scan"><code>[Scan!]</code></a>
 </td>
 <td>
 
@@ -18348,6 +23726,42 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the finding</p>
 </td>
 </tr>
 <tr>
@@ -18905,6 +24319,24 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -22524,6 +27956,438 @@ where<br />
 </tr>
 <tr>
 <td>
+platformEditors<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platformBlockedGroups<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platformViewers<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignEditors<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignBlockedGroups<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignViewers<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 procedureEditors<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
@@ -23460,6 +29324,150 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargets<br />
+<a href="objects#campaigntargetconnection"><code>CampaignTargetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaigntargetorder"><code>[CampaignTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaigntargetwhereinput"><code>CampaignTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CampaignTargets returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -25141,6 +31149,1597 @@ hush<br />
 </tbody>
 </table>
 
+## IdentityHolder
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwner<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the internal owner for the identity holder when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner user id for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner group id for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the identity_holder</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the identity_holder</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the identity_holder</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the identity_holder</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
+</td>
+</tr>
+<tr>
+<td>
+fullName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the full name of the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+email<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the email address of the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+alternateEmail<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+phoneNumber<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>phone number for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+isOpenlaneUser<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the identity holder record is linked to an Openlane user account</p>
+</td>
+</tr>
+<tr>
+<td>
+userID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id associated with the identity holder record</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolderType<br />
+<a href="enums#identityholderidentityholdertype"><code>IdentityHolderIdentityHolderType!</code></a>
+</td>
+<td>
+<p>the classification of identity holders, such as employee or contractor</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#identityholderuserstatus"><code>IdentityHolderUserStatus!</code></a>
+</td>
+<td>
+<p>the status of the identity holder record</p>
+</td>
+</tr>
+<tr>
+<td>
+isActive<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether the identity holder record is active</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the job title of the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+department<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the department or function of the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+team<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the team name for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+location<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>location or office for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+startDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the start date for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+endDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the end date for the identity holder, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+employerEntityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the external entity this identity holder is affiliated with</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUserID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external user identifier for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+externalReferenceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external identifier for the identity holder from an upstream roster</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+employer<br />
+<a href="objects#entity"><code>Entity</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponses<br />
+<a href="objects#assessmentresponseconnection"><code>AssessmentResponseConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentresponseorder"><code>[AssessmentResponseOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentresponsewhereinput"><code>AssessmentResponseWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for AssessmentResponses returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assessments<br />
+<a href="objects#assessmentconnection"><code>AssessmentConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentorder"><code>[AssessmentOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentwhereinput"><code>AssessmentWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+templates<br />
+<a href="objects#templateconnection"><code>TemplateConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#templateorder"><code>[TemplateOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Templates returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#templatewhereinput"><code>TemplateWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Templates returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assets<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+entities<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+tasks<br />
+<a href="objects#taskconnection"><code>TaskConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#taskorder"><code>[TaskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#taskwhereinput"><code>TaskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+accessPlatforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+user<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this identityHolder has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this identityHolder has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this identityHolder (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this identityHolder across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## IdentityHolderBulkCreatePayload
+
+Return response for createBulkIdentityHolder mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholder"><code>[IdentityHolder!]</code></a>
+</td>
+<td>
+<p>Created identityHolders</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## IdentityHolderConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#identityholderedge"><code>[IdentityHolderEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## IdentityHolderCreatePayload
+
+Return response for createIdentityHolder mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+identityHolder<br />
+<a href="objects#identityholder"><code>IdentityHolder!</code></a>
+</td>
+<td>
+<p>Created identityHolder</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## IdentityHolderDeletePayload
+
+Return response for deleteIdentityHolder mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted identityHolder ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## IdentityHolderEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#identityholder"><code>IdentityHolder</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## IdentityHolderUpdatePayload
+
+Return response for updateIdentityHolder mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+identityHolder<br />
+<a href="objects#identityholder"><code>IdentityHolder!</code></a>
+</td>
+<td>
+<p>Updated identityHolder</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Integration
 
 
@@ -25246,6 +32845,42 @@ systemInternalID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the integration</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the integration</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the integration</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the integration</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -25293,6 +32928,24 @@ metadata<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -26234,6 +33887,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+entities<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -26630,6 +34355,42 @@ internalPolicyKindID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the internal_policy</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the internal_policy</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the internal_policy</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the internal_policy</p>
+</td>
+</tr>
+<tr>
+<td>
 workflowEligibleMarker<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -26811,6 +34572,24 @@ delegate<br />
 <tr>
 <td>
 internalPolicyKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
 <a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
@@ -27701,11 +35480,101 @@ hasPendingWorkflow<br />
 </tr>
 <tr>
 <td>
-activeWorkflowInstance<br />
-<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>Returns the active workflow instance for this internalPolicy if one is running</p>
+<p>Indicates if this internalPolicy has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this internalPolicy (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this internalPolicy across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -32576,6 +40445,27 @@ owner<br />
 </tbody>
 </table>
 
+## NotificationUpdatePayload
+
+Return response for updateNotification mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+notification<br />
+<a href="objects#notification"><code>Notification!</code></a>
+</td>
+<td>
+<p>Updated notification</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Onboarding
 
 
@@ -35382,6 +43272,294 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargets<br />
+<a href="objects#campaigntargetconnection"><code>CampaignTargetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaigntargetorder"><code>[CampaignTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaigntargetwhereinput"><code>CampaignTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CampaignTargets returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -41037,6 +49215,2380 @@ personalAccessToken<br />
 </tbody>
 </table>
 
+## Platform
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwner<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the internal owner for the platform when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner user id for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the internal owner group id for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+businessOwner<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>business owner for the platform when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+businessOwnerUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the business owner user id for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+businessOwnerGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the business owner group id for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+technicalOwner<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>technical owner for the platform when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+technicalOwnerUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the technical owner user id for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+technicalOwnerGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the technical owner group id for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+securityOwner<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>security owner for the platform when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+securityOwnerUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the security owner user id for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+securityOwnerGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the security owner group id for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+platformKindName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the kind of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+platformKindID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the kind of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+platformDataClassificationName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the data_classification of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+platformDataClassificationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the data_classification of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+accessModelName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the access_model of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+accessModelID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the access_model of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+encryptionStatusName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the encryption_status of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+encryptionStatusID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the encryption_status of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+securityTierName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the security_tier of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+securityTierID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the security_tier of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+criticalityName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the criticality of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+criticalityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the criticality of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the description of the platform boundary</p>
+</td>
+</tr>
+<tr>
+<td>
+businessPurpose<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the business purpose of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeStatement<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>scope statement for the platform, used for narrative justification</p>
+</td>
+</tr>
+<tr>
+<td>
+trustBoundaryDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of the platform trust boundary</p>
+</td>
+</tr>
+<tr>
+<td>
+dataFlowSummary<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>summary of platform data flows</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#platformplatformstatus"><code>PlatformPlatformStatus!</code></a>
+</td>
+<td>
+<p>the lifecycle status of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+physicalLocation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>physical location of the platform, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+region<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the region where the platform operates or is hosted</p>
+</td>
+</tr>
+<tr>
+<td>
+containsPii<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the platform stores or processes PII</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceType<br />
+<a href="enums#platformsourcetype"><code>PlatformSourceType!</code></a>
+</td>
+<td>
+<p>the source of the platform record, e.g., manual, discovered, imported, api</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceIdentifier<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the identifier used by the source system for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+costCenter<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cost center associated with the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+estimatedMonthlyCost<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>estimated monthly cost for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+purchaseDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>purchase date for the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+platformOwnerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the id of the user who is responsible for this platform</p>
+</td>
+</tr>
+<tr>
+<td>
+externalReferenceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external identifier for the platform from an upstream inventory</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>additional metadata about the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalOwnerGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+businessOwnerUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+businessOwnerGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+technicalOwnerUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+technicalOwnerGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityOwnerUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityOwnerGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformDataClassification<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+accessModel<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+encryptionStatus<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+securityTier<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+criticality<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assets<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+entities<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidenceconnection"><code>EvidenceConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#evidenceorder"><code>[EvidenceOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Evidences returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#evidencewhereinput"><code>EvidenceWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Evidences returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+risks<br />
+<a href="objects#riskconnection"><code>RiskConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#riskorder"><code>[RiskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Risks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#riskwhereinput"><code>RiskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Risks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assessments<br />
+<a href="objects#assessmentconnection"><code>AssessmentConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assessmentorder"><code>[AssessmentOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assessmentwhereinput"><code>AssessmentWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scans<br />
+<a href="objects#scanconnection"><code>ScanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Scans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+tasks<br />
+<a href="objects#taskconnection"><code>TaskConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#taskorder"><code>[TaskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#taskwhereinput"><code>TaskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceAssets<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+sourceEntities<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+outOfScopeAssets<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+outOfScopeVendors<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+applicableFrameworks<br />
+<a href="objects#standardconnection"><code>StandardConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#standardorder"><code>[StandardOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Standards returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#standardwhereinput"><code>StandardWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Standards returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+generatedScans<br />
+<a href="objects#scanconnection"><code>ScanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Scans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platformOwner<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this platform has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this platform has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this platform (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this platform across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## PlatformBulkCreatePayload
+
+Return response for createBulkPlatform mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platform"><code>[Platform!]</code></a>
+</td>
+<td>
+<p>Created platforms</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## PlatformConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#platformedge"><code>[PlatformEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## PlatformCreatePayload
+
+Return response for createPlatform mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform!</code></a>
+</td>
+<td>
+<p>Created platform</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## PlatformDeletePayload
+
+Return response for deletePlatform mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted platform ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## PlatformEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## PlatformUpdatePayload
+
+Return response for updatePlatform mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform!</code></a>
+</td>
+<td>
+<p>Updated platform</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Procedure
 
 
@@ -41340,6 +51892,42 @@ procedureKindID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
 workflowEligibleMarker<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -41521,6 +52109,24 @@ delegate<br />
 <tr>
 <td>
 procedureKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
 <a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
@@ -42267,11 +52873,101 @@ hasPendingWorkflow<br />
 </tr>
 <tr>
 <td>
-activeWorkflowInstance<br />
-<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>Returns the active workflow instance for this procedure if one is running</p>
+<p>Indicates if this procedure has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this procedure (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this procedure across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -44523,6 +55219,42 @@ systemInternalID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the remediation</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the remediation</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the remediation</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the remediation</p>
+</td>
+</tr>
+<tr>
+<td>
 externalID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -44919,6 +55651,24 @@ where<br />
 </tr>
 <tr>
 <td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 integrations<br />
 <a href="objects#integrationconnection"><code>IntegrationConnection!</code></a>
 </td>
@@ -44982,6 +55732,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scans<br />
+<a href="objects#scanconnection"><code>ScanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Scans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Scans returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -46186,6 +57008,42 @@ systemInternalID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the review</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the review</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the review</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the review</p>
+</td>
+</tr>
+<tr>
+<td>
 externalID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -46568,6 +57426,24 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -47867,6 +58743,42 @@ riskCategoryID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -48227,6 +59139,24 @@ riskCategory<br />
 </tr>
 <tr>
 <td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 controls<br />
 <a href="objects#controlconnection"><code>ControlConnection!</code></a>
 </td>
@@ -48578,6 +59508,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -49392,6 +60394,96 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+reviewedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>who reviewed the scan when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedByUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id that reviewed the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedByGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group id that reviewed the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedTo<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>who the scan is assigned to when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedToUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id assigned to the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedToGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group id assigned to the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the scan</p>
+</td>
+</tr>
+<tr>
+<td>
 target<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -49415,6 +60507,78 @@ metadata<br />
 </td>
 <td>
 <p>additional metadata for the scan, e.g., scan configuration, options, etc</p>
+</td>
+</tr>
+<tr>
+<td>
+scanDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the scan was executed</p>
+</td>
+</tr>
+<tr>
+<td>
+scanSchedule<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron schedule that governs the scan cadence, in cron 6-field syntax</p>
+</td>
+</tr>
+<tr>
+<td>
+nextScanRunAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the scan is scheduled to run next</p>
+</td>
+</tr>
+<tr>
+<td>
+performedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>who performed the scan when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+performedByUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id that performed the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+performedByGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group id that performed the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+generatedByPlatformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the platform that generated the scan</p>
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilityIds<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>identifiers of vulnerabilities discovered during the scan</p>
 </td>
 </tr>
 <tr>
@@ -49653,6 +60817,60 @@ where<br />
 </tr>
 <tr>
 <td>
+reviewedByUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewedByGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignedToUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignedToGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 assets<br />
 <a href="objects#assetconnection"><code>AssetConnection!</code></a>
 </td>
@@ -49792,6 +61010,609 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+evidence<br />
+<a href="objects#evidenceconnection"><code>EvidenceConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#evidenceorder"><code>[EvidenceOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Evidences returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#evidencewhereinput"><code>EvidenceWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Evidences returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+remediations<br />
+<a href="objects#remediationconnection"><code>RemediationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#remediationorder"><code>[RemediationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#remediationwhereinput"><code>RemediationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+actionPlans<br />
+<a href="objects#actionplanconnection"><code>ActionPlanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#actionplanorder"><code>[ActionPlanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#actionplanwhereinput"><code>ActionPlanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ActionPlans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+tasks<br />
+<a href="objects#taskconnection"><code>TaskConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#taskorder"><code>[TaskOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#taskwhereinput"><code>TaskWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilities<br />
+<a href="objects#vulnerabilityconnection"><code>VulnerabilityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vulnerabilityorder"><code>[VulnerabilityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vulnerabilitywhereinput"><code>VulnerabilityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#controlconnection"><code>ControlConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlorder"><code>[ControlOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Controls returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Controls returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+generatedByPlatform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+performedByUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+performedByGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -50860,6 +62681,24 @@ assets<br />
 </tr>
 <tr>
 <td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargets<br />
+<a href="objects#campaigntargetconnection"><code>CampaignTargetConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 contacts<br />
 <a href="objects#contactconnection"><code>ContactConnection</code></a>
 </td>
@@ -50932,6 +62771,15 @@ groups<br />
 </tr>
 <tr>
 <td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 internalPolicies<br />
 <a href="objects#internalpolicyconnection"><code>InternalPolicyConnection</code></a>
 </td>
@@ -50979,6 +62827,15 @@ narratives<br />
 <td>
 organizations<br />
 <a href="objects#organizationconnection"><code>OrganizationConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection</code></a>
 </td>
 <td>
 
@@ -51156,27 +63013,6 @@ text<br />
 </td>
 <td>
 <p>The matched text with surrounding context (with highlighting markers if applicable)</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## SendTrustCenterNDAEmailPayload
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-success<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-
 </td>
 </tr>
 </tbody>
@@ -51638,6 +63474,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for TrustCenterDocs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+applicablePlatforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -53193,11 +65101,101 @@ hasPendingWorkflow<br />
 </tr>
 <tr>
 <td>
-activeWorkflowInstance<br />
-<a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
 <td>
-<p>Returns the active workflow instance for this subcontrol if one is running</p>
+<p>Indicates if this subcontrol has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this subcontrol (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this subcontrol across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -53620,6 +65618,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for TrustCenterSubprocessors returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+entities<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -54619,6 +66689,42 @@ taskKindID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the task</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -54737,6 +66843,24 @@ owner<br />
 <tr>
 <td>
 taskKind<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
 <a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
@@ -55411,6 +67535,222 @@ where<br />
 </tr>
 <tr>
 <td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scans<br />
+<a href="objects#scanconnection"><code>ScanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Scans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 controlImplementations<br />
 <a href="objects#controlimplementationconnection"><code>ControlImplementationConnection!</code></a>
 </td>
@@ -56027,6 +68367,42 @@ systemInternalID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the template</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the template</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the template</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the template</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -56092,6 +68468,24 @@ trustCenterID<br />
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
@@ -56315,6 +68709,150 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Assessments returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -59787,6 +72325,24 @@ title<br />
 </tr>
 <tr>
 <td>
+companyName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>company name for the trust center, defaults to the organization&#39;s display name</p>
+</td>
+</tr>
+<tr>
+<td>
+companyDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>company description for the trust center</p>
+</td>
+</tr>
+<tr>
+<td>
 overview<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -61977,6 +74533,150 @@ where<br />
 </tr>
 <tr>
 <td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargets<br />
+<a href="objects#campaigntargetconnection"><code>CampaignTargetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaigntargetorder"><code>[CampaignTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaigntargetwhereinput"><code>CampaignTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 subcontrols<br />
 <a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
 </td>
@@ -62328,6 +75028,150 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platformsOwned<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderProfiles<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -63134,6 +75978,42 @@ systemInternalID<br />
 </tr>
 <tr>
 <td>
+environmentName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the environment of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+environmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the environment of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the scope of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+scopeID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the scope of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
 externalOwnerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -63615,6 +76495,24 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+environment<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -66383,27 +79281,6 @@ workflowInstance<br />
 </tbody>
 </table>
 
-## WorkflowEventBulkCreatePayload
-
-Return response for createBulkWorkflowEvent mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowEvents<br />
-<a href="objects#workflowevent"><code>[WorkflowEvent!]</code></a>
-</td>
-<td>
-<p>Created workflowEvents</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowEventConnection
 
 A connection to a list of items.
@@ -66443,48 +79320,6 @@ totalCount<br />
 </tbody>
 </table>
 
-## WorkflowEventCreatePayload
-
-Return response for createWorkflowEvent mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowEvent<br />
-<a href="objects#workflowevent"><code>WorkflowEvent!</code></a>
-</td>
-<td>
-<p>Created workflowEvent</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowEventDeletePayload
-
-Return response for deleteWorkflowEvent mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>Deleted workflowEvent ID</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## WorkflowEventEdge
 
 An edge in a connection.
@@ -66510,27 +79345,6 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowEventUpdatePayload
-
-Return response for updateWorkflowEvent mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowEvent<br />
-<a href="objects#workflowevent"><code>WorkflowEvent!</code></a>
-</td>
-<td>
-<p>Updated workflowEvent</p>
 </td>
 </tr>
 </tbody>
@@ -66779,6 +79593,42 @@ procedureID<br />
 </tr>
 <tr>
 <td>
+campaignID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the campaign this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+campaignTargetID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the campaign target this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolderID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the identity holder this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the platform this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -66847,6 +79697,42 @@ procedure<br />
 </td>
 <td>
 <p>Procedure this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+campaign<br />
+<a href="objects#campaign"><code>Campaign</code></a>
+</td>
+<td>
+<p>Campaign this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+campaignTarget<br />
+<a href="objects#campaigntarget"><code>CampaignTarget</code></a>
+</td>
+<td>
+<p>Campaign target this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolder<br />
+<a href="objects#identityholder"><code>IdentityHolder</code></a>
+</td>
+<td>
+<p>Identity holder this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>Platform this workflow instance is associated with</p>
 </td>
 </tr>
 <tr>
@@ -67344,6 +80230,42 @@ procedureID<br />
 </tr>
 <tr>
 <td>
+campaignID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Campaign referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+campaignTargetID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Campaign target referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolderID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Identity holder referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Platform referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -67459,25 +80381,40 @@ procedure<br />
 <p>Procedure referenced by this workflow instance</p>
 </td>
 </tr>
-</tbody>
-</table>
-
-## WorkflowObjectRefBulkCreatePayload
-
-Return response for createBulkWorkflowObjectRef mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
 <tr>
 <td>
-workflowObjectRefs<br />
-<a href="objects#workflowobjectref"><code>[WorkflowObjectRef!]</code></a>
+campaign<br />
+<a href="objects#campaign"><code>Campaign</code></a>
 </td>
 <td>
-<p>Created workflowObjectRefs</p>
+<p>Campaign referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+campaignTarget<br />
+<a href="objects#campaigntarget"><code>CampaignTarget</code></a>
+</td>
+<td>
+<p>Campaign target referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolder<br />
+<a href="objects#identityholder"><code>IdentityHolder</code></a>
+</td>
+<td>
+<p>Identity holder referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>Platform referenced by this workflow instance</p>
 </td>
 </tr>
 </tbody>
@@ -67517,48 +80454,6 @@ totalCount<br />
 </td>
 <td>
 <p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowObjectRefCreatePayload
-
-Return response for createWorkflowObjectRef mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-workflowObjectRef<br />
-<a href="objects#workflowobjectref"><code>WorkflowObjectRef!</code></a>
-</td>
-<td>
-<p>Created workflowObjectRef</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## WorkflowObjectRefDeletePayload
-
-Return response for deleteWorkflowObjectRef mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>Deleted workflowObjectRef ID</p>
 </td>
 </tr>
 </tbody>
