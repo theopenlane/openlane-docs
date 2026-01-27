@@ -237,6 +237,52 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCampaign
+
+**Type:** [CampaignBulkCreatePayload!](objects#campaignbulkcreatepayload)
+
+Create multiple new campaigns
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcampaigninput"><code>[CreateCampaignInput!]</code></a>
+</td>
+<td>
+<p>values of the campaign</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCampaignTarget
+
+**Type:** [CampaignTargetBulkCreatePayload!](objects#campaigntargetbulkcreatepayload)
+
+Create multiple new campaignTargets
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createcampaigntargetinput"><code>[CreateCampaignTargetInput!]</code></a>
+</td>
+<td>
+<p>values of the campaignTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkContact
 
 **Type:** [ContactBulkCreatePayload!](objects#contactbulkcreatepayload)
@@ -393,6 +439,52 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the asset</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVCampaign
+
+**Type:** [CampaignBulkCreatePayload!](objects#campaignbulkcreatepayload)
+
+Create multiple new campaigns via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the campaign</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVCampaignTarget
+
+**Type:** [CampaignTargetBulkCreatePayload!](objects#campaigntargetbulkcreatepayload)
+
+Create multiple new campaignTargets via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the campaignTarget</p>
 </td>
 </tr>
 </tbody>
@@ -927,6 +1019,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVIdentityHolder
+
+**Type:** [IdentityHolderBulkCreatePayload!](objects#identityholderbulkcreatepayload)
+
+Create multiple new identityHolders via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the identityHolder</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVInternalPolicy
 
 **Type:** [InternalPolicyBulkCreatePayload!](objects#internalpolicybulkcreatepayload)
@@ -1106,6 +1221,29 @@ input<br />
 </td>
 <td>
 <p>csv file containing values of the orgMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVPlatform
+
+**Type:** [PlatformBulkCreatePayload!](objects#platformbulkcreatepayload)
+
+Create multiple new platforms via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the platform</p>
 </td>
 </tr>
 </tbody>
@@ -1617,52 +1755,6 @@ input<br />
 </tbody>
 </table>
 
-## createBulkCSVWorkflowEvent
-
-**Type:** [WorkflowEventBulkCreatePayload!](objects#workfloweventbulkcreatepayload)
-
-Create multiple new workflowEvents via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the workflowEvent</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createBulkCSVWorkflowObjectRef
-
-**Type:** [WorkflowObjectRefBulkCreatePayload!](objects#workflowobjectrefbulkcreatepayload)
-
-Create multiple new workflowObjectRefs via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the workflowObjectRef</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createBulkCustomDomain
 
 **Type:** [CustomDomainBulkCreatePayload!](objects#customdomainbulkcreatepayload)
@@ -2100,6 +2192,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkIdentityHolder
+
+**Type:** [IdentityHolderBulkCreatePayload!](objects#identityholderbulkcreatepayload)
+
+Create multiple new identityHolders
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createidentityholderinput"><code>[CreateIdentityHolderInput!]</code></a>
+</td>
+<td>
+<p>values of the identityHolder</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkInternalPolicy
 
 **Type:** [InternalPolicyBulkCreatePayload!](objects#internalpolicybulkcreatepayload)
@@ -2279,6 +2394,29 @@ input<br />
 </td>
 <td>
 <p>values of the orgMembership</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkPlatform
+
+**Type:** [PlatformBulkCreatePayload!](objects#platformbulkcreatepayload)
+
+Create multiple new platforms
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createplatforminput"><code>[CreatePlatformInput!]</code></a>
+</td>
+<td>
+<p>values of the platform</p>
 </td>
 </tr>
 </tbody>
@@ -2790,11 +2928,11 @@ input<br />
 </tbody>
 </table>
 
-## createBulkWorkflowEvent
+## createCampaign
 
-**Type:** [WorkflowEventBulkCreatePayload!](objects#workfloweventbulkcreatepayload)
+**Type:** [CampaignCreatePayload!](objects#campaigncreatepayload)
 
-Create multiple new workflowEvents
+Create a new campaign
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -2804,20 +2942,20 @@ Create multiple new workflowEvents
 <tr>
 <td>
 input<br />
-<a href="inputObjects#createworkfloweventinput"><code>[CreateWorkflowEventInput!]</code></a>
+<a href="inputObjects#createcampaigninput"><code>CreateCampaignInput!</code></a>
 </td>
 <td>
-<p>values of the workflowEvent</p>
+<p>values of the campaign</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-## createBulkWorkflowObjectRef
+## createCampaignTarget
 
-**Type:** [WorkflowObjectRefBulkCreatePayload!](objects#workflowobjectrefbulkcreatepayload)
+**Type:** [CampaignTargetCreatePayload!](objects#campaigntargetcreatepayload)
 
-Create multiple new workflowObjectRefs
+Create a new campaignTarget
 
 <p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
 
@@ -2827,10 +2965,10 @@ Create multiple new workflowObjectRefs
 <tr>
 <td>
 input<br />
-<a href="inputObjects#createworkflowobjectrefinput"><code>[CreateWorkflowObjectRefInput!]</code></a>
+<a href="inputObjects#createcampaigntargetinput"><code>CreateCampaignTargetInput!</code></a>
 </td>
 <td>
-<p>values of the workflowObjectRef</p>
+<p>values of the campaignTarget</p>
 </td>
 </tr>
 </tbody>
@@ -3550,6 +3688,29 @@ input<br />
 </tbody>
 </table>
 
+## createIdentityHolder
+
+**Type:** [IdentityHolderCreatePayload!](objects#identityholdercreatepayload)
+
+Create a new identityHolder
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createidentityholderinput"><code>CreateIdentityHolderInput!</code></a>
+</td>
+<td>
+<p>values of the identityHolder</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createInternalPolicy
 
 **Type:** [InternalPolicyCreatePayload!](objects#internalpolicycreatepayload)
@@ -3949,6 +4110,29 @@ input<br />
 </td>
 <td>
 <p>values of the personalAccessToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createPlatform
+
+**Type:** [PlatformCreatePayload!](objects#platformcreatepayload)
+
+Create a new platform
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createplatforminput"><code>CreatePlatformInput!</code></a>
+</td>
+<td>
+<p>values of the platform</p>
 </td>
 </tr>
 </tbody>
@@ -4880,52 +5064,6 @@ input<br />
 </td>
 <td>
 <p>values of the workflowDefinition</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createWorkflowEvent
-
-**Type:** [WorkflowEventCreatePayload!](objects#workfloweventcreatepayload)
-
-Create a new workflowEvent
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createworkfloweventinput"><code>CreateWorkflowEventInput!</code></a>
-</td>
-<td>
-<p>values of the workflowEvent</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createWorkflowObjectRef
-
-**Type:** [WorkflowObjectRefCreatePayload!](objects#workflowobjectrefcreatepayload)
-
-Create a new workflowObjectRef
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createworkflowobjectrefinput"><code>CreateWorkflowObjectRefInput!</code></a>
-</td>
-<td>
-<p>values of the workflowObjectRef</p>
 </td>
 </tr>
 </tbody>
@@ -6012,6 +6150,52 @@ ids<br />
 </tbody>
 </table>
 
+## deleteCampaign
+
+**Type:** [CampaignDeletePayload!](objects#campaigndeletepayload)
+
+Delete an existing campaign
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the campaign</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteCampaignTarget
+
+**Type:** [CampaignTargetDeletePayload!](objects#campaigntargetdeletepayload)
+
+Delete an existing campaignTarget
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the campaignTarget</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteContact
 
 **Type:** [ContactDeletePayload!](objects#contactdeletepayload)
@@ -6587,6 +6771,29 @@ id<br />
 </tbody>
 </table>
 
+## deleteIdentityHolder
+
+**Type:** [IdentityHolderDeletePayload!](objects#identityholderdeletepayload)
+
+Delete an existing identityHolder
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the identityHolder</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteIntegration
 
 **Type:** [IntegrationDeletePayload!](objects#integrationdeletepayload)
@@ -6950,6 +7157,29 @@ id<br />
 </td>
 <td>
 <p>ID of the personalAccessToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deletePlatform
+
+**Type:** [PlatformDeletePayload!](objects#platformdeletepayload)
+
+Delete an existing platform
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the platform</p>
 </td>
 </tr>
 </tbody>
@@ -7608,52 +7838,6 @@ id<br />
 </tbody>
 </table>
 
-## deleteWorkflowEvent
-
-**Type:** [WorkflowEventDeletePayload!](objects#workfloweventdeletepayload)
-
-Delete an existing workflowEvent
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the workflowEvent</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## deleteWorkflowObjectRef
-
-**Type:** [WorkflowObjectRefDeletePayload!](objects#workflowobjectrefdeletepayload)
-
-Delete an existing workflowObjectRef
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the workflowObjectRef</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## publishTrustCenterSetting
 
 **Type:** [TrustCenterSettingUpdatePayload!](objects#trustcentersettingupdatepayload)
@@ -7687,29 +7871,6 @@ reason<br />
 </td>
 <td>
 <p>Optional reason for rejection</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## sendTrustCenterNDAEmail
-
-**Type:** [SendTrustCenterNDAEmailPayload!](objects#sendtrustcenterndaemailpayload)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#sendtrustcenterndainput"><code>SendTrustCenterNDAInput!</code></a>
-</td>
-<td>
-<p>values of the trustCenterNDA</p>
 </td>
 </tr>
 </tbody>
@@ -8323,6 +8484,70 @@ input<br />
 </td>
 <td>
 <p>values to update the trustCenterSubprocessors with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateCampaign
+
+**Type:** [CampaignUpdatePayload!](objects#campaignupdatepayload)
+
+Update an existing campaign
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatecampaigninput"><code>UpdateCampaignInput!</code></a>
+</td>
+<td>
+<p>New values for the campaign</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateCampaignTarget
+
+**Type:** [CampaignTargetUpdatePayload!](objects#campaigntargetupdatepayload)
+
+Update an existing campaignTarget
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the campaignTarget</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatecampaigntargetinput"><code>UpdateCampaignTargetInput!</code></a>
+</td>
+<td>
+<p>New values for the campaignTarget</p>
 </td>
 </tr>
 </tbody>
@@ -9196,6 +9421,38 @@ input<br />
 </tbody>
 </table>
 
+## updateIdentityHolder
+
+**Type:** [IdentityHolderUpdatePayload!](objects#identityholderupdatepayload)
+
+Update an existing identityHolder
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the identityHolder</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateidentityholderinput"><code>UpdateIdentityHolderInput!</code></a>
+</td>
+<td>
+<p>New values for the identityHolder</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateInternalPolicy
 
 **Type:** [InternalPolicyUpdatePayload!](objects#internalpolicyupdatepayload)
@@ -9511,6 +9768,38 @@ input<br />
 </tbody>
 </table>
 
+## updateNotification
+
+**Type:** [NotificationUpdatePayload!](objects#notificationupdatepayload)
+
+Update an existing notification
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the notification</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatenotificationinput"><code>UpdateNotificationInput!</code></a>
+</td>
+<td>
+<p>New values for the notification</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateOrganization
 
 **Type:** [OrganizationUpdatePayload!](objects#organizationupdatepayload)
@@ -9643,6 +9932,38 @@ input<br />
 </td>
 <td>
 <p>New values for the personalAccessToken</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updatePlatform
+
+**Type:** [PlatformUpdatePayload!](objects#platformupdatepayload)
+
+Update an existing platform
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the platform</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateplatforminput"><code>UpdatePlatformInput!</code></a>
+</td>
+<td>
+<p>New values for the platform</p>
 </td>
 </tr>
 </tbody>
@@ -10939,38 +11260,6 @@ input<br />
 </td>
 <td>
 <p>New values for the workflowDefinition</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## updateWorkflowEvent
-
-**Type:** [WorkflowEventUpdatePayload!](objects#workfloweventupdatepayload)
-
-Update an existing workflowEvent
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the workflowEvent</p>
-</td>
-</tr>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#updateworkfloweventinput"><code>UpdateWorkflowEventInput!</code></a>
-</td>
-<td>
-<p>New values for the workflowEvent</p>
 </td>
 </tr>
 </tbody>
