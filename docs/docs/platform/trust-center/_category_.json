@@ -22,8 +22,11 @@
       "ISO certifications",
       "security questionnaires",
       "vendor security",
-      "third-party assurance"
+      "third-party assurance",
+      "subprocessors",
+      "vanity domain",
+      "custom domain"
     ]
   },
-  "collapsed": true
+  "collapsed": false
 }

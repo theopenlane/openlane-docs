@@ -55,6 +55,10 @@ tags:
 
 ## A
 
+**Action Plan**
+
+A structured strategy for addressing security issues including vulnerabilities, findings, and compliance gaps. Action plans group related remediation items, define priorities and timelines, and assign ownership. In Openlane, action plans track remediation progress with priority levels (Critical, High, Medium, Low), due dates, and approval requirements.
+
 **Access to personal information**
 
 The ability to view personal information held by an organization.
@@ -84,6 +88,14 @@ The process of verifying the identity or other attributes claimed by or assumed 
 **Authorization**
 
 The process of granting access privileges to a user, program, or process by a person that has the authority to grant such access.
+
+**Asset**
+
+A resource that an organization owns, operates, or relies upon that requires protection and management. In Openlane, assets are classified by type (Technology, Domain, Device, Telephone) and track properties including data classification, criticality, ownership, and relationships to vendors and controls. Assets are foundational to vulnerability management and compliance tracking.
+
+**Assessment**
+
+A structured questionnaire or evaluation used to collect information about security practices, compliance status, or risk factors. In Openlane, assessments support vendor due diligence, periodic reviews, internal compliance checks, and risk assessments. See also Security Questionnaires.
 
 **Availability**
 One of the Trust Services Criteria established by the AICPA, Availability means that the system is accessible and usable for agreed-upon use.
@@ -180,6 +192,14 @@ With the growing amount of frameworks organizations adopt, all of which are focu
 
 The Committee of Sponsoring Organizations of the Treadway Commission. COSO is a joint initiative of five private-sector organizations and is dedicated to providing thought leadership through the development of frameworks and guidance on enterprise risk management, internal control, and fraud deterrence. (See www.coso.org.)
 
+**CVE (Common Vulnerabilities and Exposures)**
+
+A standardized identifier for publicly known cybersecurity vulnerabilities. CVE IDs follow the format CVE-YEAR-NUMBER (e.g., CVE-2024-12345) and are maintained by MITRE Corporation. CVE identifiers enable consistent tracking and communication about specific vulnerabilities across organizations and tools.
+
+**CVSS (Common Vulnerability Scoring System)**
+
+An open standard for assessing the severity of computer system security vulnerabilities. CVSS provides a numerical score from 0 to 10, with higher scores indicating more severe vulnerabilities. The score considers factors including attack vector, complexity, required privileges, user interaction, and potential impact on confidentiality, integrity, and availability.
+
 ## D
 
 **Design**
@@ -189,6 +209,10 @@ As used in the COSO definition of internal control, the internal control system 
 **Disclosure**
 
 The provision of access to or the release, transfer, or divulging in any other manner of information outside the entity holding the information. Disclosure is often used interchangeably with the terms sharing and onward transfer.
+
+**Document Watermarking**
+
+A security feature that adds identifying information to downloaded documents, typically including the downloader's name or email and a timestamp. Watermarking creates an audit trail for sensitive documents and discourages unauthorized sharing. In Openlane, watermarking can be enabled for Trust Center documents to track who downloads sensitive materials like SOC 2 reports.
 
 **Disposal**
 
@@ -218,6 +242,10 @@ Users, other than entity personnel, who are authorized by entity management, cus
 or other authorized persons to interact with the entity’s information system.
 
 ## F
+
+**Finding**
+
+A specific security observation, issue, or instance discovered during scans, assessments, or reviews. Findings may represent vulnerability instances on particular assets, misconfigurations in cloud resources, policy violations, or security gaps. In Openlane, findings track source, severity, status, and relationships to vulnerabilities, controls, and remediation efforts.
 
 **Feature**
 
@@ -253,6 +281,10 @@ Many companies subject to HIPAA comply with HITRUST, an optional framework that 
 
 ## I
 
+**Identity Holder**
+
+A record representing an individual affiliated with an organization, including employees and contractors. Unlike user accounts (which represent platform login credentials), Identity Holders track personnel for compliance and security management purposes such as assessment completion, access management, and security training. In Openlane, Identity Holders can be linked to user accounts.
+
 **Information Assets**
 
 Data and the associated software and infrastructure used to process, transmit, and store information or to produce, manufacture, or distribute products.
@@ -260,7 +292,10 @@ Data and the associated software and infrastructure used to process, transmit, a
 **Integrity**
 
 One of the Trust Services Criteria established by the AICPA, Integrity means that the data organization uses to pursue its business or keeps safe for others is reliably stored and not erased or damaged.
-⚠ Risk example: A staff member accidentally deletes a row in a file during processing.
+
+**Integration**
+
+A configured connection between Openlane and an external system that enables automated data synchronization and evidence collection. Integrations connect to cloud providers, security tools, identity providers, collaboration platforms, and storage services. Examples include GitHub, AWS Security Hub, Slack, and Okta.
 
 **Infrastructure**
 
@@ -321,7 +356,7 @@ Members are people you have invited to manage your workspace at Openlane.
 
 **Non-Disclosure Agreement (NDA)**
 
-A Non-Disclosure Agreement (NDA) is a *must have* for Tenants and any of their software Vendors. NDAs are also frequently put into place between a Tenant and a Customer or potential Customer. The NDA protects your proprietary information, so we at Openlane offer you a template and tracking to ensure you don't miss creating this key artifact.
+A legal agreement that protects confidential information shared between parties. NDAs are commonly used between organizations and their vendors, customers, or prospects. In Openlane, NDAs can be configured in the Trust Center to gate access to private documents. Visitors must sign the NDA electronically before downloading sensitive materials like SOC 2 reports or penetration test summaries.
 
 **NIST CSF**
 
@@ -408,6 +443,10 @@ document, the term is used interchangeably with goods.
 
 ## R
 
+**Remediation**
+
+A documented action that addresses a security vulnerability or finding. Remediations include patches, configuration changes, code fixes, architecture changes, or compensating controls. In Openlane, remediations track implementation details including repository and pull request links, ticket references, instructions, and verification status.
+
 **Residual Risk**
 
 The risk to the achievement of objectives that remains after management’s response
@@ -427,6 +466,10 @@ A potential future event with possible negative impacts on the company's objecti
 The decision to accept, avoid, reduce, or share a risk.
 
 ## S
+
+**Scan**
+
+A systematic security assessment that examines a target for vulnerabilities, misconfigurations, or compliance gaps. Scans may be automated (scheduled vulnerability scans), on-demand (triggered by events), or manual (penetration tests). In Openlane, scans track target, type (Domain, Vulnerability, Vendor, Provider), status, and discovered vulnerabilities.
 
 **Security Event**
 
@@ -475,6 +518,10 @@ example, operating systems, drivers, utilities, programming software, and interf
 
 Parties that are affected by the entity, such as shareholders, the communities in which
 an entity operates, employees, customers, and suppliers.
+
+**Subprocessor**
+
+A third-party vendor or service that processes personal data on behalf of an organization. Common examples include cloud infrastructure providers, payment processors, email services, and customer support platforms. Regulatory frameworks like GDPR require organizations to disclose their subprocessors. In Openlane, subprocessors are listed on the Trust Center to provide transparency about data processing relationships.
 
 **System**
 
@@ -552,6 +599,10 @@ denial of service.
 
 Third Party Risk Management refers to the methodologies used by organizations to understand and mitigate risks introduced by suppliers, partners, or other entities outside the organization.
 
+**Trust Center**
+
+A customer-facing portal where organizations share their security posture, compliance certifications, and data protection practices with customers, prospects, and auditors. Trust Centers provide a centralized location for security documentation, compliance frameworks, subprocessor disclosures, and security updates. In Openlane, Trust Centers support custom branding, vanity domains, document management with NDA-gated access, and watermarking for sensitive documents.
+
 **Trust Services Criteria (TSC)**
 
 A set of professional attestation and advisory services based on a core set of criteria
@@ -575,11 +626,17 @@ goods or services to the entity. Depending on the services provided (for example
 operates certain controls on behalf of the entity that are necessary to achieve the entity’s objectives),
 it also might be a service provider.
 
+**Vanity Domain**
+
+A custom domain that an organization configures to host their Trust Center on their own branded URL (e.g., trust.yourcompany.com) instead of the default platform URL. Vanity domains require DNS configuration including CNAME and TXT records for verification.
+
 **Vulnerability**
 
-Weakness in a component of a system, particularly information assets, system security
-procedures, internal controls, or implementation, that could be exploited or triggered by human
-action or natural events.
+Weakness in a component of a system, particularly information assets, system security procedures, internal controls, or implementation, that could be exploited or triggered by human action or natural events. In Openlane, vulnerabilities are tracked with CVE identifiers, CVSS scores, severity ratings, remediation SLAs, and relationships to findings, assets, and controls.
+
+**Vulnerability Management**
+
+A continuous process of identifying, classifying, prioritizing, and addressing security weaknesses in systems and software. Vulnerability management includes identification (discovery through scanning), assessment (evaluating severity and impact), prioritization (ranking by risk and business context), remediation (implementing fixes), verification (confirming fix effectiveness), and reporting (documenting for compliance). ISO 27001 Annex A 8.8 and SOC 2 CC7.1 require vulnerability management controls.
 
 ## W
 
