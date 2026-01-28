@@ -1,95 +1,80 @@
 ---
-title: Trust Center Overview - Security & Compliance Transparency
-description: Customer-facing security and compliance transparency portal for demonstrating security posture, certifications, and data protection practices
+title: Trust Center Overview
+description: Customer-facing portal for demonstrating your security posture and compliance status
 sidebar_position: 1
 sidebar_label: Overview
 keywords:
   - trust center
   - security transparency
-  - compliance transparency
-  - security portal
-  - customer trust
-  - security documentation
-  - compliance certifications
-  - vendor security
-  - security posture
-  - transparency portal
-  - customer due diligence
-  - security communications
   - compliance portal
-  - public trust center
+  - customer trust
 tags:
   - trust center
   - security
   - compliance
   - transparency
-  - customer trust
 ---
-
-<head>
-  <meta name="keywords" content="trust center, security transparency, compliance portal, security posture, vendor security, customer trust" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:title" content="Trust Center Overview - Security & Compliance Transparency | Openlane" />
-  <meta property="og:description" content="Customer-facing security and compliance transparency portal for demonstrating security posture and certifications" />
-  <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://docs.theopenlane.io/docs/platform/trust-center/overview" />
-  <script type="application/ld+json">
-    {JSON.stringify({
-      '@context': 'https://schema.org/',
-      '@type': 'TechArticle',
-      headline: 'Trust Center Overview',
-      description: 'Customer-facing security and compliance transparency portal for communicating security posture and compliance status',
-      keywords: ['trust center', 'security transparency', 'compliance portal', 'vendor security'],
-      author: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      }
-    })}
-  </script>
-</head>
 
 # Trust Center
 
-:::info Coming Soon
-The Trust Center feature is currently in development and will be available in Q1 2026. This documentation provides an overview of planned capabilities.
-:::
+The Trust Center is a public portal intneded to be viewed by your customers and prospects, where you share your security posture, compliance certifications, and data protection practices. Instead of responding to security questionnaires one by one, you give customers and prospects a single place to find the information they need.
 
-The Trust Center is Openlane's customer-facing security and compliance transparency portal that provides stakeholders with visibility into an organization's security posture, compliance status, and data protection practices.
+## Why It Matters
 
-## What Is a Trust Center?
+Every sales cycle involves security questions. Prospects want to see your SOC 2 report, understand your compliance certifications, and know who processes their data. Without a Trust Center, your security team handles these requests manually.
 
-A Trust Center is a public or restricted web portal that organizations use to communicate their security and compliance posture to customers, prospects, partners, and other stakeholders. It serves as a centralized hub for security documentation, compliance certifications, and transparency reports.
+A Trust Center lets you:
 
-## Compliance Significance
+- **Answer security questions once**: Post your documentation publicly or behind an NDA
+- **Accelerate sales**: Prospects can self-serve instead of waiting for your team
+- **Demonstrate transparency**: Show customers you take security seriously
+- **Meet compliance requirements**: GDPR and other regulations require subprocessor disclosure
 
-| Aspect | Purpose | Benefit |
-| --------- | --------- | ---------- |
-| **Transparency** | Visibility into security practices and compliance | Builds customer trust and confidence |
-| **Customer Due Diligence** | Enable vendor security assessment | Streamlines customer procurement processes |
-| **Regulatory Compliance** | Meet transparency requirements | Satisfies regulatory and contractual obligations |
-| **Sales Enablement** | Proactive security communication | Accelerates sales cycles and reduces friction |
-| **Risk Management** | Demonstrate security commitment | Reduces customer and partner risk concerns |
+## What You Can Share
 
-## Trust Center Types
+### Documents
 
-| Type | Access Model | Content Level | Primary Use Case |
-| ------- | ------------- | --------------- | ------------------ |
-| **Public** | No authentication required | General security overview, public certifications | Marketing, transparency, public communication |
-| **Restricted** | Authentication or invitation | Detailed documentation, sensitive reports | Customer due diligence, partner assessments |
-| **Private** | Internal organization only | Internal documentation, operational details | Internal communication, compliance coordination |
+Upload security documentation like SOC 2 reports, ISO certifications, penetration test summaries, and security policies. Control who can access each document:
 
-## Trust Center Configuration
+- **Public**: Anyone can download
+- **Private**: Requires signing an NDA first
 
-| Configuration Aspect | Options | Business Impact |
-| -------------------- | --------- | ---------------- |
-| **Access Level** | Public, Restricted, Private | Controls audience and information sensitivity |
-| **Custom Domain** | Branded domain integration | Professional appearance and brand consistency |
-| **Content Sections** | Modular security information | Organized presentation of compliance data |
-| **Document Management** | Certification and policy hosting | Centralized access to security documentation |
-| **Subprocessor Transparency** | Third-party vendor disclosure | Regulatory compliance and customer assurance |
+### Frameworks
+
+Display the compliance certifications you've achieved (SOC 2, ISO 27001, HIPAA, etc.). Only enable frameworks you've actually completed - this is a trust signal to customers.
+
+### Subprocessors
+
+List the third-party services that process customer data on your behalf. This transparency helps customers with their own compliance and vendor management.
+
+### Updates
+
+Share brief announcements about new certifications, policy changes, or security improvements. This shows active security management.
+
+## Preview and Publish
+
+Changes you make aren't immediately public. The Trust Center uses a draft/publish workflow:
+
+1. Make changes in the console
+2. Preview them using the preview URL
+3. Publish when you're ready to go live
+
+This lets you review changes before customers see them.
+
+## Your Trust Center URLs
+
+- **Default URL**: `https://trust.theopenlane.net/{your-organization-slug}`
+- **Vanity Domain**: Your custom domain (e.g., `https://trust.yourcompany.com`) if configured
+
+Both URLs work, even after setting up a vanity domain.
+
+## What's in This Section
+
+- [Branding](./branding.mdx) - Customize the look and feel
+- [Custom Domain](./custom-domain.mdx) - Set up a vanity domain
+- [Documents](./documents.mdx) - Manage security documentation
+- [Frameworks](./frameworks.mdx) - Display compliance certifications
+- [Subprocessors](./subprocessors.mdx) - List third-party data processors
+- [Updates](./updates.mdx) - Share security announcements
+- [Customer Logos](./customer-logos.mdx) - Showcase your customers
+- [NDAs](./ndas.mdx) - Configure NDA requirements for private documents
