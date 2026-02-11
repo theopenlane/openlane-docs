@@ -36,10 +36,7 @@ steps:
       
       # ensure bun dependancy is in PATH directory
       export BUN_INSTALL="$HOME/.bun"
-      export PATH="$BUN_INSTALL/bin:$PATH"
-      
-      echo $SHELL
-      
+      export PATH="$BUN_INSTALL/bin/bun:$PATH"
       
       echo "--- running task generate"
       task generate
