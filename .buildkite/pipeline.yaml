@@ -6,7 +6,7 @@ secrets:
   - GITHUB_SSH_PRIVATE_KEY
 
 steps:
-  - label: ":docs: generate branch changes"
+  - label: ":docusaurus: generate branch changes"
     key: "generate"
     agents:
       queue: $LARGE_RUNNER_QUEUE
