@@ -26,6 +26,13 @@ steps:
       set -e
       set -o pipefail
 
+      # if bun is not installed, install bun to run task generate
+      if ! command -v bun &> /dev/null; then
+        echo "--- installing necessary dependancy bun"
+        curl -fsSL https://bun.com/install | bash
+        export PATH="$HOME/.bun/bin:$PATH"
+        
+      
       echo "--- running task generate"
       task generate
       EXIT_CODE=$?
