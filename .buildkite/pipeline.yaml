@@ -31,6 +31,7 @@ steps:
         echo "--- installing necessary dependancy bun"
         curl -fsSL https://bun.com/install | bash
         export PATH="$HOME/.bun/bin:$PATH"
+      fi
         
       
       echo "--- running task generate"
