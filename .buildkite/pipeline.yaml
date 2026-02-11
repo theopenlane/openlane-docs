@@ -32,9 +32,14 @@ steps:
         curl -fsSL https://bun.com/install | bash
       fi
 
+
+      
       # ensure bun dependancy is in PATH directory
-      export BUN_INSTALL="/root/.bun"
+      export BUN_INSTALL="$HOME/.bun"
       export PATH="$BUN_INSTALL/bin:$PATH"
+      
+      echo $SHELL
+      
       
       echo "--- running task generate"
       task generate
