@@ -1,0 +1,376 @@
+---
+title: Compliance Automation Jobs
+description: Windmill-based job system for automated compliance checks and tasks
+sidebar_position: 10
+sidebar_custom_props:
+    icon: WorkflowIcon
+---
+
+# Compliance Automation Jobs
+
+## Overview
+
+The compliance automation job system is built on top of [Windmill](https://windmill.dev/) and consists of several key components that work together to enable automated compliance checks and tasks. The system is designed to be flexible, scalable, and integrated with the organization's compliance framework.
+
+The architecture diagram above illustrates the key components and their relationships:
+
+1. **Job Templates** form the foundation of the system, defining reusable job definitions that include:
+   - Script source and platform
+   - Default configurations
+   - Base schedules
+
+1. **Scheduled Jobs** are instances created from templates that:
+   - Reference a specific Job Template
+   - Can override configurations and schedules
+   - Can be linked to specific Job Runners
+   - Are synchronized with Windmill's scheduler
+
+1. **Job Runners** are execution environments that:
+   - Authenticate using Job Runner Tokens
+   - Execute jobs based on their assigned schedules
+   - Report execution status and results back to the system
+
+1. **Job Results** capture execution outcomes:
+   - Link back to the Scheduled Job
+   - Store execution metrics (start/end times, exit codes)
+   - Maintain references to output files and logs
+   - Track success/failure status
+
+The system maintains bidirectional synchronization with Windmill, ensuring that job definitions, schedules, and results are consistent across both platforms. Schema hooks are used to update data into Windmill after a successful transaction into the database, and flow success and failure scripts will be used to get the results back and update the job results table.
+
+## Components
+
+### Job Templates
+
+Job Templates (`JobTemplate`) are the core objects that define the jobs available for compliance automation. Each Job Template stores all the necessary information to run a job:
+
+- **Title**: A human-readable name for the job
+- **Description**: A description of what the job does
+- **Platform**: The runtime environment or language for the script (e.g., `golang`, `typescript`, etc.). Currently the enums we have setup only support `Golang` (tested) and `Typescript` (not tested).
+- **Download URL**: A URL pointing to the raw script source, which can be fetched and wrapped into a Windmill flow
+- **Windmill Path**: The internal path in Windmill where the job's flow is stored (not exposed via GraphQL API) and include the organizations name is the path folder (e.g `f/acme_corp/my_awesome_script`)
+- **Configuration**: Optional JSON configuration that can be used to template the job
+- **Cron Schedule**: Optional default cron schedule (6-field syntax) used when creating scheduled jobs
+
+When a Job Template is created or updated:
+
+1. The system validates the information
+1. If Windmill integration is enabled, creates/updates a corresponding Windmill flow
+1. The flow path is stored on the template for future reference
+
+### Scheduled Jobs
+
+Scheduled Jobs (`ScheduledJob`) are instances of Job Templates configured to run on a schedule. They represent the actual jobs that will be executed in your environment. Key fields include:
+
+- **Job Template ID**: Reference to the Job Template being scheduled
+- **Active**: Whether the job is currently active
+- **Configuration**: Optional JSON configuration that overrides the template's configuration
+- **Cron Schedule**: Optional cron expression (6-field syntax) that overrides the template's schedule
+- **Job Runner ID**: Optional reference to a specific runner that should execute this job
+
+### Job Runners
+
+Job Runners (`JobRunner`) are the execution environments where jobs run. They can be organization-specific or shared runners. Key fields include:
+
+- **Name**: Human-readable name for the runner
+- **Status**: Current status (ONLINE/OFFLINE)
+- **IP Address**: The runner's IP address (immutable and unique)
+- **Owner ID**: The organization that owns this runner (if organization-specific)
+
+### Job Runner Tokens
+
+Job Runner Tokens (`JobRunnerToken`) are used to authenticate and authorize job runners. These tokens are essential for secure communication between runners and the core system. Each token includes:
+
+- **Token**: A unique, immutable string prefixed with "runner_" (automatically generated)
+- **Expiration**: Optional expiration time (tokens don't expire by default)
+- **Last Used**: Timestamp of the token's last usage
+- **Status**:
+  - **Is Active**: Whether the token is currently active
+  - **Revoked At**: When the token was revoked (if applicable)
+  - **Revoked By**: User who revoked the token
+  - **Revoked Reason**: Reason for revocation
+
+Key features:
+
+- Tokens are organization-scoped
+- Each token is linked to a specific job runner
+- Tokens can be revoked at any time
+- Activity tracking through last_used_at field
+- Support for token expiration (optional)
+
+Security considerations:
+
+- Tokens are immutable once created
+- Revoked tokens cannot be reactivated
+- Token validation checks for expiration and active status
+- Organization-level access control
+
+### Job Results
+
+Job Results (`JobResult`) track the execution outcomes of scheduled jobs. Each result includes:
+
+- **Scheduled Job ID**: Reference to the executed job
+- **Status**: Execution status (SUCCESS/FAILED/PENDING/CANCELED)
+- **Exit Code**: The script's exit code (if applicable)
+- **Started At**: When the job started executing
+- **Finished At**: When the job finished executing
+- **File ID**: Reference to output/logs file
+- **Owner ID**: The organization that owns this result
+
+## Development Setup
+
+1. Start windmill, run `task docker:windmill` to startup windmill, this will start the minimum set of components.
+    If you want all the extra components you can run `task docker:windmill:full` to start everything in the compose file
+    ```bash
+    task docker:windmill
+    ```
+
+1. Login to [windmill](http://localhost:8090/) and create a workspace
+
+1. Copy the windmill example config and add the license keys**
+    ```bash
+    cp docker/configs/windmill/.env-example docker/configs/windmill/.env
+    ```
+    This doesn't seem to quite work, and you may have to manually enter the enterprise key in [super-admin instance settings](http://localhost:8090/#superadmin-settings). Set both the enterprise key and set as a `non-prod` instance
+
+1. Get a [token](http://localhost:8090/workspace_settings#user-settings) from user settings
+
+1. Ensure the following settings are in your `.config.yaml`
+    ```yaml
+    entConfig:
+        windmill:
+            enabled: true
+            baseURL: "http://localhost:8090"
+            workspace: "test" # set to the workspace you created
+            token: "" # get a token from windmill after it starts up from user settings and add here
+            defaultTimeout: "30s"
+            onFailureScript: "" # leave empty until these scripts are setup
+            onSuccessScript: "" # leave empty until these scripts are setup
+    ```
+
+1. Run the normal `task run-dev` to setup the core api
+
+1. From `core-startup` run the following to seed some test job templates and scheduled jobs:
+    ```bash
+    task setup
+    task startup:create:jobs
+    ```
+
+## Job Execution Flow Design
+
+The below is what is intended to happen, it is not all currently implemented
+
+1. When a Scheduled Job's cron schedule triggers:
+   - Windmill initiates the job execution
+   - The job is assigned to a runner
+   - The job status is set to PENDING
+
+1. During execution:
+   - The runner executes the job's script
+   - Output and logs are captured
+   - Start time is recorded
+
+1. (TODO) After execution:
+   - End time is recorded
+   - Exit code is captured
+   - Status is updated (SUCCESS/FAILED)
+   - Results are stored in the job_results table
+   - Output/logs are stored and linked via file_id
+
+## Current Implementation Status
+
+### Completed Features ✅
+- **Job Templates**: Full CRUD operations with Windmill synchronization
+- **Scheduled Jobs**: Creation and basic management
+- **Job Runners**: Authentication and registration system
+- **Job Runner Tokens**: Secure token management with revocation
+- **Windmill Integration**: Basic flow creation and management
+- **Database Schema**: All core entities implemented
+- **GraphQL API**: Core resolvers for job management
+
+### In Progress / TODO Items
+
+#### MVP Requirements
+
+1. **Results Posting** - Results need to be posted back to the openlane API to the job results table
+   - Add the create resolver, locked down to only job runner tokens for that organization
+   - Add success and failure scripts for both dev + production
+   - Example success script structure:
+     ```go
+     func main() (interface{}, error) {
+         // Use job runner token instead of system admin token
+         v, err := wmill.GetVariable("u/admin/openlane_system_admin_token")
+         if err != nil {
+             return nil, err
+         }
+
+         payload := map[string]any{
+             "input": map[string]any{
+                 "status":"SUCCESS"
+             }
+         }
+
+         // POST to https://api.theopenlane.io/query with authorization header
+         // using either httpling or the openlane client
+     }
+     ```
+
+2. **Openlane Agent** - Customer-hosted job runners
+   - Binary + docker image for both arm + x86 architectures
+   - Agent takes a `job_runner` token and registers with windmill via proxy
+   - On startup, sends request to REST endpoint for agent registration
+   - Use [queues/tags in windmill](https://www.windmill.dev/docs/core_concepts/worker_groups#set-tags-to-assign-specific-queues) to ensure customer runners only used by that customer
+
+3. **Scheduled Job Updates**
+   - Currently hooks create schedules in windmill but never update them
+   - If active is set to false, disable the job
+   - If cron schedule changes, update windmill schedule
+
+4. **Deletion from Windmill**
+   - When job template or scheduled job deleted from openlane, delete from windmill
+   - Prevent deletion of system-owned job templates if in-use by customer scheduled jobs
+
+5. **Testing**
+   - Test update paths for job templates + schedules in windmill
+   - Test deletion path + add hooks for windmill cleanup
+   - Add tests for scheduled job -> parent access from control
+
+6. **CLI Commands** - Add CLI commands for each job-related schema
+
+7. **Review Permissions** - Currently most objects are orgOwned; scheduled jobs have additional object-owned permissions
+
+#### Nice to Have Features
+
+1. **Example Scripts** - More [example scripts](https://github.com/theopenlane/jobs-examples) for common audit tasks
+
+2. **Job Runner Assignment** - Fallback to any worker in organization instead of requiring runner ID
+   - Use [queues/tags in windmill](https://www.windmill.dev/docs/core_concepts/worker_groups#set-tags-to-assign-specific-queues)
+   - Allow customers to create scheduled jobs without runner ID
+
+3. **Tags for Customer Agents** - Allow custom tags like `meow-jobs` in agent configuration
+   - Add `agent_tags` field to scheduled job
+   - Target agents by tag instead of runner ID
+
+4. **Warnings** - Return warning on scheduled job creation if no job runners in organization
+
+5. **Priority Field** - Add priority field to scheduled job for customer prioritization
+
+6. **Additional Triggers** - Support webhooks and other triggers instead of only schedules
+
+7. **Log Retention** - Policies for job logs and storage add-on
+
+8. **Additional Platform Types** - Add `docker` and `bash` as supported platform types
+
+9. **Openlane Workers** - Hosted workers for customers who don't want to provide runners
+   - Add `self_hosted` vs `hosted` field to scheduled job
+   - Consider restricting to only openlane-provided scripts
+   - Add ability to store secrets for customer use in jobs
+
+10. **Dev Environment Automation** - Automate setup steps using `SUPERADMIN_SECRET`
+    - Automate token and workspace creation
+    - Debug why `LICENSE_KEY` doesn't always pull from environment correctly
+
+## API Usage
+
+### Creating a Job Template
+
+```graphql
+mutation CreateJobTemplate($input: CreateJobTemplateInput!) {
+  createJobTemplate(input: $input) {
+    jobTemplate {
+      id
+      title
+      description
+      platform
+      downloadURL
+      configuration
+      cronSchedule
+    }
+  }
+}
+```
+
+### Scheduling a Job
+
+```graphql
+mutation CreateScheduledJob($input: CreateScheduledJobInput!) {
+  createScheduledJob(input: $input) {
+    scheduledJob {
+      id
+      active
+      jobTemplateID
+      configuration
+      cronSchedule
+      jobRunnerID
+    }
+  }
+}
+```
+
+### Creating a Job Runner
+
+```graphql
+mutation CreateJobRunner($input: CreateJobRunnerInput!) {
+  createJobRunner(input: $input) {
+    jobRunner {
+      id
+      name
+      status
+      ipAddress
+    }
+  }
+}
+```
+
+### Creating Job Runner Token
+
+```graphql
+mutation CreateJobRunnerToken($input: CreateJobRunnerTokenInput!) {
+  createJobRunnerToken(input: $input) {
+    jobRunnerToken {
+      id
+      token
+      expiresAt
+      isActive
+      lastUsedAt
+    }
+  }
+}
+```
+
+## Security Considerations
+
+### Token Security
+
+- Job runner tokens are prefixed with "runner_" for easy identification
+- Tokens are organization-scoped and cannot access other organizations
+- Token revocation is immediate and cannot be undone
+- All token usage is logged for audit purposes
+
+### Job Isolation
+
+- Jobs run in isolated environments through Windmill
+- Customer runners are isolated using queue tags
+- Organization-level access controls prevent cross-tenant access
+
+### Secret Management
+
+- Job configuration can include encrypted secrets
+- Integration with Hush secrets system for sensitive data
+- Environment variables passed securely to job runners
+
+## Monitoring and Observability
+
+### Job Metrics
+
+- Execution time tracking
+- Success/failure rates
+- Resource utilization monitoring
+- Error rate alerts
+
+### Audit Trail
+
+- Complete audit log of all job operations
+- Token usage tracking
+- Job result history
+- Configuration change tracking

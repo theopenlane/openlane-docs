@@ -1,0 +1,240 @@
+---
+title: "Personal Access Tokens"
+description: "User-specific tokens for personal automation and tooling"
+sidebar_position: 4
+keywords:
+  - personal access tokens
+  - api tokens
+  - authentication
+  - programmatic access
+  - user tokens
+  - token management
+  - api security
+  - graphql api
+  - developer tokens
+  - token lifecycle
+tags:
+  - api
+  - authentication
+  - tokens
+---
+
+# Personal Access Tokens
+
+Personal Access Tokens (PATs) provide user-specific programmatic access to Openlane APIs. Unlike organization-level API tokens, PATs inherit the permissions of the user who created them and are designed for personal automation, development tools, and user-specific integrations.
+
+## What Are Personal Access Tokens?
+
+Personal Access Tokens are authentication credentials that allow individual users to access Openlane APIs programmatically while maintaining the user's identity and permission context. They enable users to build personal automation tools, integrate with third-party services, and develop applications that interact with Openlane on their behalf.
+
+## Key Features
+
+- **User Identity**: PATs maintain the identity of the creating user
+- **Permission Inheritance**: Inherit all permissions from the user's roles and group memberships
+- **Personal Management**: Users can create, manage, and revoke their own tokens
+- **Flexible Scoping**: Support for custom permission scopes
+- **Audit Traceability**: All actions are attributed to the token owner
+
+## Token Properties
+
+### Core Information
+
+- **ID**: Unique identifier for the token
+- **Name**: User-defined name for easy identification
+- **Token**: Secure token value (displayed only once at creation)
+- **Description**: Optional description of token purpose
+- **Owner**: User who created and owns the token
+
+### Access Control
+
+- **Scopes**: Array of permission scopes (read, write, admin)
+- **Active Status**: Whether the token is currently active
+- **Expiration**: Optional expiration date for automatic revocation
+
+### Usage Tracking
+
+- **Created At**: Token creation timestamp
+- **Last Used At**: Most recent usage timestamp
+- **Usage Count**: Number of times token has been used
+- **IP Addresses**: Recent IP addresses that used the token
+
+## GraphQL Operations
+
+### Query Personal Access Tokens
+
+```graphql
+query GetPersonalAccessTokens($first: Int, $where: PersonalAccessTokenWhereInput) {
+  personalAccessTokens(first: $first, where: $where) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      node {
+        id
+        name
+        description
+        scopes
+        isActive
+        expiresAt
+        lastUsedAt
+        createdAt
+        abilities
+        usageCount
+        owner {
+          id
+          firstName
+          lastName
+          email
+        }
+      }
+    }
+  }
+}
+```
+
+### Create Personal Access Token
+
+```graphql
+mutation CreatePersonalAccessToken($input: CreatePersonalAccessTokenInput!) {
+  createPersonalAccessToken(input: $input) {
+    personalAccessToken {
+      id
+      name
+      token
+      description
+      scopes
+      expiresAt
+      isActive
+      createdAt
+      abilities
+    }
+  }
+}
+```
+
+**Input Example:**
+```json
+{
+  "input": {
+    "name": "Development Tools Integration",
+    "description": "Token for local development environment and CLI tools",
+    "scopes": ["read", "write"],
+    "expiresAt": "2024-12-31T23:59:59Z"
+  }
+}
+```
+
+### Update Personal Access Token
+
+```graphql
+mutation UpdatePersonalAccessToken($id: ID!, $input: UpdatePersonalAccessTokenInput!) {
+  updatePersonalAccessToken(id: $id, input: $input) {
+    personalAccessToken {
+      id
+      name
+      description
+      scopes
+      isActive
+      expiresAt
+      updatedAt
+    }
+  }
+}
+```
+
+### Revoke Personal Access Token
+
+```graphql
+mutation RevokePersonalAccessToken($id: ID!) {
+  updatePersonalAccessToken(id: $id, input: { isActive: false }) {
+    personalAccessToken {
+      id
+      name
+      isActive
+      updatedAt
+    }
+  }
+}
+```
+
+## Common Use Cases
+
+### Development and Testing
+
+- **Local Development**: Access APIs during application development
+- **Testing Frameworks**: Automated testing of compliance workflows
+- **Debugging Tools**: Personal debugging and troubleshooting tools
+- **CLI Applications**: Command-line tools for personal productivity
+
+### Personal Automation
+
+- **Task Management**: Sync compliance tasks with personal productivity tools
+- **Reporting**: Generate personal compliance dashboards and reports
+- **Notifications**: Custom notification systems for compliance activities
+- **Data Export**: Export personal data for analysis or backup
+
+### Integration Development
+
+- **Prototype Development**: Build and test integration prototypes
+- **Third-Party Tools**: Connect personal tools to Openlane data
+- **Custom Workflows**: Automate personal compliance workflows
+- **Data Synchronization**: Keep external systems in sync with Openlane
+
+## Token Scopes
+
+### Read Scopes
+
+- **read**: Basic read access to user-accessible resources
+- **read:controls**: Read access to compliance controls
+- **read:evidence**: Read access to evidence records
+- **read:tasks**: Read access to assigned tasks
+- **read:reports**: Read access to compliance reports
+
+### Write Scopes
+
+- **write**: Basic write access to user-modifiable resources
+- **write:tasks**: Create and update tasks
+- **write:evidence**: Upload and manage evidence
+- **write:notes**: Create and manage notes
+- **write:files**: Upload and manage files
+
+### Administrative Scopes
+
+- **admin**: Administrative access within user's permissions
+- **admin:tokens**: Manage personal access tokens
+- **admin:integrations**: Manage personal integrations
+
+## Troubleshooting
+
+### Common Issues
+
+#### Authentication Failures
+```bash
+# Check token format
+curl -H "Authorization: Bearer tolp_your_token_here" \
+     https://api.openlane.io/query \
+     -d '{"query": "{ me { id } }"}'
+```
+
+#### Permission Denied
+
+- Verify token scopes include required permissions
+- Check if user has necessary role-based permissions
+- Ensure token is active and not expired
+
+#### Token Not Working
+
+- Confirm token prefix is `tolp_` for personal access tokens
+- Verify token was copied completely without extra characters
+- Check if token has been revoked or expired
+
+### Debugging Tips
+
+1. **Test with Simple Queries**: Start with basic queries like `{ me { id } }`
+1. **Check Token Metadata**: Verify token creation date and scopes
+1. **Review Audit Logs**: Check audit logs for authentication events
+1. **Use GraphQL Introspection**: Explore available queries and mutations

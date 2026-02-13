@@ -1,0 +1,150 @@
+---
+title: Entities (Vendors)
+description: Manage vendors and third parties with clear risk and review context
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Entities (Vendors)
+
+## Overview
+
+Entities represent external organizations you depend on, such as vendors, subprocessors, and service providers. This record helps you keep third-party relationships organized with the operational and compliance context needed for reviews and audits.
+
+In Openlane, entities are typically connected to vendor contacts, supporting documents, and assessment activity. You can also relate an entity to the assets it supports so vendor risk and technical scope stay aligned.
+
+## Compliance Significance
+
+- SOC 2: CC3, CC5, CC7, CC9
+- ISO 27001: supplier and external party governance (A.5 and A.15)
+- GDPR and HIPAA: third-party accountability expectations
+
+## Practical Examples
+
+- A procurement lead tracks annual renewals and scheduled vendor reviews in one entity record instead of separate spreadsheets.
+- A GRC team links vendor assessments and SOC reports to each entity to quickly answer due diligence requests.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create | `createBulkCSVEntity` |
+| Update | `updateBulkCSVEntity` |
+
+```csv
+# Create
+Name,DisplayName,Status,RiskRating,ReviewFrequency,NextReviewAt,ApprovedForUse,HasSoc2
+stripe,Stripe,active,HIGH,YEARLY,2026-10-01T00:00:00Z,true,true
+aws,Amazon Web Services,active,MEDIUM,YEARLY,2026-09-15T00:00:00Z,true,true
+```
+
+```csv
+# Update
+ID,RiskRating,NextReviewAt,ContractRenewalAt,ApprovedForUse
+ENT01J9ABCD111111111111111,MEDIUM,2026-11-01T00:00:00Z,2027-01-31T00:00:00Z,true
+ENT01J9ABCD222222222222222,HIGH,2026-08-01T00:00:00Z,2026-12-31T00:00:00Z,true
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createEntity` |
+| Update | `updateEntity` |
+
+```graphql
+mutation {
+  createEntity(
+    input: {
+      name: "stripe"
+      displayName: "Stripe"
+      status: "active"
+      description: "Payment processor"
+    }
+  ) {
+    entity {
+      id
+      displayName
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateEntity(
+    id: "ENT01J9ABCD111111111111111"
+    input: {
+      status: "active"
+      description: "Annual vendor review completed"
+    }
+  ) {
+    entity {
+      id
+      status
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateEntity(ctx, input)` |
+| Update | `client.UpdateEntity(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+name := "stripe"
+displayName := "Stripe"
+status := "active"
+
+_, err := client.CreateEntity(ctx, graphclient.CreateEntityInput{
+	Name:        &name,
+	DisplayName: &displayName,
+	Status:      &status,
+})
+if err != nil {
+	return err
+}
+
+description := "Annual vendor review completed"
+_, err = client.UpdateEntity(ctx, "ENT01J9ABCD111111111111111", graphclient.UpdateEntityInput{
+	Description: &description,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane entity create` |
+| Update | `openlane entity update` |
+
+```bash
+openlane entity create \
+  --name "stripe" \
+  --display-name "Stripe" \
+  --status "active"
+
+openlane entity update \
+  --id "ENT01J9ABCD111111111111111" \
+  --status "active" \
+  --description "Annual vendor review completed"
+```
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,35 @@
+---
+title: Taskfiles and Dev Tools
+description: Common commands and tooling used across Openlane development
+sidebar_position: 5
+---
+
+# Taskfiles and Dev Tools
+
+Openlane repositories use [Task](https://taskfile.dev/) heavily for day-to-day development workflows.
+
+## Why Taskfiles
+
+Taskfiles provide consistent commands for:
+
+1. Testing
+1. Linting
+1. Code generation
+1. Local environment setup
+
+## Common Usage
+
+```bash
+task
+```
+
+Example output typically includes tasks for linting, testing, generation, and CI helper workflows.
+
+## Frequently Used Tooling
+
+1. `ent` for schema definitions and generated data access
+1. `atlas` and `goose` for migration workflows
+1. `gqlgen` / `gqlgenc` for GraphQL code generation
+1. `openfga` for authorization modeling and checks
+1. `redis` and `postgres` for local runtime services
+1. `golangci-lint` for static analysis

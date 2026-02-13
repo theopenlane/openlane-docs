@@ -1,0 +1,151 @@
+---
+title: Assets
+description: Track systems and resources that define your security and compliance scope
+sidebar_position: 4
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Assets
+
+## Overview
+
+Assets represent the technology, domains, devices, and other resources your organization needs to govern as part of its compliance program. In Openlane, assets help you define what is in scope, who is responsible, and what supporting evidence is tied to each resource over time.
+
+Many teams already use dedicated IT asset tools. When that is the case, Openlane can still serve as the compliance layer where you keep scoped assets connected to responsible personnel and supporting vendors. When no dedicated ITAM tool exists, teams can also manage core asset records directly in Openlane.
+
+## Compliance Significance
+
+- SOC 2: CC6 and CC7
+- ISO 27001: A.8 asset management
+- HIPAA: technical safeguard and system inventory expectations
+
+## Practical Examples
+
+- A compliance team imports only in-scope production assets instead of every internal system, then links those records to responsible personnel and supporting vendors.
+- An audit manager uses asset relationships to show which vendors support key systems and which personnel are accountable for each environment.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create | `createBulkCSVAsset` |
+| Update | `updateBulkCSVAsset` |
+
+```csv
+# Create
+Name,AssetType,Identifier,Region,ContainsPii,SourceType,Description
+Production API,TECHNOLOGY,api-prod,us-east-1,true,IMPORTED,Public-facing production API service
+Marketing Website,DOMAIN,www.acme.io,global,false,MANUAL,Primary marketing site
+```
+
+```csv
+# Update
+ID,Region,ContainsPii,Description
+AST01J9ASSET11111111111111,us-east-2,true,Production API moved to us-east-2
+AST01J9ASSET22222222222222,global,false,Website ownership updated
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createAsset` |
+| Update | `updateAsset` |
+
+```graphql
+mutation {
+  createAsset(
+    input: {
+      name: "Production API"
+      assetType: TECHNOLOGY
+      identifier: "api-prod"
+      region: "us-east-1"
+      containsPii: true
+      description: "Public-facing production API service"
+    }
+  ) {
+    asset {
+      id
+      name
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateAsset(
+    id: "AST01J9ASSET11111111111111"
+    input: {
+      region: "us-east-2"
+      description: "Production API moved to us-east-2"
+    }
+  ) {
+    asset {
+      id
+      region
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateAsset(ctx, input)` |
+| Update | `client.UpdateAsset(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+description := "Public-facing production API service"
+identifier := "api-prod"
+
+_, err := client.CreateAsset(ctx, graphclient.CreateAssetInput{
+	Name:        "Production API",
+	Description: &description,
+	Identifier:  &identifier,
+})
+if err != nil {
+	return err
+}
+
+region := "us-east-2"
+_, err = client.UpdateAsset(ctx, "AST01J9ASSET11111111111111", graphclient.UpdateAssetInput{
+	Region: &region,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane asset create` |
+| Update | `openlane asset update` |
+
+```bash
+openlane asset create \
+  --name "Production API" \
+  --type TECHNOLOGY \
+  --identifier "api-prod" \
+  --region "us-east-1"
+
+openlane asset update \
+  --id "AST01J9ASSET11111111111111" \
+  --region "us-east-2"
+```
+
+  </TabItem>
+</Tabs>

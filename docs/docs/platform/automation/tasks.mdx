@@ -1,0 +1,141 @@
+---
+title: Tasks
+description: Assign and track compliance work with clear ownership
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Tasks
+
+## Overview
+
+Tasks are actionable work items used to assign, track, and complete compliance and security operations. They help teams turn control requirements and risk outcomes into clear owned work with deadlines.
+
+Task records are typically related to the object that generated the work (for example, a control, risk, or remediation) and the evidence or outcome needed to close that work.
+
+## Compliance Significance
+
+- SOC 2: CC5 and CC7 operational execution evidence
+- ISO 27001: accountability and follow-through on security actions
+
+## Practical Examples
+
+- A readiness project creates a task queue for evidence collection across multiple control owners.
+- A security team links remediation tasks to findings and tracks weekly completion status.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create | `createBulkCSVTask` |
+| Update | `updateBulkCSVTask` |
+
+```csv
+# Create
+Title,Details,Status,Due
+Collect quarterly access review evidence,Upload IAM review output for Q1,OPEN,2026-03-31T00:00:00Z
+Verify vendor SOC 2 refresh,Confirm latest report and attach evidence,IN_PROGRESS,2026-03-15T00:00:00Z
+```
+
+```csv
+# Update
+ID,Status,Due,AssigneeEmail
+TSK01J9TASK11111111111111,IN_REVIEW,2026-03-20T00:00:00Z,owner@acme.io
+TSK01J9TASK22222222222222,COMPLETED,2026-03-12T00:00:00Z,reviewer@acme.io
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createTask` |
+| Update | `updateTask` |
+
+```graphql
+mutation {
+  createTask(
+    input: {
+      title: "Collect quarterly access review evidence"
+      details: "Upload IAM review output for Q1"
+    }
+  ) {
+    task {
+      id
+      title
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateTask(
+    id: "TSK01J9TASK11111111111111"
+    input: {
+      details: "Evidence package moved to final review"
+    }
+  ) {
+    task {
+      id
+      details
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateTask(ctx, input)` |
+| Update | `client.UpdateTask(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+details := "Upload IAM review output for Q1"
+_, err := client.CreateTask(ctx, graphclient.CreateTaskInput{
+	Title:   "Collect quarterly access review evidence",
+	Details: &details,
+})
+if err != nil {
+	return err
+}
+
+updatedDetails := "Evidence package moved to final review"
+_, err = client.UpdateTask(ctx, "TSK01J9TASK11111111111111", graphclient.UpdateTaskInput{
+	Details: &updatedDetails,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane task create` |
+| Update | `openlane task update` |
+
+```bash
+openlane task create \
+  --title "Collect quarterly access review evidence" \
+  --details "Upload IAM review output for Q1" \
+  --due 72h
+
+openlane task update \
+  --id "TSK01J9TASK11111111111111" \
+  --details "Evidence package moved to final review"
+```
+
+  </TabItem>
+</Tabs>

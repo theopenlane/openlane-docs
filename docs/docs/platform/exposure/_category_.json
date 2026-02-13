@@ -1,0 +1,17 @@
+{
+  "label": "Exposure",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Exposure management for risks, scans, vulnerabilities, findings, and remediations.",
+    "keywords": [
+      "exposure",
+      "risk management",
+      "vulnerability management",
+      "findings",
+      "remediation",
+      "security operations"
+    ]
+  },
+  "collapsed": true
+}

@@ -1,0 +1,149 @@
+---
+title: Vulnerabilities
+description: Track known weaknesses and remediation timelines
+sidebar_position: 4
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Vulnerabilities
+
+## Overview
+
+Vulnerabilities are known weaknesses in software, infrastructure, or configuration that could be exploited if left unresolved. These records often come from scanning tools, cloud security platforms, and security integrations, and may include references like CVE IDs and severity scores.
+
+In Openlane, vulnerability records help you keep source data, status, and remediation timelines organized in one place. They are most useful when linked to the affected asset and the remediation work needed to resolve them.
+
+## Compliance Significance
+
+- SOC 2: CC7 and CC8 security operations
+- ISO 27001: technical vulnerability management expectations
+
+## Practical Examples
+
+- A security engineer imports scanner output and tracks remediation SLA compliance by severity.
+- A compliance manager links open vulnerabilities to in-scope assets to show active governance during audit.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create | `createBulkCSVVulnerability` |
+| Update | `updateVulnerability` |
+
+```csv
+# Create
+ExternalID,CveID,DisplayName,Severity,Score,Status,RemediationSLA,Source
+scanner-8842,CVE-2025-12345,OpenSSL out-of-date,HIGH,8.1,OPEN,30,scanner
+scanner-8843,CVE-2024-77890,Container privilege escalation,CRITICAL,9.6,OPEN,7,scanner
+```
+
+```csv
+# Update
+ID,Severity,Status,RemediationSLA,Validated
+VUL01J9VULN11111111111111,MEDIUM,IN_PROGRESS,21,true
+VUL01J9VULN22222222222222,LOW,CLOSED,7,true
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createVulnerability` |
+| Update | `updateVulnerability` |
+
+```graphql
+mutation {
+  createVulnerability(
+    input: {
+      externalID: "scanner-8842"
+      cveID: "CVE-2025-12345"
+      displayName: "OpenSSL out-of-date"
+      severity: "HIGH"
+      source: "scanner"
+    }
+  ) {
+    vulnerability {
+      id
+      externalID
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateVulnerability(
+    id: "VUL01J9VULN11111111111111"
+    input: {
+      severity: "MEDIUM"
+      status: "IN_PROGRESS"
+    }
+  ) {
+    vulnerability {
+      id
+      status
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateVulnerability(ctx, input)` |
+| Update | `client.UpdateVulnerability(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+displayName := "OpenSSL out-of-date"
+cve := "CVE-2025-12345"
+
+_, err := client.CreateVulnerability(ctx, graphclient.CreateVulnerabilityInput{
+	ExternalID:  "scanner-8842",
+	DisplayName: &displayName,
+	CveID:       &cve,
+})
+if err != nil {
+	return err
+}
+
+severity := "MEDIUM"
+_, err = client.UpdateVulnerability(ctx, "VUL01J9VULN11111111111111", graphclient.UpdateVulnerabilityInput{
+	Severity: &severity,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane vulnerability create` |
+| Update | `openlane vulnerability update` |
+
+```bash
+openlane vulnerability create \
+  --external-id "scanner-8842" \
+  --cve-id "CVE-2025-12345" \
+  --display-name "OpenSSL out-of-date" \
+  --severity HIGH
+
+openlane vulnerability update \
+  --id "VUL01J9VULN11111111111111" \
+  --severity MEDIUM
+```
+
+  </TabItem>
+</Tabs>

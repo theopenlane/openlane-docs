@@ -1,0 +1,29 @@
+---
+title: Impersonation
+description: User impersonation flow, constraints, and audit considerations
+sidebar_position: 6
+---
+
+# Impersonation
+
+Openlane supports controlled impersonation for support and admin workflows.
+
+## Purpose
+
+1. Debug tenant-specific issues safely
+1. Allow controlled support access without credential sharing
+1. Preserve traceability through explicit impersonation claims and audit records
+
+## Core Concepts
+
+1. Impersonation tokens include standard identity claims plus impersonation context
+1. Access is scoped and policy-gated
+1. Sessions can be explicitly ended to restore normal identity context
+
+## Operational Guidance
+
+1. Limit impersonation permissions to trusted roles
+1. Log start/end events and reason codes
+1. Monitor impersonation activity in audit trails
+
+For full flow and API examples, see `/Users/manderson/core/docs/impersonation.md`.

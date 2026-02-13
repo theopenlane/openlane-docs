@@ -1,0 +1,147 @@
+---
+title: Remediations
+description: Track planned and completed fixes for vulnerabilities and findings
+sidebar_position: 6
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Remediations
+
+## Overview
+
+Remediations track how your organization plans, executes, and verifies corrective actions for vulnerabilities and findings. They are the operational bridge between identifying an issue and demonstrating it was addressed.
+
+Remediation records can include ownership, due dates, ticket and repository references, completion timestamps, and related evidence. They are most commonly linked back to the finding or vulnerability they are intended to resolve.
+
+## Compliance Significance
+
+- SOC 2: CC5 and CC7 control operation evidence
+- ISO 27001: treatment and continuous improvement expectations
+
+## Practical Examples
+
+- An engineering team links a remediation record to a high-severity finding and tracks ticket and pull request progress.
+- A compliance manager reviews overdue remediations weekly and escalates high-priority gaps.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create | `createBulkCSVRemediation` |
+| Update | `updateRemediation` |
+
+```csv
+# Create
+Title,State,DueAt,OwnerReference,TicketReference,RepositoryURI,PullRequestURI
+Rotate exposed credentials,pending,2026-02-20T00:00:00Z,Security Platform,SEC-4821,https://github.com/acme/app,
+Harden TLS policy,in_progress,2026-02-18T00:00:00Z,Infra Team,INF-992,https://github.com/acme/infrastructure,https://github.com/acme/infrastructure/pull/224
+```
+
+```csv
+# Update
+ID,State,CompletedAt,PullRequestURI,TicketReference
+RMD01J9REMD1111111111111,completed,2026-02-16T14:32:00Z,https://github.com/acme/infrastructure/pull/224,INF-992
+RMD01J9REMD2222222222222,in_progress,,https://github.com/acme/app/pull/811,SEC-4821
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createRemediation` |
+| Update | `updateRemediation` |
+
+```graphql
+mutation {
+  createRemediation(
+    input: {
+      title: "Rotate exposed credentials"
+      state: "pending"
+      intent: "Revoke and replace exposed credentials"
+      ticketReference: "SEC-4821"
+    }
+  ) {
+    remediation {
+      id
+      title
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateRemediation(
+    id: "RMD01J9REMD1111111111111"
+    input: {
+      state: "completed"
+      pullRequestURI: "https://github.com/acme/infrastructure/pull/224"
+    }
+  ) {
+    remediation {
+      id
+      state
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateRemediation(ctx, input)` |
+| Update | `client.UpdateRemediation(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+title := "Rotate exposed credentials"
+state := "pending"
+
+_, err := client.CreateRemediation(ctx, graphclient.CreateRemediationInput{
+	Title: &title,
+	State: &state,
+})
+if err != nil {
+	return err
+}
+
+updatedState := "completed"
+_, err = client.UpdateRemediation(ctx, "RMD01J9REMD1111111111111", graphclient.UpdateRemediationInput{
+	State: &updatedState,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane remediation create` |
+| Update | `openlane remediation update` |
+
+```bash
+openlane remediation create \
+  --title "Rotate exposed credentials" \
+  --state pending \
+  --intent "Revoke and replace exposed credentials" \
+  --finding-ids "FIND01J9FIND1111111111111"
+
+openlane remediation update \
+  --id "RMD01J9REMD1111111111111" \
+  --state completed
+```
+
+  </TabItem>
+</Tabs>

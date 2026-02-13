@@ -1,0 +1,40 @@
+---
+title: Local Setup
+description: Install core dependencies for local development
+sidebar_position: 2
+---
+
+# Local Setup
+
+Before running Openlane locally, install the base tooling used across the repository.
+
+## Required Tools
+
+1. [Go](https://go.dev/)
+1. [Task](https://taskfile.dev/)
+1. [Docker](https://www.docker.com/)
+1. [PostgreSQL client tools](https://www.postgresql.org/)
+
+## Primary Frameworks and Services
+
+Openlane development commonly touches:
+
+1. [ent](https://entgo.io/) for schema-driven data modeling
+1. [atlas](https://atlasgo.io/) and [goose](https://github.com/pressly/goose) for migrations
+1. [gqlgen](https://gqlgen.com/) and [gqlgenc](https://github.com/Yamashou/gqlgenc) for GraphQL server/client generation
+1. [openfga](https://openfga.dev/) for authorization enforcement
+1. [koanf](https://github.com/knadh/koanf) for configuration management
+
+## Install Dependencies
+
+From the repository root:
+
+```bash
+task install
+```
+
+After install, list available commands:
+
+```bash
+task
+```

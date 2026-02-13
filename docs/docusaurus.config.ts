@@ -168,11 +168,12 @@ const config: Config = {
             label: "Developers",
             items: [
               { label: 'Overview', to: 'docs/developers/overview' },
-              { label: 'Developing', to: 'docs/developers/developing/startup' },
-              { label: 'Security', to: 'docs/developers/security/authentication/sso-setup' },
+              { label: 'Getting Started', to: 'docs/developers/getting-started/overview' },
+              { label: 'Core Development', to: 'docs/developers/core-development/overview' },
               { label: 'Integrations', to: 'docs/developers/integrations/overview' },
-              { label: 'Deployment', to: 'docs/developers/deployment/overview' },
-              { label: 'Documentation Contributions', to: 'docs/developers/contributing/references' },
+              { label: 'Security', to: 'docs/developers/security/overview' },
+              { label: 'Operations', to: 'docs/developers/operations/overview' },
+              { label: 'Contributing', to: 'docs/developers/contributing/overview' },
 
             ],
           },
@@ -344,21 +345,21 @@ const config: Config = {
       {
         name: "openlane-core-startup",
         sourceBaseUrl: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/",
-        outDir: "docs/developers/developing",
+        outDir: "docs/developers/getting-started",
         documents: ["README.md"],
         modifyContent(filename: any, content: any) {
           if (filename.includes("README")) {
             return {
-              filename: `startup.mdx`,
+              filename: `run-the-stack.mdx`,
               content: `---
+title: Run the Stack
 sidebar_position: 3
-sidebar_label: Server Startup
 tags:
     - local
     - development
 ---
 
-# Server Startup
+# Run the Stack
 
 ${excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL")}`,
             }

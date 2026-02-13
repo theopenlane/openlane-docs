@@ -1,0 +1,151 @@
+---
+title: Personnel (Identity Holders)
+description: Maintain an auditable roster of employees and contractors
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Personnel (Identity Holders)
+
+## Overview
+
+Identity Holders are personnel records for employees and contractors in your compliance program. They are used to maintain an authoritative roster and track governance activity, even when a person does not have a direct Openlane login.
+
+Identity Holders are most often related to employer entities (for contractor affiliation) and assessment or campaign records used for policy, training, or attestation workflows. This keeps people coverage and completion evidence tied to the right roster records.
+
+## Compliance Significance
+
+- SOC 2: CC1, CC2, CC5, CC6, CC7
+- ISO 27001: workforce governance and accountability (A.6 and A.7)
+
+## Practical Examples
+
+- A security team imports a quarterly roster and launches a policy attestation campaign to all active personnel.
+- During audit prep, compliance owners filter for active contractors and export completion status by department.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create | `createBulkCSVIdentityHolder` |
+| Update | `updateBulkCSVIdentityHolder` |
+
+```csv
+# Create
+FullName,Email,IdentityHolderType,Department,Team,Title,Location,IsActive
+Avery Jordan,avery@acme.io,EMPLOYEE,Engineering,Platform,Senior Engineer,New York,true
+Riley Chen,riley@vendor-partner.com,CONTRACTOR,Security,GRC,Security Analyst,Remote,true
+```
+
+```csv
+# Update
+ID,Team,Title,IsActive,EndDate
+IDH01J9ABCDEF1234567890XYZ,Security Operations,Security Engineer,true,
+IDH01J9ABCDEFFFEDCBA098765,Security,GRC Contractor,false,2026-03-31T00:00:00Z
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createIdentityHolder` |
+| Update | `updateIdentityHolder` |
+
+```graphql
+mutation {
+  createIdentityHolder(
+    input: {
+      fullName: "Avery Jordan"
+      email: "avery@acme.io"
+      identityHolderType: EMPLOYEE
+      department: "Engineering"
+      title: "Senior Engineer"
+    }
+  ) {
+    identityHolder {
+      id
+      fullName
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateIdentityHolder(
+    id: "IDH01J9ABCDEF1234567890XYZ"
+    input: {
+      team: "Security Operations"
+      title: "Security Engineer"
+    }
+  ) {
+    identityHolder {
+      id
+      team
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateIdentityHolder(ctx, input)` |
+| Update | `client.UpdateIdentityHolder(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+department := "Engineering"
+title := "Senior Engineer"
+
+_, err := client.CreateIdentityHolder(ctx, graphclient.CreateIdentityHolderInput{
+	FullName:   "Avery Jordan",
+	Email:      "avery@acme.io",
+	Department: &department,
+	Title:      &title,
+})
+if err != nil {
+	return err
+}
+
+team := "Security Operations"
+_, err = client.UpdateIdentityHolder(ctx, "IDH01J9ABCDEF1234567890XYZ", graphclient.UpdateIdentityHolderInput{
+	Team: &team,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane identityHolder create` |
+| Update | `openlane identityHolder update` |
+
+```bash
+openlane identityHolder create \
+  --name "Avery Jordan" \
+  --email "avery@acme.io" \
+  --type EMPLOYEE \
+  --department "Engineering"
+
+openlane identityHolder update \
+  --id "IDH01J9ABCDEF1234567890XYZ" \
+  --full-name "Avery Jordan" \
+  --environment "production"
+```
+
+  </TabItem>
+</Tabs>
