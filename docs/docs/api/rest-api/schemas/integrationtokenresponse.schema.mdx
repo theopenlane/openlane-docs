@@ -28,5 +28,6 @@ import Heading from "@theme/Heading";
   schema={{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"expiresAt":{"format":"date-time","nullable":true,"type":"string"},"provider":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token":{"nullable":true,"properties":{"accessToken":{"description":"OAuth access token","type":"string"},"expiresAt":{"description":"Token expiration time","format":"date-time","nullable":true,"type":"string"},"provider":{"description":"OAuth provider (github, slack, etc.)","type":"string"},"providerEmail":{"description":"Email from the OAuth provider","type":"string"},"providerUserId":{"description":"User ID from the OAuth provider","type":"string"},"providerUsername":{"description":"Username from the OAuth provider","type":"string"},"refreshToken":{"description":"OAuth refresh token","type":"string"}},"type":"object"},"unverified":{"type":"boolean"}},"type":"object","title":"IntegrationTokenResponse"}}
   schemaType={"response"}
 >
-
+  
 </Schema>
+            
