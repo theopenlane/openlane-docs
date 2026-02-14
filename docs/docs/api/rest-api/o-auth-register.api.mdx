@@ -32,7 +32,7 @@ import Heading from "@theme/Heading";
   path={"/oauth/register"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -50,14 +50,14 @@ Register a user via OAuth provider authentication
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={{"content":{"application/json":{"examples":{"success":{"value":{"authProvider":"google","clientToken":"example-client-token-12345","email":"jsnow@example.com","externalUserId":"1234567890","externalUserName":"jsnow","image":"https://example.com/avatar.jpg","name":"Jon Snow"}}},"schema":{"properties":{"authProvider":{"description":"The provider used to authenticate the user, e.g. google, github, etc.","example":"google","type":"string"},"clientToken":{"description":"The token provided by the external provider","type":"string"},"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"externalUserId":{"description":"The ID of the user from the external provider","example":"1234567890","type":"string"},"externalUserName":{"description":"The username of the user from the external provider","example":"jsnow","type":"string"},"image":{"description":"The image URL of the user from the external provider","type":"string"},"name":{"description":"The name of the user","example":"Jon Snow","type":"string"},"org_id":{"description":"the organization id for the sso connection","type":"string"}},"type":"object","title":"OauthTokenRequest"}}},"description":"Request body"}}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
@@ -65,6 +65,6 @@ Register a user via OAuth provider authentication
   label={undefined}
   responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"access_token":"access_token","message":"Login successful","refresh_token":"refresh_token","session":"session","success":true,"tfa_enabled":true,"token_type":"bearer"}}},"schema":{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"tfa_enabled":{"type":"boolean"},"tfa_required":{"type":"boolean"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"LoginReply"}}},"description":"Success"},"400":{"content":{"application/json":{"examples":{"error":{"value":{"error":"googleapi: Error 401: Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project., unauthorized","error_code":"INVALID_INPUT","success":false}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"Reply"}}},"description":"Invalid Input"},"default":{"description":""}}}
 >
-
+  
 </StatusCodes>
 
