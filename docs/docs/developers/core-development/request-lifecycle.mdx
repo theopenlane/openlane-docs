@@ -138,7 +138,7 @@ func (h *Handler) LoginHandler(ctx echo.Context, openapi *OpenAPIContext) error 
 }
 ```
 
-`BindAndValidateWithAutoRegistry` serves double duty: during normal requests it binds and validates the request body (which is really just binding the request context <-> input payload struct), and during server startup it registers the request/response types in the OpenAPI schema.
+`BindAndValidateWithAutoRegistry` serves double duty: during normal requests it binds and validates the request body (which is really just binding the request context to the input payload struct), and during server startup it registers the request/response types in the OpenAPI schema.
 
 ### Response Helpers
 
@@ -220,10 +220,10 @@ X-Request-ID: req-abc123
 10. Handler: CreateOrganization
     Parses request body
     Calls txn.Organization.Create().Save(ctx)
-      -> HookOrganization fires (sets defaults)
-      -> Privacy policy checks (modules, FGA)
-      -> SQL INSERT executes
-      -> EmitEventHook fires (queues "organization.created" event)
+      - > HookOrganization fires (sets defaults)
+      - > Privacy policy checks (modules, FGA)
+      - > SQL INSERT executes
+      - > EmitEventHook fires (queues "organization.created" event)
     Returns h.Created(ctx, org)
 
 11. Transaction middleware (unwind)
