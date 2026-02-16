@@ -32,7 +32,7 @@ import Heading from "@theme/Heading";
   path={"/v1/sso/token/callback"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -50,14 +50,14 @@ Handle SSO token callback
 <ParamsDetails
   parameters={[{"description":"authorization code","example":"abc","in":"query","name":"code","schema":{"type":"string"}},{"description":"state value","example":"state123","in":"query","name":"state","schema":{"type":"string"}}]}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={undefined}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
@@ -65,6 +65,6 @@ Handle SSO token callback
   label={undefined}
   responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"message":"Token authorized successfully","organization_id":"01K9MJ3PD7XKJSCT9ZWYGW9CVE","success":true,"token_id":"01K9MJ23ND309PAN0ZA9XQ3MFH"}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"organization_id":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_id":{"type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"SSOTokenAuthorizeReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
 >
-
+  
 </StatusCodes>
 

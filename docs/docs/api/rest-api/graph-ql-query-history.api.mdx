@@ -32,7 +32,7 @@ import Heading from "@theme/Heading";
   path={"/history/query"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -50,14 +50,14 @@ Handles all GraphQL queries for historical data
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={{"content":{"application/json":{"schema":{"example":{"query":"query GetBooks {\n  books {\n    id\n    title\n  }\n}","variables":{}},"properties":{"operationName":{"description":"The name of the operation to execute (optional)","type":"string"},"query":{"description":"The GraphQL query string","type":"string"},"variables":{"description":"A JSON object containing variables for the query","type":"object"}},"type":"object"}}},"description":"GraphQL query request","required":true}}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
@@ -65,6 +65,6 @@ Handles all GraphQL queries for historical data
   label={undefined}
   responses={{"200":{"content":{"application/json":{"schema":{"properties":{"data":{"description":"The data returned by the GraphQL operation","type":"object"},"errors":{"items":{"description":"An array of error objects if the operation failed","type":"object"},"type":"array"}},"type":"object"}}},"description":"Successful GraphQL response"},"default":{"description":""}}}
 >
-
+  
 </StatusCodes>
 

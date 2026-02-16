@@ -32,7 +32,7 @@ import Heading from "@theme/Heading";
   path={"/.well-known/acme-challenge/{path}"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -50,14 +50,14 @@ ACME challenge solver for Let's Encrypt certificate validation
 <ParamsDetails
   parameters={[{"description":"The path to the acme challenge","example":"01J4HMNDSZCCQBTY93BF9CBF5D","in":"path","name":"path","required":true,"schema":{"type":"string"}}]}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={undefined}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
@@ -65,6 +65,6 @@ ACME challenge solver for Let's Encrypt certificate validation
   label={undefined}
   responses={{"200":{"content":{"text/plain":{"schema":{"type":"string"}}},"description":"ACME challenge response"},"default":{"description":""}}}
 >
-
+  
 </StatusCodes>
 

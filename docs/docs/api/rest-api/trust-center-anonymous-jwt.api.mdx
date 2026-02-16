@@ -32,7 +32,7 @@ import Heading from "@theme/Heading";
   path={"/trustcenter/auth/anonymous"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -42,14 +42,14 @@ Create anonymous JWT token for trust center access
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={undefined}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
@@ -57,6 +57,6 @@ Create anonymous JWT token for trust center access
   label={undefined}
   responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"access_token":""}}},"schema":{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"}},"type":"object","title":"CreateTrustCenterAnonymousJWTResponse"}}},"description":"Success"},"default":{"description":""}}}
 >
-
+  
 </StatusCodes>
 

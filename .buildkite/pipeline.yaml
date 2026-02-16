@@ -1,0 +1,70 @@
+env:
+  DEFAULT_BRANCH: "main"
+
+secrets:
+  - GITHUB_TOKEN
+  - GITHUB_SSH_PRIVATE_KEY
+
+steps:
+  - label: ":docusaurus: generate branch changes"
+    key: "generate"
+    agents:
+      queue: $LARGE_RUNNER_QUEUE
+      size: $RUNNER_LARGE
+      location: "NYC"
+    cancel_on_build_failing: true
+    plugins:
+      - docker#v5.13.0:
+          image: "ghcr.io/theopenlane/build-image:latest"
+          always_pull: true
+          propagate-environment: true
+          environment:
+            - "GITHUB_TOKEN"
+            - "BUILDKITE_AGENT_ACCESS_TOKEN"
+    command: |
+      #!/bin/bash
+      set -e
+      set -o pipefail
+      
+      echo "--- running task generate"
+      task bun-install && task generate
+      EXIT_CODE=$?
+
+      if [ "$EXIT_CODE" -ne 0 ]; then
+        echo "task generate failed with exit code $EXIT_CODE"
+        exit $EXIT_CODE
+      fi
+
+      echo "--- configuring git user"
+      git config user.name "theopenlane-bender"
+      git config user.email "theopenlane-bender@users.noreply.github.com"
+
+      echo "--- checking for changes"
+      if git diff --quiet; then
+        echo "No changes from task generate; nothing to commit."
+        exit 0
+      fi
+
+      echo "--- committing changes"
+      # if on default branch create a new branch for a PR, else use the current branch
+      if [ "${BUILDKITE_BRANCH}" == "$DEFAULT_BRANCH" ]; then
+        branchName="chore/docs-generate-$(date +%s)"
+        git checkout -b "$$branchName"
+      else
+        branchName="${BUILDKITE_BRANCH}"
+        git checkout "$$branchName"
+      fi
+      git add -u
+
+      # commit changes
+      git commit -m "chore: run task generate"
+
+      echo "--- pushing changes to $$branchName"
+      git push "https://x-access-token:$${GITHUB_TOKEN}@github.com/theopenlane/openlane-docs.git" "HEAD:$$branchName"
+
+      if [ "${BUILDKITE_BRANCH}" == "$DEFAULT_BRANCH" ]; then
+        echo "Changes found, creating pull request..."
+        sed "s|\[branchName\]|$$branchName|g" .buildkite/steps/pr.yaml | buildkite-agent pipeline upload
+      else
+        echo "Changes pushed to existing branch $$branchName; not creating a PR."
+      fi
