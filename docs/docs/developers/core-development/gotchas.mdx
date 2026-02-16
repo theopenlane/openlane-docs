@@ -134,10 +134,6 @@ curl -b cookies.txt -H "X-Csrf-Token: <token-value>" \
   -d '{"username":"admin@example.com","password":"password"}'
 ```
 
-:::info
-GraphQL queries sent via `POST` are also subject to CSRF validation. The GraphQL playground handles this automatically, but custom clients need to manage it.
-:::
-
 ## Transaction Middleware Wraps Every Request
 
 Every HTTP request (REST and GraphQL) is wrapped in a database transaction by the transaction middleware. This means:
