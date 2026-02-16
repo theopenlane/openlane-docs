@@ -28,7 +28,7 @@ When access is granted to a tenant, that access will be granted to all subtenant
 
 Tenants form a tree structure, and are not limited to a single level.
 
-Experience with multiple large projects (Openstack, Kubernetes, etc) has shown that many ecosystems start with single level tenancy and then migrate to hierarchical tenancy in the future. This migration is often fraught with peril, bugs and dragons. Other systems like GCP provide hierarchical multi-tenancy using tree structures. In GCP the tree structure is very clear and is represented by the organization, folders, and projects [1].
+Experience with multiple large projects (Openstack, Kubernetes, etc) has shown that many ecosystems start with single level tenancy and then migrate to hierarchical tenancy in the future. This migration is often fraught with peril, bugs and dragons. Other systems like GCP provide hierarchical multi-tenancy using tree structures. In GCP the tree structure is very clear and is represented by the [organization, folders, and projects](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy).
 
 Tenants can have sub-tenants that can have sub-tenants, etc. Recursion needs to be accounted for in services built for the openlane ecosystem.
 
@@ -42,8 +42,4 @@ The services that form the openlane ecosystem are aware of the tenants and provi
 
 All resources are owned by a single tenant, not multiple tenants. Granular access control will provide for a more secure environment. Identities can be given access to individual resources or tenants. Tracking an arbitrary number of tenants for a resource adds unnecessary complexity.
 
-Services in the openlane ecosystem must track a single tenant association for each resource they manage. Tenants and subtenants have no differences other than subtenants have a parent tenant. Drawing a distinction between these entities leads to complications when needing to apply "global" (or at least for a whole tree) authorization constructs and quota management
-
-## References
-
-[3] https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy
+Services in the openlane ecosystem must track a single tenant association for each resource they manage. Tenants and subtenants have no differences other than subtenants have a parent tenant. Drawing a distinction between these entities leads to complications when needing to apply "global" (or at least for a whole tree) authorization constructs and quota management.
