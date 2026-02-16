@@ -1,0 +1,146 @@
+---
+title: Risks
+description: Document, prioritize, and track business and security risks
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Risks
+
+## Overview
+
+Risks in Openlane represent potential events that could negatively impact security, compliance, or business outcomes. They give your team a structured way to define impact, likelihood, ownership, and mitigation plans.
+
+Risk records are usually connected to the controls that treat them and the action plans or tasks used to reduce them. When needed, teams also relate risks to the affected asset or vendor to make ownership and impact clearer.
+
+## Compliance Significance
+
+- SOC 2: CC3, CC5, CC7, CC9
+- ISO 27001: risk assessment and treatment expectations
+
+## Practical Examples
+
+- A security team tracks "privileged access misuse" as a risk and ties it to IAM controls and quarterly access reviews.
+- A compliance lead uses risk score and status to prioritize remediation planning ahead of audit windows.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create | `createBulkCSVRisk` |
+| Update | `updateBulkCSVRisk` |
+
+```csv
+# Create
+Name,Impact,Likelihood,Status,Details,Mitigation
+Privileged access misuse,HIGH,LIKELY,IDENTIFIED,Unauthorized privileged activity could impact production systems.,Enforce MFA and quarterly access reviews.
+Delayed patching on internet-facing systems,CRITICAL,HIGHLY_LIKELY,OPEN,Critical fixes may miss SLA windows.,Automate patch validation and escalation.
+```
+
+```csv
+# Update
+ID,Status,Impact,Likelihood,Score,Mitigation
+RSK01J9RISK11111111111111,IN_PROGRESS,HIGH,LIKELY,12,Weekly patch board now reviews all critical exposures.
+RSK01J9RISK22222222222222,MITIGATED,MODERATE,UNLIKELY,4,Control evidence verified and residual risk accepted.
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createRisk` |
+| Update | `updateRisk` |
+
+```graphql
+mutation {
+  createRisk(
+    input: {
+      name: "Privileged access misuse"
+      details: "Unauthorized privileged activity could impact production systems."
+      mitigation: "Enforce MFA and quarterly access reviews."
+    }
+  ) {
+    risk {
+      id
+      name
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateRisk(
+    id: "RSK01J9RISK11111111111111"
+    input: {
+      mitigation: "Weekly patch board now reviews all critical exposures."
+      businessCosts: "Potential service disruption and incident response cost"
+    }
+  ) {
+    risk {
+      id
+      mitigation
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateRisk(ctx, input)` |
+| Update | `client.UpdateRisk(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+details := "Unauthorized privileged activity could impact production systems."
+mitigation := "Enforce MFA and quarterly access reviews."
+
+_, err := client.CreateRisk(ctx, graphclient.CreateRiskInput{
+	Name:       "Privileged access misuse",
+	Details:    &details,
+	Mitigation: &mitigation,
+})
+if err != nil {
+	return err
+}
+
+updatedMitigation := "Weekly patch board now reviews all critical exposures."
+_, err = client.UpdateRisk(ctx, "RSK01J9RISK11111111111111", graphclient.UpdateRiskInput{
+	Mitigation: &updatedMitigation,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane risk create` |
+| Update | `openlane risk update` |
+
+```bash
+openlane risk create \
+  --name "Privileged access misuse" \
+  --details "Unauthorized privileged activity could impact production systems." \
+  --mitigation "Enforce MFA and quarterly access reviews."
+
+openlane risk update \
+  --id "RSK01J9RISK11111111111111" \
+  --mitigation "Weekly patch board now reviews all critical exposures."
+```
+
+  </TabItem>
+</Tabs>

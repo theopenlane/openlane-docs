@@ -1,0 +1,145 @@
+---
+title: Assessments (Questionnaires)
+description: Define questionnaires and collect structured responses at scale
+sidebar_position: 5
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Assessments (Questionnaires)
+
+## Overview
+
+Assessments are reusable questionnaire definitions used to collect structured responses for compliance and risk workflows. Teams use them for internal attestations, vendor due diligence, and periodic review processes.
+
+In Openlane, assessments are commonly paired with campaigns for distribution and tracking. Assessment responses then provide auditable records of participation and completion.
+
+## Compliance Significance
+
+- SOC 2: CC2 and CC7 governance and monitoring support
+- ISO 27001: periodic review and supplier evaluation support
+
+## Practical Examples
+
+- A GRC team maintains one vendor questionnaire and reuses it across annual assessments.
+- A compliance team sends policy attestation assessments to all active personnel and tracks completion status.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create/update assessment definitions | API-first (GraphQL or Go client) |
+| Recipient intake for campaigns | `createCampaignWithTargetsCSV` |
+
+```csv
+# Recipient targets for an assessment campaign
+Email,FullName,Status
+security@vendor-one.com,Vendor One Security Team,NOT_STARTED
+security@vendor-two.com,Vendor Two Security Team,NOT_STARTED
+```
+
+```csv
+# Campaign target status updates
+ID,Status,CompletedAt
+CTG01J9TARGET111111111111,IN_PROGRESS,
+CTG01J9TARGET222222222222,COMPLETED,2026-04-10T18:20:00Z
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createAssessment` |
+| Update | `updateAssessment` |
+
+```graphql
+mutation {
+  createAssessment(
+    input: {
+      name: "Vendor Security Baseline Questionnaire"
+      assessmentType: EXTERNAL
+      responseDueDuration: 1209600
+    }
+  ) {
+    assessment {
+      id
+      name
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateAssessment(
+    id: "ASM01J9ASMT1111111111111"
+    input: {
+      name: "Vendor Security Baseline Questionnaire v2"
+      responseDueDuration: 604800
+    }
+  ) {
+    assessment {
+      id
+      name
+      responseDueDuration
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateAssessment(ctx, input)` |
+| Update | `client.UpdateAssessment(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+responseDueDuration := int64(1209600)
+_, err := client.CreateAssessment(ctx, graphclient.CreateAssessmentInput{
+	Name:                "Vendor Security Baseline Questionnaire",
+	ResponseDueDuration: &responseDueDuration,
+})
+if err != nil {
+	return err
+}
+
+updatedDuration := int64(604800)
+name := "Vendor Security Baseline Questionnaire v2"
+_, err = client.UpdateAssessment(ctx, "ASM01J9ASMT1111111111111", graphclient.UpdateAssessmentInput{
+	Name:                &name,
+	ResponseDueDuration: &updatedDuration,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane assessment create` |
+| Update | `openlane assessment update` |
+
+```bash
+openlane assessment create \
+  --name "Vendor Security Baseline Questionnaire" \
+  --type EXTERNAL
+
+openlane assessment update \
+  --id "ASM01J9ASMT1111111111111" \
+  --name "Vendor Security Baseline Questionnaire v2"
+```
+
+  </TabItem>
+</Tabs>

@@ -28,6 +28,5 @@ SCIM PATCH operation as defined in RFC 7644 Section 3.5.2
   schema={{"description":"SCIM PATCH operation as defined in RFC 7644 Section 3.5.2","properties":{"Operations":{"description":"A list of patch operations to be performed","items":{"properties":{"op":{"description":"The operation to perform","enum":["add","remove","replace"],"type":"string"},"path":{"description":"The attribute path to operate on. Optional for add and replace\nwhen the value contains the full attribute. Required for remove.\n","type":"string"},"value":{"description":"The value to set or add. Required for add and replace operations.\nMay be a string, number, boolean, object, or array depending on the attribute.\n","oneOf":[{"type":"string"},{"type":"number"},{"type":"boolean"},{"type":"object"},{"items":{},"type":"array"}]}},"required":["op"],"type":"object"},"minItems":1,"type":"array"},"schemas":{"description":"The schema URI for PATCH operations","items":{"enum":["urn:ietf:params:scim:api:messages:2.0:PatchOp"],"type":"string"},"type":"array"}},"required":["schemas","Operations"],"type":"object","title":"PatchRequest"}}
   schemaType={"response"}
 >
-  
+
 </Schema>
-            

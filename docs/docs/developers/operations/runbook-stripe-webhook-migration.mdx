@@ -1,0 +1,44 @@
+---
+title: Stripe Webhook Migration Runbook
+description: Zero-downtime Stripe webhook API version migration flow
+sidebar_position: 5
+---
+
+# Stripe Webhook Migration Runbook
+
+Use the `stripe-webhook` migration workflow to rotate Stripe webhook API versions with dual processing and no downtime.
+
+## Typical Flow
+
+1. Check status
+
+```bash
+stripe-webhook status
+```
+
+1. Create and enable new-version webhook
+
+```bash
+stripe-webhook migrate --step create --webhook-url "$STRIPE_WEBHOOK_URL"
+```
+
+1. Regenerate config and deploy updated application
+
+```bash
+task config:generate
+```
+
+1. Disable old webhook after validation
+
+```bash
+stripe-webhook migrate --step disable --webhook-url "$STRIPE_WEBHOOK_URL"
+```
+
+## Required Environment
+
+```bash
+export STRIPE_API_KEY=sk_test_...
+export STRIPE_WEBHOOK_URL=https://api.theopenlane.io/v1/stripe/webhook
+```
+
+For full command behavior and rollback paths, see `/Users/manderson/core/cmd/stripe-webhook/README.md`.

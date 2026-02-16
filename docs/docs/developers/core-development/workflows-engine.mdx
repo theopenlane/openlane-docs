@@ -1,0 +1,37 @@
+---
+title: Workflows Engine
+description: How workflow definitions, approvals, and events execute in core
+sidebar_position: 9
+---
+
+# Workflows Engine
+
+The workflow engine composes triggers, conditions, and actions into approval and automation flows.
+
+## Core Primitives
+
+1. Trigger: when to evaluate
+1. Condition: whether to proceed
+1. Action: what to execute
+1. Action `when`: action-level gate
+
+## Runtime Model
+
+1. Hook or event determines a candidate workflow definition
+1. Engine evaluates trigger and conditions
+1. Actions execute in order, with approval actions introducing natural gating
+1. Workflow instance state advances through events until completion/failure
+
+## Key Components
+
+1. `internal/workflows/engine` for orchestration and execution
+1. `internal/workflows/reconciler` for retries and recovery
+1. `internal/workflows/resolvers` for dynamic target resolution
+1. `internal/workflows/observability` for telemetry hooks
+
+## Approval Behavior
+
+1. `PRE_COMMIT`: staged proposal behavior before mutation is finalized
+1. `POST_COMMIT`: review/automation after mutation is committed
+
+For full architecture and event lifecycle details, refer to `internal/workflows/README.md` in `core`.

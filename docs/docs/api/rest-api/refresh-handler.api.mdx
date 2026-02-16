@@ -32,7 +32,7 @@ import Heading from "@theme/Heading";
   path={"/v1/refresh"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -50,14 +50,14 @@ The Refresh endpoint re-authenticates users and API keys using a refresh token r
 <ParamsDetails
   parameters={undefined}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={{"content":{"application/json":{"examples":{"success":{"value":{"refresh_token":"token"}}},"schema":{"properties":{"refresh_token":{"description":"The token to be used to refresh the access token after expiration","type":"string"}},"type":"object","title":"RefreshRequest"}}},"description":"Request body"}}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
@@ -65,6 +65,6 @@ The Refresh endpoint re-authenticates users and API keys using a refresh token r
   label={undefined}
   responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"access_token":"new_access_token","message":"Token refreshed successfully","refresh_token":"new_refresh_token","session":"session","success":true,"token_type":"bearer"}}},"schema":{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"RefreshReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 

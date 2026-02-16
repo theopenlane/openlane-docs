@@ -32,7 +32,7 @@ import Heading from "@theme/Heading";
   path={"/v1/account/access"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -50,14 +50,14 @@ Check Subject Access to Object
 <ParamsDetails
   parameters={undefined}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={{"content":{"application/json":{"examples":{"success":{"value":{"object_id":"01J4EXD5MM60CX4YNYN0DEE3Y1","object_type":"organization","relation":"can_view"}}},"schema":{"properties":{"object_id":{"description":"The ID of the object to check access for","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","type":"string"},"object_type":{"description":"The type of object to check access for, e.g. organization, program, procedure, etc","example":"organization","type":"string"},"relation":{"description":"The relation to check access for, e.g. can_view, can_edit","example":"can_view","type":"string"},"subject_type":{"description":"The type of subject to check access for, e.g. service, user","example":"user","type":"string"}},"type":"object","title":"AccountAccessRequest"}}},"description":"Request body"}}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
@@ -65,6 +65,6 @@ Check Subject Access to Object
   label={undefined}
   responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"allowed":true,"success":true}}},"schema":{"properties":{"allowed":{"type":"boolean"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"AccountAccessReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 

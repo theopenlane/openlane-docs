@@ -1,0 +1,9 @@
+{
+  "label": "Core Development",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Architecture, schema development, workflows, and core backend implementation guidance."
+  },
+  "collapsed": true
+}

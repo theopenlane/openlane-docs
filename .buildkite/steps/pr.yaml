@@ -10,4 +10,4 @@ steps:
           title: "chore: generated client changes"
           head: "[branchName]"
           base: "main"
-          repo: "theopenlane/go-client"
+          repo: "theopenlane/openlane-docs"

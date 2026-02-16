@@ -1,0 +1,148 @@
+---
+title: Findings
+description: Capture specific security issues discovered during scans and reviews
+sidebar_position: 5
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Findings
+
+## Overview
+
+Findings are specific issues observed by security tooling or reviews, such as misconfigurations, policy violations, and exposed resources. While vulnerabilities describe known weaknesses, findings usually describe concrete occurrences in your environment.
+
+In Openlane, findings are usually linked to the affected asset or vendor context and the remediation work used to close the issue. This keeps investigation and follow-up traceable for audits and internal reviews.
+
+## Compliance Significance
+
+- SOC 2: CC7 monitoring and response evidence
+- ISO 27001: operational control and improvement records
+
+## Practical Examples
+
+- A cloud team imports findings from a provider security feed and routes high-severity items into remediation tasks.
+- A compliance owner reports closure trends for in-scope findings before a readiness review.
+
+## Examples
+
+<Tabs>
+  <TabItem value="csv" label="CSV">
+
+| Operation | API |
+| --- | --- |
+| Create | `createBulkCSVFinding` |
+| Update | `updateFinding` |
+
+```csv
+# Create
+ExternalID,Source,DisplayName,Category,Severity,Status,Open,RecommendedActions
+gcp-99001,gcp_scc,Public storage bucket,DATA_EXPOSURE,HIGH,OPEN,true,Disable public access and rotate exposed credentials.
+gcp-99002,gcp_scc,Legacy TLS policy,CRYPTOGRAPHY,MEDIUM,OPEN,true,Enforce modern TLS baseline.
+```
+
+```csv
+# Update
+ID,Severity,Status,Open,Validated
+FIND01J9FIND1111111111111,MEDIUM,IN_PROGRESS,true,true
+FIND01J9FIND2222222222222,LOW,CLOSED,false,true
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+| Operation | Mutation |
+| --- | --- |
+| Create | `createFinding` |
+| Update | `updateFinding` |
+
+```graphql
+mutation {
+  createFinding(
+    input: {
+      externalID: "gcp-99001"
+      source: "gcp_scc"
+      displayName: "Public storage bucket"
+      category: "DATA_EXPOSURE"
+      severity: "HIGH"
+    }
+  ) {
+    finding {
+      id
+      displayName
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateFinding(
+    id: "FIND01J9FIND1111111111111"
+    input: {
+      severity: "MEDIUM"
+      state: "ACTIVE"
+    }
+  ) {
+    finding {
+      id
+      severity
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+| Operation | Method |
+| --- | --- |
+| Create | `client.CreateFinding(ctx, input)` |
+| Update | `client.UpdateFinding(ctx, id, input)` |
+
+```go
+ctx := context.Background()
+
+displayName := "Public storage bucket"
+source := "gcp_scc"
+
+_, err := client.CreateFinding(ctx, graphclient.CreateFindingInput{
+	DisplayName: &displayName,
+	Source:      &source,
+})
+if err != nil {
+	return err
+}
+
+severity := "MEDIUM"
+_, err = client.UpdateFinding(ctx, "FIND01J9FIND1111111111111", graphclient.UpdateFindingInput{
+	Severity: &severity,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+| Operation | Command |
+| --- | --- |
+| Create | `openlane finding create` |
+| Update | `openlane finding update` |
+
+```bash
+openlane finding create \
+  --display-name "Public storage bucket" \
+  --category DATA_EXPOSURE \
+  --severity HIGH \
+  --source gcp_scc
+
+openlane finding update \
+  --id "FIND01J9FIND1111111111111" \
+  --severity MEDIUM
+```
+
+  </TabItem>
+</Tabs>

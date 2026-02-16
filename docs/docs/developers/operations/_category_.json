@@ -1,0 +1,9 @@
+{
+  "label": "Operations",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Deployment, CI/CD automation, configuration generation, and operational runbooks."
+  },
+  "collapsed": true
+}

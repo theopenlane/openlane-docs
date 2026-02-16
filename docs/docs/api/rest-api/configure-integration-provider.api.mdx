@@ -32,7 +32,7 @@ import Heading from "@theme/Heading";
   path={"/v1/integrations/{provider}/config"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -50,14 +50,14 @@ Persist integration credentials or configuration
 <ParamsDetails
   parameters={[{"description":"Path parameter: provider","in":"path","name":"provider","required":true,"schema":{"type":"string"}}]}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
   body={{"content":{"application/json":{"examples":{"success":{"value":{"Provider":"gcp_scc","payload":{"audience":"//iam.googleapis.com/projects/123456789/locations/global/workloadIdentityPools/pool/providers/provider","organizationId":"1234567890","projectId":"sample-project","serviceAccountEmail":"scc-runner@example.iam.gserviceaccount.com","workloadIdentityProvider":"projects/123456789/locations/global/workloadIdentityPools/pool/providers/provider"}}}},"schema":{"properties":{"Provider":{"description":"Integration provider identifier","example":"gcp_scc","type":"string"},"payload":{"properties":{"audience":{"type":"string"},"findingFilter":{"type":"string"},"organizationId":{"type":"string"},"projectId":{"type":"string"},"serviceAccountEmail":{"type":"string"},"workloadIdentityProvider":{"type":"string"}},"type":"object"}},"type":"object","title":"IntegrationConfigPayload"}}},"description":"Request body"}}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
@@ -65,6 +65,6 @@ Persist integration credentials or configuration
   label={undefined}
   responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"provider":"gcp_scc","success":true}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"provider":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"IntegrationConfigResponse"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 
