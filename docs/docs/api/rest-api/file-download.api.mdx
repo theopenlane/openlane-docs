@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -43,27 +44,24 @@ Download files via proxy-signed URLs. Requires authentication.
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
-  parameters={[{"description":"the file ID","example":"01J4HMNDSZCCQBTY93BF9CBF5D","in":"path","name":"id","required":true,"schema":{"type":"string"}}]}
+  {...require("./file-download.ParamsDetails.json")}
 >
   
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={undefined}
+  {...require("./file-download.RequestSchema.json")}
 >
   
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"ID":"","Token":"token"}}},"schema":{"properties":{"ID":{"description":"the file ID","example":"01J4HMNDSZCCQBTY93BF9CBF5D","type":"string"},"Token":{"description":"The token to be used to verify the email address, token is sent via email","type":"string"}},"type":"object","title":"FileDownload"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+  {...require("./file-download.StatusCodes.json")}
 >
   
 </StatusCodes>

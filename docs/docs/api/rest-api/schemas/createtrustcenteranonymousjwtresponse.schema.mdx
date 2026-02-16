@@ -25,8 +25,7 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"}},"type":"object","title":"CreateTrustCenterAnonymousJWTResponse"}}
-  schemaType={"response"}
+  {...require("./createtrustcenteranonymousjwtresponse.Schema.json")}
 >
   
 </Schema>

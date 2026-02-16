@@ -25,8 +25,7 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"ip_address":{"description":"The IP address of the node being registered","type":"string"},"name":{"description":"the name of your job runner node","type":"string"},"tags":{"description":"The tags for your runner node","items":{"description":"The tags for your runner node","type":"string"},"type":"array"},"token":{"description":"Your agent registration token","type":"string"}},"type":"object","title":"JobRunnerRegistrationRequest"}}
-  schemaType={"response"}
+  {...require("./jobrunnerregistrationrequest.Schema.json")}
 >
   
 </Schema>

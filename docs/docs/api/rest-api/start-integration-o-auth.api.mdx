@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -43,8 +44,8 @@ Start OAuth flow for integration
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
@@ -54,16 +55,13 @@ Start OAuth flow for integration
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={{"content":{"application/json":{"examples":{"success":{"value":{"provider":"github","redirectUri":"https://app.example.com/integrations","scopes":["repo","gist"]}}},"schema":{"properties":{"provider":{"description":"OAuth provider (github, slack, etc.)","example":"github","type":"string"},"redirectUri":{"description":"Custom redirect URI after OAuth flow","example":"https://app.example.com/integrations","type":"string"},"scopes":{"description":"Additional OAuth scopes to request","items":{"description":"Additional OAuth scopes to request","type":"string"},"type":"array"}},"type":"object","title":"OAuthFlowRequest"}}},"description":"Request body"}}
+  {...require("./start-integration-o-auth.RequestSchema.json")}
 >
   
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"authUrl":"https://github.com/login/oauth/authorize?client_id=example&state=eyJvcmdJRCI6IjAxSE","state":"eyJvcmdJRCI6IjAxSE","success":true}}},"schema":{"properties":{"authUrl":{"description":"URL to redirect user to for OAuth authorization","example":"https://github.com/login/oauth/authorize?client_id=...","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"description":"Optional message (e.g., for authentication required)","example":"Authentication required. Please login first.","type":"string"},"requiresLogin":{"description":"Whether user needs to login before OAuth flow","type":"boolean"},"state":{"description":"OAuth state parameter for security","example":"eyJvcmdJRCI6IjAxSE...","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"OAuthFlowResponse"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+  {...require("./start-integration-o-auth.StatusCodes.json")}
 >
   
 </StatusCodes>

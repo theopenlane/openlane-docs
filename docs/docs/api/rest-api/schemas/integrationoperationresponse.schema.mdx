@@ -25,8 +25,7 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"details":{"additionalProperties":{},"type":"object"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"operation":{"type":"string"},"provider":{"type":"string"},"status":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"summary":{"type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"IntegrationOperationResponse"}}
-  schemaType={"response"}
+  {...require("./integrationoperationresponse.Schema.json")}
 >
   
 </Schema>
