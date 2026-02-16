@@ -19,7 +19,6 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
-import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -33,7 +32,7 @@ import Translate from "@docusaurus/Translate";
   path={"/oauth/userinfo"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -43,18 +42,21 @@ Get user information for OAuth authenticated user
 <ParamsDetails
   parameters={undefined}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
-  {...require("./user-info.RequestSchema.json")}
+  title={"Body"}
+  body={undefined}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
-  {...require("./user-info.StatusCodes.json")}
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"type":"object"}}},"description":"User information"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 

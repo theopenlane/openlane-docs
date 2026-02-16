@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  {...require("./oauthflowrequest.Schema.json")}
+  schema={{"properties":{"provider":{"description":"OAuth provider (github, slack, etc.)","example":"github","type":"string"},"redirectUri":{"description":"Custom redirect URI after OAuth flow","example":"https://app.example.com/integrations","type":"string"},"scopes":{"description":"Additional OAuth scopes to request","items":{"description":"Additional OAuth scopes to request","type":"string"},"type":"array"}},"type":"object","title":"OAuthFlowRequest"}}
+  schemaType={"response"}
 >
-  
+
 </Schema>
-            

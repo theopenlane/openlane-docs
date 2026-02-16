@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  {...require("./webauthnbeginregistrationresponse.Schema.json")}
+  schema={{"properties":{"Reply":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"},"mediation":{"type":"string"},"publicKey":{"properties":{"attestation":{"type":"string"},"attestationFormats":{"items":{"type":"string"},"type":"array"},"authenticatorSelection":{"properties":{"authenticatorAttachment":{"type":"string"},"requireResidentKey":{"nullable":true,"type":"boolean"},"residentKey":{"type":"string"},"userVerification":{"type":"string"}},"type":"object"},"challenge":{"format":"byte","type":"string"},"excludeCredentials":{"items":{"properties":{"id":{"format":"byte","type":"string"},"transports":{"items":{"type":"string"},"type":"array"},"type":{"type":"string"}},"type":"object"},"type":"array"},"extensions":{"additionalProperties":{},"type":"object"},"hints":{"items":{"type":"string"},"type":"array"},"pubKeyCredParams":{"items":{"properties":{"alg":{"type":"integer"},"type":{"type":"string"}},"type":"object"},"type":"array"},"rp":{"properties":{"id":{"type":"string"},"name":{"type":"string"}},"type":"object"},"timeout":{"type":"integer"},"user":{"properties":{"displayName":{"type":"string"},"id":{},"name":{"type":"string"}},"type":"object"}},"type":"object"},"session":{"type":"string"}},"type":"object","title":"WebauthnBeginRegistrationResponse"}}
+  schemaType={"response"}
 >
-  
+
 </Schema>
-            

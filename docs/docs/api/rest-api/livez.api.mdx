@@ -19,7 +19,6 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
-import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -33,7 +32,7 @@ import Translate from "@docusaurus/Translate";
   path={"/livez"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -43,18 +42,21 @@ Health check endpoint to verify the service is alive
 <ParamsDetails
   parameters={undefined}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
-  {...require("./livez.RequestSchema.json")}
+  title={"Body"}
+  body={undefined}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
-  {...require("./livez.StatusCodes.json")}
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"type":"object"}}},"description":"Health check status"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 

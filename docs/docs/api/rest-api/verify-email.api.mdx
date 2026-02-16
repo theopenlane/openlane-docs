@@ -19,7 +19,6 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
-import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -33,7 +32,7 @@ import Translate from "@docusaurus/Translate";
   path={"/v1/verify"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -43,18 +42,21 @@ Used to verify a user's email address - once clicked they will be redirected to 
 <ParamsDetails
   parameters={undefined}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
-  {...require("./verify-email.RequestSchema.json")}
+  title={"Body"}
+  body={undefined}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
-  {...require("./verify-email.StatusCodes.json")}
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"access_token":"access_token","email":"jsnow@example.com","message":"Email verified successfully","refresh_token":"refresh_token","session":"session","success":true,"token_type":"bearer","user_id":"01K9MJ23ND309PAN0ZV1ECFYT7"}}},"schema":{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"},"unverified":{"type":"boolean"},"user_id":{"description":"The ID of the user that was created","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","type":"string"}},"type":"object","title":"VerifyReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 

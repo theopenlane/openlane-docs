@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  {...require("./registerrequest.Schema.json")}
+  schema={{"properties":{"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"first_name":{"description":"The first name of the user","example":"Jon","type":"string"},"last_name":{"description":"The last name of the user","example":"Snow","type":"string"},"password":{"description":"The password to be used for authentication after registration","example":"Wint3rIsC0ming123!","type":"string"},"token":{"description":"A newly invited user can use this to join a org as at the same time they are creating their account","nullable":true,"type":"string"}},"type":"object","title":"RegisterRequest"}}
+  schemaType={"response"}
 >
-  
+
 </Schema>
-            

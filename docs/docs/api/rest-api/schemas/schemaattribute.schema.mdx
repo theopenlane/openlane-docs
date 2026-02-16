@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 Schema attribute definition as defined in RFC 7643 Section 7
 
 <Schema
-  {...require("./schemaattribute.Schema.json")}
+  schema={{"description":"Schema attribute definition as defined in RFC 7643 Section 7","properties":{"canonicalValues":{"description":"Suggested canonical values for the attribute","items":{"type":"string"},"type":"array"},"caseExact":{"description":"Indicates if the attribute is case-sensitive","type":"boolean"},"description":{"description":"The attribute's human-readable description","type":"string"},"multiValued":{"description":"Indicates if the attribute is multi-valued","type":"boolean"},"mutability":{"description":"Indicates when the attribute value can be modified","enum":["readOnly","readWrite","immutable","writeOnly"],"type":"string"},"name":{"description":"The attribute's name","type":"string"},"referenceTypes":{"description":"For reference attributes, the SCIM resource types that may be referenced","items":{"type":"string"},"type":"array"},"required":{"description":"Indicates if the attribute is required","type":"boolean"},"returned":{"description":"Indicates when the attribute is returned","enum":["always","never","default","request"],"type":"string"},"subAttributes":{"description":"Sub-attributes for complex attributes","items":"circular(SchemaAttribute)","type":"array"},"type":{"description":"The attribute's data type","enum":["string","boolean","decimal","integer","dateTime","reference","complex"],"type":"string"},"uniqueness":{"description":"Indicates how uniqueness is enforced","enum":["none","server","global"],"type":"string"}},"required":["name","type","multiValued","required","caseExact","mutability","returned","uniqueness"],"type":"object","title":"SchemaAttribute"}}
+  schemaType={"response"}
 >
-  
+
 </Schema>
-            

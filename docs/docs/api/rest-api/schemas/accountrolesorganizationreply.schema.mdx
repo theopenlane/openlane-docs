@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  {...require("./accountrolesorganizationreply.Schema.json")}
+  schema={{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"organization_id":{"description":"The ID of the organization the user has roles in","example":"01J4HMNDSZCCQBTY93BF9CBF5D","type":"string"},"roles":{"description":"The roles the user has in the organization, e.g. can_view, can_edit","items":{"description":"The roles the user has in the organization, e.g. can_view, can_edit","type":"string"},"type":"array"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"AccountRolesOrganizationReply"}}
+  schemaType={"response"}
 >
-  
+
 </Schema>
-            

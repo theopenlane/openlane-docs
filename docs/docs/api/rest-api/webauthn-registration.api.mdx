@@ -19,7 +19,6 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
-import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -33,7 +32,7 @@ import Translate from "@docusaurus/Translate";
   path={"/registration/options"}
   context={"endpoint"}
 >
-  
+
 </MethodEndpoint>
 
 
@@ -44,25 +43,28 @@ Begin WebAuthn registration process and return credential creation options
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
+  children={"Request"}
 >
-  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
   parameters={undefined}
 >
-  
+
 </ParamsDetails>
 
 <RequestSchema
-  {...require("./webauthn-registration.RequestSchema.json")}
+  title={"Body"}
+  body={{"content":{"application/json":{"examples":{"success":{"value":{"email":"sarahisthebest@sarahsthebest.com","name":"Sarah Funk"}}},"schema":{"properties":{"email":{"description":"The email address associated with the account","example":"jsnow@example.com","type":"string"},"name":{"description":"The name of the user","example":"Jon Snow","type":"string"}},"type":"object","title":"WebauthnRegistrationRequest"}}},"description":"Request body"}}
 >
-  
+
 </RequestSchema>
 
 <StatusCodes
-  {...require("./webauthn-registration.StatusCodes.json")}
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"Reply":{"success":true},"session":"registration_session_example"}}},"schema":{"properties":{"Reply":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"},"mediation":{"type":"string"},"publicKey":{"properties":{"attestation":{"type":"string"},"attestationFormats":{"items":{"type":"string"},"type":"array"},"authenticatorSelection":{"properties":{"authenticatorAttachment":{"type":"string"},"requireResidentKey":{"nullable":true,"type":"boolean"},"residentKey":{"type":"string"},"userVerification":{"type":"string"}},"type":"object"},"challenge":{"format":"byte","type":"string"},"excludeCredentials":{"items":{"properties":{"id":{"format":"byte","type":"string"},"transports":{"items":{"type":"string"},"type":"array"},"type":{"type":"string"}},"type":"object"},"type":"array"},"extensions":{"additionalProperties":{},"type":"object"},"hints":{"items":{"type":"string"},"type":"array"},"pubKeyCredParams":{"items":{"properties":{"alg":{"type":"integer"},"type":{"type":"string"}},"type":"object"},"type":"array"},"rp":{"properties":{"id":{"type":"string"},"name":{"type":"string"}},"type":"object"},"timeout":{"type":"integer"},"user":{"properties":{"displayName":{"type":"string"},"id":{},"name":{"type":"string"}},"type":"object"}},"type":"object"},"session":{"type":"string"}},"type":"object","title":"WebauthnBeginRegistrationResponse"}}},"description":"Success"},"default":{"description":""}}}
 >
-  
+
 </StatusCodes>
 
