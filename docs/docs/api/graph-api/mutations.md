@@ -3766,6 +3766,15 @@ input<br />
 <p>values of the entity</p>
 </td>
 </tr>
+<tr>
+<td>
+entityTypeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>entity type name allows the name of the entity type to be passed in over an id</p>
+</td>
+</tr>
 </tbody>
 </table>
 
