@@ -1,0 +1,147 @@
+---
+title: Developer Gotchas
+description: Common pitfalls and non-obvious behaviors that trip up developers working in the core codebase
+sidebar_position: 5
+---
+
+# Developer Gotchas
+
+This page documents the things that will make you stare at your screen for twenty minutes before you realize what went wrong. Read it before your first PR.
+
+## IDE Build Tags
+
+The core codebase uses build tags extensively for conditional compilation. Without them, your IDE will report phantom errors on perfectly valid code.
+
+Add the following to your IDE's Go build tags setting:
+
+```
+cli,test,codegen
+```
+
+**In VSCode**, add this to `.vscode/settings.json`:
+
+```json
+{
+  "go.buildTags": "cli,test,codegen"
+}
+```
+
+**In GoLand**, navigate to _Settings > Go > Build Tags_ and add them as a comma-separated list.
+
+Without these tags, functions gated behind `//go:build cli` or `//go:build test` will appear undefined, and your language server will flag imports as unused.
+
+## Soft Deletes Are the Default
+
+Nearly every entity in the system uses `SoftDeleteMixin`. When you call `.Delete()` on an entity, it sets a `deleted_at` timestamp rather than removing the row. This has a few implications:
+
+* Standard queries automatically filter out soft-deleted records via generated `WHERE` clauses
+* History tables record the soft delete as a separate event
+* If you need to query deleted records (for audit or recovery), you must use the history schema
+* The event emission system has skip logic to prevent duplicate events when soft deletes trigger secondary mutations
+
+:::warning
+If you write raw SQL or bypass the Ent client, you will see soft-deleted records. Always use the generated client for queries unless you have a specific reason not to.
+:::
+
+## Privacy Rules Enforce Authorization at the ORM Layer
+
+Authorization does not happen in your resolver or handler as a rule of thumb. This means:
+
+* A syntactically correct resolver can return "not found" or "permission denied" even though the entity exists, because the privacy policy blocked the query before it returned results
+* You cannot bypass authorization by calling the Ent client directly from a different handler -- the rules follow the client, not the endpoint
+* The default post-policy is **allow all queries, deny all mutations**. If you create a new entity and forget to add privacy rules, reads will work but writes will silently fail
+
+See [Privacy and Authorization](../security/privacy-and-authorization.mdx) for the full breakdown.
+
+## Context Propagation Is Critical
+
+The system relies heavily on `context.Context` to carry authentication state, request metadata, and database transactions. If you lose context or create a new `context.Background()` mid-request, things will break:
+
+| Context Value | What Happens Without It |
+|---|---|
+| Authenticated user | Privacy rules deny access, FGA checks fail |
+| Organization ID | Multi-tenant queries return nothing |
+| Transaction | Database writes happen outside the request transaction |
+| Request ID | Log correlation breaks |
+| Permission cache | Every FGA check hits the network |
+
+:::tip
+When writing hooks or interceptors, always pass through the `ctx` from the mutation or query. Never create a fresh context unless you are explicitly starting a background operation that should outlive the request.
+:::
+
+## Code Generation Must Run Before Compilation
+
+After modifying an Ent schema, you must regenerate before anything will compile:
+
+```bash
+task generate
+```
+
+This runs the full pipeline: Ent client generation, GraphQL schema generation, resolver scaffolding, and history table generation.
+
+The system uses *smart generation* with checksums to skip unchanged files. If you suspect stale output, force a full regeneration:
+
+```bash
+task regenerate
+```
+
+**Common symptom:** you change a schema field, run `go build`, and get type errors referencing a field that should exist. The generated code has not caught up.
+
+### Ordering
+
+There are some relatively nuanced aspects to adding a new ent schema; for example if you look at one of the existing in-place schemas, you may notice that in several locations we reference the generated types _inside_ the schema:
+
+```go
+func (a ActionPlan) Mixin() []ent.Mixin {
+	return mixinConfig{
+		includeRevision: true,
+		additionalMixins: []ent.Mixin{
+			NewDocumentMixin(a),
+			newObjectOwnedMixin[generated.ActionPlan](a, <---- here
+				withOrganizationOwner(true),
+				withWorkflowOwnedEdges(),
+			),
+			newGroupPermissionsMixin(),
+			mixin.NewSystemOwnedMixin(mixin.SkipTupleCreation()),
+			newCustomEnumMixin(a, withWorkflowEnumEdges()),
+			WorkflowApprovalMixin{},
+		}}.getMixins(a)
+}
+```
+
+This is a little bit of a cart-and-horse situation when creating a new schema. Best advice:
+
+- Start your schema with the basic definitions and fields, but don't add Annotations or Policies, and in the mixin config use the local type on first generation (e.g. use `ActionPlan` instead of `generated.ActionPlan` in the above example) and also keep mixins and general config as light as possible
+- Once you've defined the basics, stage (or commit) your schema in your local branch - this step alone could save you a lot of headache
+- run `task regenerate` for a fully clean run; resolve any problems that may arise during this process by first discarding any generated files or changes in your branch (since you've already committed or staged the schema), making the update to your schema, re-staging / committing those changes, and re-run. Do this repeatedly / rinse and repeat until you've gotten a clean run
+- A clean run with your base schema gets you the generated types; you can then go back to your schema and update the local types to the generated ones, and then add schema Annotations, policy, or other configurations
+
+## CSRF Tokens on All Mutating Requests
+
+The server enforces CSRF protection on `POST`, `PUT`, `PATCH`, and `DELETE` requests. If you are testing via `curl` or a REST client:
+
+1. Make a `GET` request to `/livez` (or any endpoint) to receive the CSRF cookie
+1. Extract the token value from the cookie
+1. Include it as the `X-Csrf-Token` header on subsequent mutating requests
+
+```bash
+# Get the CSRF cookie
+curl -c cookies.txt https://localhost:17608/livez
+
+# Use it on a POST
+curl -b cookies.txt -H "X-Csrf-Token: <token-value>" \
+  -X POST https://localhost:17608/v1/login \
+  -d '{"username":"admin@example.com","password":"password"}'
+```
+
+:::info
+GraphQL queries sent via `POST` are also subject to CSRF validation. The GraphQL playground handles this automatically, but custom clients need to manage it.
+:::
+
+## Transaction Middleware Wraps Every Request
+
+Every HTTP request (REST and GraphQL) is wrapped in a database transaction by the transaction middleware. This means:
+
+* If your handler returns an error, the entire transaction rolls back -- including any entities you created earlier in the request
+* Hooks that emit events fire *within* the transaction boundary, but event delivery is asynchronous and happens after commit
+* If you need to do work outside the transaction (calling an external API, for example), extract what you need before the transaction commits and handle it in a post-commit hook or event listener
