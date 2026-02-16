@@ -1,6 +1,6 @@
 {
   "label": "Exposure",
-  "position": 7,
+  "position": 5,
   "link": {
     "type": "generated-index",
     "description": "Exposure management for risks, scans, vulnerabilities, findings, and remediations.",

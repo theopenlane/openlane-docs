@@ -1,6 +1,6 @@
 {
   "label": "Automation",
-  "position": 8,
+  "position": 2,
   "link": {
     "type": "generated-index",
     "description": "Automation workflows, approvals, campaigns, tasks, and assessments for repeatable compliance execution.",
