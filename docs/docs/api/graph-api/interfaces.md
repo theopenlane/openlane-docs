@@ -34,6 +34,8 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [DirectorySyncRun](objects#directorysyncrun)
 - [Discussion](objects#discussion)
 - [DocumentData](objects#documentdata)
+- [EmailBranding](objects#emailbranding)
+- [EmailTemplate](objects#emailtemplate)
 - [Entity](objects#entity)
 - [EntityType](objects#entitytype)
 - [Event](objects#event)
@@ -61,6 +63,8 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [Narrative](objects#narrative)
 - [Note](objects#note)
 - [Notification](objects#notification)
+- [NotificationPreference](objects#notificationpreference)
+- [NotificationTemplate](objects#notificationtemplate)
 - [Onboarding](objects#onboarding)
 - [OrgMembership](objects#orgmembership)
 - [OrgSubscription](objects#orgsubscription)
@@ -103,6 +107,7 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [WorkflowEvent](objects#workflowevent)
 - [WorkflowInstance](objects#workflowinstance)
 - [WorkflowObjectRef](objects#workflowobjectref)
+- [WorkflowProposal](objects#workflowproposal)
 
 <p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
 

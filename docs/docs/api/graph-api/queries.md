@@ -2570,6 +2570,306 @@ where<br />
 </tbody>
 </table>
 
+## emailBranding
+
+**Type:** [EmailBranding!](objects#emailbranding)
+
+Look up emailBranding by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the emailBranding</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## emailBrandings
+
+**Type:** [EmailBrandingConnection!](objects#emailbrandingconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#emailbrandingorder"><code>[EmailBrandingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for EmailBrandings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#emailbrandingwhereinput"><code>EmailBrandingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for EmailBrandings returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## emailBrandingSearch
+
+**Type:** [EmailBrandingConnection](objects#emailbrandingconnection)
+
+Search across EmailBranding objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## emailTemplate
+
+**Type:** [EmailTemplate!](objects#emailtemplate)
+
+Look up emailTemplate by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the emailTemplate</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## emailTemplates
+
+**Type:** [EmailTemplateConnection!](objects#emailtemplateconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#emailtemplateorder"><code>[EmailTemplateOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for EmailTemplates returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#emailtemplatewhereinput"><code>EmailTemplateWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for EmailTemplates returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## emailTemplateSearch
+
+**Type:** [EmailTemplateConnection](objects#emailtemplateconnection)
+
+Search across EmailTemplate objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## entities
 
 **Type:** [EntityConnection!](objects#entityconnection)
@@ -4139,6 +4439,65 @@ where<br />
 </tbody>
 </table>
 
+## integrationSearch
+
+**Type:** [IntegrationConnection](objects#integrationconnection)
+
+Search across Integration objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## internalPolicies
 
 **Type:** [InternalPolicyConnection!](objects#internalpolicyconnection)
@@ -5544,6 +5903,247 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Notes returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## notificationPreference
+
+**Type:** [NotificationPreference!](objects#notificationpreference)
+
+Look up notificationPreference by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the notificationPreference</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## notificationPreferences
+
+**Type:** [NotificationPreferenceConnection!](objects#notificationpreferenceconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#notificationpreferenceorder"><code>[NotificationPreferenceOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for NotificationPreferences returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notificationpreferencewhereinput"><code>NotificationPreferenceWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for NotificationPreferences returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## notificationTemplate
+
+**Type:** [NotificationTemplate!](objects#notificationtemplate)
+
+Look up notificationTemplate by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the notificationTemplate</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## notificationTemplates
+
+**Type:** [NotificationTemplateConnection!](objects#notificationtemplateconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#notificationtemplateorder"><code>[NotificationTemplateOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for NotificationTemplates returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#notificationtemplatewhereinput"><code>NotificationTemplateWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for NotificationTemplates returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## notificationTemplateSearch
+
+**Type:** [NotificationTemplateConnection](objects#notificationtemplateconnection)
+
+Search across NotificationTemplate objects
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+query<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Query string to search across objects</p>
+</td>
+</tr>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
 </td>
 </tr>
 </tbody>
@@ -9711,6 +10311,29 @@ last<br />
 </tbody>
 </table>
 
+## vulnerabilitySummary
+
+**Type:** [VulnerabilitySummary!](objects#vulnerabilitysummary)
+
+Aggregate vulnerability counts for dashboards.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vulnerabilitywhereinput"><code>VulnerabilityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for vulnerabilities included in the summary.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## webauthns
 
 **Type:** [WebauthnConnection!](objects#webauthnconnection)
@@ -10412,6 +11035,70 @@ where<br />
 </td>
 <td>
 <p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowProposal
+
+**Type:** [WorkflowProposal!](objects#workflowproposal)
+
+Look up workflow proposal by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the workflow proposal</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## workflowProposalsForObject
+
+**Type:** [[WorkflowProposal!]!](objects#workflowproposal)
+
+List workflow proposals for a specific object
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+objectType<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Workflow object type (e.g. Control, InternalPolicy)</p>
+</td>
+</tr>
+<tr>
+<td>
+objectID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+includeStates<br />
+<a href="enums#workflowproposalstate"><code>[WorkflowProposalState!]</code></a>
+</td>
+<td>
+<p>Optional states to filter proposals by</p>
 </td>
 </tr>
 </tbody>

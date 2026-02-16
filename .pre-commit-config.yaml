@@ -5,14 +5,13 @@ repos:
     rev: v6.0.0
     hooks:
       - id: trailing-whitespace
-        exclude: jsonschema/api-docs.md
       - id: detect-private-key
   - repo: https://github.com/google/yamlfmt
     rev: v0.21.0
     hooks:
       - id: yamlfmt
   - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.42.0
+    rev: v1.43.4
     hooks:
       - id: typos
   - repo: https://github.com/codespell-project/codespell # another spell checker because typos is not perfect and neither is codespell
@@ -20,6 +19,6 @@ repos:
     hooks:
       - id: codespell
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.20.0
+    rev: v0.21.0
     hooks:
       - id: markdownlint-cli2

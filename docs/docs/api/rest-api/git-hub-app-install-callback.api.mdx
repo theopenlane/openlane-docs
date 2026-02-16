@@ -1,0 +1,70 @@
+---
+id: git-hub-app-install-callback
+title: ""
+description: "Handle GitHub App installation callback"
+sidebar_label: GitHubAppInstallCallback
+hide_title: true
+hide_table_of_contents: true
+api: eJylV9ty2zYQ/RUMX/oiU7ZzacZPdVw3kdNpMrYz6Uzi8UDUSoJNASwAWlE0+veeBUCJulh13BeJxN4Xu2eX82xArrCq8sro7CR7L/WgJPFO+fd1X5xWlVDaeVmWkhlEgae+LO6zTmYqsuGwN4BcFAB/L7KfrRgraeWEPFmXnXydb9h7zFDvd0jSdzmpSgLb0fGLl69e//oGh4rF/qnJzvCioRmvbdFbNQDBFWOayOxknvlZxSzOW6VH2WLRecQFR76uhCzCadt2Uv6I6SB2uxT7CbtXXnoSy+yI2tFAeCMeZKkGTPJjejT7K/dodvFQTAYXl2e917270+9X53meP+Ysm9zr5U0ns+Qqox05ph8fHvJfYbQn7flRVlWpiuBQ985xJPPGmyDh6qIgFx4RSU38MMGBHNHmfXsa2RSZ0ZoKT+HqGgXe1rRA4lruVpbLzqtoiqw1lh/WE3uNvAWSSHaFGoZkWkI+nBdT6UStk51hzVe7kYdO1H1bmAHtM8D052hfJmSrKKKYgO61EHYpaWV6XcmXMcEhy0q08VvOrVxLHCvlfWNKkpq11/qBrBoq3MmqTpb0xVLE9O9wc6xC+ZL2QMFlqqss3OnOsNnuy1hx6/S3ciAuYwiR52ib57OWtR8bq37AZTC92qWoh6KzWpbiiiziE+ehhII/Q1mXflsixOqoqK3yMyAYOsTLEWNZ1qpgl93wrcI+o+GIfAA+P8ZL9+Go2+bsjpQf1/0uGqnb6mgXHNqFkR8r0qXUJE4/9ZLf4K9tCdrY+8qddKFM5bhnk1hzZTLu5cbvK+6g2DRvSVqypzX7tpXmQAMI3ZMWnE30fOp1wBPKLrgQyC7/prkPIq8aMCeKxYVqM3YktfoRBTFRBGLX3gn07kQ5x1lgpJtIjdL+poF81iU+U1dOTJEhpaFK+jVdv6B4C8QI2w2KhaoMbq+qmJPCd4qkfKDZdpgcBAgbEXaC6/c4n9TolD4JGbE4BI3zBlTHJAfBXELVvw/AcPAhMCQPkmX40JdOFTuK1XEZTihE/Uk6NzV2IMCMGbDu1lqgQdlWnCl+GIlPfxg7kSjl7OLLdbbZaumOd8Ue73JX9IHylJQb1nu8He9HLjhxnB+Kpkkb4AeADkszFUNgUSjXWOcyAkInY2Io3DXBswTMa4ef/6MlutG77hInMp52Qwy88VNFE3tIBcjBMYt6gPAl/lZuT9F2nJgv/N8cM2pyJp9qLaa9DbYxvXyi9NA0oxnrR5iHE6lYsaurylj/2wYgLAu2AZQtFNlEkM3aaQTRh3xHDFkKgQnUggCnGum4wmBMPwASUEJO8WIQqpykmzER3R5mvx3KgsK1hzdeoQAw3PqhGJeoV2H7AdckF9djFQ3jr20OxRqWp/5M9A3EVQPywez39FKUihiEINAY3GcNycGeQzywkNqUudNKogO4jrdyN51OcxnIOSCrm2Rd98/e2flfV+cHLLNYTcmlQX7gmF7kR/mRuKqoAI4Waah0Mp4JMfkPR/lh1FEZ54GdLb/2rN9rN9ja5H5i1U/F55HKLvKj4n7A0c/TkPsK7wI8tgZiJ4uDLmMgrvC71IjBNEYILDafM+ahHxYLPo77ahiBysl+ycvHUJaO9sSx9xNip+uM5bs+GtK+ipHfeYYDGx8QeyxvfDM80+z/+n7Y5136SFi5dcMvVrFfvACBM41AvqgodAqAq3xLauszYdFekN6dXwPE/gW2HQy0
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-1-1-specifications
+custom_edit_url: null
+show_extensions: true
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"GitHubAppInstallCallback"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/integrations/github/app/callback"}
+  context={"endpoint"}
+>
+
+</MethodEndpoint>
+
+
+
+Handle GitHub App installation callback
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"GitHub App installation ID","example":"12345678","in":"query","name":"installation_id","schema":{"type":"string"}},{"description":"GitHub setup action","example":"install","in":"query","name":"setup_action","schema":{"type":"string"}},{"description":"State parameter used to validate the installation callback","example":"eyJvcmdJRCI6IjAxSE...","in":"query","name":"state","schema":{"type":"string"}}]}
+>
+
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"message":"GitHub App integration connected","success":true}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"description":"Success or error message","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"GitHubAppInstallCallbackResponse"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+>
+
+</StatusCodes>
+

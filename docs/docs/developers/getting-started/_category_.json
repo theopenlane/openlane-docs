@@ -5,5 +5,5 @@
     "type": "generated-index",
     "description": "Set up your local environment, run the stack, and authenticate the CLI."
   },
-  "collapsed": false
+  "collapsed": true
 }

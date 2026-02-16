@@ -5,5 +5,5 @@
     "type": "generated-index",
     "description": "Provider integrations, OAuth flows, ingestion pipelines, and external service connectivity."
   },
-  "collapsed": false
+  "collapsed": true
 }
