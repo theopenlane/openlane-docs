@@ -1,0 +1,271 @@
+---
+title: CMMC Overview
+description: Cybersecurity Maturity Model Certification - DoD Framework for Protecting Federal Contract Information and Controlled Unclassified Information
+sidebar_position: 1
+keywords:
+  - CMMC compliance
+  - Cybersecurity Maturity Model Certification
+  - CMMC levels
+  - defense contractor cybersecurity
+  - NIST SP 800-171
+  - controlled unclassified information
+  - federal contract information
+  - CMMC assessment
+tags:
+  - CMMC
+  - cybersecurity
+  - compliance
+  - DoD
+  - defense
+---
+
+# CMMC (Cybersecurity Maturity Model Certification)
+
+The Cybersecurity Maturity Model Certification (CMMC) is a mandatory Department of Defense (DoD) framework designed to ensure defense contractors and subcontractors adequately protect sensitive unclassified information. It moves beyond self-attestation to require verified, tiered assessments of cybersecurity practices, with third-party and government-led certification for higher levels, based on NIST SP 800-171 and NIST SP 800-172.
+
+## Framework Information
+
+| **Aspect** | **Details** |
+|------------|-------------|
+| **Full Name** | Cybersecurity Maturity Model Certification (CMMC) Program (32 CFR Part 170) |
+| **Governing Body** | Office of the Department of Defense Chief Information Officer (DoD CIO) |
+| **Current Version** | CMMC 2.0 Final Rule (effective December 16, 2024) |
+| **Framework Type** | Mandatory federal regulation with contractual enforcement |
+| **Primary Focus** | Protection of Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) |
+| **Geographic Scope** | United States (applies to all DoD contractors and subcontractors) |
+| **Target Users** | Defense contractors and subcontractors processing, storing, or transmitting FCI or CUI |
+| **Certification Validity** | Level 1: 1 year (annual self-assessment); Levels 2 and 3: 3 years with annual affirmation |
+| **Official Website** | [DoD CMMC Program](https://dodcio.defense.gov/CMMC/) |
+
+## Compliance Snapshot
+
+| **Metric** | **Value** |
+|------------|-----------|
+| **CMMC Levels** | 3 (Level 1, Level 2, Level 3) |
+| **Level 1 Security Requirements** | 15 (from FAR clause 52.204-21) |
+| **Level 2 Security Requirements** | 110 (from NIST SP 800-171 R2) |
+| **Level 3 Security Requirements** | 24 selected (from NIST SP 800-172) + Level 2 prerequisite |
+| **Security Domains** | 14 (aligned to NIST SP 800-171 R2 families) |
+| **Assessment Types** | 3 (Self-Assessment, C3PAO Certification, DIBCAC Certification) |
+| **Minimum Passing Score (Levels 2/3)** | 80% of maximum score |
+| **POA&M Closeout Window** | 180 days from Conditional CMMC Status Date |
+| **Estimated Entities Requiring Level 2 (C3PAO)** | ~8,350 medium and large entities |
+| **Phased Implementation** | 4 phases over approximately 3 years |
+
+## What is CMMC?
+
+CMMC is a verification program codified in 32 CFR Part 170 that assesses whether defense contractors have implemented required cybersecurity controls to protect Federal Contract Information (FCI) and Controlled Unclassified Information (CUI). Prior to CMMC, the DoD relied on contractor self-attestation of compliance with NIST SP 800-171 requirements. CMMC introduces independent, third-party and government-led assessments to verify that security requirements are actually implemented, not just claimed.
+
+### Key Characteristics
+
+- **Tiered Model**: Three progressively advanced levels of cybersecurity requirements based on information sensitivity
+- **Verified Assessments**: Moves beyond self-attestation to require independent verification at higher levels
+- **NIST-Based Requirements**: Directly maps to existing NIST SP 800-171 R2 and NIST SP 800-172 security controls
+- **Supply Chain Coverage**: Requirements flow down to subcontractors at all tiers handling FCI or CUI
+- **Contractual Enforcement**: CMMC level and assessment type are specified in DoD solicitations as a condition of contract award
+- **Phased Rollout**: Four-phase implementation plan to allow industry ramp-up and ecosystem development
+
+## CMMC Levels and Assessment Requirements
+
+### Level 1 (Self) -- Foundational
+
+Protects Federal Contract Information (FCI) through basic cyber hygiene practices.
+
+**Requirements:**
+- 15 security requirements from FAR clause 52.204-21
+- Self-assessment conducted by the Organization Seeking Assessment (OSA) annually
+- Results entered into the Supplier Performance Risk System (SPRS)
+- All 15 requirements must be fully met; no Plan of Action and Milestones (POA&M) permitted
+- Annual affirmation of compliance required
+
+### Level 2 (Self or C3PAO) -- Advanced
+
+Protects Controlled Unclassified Information (CUI) through implementation of NIST SP 800-171 R2.
+
+**Requirements:**
+- 110 security requirements from NIST SP 800-171 R2
+- Assessment conducted either by the OSA (Self) or by an accredited C3PAO every 3 years
+- Maximum score of 110; minimum passing score of 88 (80%)
+- POA&M permitted for select NOT MET requirements (with restrictions on critical requirements)
+- Conditional status may be achieved at 80% score; full compliance required within 180 days
+- Annual affirmation of compliance required following Final CMMC Status Date
+
+**Level 2 (C3PAO) differs from Level 2 (Self)** in the method of verification. C3PAO assessments are conducted by accredited CMMC Third-Party Assessment Organizations, with results entered into the CMMC instantiation of eMASS. Level 2 (C3PAO) is required for contracts involving CUI with higher risk profiles.
+
+### Level 3 (DIBCAC) -- Expert
+
+Protects CUI against advanced persistent threats (APTs) through enhanced security requirements.
+
+**Requirements:**
+- 24 selected security requirements from NIST SP 800-172
+- Prerequisite: Final Level 2 (C3PAO) status for the same assessment scope
+- Assessment conducted by DCMA Defense Industrial Base Cybersecurity Assessment Center (DIBCAC) every 3 years
+- Minimum passing score of 80% (score of 20 out of 24)
+- POA&M permitted for select NOT MET requirements (with restrictions on critical requirements)
+- Annual affirmation of both Level 2 (C3PAO) and Level 3 (DIBCAC) compliance required
+
+## Security Domains
+
+CMMC security requirements are organized into 14 domains, aligned to the families defined in NIST SP 800-171 R2:
+
+| **Domain** | **Abbreviation** | **Level 1 Requirements** | **Level 2 Requirements** |
+|------------|------------------|--------------------------|--------------------------|
+| Access Control | AC | 4 | 22 |
+| Awareness and Training | AT | -- | 3 |
+| Audit and Accountability | AU | -- | 9 |
+| Configuration Management | CM | -- | 9 |
+| Identification and Authentication | IA | 2 | 11 |
+| Incident Response | IR | -- | 3 |
+| Maintenance | MA | -- | 6 |
+| Media Protection | MP | 1 | 9 |
+| Personnel Security | PS | -- | 2 |
+| Physical Protection | PE | 4 | 6 |
+| Risk Assessment | RA | -- | 3 |
+| Security Assessment | CA | -- | 4 |
+| System and Communications Protection | SC | 2 | 16 |
+| System and Information Integrity | SI | 2 | 7 |
+| **Total** | | **15** | **110** |
+
+## Scoping and Asset Categories
+
+### Level 1 Scoping
+All assets that process, store, or transmit FCI are in scope. All other assets are out of scope.
+
+### Level 2 Scoping
+Assets are categorized into groups that determine how they are assessed:
+
+- **CUI Assets**: Assets that process, store, or transmit CUI -- fully assessed against all 110 requirements
+- **Security Protection Assets**: Assets that provide security protections for CUI Assets -- fully assessed
+- **Contractor Risk Managed Assets**: Assets that can, but are not intended to, process CUI due to security policies -- documented and subject to limited checks
+- **Specialized Assets**: IoT, IIoT, Operational Technology (OT), Government Furnished Equipment (GFE), Restricted Information Systems, and Test Equipment -- documented but not assessed against CMMC requirements
+- **Out-of-Scope Assets**: Assets that do not process, store, or transmit FCI or CUI -- not considered
+
+### Level 3 Scoping
+All assets that can or do process, store, or transmit CUI (including Contractor Risk Managed Assets from Level 2) are treated as CUI Assets and fully assessed. Specialized Assets are also included but may use intermediary devices to meet requirements.
+
+### External Service Providers (ESPs)
+- ESPs that do not process, store, or transmit CUI do not require their own CMMC assessment; their services are assessed as Security Protection Assets within the OSA's scope
+- Cloud Service Providers (CSPs) that handle CUI must meet FedRAMP Moderate baseline or equivalent requirements per DFARS clause 252.204-7012
+
+## CMMC Ecosystem
+
+The CMMC assessment and certification infrastructure consists of several key entities:
+
+### CMMC Program Management Office (PMO)
+Operates within the DoD CIO. Manages program policy, oversight, and coordination.
+
+### DCMA DIBCAC
+The Defense Contract Management Agency's Defense Industrial Base Cybersecurity Assessment Center conducts Level 2 certification assessments of the Accreditation Body and C3PAOs, performs all Level 3 certification assessments, records results, issues certificates, and tracks appeals.
+
+### Accreditation Body
+A single US-based organization contracted by DoD to authorize and accredit C3PAOs. Must comply with ISO/IEC 17011:2017(E) and maintain ILAC MRA signatory status. Oversees the CAICO and develops Conflict of Interest, Code of Professional Conduct, and Ethics policies for the ecosystem.
+
+### C3PAOs (CMMC Third-Party Assessment Organizations)
+Organizations accredited to perform Level 2 certification assessments. Must comply with ISO/IEC 17020:2012(E), undergo DIBCAC assessment of their own information systems, and meet CMMC Level 2 requirements. Multiple C3PAOs operate within the ecosystem.
+
+### CAICO (CMMC Assessor and Instructor Certification Organization)
+A single organization that trains, tests, and certifies CMMC Certified Professionals (CCPs), CMMC Certified Assessors (CCAs), and CMMC Certified Instructors (CCIs). Must comply with ISO/IEC 17024:2012(E).
+
+### Assessor Roles
+- **CCA (CMMC Certified Assessor)**: Conducts Level 2 certification assessments; requires CCP certification, Tier 3 background investigation, and relevant cybersecurity experience
+- **CCP (CMMC Certified Professional)**: Provides consulting and advisory services; participates in assessments under CCA oversight
+- **CCI (CMMC Certified Instructor)**: Teaches CMMC assessor candidates
+
+## Target Users and Applications
+
+### Organizations Required to Comply
+- **Defense Prime Contractors**: Large defense firms with direct DoD contracts involving FCI or CUI
+- **Defense Subcontractors**: All tiers of subcontractors that process, store, or transmit FCI or CUI
+- **Small and Medium Businesses (SMBs)**: Smaller DIB companies, including SBIR/STTR participants, that handle DoD FCI or CUI
+- **Managed Service Providers**: IT service providers supporting defense contractors with CUI-handling systems
+- **Cloud Service Providers**: Organizations hosting or processing DoD CUI on behalf of contractors
+- **Research Institutions**: Universities and research organizations performing defense-related work involving CUI
+
+## Phased Implementation Plan
+
+CMMC requirements are being introduced through a four-phase rollout tied to DoD solicitations and contracts:
+
+| **Phase** | **Start** | **Key Requirements** |
+|-----------|-----------|---------------------|
+| **Phase 1** | Effective date of both 32 CFR 170 and 48 CFR 204 rules (whichever is later) | Level 1 (Self) and Level 2 (Self) in applicable solicitations |
+| **Phase 2** | 1 year after Phase 1 start | Level 2 (C3PAO) certification assessment requirements added |
+| **Phase 3** | 1 year after Phase 2 start | Level 3 (DIBCAC) certification assessment requirements added |
+| **Phase 4 (Full)** | 1 year after Phase 3 start | CMMC requirements in all applicable DoD contracts and option periods |
+
+Full implementation across the entire defense industrial base is estimated to take approximately seven years, given the volume of DoD solicitations and contract awards annually.
+
+## Scoring Methodology
+
+### Level 1
+No scoring calculation. All 15 requirements must be MET. No POA&M is permitted.
+
+### Level 2
+- **Maximum score**: 110 (one point per security requirement, with select requirements worth more)
+- **Minimum passing score**: 88 (80% of 110)
+- Each requirement is assessed as MET, NOT MET, or NOT APPLICABLE (N/A)
+- NOT MET requirements reduce the score by the value assigned to that requirement (most are 1 point; some critical requirements are valued at 3 or 5 points)
+- Select critical requirements cannot be placed on a POA&M and must be MET at the time of assessment
+
+### Level 3
+- **Maximum score**: 24 (one point per requirement)
+- **Minimum passing score**: 20 (80% of 24)
+- Each requirement is valued at 1 point
+- Select critical requirements (Security Operations Center, Cyber Incident Response Team, Threat-Informed Risk Assessment, Supply Chain Risk requirements, Specialized Asset Security) cannot be placed on a POA&M
+
+## Enforcement and Consequences
+
+### Contractual Enforcement
+CMMC does not impose standalone penalties or fines. Enforcement is contractual:
+
+- **Contract Ineligibility**: Organizations without the required CMMC status cannot be awarded applicable DoD contracts
+- **Option Period Denial**: Contracting officers will not exercise options or extend performance periods without current CMMC status
+- **Standard Contractual Remedies**: Failure to maintain CMMC status during contract performance triggers standard contractual remedies
+- **Conditional Status Expiration**: If POA&M items are not resolved within 180 days, conditional status expires and contractual remedies apply
+
+### False Claims Act Exposure
+Organizations that falsely affirm compliance with CMMC requirements in SPRS may be subject to False Claims Act liability, which carries significant civil penalties and treble damages.
+
+### Supply Chain Impact
+Non-compliant subcontractors can jeopardize the prime contractor's ability to perform, creating cascading contractual consequences throughout the supply chain.
+
+## Flow-Down Requirements
+
+Prime contractors are responsible for ensuring subcontractor compliance at all tiers:
+
+| **Prime Contractor Requirement** | **Subcontractor Handles FCI** | **Subcontractor Handles CUI** |
+|----------------------------------|-------------------------------|-------------------------------|
+| Level 1 (Self) | Level 1 (Self) | N/A |
+| Level 2 (Self) | Level 1 (Self) | Level 2 (Self) |
+| Level 2 (C3PAO) | Level 1 (Self) | Level 2 (C3PAO) |
+| Level 3 (DIBCAC) | Level 1 (Self) | Level 2 (C3PAO) |
+
+## Related Regulations and Standards
+
+### Foundational Standards
+- **NIST SP 800-171 R2**: Source of the 110 Level 2 security requirements
+- **NIST SP 800-172**: Source of the 24 Level 3 enhanced security requirements
+- **FAR clause 52.204-21**: Source of the 15 Level 1 basic safeguarding requirements
+- **DFARS clause 252.204-7012**: Safeguarding Covered Defense Information and Cyber Incident Reporting
+
+### Complementary Frameworks
+- **NIST Cybersecurity Framework (CSF)**: Risk-based cybersecurity guidance applicable across sectors
+- **NIST SP 800-53 R5**: Comprehensive catalog of security and privacy controls for information systems
+- **FedRAMP**: Federal Risk and Authorization Management Program for cloud service providers
+- **ISO/IEC 27001**: International information security management standard
+
+### Related DoD Programs
+- **DFARS clause 252.204-7020**: NIST SP 800-171 DoD Assessment Requirements
+- **DFARS clause 252.204-7021**: CMMC Requirements (acquisition rule, to be updated)
+- **DoDI 5200.48**: Controlled Unclassified Information policy
+- **2024 DIB Cybersecurity Strategy**: Department's broader strategy for defense industrial base cybersecurity
+
+## Additional Resources
+
+- [DoD CMMC Program](https://dodcio.defense.gov/CMMC/)
+- [CMMC Documentation and Guidance](https://dodcio.defense.gov/CMMC/Documentation/)
+- [NIST SP 800-171 R2](https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final)
+- [NIST SP 800-172](https://csrc.nist.gov/publications/detail/sp/800-172/final)
+- [DCMA DIBCAC](https://www.dcma.mil/DIBCAC/)
+- [CMMC Accreditation Body (Cyber AB)](https://cyberab.org/)
+- [Supplier Performance Risk System (SPRS)](https://www.sprs.csd.disa.mil/)
+- [Federal Register Final Rule (32 CFR Part 170)](https://www.federalregister.gov/documents/2024/10/15/2024-22905/cybersecurity-maturity-model-certification-cmmc-program)
