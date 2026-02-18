@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/v1/sso/token/authorize"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -43,28 +44,25 @@ Authorize SSO token request
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
-  parameters={[{"description":"organization id","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","in":"query","name":"organization_id","schema":{"type":"string"}},{"description":"token id to authorize","example":"01JJFVMGENQS9ZG3GVA50QVX5E","in":"query","name":"token_id","schema":{"type":"string"}},{"description":"token type: api or personal","example":"api","in":"query","name":"token_type","schema":{"type":"string"}}]}
+  {...require("./sso-token-authorize.ParamsDetails.json")}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={undefined}
+  {...require("./sso-token-authorize.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"message":"Token authorized successfully","organization_id":"01K9MJ3PD7XKJSCT9ZWYGW9CVE","success":true,"token_id":"01K9MJ23ND309PAN0ZA9XQ3MFH"}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"organization_id":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_id":{"type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"SSOTokenAuthorizeReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+  {...require("./sso-token-authorize.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 

@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/v1/invite"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -42,21 +43,18 @@ Accept an organization invitation
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={undefined}
+  {...require("./organization-invite-accept.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"access_token":"access_token","email":"jsnow@example.com","joined_org_id":"01K9MJ23ND309PAN0ZWTN4C0PJ","message":"Invitation accepted successfully","refresh_token":"refresh_token","role":"admin","session":"session","success":true,"token_type":"bearer","user_id":"01K9MJ23ND309PAN0ZV1ECFYT7"}}},"schema":{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"joined_org_id":{"description":"The ID of the organization the user joined","example":"01JJFVMGENQS9ZG3GVA50QVX5E","type":"string"},"message":{"type":"string"},"needs_sso":{"type":"boolean"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"role":{"description":"The role the user has in the organization","example":"admin","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"},"unverified":{"type":"boolean"},"user_id":{"description":"The ID of the user that was created","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","type":"string"}},"type":"object","title":"InviteReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+  {...require("./organization-invite-accept.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 
