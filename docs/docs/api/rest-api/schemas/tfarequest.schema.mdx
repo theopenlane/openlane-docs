@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"recovery_code":{"description":"The recovery code to validate, only used if TOTP code is not provided","example":"8VM7AL91","type":"string"},"totp_code":{"description":"The TOTP code to validate, always takes precedence over recovery code","example":"113371","type":"string"}},"type":"object","title":"TFARequest"}}
-  schemaType={"response"}
+  {...require("./tfarequest.Schema.json")}
 >
-
+  
 </Schema>
+            
