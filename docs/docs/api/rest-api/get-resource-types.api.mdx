@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/scim/v2/ResourceTypes"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -42,21 +43,18 @@ Returns available SCIM resource types supported by this service provider
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={undefined}
+  {...require("./get-resource-types.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/scim+json":{"schema":{"properties":{"Resources":{"items":{"description":"Resource type definition as defined in RFC 7644 Section 6","properties":{"description":{"description":"The resource type's human-readable description","type":"string"},"endpoint":{"description":"The resource type's HTTP-addressable endpoint relative to the base URL","type":"string"},"id":{"description":"The resource type's unique identifier","type":"string"},"meta":{"description":"Resource metadata as defined in RFC 7643 Section 3.1","properties":{"created":{"description":"The timestamp when the resource was created","format":"date-time","type":"string"},"lastModified":{"description":"The timestamp when the resource was last modified","format":"date-time","type":"string"},"location":{"description":"The URI of the resource","format":"uri","type":"string"},"resourceType":{"description":"The name of the resource type (e.g., User, Group)","type":"string"},"version":{"description":"The version of the resource. Used for ETag-based versioning.\nWeak ETags are prefixed with W/\n","type":"string"}},"readOnly":true,"type":"object","title":"ResourceMetadata"},"name":{"description":"The resource type's name (e.g., User, Group)","type":"string"},"schema":{"description":"The resource type's primary/base schema URI","type":"string"},"schemaExtensions":{"description":"List of schema extensions for this resource type","items":{"properties":{"required":{"description":"Indicates whether the schema extension is required","type":"boolean"},"schema":{"description":"The URI of the extended schema","type":"string"}},"required":["schema","required"],"type":"object"},"type":"array"},"schemas":{"items":{"enum":["urn:ietf:params:scim:schemas:core:2.0:ResourceType"],"type":"string"},"type":"array"}},"required":["schemas","id","name","endpoint","schema"],"type":"object","title":"ResourceType"},"type":"array"},"itemsPerPage":{"description":"The number of resources returned in the current page","minimum":0,"type":"integer","title":"itemsPerPage"},"schemas":{"items":{"enum":["urn:ietf:params:scim:api:messages:2.0:ListResponse"],"type":"string"},"type":"array","title":"listResponseSchemas"},"startIndex":{"description":"The 1-based index of the first result in the current set of results","minimum":1,"type":"integer","title":"startIndex"},"totalResults":{"description":"The total number of results matching the query","minimum":0,"type":"integer","title":"totalResults"}},"type":"object"}}},"description":"Resource types retrieved successfully"},"401":{"content":{"application/scim+json":{"schema":{"description":"Error response as defined in RFC 7644 Section 3.12","properties":{"detail":{"description":"A detailed human-readable message","type":"string"},"schemas":{"items":{"enum":["urn:ietf:params:scim:api:messages:2.0:Error"],"type":"string"},"type":"array"},"scimType":{"description":"A SCIM detail error type","enum":["invalidFilter","tooMany","uniqueness","mutability","invalidSyntax","invalidPath","noTarget","invalidValue","invalidVers","sensitive"],"type":"string"},"status":{"description":"The HTTP status code expressed as a JSON string","enum":["400","401","403","404","409","500","501"],"type":"string"}},"required":["schemas","status"],"type":"object","title":"ErrorResponse"}}},"description":"Authorization failure. The authorization header is invalid or missing"},"500":{"content":{"application/scim+json":{"schema":{"description":"Error response as defined in RFC 7644 Section 3.12","properties":{"detail":{"description":"A detailed human-readable message","type":"string"},"schemas":{"items":{"enum":["urn:ietf:params:scim:api:messages:2.0:Error"],"type":"string"},"type":"array"},"scimType":{"description":"A SCIM detail error type","enum":["invalidFilter","tooMany","uniqueness","mutability","invalidSyntax","invalidPath","noTarget","invalidValue","invalidVers","sensitive"],"type":"string"},"status":{"description":"The HTTP status code expressed as a JSON string","enum":["400","401","403","404","409","500","501"],"type":"string"}},"required":["schemas","status"],"type":"object","title":"ErrorResponse"}}},"description":"Internal Server Error"}}}
+  {...require("./get-resource-types.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 

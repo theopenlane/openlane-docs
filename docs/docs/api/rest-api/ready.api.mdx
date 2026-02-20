@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/ready"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -42,21 +43,18 @@ Readiness check endpoint to verify the service is ready to accept traffic
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={undefined}
+  {...require("./ready.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"schema":{"type":"object"}}},"description":"Health check status"},"default":{"description":""}}}
+  {...require("./ready.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 
