@@ -1,9 +1,0 @@
-{
-  "label": "Google Workspace",
-  "position": 11,
-  "link": {
-    "type": "generated-index",
-    "description": "Setup and operation guide for the Google Workspace integration."
-  },
-  "collapsed": true
-}

@@ -1,9 +1,0 @@
-{
-  "label": "Microsoft Defender for Cloud",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Setup and operation guide for the Microsoft Defender for Cloud integration."
-  },
-  "collapsed": true
-}

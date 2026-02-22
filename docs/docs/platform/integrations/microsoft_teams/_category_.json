@@ -1,9 +1,0 @@
-{
-  "label": "Microsoft Teams",
-  "position": 12,
-  "link": {
-    "type": "generated-index",
-    "description": "Setup and operation guide for the Microsoft Teams integration."
-  },
-  "collapsed": true
-}
