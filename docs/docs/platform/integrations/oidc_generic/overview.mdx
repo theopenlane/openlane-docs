@@ -1,0 +1,64 @@
+---
+title: Overview
+description: Generic OIDC integration guide for federated identity and access governance
+sidebar_position: 1
+sidebar_label: Overview
+---
+
+:::info
+This integration is not currently visible in the Integrations page. Contact Openlane support if you need to configure a generic OIDC provider.
+:::
+
+# Generic OIDC Integration Guide ![oidc generic integration](../assets/oidc_generic.png)
+
+If you use an identity provider that isn't covered by a dedicated integration, the Generic OIDC connector lets Openlane pull identity claims from any standards-compliant provider. This gives you the authentication context and user identity data you need for access governance and User Access Reviews (SOC 2: CC6, ISO 27001: A.9).
+
+## Key Capabilities
+
+- **OIDC Connectivity Validation:** Confirms token and userinfo endpoint access to your identity provider.
+- **Claims Visibility:** Surfaces stored identity claims (subject, email, profile attributes) for access reviews and identity governance.
+- **Provider-Agnostic Identity Integration:** Works with any OIDC-compliant provider, so you're not locked into a specific vendor.
+
+## Prerequisites
+
+- OIDC client registration in your identity provider.
+- Openlane callback URL configured as a redirect URI.
+- OIDC endpoints and scopes configured (`openid`, `profile`, `email`).
+
+## Step-by-Step Setup
+
+### Step 1: Configure OIDC Client
+
+1. Register an OIDC client in your identity provider.
+2. Configure the callback URI to point to Openlane.
+3. Confirm token and userinfo endpoint access.
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Generic OIDC**.
+2. Click **Connect**. You will be redirected to your identity provider to authorize access.
+3. Complete provider authorization.
+4. After authorization, you are redirected back to Openlane and the connection is saved.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against your OIDC provider and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane validates userinfo access and stores identity claims (subject, email, profile attributes). These claims feed into User Access Reviews, authentication policy verification, and identity scope validation. Useful when preparing evidence for SOC 2 CC6 (logical and physical access) or ISO 27001 A.9 (access control) programs.
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Userinfo endpoint errors:** verify token audience/issuer and endpoint URL.
+- **Missing claims:** verify scope and claim mapping configuration in your identity provider.
+
+## References
+
+- [OpenID Connect Core specification](https://openid.net/specs/openid-connect-core-1_0.html)
+- [OpenID Connect Discovery specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+- [OAuth 2.0 framework (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)

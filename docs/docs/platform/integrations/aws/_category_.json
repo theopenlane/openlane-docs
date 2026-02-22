@@ -1,0 +1,9 @@
+{
+  "label": "Amazon Web Services",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Setup and operation guide for the Amazon Web Services integration."
+  },
+  "collapsed": true
+}

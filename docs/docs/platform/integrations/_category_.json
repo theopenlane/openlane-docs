@@ -1,0 +1,22 @@
+{
+  "label": "Integrations",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Configuration guides for connecting Openlane to external systems for posture collection, notifications, and identity federation.",
+    "keywords": [
+      "integrations",
+      "provider setup",
+      "credentials",
+      "oauth",
+      "api tokens",
+      "workload identity",
+      "aws",
+      "github",
+      "slack",
+      "gcp",
+      "azure"
+    ]
+  },
+  "collapsed": true
+}

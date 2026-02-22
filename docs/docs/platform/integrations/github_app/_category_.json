@@ -1,0 +1,9 @@
+{
+  "label": "GitHub App",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Setup and operation guide for the GitHub App integration."
+  },
+  "collapsed": true
+}

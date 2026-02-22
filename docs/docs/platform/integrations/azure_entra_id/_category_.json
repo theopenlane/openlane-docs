@@ -1,0 +1,9 @@
+{
+  "label": "Azure Entra ID",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Setup and operation guide for the Azure Entra ID integration."
+  },
+  "collapsed": true
+}

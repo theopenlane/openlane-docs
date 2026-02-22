@@ -1,0 +1,9 @@
+{
+  "label": "Cloudflare",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Setup and operation guide for the Cloudflare integration."
+  },
+  "collapsed": true
+}

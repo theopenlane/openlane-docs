@@ -1,0 +1,68 @@
+---
+title: Overview
+description: Okta integration guide for sign-on policy metadata and access governance
+sidebar_position: 1
+sidebar_label: Overview
+---
+
+:::info
+This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
+:::
+
+# Okta Integration Guide ![okta integration](../assets/okta.png)
+
+If your organization uses Okta for identity management, this integration brings your directory, application assignments, and authentication policies into Openlane so you can run User Access Reviews, verify MFA enforcement, and maintain a current view of who has access to what (SOC 2: CC6, ISO 27001: A.9).
+
+## Key Capabilities
+
+- **Directory and Application Sync:** Ingests users, groups, and application assignments from your Okta tenant, giving you the identity baseline for access reviews and entitlement validation.
+- **Authentication Policy Visibility:** Surfaces sign-on policies, MFA requirements, and access rules so you can verify that authentication controls match your security standards (SOC 2: CC6.1).
+- **Read-Only Access:** Ingests identity and policy data without changing Okta settings. Openlane reads your configuration, never modifies it.
+
+## Prerequisites
+
+- Okta API token with read permissions for users, groups, and system settings.
+- Okta organization URL (e.g. `https://acme.okta.com`).
+
+## Step-by-Step Setup
+
+### Step 1: Create Okta API Token
+
+1. In the Okta admin console, navigate to **Security** > **API** > **Tokens**.
+2. Generate a new API token with org and policy read access.
+3. Copy the token value (it is only shown once).
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Okta**.
+2. Click **Configure** and enter the required fields:
+
+| Field | Required | Purpose |
+|---|---|---|
+| `orgUrl` | Yes | Okta tenant base URL (e.g. `https://acme.okta.com`) |
+| `apiToken` | Yes | API token used for Okta API authentication |
+
+3. Click **Save**.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against Okta and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane syncs your Okta directory (users, groups, application assignments) and authentication policy configuration (sign-on policies, MFA rules, access requirements). This gives you a continuously updated view of your identity landscape: who has access to which applications, whether MFA is enforced where it should be, and whether sign-on policies match your security standards. Feeds into SOC 2 CC6.1 and CC6.2 (logical access controls) and ISO 27001 A.9.4 (system and application access control).
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Auth failures:** verify token validity and permission scope.
+- **URL issues:** verify full HTTPS org URL format (e.g. `https://acme.okta.com`).
+
+## References
+
+- [Okta organizations and tenancy concepts](https://developer.okta.com/docs/concepts/okta-organizations/)
+- [Create an Okta API token](https://developer.okta.com/docs/guides/create-an-api-token/)
+- [Okta policies API reference](https://developer.okta.com/docs/reference/api/policy/)

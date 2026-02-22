@@ -1,0 +1,72 @@
+---
+title: Overview
+description: Cloudflare integration guide for infrastructure visibility and access context
+sidebar_position: 1
+sidebar_label: Overview
+---
+
+# Cloudflare Integration Guide ![cloudflare integration](../assets/cloudflare.png)
+
+If your traffic runs through Cloudflare, this integration connects your account and zone configuration to Openlane so you have visibility into your network boundary controls (SOC 2: CC6.6, CC6.7; ISO 27001: A.13).
+
+## Key Capabilities
+
+- **Infrastructure Visibility:** Connects account and zone scope metadata to Openlane, supporting evidence for network security controls (SOC 2: CC6.6, CC6.7).
+- **Read-Only API Access:** Validates token health without changing your Cloudflare configuration.
+- **Scoped Connection Options:** Limit collection scope by account and optional zone selection so you only pull what falls within your compliance boundary.
+
+## Prerequisites
+
+- Cloudflare account access with permission to create API tokens.
+- A custom API token with read scopes for required account and zone resources.
+- Cloudflare account ID (and optional zone IDs if scoping to specific zones).
+
+## Step-by-Step Setup
+
+### Step 1: Create a Cloudflare API Token
+
+1. Sign in to the Cloudflare dashboard.
+2. Create a custom API token for integration use.
+3. Assign read-only scopes for your Cloudflare environment (account settings, Zero Trust policies, and scanning features as needed).
+4. Save the token securely.
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Cloudflare**.
+2. Click **Configure** and enter the required fields:
+
+| Field | Required | Purpose |
+|---|---|---|
+| `apiToken` | Yes | Authenticates Cloudflare API requests |
+| `accountId` | Yes | Defines account-level scope |
+| `zoneIds` | No | Restricts collection to selected zones |
+| `email` | No | Account email (required for legacy key authentication) |
+| `apiKey` | No | Global API key (legacy email/key authentication path) |
+| `enableScanner` | No | Enables Cloudflare scanning utility if the account is licensed |
+| `scannerLabel` | No | Label recorded with scan jobs for traceability |
+
+3. Click **Save**.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against Cloudflare and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane validates your token and records account and zone scope context. This data feeds into your boundary protection evidence for SOC 2 CC6.6 and CC6.7, and supports network security management controls under ISO 27001 A.13.
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Token verification failed:** verify token value and permissions.
+- **Scope mismatch:** verify `accountId` and selected zone scope are correct.
+- **Permission issues:** expand token read scopes for required resources.
+
+## References
+
+- [Cloudflare developer documentation](https://developers.cloudflare.com/)
+- [Cloudflare API fundamentals](https://developers.cloudflare.com/fundamentals/api/get-started/)
+- [Create API token (Cloudflare)](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)

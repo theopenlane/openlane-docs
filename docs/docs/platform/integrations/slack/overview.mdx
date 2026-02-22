@@ -1,0 +1,60 @@
+---
+title: Overview
+description: Slack integration guide for compliance notifications and event routing
+sidebar_position: 1
+sidebar_label: Overview
+---
+
+# Slack Integration Guide ![slack integration](../assets/slack.png)
+
+If your team lives in Slack, this integration lets Openlane deliver security and compliance notifications directly into your channels. Vulnerability SLA reminders, access review deadlines, policy attestation nudges, right where your team already works.
+
+## Key Capabilities
+
+- **Workspace Connectivity Validation:** Confirms Slack token health and channel availability.
+- **Workspace Metadata Sync:** Reads team and workspace metadata for notification routing context.
+- **Outbound Notifications:** Sends compliance event messages (remediation deadlines, review reminders, policy updates) to configured channels.
+
+## Prerequisites
+
+- Slack app configured with Openlane callback URL.
+- Required OAuth scopes granted (`identity.basic`, `identity.email`, `chat:write`).
+- App installed in target workspace and invited to target channels for message delivery.
+
+## Step-by-Step Setup
+
+### Step 1: Configure Slack App and Scopes
+
+1. Configure the callback URI for Openlane in your Slack app settings.
+2. Add required OAuth scopes (including `chat:write` for message delivery).
+3. Install the app to your workspace.
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Slack**.
+2. Click **Connect**. You will be redirected to Slack to authorize access.
+3. Review and approve the requested permissions.
+4. After authorization, you are redirected back to Openlane and the connection is saved.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against Slack and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane reads workspace metadata (team name, workspace ID) for context and supports outbound channel notifications. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. Helps demonstrate timely response and escalation under SOC 2 CC7.2 and CC7.3.
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **`not_in_channel` errors:** invite the app bot user to the target channel.
+- **Scope errors:** update scopes in app settings and reinstall the app.
+
+## References
+
+- [Slack platform overview](https://api.slack.com/start)
+- [Slack OAuth v2](https://api.slack.com/authentication/oauth-v2)
+- [Slack app scopes](https://api.slack.com/scopes)

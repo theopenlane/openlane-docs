@@ -1,0 +1,74 @@
+---
+title: Overview
+description: Google Workspace integration guide for directory metadata and identity governance
+sidebar_position: 1
+sidebar_label: Overview
+---
+
+# Google Workspace Integration Guide ![google workspace integration](../assets/google_workspace.png)
+
+If your organization uses Google Workspace for identity and collaboration, this integration pulls directory data into Openlane so you have the user and group context you need for User Access Reviews, onboarding/offboarding evidence, and identity governance (SOC 2: CC6, ISO 27001: A.9).
+
+## Key Capabilities
+
+- **OAuth Connectivity Validation:** Confirms Workspace token access and directory API availability.
+- **Directory Metadata Sync:** Reads user directory data and group memberships, giving you the identity baseline for access reviews and audits (SOC 2: CC6.2, CC6.3).
+- **Scoped Directory Collection:** Supports optional OU and customer scoping so you only collect identities within your compliance boundary.
+
+## Prerequisites
+
+- Google OAuth client with Openlane callback URL configured.
+- Admin SDK API enabled in the Google Cloud project.
+- Workspace admin consent for requested directory scopes (`admin.directory.user.readonly`, `admin.directory.group.readonly`).
+
+## Step-by-Step Setup
+
+### Step 1: Configure Google OAuth and APIs
+
+1. Configure OAuth app and callback URI in the Google Cloud console.
+2. Enable the Admin SDK API.
+3. Grant required scopes and admin consent.
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Google Workspace**.
+2. Click **Connect**. You will be redirected to Google to authorize access.
+3. Sign in with a Workspace admin account and grant the requested permissions.
+4. After authorization, you are redirected back to Openlane and the connection is saved.
+
+### Step 3: Post-Connection Configuration (Optional)
+
+After the OAuth connection is established, you can refine the sync scope with additional settings:
+
+| Field | Required | Purpose |
+|---|---|---|
+| `adminEmail` | No | Workspace administrator to impersonate during directory sync |
+| `customerId` | No | Explicit directory customer scope for Admin SDK queries |
+| `subjectUser` | No | Subject user for domain-wide delegation scenarios |
+| `organizationalUnitPath` | No | Restricts sync operations to a specific OU path |
+| `includeSuspendedUsers` | No | Include suspended accounts in compliance exports (default: off) |
+| `enableGroupSync` | No | Enable group synchronization in addition to users (default: on) |
+| `syncInterval` | No | Duration string indicating refresh frequency |
+
+## Validate Connection
+
+After saving, Openlane runs a health check against Google Workspace and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane reads directory user metadata, group memberships, and identity context. This data feeds directly into User Access Reviews, onboarding/offboarding verification, and identity scope validation. Saves you from manually compiling identity rosters when an auditor asks for SOC 2 CC6 (logical and physical access) or ISO 27001 A.9 (access control) evidence.
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Directory API errors:** verify Admin SDK enablement and scope grants.
+- **No user data:** verify admin visibility permissions and customer ID.
+
+## References
+
+- [Google Admin SDK Directory API overview](https://developers.google.com/admin-sdk/directory)
+- [Workspace API auth overview](https://developers.google.com/workspace/guides/auth-overview)
+- [Authorize Admin SDK requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing)

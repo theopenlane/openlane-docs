@@ -1,0 +1,9 @@
+{
+  "label": "Generic OIDC",
+  "position": 13,
+  "link": {
+    "type": "generated-index",
+    "description": "Setup and operation guide for the Generic OIDC integration."
+  },
+  "collapsed": true
+}

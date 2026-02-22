@@ -1,0 +1,70 @@
+---
+title: Overview
+description: Buildkite integration guide for CI organization visibility
+sidebar_position: 1
+sidebar_label: Overview
+---
+
+:::info
+This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
+:::
+
+# Buildkite Integration Guide ![buildkite integration](../assets/buildkite.png)
+
+If your team uses Buildkite for continuous integration, this integration brings your pipeline and build context into Openlane. That means less time manually gathering SDLC evidence when you need to demonstrate change management controls (SOC 2: CC8, ISO 27001: A.14).
+
+## Key Capabilities
+
+- **Pipeline and Build Context:** Ingests organization, pipeline, and build execution metadata so you have a continuous record of what changed, when, and through which pipeline.
+- **Change Management Evidence:** Captures the CI/CD execution history that feeds into your change management program, including pipeline configuration, build outcomes, and team ownership.
+- **Scoped CI Coverage:** Optional team and pipeline scoping so you only collect what matters to your compliance boundary.
+
+## Prerequisites
+
+- Buildkite API token with read permissions for organization and pipeline metadata.
+- Organization slug for the target Buildkite org.
+
+## Step-by-Step Setup
+
+### Step 1: Create Buildkite API Token
+
+1. In Buildkite, navigate to your organization settings and generate an API token.
+2. Grant read permissions for organization, pipeline, and team metadata.
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Buildkite**.
+2. Click **Configure** and enter the required fields:
+
+| Field | Required | Purpose |
+|---|---|---|
+| `apiToken` | Yes | Authenticates Buildkite API access |
+| `organizationSlug` | Yes | Defines the primary organization scope |
+| `teamSlug` | No | Limits sync to a specific team |
+| `pipelineSlug` | No | Limits sync to a specific pipeline |
+| `syncInterval` | No | Refresh cadence hint (duration string) |
+
+3. Click **Save**.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against Buildkite and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane syncs your Buildkite organization structure, pipeline configurations, and build execution context. This gives you a continuously updated record of your CI/CD activity that you can reference when writing your change management narrative for SOC 2 CC8 or pulling SDLC evidence for ISO 27001 A.14.
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Unauthorized responses:** verify API token scope and validity.
+- **No org data:** verify the organization slug and token access to that org.
+
+## References
+
+- [Buildkite documentation](https://buildkite.com/docs)
+- [Buildkite REST API](https://buildkite.com/docs/apis/rest-api)
+- [Buildkite API access tokens](https://buildkite.com/docs/apis/managing-api-tokens)

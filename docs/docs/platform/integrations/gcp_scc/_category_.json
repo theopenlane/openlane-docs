@@ -1,0 +1,9 @@
+{
+  "label": "Google Cloud SCC",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Setup and operation guide for the Google Cloud SCC integration."
+  },
+  "collapsed": true
+}

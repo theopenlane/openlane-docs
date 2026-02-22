@@ -1,6 +1,6 @@
 {
   "label": "Registry",
-  "position": 7,
+  "position": 8,
   "link": {
     "type": "generated-index",
     "description": "Registry records that define who and what is in scope: personnel, vendors/entities, and assets.",
