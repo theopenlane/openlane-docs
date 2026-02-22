@@ -1,0 +1,141 @@
+---
+title: Amazon Web Services
+description: AWS integration guide for infrastructure and security findings ingestion
+sidebar_position: 2
+sidebar_label: Amazon Web Services
+---
+
+# ![aws integration](./assets/aws.png) AWS Integration Guide
+
+If your team runs infrastructure on AWS, this integration brings Security Hub findings and Audit Manager assessment data into Openlane automatically. It uses a read-only, cross-account IAM role, so Openlane reads your security data without touching your configuration.
+
+## Integration Snapshot
+
+| Item | Details |
+|---|---|
+| Primary use case | Continuous AWS infrastructure security monitoring in Openlane |
+| Data direction | One-way (AWS -> Openlane), read-only |
+| AWS services used | STS, Security Hub, Audit Manager (optional) |
+| Setup model | IAM role trust with `sts:AssumeRole` and `sts:ExternalId` |
+| Openlane records created | Vulnerabilities (created or updated), linked to your AWS integration |
+
+## Key Capabilities
+
+- **Security Findings Ingestion:** Pulls Security Hub findings and normalizes them into Openlane vulnerability records, giving you a single place to track remediation timelines and SLA compliance (SOC 2: CC7, CC8).
+- **Read-Only Cross-Account Access:** Uses a dedicated IAM role so Openlane can read your environment without making configuration changes.
+- **Audit Manager Context:** Optionally reads assessment metadata to help validate that compliance controls like change management and access governance are covered.
+
+## Prerequisites
+
+- IAM permissions to deploy IAM roles and policies in the AWS account that Openlane will access.
+- A value for your Openlane AWS principal ARN and a unique external ID for your tenant.
+- Security Hub enabled in the accounts and regions you want monitored.
+- Optional: Audit Manager enabled if you want assessment metadata checks.
+
+## Step-by-Step Setup
+
+### Step 1: Deploy the AWS Role (CloudFormation)
+
+Use the Openlane CloudFormation template to create the required cross-account role.
+
+1. Download the template:
+
+```bash
+curl -fsSL https://docs.theopenlane.io/integrations/setup/aws/openlane-aws-integration-role.yaml \
+  -o openlane-aws-integration-role.yaml
+```
+
+2. Deploy the stack:
+
+```bash
+aws cloudformation deploy \
+  --stack-name openlane-aws-integration-role \
+  --template-file openlane-aws-integration-role.yaml \
+  --capabilities CAPABILITY_NAMED_IAM \
+  --parameter-overrides \
+    OpenlanePrincipalArn=<OPENLANE_PRINCIPAL_ARN> \
+    ExternalId=<OPENLANE_EXTERNAL_ID> \
+    HomeRegion=<SECURITY_HUB_HOME_REGION>
+```
+
+3. Capture outputs (`RoleArn`, `ExternalId`, `HomeRegion`) for your Openlane connection:
+
+```bash
+aws cloudformation describe-stacks \
+  --stack-name openlane-aws-integration-role \
+  --query 'Stacks[0].Outputs[*].[OutputKey,OutputValue]' \
+  --output table
+```
+
+### Step 2: Configure Security Hub Coverage
+
+1. Enable Security Hub for the target accounts and regions.
+2. If you use AWS Organizations, configure delegated admin and cross-region aggregation.
+3. Choose a home region for aggregated findings and use that value for `homeRegion` in Openlane.
+
+### Step 3 (Optional): Enable Audit Manager
+
+If you want compliance assessment checks in addition to findings ingestion, enable AWS Audit Manager in scope.
+
+### Step 4: Connect AWS in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **AWS**.
+2. Click **Configure** and enter the required fields:
+
+| Field | Required | Purpose |
+|---|---|---|
+| `roleArn` | Yes | Cross-account IAM role ARN that Openlane will assume |
+| `externalId` | Yes | External ID enforced in the role trust policy |
+| `homeRegion` | Yes | Security Hub aggregation home region (default: `us-east-1`) |
+| `region` | No | Legacy alias for home region; prefer `homeRegion` |
+| `linkedRegions` | No | Explicit region list to filter findings by region |
+| `organizationId` | No | AWS Organizations ID for traceability and scoping |
+| `accountScope` | No | `all` (default) or `specific` to limit to listed account IDs |
+| `accountIds` | Conditional | Required when `accountScope` is `specific` |
+| `sessionDuration` | No | STS session duration override (Go duration string, e.g. `1h30m`) |
+| `sessionName` | No | STS session name override |
+| `accessKeyId` | No | Source credential key when Openlane cannot use runtime IAM credentials |
+| `secretAccessKey` | No | Source credential secret paired with `accessKeyId` |
+| `sessionToken` | No | Source session token when using temporary source credentials |
+| `accountId` | No | AWS account identifier for reference |
+| `tags` | No | Key/value map added to generated records for traceability |
+
+3. Click **Save**.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against AWS and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## Supported Operations
+
+This integration is read-only and one-directional. Openlane assumes your IAM role, validates identity with STS, then pulls security findings from Security Hub (and optional Audit Manager metadata if configured). Openlane never pushes configuration changes back into AWS.
+
+## What Openlane Creates From Findings
+
+Each Security Hub finding becomes a normalized vulnerability record in Openlane:
+
+- Converts findings into vulnerability payloads with severity, status, summary, description, timestamps, and source URIs preserved.
+- Deduplicates by `externalID` (with CVE fallback matching when present), so repeated scans update existing records instead of creating duplicates.
+- Links each vulnerability to the AWS integration that produced it.
+- Stores raw payload data if raw payload retention is enabled in your integration config.
+
+### What You Can Do Next
+
+Once vulnerabilities land in Openlane, you can link them to affected assets, create remediation tasks, and track resolution against SLAs. During audits, this gives you a clear trail from finding to fix that maps directly to SOC 2 CC7 (system monitoring) and ISO 27001 A.12.6 (technical vulnerability management).
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Access denied on connect or health check:** verify role ARN, trust principal, and external ID.
+- **No findings ingested:** verify Security Hub is enabled in the configured region scope.
+- **No audit metadata:** verify Audit Manager is enabled and role permissions include assessment listing.
+
+## References
+
+- [Openlane AWS CloudFormation template](https://docs.theopenlane.io/integrations/setup/aws/openlane-aws-integration-role.yaml)
+- [AWS Security Hub overview](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html)
+- [AWS Audit Manager overview](https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html)
+- [AWS IAM third-party access with External ID](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html)

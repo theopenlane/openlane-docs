@@ -1,0 +1,74 @@
+---
+title: Azure Entra ID
+description: Azure Entra ID integration guide for tenant metadata and identity governance
+sidebar_position: 3
+sidebar_label: Azure Entra ID
+---
+
+:::info
+This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
+:::
+
+# ![azure entra id integration](./assets/azure.png) Azure Entra ID Integration Guide
+
+If your organization uses Microsoft Entra ID for identity management, this integration brings your directory into Openlane so you can run User Access Reviews, verify authentication policies, and maintain a current view of who has access to what (SOC 2: CC6, ISO 27001: A.9).
+
+## Key Capabilities
+
+- **Directory and Group Sync:** Ingests user identities, group memberships, and role assignments from your Entra tenant, giving you the identity baseline you need for access reviews and onboarding/offboarding evidence.
+- **Authentication Policy Visibility:** Surfaces tenant-level authentication configuration so you can verify that MFA policies and conditional access rules align with your security standards.
+- **Read-Only Access:** Pulls data into Openlane via Microsoft Graph without changing any Entra tenant settings.
+
+## Prerequisites
+
+- Permission to create or manage app registrations in Entra.
+- Microsoft Graph permissions with admin consent for tenant metadata access.
+- Openlane callback URL available for OAuth setup.
+
+## Step-by-Step Setup
+
+### Step 1: Configure Microsoft App Registration
+
+1. Register or select an app in Entra ID.
+2. Set the Openlane callback redirect URI.
+3. Grant and consent required Graph permissions (including `https://graph.microsoft.com/.default` and `offline_access`).
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Azure Entra ID**.
+2. Click **Connect**. You will be redirected to Microsoft to authorize access.
+3. Sign in and grant the requested permissions.
+4. After authorization, you are redirected back to Openlane and the connection is saved.
+
+### Step 3: Post-Connection Configuration
+
+After the OAuth connection is established, provide additional tenant context:
+
+| Field | Required | Purpose |
+|---|---|---|
+| `tenantId` | Yes | Azure AD tenant ID used for Graph API calls |
+| `appId` | No | Tenant-specific Azure app registration override |
+| `appSecret` | No | Secret tied to the provided app registration override |
+
+## Validate Connection
+
+After saving, Openlane runs a health check against Azure Entra ID and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane syncs directory users, group memberships, and tenant metadata from your Entra ID environment. This gives you a continuously updated identity baseline you can use for User Access Reviews, onboarding/offboarding verification, and role-based access validation. Useful when you're pulling evidence for SOC 2 CC6 (logical and physical access) or ISO 27001 A.9 (access control).
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Consent errors:** verify admin consent for required Graph permissions.
+- **Token failures:** verify tenant/client values and secret validity.
+
+## References
+
+- [Microsoft Entra ID overview](https://learn.microsoft.com/en-us/entra/fundamentals/whatis)
+- [Microsoft Graph overview](https://learn.microsoft.com/en-us/graph/overview)
+- [Register an application in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app)
