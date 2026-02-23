@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/v1/runners"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -43,28 +44,25 @@ Register a job runner node
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={{"content":{"application/json":{"examples":{"success":{"value":{"ip_address":"192.168.0.1","name":"ubuntu-eu-west-2","tags":["self-hosted","eu-west-2","gcp","kubernetes"],"token":"registration_tokenhere"}}},"schema":{"properties":{"ip_address":{"description":"The IP address of the node being registered","type":"string"},"name":{"description":"the name of your job runner node","type":"string"},"tags":{"description":"The tags for your runner node","items":{"description":"The tags for your runner node","type":"string"},"type":"array"},"token":{"description":"Your agent registration token","type":"string"}},"type":"object","title":"JobRunnerRegistrationRequest"}}},"description":"Request body"}}
+  {...require("./agent-node-registration.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"Reply":{"success":true},"message":"Job runner registered successfully"}}},"schema":{"properties":{"Reply":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object"},"message":{"type":"string"}},"type":"object","title":"JobRunnerRegistrationReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+  {...require("./agent-node-registration.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 
