@@ -158,6 +158,7 @@ const config: Config = {
               { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
               { label: 'Exposure', to: 'docs/platform/exposure/overview' },
               { label: 'Frameworks & Standards', to: 'docs/platform/standards/overview' },
+              { label: 'Integrations', to: 'docs/platform/integrations/overview' },
               { label: 'Registry', to: 'docs/platform/registry/overview' },
               { label: 'Security', to: 'docs/platform/security/authentication/overview' },
               { label: 'Trust Center', to: 'docs/platform/trust-center/overview' },

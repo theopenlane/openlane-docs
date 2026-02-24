@@ -1,0 +1,98 @@
+---
+title: GitHub
+description: GitHub integration guide for repository metadata and vulnerability ingestion
+sidebar_position: 7
+sidebar_label: GitHub
+---
+
+:::info
+This integration is not currently visible in the Integrations page. [GitHub App](./github_app) is the recommended path for connecting GitHub repositories to Openlane.
+:::
+
+# ![github integration](./assets/github.png) GitHub Integration Guide
+
+The GitHub OAuth integration connects your repositories to Openlane for continuous security alert ingestion. Dependabot, code scanning, and secret scanning alerts flow into Openlane as normalized vulnerability records, giving you a single place to track remediation and SLA compliance (SOC 2: CC7, CC8).
+
+## Integration Snapshot
+
+| Item | Details |
+|---|---|
+| Primary use case | Repository security alert ingestion and metadata collection |
+| Data direction | One-way (GitHub -> Openlane), read-only |
+| Auth model | OAuth 2.0 authorization code flow |
+| Openlane records created | Vulnerabilities (created or updated), linked to your GitHub integration |
+
+## Key Capabilities
+
+- **Repository Security Alert Ingestion:** Collects Dependabot, code scanning, and secret scanning alerts and normalizes them into vulnerability records for remediation tracking (SOC 2: CC7, CC8).
+- **Repository Metadata Collection:** Pulls repository context so you can scope vulnerability ownership and track which teams are responsible for remediation.
+- **OAuth-Based Read Access:** Connects with user-approved scopes. Openlane reads your security data without making changes to your repositories.
+
+## Prerequisites
+
+- A GitHub OAuth application configured for Openlane callback.
+- Organization approval if repositories are managed in org-owned spaces.
+- The following OAuth scopes are requested during authorization:
+
+| OAuth Scope | Purpose |
+|---|---|
+| `repo` | Access repository metadata and security endpoints |
+| `security_events` | Access Dependabot, code scanning, and secret scanning alert APIs |
+| `admin:repo_hook` | Manage repository webhooks for event delivery |
+| `read:user`, `user:email` | Identity validation during OAuth |
+
+## Step-by-Step Setup
+
+### Step 1: Configure GitHub OAuth App
+
+1. Configure callback URL for Openlane.
+2. Ensure required scopes are available.
+3. If needed, authorize the app for organization repositories.
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **GitHub**.
+2. Click **Connect**. You will be redirected to GitHub to authorize access.
+3. Review and approve the requested permissions.
+4. After authorization, you are redirected back to Openlane and the connection is saved.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against GitHub and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Creates From Alerts
+
+Openlane ingests supported GitHub alert types and maps them into vulnerability records:
+
+- **Dependabot alerts** map advisory severity, summary, description, and CVE (when present).
+- **Code scanning alerts** map rule severity and rule summary context.
+- **Secret scanning alerts** map secret-type context.
+
+For each ingested alert, Openlane:
+
+- Creates or updates a vulnerability record.
+- Deduplicates by source external ID (with CVE fallback matching when available).
+- Links the vulnerability to the GitHub integration.
+- Stores repository context as the external owner reference.
+- Stores source metadata and payload context for auditability.
+
+### What You Can Do Next
+
+Once vulnerabilities land in Openlane, you can link them to affected assets, assign remediation owners, and track resolution against SLAs. Useful when writing your vulnerability management narrative for SOC 2 CC7 (system monitoring) or pulling evidence for ISO 27001 A.12.6 (technical vulnerability management).
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **No repositories visible:** verify OAuth approval at org scope.
+- **No alerts ingested:** verify security alert features are enabled on target repositories.
+- **OAuth callback errors:** verify callback URL and app settings.
+
+## References
+
+- [GitHub code security documentation](https://docs.github.com/en/code-security)
+- [Dependabot overview](https://docs.github.com/en/code-security/dependabot)
+- [Code scanning overview](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning)
+- [Secret scanning overview](https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning)

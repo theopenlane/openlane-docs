@@ -1,0 +1,72 @@
+---
+title: Microsoft Teams
+description: Microsoft Teams integration guide for compliance notifications and event routing
+sidebar_position: 12
+sidebar_label: Microsoft Teams
+---
+
+:::info
+This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
+:::
+
+# ![microsoft teams integration](./assets/microsoft_teams.png) Microsoft Teams Integration Guide
+
+If your team collaborates in Microsoft Teams, this integration lets Openlane deliver security and compliance notifications directly into your channels. Think vulnerability SLA reminders, access review deadlines, or policy attestation nudges, right where your team already works.
+
+## Key Capabilities
+
+- **Channel-Targeted Notifications:** Route different notification types to the right Teams channels. Security findings go to your security channel, access review reminders go to the team leads, policy updates go to compliance.
+- **Compliance Event Routing:** Deliver remediation deadlines, review reminders, and policy attestation nudges directly to the people responsible for action.
+- **Workflow Integration:** Keep your compliance program visible where your team already collaborates, reducing the lag between "finding identified" and "someone is working on it."
+
+## Prerequisites
+
+- Entra app registration for Teams/Graph access.
+- Graph delegated permissions with admin consent (User.Read, Team.ReadBasic.All, Channel.ReadBasic.All, ChannelMessage.Send).
+- Access to target Teams channels for message delivery.
+
+## Step-by-Step Setup
+
+### Step 1: Configure Microsoft App Permissions
+
+1. Configure the Openlane callback URL in your Entra app registration.
+2. Grant Graph permissions for profile/team read and channel message send.
+3. Grant admin consent for the requested permissions.
+
+### Step 2: Connect in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Microsoft Teams**.
+2. Click **Connect**. You will be redirected to Microsoft to authorize access.
+3. Sign in and grant the requested permissions.
+4. After authorization, you are redirected back to Openlane and the connection is saved.
+
+### Step 3: Post-Connection Configuration
+
+After the OAuth connection is established, provide tenant context:
+
+| Field | Required | Purpose |
+|---|---|---|
+| `tenantId` | Yes | Azure AD tenant hosting the Teams instance |
+
+## Validate Connection
+
+After saving, Openlane runs a health check against Microsoft Teams and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane reads team and channel context and can send outbound notification messages to Teams channels. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. Helps demonstrate timely response and escalation under SOC 2 CC7.2 and CC7.3.
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Permission errors:** verify Graph permissions and admin consent.
+- **Message send failures:** verify target team/channel IDs and posting rights.
+
+## References
+
+- [Microsoft Teams overview](https://learn.microsoft.com/en-us/microsoftteams/teams-overview)
+- [Microsoft Graph Teams API overview](https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+- [Microsoft Graph authentication for app-only access](https://learn.microsoft.com/en-us/graph/auth-v2-service)

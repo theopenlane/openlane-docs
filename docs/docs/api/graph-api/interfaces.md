@@ -93,6 +93,7 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [TrustCenterCompliance](objects#trustcentercompliance)
 - [TrustCenterDoc](objects#trustcenterdoc)
 - [TrustCenterEntity](objects#trustcenterentity)
+- [TrustCenterFAQ](objects#trustcenterfaq)
 - [TrustCenterNDARequest](objects#trustcenterndarequest)
 - [TrustCenterSetting](objects#trustcentersetting)
 - [TrustCenterSubprocessor](objects#trustcentersubprocessor)

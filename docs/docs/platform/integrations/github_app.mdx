@@ -1,0 +1,63 @@
+---
+title: GitHub App
+description: GitHub App integration guide for installation-scoped access
+sidebar_position: 8
+sidebar_label: GitHub App
+---
+
+# ![github app integration](./assets/github.png) GitHub App Integration Guide
+
+The GitHub App integration is the recommended way to connect your repositories to Openlane. It uses installation-scoped, short-lived tokens instead of user OAuth credentials, which means tighter access control and no dependency on individual user sessions.
+
+## Key Capabilities
+
+- **Installation-Scoped Authentication:** Uses app credentials to mint short-lived installation tokens, so there are no long-lived user tokens to manage or rotate.
+- **Repository Access Validation:** Confirms installation visibility to target repositories so you know exactly what Openlane can see.
+- **Security Alert Ingestion:** Collects Dependabot, code scanning, and secret scanning alerts, giving you a unified view for vulnerability tracking and remediation SLAs (SOC 2: CC7, CC8).
+
+## Prerequisites
+
+- Permission to install the Openlane GitHub App in the target organization.
+- Repository admin access for whichever repositories you want in scope.
+
+## Step-by-Step Setup
+
+### Step 1: Install the Openlane GitHub App
+
+1. Navigate to **Organization Settings** > **Integrations** and find **GitHub App**.
+2. Click **Connect**.
+3. On GitHub, choose the organization where you want to install the app.
+4. Choose repository access scope:
+   - **All repositories**, or
+   - **Only select repositories**.
+5. Complete the installation.
+
+### Step 2: Verify Repository Scope in Openlane
+
+1. After GitHub redirects back, Openlane saves the installation connection.
+2. Confirm the integration status is connected on the **Installed** tab.
+3. If needed, adjust repository scope from the GitHub App installation settings and re-sync.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against the GitHub App installation and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane Syncs
+
+Openlane validates installation token access and collects repository metadata and security alerts (Dependabot, code scanning, and secret scanning) based on the app installation scope. These alerts are normalized into vulnerability records you can link to assets, assign to teams, and track against remediation SLAs. Feeds directly into your SOC 2 CC7 (system monitoring) and ISO 27001 A.12.6 (technical vulnerability management) evidence packages.
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **No repository visibility:** verify the app is installed in the correct org and includes the intended repositories.
+- **Missing alerts from expected repos:** verify those repos are in the app installation scope and have GitHub security features enabled.
+- **Install prompt loops or access denied:** verify you have permissions to install or manage apps in that organization.
+
+## References
+
+- [GitHub Apps overview](https://docs.github.com/en/apps/overview)
+- [Registering a GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app)
+- [Authenticating with a GitHub App](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app)

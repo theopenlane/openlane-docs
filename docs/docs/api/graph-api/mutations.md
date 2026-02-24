@@ -997,6 +997,15 @@ input<br />
 <p>csv file containing values of the entity</p>
 </td>
 </tr>
+<tr>
+<td>
+entityTypeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>entity type name allows the name of the entity type to be passed in over an id, this is applied to all created entities</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1874,6 +1883,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVTrustCenterFAQ
+
+**Type:** [TrustCenterFAQBulkCreatePayload!](objects#trustcenterfaqbulkcreatepayload)
+
+Create multiple new trustCenterFAQs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the trustCenterFAQ</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVTrustCenterNDARequest
 
 **Type:** [TrustCenterNDARequestBulkCreatePayload!](objects#trustcenterndarequestbulkcreatepayload)
@@ -2260,6 +2292,15 @@ input<br />
 </td>
 <td>
 <p>values of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+entityTypeName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>entity type name allows the name of the entity type to be passed in over an id, this is applied to all created entities</p>
 </td>
 </tr>
 </tbody>
@@ -3134,6 +3175,29 @@ input<br />
 </td>
 <td>
 <p>values of the trustCenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkTrustCenterFAQ
+
+**Type:** [TrustCenterFAQBulkCreatePayload!](objects#trustcenterfaqbulkcreatepayload)
+
+Create multiple new trustCenterFAQs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterfaqinput"><code>[CreateTrustCenterFAQInput!]</code></a>
+</td>
+<td>
+<p>values of the trustCenterFAQ</p>
 </td>
 </tr>
 </tbody>
@@ -5194,6 +5258,29 @@ logoFile<br />
 </tbody>
 </table>
 
+## createTrustCenterFAQ
+
+**Type:** [TrustCenterFAQCreatePayload!](objects#trustcenterfaqcreatepayload)
+
+Create a new trustCenterFAQ
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createtrustcenterfaqinput"><code>CreateTrustCenterFAQInput!</code></a>
+</td>
+<td>
+<p>values of the trustCenterFAQ</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createTrustCenterNDA
 
 **Type:** [TrustCenterNDACreatePayload!](objects#trustcenterndacreatepayload)
@@ -6696,6 +6783,29 @@ ids<br />
 </td>
 <td>
 <p>IDs of the trustCenterDocs to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteBulkTrustCenterFAQ
+
+**Type:** [TrustCenterFAQBulkDeletePayload!](objects#trustcenterfaqbulkdeletepayload)
+
+Delete multiple trustCenterFAQs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the trustCenterFAQs to delete</p>
 </td>
 </tr>
 </tbody>
@@ -8361,6 +8471,29 @@ id<br />
 </td>
 <td>
 <p>ID of the trustCenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteTrustCenterFAQ
+
+**Type:** [TrustCenterFAQDeletePayload!](objects#trustcenterfaqdeletepayload)
+
+Delete an existing trustCenterFAQ
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterFAQ</p>
 </td>
 </tr>
 </tbody>
@@ -10273,6 +10406,29 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkCSVTrustCenterFAQ
+
+**Type:** [TrustCenterFAQBulkUpdatePayload!](objects#trustcenterfaqbulkupdatepayload)
+
+Update multiple existing trustCenterFAQs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the trustCenterFAQ, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkCSVTrustCenterSubprocessor
 
 **Type:** [TrustCenterSubprocessorBulkUpdatePayload!](objects#trustcentersubprocessorbulkupdatepayload)
@@ -11466,6 +11622,38 @@ input<br />
 </td>
 <td>
 <p>values to update the trust center docs with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkTrustCenterFAQ
+
+**Type:** [TrustCenterFAQBulkUpdatePayload!](objects#trustcenterfaqbulkupdatepayload)
+
+Update multiple existing trustCenterFAQs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the trustCenterFAQs to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcenterfaqinput"><code>UpdateTrustCenterFAQInput!</code></a>
+</td>
+<td>
+<p>values to update the trustCenterFAQs with</p>
 </td>
 </tr>
 </tbody>
@@ -14037,6 +14225,79 @@ logoFile<br />
 </td>
 <td>
 <p>logo file for the trustCenterEntity</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTrustCenterFAQ
+
+**Type:** [TrustCenterFAQUpdatePayload!](objects#trustcenterfaqupdatepayload)
+
+Update an existing trustCenterFAQ
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterFAQ</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatetrustcenterfaqinput"><code>UpdateTrustCenterFAQInput!</code></a>
+</td>
+<td>
+<p>New values for the trustCenterFAQ</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateTrustCenterFAQComment
+
+**Type:** [TrustCenterFAQUpdatePayload!](objects#trustcenterfaqupdatepayload)
+
+Update an existing trust center FAQ comment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatenoteinput"><code>UpdateNoteInput!</code></a>
+</td>
+<td>
+<p>New values for the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+noteFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the comment</p>
 </td>
 </tr>
 </tbody>

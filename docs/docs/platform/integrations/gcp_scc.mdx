@@ -1,0 +1,135 @@
+---
+title: Google Cloud SCC
+description: Google Cloud SCC integration guide for security findings ingestion and vulnerability management
+sidebar_position: 9
+sidebar_label: Google Cloud SCC
+---
+
+# ![gcp scc integration](./assets/gcp_scc.png) Google Cloud SCC Integration Guide
+
+If your team runs infrastructure on Google Cloud, this integration brings Security Command Center findings into Openlane automatically. You get a single place to track cloud security findings, remediation timelines, and SLA compliance (SOC 2: CC7, CC8; ISO 27001: A.12.6).
+
+## Integration Snapshot
+
+| Item | Details |
+|---|---|
+| Primary use case | Continuous ingestion of SCC findings into Openlane |
+| Data direction | One-way (GCP -> Openlane), read-only |
+| GCP services used | Security Command Center, IAM, IAM Credentials, STS (for WIF) |
+| Setup model | Service account key (simple path) or Workload Identity Federation (keyless path) |
+| Openlane records created | Vulnerabilities (created or updated), linked to your SCC integration |
+
+## Key Capabilities
+
+- **Findings Ingestion:** Pulls SCC findings and normalizes them into Openlane vulnerability records, giving you a unified view for remediation tracking and SLA compliance (SOC 2: CC7, CC8).
+- **Scoped Collection:** Supports source and filter scoping to match your operating model and compliance boundary.
+- **Flexible Auth:** Supports service-account key auth and Workload Identity Federation, so you can choose what fits your environment.
+
+## Prerequisites
+
+- `gcloud` CLI access with permissions to create service accounts and grant IAM bindings.
+- Security Command Center API enabled in the target project.
+- Organization ID or project ID to define your SCC collection scope.
+- If using Workload Identity Federation, an OIDC issuer configuration.
+
+## Step-by-Step Setup
+
+### Step 1: Run the GCP Setup Script
+
+Use the Openlane setup script to configure IAM, enable required APIs, and print the exact values needed in Openlane.
+
+1. Download the script:
+
+```bash
+curl -fsSL https://docs.theopenlane.io/integrations/setup/gcp/openlane-gcp-scc-setup.sh \
+  -o openlane-gcp-scc-setup.sh
+chmod +x openlane-gcp-scc-setup.sh
+```
+
+2. Run key-based setup (service account key path):
+
+```bash
+./openlane-gcp-scc-setup.sh \
+  --project-id <PROJECT_ID> \
+  --organization-id <ORGANIZATION_ID> \
+  --source-id <SCC_SOURCE_ID>
+```
+
+3. Or run keyless setup (WIF path):
+
+```bash
+./openlane-gcp-scc-setup.sh \
+  --project-id <PROJECT_ID> \
+  --organization-id <ORGANIZATION_ID> \
+  --source-id <SCC_SOURCE_ID> \
+  --enable-wif \
+  --skip-key \
+  --oidc-issuer-url <OIDC_ISSUER_URL> \
+  --oidc-allowed-audience <OIDC_AUDIENCE>
+```
+
+The script prints the values to paste into Openlane.
+
+### Step 2: Connect Google Cloud SCC in Openlane
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Google Cloud SCC**.
+2. Click **Configure** and enter the required fields:
+
+| Field | Required | Purpose |
+|---|---|---|
+| `organizationId` | Yes (one of `organizationId` or `projectId`) | GCP organization used as the SCC parent for org-wide collection |
+| `projectId` | Yes (one of `organizationId` or `projectId`) | GCP project for single-project SCC access and quota defaults |
+| `sourceId` | Recommended | SCC source identifier to scope findings (e.g. `organizations/123/sources/456`) |
+| `sourceIds` | Recommended | List of SCC source identifiers; bare IDs are expanded against selected parents |
+| `serviceAccountKey` | Yes (key path) | Service account key JSON from setup script output |
+| `workloadIdentityProvider` | Yes (WIF path) | Fully-qualified Workload Identity Provider resource name |
+| `audience` | Yes (WIF path) | STS audience for token exchange |
+| `serviceAccountEmail` | Yes (WIF path) | Target service account email for impersonation |
+| `subjectToken` | Yes (WIF path) | OIDC/JWT subject token used in federation exchange |
+| `projectScope` | No | `all` (default) or `specific` to restrict fan-out |
+| `projectIds` | Conditional | Required when `projectScope` is `specific` |
+| `findingFilter` | No | CEL filter applied when querying SCC findings |
+| `scopes` | No | Additional OAuth scopes requested during impersonation |
+| `tokenLifetime` | No | Access token lifetime override (default: `3600s`) |
+| `audienceHint` | No | Audience override if multiple STS exchanges are supported |
+| `workloadPoolProject` | No | Project that owns the workload identity pool (if different from `projectId`) |
+
+3. Click **Save**.
+
+## Validate Connection
+
+After saving, Openlane runs a health check against Google Cloud SCC and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## Supported Operations
+
+This integration is read-only and one-directional. Openlane validates connectivity by listing sources, then pulls findings from the configured source scope. Openlane never pushes configuration changes back into GCP.
+
+## What Openlane Creates From Findings
+
+Each SCC finding becomes a normalized vulnerability record in Openlane:
+
+- Converts findings into vulnerability payloads with severity, state, category, timestamps, and source URIs preserved.
+- Deduplicates by `externalID` (with CVE fallback when available), so repeated syncs update existing records instead of creating duplicates.
+- Links each vulnerability to the SCC integration that produced it.
+- Stores raw payload data if raw payload retention is enabled in your integration config.
+
+### What You Can Do Next
+
+Once vulnerabilities land in Openlane, you can link them to affected assets, create remediation tasks, and track resolution against SLAs. Saves you from manually gathering evidence when an auditor asks about SOC 2 CC7 (system monitoring) or ISO 27001 A.12.6 (technical vulnerability management).
+
+## Disconnect
+
+To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+
+## Troubleshooting
+
+- **Token exchange failure:** verify workload identity provider, audience, and subject token.
+- **Permission errors:** verify service account SCC read permissions at selected scope.
+- **No findings ingested:** verify source scope and finding filter configuration.
+
+## References
+
+- [Openlane GCP setup script](https://docs.theopenlane.io/integrations/setup/gcp/openlane-gcp-scc-setup.sh)
+- [Security Command Center overview](https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview)
+- [Security Command Center findings concepts](https://cloud.google.com/security-command-center/docs/concepts-findings)
+- [Google Cloud Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation)

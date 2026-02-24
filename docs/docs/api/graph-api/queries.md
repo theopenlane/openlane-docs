@@ -9547,6 +9547,97 @@ last<br />
 </tbody>
 </table>
 
+## trustCenterFAQ
+
+**Type:** [TrustCenterFAQ!](objects#trustcenterfaq)
+
+Look up trustCenterFAQ by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the trustCenterFAQ</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## trustCenterFAQs
+
+**Type:** [TrustCenterFAQConnection!](objects#trustcenterfaqconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#trustcenterfaqorder"><code>[TrustCenterFAQOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for TrustCenterFAQs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#trustcenterfaqwhereinput"><code>TrustCenterFAQWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for TrustCenterFAQs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## trustCenterNDARequest
 
 **Type:** [TrustCenterNDARequest!](objects#trustcenterndarequest)
