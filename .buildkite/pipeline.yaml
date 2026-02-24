@@ -45,6 +45,9 @@ steps:
         exit 0
       fi
 
+      echo "--- pre-committing changes"
+      pre-commit run --all-files
+
       echo "--- committing changes"
       # if on default branch create a new branch for a PR, else use the current branch
       if [ "${BUILDKITE_BRANCH}" == "$DEFAULT_BRANCH" ]; then
