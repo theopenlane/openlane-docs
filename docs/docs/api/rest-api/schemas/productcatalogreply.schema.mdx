@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"addons":{"additionalProperties":{"properties":{"audience":{"type":"string"},"billing":{"properties":{"prices":{"items":{"properties":{"interval":{"type":"string"},"lookup_key":{"type":"string"},"metadata":{"additionalProperties":{"type":"string"},"type":"object"},"nickname":{"type":"string"},"price_id":{"type":"string"},"unit_amount":{"format":"int64","type":"integer"}},"type":"object"},"type":"array"}},"type":"object"},"description":{"type":"string"},"display_name":{"type":"string"},"include_with_trial":{"type":"boolean"},"lookup_key":{"type":"string"},"marketing_description":{"type":"string"},"personal_org":{"type":"boolean"},"product_id":{"type":"string"},"usage":{"nullable":true,"properties":{"evidence_storage_gb":{"format":"int64","type":"integer"},"record_count":{"format":"int64","type":"integer"}},"type":"object"}},"type":"object"},"type":"object"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"modules":{"additionalProperties":{"properties":{"audience":{"type":"string"},"billing":{"properties":{"prices":{"items":{"properties":{"interval":{"type":"string"},"lookup_key":{"type":"string"},"metadata":{"additionalProperties":{"type":"string"},"type":"object"},"nickname":{"type":"string"},"price_id":{"type":"string"},"unit_amount":{"format":"int64","type":"integer"}},"type":"object"},"type":"array"}},"type":"object"},"description":{"type":"string"},"display_name":{"type":"string"},"include_with_trial":{"type":"boolean"},"lookup_key":{"type":"string"},"marketing_description":{"type":"string"},"personal_org":{"type":"boolean"},"product_id":{"type":"string"},"usage":{"nullable":true,"properties":{"evidence_storage_gb":{"format":"int64","type":"integer"},"record_count":{"format":"int64","type":"integer"}},"type":"object"}},"type":"object"},"type":"object"},"sha":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"},"version":{"type":"string"}},"type":"object","title":"ProductCatalogReply"}}
-  schemaType={"response"}
+  {...require("./productcatalogreply.Schema.json")}
 >
-
+  
 </Schema>
+            

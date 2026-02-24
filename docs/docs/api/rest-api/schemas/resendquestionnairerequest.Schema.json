@@ -1,0 +1,1 @@
+{"schema":{"properties":{"assessment_id":{"description":"The ID of the assessment","type":"string"},"email":{"description":"The email address associated with the assessment response","type":"string"}},"type":"object","title":"ResendQuestionnaireRequest"},"schemaType":"response"}

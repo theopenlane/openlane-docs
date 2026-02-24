@@ -1,0 +1,1 @@
+{"parameters":[{"description":"The path to the acme challenge","example":"01J4HMNDSZCCQBTY93BF9CBF5D","in":"path","name":"path","required":true,"schema":{"type":"string"}}]}

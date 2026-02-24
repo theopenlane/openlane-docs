@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"examples":{"success":{"value":{}}},"schema":{"title":"GitHubAppInstallRequest"}}},"description":"Request body"}}

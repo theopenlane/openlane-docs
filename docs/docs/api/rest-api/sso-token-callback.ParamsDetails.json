@@ -1,0 +1,1 @@
+{"parameters":[{"description":"authorization code","example":"abc","in":"query","name":"code","schema":{"type":"string"}},{"description":"state value","example":"state123","in":"query","name":"state","schema":{"type":"string"}}]}

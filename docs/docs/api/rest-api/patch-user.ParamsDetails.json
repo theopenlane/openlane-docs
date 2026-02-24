@@ -1,0 +1,1 @@
+{"parameters":[{"description":"The unique identifier for the user","in":"path","name":"id","required":true,"schema":{"type":"string"}}]}

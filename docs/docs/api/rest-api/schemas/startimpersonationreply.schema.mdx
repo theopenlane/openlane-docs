@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"expires_at":{"description":"When the impersonation token expires","format":"date-time","type":"string"},"message":{"description":"Success message","type":"string"},"session_id":{"description":"The impersonation session ID","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token":{"description":"The impersonation token","type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"StartImpersonationReply"}}
-  schemaType={"response"}
+  {...require("./startimpersonationreply.Schema.json")}
 >
-
+  
 </Schema>
+            
