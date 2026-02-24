@@ -539,6 +539,12 @@ Properties by which Asset connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>display_name</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>physical_location</td>
 <td>
 

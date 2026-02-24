@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/favicon.ico"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -42,21 +43,18 @@ Get favicon.ico for the website
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={undefined}
+  {...require("./favicon.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/octet-stream":{"schema":{"type":"string"}}},"description":"Static file content"},"default":{"description":""}}}
+  {...require("./favicon.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 

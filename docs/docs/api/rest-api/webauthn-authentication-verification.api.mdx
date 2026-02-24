@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/authentication/verification"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -43,28 +44,25 @@ Complete WebAuthn authentication process by verifying the authentication respons
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={{"content":{"application/json":{"examples":{"success":{"value":{"authenticatorAttachment":"platform","id":"JBqvfKoo_U-McTi9NxkpDTncmL2Lg6fczz6PD7WesCHQPg","rawId":"JBqvfKoo_U-McTi9NxkpDTncmL2Lg6fczz6PD7WesCHQPg","response":{"authenticatorData":"SZYN5YgOjGh0NBcPZHZgW4_krrmihjLHmVzzuoMdl2NdAAAAALraVWanqkAfvZZFYZpVEg0AIiQar3yqKP1PjHE4vTcZKQ053Ji9i4On3M8-jw-1nrAh0D6lAQIDJiABIVggldWfMY_HYjHCZuSgBcDj-Zqcnipy1SJVNlhvmZBxvpciWCDh1UJNz9Uyr6jqeQhApJ3krQCvDNoeXaH0ffa9KapYdw","clientDataJSON":"eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiTWZlN1l6aS0zUU9rMDM4VHh3dVVvaTBaaURIZEdaOGlGNVhXc09UTTVnbyIsIm9yaWdpbiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMSIsImNyb3NzT3JpZ2luIjpmYWxzZX0","signature":"MEUCIQDKIueQAhZmGtPTmzp7QQRjZU_XLUqHdGj3QKRMOxRNbwIgF1hkJJ5y7cA3RGZe9x4n9vXq_L9x8eR1r9cE4w1uJ_A","userHandle":"dXNlci1pZC0xMjM0NQ"},"type":"public-key"}}},"schema":{"properties":{"authenticatorAttachment":{"description":"How the authenticator is attached","type":"string"},"clientExtensionResults":{"additionalProperties":{"description":"Extension results"},"description":"Extension results","type":"object"},"id":{"description":"The credential ID","type":"string"},"rawId":{"description":"The raw credential ID","type":"string"},"response":{"description":"The authenticator response","properties":{"authenticatorData":{"description":"The authenticator data","type":"string"},"clientDataJSON":{"description":"The client data JSON","type":"string"},"signature":{"description":"The assertion signature","type":"string"},"userHandle":{"description":"The user handle","type":"string"}},"type":"object"},"type":{"description":"The credential type, should be 'public-key'","type":"string"}},"type":"object","title":"WebauthnLoginFinishRequest"}}},"description":"Request body"}}
+  {...require("./webauthn-authentication-verification.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"access_token":"access_token_here","message":"Authentication successful","refresh_token":"refresh_token_here","success":true}}},"schema":{"properties":{"access_token":{"description":"The access token to be used for authentication","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"refresh_token":{"description":"The refresh token to be used to refresh the access token after it expires","type":"string"},"session":{"description":"The short-lived session token required for authentication","type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"token_type":{"description":"The type of token being returned","example":"bearer","type":"string"},"unverified":{"type":"boolean"}},"type":"object","title":"WebauthnLoginResponse"}}},"description":"Success"},"default":{"description":""}}}
+  {...require("./webauthn-authentication-verification.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 

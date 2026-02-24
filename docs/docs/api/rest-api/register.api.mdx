@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/v1/register"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -43,28 +44,25 @@ Register creates a new user in the database with the specified password, allowin
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={{"content":{"application/json":{"examples":{"success":{"value":{"email":"sfunky@theopenlane.io","first_name":"Sarah","last_name":"Funk","password":"mitb!","token":"invite_token_example"}}},"schema":{"properties":{"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"first_name":{"description":"The first name of the user","example":"Jon","type":"string"},"last_name":{"description":"The last name of the user","example":"Snow","type":"string"},"password":{"description":"The password to be used for authentication after registration","example":"Wint3rIsC0ming123!","type":"string"},"token":{"description":"A newly invited user can use this to join a org as at the same time they are creating their account","nullable":true,"type":"string"}},"type":"object","title":"RegisterRequest"}}},"description":"Request body"}}
+  {...require("./register.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"email":"jsnow@example.com","message":"User registered successfully","success":true,"user_id":"01K9MJ23ND309PAN0ZV1ECFYT7"}}},"schema":{"properties":{"email":{"description":"The email address of the user","example":"jsnow@example.com","type":"string"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"},"user_id":{"description":"The ID of the user that was created","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","type":"string"}},"type":"object","title":"RegisterReply"}}},"description":"Success"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"},"default":{"description":""}}}
+  {...require("./register.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 

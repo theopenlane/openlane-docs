@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"object_id":{"description":"The ID of the object to check access for","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","type":"string"},"object_type":{"description":"The type of object to check access for, e.g. organization, program, procedure, etc","example":"organization","type":"string"},"relation":{"description":"The relation to check access for, e.g. can_view, can_edit","example":"can_view","type":"string"},"subject_type":{"description":"The type of subject to check access for, e.g. service, user","example":"user","type":"string"}},"type":"object","title":"AccountAccessRequest"}}
-  schemaType={"response"}
+  {...require("./accountaccessrequest.Schema.json")}
 >
-
+  
 </Schema>
+            

@@ -19,6 +19,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -32,7 +33,7 @@ import Heading from "@theme/Heading";
   path={"/questionnaire/resend"}
   context={"endpoint"}
 >
-
+  
 </MethodEndpoint>
 
 
@@ -43,28 +44,25 @@ Resend questionnaire authentication email with new JWT token
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
   parameters={undefined}
 >
-
+  
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={{"content":{"application/json":{"examples":{"success":{"value":{"assessment_id":"01JCQR8Z9X1A2B3C4D5E6F7G8H","email":"vendor@example.com"}}},"schema":{"properties":{"assessment_id":{"description":"The ID of the assessment","type":"string"},"email":{"description":"The email address associated with the assessment response","type":"string"}},"type":"object","title":"ResendQuestionnaireRequest"}}},"description":"Request body"}}
+  {...require("./resend-questionnaire-email.RequestSchema.json")}
 >
-
+  
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"content":{"application/json":{"examples":{"success":{"value":{"message":"Verification email resent successfully","success":true}}},"schema":{"properties":{"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"message":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"unverified":{"type":"boolean"}},"type":"object","title":"ResendReply"}}},"description":"Success"},"default":{"description":""}}}
+  {...require("./resend-questionnaire-email.StatusCodes.json")}
 >
-
+  
 </StatusCodes>
 
