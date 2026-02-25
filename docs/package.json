@@ -38,7 +38,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "use-deep-compare-effect": "^1.8.1",
-    "utf-8-validate": "6.0.5",
+    "utf-8-validate": "6.0.6",
     "@fontsource/outfit": "^5.2.5",
     "mermaid": "^11.11.0",
     "@mermaid-js/layout-elk": "^0.2.0",
