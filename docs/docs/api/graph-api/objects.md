@@ -13890,19 +13890,46 @@ scopeID<br />
 <tr>
 <td>
 integrationID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>integration that owns this directory account</p>
+<p>optional integration that owns this directory account when sourced by an integration</p>
 </td>
 </tr>
 <tr>
 <td>
 directorySyncRunID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>sync run that produced this snapshot</p>
+<p>optional sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>optional platform associated with this directory account</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolderID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>deduplicated identity holder linked to this directory account</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory source label set by the integration (e.g. google_workspace, github, slack)</p>
 </td>
 </tr>
 <tr>
@@ -13939,6 +13966,33 @@ displayName<br />
 </td>
 <td>
 <p>provider supplied display name</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the avatar supplied by the directory provider</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>local avatar file identifier, takes precedence over avatar_remote_url</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time the directory account avatar was last updated</p>
 </td>
 </tr>
 <tr>
@@ -14106,7 +14160,7 @@ scope<br />
 <tr>
 <td>
 integration<br />
-<a href="objects#integration"><code>Integration!</code></a>
+<a href="objects#integration"><code>Integration</code></a>
 </td>
 <td>
 <p>integration that owns this directory account</p>
@@ -14115,10 +14169,37 @@ integration<br />
 <tr>
 <td>
 directorySyncRun<br />
-<a href="objects#directorysyncrun"><code>DirectorySyncRun!</code></a>
+<a href="objects#directorysyncrun"><code>DirectorySyncRun</code></a>
 </td>
 <td>
 <p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>platform associated with this directory account</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolder<br />
+<a href="objects#identityholder"><code>IdentityHolder</code></a>
+</td>
+<td>
+<p>identity holder linked to this directory account</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+<p>local avatar file for the directory account</p>
 </td>
 </tr>
 <tr>
@@ -14186,6 +14267,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+findings<br />
+<a href="objects#findingconnection"><code>FindingConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#findingorder"><code>[FindingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Findings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#findingwhereinput"><code>FindingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Findings returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -14625,6 +14778,15 @@ integrationID<br />
 </tr>
 <tr>
 <td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>optional platform associated with this directory group</p>
+</td>
+</tr>
+<tr>
+<td>
 directorySyncRunID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
@@ -14792,6 +14954,15 @@ directorySyncRun<br />
 </td>
 <td>
 <p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>platform associated with this directory group</p>
 </td>
 </tr>
 <tr>
@@ -15289,6 +15460,15 @@ integrationID<br />
 </tr>
 <tr>
 <td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>optional platform associated with this directory membership</p>
+</td>
+</tr>
+<tr>
+<td>
 directorySyncRunID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
@@ -15420,6 +15600,15 @@ directorySyncRun<br />
 </td>
 <td>
 <p>sync run that produced this snapshot</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>platform associated with this directory membership</p>
 </td>
 </tr>
 <tr>
@@ -15863,6 +16052,15 @@ integrationID<br />
 </tr>
 <tr>
 <td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>optional platform associated with this sync run</p>
+</td>
+</tr>
+<tr>
+<td>
 status<br />
 <a href="enums#directorysyncrundirectorysyncrunstatus"><code>DirectorySyncRunDirectorySyncRunStatus!</code></a>
 </td>
@@ -15976,6 +16174,15 @@ integration<br />
 </td>
 <td>
 <p>integration that executed this sync run</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>platform associated with this sync run</p>
 </td>
 </tr>
 <tr>
@@ -27077,6 +27284,150 @@ where<br />
 </tr>
 <tr>
 <td>
+directoryAccounts<br />
+<a href="objects#directoryaccountconnection"><code>DirectoryAccountConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccountorder"><code>[DirectoryAccountOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>DirectoryAccountWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 remediations<br />
 <a href="objects#remediationconnection"><code>RemediationConnection!</code></a>
 </td>
@@ -34142,6 +34493,78 @@ where<br />
 </tr>
 <tr>
 <td>
+directoryAccounts<br />
+<a href="objects#directoryaccountconnection"><code>DirectoryAccountConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccountorder"><code>[DirectoryAccountOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>DirectoryAccountWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 platforms<br />
 <a href="objects#platformconnection"><code>PlatformConnection!</code></a>
 </td>
@@ -34349,6 +34772,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Tasks returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+findings<br />
+<a href="objects#findingconnection"><code>FindingConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#findingorder"><code>[FindingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Findings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#findingwhereinput"><code>FindingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Findings returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -34997,6 +35492,15 @@ integrationType<br />
 </td>
 <td>
 <p>the type of integration, such as communicattion, storage, SCM, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>optional platform associated with this integration for downstream inventory linkage</p>
 </td>
 </tr>
 <tr>
@@ -35969,6 +36473,15 @@ where<br />
 </tbody>
 </table>
 
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>platform associated with this integration</p>
 </td>
 </tr>
 <tr>
@@ -45260,6 +45773,78 @@ where<br />
 <tr>
 <td>
 riskCreators<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderCreators<br />
 <a href="objects#groupconnection"><code>GroupConnection!</code></a>
 </td>
 <td>
@@ -54751,6 +55336,366 @@ where<br />
 </td>
 <td>
 <p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+integrations<br />
+<a href="objects#integrationconnection"><code>IntegrationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#integrationorder"><code>[IntegrationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#integrationwhereinput"><code>IntegrationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRuns<br />
+<a href="objects#directorysyncrunconnection"><code>DirectorySyncRunConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorysyncrunorder"><code>[DirectorySyncRunOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectorySyncRuns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorysyncrunwhereinput"><code>DirectorySyncRunWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectorySyncRuns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryAccounts<br />
+<a href="objects#directoryaccountconnection"><code>DirectoryAccountConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directoryaccountorder"><code>[DirectoryAccountOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>DirectoryAccountWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryAccounts returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryGroups<br />
+<a href="objects#directorygroupconnection"><code>DirectoryGroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorygrouporder"><code>[DirectoryGroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorygroupwhereinput"><code>DirectoryGroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryGroups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryMemberships<br />
+<a href="objects#directorymembershipconnection"><code>DirectoryMembershipConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#directorymembershiporder"><code>[DirectoryMembershipOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for DirectoryMemberships returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#directorymembershipwhereinput"><code>DirectoryMembershipWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for DirectoryMemberships returned from the connection.</p>
 </td>
 </tr>
 </tbody>
