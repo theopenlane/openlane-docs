@@ -1,0 +1,1 @@
+{"parameters":[{"description":"Schema URI (e.g., urn:ietf:params:scim:schemas:core:2.0:User)","in":"path","name":"uri","required":true,"schema":{"type":"string"}}]}

@@ -1,0 +1,1 @@
+{"schema":{"properties":{"reason":{"description":"Optional reason for ending the session","type":"string"},"session_id":{"description":"The session ID to end","type":"string"}},"type":"object","title":"EndImpersonationRequest"},"schemaType":"response"}

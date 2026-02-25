@@ -25,7 +25,7 @@ steps:
       #!/bin/bash
       set -e
       set -o pipefail
-      
+
       echo "--- running task generate"
       task bun-install && task generate
       EXIT_CODE=$?

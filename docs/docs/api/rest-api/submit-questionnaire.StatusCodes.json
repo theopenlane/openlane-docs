@@ -1,0 +1,1 @@
+{"responses":{"200":{"content":{"application/json":{"examples":{"success":{"value":{"document_data_id":"","status":""}}},"schema":{"properties":{"completed_at":{"type":"string"},"document_data_id":{"type":"string"},"status":{"type":"string"}},"type":"object","title":"SubmitQuestionnaireResponse"}}},"description":"Success"},"default":{"description":""}}}

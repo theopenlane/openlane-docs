@@ -1,0 +1,1 @@
+{"parameters":[{"description":"authorization code","example":"abc","in":"query","name":"code","schema":{"type":"string"}},{"description":"state value","example":"state123","in":"query","name":"state","schema":{"type":"string"}},{"description":"organization id","example":"01J4EXD5MM60CX4YNYN0DEE3Y1","in":"query","name":"organization_id","schema":{"type":"string"}}]}

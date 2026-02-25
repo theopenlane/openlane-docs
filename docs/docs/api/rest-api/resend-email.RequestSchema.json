@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"examples":{"success":{"value":{"email":"cercei.lannister@theopenlane.io"}}},"schema":{"properties":{"email":{"description":"The email address to resend the verification email to, must match the email address on the existing account","type":"string"}},"type":"object","title":"ResendRequest"}}},"description":"Request body"}}

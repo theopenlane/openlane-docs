@@ -1,0 +1,1 @@
+{"responses":{"200":{"content":{"text/plain":{"schema":{"type":"string"}}},"description":"ACME challenge response"},"default":{"description":""}}}

@@ -1,0 +1,1 @@
+{"responses":{"200":{"content":{"application/json":{"schema":{"properties":{"data":{"description":"The data returned by the GraphQL operation","type":"object"},"errors":{"items":{"description":"An array of error objects if the operation failed","type":"object"},"type":"array"}},"type":"object"}}},"description":"Successful GraphQL response"},"default":{"description":""}}}

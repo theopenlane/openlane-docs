@@ -1,0 +1,1 @@
+{"parameters":[{"description":"Name of the resource type (e.g., User, Group)","in":"path","name":"name","required":true,"schema":{"enum":["User","Group"],"type":"string"}}]}

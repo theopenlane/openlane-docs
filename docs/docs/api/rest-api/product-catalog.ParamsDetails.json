@@ -1,0 +1,1 @@
+{"parameters":[{"description":"Whether to include beta products in the catalog","example":"false","in":"query","name":"include_beta","schema":{"type":"string"}},{"description":"Whether to include private products in the catalog","example":"false","in":"query","name":"include_private","schema":{"type":"string"}}]}

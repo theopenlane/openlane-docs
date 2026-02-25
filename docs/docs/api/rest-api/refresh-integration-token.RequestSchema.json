@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"examples":{"success":{"value":{"Provider":"github"}}},"schema":{"properties":{"Provider":{"description":"OAuth provider (github, slack, etc.)","example":"github","type":"string"}},"type":"object","title":"RefreshIntegrationTokenRequest"}}},"description":"Request body"}}

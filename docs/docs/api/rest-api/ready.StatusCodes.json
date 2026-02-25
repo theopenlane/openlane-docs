@@ -1,0 +1,1 @@
+{"responses":{"200":{"content":{"application/json":{"schema":{"type":"object"}}},"description":"Health check status"},"default":{"description":""}}}

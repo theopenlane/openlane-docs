@@ -1,0 +1,1 @@
+{"schema":{"properties":{"email":{"description":"The email address associated with the account","example":"jsnow@example.com","type":"string"}},"type":"object","title":"WebauthnLoginRequest"},"schemaType":"response"}

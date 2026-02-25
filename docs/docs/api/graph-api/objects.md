@@ -3713,6 +3713,15 @@ name<br />
 </tr>
 <tr>
 <td>
+displayName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the display name of the asset</p>
+</td>
+</tr>
+<tr>
+<td>
 description<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -43127,7 +43136,7 @@ topicPatterns<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
-<p>soiree topic names or wildcard patterns this preference applies to; empty means all</p>
+<p>topic names or wildcard patterns this preference applies to; empty means all</p>
 </td>
 </tr>
 <tr>
@@ -43136,7 +43145,7 @@ topicOverrides<br />
 <a href="scalars#map"><code>Map</code></a>
 </td>
 <td>
-<p>optional per-topic overrides (e.g. template_id, cadence, priority) keyed by soiree topic name</p>
+<p>optional per-topic overrides (e.g. template_id, cadence, priority) keyed by topic name</p>
 </td>
 </tr>
 <tr>
@@ -43617,7 +43626,7 @@ topicPattern<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
 <td>
-<p>soiree topic name or wildcard pattern this template targets</p>
+<p>topic name or wildcard pattern this template targets</p>
 </td>
 </tr>
 <tr>

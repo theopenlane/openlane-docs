@@ -25,8 +25,8 @@ import Heading from "@theme/Heading";
 
 
 <Schema
-  schema={{"properties":{"discovery_url":{"type":"string"},"enforced":{"type":"boolean"},"error":{"description":"The error message if the request was unsuccessful","type":"string"},"error_code":{"description":"The error code if the request was unsuccessful","type":"string"},"is_org_owner":{"type":"boolean"},"organization_id":{"type":"string"},"provider":{"type":"string"},"saml_signin_url":{"type":"string"},"success":{"description":"Whether or not the request was successful or not","type":"boolean"},"tfa_enforced":{"type":"boolean"},"unverified":{"type":"boolean"},"user_tfa_enabled":{"type":"boolean"}},"type":"object","title":"SSOStatusReply"}}
-  schemaType={"response"}
+  {...require("./ssostatusreply.Schema.json")}
 >
-
+  
 </Schema>
+            
