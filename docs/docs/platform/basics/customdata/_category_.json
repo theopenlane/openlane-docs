@@ -1,0 +1,9 @@
+{
+  "label": "Custom Data",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Manage custom data fields and configurations for your organization"
+  },
+  "collapsed": true
+}

@@ -37,7 +37,11 @@ A subprocessor is any third-party that processes personal data for you:
 
 ## Adding Subprocessors
 
-You can add subprocessors from your existing vendor list or create new ones. For each subprocessor, include:
+From the [subprocessor management page](https://console.theopenlane.io/trust-center/subprocessors), you can manage your list of subprocessors.
+
+![Subprocessor Screenshot](../../../static/img/screenshots/trustcenter/subprocessors.png )
+
+You can add subprocessors from our existing vendor list or create new ones. For each subprocessor, include:
 
 - Name and description of what they do
 - Countries where data is processed
@@ -55,11 +59,13 @@ Categorize subprocessors so visitors can quickly understand what each vendor doe
 - **Support**: Customer support platforms
 - **Storage**: Data storage and backup services
 
+:::note
+ Need a category that doesn't exist? You can create custom categories to fit your specific vendor landscape using the [custom enums](https://console.theopenlane.io/organization-settings/custom-data?tab=enums) feature. Trust center subprcessor categories are based on the `Trust Center Subprocessor Kind` enum. Adding a new value to this enum will allow you to use that category when adding subprocessors. To read more about custom enums and how to use them, check out our documentation [here](https://docs.theopenlane.io/platform/basics/custom-data/custom-enums).
+:::
+
 ## Keeping the List Current
 
 Update your subprocessor list when you add or remove vendors that process customer data. Consider building this into your vendor onboarding process.
-
-You can export the list to CSV for external use.
 
 ## Best Practices
 
@@ -67,3 +73,31 @@ You can export the list to CSV for external use.
 - Provide clear descriptions of what each vendor does
 - Accurately list the countries where data is processed
 - Review the list periodically for accuracy
+
+## Embedding Subprocessor Information
+
+In order to better manage your subprocessors in one location, you can embed the subprocessor information directly into your privacy policy or other relevant documentation. This allows customers to easily access the information without navigating away from your site.
+
+From the [subprocessor management page](https://console.theopenlane.io/trust-center/subprocessors), you can generate an embed code that can be placed in your privacy policy. This ensures that the information is always up-to-date and easily accessible to your customers.
+
+![Embed Subprocessor Screenshot](../../../static/img/screenshots/trustcenter/subprocessors_embed.png)
+
+Example:
+
+```html
+<script src="https://trust.theopenlane.net/embed/subprocessors.js"
+  data-domain="trust.theopenlane.net/<org-slug>"
+  data-theme="auto"
+  defer>
+</script>
+```
+
+When implementing the embed code, keep the following in mind:
+
+1. If you use a strict CSP, allow scripts from: `trust.theopenlane.net`
+1. Updates may take up to 5 minutes to reflect due to caching
+1. Set data-theme to "light", "dark", or "auto" (default, follows OS preference).
+
+Subprocessors information will be automatically updated as your make changes, ensuring that your customers always have access to the most current information about your data processing practices.
+
+
