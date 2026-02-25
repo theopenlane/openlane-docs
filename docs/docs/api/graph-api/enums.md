@@ -1727,6 +1727,12 @@ Properties by which DirectoryAccount connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>directory_name</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>external_id</td>
 <td>
 
