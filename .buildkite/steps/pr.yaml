@@ -7,7 +7,7 @@ steps:
     command: echo 'Creating PR for [branchName]'
     plugins:
       - envato/github-pull-request#v0.4.0:
-          title: "chore: generated client changes"
+          title: "chore: generated api docs update"
           head: "[branchName]"
           base: "main"
           repo: "theopenlane/openlane-docs"
