@@ -7761,6 +7761,15 @@ tags<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -7829,6 +7838,24 @@ status<br />
 </td>
 <td>
 <p>status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationStatus<br />
+<a href="enums#controlcontrolimplementationstatus"><code>ControlControlImplementationStatus</code></a>
+</td>
+<td>
+<p>OSCAL-aligned implementation status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>narrative describing current implementation state for OSCAL export</p>
 </td>
 </tr>
 <tr>
@@ -23348,6 +23375,15 @@ workflowEligibleMarker<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -28626,6 +28662,33 @@ displayName<br />
 </td>
 <td>
 <p>The group&#39;s displayed &#39;friendly&#39; name</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalRole<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>OSCAL role identifier used for role-based responsibility mapping</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>OSCAL party UUID linked to this group for responsibility mapping</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalContactUuids<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>OSCAL contact UUID references associated with this group</p>
 </td>
 </tr>
 <tr>
@@ -37290,6 +37353,15 @@ workflowEligibleMarker<br />
 </td>
 <td>
 <p>internal marker field for workflow eligibility, not exposed in API</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
 </td>
 </tr>
 <tr>
@@ -48553,6 +48625,78 @@ where<br />
 </tr>
 <tr>
 <td>
+systemDetails<br />
+<a href="objects#systemdetailconnection"><code>SystemDetailConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#systemdetailorder"><code>[SystemDetailOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#systemdetailwhereinput"><code>SystemDetailWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 procedures<br />
 <a href="objects#procedureconnection"><code>ProcedureConnection!</code></a>
 </td>
@@ -54247,6 +54391,15 @@ workflowEligibleMarker<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -56371,6 +56524,15 @@ platformOwner<br />
 </tr>
 <tr>
 <td>
+systemDetail<br />
+<a href="objects#systemdetail"><code>SystemDetail</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasPendingWorkflow<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
@@ -58326,6 +58488,15 @@ programKindID<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -59536,6 +59707,15 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+systemDetail<br />
+<a href="objects#systemdetail"><code>SystemDetail</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -63883,6 +64063,15 @@ scopeID<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -68103,6 +68292,15 @@ subscribers<br />
 </tr>
 <tr>
 <td>
+systemDetails<br />
+<a href="objects#systemdetailconnection"><code>SystemDetailConnection</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 tagDefinitions<br />
 <a href="objects#tagdefinitionconnection"><code>TagDefinitionConnection</code></a>
 </td>
@@ -68966,6 +69164,15 @@ tags<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -69034,6 +69241,24 @@ status<br />
 </td>
 <td>
 <p>status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationStatus<br />
+<a href="enums#subcontrolcontrolimplementationstatus"><code>SubcontrolControlImplementationStatus</code></a>
+</td>
+<td>
+<p>OSCAL-aligned implementation status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>narrative describing current implementation state for OSCAL export</p>
 </td>
 </tr>
 <tr>
@@ -71480,6 +71705,415 @@ subscriber<br />
 </tbody>
 </table>
 
+## SystemDetail
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+programID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>optional program anchor for this system detail</p>
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>optional platform anchor for this system detail</p>
+</td>
+</tr>
+<tr>
+<td>
+systemName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>system name used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+version<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>system version used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>system description used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundary<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>authorization boundary narrative for OSCAL export</p>
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevel<br />
+<a href="enums#systemdetailsystemsensitivitylevel"><code>SystemDetailSystemSensitivityLevel</code></a>
+</td>
+<td>
+<p>security sensitivity level of the system</p>
+</td>
+</tr>
+<tr>
+<td>
+lastReviewed<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when metadata was last reviewed</p>
+</td>
+</tr>
+<tr>
+<td>
+revisionHistory<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured revision history for OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalMetadataJSON<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>optional escape hatch for additional OSCAL metadata fields</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+program<br />
+<a href="objects#program"><code>Program</code></a>
+</td>
+<td>
+<p>optional program this detail belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+platform<br />
+<a href="objects#platform"><code>Platform</code></a>
+</td>
+<td>
+<p>optional platform this detail belongs to</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailBulkCreatePayload
+
+Return response for createBulkSystemDetail mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+systemDetails<br />
+<a href="objects#systemdetail"><code>[SystemDetail!]</code></a>
+</td>
+<td>
+<p>Created systemDetails</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailBulkDeletePayload
+
+Return response for deleteBulkSystemDetail mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted systemDetail IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailBulkUpdatePayload
+
+Return response for updateBulkSystemDetail mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+systemDetails<br />
+<a href="objects#systemdetail"><code>[SystemDetail!]</code></a>
+</td>
+<td>
+<p>Updated systemDetails</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated systemDetails</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#systemdetailedge"><code>[SystemDetailEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailCreatePayload
+
+Return response for createSystemDetail mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+systemDetail<br />
+<a href="objects#systemdetail"><code>SystemDetail!</code></a>
+</td>
+<td>
+<p>Created systemDetail</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailDeletePayload
+
+Return response for deleteSystemDetail mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted systemDetail ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#systemdetail"><code>SystemDetail</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailUpdatePayload
+
+Return response for updateSystemDetail mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+systemDetail<br />
+<a href="objects#systemdetail"><code>SystemDetail!</code></a>
+</td>
+<td>
+<p>Updated systemDetail</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TagDefinition
 
 
@@ -71921,6 +72555,15 @@ scopeID<br />
 </td>
 <td>
 <p>the scope of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
 </td>
 </tr>
 <tr>
