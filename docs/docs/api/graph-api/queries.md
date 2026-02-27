@@ -1209,6 +1209,29 @@ where<br />
 </tbody>
 </table>
 
+## controlDiff
+
+**Type:** [ControlDiffPayload!](objects#controldiffpayload)
+
+Compare a system-owned control between two framework revisions to see which fields changed
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#controldiffinput"><code>ControlDiffInput!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## controlImplementation
 
 **Type:** [ControlImplementation!](objects#controlimplementation)

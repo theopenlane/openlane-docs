@@ -1727,6 +1727,12 @@ Properties by which DirectoryAccount connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>directory_name</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>external_id</td>
 <td>
 
@@ -2971,6 +2977,30 @@ ExportExportFormat is enum for the field format
 </tbody>
 </table>
 
+## ExportExportMode
+
+ExportExportMode is enum for the field mode
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>FLAT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FOLDER</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ExportExportStatus
 
 ExportExportStatus is enum for the field status
@@ -3162,6 +3192,12 @@ Properties by which Export connections can be ordered.
 </tr>
 <tr>
 <td>status</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>mode</td>
 <td>
 
 </td>
@@ -4476,6 +4512,12 @@ NotificationNotificationTopic is enum for the field topic
 </tr>
 <tr>
 <td>EXPORT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>STANDARD_UPDATE</td>
 <td>
 
 </td>

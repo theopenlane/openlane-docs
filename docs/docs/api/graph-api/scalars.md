@@ -63,6 +63,10 @@ The EvidenceRequests scalar type that represents documents or artifacts that can
 
 The `ExampleEvidence` scalar type represents example evidence that can be used to satisfy the control
 
+## ExportMetadata
+
+ExportMetadata contains metadata for an export record
+
 ## Float
 
 The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).

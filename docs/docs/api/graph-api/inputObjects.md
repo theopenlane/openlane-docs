@@ -22344,6 +22344,45 @@ field<br />
 </tbody>
 </table>
 
+## ControlDiffInput
+
+ControlDiffInput is used to compare all controls under a standard across two revisions
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+standardID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the standard to compare controls for</p>
+</td>
+</tr>
+<tr>
+<td>
+oldRevision<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>base revision to compare from (e.g. &quot;v1.0.0&quot;)</p>
+</td>
+</tr>
+<tr>
+<td>
+newRevision<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>target revision to compare to (e.g. &quot;v2.0.0&quot;)</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlImplementationOrder
 
 Ordering options for ControlImplementation connections
@@ -34216,6 +34255,15 @@ scopeName<br />
 </tr>
 <tr>
 <td>
+directoryName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory source label set by the integration (e.g. google_workspace, github, slack)</p>
+</td>
+</tr>
+<tr>
+<td>
 externalID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -34248,6 +34296,24 @@ displayName<br />
 </td>
 <td>
 <p>provider supplied display name</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the avatar supplied by the directory provider</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time the directory account avatar was last updated</p>
 </td>
 </tr>
 <tr>
@@ -34406,7 +34472,7 @@ scopeID<br />
 <tr>
 <td>
 integrationID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -34415,7 +34481,34 @@ integrationID<br />
 <tr>
 <td>
 directorySyncRunID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFileID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -34424,6 +34517,15 @@ directorySyncRunID<br />
 <tr>
 <td>
 groupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+findingIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -34634,6 +34736,15 @@ directorySyncRunID<br />
 </tr>
 <tr>
 <td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 workflowObjectRefIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -34775,6 +34886,15 @@ integrationID<br />
 <td>
 directorySyncRunID<br />
 <a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -34959,6 +35079,15 @@ scopeID<br />
 <td>
 integrationID<br />
 <a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -36887,6 +37016,24 @@ filters<br />
 </tr>
 <tr>
 <td>
+mode<br />
+<a href="enums#exportexportmode"><code>ExportExportMode</code></a>
+</td>
+<td>
+<p>the mode of export, e.g., flat or folder</p>
+</td>
+</tr>
+<tr>
+<td>
+exportMetadata<br />
+<a href="scalars#exportmetadata"><code>ExportMetadata</code></a>
+</td>
+<td>
+<p>metadata for the export record</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -37926,6 +38073,24 @@ scanIDs<br />
 <tr>
 <td>
 taskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -39163,6 +39328,15 @@ entityIDs<br />
 </tr>
 <tr>
 <td>
+directoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 platformIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -39182,6 +39356,15 @@ campaignIDs<br />
 <tr>
 <td>
 taskIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+findingIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -41516,6 +41699,15 @@ riskCreatorIDs<br />
 </tr>
 <tr>
 <td>
+identityHolderCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 scheduledJobCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -43198,6 +43390,42 @@ taskIDs<br />
 <tr>
 <td>
 identityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -54845,6 +55073,24 @@ integrationIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+integrationIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 integrationIDEqualFold<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -54962,6 +55208,24 @@ directorySyncRunIDHasSuffix<br />
 </tr>
 <tr>
 <td>
+directorySyncRunIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 directorySyncRunIDEqualFold<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -54973,6 +55237,411 @@ directorySyncRunIDEqualFold<br />
 <td>
 directorySyncRunIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>platform_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+platformIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>identity_holder_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -55495,6 +56164,366 @@ displayNameEqualFold<br />
 <td>
 displayNameContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>avatar_remote_url field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURLContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>avatar_local_file_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>avatar_updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -56942,6 +57971,60 @@ hasDirectorySyncRunWith<br />
 </tr>
 <tr>
 <td>
+hasPlatform<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>platform edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasPlatformWith<br />
+<a href="inputObjects#platformwhereinput"><code>[PlatformWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolder<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>identity_holder edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolderWith<br />
+<a href="inputObjects#identityholderwhereinput"><code>[IdentityHolderWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAvatarFile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>avatar_file edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAvatarFileWith<br />
+<a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasGroups<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -56953,6 +58036,24 @@ hasGroups<br />
 <td>
 hasGroupsWith<br />
 <a href="inputObjects#directorygroupwhereinput"><code>[DirectoryGroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasFindings<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>findings edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasFindingsWith<br />
+<a href="inputObjects#findingwhereinput"><code>[FindingWhereInput!]</code></a>
 </td>
 <td>
 
@@ -58524,6 +59625,141 @@ integrationIDContainsFold<br />
 </tr>
 <tr>
 <td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>platform_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+platformIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 directorySyncRunID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -59633,6 +60869,24 @@ hasDirectorySyncRun<br />
 <td>
 hasDirectorySyncRunWith<br />
 <a href="inputObjects#directorysyncrunwhereinput"><code>[DirectorySyncRunWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPlatform<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>platform edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasPlatformWith<br />
+<a href="inputObjects#platformwhereinput"><code>[PlatformWhereInput!]</code></a>
 </td>
 <td>
 
@@ -62795,6 +64049,141 @@ integrationIDContainsFold<br />
 </tr>
 <tr>
 <td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>platform_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+platformIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 status<br />
 <a href="enums#directorysyncrundirectorysyncrunstatus"><code>DirectorySyncRunDirectorySyncRunStatus</code></a>
 </td>
@@ -63607,6 +64996,24 @@ hasIntegration<br />
 <td>
 hasIntegrationWith<br />
 <a href="inputObjects#integrationwhereinput"><code>[IntegrationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPlatform<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>platform edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasPlatformWith<br />
+<a href="inputObjects#platformwhereinput"><code>[PlatformWhereInput!]</code></a>
 </td>
 <td>
 
@@ -85581,6 +86988,42 @@ errorMessageContainsFold<br />
 </tr>
 <tr>
 <td>
+mode<br />
+<a href="enums#exportexportmode"><code>ExportExportMode</code></a>
+</td>
+<td>
+<p>mode field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+modeNEQ<br />
+<a href="enums#exportexportmode"><code>ExportExportMode</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+modeIn<br />
+<a href="enums#exportexportmode"><code>[ExportExportMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+modeNotIn<br />
+<a href="enums#exportexportmode"><code>[ExportExportMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -95864,6 +97307,42 @@ hasTasks<br />
 <td>
 hasTasksWith<br />
 <a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryAccounts<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_accounts edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryAccountsWith<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>[DirectoryAccountWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolders<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>identity_holders edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHoldersWith<br />
+<a href="inputObjects#identityholderwhereinput"><code>[IdentityHolderWhereInput!]</code></a>
 </td>
 <td>
 
@@ -106203,6 +107682,24 @@ hasEntitiesWith<br />
 </tr>
 <tr>
 <td>
+hasDirectoryAccounts<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_accounts edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryAccountsWith<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>[DirectoryAccountWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasPlatforms<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -106250,6 +107747,24 @@ hasTasks<br />
 <td>
 hasTasksWith<br />
 <a href="inputObjects#taskwhereinput"><code>[TaskWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasFindings<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>findings edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasFindingsWith<br />
+<a href="inputObjects#findingwhereinput"><code>[FindingWhereInput!]</code></a>
 </td>
 <td>
 
@@ -108298,6 +109813,141 @@ integrationTypeContainsFold<br />
 </tr>
 <tr>
 <td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>platform_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+platformIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -108579,6 +110229,24 @@ hasDirectorySyncRuns<br />
 <td>
 hasDirectorySyncRunsWith<br />
 <a href="inputObjects#directorysyncrunwhereinput"><code>[DirectorySyncRunWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPlatform<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>platform edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasPlatformWith<br />
+<a href="inputObjects#platformwhereinput"><code>[PlatformWhereInput!]</code></a>
 </td>
 <td>
 
@@ -136403,6 +138071,24 @@ hasRiskCreatorsWith<br />
 </tr>
 <tr>
 <td>
+hasIdentityHolderCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>identity_holder_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolderCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasScheduledJobCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -148110,6 +149796,96 @@ hasIdentityHolders<br />
 <td>
 hasIdentityHoldersWith<br />
 <a href="inputObjects#identityholderwhereinput"><code>[IdentityHolderWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIntegrations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>integrations edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIntegrationsWith<br />
+<a href="inputObjects#integrationwhereinput"><code>[IntegrationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectorySyncRuns<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_sync_runs edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectorySyncRunsWith<br />
+<a href="inputObjects#directorysyncrunwhereinput"><code>[DirectorySyncRunWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryAccounts<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_accounts edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryAccountsWith<br />
+<a href="inputObjects#directoryaccountwhereinput"><code>[DirectoryAccountWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryGroupsWith<br />
+<a href="inputObjects#directorygroupwhereinput"><code>[DirectoryGroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryMemberships<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_memberships edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryMembershipsWith<br />
+<a href="inputObjects#directorymembershipwhereinput"><code>[DirectoryMembershipWhereInput!]</code></a>
 </td>
 <td>
 
@@ -212968,6 +214744,24 @@ clearScopeName<br />
 </tr>
 <tr>
 <td>
+directoryName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory source label set by the integration (e.g. google_workspace, github, slack)</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 secondaryKey<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -213014,6 +214808,42 @@ displayName<br />
 <tr>
 <td>
 clearDisplayName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the avatar supplied by the directory provider</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAvatarRemoteURL<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarUpdatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time the directory account avatar was last updated</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAvatarUpdatedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -213283,6 +215113,42 @@ clearScope<br />
 </tr>
 <tr>
 <td>
+identityHolderID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearIdentityHolder<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAvatarFile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -213302,6 +215168,33 @@ removeGroupIDs<br />
 <tr>
 <td>
 clearGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addFindingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeFindingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearFindings<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -218171,6 +220064,24 @@ clearErrorMessage<br />
 </tr>
 <tr>
 <td>
+exportMetadata<br />
+<a href="scalars#exportmetadata"><code>ExportMetadata</code></a>
+</td>
+<td>
+<p>metadata for the export record</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExportMetadata<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -220470,6 +222381,60 @@ removeTaskIDs<br />
 <tr>
 <td>
 clearTasks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDirectoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryAccounts<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addIdentityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeIdentityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearIdentityHolders<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -223118,6 +225083,33 @@ clearEntities<br />
 </tr>
 <tr>
 <td>
+addDirectoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryAccounts<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addPlatformIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -223191,6 +225183,33 @@ removeTaskIDs<br />
 <tr>
 <td>
 clearTasks<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addFindingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeFindingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearFindings<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -227471,6 +229490,33 @@ clearRiskCreators<br />
 </tr>
 <tr>
 <td>
+addIdentityHolderCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeIdentityHolderCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearIdentityHolderCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addScheduledJobCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -231583,6 +233629,114 @@ removeIdentityHolderIDs<br />
 <tr>
 <td>
 clearIdentityHolders<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addIntegrationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeIntegrationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearIntegrations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDirectorySyncRunIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectorySyncRunIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectorySyncRuns<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDirectoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectoryAccountIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryAccounts<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDirectoryGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectoryGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryGroups<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
