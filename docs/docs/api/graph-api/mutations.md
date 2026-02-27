@@ -1745,6 +1745,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVSystemDetail
+
+**Type:** [SystemDetailBulkCreatePayload!](objects#systemdetailbulkcreatepayload)
+
+Create multiple new systemDetails via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the systemDetail</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVTagDefinition
 
 **Type:** [TagDefinitionBulkCreatePayload!](objects#tagdefinitionbulkcreatepayload)
@@ -3037,6 +3060,29 @@ input<br />
 </td>
 <td>
 <p>values of the subscriber</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkSystemDetail
+
+**Type:** [SystemDetailBulkCreatePayload!](objects#systemdetailbulkcreatepayload)
+
+Create multiple new systemDetails
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createsystemdetailinput"><code>[CreateSystemDetailInput!]</code></a>
+</td>
+<td>
+<p>values of the systemDetail</p>
 </td>
 </tr>
 </tbody>
@@ -5024,6 +5070,29 @@ input<br />
 </tbody>
 </table>
 
+## createSystemDetail
+
+**Type:** [SystemDetailCreatePayload!](objects#systemdetailcreatepayload)
+
+Create a new systemDetail
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createsystemdetailinput"><code>CreateSystemDetailInput!</code></a>
+</td>
+<td>
+<p>values of the systemDetail</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createTagDefinition
 
 **Type:** [TagDefinitionCreatePayload!](objects#tagdefinitioncreatepayload)
@@ -6696,6 +6765,29 @@ ids<br />
 </tbody>
 </table>
 
+## deleteBulkSystemDetail
+
+**Type:** [SystemDetailBulkDeletePayload!](objects#systemdetailbulkdeletepayload)
+
+Delete multiple systemDetails
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the systemDetails to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteBulkTask
 
 **Type:** [TaskBulkDeletePayload!](objects#taskbulkdeletepayload)
@@ -8310,6 +8402,29 @@ ownerID<br />
 </td>
 <td>
 <p>OwnerID of the subscriber</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteSystemDetail
+
+**Type:** [SystemDetailDeletePayload!](objects#systemdetaildeletepayload)
+
+Delete an existing systemDetail
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the systemDetail</p>
 </td>
 </tr>
 </tbody>
@@ -10314,6 +10429,29 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkCSVSystemDetail
+
+**Type:** [SystemDetailBulkUpdatePayload!](objects#systemdetailbulkupdatepayload)
+
+Update multiple existing systemDetails via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the systemDetail, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkCSVTask
 
 **Type:** [TaskBulkUpdatePayload!](objects#taskbulkupdatepayload)
@@ -11494,6 +11632,38 @@ input<br />
 </td>
 <td>
 <p>values to update the subprocessors with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkSystemDetail
+
+**Type:** [SystemDetailBulkUpdatePayload!](objects#systemdetailbulkupdatepayload)
+
+Update multiple existing systemDetails
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the systemDetails to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatesystemdetailinput"><code>UpdateSystemDetailInput!</code></a>
+</td>
+<td>
+<p>values to update the systemDetails with</p>
 </td>
 </tr>
 </tbody>
@@ -13901,6 +14071,38 @@ input<br />
 </td>
 <td>
 <p>New values for the subscriber</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateSystemDetail
+
+**Type:** [SystemDetailUpdatePayload!](objects#systemdetailupdatepayload)
+
+Update an existing systemDetail
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the systemDetail</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatesystemdetailinput"><code>UpdateSystemDetailInput!</code></a>
+</td>
+<td>
+<p>New values for the systemDetail</p>
 </td>
 </tr>
 </tbody>
