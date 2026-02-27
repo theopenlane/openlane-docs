@@ -85,6 +85,7 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [Subcontrol](objects#subcontrol)
 - [Subprocessor](objects#subprocessor)
 - [Subscriber](objects#subscriber)
+- [SystemDetail](objects#systemdetail)
 - [TFASetting](objects#tfasetting)
 - [TagDefinition](objects#tagdefinition)
 - [Task](objects#task)

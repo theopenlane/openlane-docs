@@ -1105,6 +1105,48 @@ Properties by which ControlCategory connections can be ordered.
 </tbody>
 </table>
 
+## ControlControlImplementationStatus
+
+ControlControlImplementationStatus is enum for the field implementation_status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PLANNED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IMPLEMENTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PARTIALLY_IMPLEMENTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INHERITED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NOT_APPLICABLE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlControlSource
 
 ControlControlSource is enum for the field source
@@ -3126,6 +3168,12 @@ ExportExportType is enum for the field export_type
 </tr>
 <tr>
 <td>SUBSCRIBER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SYSTEM_DETAIL</td>
 <td>
 
 </td>
@@ -6337,6 +6385,48 @@ StandardStandardStatus is enum for the field status
 </tbody>
 </table>
 
+## SubcontrolControlImplementationStatus
+
+SubcontrolControlImplementationStatus is enum for the field implementation_status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PLANNED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IMPLEMENTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PARTIALLY_IMPLEMENTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INHERITED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NOT_APPLICABLE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## SubcontrolControlSource
 
 SubcontrolControlSource is enum for the field source
@@ -6582,6 +6672,72 @@ Properties by which Subscriber connections can be ordered.
 </tr>
 <tr>
 <td>send_attempts</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailOrderField
+
+Properties by which SystemDetail connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>system_name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailSystemSensitivityLevel
+
+SystemDetailSystemSensitivityLevel is enum for the field sensitivity_level
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>LOW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MODERATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
 <td>
 
 </td>

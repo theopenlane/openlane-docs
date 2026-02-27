@@ -27011,6 +27011,141 @@ displayIDContainsFold<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -27733,6 +27868,195 @@ statusIsNil<br />
 <td>
 statusNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatus<br />
+<a href="enums#controlcontrolimplementationstatus"><code>ControlControlImplementationStatus</code></a>
+</td>
+<td>
+<p>implementation_status field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusNEQ<br />
+<a href="enums#controlcontrolimplementationstatus"><code>ControlControlImplementationStatus</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusIn<br />
+<a href="enums#controlcontrolimplementationstatus"><code>[ControlControlImplementationStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusNotIn<br />
+<a href="enums#controlcontrolimplementationstatus"><code>[ControlControlImplementationStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>implementation_description field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -33147,6 +33471,15 @@ tags<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -33206,6 +33539,24 @@ status<br />
 </td>
 <td>
 <p>status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationStatus<br />
+<a href="enums#controlcontrolimplementationstatus"><code>ControlControlImplementationStatus</code></a>
+</td>
+<td>
+<p>OSCAL-aligned implementation status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>narrative describing current implementation state for OSCAL export</p>
 </td>
 </tr>
 <tr>
@@ -34259,7 +34610,7 @@ directoryName<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>directory source label set by the integration (e.g. google_workspace, github, slack)</p>
+<p>directory source label set by the integration (e.g. googleworkspace, github, slack)</p>
 </td>
 </tr>
 <tr>
@@ -36760,6 +37111,15 @@ workflowEligibleMarker<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -37617,7 +37977,7 @@ source<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>system that produced the finding, e.g. gcp_scc</p>
+<p>system that produced the finding, e.g. gcpscc</p>
 </td>
 </tr>
 <tr>
@@ -38273,6 +38633,33 @@ displayName<br />
 </td>
 <td>
 <p>The group&#39;s displayed &#39;friendly&#39; name</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalRole<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>OSCAL role identifier used for role-based responsibility mapping</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>OSCAL party UUID linked to this group for responsibility mapping</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalContactUuids<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>OSCAL contact UUID references associated with this group</p>
 </td>
 </tr>
 <tr>
@@ -39607,6 +39994,15 @@ workflowEligibleMarker<br />
 </td>
 <td>
 <p>internal marker field for workflow eligibility, not exposed in API</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
 </td>
 </tr>
 <tr>
@@ -42032,6 +42428,15 @@ programIDs<br />
 </tr>
 <tr>
 <td>
+systemDetailIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 procedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -42975,6 +43380,15 @@ workflowEligibleMarker<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -43504,6 +43918,15 @@ platformOwnerID<br />
 
 </td>
 </tr>
+<tr>
+<td>
+systemDetailID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -43919,6 +44342,15 @@ programKindName<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -44173,6 +44605,15 @@ narrativeIDs<br />
 <td>
 actionPlanIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemDetailID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -45167,6 +45608,15 @@ scopeName<br />
 </td>
 <td>
 <p>the scope of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
 </td>
 </tr>
 <tr>
@@ -46219,6 +46669,15 @@ tags<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -46278,6 +46737,24 @@ status<br />
 </td>
 <td>
 <p>status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationStatus<br />
+<a href="enums#subcontrolcontrolimplementationstatus"><code>SubcontrolControlImplementationStatus</code></a>
+</td>
+<td>
+<p>OSCAL-aligned implementation status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>narrative describing current implementation state for OSCAL export</p>
 </td>
 </tr>
 <tr>
@@ -46795,6 +47272,127 @@ eventIDs<br />
 </tbody>
 </table>
 
+## CreateSystemDetailInput
+
+CreateSystemDetailInput is used for create SystemDetail object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+systemName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>system name used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+version<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>system version used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>system description used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundary<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>authorization boundary narrative for OSCAL export</p>
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevel<br />
+<a href="enums#systemdetailsystemsensitivitylevel"><code>SystemDetailSystemSensitivityLevel</code></a>
+</td>
+<td>
+<p>security sensitivity level of the system</p>
+</td>
+</tr>
+<tr>
+<td>
+lastReviewed<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when metadata was last reviewed</p>
+</td>
+</tr>
+<tr>
+<td>
+revisionHistory<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured revision history for OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalMetadataJSON<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>optional escape hatch for additional OSCAL metadata fields</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## CreateTagDefinitionInput
 
 CreateTagDefinitionInput is used for create TagDefinition object.
@@ -46915,6 +47513,15 @@ scopeName<br />
 </td>
 <td>
 <p>the scope of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
 </td>
 </tr>
 <tr>
@@ -84560,6 +85167,141 @@ workflowEligibleMarkerNotNil<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -100693,6 +101435,276 @@ displayNameContainsFold<br />
 </tr>
 <tr>
 <td>
+oscalRole<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>oscal_role field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalRoleContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>oscal_party_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 scimExternalID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -102003,6 +103015,15 @@ tagsHas<br />
 </td>
 <td>
 <p>Filter for tagsHas to contain a specific value</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalContactUuidsHas<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Filter for oscalContactUuidsHas to contain a specific value</p>
 </td>
 </tr>
 </tbody>
@@ -113485,6 +114506,141 @@ workflowEligibleMarkerIsNil<br />
 <td>
 workflowEligibleMarkerNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -138773,6 +139929,24 @@ hasProgramsWith<br />
 </tr>
 <tr>
 <td>
+hasSystemDetails<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>system_details edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSystemDetailsWith<br />
+<a href="inputObjects#systemdetailwhereinput"><code>[SystemDetailWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasProcedures<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -147778,6 +148952,141 @@ workflowEligibleMarkerNotNil<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -150030,6 +151339,24 @@ hasPlatformOwner<br />
 <td>
 hasPlatformOwnerWith<br />
 <a href="inputObjects#userwhereinput"><code>[UserWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSystemDetail<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>system_detail edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSystemDetailWith<br />
+<a href="inputObjects#systemdetailwhereinput"><code>[SystemDetailWhereInput!]</code></a>
 </td>
 <td>
 
@@ -155422,6 +156749,141 @@ programKindIDContainsFold<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -156918,6 +158380,24 @@ hasActionPlans<br />
 <td>
 hasActionPlansWith<br />
 <a href="inputObjects#actionplanwhereinput"><code>[ActionPlanWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSystemDetail<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>system_detail edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSystemDetailWith<br />
+<a href="inputObjects#systemdetailwhereinput"><code>[SystemDetailWhereInput!]</code></a>
 </td>
 <td>
 
@@ -167334,6 +168814,141 @@ scopeIDEqualFold<br />
 <td>
 scopeIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -178251,6 +179866,141 @@ displayIDContainsFold<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -178973,6 +180723,195 @@ statusIsNil<br />
 <td>
 statusNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatus<br />
+<a href="enums#subcontrolcontrolimplementationstatus"><code>SubcontrolControlImplementationStatus</code></a>
+</td>
+<td>
+<p>implementation_status field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusNEQ<br />
+<a href="enums#subcontrolcontrolimplementationstatus"><code>SubcontrolControlImplementationStatus</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusIn<br />
+<a href="enums#subcontrolcontrolimplementationstatus"><code>[SubcontrolControlImplementationStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusNotIn<br />
+<a href="enums#subcontrolcontrolimplementationstatus"><code>[SubcontrolControlImplementationStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>implementation_description field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescriptionContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -184209,6 +186148,1867 @@ tagsHas<br />
 </tbody>
 </table>
 
+## SystemDetailOrder
+
+Ordering options for SystemDetail connections
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+direction<br />
+<a href="enums#orderdirection"><code>OrderDirection!</code></a>
+</td>
+<td>
+<p>The ordering direction.</p>
+</td>
+</tr>
+<tr>
+<td>
+field<br />
+<a href="enums#systemdetailorderfield"><code>SystemDetailOrderField!</code></a>
+</td>
+<td>
+<p>The field by which to order SystemDetails.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SystemDetailWhereInput
+
+SystemDetailWhereInput is used for filtering SystemDetail objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#systemdetailwhereinput"><code>SystemDetailWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#systemdetailwhereinput"><code>[SystemDetailWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#systemdetailwhereinput"><code>[SystemDetailWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>display_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+displayIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>owner_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>program_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+programIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>platform_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+platformIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>system_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+systemNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+version<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>version field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+versionNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+versionContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+descriptionNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+descriptionContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundary<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>authorization_boundary field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundaryContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevel<br />
+<a href="enums#systemdetailsystemsensitivitylevel"><code>SystemDetailSystemSensitivityLevel</code></a>
+</td>
+<td>
+<p>sensitivity_level field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevelNEQ<br />
+<a href="enums#systemdetailsystemsensitivitylevel"><code>SystemDetailSystemSensitivityLevel</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevelIn<br />
+<a href="enums#systemdetailsystemsensitivitylevel"><code>[SystemDetailSystemSensitivityLevel!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevelNotIn<br />
+<a href="enums#systemdetailsystemsensitivitylevel"><code>[SystemDetailSystemSensitivityLevel!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevelIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevelNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewed<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>last_reviewed field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>owner edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasOwnerWith<br />
+<a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasProgram<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>program edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasProgramWith<br />
+<a href="inputObjects#programwhereinput"><code>[ProgramWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPlatform<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>platform edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasPlatformWith<br />
+<a href="inputObjects#platformwhereinput"><code>[PlatformWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tagsHas<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Filter for tagsHas to contain a specific value</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TagDefinitionOrder
 
 Ordering options for TagDefinition connections
@@ -187473,6 +191273,141 @@ scopeIDEqualFold<br />
 <td>
 scopeIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_uuid field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -212226,6 +216161,24 @@ clearTags<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalUUID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -212362,6 +216315,42 @@ status<br />
 <tr>
 <td>
 clearStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatus<br />
+<a href="enums#controlcontrolimplementationstatus"><code>ControlControlImplementationStatus</code></a>
+</td>
+<td>
+<p>OSCAL-aligned implementation status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+clearImplementationStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>narrative describing current implementation state for OSCAL export</p>
+</td>
+</tr>
+<tr>
+<td>
+clearImplementationDescription<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -214748,7 +218737,7 @@ directoryName<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>directory source label set by the integration (e.g. google_workspace, github, slack)</p>
+<p>directory source label set by the integration (e.g. googleworkspace, github, slack)</p>
 </td>
 </tr>
 <tr>
@@ -219529,6 +223518,24 @@ clearWorkflowEligibleMarker<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalUUID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -221313,7 +225320,7 @@ source<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
-<p>system that produced the finding, e.g. gcp_scc</p>
+<p>system that produced the finding, e.g. gcpscc</p>
 </td>
 </tr>
 <tr>
@@ -222668,6 +226675,69 @@ displayName<br />
 </td>
 <td>
 <p>The group&#39;s displayed &#39;friendly&#39; name</p>
+</td>
+</tr>
+<tr>
+<td>
+oscalRole<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>OSCAL role identifier used for role-based responsibility mapping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearOscalRole<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalPartyUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>OSCAL party UUID linked to this group for responsibility mapping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearOscalPartyUUID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalContactUuids<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>OSCAL contact UUID references associated with this group</p>
+</td>
+</tr>
+<tr>
+<td>
+appendOscalContactUuids<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearOscalContactUuids<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -225754,6 +229824,24 @@ workflowEligibleMarker<br />
 <tr>
 <td>
 clearWorkflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalUUID<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -230444,6 +234532,33 @@ clearPrograms<br />
 </tr>
 <tr>
 <td>
+addSystemDetailIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSystemDetailIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSystemDetails<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addProcedureIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -232719,6 +236834,24 @@ clearWorkflowEligibleMarker<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalUUID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -233950,6 +238083,24 @@ clearPlatformOwner<br />
 
 </td>
 </tr>
+<tr>
+<td>
+systemDetailID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSystemDetail<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -234986,6 +239137,24 @@ clearProgramKindName<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalUUID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -235590,6 +239759,24 @@ removeActionPlanIDs<br />
 <tr>
 <td>
 clearActionPlans<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemDetailID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSystemDetail<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -237658,6 +241845,24 @@ scopeName<br />
 <tr>
 <td>
 clearScopeName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalUUID<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -239982,6 +244187,24 @@ clearTags<br />
 </tr>
 <tr>
 <td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalUUID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 title<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -240118,6 +244341,42 @@ status<br />
 <tr>
 <td>
 clearStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationStatus<br />
+<a href="enums#subcontrolcontrolimplementationstatus"><code>SubcontrolControlImplementationStatus</code></a>
+</td>
+<td>
+<p>OSCAL-aligned implementation status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+clearImplementationStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+implementationDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>narrative describing current implementation state for OSCAL export</p>
+</td>
+</tr>
+<tr>
+<td>
+clearImplementationDescription<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -241332,6 +245591,226 @@ clearEvents<br />
 </tbody>
 </table>
 
+## UpdateSystemDetailInput
+
+UpdateSystemDetailInput is used for update SystemDetail object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+appendTags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTags<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>system name used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+version<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>system version used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+clearVersion<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>system description used in OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDescription<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+authorizationBoundary<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>authorization boundary narrative for OSCAL export</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAuthorizationBoundary<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+sensitivityLevel<br />
+<a href="enums#systemdetailsystemsensitivitylevel"><code>SystemDetailSystemSensitivityLevel</code></a>
+</td>
+<td>
+<p>security sensitivity level of the system</p>
+</td>
+</tr>
+<tr>
+<td>
+clearSensitivityLevel<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewed<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when metadata was last reviewed</p>
+</td>
+</tr>
+<tr>
+<td>
+clearLastReviewed<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+revisionHistory<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+<p>structured revision history for OSCAL metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+appendRevisionHistory<br />
+<a href="scalars#any"><code>[Any!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRevisionHistory<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+oscalMetadataJSON<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>optional escape hatch for additional OSCAL metadata fields</p>
+</td>
+</tr>
+<tr>
+<td>
+clearOscalMetadataJSON<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+programID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearProgram<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearPlatform<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## UpdateTagDefinitionInput
 
 UpdateTagDefinitionInput is used for update TagDefinition object.
@@ -241547,6 +246026,24 @@ scopeName<br />
 <tr>
 <td>
 clearScopeName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalUUID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external UUID for deterministic OSCAL export and round-tripping</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalUUID<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
