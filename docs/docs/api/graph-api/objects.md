@@ -45588,6 +45588,15 @@ compliance<br />
 </tr>
 <tr>
 <td>
+demoRequested<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 organization<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>

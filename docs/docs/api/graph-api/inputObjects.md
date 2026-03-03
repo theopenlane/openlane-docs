@@ -42073,6 +42073,15 @@ compliance<br />
 </tr>
 <tr>
 <td>
+demoRequested<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 organizationID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -135156,6 +135165,42 @@ companyNameEqualFold<br />
 <td>
 companyNameContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+demoRequested<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>demo_requested field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+demoRequestedNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+demoRequestedIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+demoRequestedNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
