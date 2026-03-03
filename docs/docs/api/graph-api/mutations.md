@@ -3885,6 +3885,15 @@ entityTypeName<br />
 <p>entity type name allows the name of the entity type to be passed in over an id</p>
 </td>
 </tr>
+<tr>
+<td>
+entityFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -4252,6 +4261,15 @@ input<br />
 </td>
 <td>
 <p>values of the identityHolder</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolderFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -6236,6 +6254,29 @@ ids<br />
 </tbody>
 </table>
 
+## deleteBulkFinding
+
+**Type:** [FindingBulkDeletePayload!](objects#findingbulkdeletepayload)
+
+Delete multiple findings
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the findings to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteBulkGroup
 
 **Type:** [GroupBulkDeletePayload!](objects#groupbulkdeletepayload)
@@ -6650,6 +6691,29 @@ ids<br />
 </tbody>
 </table>
 
+## deleteBulkRemediation
+
+**Type:** [RemediationBulkDeletePayload!](objects#remediationbulkdeletepayload)
+
+Delete multiple remediations
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the remediations to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteBulkRisk
 
 **Type:** [RiskBulkDeletePayload!](objects#riskbulkdeletepayload)
@@ -6967,6 +7031,29 @@ ids<br />
 </td>
 <td>
 <p>IDs of the userSettings to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteBulkVulnerability
+
+**Type:** [VulnerabilityBulkDeletePayload!](objects#vulnerabilitybulkdeletepayload)
+
+Delete multiple vulnerabilities
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the vulnerabilities to delete</p>
 </td>
 </tr>
 </tbody>
@@ -9900,6 +9987,29 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkCSVFinding
+
+**Type:** [FindingBulkUpdatePayload!](objects#findingbulkupdatepayload)
+
+Update multiple existing findings via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the finding, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkCSVGroup
 
 **Type:** [GroupBulkUpdatePayload!](objects#groupbulkupdatepayload)
@@ -10314,6 +10424,29 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkCSVRemediation
+
+**Type:** [RemediationBulkUpdatePayload!](objects#remediationbulkupdatepayload)
+
+Update multiple existing remediations via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the remediation, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkCSVRisk
 
 **Type:** [RiskBulkUpdatePayload!](objects#riskbulkupdatepayload)
@@ -10613,6 +10746,29 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkCSVVulnerability
+
+**Type:** [VulnerabilityBulkUpdatePayload!](objects#vulnerabilitybulkupdatepayload)
+
+Update multiple existing vulnerabilities via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the vulnerability, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkCustomDomain
 
 **Type:** [CustomDomainBulkUpdatePayload!](objects#customdomainbulkupdatepayload)
@@ -10896,6 +11052,38 @@ input<br />
 </td>
 <td>
 <p>values to update the evidence with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkFinding
+
+**Type:** [FindingBulkUpdatePayload!](objects#findingbulkupdatepayload)
+
+Update multiple existing findings
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the findings to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatefindinginput"><code>UpdateFindingInput!</code></a>
+</td>
+<td>
+<p>values to update the findings with</p>
 </td>
 </tr>
 </tbody>
@@ -11477,6 +11665,38 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkRemediation
+
+**Type:** [RemediationBulkUpdatePayload!](objects#remediationbulkupdatepayload)
+
+Update multiple existing remediations
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the remediations to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updateremediationinput"><code>UpdateRemediationInput!</code></a>
+</td>
+<td>
+<p>values to update the remediations with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkRisk
 
 **Type:** [RiskBulkUpdatePayload!](objects#riskbulkupdatepayload)
@@ -11888,6 +12108,38 @@ input<br />
 </td>
 <td>
 <p>values to update the userSettings with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkVulnerability
+
+**Type:** [VulnerabilityBulkUpdatePayload!](objects#vulnerabilitybulkupdatepayload)
+
+Update multiple existing vulnerabilities
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the vulnerabilities to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatevulnerabilityinput"><code>UpdateVulnerabilityInput!</code></a>
+</td>
+<td>
+<p>values to update the vulnerabilities with</p>
 </td>
 </tr>
 </tbody>
@@ -12516,6 +12768,15 @@ input<br />
 <p>New values for the entity</p>
 </td>
 </tr>
+<tr>
+<td>
+entityFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -12925,6 +13186,15 @@ input<br />
 </td>
 <td>
 <p>New values for the identityHolder</p>
+</td>
+</tr>
+<tr>
+<td>
+identityHolderFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
