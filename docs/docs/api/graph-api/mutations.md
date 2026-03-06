@@ -10447,6 +10447,29 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkCSVReview
+
+**Type:** [ReviewBulkUpdatePayload!](objects#reviewbulkupdatepayload)
+
+Update multiple existing reviews via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the review, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkCSVRisk
 
 **Type:** [RiskBulkUpdatePayload!](objects#riskbulkupdatepayload)
@@ -11692,6 +11715,38 @@ input<br />
 </td>
 <td>
 <p>values to update the remediations with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkReview
+
+**Type:** [ReviewBulkUpdatePayload!](objects#reviewbulkupdatepayload)
+
+Update multiple existing reviews
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the reviews to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatereviewinput"><code>UpdateReviewInput!</code></a>
+</td>
+<td>
+<p>values to update the reviews with</p>
 </td>
 </tr>
 </tbody>

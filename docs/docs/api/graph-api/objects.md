@@ -64540,6 +64540,36 @@ reviews<br />
 </tbody>
 </table>
 
+## ReviewBulkUpdatePayload
+
+Return response for updateBulkReview mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+reviews<br />
+<a href="objects#review"><code>[Review!]</code></a>
+</td>
+<td>
+<p>Updated reviews</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated reviews</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ReviewConnection
 
 A connection to a list of items.
