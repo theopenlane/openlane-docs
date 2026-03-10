@@ -14051,6 +14051,15 @@ input<br />
 <p>New values for the review</p>
 </td>
 </tr>
+<tr>
+<td>
+reviewFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the review</p>
+</td>
+</tr>
 </tbody>
 </table>
 
