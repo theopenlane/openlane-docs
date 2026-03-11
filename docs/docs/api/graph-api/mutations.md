@@ -4087,6 +4087,15 @@ input<br />
 <p>values of the group</p>
 </td>
 </tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -13124,6 +13133,15 @@ input<br />
 <p>New values for the group</p>
 </td>
 </tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -14049,6 +14067,15 @@ input<br />
 </td>
 <td>
 <p>New values for the review</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the review</p>
 </td>
 </tr>
 </tbody>

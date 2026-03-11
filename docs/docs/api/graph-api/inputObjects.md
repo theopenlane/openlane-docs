@@ -39258,6 +39258,15 @@ integrationIDs<br />
 </tr>
 <tr>
 <td>
+avatarFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 fileIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -101588,6 +101597,141 @@ isManagedNotNil<br />
 </tr>
 <tr>
 <td>
+avatarLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>avatar_local_file_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarLocalFileIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 displayName<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -103183,6 +103327,24 @@ hasIntegrations<br />
 <td>
 hasIntegrationsWith<br />
 <a href="inputObjects#integrationwhereinput"><code>[IntegrationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAvatarFile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>avatar_file edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAvatarFileWith<br />
+<a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
 </td>
 <td>
 
@@ -228480,6 +228642,24 @@ removeIntegrationIDs<br />
 <tr>
 <td>
 clearIntegrations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAvatarFile<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>

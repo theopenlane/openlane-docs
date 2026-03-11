@@ -29221,6 +29221,15 @@ logoURL<br />
 </tr>
 <tr>
 <td>
+avatarLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The group&#39;s local avatar file id, takes precedence over the gravatar logo URL</p>
+</td>
+</tr>
+<tr>
+<td>
 displayName<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -32258,6 +32267,15 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
 
 </td>
 </tr>
