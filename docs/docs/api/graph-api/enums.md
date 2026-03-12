@@ -2909,6 +2909,12 @@ EvidenceEvidenceStatus is enum for the field status
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>DRAFT</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>SUBMITTED</td>
 <td>
 
@@ -7152,6 +7158,12 @@ Properties by which TrustCenterFAQ connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DISPLAY_ORDER</td>
 <td>
 
 </td>
