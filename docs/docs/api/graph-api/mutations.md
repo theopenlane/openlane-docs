@@ -4087,6 +4087,15 @@ input<br />
 <p>values of the group</p>
 </td>
 </tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6718,6 +6727,29 @@ ids<br />
 </td>
 <td>
 <p>IDs of the remediations to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteBulkReview
+
+**Type:** [ReviewBulkDeletePayload!](objects#reviewbulkdeletepayload)
+
+Delete multiple existing reviews (soft-deletes them and removes FGA tuples)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the reviews to delete</p>
 </td>
 </tr>
 </tbody>
@@ -13124,6 +13156,15 @@ input<br />
 <p>New values for the group</p>
 </td>
 </tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -14049,6 +14090,15 @@ input<br />
 </td>
 <td>
 <p>New values for the review</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the review</p>
 </td>
 </tr>
 </tbody>

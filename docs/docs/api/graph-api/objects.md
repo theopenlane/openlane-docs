@@ -29221,6 +29221,15 @@ logoURL<br />
 </tr>
 <tr>
 <td>
+avatarLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>The group&#39;s local avatar file id, takes precedence over the gravatar logo URL</p>
+</td>
+</tr>
+<tr>
+<td>
 displayName<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -32258,6 +32267,15 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -64535,6 +64553,27 @@ reviews<br />
 </td>
 <td>
 <p>Created reviews</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ReviewBulkDeletePayload
+
+Return response for deleteBulkReview mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted trustCenterNDARequest IDs</p>
 </td>
 </tr>
 </tbody>
