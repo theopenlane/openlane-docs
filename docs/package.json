@@ -27,7 +27,7 @@
     "@docusaurus/theme-mermaid": "3.9.2",
     "@docusaurus/plugin-debug": "3.6.3",
     "@mdx-js/react": "^3.0.0",
-    "bufferutil": "4.0.9",
+    "bufferutil": "4.1.0",
     "clsx": "^2.0.0",
     "docusaurus-graphql-plugin": "0.9.0",
     "docusaurus-lunr-search": "3.6.0",
