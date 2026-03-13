@@ -2519,6 +2519,12 @@ Properties by which EmailTemplate connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>revision</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>KEY</td>
 <td>
 
@@ -2550,6 +2556,42 @@ Properties by which EmailTemplate connections can be ordered.
 </tr>
 <tr>
 <td>VERSION</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEMPLATE_CONTEXT</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## EmailTemplateTemplateContext
+
+EmailTemplateTemplateContext is enum for the field template_context
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>CAMPAIGN_RECIPIENT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRANSACTIONAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>WORKFLOW_ACTION</td>
 <td>
 
 </td>
@@ -3799,6 +3841,48 @@ IdentityHolderUserStatus is enum for the field status
 </tbody>
 </table>
 
+## IntegrationIntegrationStatus
+
+IntegrationIntegrationStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CONNECTED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ERRORED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DELETED</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## IntegrationOrderField
 
 Properties by which Integration connections can be ordered.
@@ -3834,6 +3918,36 @@ Properties by which Integration connections can be ordered.
 </tr>
 <tr>
 <td>integration_type</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>definition_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>definition_version</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>definition_slug</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>family</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>status</td>
 <td>
 
 </td>
@@ -4919,6 +5033,12 @@ Properties by which NotificationTemplate connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>revision</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>KEY</td>
 <td>
 
@@ -4962,6 +5082,42 @@ Properties by which NotificationTemplate connections can be ordered.
 </tr>
 <tr>
 <td>VERSION</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEMPLATE_CONTEXT</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## NotificationTemplateTemplateContext
+
+NotificationTemplateTemplateContext is enum for the field template_context
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>CAMPAIGN_RECIPIENT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRANSACTIONAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>WORKFLOW_ACTION</td>
 <td>
 
 </td>
