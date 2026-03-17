@@ -262,3 +262,8 @@ html .table-of-contents ul {
   height: 100vh;
   width: 100vw;
 }
+
+article .markdown a {
+  text-decoration: underline;
+  color: #1877f2;
+}
