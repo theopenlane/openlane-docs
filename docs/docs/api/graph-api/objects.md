@@ -19300,6 +19300,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+revision<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>revision of the object as a semver (e.g. v1.0.0), by default any update will bump the patch version, unless the revision_bump field is set</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -19458,6 +19467,24 @@ version<br />
 </td>
 <td>
 <p>template version</p>
+</td>
+</tr>
+<tr>
+<td>
+templateContext<br />
+<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext</code></a>
+</td>
+<td>
+<p>runtime data context defining available variable keys for this template</p>
+</td>
+</tr>
+<tr>
+<td>
+defaults<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>static variable values merged as base layer at render time; call-site data takes precedence</p>
 </td>
 </tr>
 <tr>
@@ -19678,6 +19705,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for NotificationTemplates returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+files<br />
+<a href="objects#fileconnection"><code>FileConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#fileorder"><code>[FileOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Files returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#filewhereinput"><code>FileWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Files returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -36456,6 +36555,60 @@ metadata<br />
 </tr>
 <tr>
 <td>
+definitionID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the canonical definition identifier for the installation</p>
+</td>
+</tr>
+<tr>
+<td>
+definitionVersion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the definition version recorded for this installation</p>
+</td>
+</tr>
+<tr>
+<td>
+definitionSlug<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the human-readable definition slug recorded for this installation</p>
+</td>
+</tr>
+<tr>
+<td>
+family<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the denormalized family label for the installation definition</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#integrationintegrationstatus"><code>IntegrationIntegrationStatus!</code></a>
+</td>
+<td>
+<p>the lifecycle status of the installation</p>
+</td>
+</tr>
+<tr>
+<td>
+providerMetadataSnapshot<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>snapshot of definition metadata captured on the installation</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -44996,6 +45149,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+revision<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>revision of the object as a semver (e.g. v1.0.0), by default any update will bump the patch version, unless the revision_bump field is set</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -45199,6 +45361,24 @@ version<br />
 </td>
 <td>
 <p>template version</p>
+</td>
+</tr>
+<tr>
+<td>
+templateContext<br />
+<a href="enums#notificationtemplatetemplatecontext"><code>NotificationTemplateTemplateContext</code></a>
+</td>
+<td>
+<p>runtime data context defining available variable keys for this template</p>
+</td>
+</tr>
+<tr>
+<td>
+defaults<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>static variable values merged as base layer at render time; call-site data takes precedence</p>
 </td>
 </tr>
 <tr>
