@@ -7932,11 +7932,29 @@ implementationDescription<br />
 </tr>
 <tr>
 <td>
+publicRepresentation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>a public representation of the control that can be shared with external parties without revealing sensitive information</p>
+</td>
+</tr>
+<tr>
+<td>
 source<br />
 <a href="enums#controlcontrolsource"><code>ControlControlSource</code></a>
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>name of the source of the controls if not directly from a standard</p>
 </td>
 </tr>
 <tr>
@@ -26717,11 +26735,49 @@ scopeID<br />
 </tr>
 <tr>
 <td>
+findingStatusName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the status of the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+findingStatusID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the status of the finding</p>
+</td>
+</tr>
+<tr>
+<td>
 externalID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>external identifier from the integration source for the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<blockquote>Deprecated: Use `finding_status_name` instead.</blockquote>
+
+<p>lifecycle status of the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+securityLevel<br />
+<a href="enums#findingsecuritylevel"><code>FindingSecurityLevel</code></a>
+</td>
+<td>
+<p>incoming source severity</p>
 </td>
 </tr>
 <tr>
@@ -26983,15 +27039,6 @@ remediationSLA<br />
 </td>
 <td>
 <p>remediation service level agreement in days</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lifecycle status of the finding</p>
 </td>
 </tr>
 <tr>
@@ -27285,6 +27332,15 @@ environment<br />
 <tr>
 <td>
 scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+findingStatus<br />
 <a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
@@ -51340,6 +51396,78 @@ where<br />
 </tr>
 <tr>
 <td>
+slaDefinitions<br />
+<a href="objects#sladefinitionconnection"><code>SLADefinitionConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#sladefinitionorder"><code>[SLADefinitionOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for SLADefinitions returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#sladefinitionwhereinput"><code>SLADefinitionWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for SLADefinitions returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 subprocessors<br />
 <a href="objects#subprocessorconnection"><code>SubprocessorConnection!</code></a>
 </td>
@@ -69403,6 +69531,568 @@ text<br />
 </tbody>
 </table>
 
+## SLADefinition
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+displayID<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>a shortened prefixed id field to use as a human readable identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the organization id that owns the object</p>
+</td>
+</tr>
+<tr>
+<td>
+slaDefinitionSeverityLevelName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the severity_level of the sla_definition</p>
+</td>
+</tr>
+<tr>
+<td>
+slaDefinitionSeverityLevelID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the severity_level of the sla_definition</p>
+</td>
+</tr>
+<tr>
+<td>
+slaDays<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>remediation service level agreement in days for the severity level</p>
+</td>
+</tr>
+<tr>
+<td>
+securityLevel<br />
+<a href="enums#sladefinitionsecuritylevel"><code>SLADefinitionSecurityLevel!</code></a>
+</td>
+<td>
+<p>incoming source severity</p>
+</td>
+</tr>
+<tr>
+<td>
+owner<br />
+<a href="objects#organization"><code>Organization</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+slaDefinitionSeverityLevel<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionBulkCreatePayload
+
+Return response for createBulkSLADefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+slaDefinitions<br />
+<a href="objects#sladefinition"><code>[SLADefinition!]</code></a>
+</td>
+<td>
+<p>Created slaDefinitions</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionBulkDeletePayload
+
+Return response for deleteBulkSLADefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>Deleted slaDefinition IDs</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionBulkUpdatePayload
+
+Return response for updateBulkSLADefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+slaDefinitions<br />
+<a href="objects#sladefinition"><code>[SLADefinition!]</code></a>
+</td>
+<td>
+<p>Updated slaDefinitions</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+<p>IDs of the updated slaDefinitions</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#sladefinitionedge"><code>[SLADefinitionEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionCreatePayload
+
+Return response for createSLADefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+slaDefinition<br />
+<a href="objects#sladefinition"><code>SLADefinition!</code></a>
+</td>
+<td>
+<p>Created slaDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionDeletePayload
+
+Return response for deleteSLADefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+deletedID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>Deleted slaDefinition ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#sladefinition"><code>SLADefinition</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionUpdatePayload
+
+Return response for updateSLADefinition mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+slaDefinition<br />
+<a href="objects#sladefinition"><code>SLADefinition!</code></a>
+</td>
+<td>
+<p>Updated slaDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Standard
 
 
@@ -70280,11 +70970,29 @@ implementationDescription<br />
 </tr>
 <tr>
 <td>
+publicRepresentation<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>a public representation of the control that can be shared with external parties without revealing sensitive information</p>
+</td>
+</tr>
+<tr>
+<td>
 source<br />
 <a href="enums#subcontrolcontrolsource"><code>SubcontrolControlSource</code></a>
 </td>
 <td>
 <p>source of the control, e.g. framework, template, custom, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+sourceName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>name of the source of the controls if not directly from a standard</p>
 </td>
 </tr>
 <tr>
@@ -79984,6 +80692,15 @@ faviconLocalFileID<br />
 </tr>
 <tr>
 <td>
+heroImageLocalFileID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Image to be used for the trust center top banner, will override brand gradient if set, recommended 1600 × 600 px (8:3 aspect ratio)</p>
+</td>
+</tr>
+<tr>
+<td>
 themeMode<br />
 <a href="enums#trustcentersettingtrustcenterthememode"><code>TrustCenterSettingTrustCenterThemeMode</code></a>
 </td>
@@ -80264,6 +80981,15 @@ logoFile<br />
 <tr>
 <td>
 faviconFile<br />
+<a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+heroImageFile<br />
 <a href="objects#file"><code>File</code></a>
 </td>
 <td>
@@ -83694,11 +84420,49 @@ scopeID<br />
 </tr>
 <tr>
 <td>
+vulnerabilityStatusName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the status of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilityStatusID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the status of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
 externalOwnerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>owner of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<blockquote>Deprecated: Use `vulnerability_status_name` instead.</blockquote>
+
+<p>lifecycle status of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+securityLevel<br />
+<a href="enums#vulnerabilitysecuritylevel"><code>VulnerabilitySecurityLevel</code></a>
+</td>
+<td>
+<p>lifecycle status of the vulnerability</p>
 </td>
 </tr>
 <tr>
@@ -83789,15 +84553,6 @@ priority<br />
 </td>
 <td>
 <p>priority assigned to the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lifecycle status of the vulnerability</p>
 </td>
 </tr>
 <tr>
@@ -84190,6 +84945,15 @@ environment<br />
 <tr>
 <td>
 scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilityStatus<br />
 <a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>

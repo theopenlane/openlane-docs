@@ -1676,6 +1676,29 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVSLADefinition
+
+**Type:** [SLADefinitionBulkCreatePayload!](objects#sladefinitionbulkcreatepayload)
+
+Create multiple new slaDefinitions via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the slaDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVSubcontrol
 
 **Type:** [SubcontrolBulkCreatePayload!](objects#subcontrolbulkcreatepayload)
@@ -2991,6 +3014,29 @@ input<br />
 </td>
 <td>
 <p>values of the scheduledJob</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkSLADefinition
+
+**Type:** [SLADefinitionBulkCreatePayload!](objects#sladefinitionbulkcreatepayload)
+
+Create multiple new slaDefinitions
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createsladefinitioninput"><code>[CreateSLADefinitionInput!]</code></a>
+</td>
+<td>
+<p>values of the slaDefinition</p>
 </td>
 </tr>
 </tbody>
@@ -4996,6 +5042,29 @@ input<br />
 </tbody>
 </table>
 
+## createSLADefinition
+
+**Type:** [SLADefinitionCreatePayload!](objects#sladefinitioncreatepayload)
+
+Create a new slaDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createsladefinitioninput"><code>CreateSLADefinitionInput!</code></a>
+</td>
+<td>
+<p>values of the slaDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createStandard
 
 **Type:** [StandardCreatePayload!](objects#standardcreatepayload)
@@ -5479,6 +5548,15 @@ faviconFile<br />
 
 </td>
 </tr>
+<tr>
+<td>
+heroImageFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5514,6 +5592,15 @@ logoFile<br />
 <tr>
 <td>
 faviconFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+heroImageFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
 <td>
@@ -6819,6 +6906,29 @@ ids<br />
 </td>
 <td>
 <p>IDs of the scheduledJobs to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteBulkSLADefinition
+
+**Type:** [SLADefinitionBulkDeletePayload!](objects#sladefinitionbulkdeletepayload)
+
+Delete multiple slaDefinitions
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the slaDefinitions to delete</p>
 </td>
 </tr>
 </tbody>
@@ -8429,6 +8539,29 @@ id<br />
 </td>
 <td>
 <p>ID of the scheduledJobRun</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteSLADefinition
+
+**Type:** [SLADefinitionDeletePayload!](objects#sladefinitiondeletepayload)
+
+Delete an existing slaDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the slaDefinition</p>
 </td>
 </tr>
 </tbody>
@@ -10580,6 +10713,29 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkCSVSLADefinition
+
+**Type:** [SLADefinitionBulkUpdatePayload!](objects#sladefinitionbulkupdatepayload)
+
+Update multiple existing slaDefinitions via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the slaDefinition, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkCSVSubcontrol
 
 **Type:** [SubcontrolBulkUpdatePayload!](objects#subcontrolbulkupdatepayload)
@@ -11884,6 +12040,38 @@ input<br />
 </td>
 <td>
 <p>values to update the scheduledJobs with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkSLADefinition
+
+**Type:** [SLADefinitionBulkUpdatePayload!](objects#sladefinitionbulkupdatepayload)
+
+Update multiple existing slaDefinitions
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the slaDefinitions to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatesladefinitioninput"><code>UpdateSLADefinitionInput!</code></a>
+</td>
+<td>
+<p>values to update the slaDefinitions with</p>
 </td>
 </tr>
 </tbody>
@@ -14273,6 +14461,38 @@ input<br />
 </tbody>
 </table>
 
+## updateSLADefinition
+
+**Type:** [SLADefinitionUpdatePayload!](objects#sladefinitionupdatepayload)
+
+Update an existing slaDefinition
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the slaDefinition</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatesladefinitioninput"><code>UpdateSLADefinitionInput!</code></a>
+</td>
+<td>
+<p>New values for the slaDefinition</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateStandard
 
 **Type:** [StandardUpdatePayload!](objects#standardupdatepayload)
@@ -15032,6 +15252,15 @@ faviconFile<br />
 
 </td>
 </tr>
+<tr>
+<td>
+heroImageFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15076,6 +15305,15 @@ logoFile<br />
 <tr>
 <td>
 faviconFile<br />
+<a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+heroImageFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
 <td>
