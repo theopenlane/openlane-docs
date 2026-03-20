@@ -78,6 +78,7 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [Remediation](objects#remediation)
 - [Review](objects#review)
 - [Risk](objects#risk)
+- [SLADefinition](objects#sladefinition)
 - [Scan](objects#scan)
 - [ScheduledJob](objects#scheduledjob)
 - [ScheduledJobRun](objects#scheduledjobrun)
