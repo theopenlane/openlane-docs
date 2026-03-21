@@ -3161,6 +3161,12 @@ ExportExportType is enum for the field export_type
 </td>
 </tr>
 <tr>
+<td>CONTACT</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>CONTROL</td>
 <td>
 
@@ -3401,6 +3407,12 @@ Properties by which Finding connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>security_level</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>external_owner_id</td>
 <td>
 
@@ -3414,6 +3426,48 @@ Properties by which Finding connections can be ordered.
 </tr>
 <tr>
 <td>severity</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## FindingSecurityLevel
+
+FindingSecurityLevel is enum for the field security_level
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>NONE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LOW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MEDIUM</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CRITICAL</td>
 <td>
 
 </td>
@@ -6469,6 +6523,84 @@ ScheduledJobRunScheduledJobRunStatus is enum for the field status
 </tbody>
 </table>
 
+## SLADefinitionOrderField
+
+Properties by which SLADefinition connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>sla_days</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>security_level</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## SLADefinitionSecurityLevel
+
+SLADefinitionSecurityLevel is enum for the field security_level
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>NONE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LOW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MEDIUM</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CRITICAL</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## StandardOrderField
 
 Properties by which Standard connections can be ordered.
@@ -7919,6 +8051,12 @@ Properties by which Vulnerability connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>security_level</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>external_id</td>
 <td>
 
@@ -7938,6 +8076,48 @@ Properties by which Vulnerability connections can be ordered.
 </tr>
 <tr>
 <td>severity</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## VulnerabilitySecurityLevel
+
+VulnerabilitySecurityLevel is enum for the field security_level
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>NONE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LOW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MEDIUM</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CRITICAL</td>
 <td>
 
 </td>
