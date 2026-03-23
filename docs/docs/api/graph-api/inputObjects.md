@@ -31214,6 +31214,60 @@ hasResponsiblePartyWith<br />
 </tr>
 <tr>
 <td>
+hasReviews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>reviews edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasReviewsWith<br />
+<a href="inputObjects#reviewwhereinput"><code>[ReviewWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRemediations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>remediations edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationsWith<br />
+<a href="inputObjects#remediationwhereinput"><code>[RemediationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasScans<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>scans edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasScansWith<br />
+<a href="inputObjects#scanwhereinput"><code>[ScanWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -31394,24 +31448,6 @@ hasAssetsWith<br />
 </tr>
 <tr>
 <td>
-hasScans<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>scans edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasScansWith<br />
-<a href="inputObjects#scanwhereinput"><code>[ScanWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasEntities<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -31459,42 +31495,6 @@ hasCampaigns<br />
 <td>
 hasCampaignsWith<br />
 <a href="inputObjects#campaignwhereinput"><code>[CampaignWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasRemediations<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>remediations edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasRemediationsWith<br />
-<a href="inputObjects#remediationwhereinput"><code>[RemediationWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasReviews<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>reviews edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasReviewsWith<br />
-<a href="inputObjects#reviewwhereinput"><code>[ReviewWhereInput!]</code></a>
 </td>
 <td>
 
@@ -34290,6 +34290,33 @@ responsiblePartyID<br />
 </tr>
 <tr>
 <td>
+reviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+remediationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -34380,15 +34407,6 @@ assetIDs<br />
 </tr>
 <tr>
 <td>
-scanIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 entityIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -34408,24 +34426,6 @@ identityHolderIDs<br />
 <tr>
 <td>
 campaignIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-remediationIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-reviewIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -46849,6 +46849,15 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 generatedByPlatformID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -47755,6 +47764,33 @@ delegateID<br />
 <td>
 responsiblePartyID<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+remediationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -176320,6 +176356,24 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasGeneratedByPlatform<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -187268,6 +187322,60 @@ hasResponsibleParty<br />
 <td>
 hasResponsiblePartyWith<br />
 <a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasReviews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>reviews edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasReviewsWith<br />
+<a href="inputObjects#reviewwhereinput"><code>[ReviewWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRemediations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>remediations edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationsWith<br />
+<a href="inputObjects#remediationwhereinput"><code>[RemediationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasScans<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>scans edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasScansWith<br />
+<a href="inputObjects#scanwhereinput"><code>[ScanWhereInput!]</code></a>
 </td>
 <td>
 
@@ -221545,6 +221653,87 @@ clearResponsibleParty<br />
 </tr>
 <tr>
 <td>
+addReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRemediationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRemediationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRemediations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addScanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeScanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearScans<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -221752,33 +221941,6 @@ clearAssets<br />
 </tr>
 <tr>
 <td>
-addScanIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeScanIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearScans<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addEntityIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -221852,60 +222014,6 @@ removeCampaignIDs<br />
 <tr>
 <td>
 clearCampaigns<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addRemediationIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeRemediationIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearRemediations<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addReviewIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeReviewIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearReviews<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -248258,6 +248366,33 @@ clearControls<br />
 </tr>
 <tr>
 <td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 generatedByPlatformID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -250188,6 +250323,87 @@ responsiblePartyID<br />
 <tr>
 <td>
 clearResponsibleParty<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRemediationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRemediationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRemediations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addScanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeScanIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearScans<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
