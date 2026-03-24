@@ -8985,6 +8985,222 @@ responsibleParty<br />
 </tr>
 <tr>
 <td>
+reviews<br />
+<a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#revieworder"><code>[ReviewOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#reviewwhereinput"><code>ReviewWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+remediations<br />
+<a href="objects#remediationconnection"><code>RemediationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#remediationorder"><code>[RemediationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#remediationwhereinput"><code>RemediationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scans<br />
+<a href="objects#scanconnection"><code>ScanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Scans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -9390,78 +9606,6 @@ where<br />
 </tr>
 <tr>
 <td>
-scans<br />
-<a href="objects#scanconnection"><code>ScanConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Scans returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Scans returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
 entities<br />
 <a href="objects#entityconnection"><code>EntityConnection!</code></a>
 </td>
@@ -9669,150 +9813,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Campaigns returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-remediations<br />
-<a href="objects#remediationconnection"><code>RemediationConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#remediationorder"><code>[RemediationOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Remediations returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#remediationwhereinput"><code>RemediationWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Remediations returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-reviews<br />
-<a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#revieworder"><code>[ReviewOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Reviews returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#reviewwhereinput"><code>ReviewWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Reviews returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -68047,6 +68047,78 @@ where<br />
 </tr>
 <tr>
 <td>
+subcontrols<br />
+<a href="objects#subcontrolconnection"><code>SubcontrolConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subcontrolorder"><code>[SubcontrolOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subcontrolwhereinput"><code>SubcontrolWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subcontrols returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 generatedByPlatform<br />
 <a href="objects#platform"><code>Platform</code></a>
 </td>
@@ -71983,6 +72055,222 @@ responsibleParty<br />
 </td>
 <td>
 <p>the entity who is responsible for the control implementation when it is a third party</p>
+</td>
+</tr>
+<tr>
+<td>
+reviews<br />
+<a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#revieworder"><code>[ReviewOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#reviewwhereinput"><code>ReviewWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+remediations<br />
+<a href="objects#remediationconnection"><code>RemediationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#remediationorder"><code>[RemediationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#remediationwhereinput"><code>RemediationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+scans<br />
+<a href="objects#scanconnection"><code>ScanConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#scanorder"><code>[ScanOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Scans returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#scanwhereinput"><code>ScanWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Scans returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 <tr>
