@@ -82,6 +82,12 @@ ActionPlanFrequency is enum for the field review_frequency
 
 </td>
 </tr>
+<tr>
+<td>NONE</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -744,6 +750,12 @@ CampaignFrequency is enum for the field recurrence_frequency
 </tr>
 <tr>
 <td>MONTHLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
 <td>
 
 </td>
@@ -2698,6 +2710,12 @@ EntityFrequency is enum for the field review_frequency
 
 </td>
 </tr>
+<tr>
+<td>NONE</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -4098,6 +4116,12 @@ InternalPolicyFrequency is enum for the field review_frequency
 </tr>
 <tr>
 <td>MONTHLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
 <td>
 
 </td>
@@ -5826,6 +5850,12 @@ ProcedureFrequency is enum for the field review_frequency
 </tr>
 <tr>
 <td>MONTHLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
 <td>
 
 </td>
