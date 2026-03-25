@@ -69708,24 +69708,6 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-slaDefinitionSeverityLevelName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the severity_level of the sla_definition</p>
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>the severity_level of the sla_definition</p>
-</td>
-</tr>
-<tr>
-<td>
 slaDays<br />
 <a href="scalars#int"><code>Int!</code></a>
 </td>
@@ -69739,22 +69721,13 @@ securityLevel<br />
 <a href="enums#sladefinitionsecuritylevel"><code>SLADefinitionSecurityLevel!</code></a>
 </td>
 <td>
-<p>incoming source severity</p>
+<p>security level to map with the SLA definition</p>
 </td>
 </tr>
 <tr>
 <td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevel<br />
-<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
 
