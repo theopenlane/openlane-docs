@@ -47061,15 +47061,6 @@ tags<br />
 </tr>
 <tr>
 <td>
-slaDefinitionSeverityLevelName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the severity_level of the sla_definition</p>
-</td>
-</tr>
-<tr>
-<td>
 slaDays<br />
 <a href="scalars#int"><code>Int!</code></a>
 </td>
@@ -47080,15 +47071,6 @@ slaDays<br />
 <tr>
 <td>
 ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -179818,276 +179800,6 @@ ownerIDContainsFold<br />
 </tr>
 <tr>
 <td>
-slaDefinitionSeverityLevelName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>sla_definition_severity_level_name field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelNameContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>sla_definition_severity_level_id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDNEQ<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDNotIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDGT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDGTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDLT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDLTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDContains<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDHasPrefix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDHasSuffix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDEqualFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelIDContainsFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 slaDays<br />
 <a href="scalars#int"><code>Int</code></a>
 </td>
@@ -180207,24 +179919,6 @@ hasOwner<br />
 <td>
 hasOwnerWith<br />
 <a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasSLADefinitionSeverityLevel<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>sla_definition_severity_level edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasSLADefinitionSeverityLevelWith<br />
-<a href="inputObjects#customtypeenumwhereinput"><code>[CustomTypeEnumWhereInput!]</code></a>
 </td>
 <td>
 
@@ -248694,24 +248388,6 @@ clearTags<br />
 </tr>
 <tr>
 <td>
-slaDefinitionSeverityLevelName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>the severity_level of the sla_definition</p>
-</td>
-</tr>
-<tr>
-<td>
-clearSLADefinitionSeverityLevelName<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 slaDays<br />
 <a href="scalars#int"><code>Int</code></a>
 </td>
@@ -248731,24 +248407,6 @@ ownerID<br />
 <tr>
 <td>
 clearOwner<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-slaDefinitionSeverityLevelID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearSLADefinitionSeverityLevel<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
