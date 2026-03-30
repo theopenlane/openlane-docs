@@ -13092,6 +13092,15 @@ trustCenterID<br />
 </tr>
 <tr>
 <td>
+domainType<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType!</code></a>
+</td>
+<td>
+<p>the type of this custom domain</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>

@@ -34805,6 +34805,15 @@ trustCenterID<br />
 </tr>
 <tr>
 <td>
+domainType<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+<p>the type of this custom domain</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -52891,6 +52900,42 @@ trustCenterIDEqualFold<br />
 <td>
 trustCenterIDContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domainType<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+<p>domain_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+domainTypeNEQ<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domainTypeIn<br />
+<a href="enums#customdomaincustomdomaintype"><code>[CustomDomainCustomDomainType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domainTypeNotIn<br />
+<a href="enums#customdomaincustomdomaintype"><code>[CustomDomainCustomDomainType!]</code></a>
 </td>
 <td>
 

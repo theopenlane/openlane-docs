@@ -1579,6 +1579,36 @@ ControlTrustCenterControlVisibility is enum for the field trust_center_visibilit
 </tbody>
 </table>
 
+## CustomDomainCustomDomainType
+
+CustomDomainCustomDomainType is enum for the field domain_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREVIEW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>EXTERNAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## CustomDomainOrderField
 
 Properties by which CustomDomain connections can be ordered.
