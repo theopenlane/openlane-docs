@@ -4786,6 +4786,12 @@ NotificationNotificationTopic is enum for the field topic
 
 </td>
 </tr>
+<tr>
+<td>DOMAIN_SCAN</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
