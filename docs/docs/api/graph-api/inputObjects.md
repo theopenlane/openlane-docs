@@ -38486,15 +38486,6 @@ externalID<br />
 </tr>
 <tr>
 <td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lifecycle status of the finding</p>
-</td>
-</tr>
-<tr>
-<td>
 externalOwnerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -50687,15 +50678,6 @@ externalOwnerID<br />
 </td>
 <td>
 <p>owner of the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lifecycle status of the vulnerability</p>
 </td>
 </tr>
 <tr>
@@ -96153,141 +96135,6 @@ externalIDEqualFold<br />
 <tr>
 <td>
 externalIDContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>status field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-statusNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
@@ -229800,24 +229647,6 @@ clearExternalID<br />
 </tr>
 <tr>
 <td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lifecycle status of the finding</p>
-</td>
-</tr>
-<tr>
-<td>
-clearStatus<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 externalOwnerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -255681,24 +255510,6 @@ clearExternalOwnerID<br />
 </tr>
 <tr>
 <td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>lifecycle status of the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-clearStatus<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 externalID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -263603,141 +263414,6 @@ externalOwnerIDEqualFold<br />
 <tr>
 <td>
 externalOwnerIDContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>status field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-statusNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-statusContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
