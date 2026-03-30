@@ -4578,6 +4578,29 @@ input<br />
 </tbody>
 </table>
 
+## createNotification
+
+**Type:** [NotificationCreatePayload!](objects#notificationcreatepayload)
+
+Create a new notification
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createnotificationinput"><code>CreateNotificationInput!</code></a>
+</td>
+<td>
+<p>values of the notification</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createNotificationPreference
 
 **Type:** [NotificationPreferenceCreatePayload!](objects#notificationpreferencecreatepayload)

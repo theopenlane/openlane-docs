@@ -26780,17 +26780,6 @@ externalID<br />
 </tr>
 <tr>
 <td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `finding_status_name` instead.</blockquote>
-
-<p>lifecycle status of the finding</p>
-</td>
-</tr>
-<tr>
-<td>
 securityLevel<br />
 <a href="enums#findingsecuritylevel"><code>FindingSecurityLevel</code></a>
 </td>
@@ -44638,6 +44627,27 @@ totalCount<br />
 </td>
 <td>
 <p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## NotificationCreatePayload
+
+Return response for createNotification mutation
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+notification<br />
+<a href="objects#notification"><code>Notification!</code></a>
+</td>
+<td>
+<p>Created notification</p>
 </td>
 </tr>
 </tbody>
@@ -84866,17 +84876,6 @@ externalOwnerID<br />
 </td>
 <td>
 <p>owner of the vulnerability</p>
-</td>
-</tr>
-<tr>
-<td>
-status<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<blockquote>Deprecated: Use `vulnerability_status_name` instead.</blockquote>
-
-<p>lifecycle status of the vulnerability</p>
 </td>
 </tr>
 <tr>
