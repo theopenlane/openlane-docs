@@ -3848,6 +3848,24 @@ categories<br />
 </tr>
 <tr>
 <td>
+integrationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>integration that discovered this asset, when sourced via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this asset was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -4595,11 +4613,92 @@ where<br />
 </tr>
 <tr>
 <td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 sourcePlatform<br />
 <a href="objects#platform"><code>Platform</code></a>
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+integration<br />
+<a href="objects#integration"><code>Integration</code></a>
+</td>
+<td>
+<p>integration that owns this asset</p>
 </td>
 </tr>
 <tr>
@@ -7249,6 +7348,33 @@ status<br />
 </td>
 <td>
 <p>status of the contact</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that sourced this contact, when populated via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this contact was last observed by the source integration</p>
 </td>
 </tr>
 <tr>
@@ -13092,6 +13218,15 @@ trustCenterID<br />
 </tr>
 <tr>
 <td>
+domainType<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType!</code></a>
+</td>
+<td>
+<p>the type of this custom domain</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -14528,6 +14663,15 @@ platformID<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate accounts across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 identityHolderID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -14699,6 +14843,42 @@ lastLoginAt<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the account was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the account was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
 observedAt<br />
 <a href="scalars#time"><code>Time!</code></a>
 </td>
@@ -14722,6 +14902,15 @@ profile<br />
 </td>
 <td>
 <p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
 </td>
 </tr>
 <tr>
@@ -15399,6 +15588,15 @@ platformID<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate groups across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 directorySyncRunID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
@@ -15480,6 +15678,42 @@ memberCount<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the group was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the group was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
 observedAt<br />
 <a href="scalars#time"><code>Time!</code></a>
 </td>
@@ -15503,6 +15737,15 @@ profile<br />
 </td>
 <td>
 <p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
 </td>
 </tr>
 <tr>
@@ -16081,6 +16324,15 @@ platformID<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate memberships across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 directorySyncRunID<br />
 <a href="scalars#id"><code>ID!</code></a>
 </td>
@@ -16139,7 +16391,25 @@ lastSeenAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
-<p>most recent time the membership was detected</p>
+<p>most recent time the membership was confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the membership was added in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the membership was removed from the source directory</p>
 </td>
 </tr>
 <tr>
@@ -16669,6 +16939,15 @@ platformID<br />
 </td>
 <td>
 <p>optional platform associated with this sync run</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier derived from integration installation metadata for grouping runs across integrations pointed at the same directory instance</p>
 </td>
 </tr>
 <tr>
@@ -19490,7 +19769,7 @@ version<br />
 <tr>
 <td>
 templateContext<br />
-<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext</code></a>
+<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext!</code></a>
 </td>
 <td>
 <p>runtime data context defining available variable keys for this template</p>
@@ -19503,15 +19782,6 @@ defaults<br />
 </td>
 <td>
 <p>static variable values merged as base layer at render time; call-site data takes precedence</p>
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>email branding configuration to apply for this template</p>
 </td>
 </tr>
 <tr>
@@ -19552,8 +19822,224 @@ owner<br />
 </tr>
 <tr>
 <td>
+blockedGroups<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+editors<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+viewers<br />
+<a href="objects#groupconnection"><code>GroupConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Groups returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Groups returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 emailBranding<br />
-<a href="objects#emailbranding"><code>EmailBranding</code></a>
+<a href="objects#emailbranding"><code>[EmailBranding!]</code></a>
 </td>
 <td>
 
@@ -20551,6 +21037,24 @@ logoFileID<br />
 </td>
 <td>
 <p>The logo file id for the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this entity was last observed by the source integration</p>
 </td>
 </tr>
 <tr>
@@ -22098,6 +22602,78 @@ logoFile<br />
 <a href="objects#file"><code>File</code></a>
 </td>
 <td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -24051,7 +24627,7 @@ collectionProcedure<br />
 <tr>
 <td>
 creationDate<br />
-<a href="scalars#time"><code>Time!</code></a>
+<a href="scalars#datetime"><code>DateTime!</code></a>
 </td>
 <td>
 <p>the date the evidence was retrieved</p>
@@ -24060,7 +24636,7 @@ creationDate<br />
 <tr>
 <td>
 renewalDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence should be renewed, defaults to a year from entry date</p>
@@ -36110,6 +36686,78 @@ user<br />
 </tr>
 <tr>
 <td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 hasPendingWorkflow<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
@@ -37347,6 +37995,78 @@ where<br />
 </tr>
 <tr>
 <td>
+assets<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 directoryAccounts<br />
 <a href="objects#directoryaccountconnection"><code>DirectoryAccountConnection!</code></a>
 </td>
@@ -37855,6 +38575,15 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+webhookURLs<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -39370,6 +40099,294 @@ where<br />
 </td>
 <td>
 <p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assets<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+entities<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolders<br />
+<a href="objects#identityholderconnection"><code>IdentityHolderConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#identityholderorder"><code>[IdentityHolderOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#identityholderwhereinput"><code>IdentityHolderWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for IdentityHolders returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+reviews<br />
+<a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#revieworder"><code>[ReviewOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#reviewwhereinput"><code>ReviewWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Reviews returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -45346,6 +46363,15 @@ integrationID<br />
 </td>
 <td>
 <p>integration associated with this template</p>
+</td>
+</tr>
+<tr>
+<td>
+destinations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>optional explicit provider destination identifiers for this template, such as Slack channel IDs</p>
 </td>
 </tr>
 <tr>
@@ -64870,6 +65896,78 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -65232,6 +66330,33 @@ scopeID<br />
 </td>
 <td>
 <p>the scope of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that surfaced this risk, when sourced via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this risk was last observed by the source integration</p>
 </td>
 </tr>
 <tr>
@@ -89644,6 +90769,15 @@ objectTypes<br />
 </td>
 <td>
 <p>Available workflow object types</p>
+</td>
+</tr>
+<tr>
+<td>
+extensions<br />
+<a href="scalars#map"><code>Map!</code></a>
+</td>
+<td>
+<p>Extensible workflow metadata payload for action configuration surfaces</p>
 </td>
 </tr>
 </tbody>

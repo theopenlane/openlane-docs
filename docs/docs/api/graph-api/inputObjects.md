@@ -14255,6 +14255,231 @@ purchaseDateNotNil<br />
 </tr>
 <tr>
 <td>
+integrationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>integration_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>observed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -14615,6 +14840,24 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasSourcePlatform<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -14626,6 +14869,24 @@ hasSourcePlatform<br />
 <td>
 hasSourcePlatformWith<br />
 <a href="inputObjects#platformwhereinput"><code>[PlatformWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIntegration<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>integration edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIntegrationWith<br />
+<a href="inputObjects#integrationwhereinput"><code>[IntegrationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -22225,6 +22486,366 @@ statusIn<br />
 <td>
 statusNotIn<br />
 <a href="enums#contactuserstatus"><code>[ContactUserStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>observed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -32782,6 +33403,15 @@ categories<br />
 </tr>
 <tr>
 <td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this asset was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -32962,7 +33592,25 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 sourcePlatformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -33630,6 +34278,33 @@ status<br />
 </td>
 <td>
 <p>status of the contact</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that sourced this contact, when populated via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this contact was last observed by the source integration</p>
 </td>
 </tr>
 <tr>
@@ -34805,6 +35480,15 @@ trustCenterID<br />
 </tr>
 <tr>
 <td>
+domainType<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+<p>the type of this custom domain</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -35056,6 +35740,15 @@ scopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate accounts across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 directoryName<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -35209,6 +35902,42 @@ lastLoginAt<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the account was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the account was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
 observedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -35232,6 +35961,15 @@ profile<br />
 </td>
 <td>
 <p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
 </td>
 </tr>
 <tr>
@@ -35384,6 +36122,15 @@ scopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate groups across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 externalID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -35456,6 +36203,42 @@ memberCount<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the group was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the group was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
 observedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -35479,6 +36262,15 @@ profile<br />
 </td>
 <td>
 <p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
 </td>
 </tr>
 <tr>
@@ -35586,6 +36378,15 @@ scopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate memberships across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 role<br />
 <a href="enums#directorymembershipdirectorymembershiprole"><code>DirectoryMembershipDirectoryMembershipRole</code></a>
 </td>
@@ -35617,7 +36418,25 @@ lastSeenAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
-<p>most recent time the membership was detected</p>
+<p>most recent time the membership was confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the membership was added in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the membership was removed from the source directory</p>
 </td>
 </tr>
 <tr>
@@ -35766,6 +36585,15 @@ scopeName<br />
 </td>
 <td>
 <p>the scope of the directory_sync_run</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier derived from integration installation metadata for grouping runs across integrations pointed at the same directory instance</p>
 </td>
 </tr>
 <tr>
@@ -36583,7 +37411,7 @@ version<br />
 <tr>
 <td>
 templateContext<br />
-<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext</code></a>
+<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext!</code></a>
 </td>
 <td>
 <p>runtime data context defining available variable keys for this template</p>
@@ -36609,8 +37437,35 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+viewerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -37054,6 +37909,24 @@ vendorMetadata<br />
 </tr>
 <tr>
 <td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this entity was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -37335,6 +38208,15 @@ entityTypeID<br />
 <td>
 logoFileID<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -37652,7 +38534,7 @@ collectionProcedure<br />
 <tr>
 <td>
 creationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence was retrieved</p>
@@ -37661,7 +38543,7 @@ creationDate<br />
 <tr>
 <td>
 renewalDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence should be renewed, defaults to a year from entry date</p>
@@ -40334,6 +41216,15 @@ userID<br />
 
 </td>
 </tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -40737,6 +41628,42 @@ discussionIDs<br />
 <tr>
 <td>
 workflowObjectRefIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -42245,6 +43172,15 @@ topicPattern<br />
 </td>
 <td>
 <p>topic name or wildcard pattern this template targets</p>
+</td>
+</tr>
+<tr>
+<td>
+destinations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>optional explicit provider destination identifiers for this template, such as Slack channel IDs</p>
 </td>
 </tr>
 <tr>
@@ -46146,6 +47082,15 @@ fileIDs<br />
 
 </td>
 </tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -46202,6 +47147,33 @@ scopeName<br />
 </td>
 <td>
 <p>the scope of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that surfaced this risk, when sourced via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this risk was last observed by the source integration</p>
 </td>
 </tr>
 <tr>
@@ -52898,6 +53870,42 @@ trustCenterIDContainsFold<br />
 </tr>
 <tr>
 <td>
+domainType<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+<p>domain_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+domainTypeNEQ<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domainTypeIn<br />
+<a href="enums#customdomaincustomdomaintype"><code>[CustomDomainCustomDomainType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domainTypeNotIn<br />
+<a href="enums#customdomaincustomdomaintype"><code>[CustomDomainCustomDomainType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -56773,6 +57781,141 @@ platformIDContainsFold<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_instance_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 identityHolderID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -58943,6 +60086,366 @@ lastLoginAtIsNil<br />
 <tr>
 <td>
 lastLoginAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>first_seen_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>last_seen_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>added_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>removed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -61154,6 +62657,141 @@ platformIDContainsFold<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_instance_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 directorySyncRunID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -61848,6 +63486,366 @@ memberCountIsNil<br />
 <tr>
 <td>
 memberCountNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>first_seen_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>last_seen_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>added_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>removed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -63348,6 +65346,141 @@ scopeNameContainsFold<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_instance_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 role<br />
 <a href="enums#directorymembershipdirectorymembershiprole"><code>DirectoryMembershipDirectoryMembershipRole</code></a>
 </td>
@@ -63709,6 +65842,186 @@ lastSeenAtIsNil<br />
 <tr>
 <td>
 lastSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>added_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>removed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -65571,6 +67884,141 @@ platformIDEqualFold<br />
 <td>
 platformIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_instance_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -75441,159 +77889,6 @@ templateContextNotIn<br />
 </tr>
 <tr>
 <td>
-templateContextIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateContextNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>email_branding_id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNEQ<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNotIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDGT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDGTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDLT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDLTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDContains<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDHasPrefix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDHasSuffix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDEqualFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDContainsFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 integrationID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -76010,6 +78305,60 @@ hasOwner<br />
 <td>
 hasOwnerWith<br />
 <a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasViewers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>viewers edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasViewersWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
 
@@ -83051,6 +85400,231 @@ logoFileIDContainsFold<br />
 </tr>
 <tr>
 <td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>observed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -83620,6 +86194,24 @@ hasLogoFile<br />
 <td>
 hasLogoFileWith<br />
 <a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
 </td>
 <td>
 
@@ -86855,7 +89447,7 @@ collectionProcedureContainsFold<br />
 <tr>
 <td>
 creationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>creation_date field predicates</p>
@@ -86864,7 +89456,7 @@ creationDate<br />
 <tr>
 <td>
 creationDateNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86873,7 +89465,7 @@ creationDateNEQ<br />
 <tr>
 <td>
 creationDateIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -86882,7 +89474,7 @@ creationDateIn<br />
 <tr>
 <td>
 creationDateNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -86891,7 +89483,7 @@ creationDateNotIn<br />
 <tr>
 <td>
 creationDateGT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86900,7 +89492,7 @@ creationDateGT<br />
 <tr>
 <td>
 creationDateGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86909,7 +89501,7 @@ creationDateGTE<br />
 <tr>
 <td>
 creationDateLT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86918,7 +89510,7 @@ creationDateLT<br />
 <tr>
 <td>
 creationDateLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86927,7 +89519,7 @@ creationDateLTE<br />
 <tr>
 <td>
 renewalDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>renewal_date field predicates</p>
@@ -86936,7 +89528,7 @@ renewalDate<br />
 <tr>
 <td>
 renewalDateNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86945,7 +89537,7 @@ renewalDateNEQ<br />
 <tr>
 <td>
 renewalDateIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -86954,7 +89546,7 @@ renewalDateIn<br />
 <tr>
 <td>
 renewalDateNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -86963,7 +89555,7 @@ renewalDateNotIn<br />
 <tr>
 <td>
 renewalDateGT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86972,7 +89564,7 @@ renewalDateGT<br />
 <tr>
 <td>
 renewalDateGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86981,7 +89573,7 @@ renewalDateGTE<br />
 <tr>
 <td>
 renewalDateLT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86990,7 +89582,7 @@ renewalDateLT<br />
 <tr>
 <td>
 renewalDateLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -110426,6 +113018,24 @@ hasUserWith<br />
 </tr>
 <tr>
 <td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 tagsHas<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -113333,6 +115943,24 @@ hasActionPlans<br />
 <td>
 hasActionPlansWith<br />
 <a href="inputObjects#actionplanwhereinput"><code>[ActionPlanWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAssets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>assets edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAssetsWith<br />
+<a href="inputObjects#assetwhereinput"><code>[AssetWhereInput!]</code></a>
 </td>
 <td>
 
@@ -117174,6 +119802,78 @@ hasWorkflowObjectRefs<br />
 <td>
 hasWorkflowObjectRefsWith<br />
 <a href="inputObjects#workflowobjectrefwhereinput"><code>[WorkflowObjectRefWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAssets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>assets edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAssetsWith<br />
+<a href="inputObjects#assetwhereinput"><code>[AssetWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEntities<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>entities edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEntitiesWith<br />
+<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolders<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>identity_holders edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHoldersWith<br />
+<a href="inputObjects#identityholderwhereinput"><code>[IdentityHolderWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasReviews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>reviews edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasReviewsWith<br />
+<a href="inputObjects#reviewwhereinput"><code>[ReviewWhereInput!]</code></a>
 </td>
 <td>
 
@@ -169268,6 +171968,24 @@ hasFilesWith<br />
 </tr>
 <tr>
 <td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 tagsHas<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -171212,6 +173930,366 @@ scopeIDEqualFold<br />
 <td>
 scopeIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>observed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -217952,6 +221030,24 @@ clearCategories<br />
 </tr>
 <tr>
 <td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this asset was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
+clearObservedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -218367,6 +221463,33 @@ removeControlIDs<br />
 <tr>
 <td>
 clearControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -219643,6 +222766,60 @@ status<br />
 </td>
 <td>
 <p>status of the contact</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that sourced this contact, when populated via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearIntegrationID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this contact was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
+clearObservedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -222911,6 +226088,24 @@ clearScopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate accounts across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryInstanceID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 directoryName<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223181,6 +226376,78 @@ clearLastLoginAt<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFirstSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearLastSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the account was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAddedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the account was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRemovedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 profileHash<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223200,6 +226467,24 @@ profile<br />
 <tr>
 <td>
 clearProfile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
+</td>
+</tr>
+<tr>
+<td>
+clearMetadata<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -223473,6 +226758,24 @@ clearScopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate groups across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryInstanceID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 email<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223581,6 +226884,78 @@ clearMemberCount<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFirstSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearLastSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the group was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAddedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the group was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRemovedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 profileHash<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223600,6 +226975,24 @@ profile<br />
 <tr>
 <td>
 clearProfile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
+</td>
+</tr>
+<tr>
+<td>
+clearMetadata<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -223756,6 +227149,24 @@ clearScopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate memberships across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryInstanceID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 role<br />
 <a href="enums#directorymembershipdirectorymembershiprole"><code>DirectoryMembershipDirectoryMembershipRole</code></a>
 </td>
@@ -223814,12 +227225,48 @@ lastSeenAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
-<p>most recent time the membership was detected</p>
+<p>most recent time the membership was confirmed by directory ingest</p>
 </td>
 </tr>
 <tr>
 <td>
 clearLastSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the membership was added in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAddedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the membership was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRemovedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -224013,6 +227460,24 @@ scopeName<br />
 <tr>
 <td>
 clearScopeName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier derived from integration installation metadata for grouping runs across integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryInstanceID<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -225502,15 +228967,6 @@ templateContext<br />
 </tr>
 <tr>
 <td>
-clearTemplateContext<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 defaults<br />
 <a href="scalars#map"><code>Map</code></a>
 </td>
@@ -225529,8 +228985,98 @@ clearDefaults<br />
 </tr>
 <tr>
 <td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addViewerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeViewerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearViewers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEmailBrandingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEmailBrandingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -226478,6 +230024,42 @@ clearVendorMetadata<br />
 </tr>
 <tr>
 <td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this entity was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
+clearObservedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -227216,6 +230798,33 @@ clearLogoFile<br />
 </tr>
 <tr>
 <td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 note<br />
 <a href="inputObjects#createnoteinput"><code>CreateNoteInput</code></a>
 </td>
@@ -227886,7 +231495,7 @@ clearCollectionProcedure<br />
 <tr>
 <td>
 creationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence was retrieved</p>
@@ -227895,7 +231504,7 @@ creationDate<br />
 <tr>
 <td>
 renewalDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence should be renewed, defaults to a year from entry date</p>
@@ -233779,6 +237388,33 @@ clearUser<br />
 
 </td>
 </tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -234767,6 +238403,114 @@ removeWorkflowObjectRefIDs<br />
 <tr>
 <td>
 clearWorkflowObjectRefs<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addAssetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeAssetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEntityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEntityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEntities<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addIdentityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeIdentityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearIdentityHolders<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviews<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -237298,6 +241042,33 @@ topicPattern<br />
 </td>
 <td>
 <p>topic name or wildcard pattern this template targets</p>
+</td>
+</tr>
+<tr>
+<td>
+destinations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>optional explicit provider destination identifiers for this template, such as Slack channel IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+appendDestinations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDestinations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -246241,6 +250012,33 @@ clearFiles<br />
 
 </td>
 </tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -246347,6 +250145,60 @@ scopeName<br />
 <tr>
 <td>
 clearScopeName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that surfaced this risk, when sourced via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearIntegrationID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this risk was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
+clearObservedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
