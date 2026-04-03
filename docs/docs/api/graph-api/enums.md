@@ -598,6 +598,12 @@ Properties by which Asset connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>observed_at</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1048,6 +1054,18 @@ Properties by which Contact connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>observed_at</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1086,6 +1104,12 @@ ContactUserStatus is enum for the field status
 </tr>
 <tr>
 <td>ONBOARDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
 <td>
 
 </td>
@@ -1579,6 +1603,36 @@ ControlTrustCenterControlVisibility is enum for the field trust_center_visibilit
 </tbody>
 </table>
 
+## CustomDomainCustomDomainType
+
+CustomDomainCustomDomainType is enum for the field domain_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREVIEW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>EXTERNAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## CustomDomainOrderField
 
 Properties by which CustomDomain connections can be ordered.
@@ -1781,6 +1835,12 @@ Properties by which DirectoryAccount connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>directory_instance_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>directory_name</td>
 <td>
 
@@ -1890,6 +1950,12 @@ Properties by which DirectoryGroup connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>directory_instance_id</td>
 <td>
 
 </td>
@@ -2902,6 +2968,18 @@ Properties by which Entity connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>observed_at</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2968,6 +3046,12 @@ EvidenceEvidenceStatus is enum for the field status
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>REQUESTED</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>DRAFT</td>
 <td>
@@ -3173,7 +3257,19 @@ ExportExportType is enum for the field export_type
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>ASSESSMENT</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>ASSET</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CAMPAIGN</td>
 <td>
 
 </td>
@@ -3766,6 +3862,30 @@ IdentityHolderIdentityHolderType is enum for the field identity_holder_type
 
 </td>
 </tr>
+<tr>
+<td>UNSPECIFIED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INTERN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SERVICE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PARTNER</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3924,6 +4044,12 @@ IdentityHolderUserStatus is enum for the field status
 </tr>
 <tr>
 <td>ONBOARDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
 <td>
 
 </td>
@@ -6197,6 +6323,18 @@ Properties by which Risk connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>observed_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>name</td>
 <td>
 
@@ -8056,6 +8194,12 @@ UserSettingUserStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>UNKNOWN</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8262,6 +8406,12 @@ WorkflowAssignmentTargetWorkflowTargetType is enum for the field target_type
 </tr>
 <tr>
 <td>RESOLVER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CHANNEL</td>
 <td>
 
 </td>
