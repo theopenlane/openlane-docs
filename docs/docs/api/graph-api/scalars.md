@@ -107,6 +107,10 @@ The `Price` scalar type represents a monetary value for a subscription, includin
 
 The `Reference` represents are links to external sources that can be used to gain more information about the control
 
+## RiskThresholdsConfig
+
+RiskThresholdsConfig holds org-custom threshold overrides for vendor risk levels
+
 ## SSOAuthorizationMap
 
 SSOAuthorizationMap is a map of organization IDs to SSO verification timestamps.
@@ -128,6 +132,10 @@ The builtin Time type
 
 The `Upload` scalar type represents a file upload.
 This scalar is typically used to handle file uploads in GraphQL mutations.
+
+## VendorScoringQuestionsConfig
+
+VendorScoringQuestionsConfig holds org-custom question overrides and additions for vendor scoring
 
 ## VersionBump
 
