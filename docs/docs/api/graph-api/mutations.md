@@ -2021,6 +2021,52 @@ input<br />
 </tbody>
 </table>
 
+## createBulkCSVVendorRiskScore
+
+**Type:** [VendorRiskScoreBulkCreatePayload!](objects#vendorriskscorebulkcreatepayload)
+
+Create multiple new vendorRiskScores via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the vendorRiskScore</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkCSVVendorScoringConfig
+
+**Type:** [VendorScoringConfigBulkCreatePayload!](objects#vendorscoringconfigbulkcreatepayload)
+
+Create multiple new vendorScoringConfigs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the vendorScoringConfig</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## createBulkCSVVulnerability
 
 **Type:** [VulnerabilityBulkCreatePayload!](objects#vulnerabilitybulkcreatepayload)
@@ -3359,6 +3405,52 @@ input<br />
 </td>
 <td>
 <p>values of the userSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkVendorRiskScore
+
+**Type:** [VendorRiskScoreBulkCreatePayload!](objects#vendorriskscorebulkcreatepayload)
+
+Create multiple new vendorRiskScores
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createvendorriskscoreinput"><code>[CreateVendorRiskScoreInput!]</code></a>
+</td>
+<td>
+<p>values of the vendorRiskScore</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createBulkVendorScoringConfig
+
+**Type:** [VendorScoringConfigBulkCreatePayload!](objects#vendorscoringconfigbulkcreatepayload)
+
+Create multiple new vendorScoringConfigs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createvendorscoringconfiginput"><code>[CreateVendorScoringConfigInput!]</code></a>
+</td>
+<td>
+<p>values of the vendorScoringConfig</p>
 </td>
 </tr>
 </tbody>
@@ -4832,6 +4924,33 @@ input<br />
 <p>values of the platform</p>
 </td>
 </tr>
+<tr>
+<td>
+architectureDiagrams<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dataFlowDiagrams<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustBoundaryDiagrams<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5811,6 +5930,52 @@ input<br />
 </td>
 <td>
 <p>values of the userSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createVendorRiskScore
+
+**Type:** [VendorRiskScoreCreatePayload!](objects#vendorriskscorecreatepayload)
+
+Create a new vendorRiskScore
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createvendorriskscoreinput"><code>CreateVendorRiskScoreInput!</code></a>
+</td>
+<td>
+<p>values of the vendorRiskScore</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## createVendorScoringConfig
+
+**Type:** [VendorScoringConfigCreatePayload!](objects#vendorscoringconfigcreatepayload)
+
+Create a new vendorScoringConfig
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#createvendorscoringconfiginput"><code>CreateVendorScoringConfigInput!</code></a>
+</td>
+<td>
+<p>values of the vendorScoringConfig</p>
 </td>
 </tr>
 </tbody>
@@ -7214,6 +7379,52 @@ ids<br />
 </td>
 <td>
 <p>IDs of the userSettings to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteBulkVendorRiskScore
+
+**Type:** [VendorRiskScoreBulkDeletePayload!](objects#vendorriskscorebulkdeletepayload)
+
+Delete multiple vendorRiskScores
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the vendorRiskScores to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteBulkVendorScoringConfig
+
+**Type:** [VendorScoringConfigBulkDeletePayload!](objects#vendorscoringconfigbulkdeletepayload)
+
+Delete multiple vendorScoringConfigs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the vendorScoringConfigs to delete</p>
 </td>
 </tr>
 </tbody>
@@ -9017,6 +9228,52 @@ id<br />
 </td>
 <td>
 <p>ID of the user</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteVendorRiskScore
+
+**Type:** [VendorRiskScoreDeletePayload!](objects#vendorriskscoredeletepayload)
+
+Delete an existing vendorRiskScore
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the vendorRiskScore</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## deleteVendorScoringConfig
+
+**Type:** [VendorScoringConfigDeletePayload!](objects#vendorscoringconfigdeletepayload)
+
+Delete an existing vendorScoringConfig
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the vendorScoringConfig</p>
 </td>
 </tr>
 </tbody>
@@ -10998,6 +11255,52 @@ input<br />
 </tbody>
 </table>
 
+## updateBulkCSVVendorRiskScore
+
+**Type:** [VendorRiskScoreBulkUpdatePayload!](objects#vendorriskscorebulkupdatepayload)
+
+Update multiple existing vendorRiskScores via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the vendorRiskScore, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkCSVVendorScoringConfig
+
+**Type:** [VendorScoringConfigBulkUpdatePayload!](objects#vendorscoringconfigbulkupdatepayload)
+
+Update multiple existing vendorScoringConfigs via file upload
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+input<br />
+<a href="scalars#upload"><code>Upload!</code></a>
+</td>
+<td>
+<p>csv file containing values of the vendorScoringConfig, must include ID column</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## updateBulkCSVVulnerability
 
 **Type:** [VulnerabilityBulkUpdatePayload!](objects#vulnerabilitybulkupdatepayload)
@@ -12424,6 +12727,70 @@ input<br />
 </td>
 <td>
 <p>values to update the userSettings with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkVendorRiskScore
+
+**Type:** [VendorRiskScoreBulkUpdatePayload!](objects#vendorriskscorebulkupdatepayload)
+
+Update multiple existing vendorRiskScores
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the vendorRiskScores to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatevendorriskscoreinput"><code>UpdateVendorRiskScoreInput!</code></a>
+</td>
+<td>
+<p>values to update the vendorRiskScores with</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateBulkVendorScoringConfig
+
+**Type:** [VendorScoringConfigBulkUpdatePayload!](objects#vendorscoringconfigbulkupdatepayload)
+
+Update multiple existing vendorScoringConfigs
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the vendorScoringConfigs to update</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatevendorscoringconfiginput"><code>UpdateVendorScoringConfigInput!</code></a>
+</td>
+<td>
+<p>values to update the vendorScoringConfigs with</p>
 </td>
 </tr>
 </tbody>
@@ -14111,6 +14478,33 @@ input<br />
 <p>New values for the platform</p>
 </td>
 </tr>
+<tr>
+<td>
+architectureDiagrams<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dataFlowDiagrams<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustBoundaryDiagrams<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15505,6 +15899,70 @@ input<br />
 </td>
 <td>
 <p>New values for the userSetting</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateVendorRiskScore
+
+**Type:** [VendorRiskScoreUpdatePayload!](objects#vendorriskscoreupdatepayload)
+
+Update an existing vendorRiskScore
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the vendorRiskScore</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatevendorriskscoreinput"><code>UpdateVendorRiskScoreInput!</code></a>
+</td>
+<td>
+<p>New values for the vendorRiskScore</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateVendorScoringConfig
+
+**Type:** [VendorScoringConfigUpdatePayload!](objects#vendorscoringconfigupdatepayload)
+
+Update an existing vendorScoringConfig
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the vendorScoringConfig</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatevendorscoringconfiginput"><code>UpdateVendorScoringConfigInput!</code></a>
+</td>
+<td>
+<p>New values for the vendorScoringConfig</p>
 </td>
 </tr>
 </tbody>
