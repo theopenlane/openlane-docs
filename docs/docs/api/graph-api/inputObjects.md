@@ -7753,6 +7753,24 @@ hasDocumentWith<br />
 
 </td>
 </tr>
+<tr>
+<td>
+hasVendorRiskScores<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vendor_risk_scores edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVendorRiskScoresWith<br />
+<a href="inputObjects#vendorriskscorewhereinput"><code>[VendorRiskScoreWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -14255,6 +14273,231 @@ purchaseDateNotNil<br />
 </tr>
 <tr>
 <td>
+integrationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>integration_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>observed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -14615,6 +14858,42 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasSourcePlatform<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -14626,6 +14905,24 @@ hasSourcePlatform<br />
 <td>
 hasSourcePlatformWith<br />
 <a href="inputObjects#platformwhereinput"><code>[PlatformWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIntegration<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>integration edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIntegrationWith<br />
+<a href="inputObjects#integrationwhereinput"><code>[IntegrationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -22225,6 +22522,366 @@ statusIn<br />
 <td>
 statusNotIn<br />
 <a href="enums#contactuserstatus"><code>[ContactUserStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>observed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -32515,6 +33172,15 @@ documentID<br />
 
 </td>
 </tr>
+<tr>
+<td>
+vendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -32782,6 +33448,15 @@ categories<br />
 </tr>
 <tr>
 <td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this asset was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -32962,7 +33637,34 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 sourcePlatformID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -33630,6 +34332,33 @@ status<br />
 </td>
 <td>
 <p>status of the contact</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that sourced this contact, when populated via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this contact was last observed by the source integration</p>
 </td>
 </tr>
 <tr>
@@ -34805,6 +35534,15 @@ trustCenterID<br />
 </tr>
 <tr>
 <td>
+domainType<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+<p>the type of this custom domain</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -35056,6 +35794,15 @@ scopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate accounts across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 directoryName<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -35209,6 +35956,42 @@ lastLoginAt<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the account was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the account was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
 observedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -35236,11 +36019,29 @@ profile<br />
 </tr>
 <tr>
 <td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
+</td>
+</tr>
+<tr>
+<td>
 sourceVersion<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>cursor or ETag supplied by the source system for auditing</p>
+</td>
+</tr>
+<tr>
+<td>
+primarySource<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates this directory account originates from the installation designated as the primary directory source for its owner organization</p>
 </td>
 </tr>
 <tr>
@@ -35384,6 +36185,15 @@ scopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate groups across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 externalID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -35456,6 +36266,42 @@ memberCount<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the group was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the group was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
 observedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -35479,6 +36325,15 @@ profile<br />
 </td>
 <td>
 <p>flattened attribute bag used for filtering/diffing</p>
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
 </td>
 </tr>
 <tr>
@@ -35586,6 +36441,15 @@ scopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate memberships across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
 role<br />
 <a href="enums#directorymembershipdirectorymembershiprole"><code>DirectoryMembershipDirectoryMembershipRole</code></a>
 </td>
@@ -35617,7 +36481,25 @@ lastSeenAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
-<p>most recent time the membership was detected</p>
+<p>most recent time the membership was confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the membership was added in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the membership was removed from the source directory</p>
 </td>
 </tr>
 <tr>
@@ -35766,6 +36648,15 @@ scopeName<br />
 </td>
 <td>
 <p>the scope of the directory_sync_run</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier derived from integration installation metadata for grouping runs across integrations pointed at the same directory instance</p>
 </td>
 </tr>
 <tr>
@@ -36583,7 +37474,7 @@ version<br />
 <tr>
 <td>
 templateContext<br />
-<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext</code></a>
+<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext!</code></a>
 </td>
 <td>
 <p>runtime data context defining available variable keys for this template</p>
@@ -36609,8 +37500,35 @@ ownerID<br />
 </tr>
 <tr>
 <td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
+blockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+editorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+viewerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -37010,10 +37928,10 @@ riskScore<br />
 <tr>
 <td>
 tier<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#entityvendortier"><code>EntityVendorTier</code></a>
 </td>
 <td>
-<p>the tier classification for the entity</p>
+<p>the vendor risk tier classification, used to determine the depth of TPRM assessment required</p>
 </td>
 </tr>
 <tr>
@@ -37050,6 +37968,24 @@ vendorMetadata<br />
 </td>
 <td>
 <p>vendor metadata such as additional enrichment info, company size, public, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this entity was last observed by the source integration</p>
 </td>
 </tr>
 <tr>
@@ -37243,6 +38179,15 @@ assessmentResponseIDs<br />
 </tr>
 <tr>
 <td>
+vendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 integrationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -37297,6 +38242,15 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 platformIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -37335,6 +38289,15 @@ entityTypeID<br />
 <td>
 logoFileID<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -37652,7 +38615,7 @@ collectionProcedure<br />
 <tr>
 <td>
 creationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence was retrieved</p>
@@ -37661,7 +38624,7 @@ creationDate<br />
 <tr>
 <td>
 renewalDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence should be renewed, defaults to a year from entry date</p>
@@ -40264,6 +41227,15 @@ controlIDs<br />
 </tr>
 <tr>
 <td>
+subcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 platformIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -40329,6 +41301,15 @@ accessPlatformIDs<br />
 <td>
 userID<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -40737,6 +41718,42 @@ discussionIDs<br />
 <tr>
 <td>
 workflowObjectRefIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -42249,6 +43266,15 @@ topicPattern<br />
 </tr>
 <tr>
 <td>
+destinations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>optional explicit provider destination identifiers for this template, such as Slack channel IDs</p>
+</td>
+</tr>
+<tr>
+<td>
 titleTemplate<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -43445,6 +44471,24 @@ discussionIDs<br />
 </tr>
 <tr>
 <td>
+vendorScoringConfigIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 createOrgSettings<br />
 <a href="inputObjects#createorganizationsettinginput"><code>CreateOrganizationSettingInput</code></a>
 </td>
@@ -44344,6 +45388,33 @@ evidenceIDs<br />
 <tr>
 <td>
 fileIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+architectureDiagramIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dataFlowDiagramIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustBoundaryDiagramIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -45415,6 +46486,15 @@ title<br />
 </tr>
 <tr>
 <td>
+status<br />
+<a href="enums#remediationremediationstatus"><code>RemediationRemediationStatus</code></a>
+</td>
+<td>
+<p>status of the remediation, such as pending, in_progress, or completed</p>
+</td>
+</tr>
+<tr>
+<td>
 state<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -46146,6 +47226,15 @@ fileIDs<br />
 
 </td>
 </tr>
+<tr>
+<td>
+internalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -46202,6 +47291,33 @@ scopeName<br />
 </td>
 <td>
 <p>the scope of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that surfaced this risk, when sourced via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this risk was last observed by the source integration</p>
 </td>
 </tr>
 <tr>
@@ -46310,6 +47426,69 @@ businessCostsJSON<br />
 </td>
 <td>
 <p>structured details of the business costs in JSON format</p>
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the risk was mitigated</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if a periodic review is required for the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the risk was last reviewed</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequency<br />
+<a href="enums#riskfrequency"><code>RiskFrequency</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the next review is due for the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+residualScore<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>score of the residual risk based on impact and likelihood (1-4 unlikely, 5-9 likely, 10-16 highly likely, 17-20 critical)</p>
+</td>
+</tr>
+<tr>
+<td>
+riskDecision<br />
+<a href="enums#riskriskdecision"><code>RiskRiskDecision</code></a>
+</td>
+<td>
+<p>the decision made for the risk - accept, transfer, avoid, mitigate, or none</p>
 </td>
 </tr>
 <tr>
@@ -46513,6 +47692,24 @@ commentIDs<br />
 <tr>
 <td>
 discussionIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+remediationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -47817,6 +49014,33 @@ scheduledJobIDs<br />
 <tr>
 <td>
 workflowObjectRefIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -50607,6 +51831,203 @@ defaultOrgID<br />
 </tbody>
 </table>
 
+## CreateVendorRiskScoreInput
+
+CreateVendorRiskScoreInput is used for create VendorRiskScore object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+questionKey<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>stable key referencing a VendorScoringQuestionDef; used for grouping across vendors and resolving the current question definition</p>
+</td>
+</tr>
+<tr>
+<td>
+questionName<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>question text as it existed when this assessment was created; preserved for historical accuracy if the question wording changes later</p>
+</td>
+</tr>
+<tr>
+<td>
+questionDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>question description captured at assessment time</p>
+</td>
+</tr>
+<tr>
+<td>
+questionCategory<br />
+<a href="enums#vendorriskscorevendorscoringcategory"><code>VendorRiskScoreVendorScoringCategory!</code></a>
+</td>
+<td>
+<p>question category captured at assessment time</p>
+</td>
+</tr>
+<tr>
+<td>
+impact<br />
+<a href="enums#vendorriskscorevendorriskimpact"><code>VendorRiskScoreVendorRiskImpact!</code></a>
+</td>
+<td>
+<p>user-assigned impact for this specific vendor using the 5-point TPRM scale (VERY_LOW=1 through CRITICAL=5); the same question may carry different impact across vendors</p>
+</td>
+</tr>
+<tr>
+<td>
+likelihood<br />
+<a href="enums#vendorriskscorevendorrisklikelihood"><code>VendorRiskScoreVendorRiskLikelihood!</code></a>
+</td>
+<td>
+<p>user-assigned likelihood of the risk condition occurring for this vendor using the 5-point TPRM scale (VERY_LOW=0.5 through VERY_HIGH=4)</p>
+</td>
+</tr>
+<tr>
+<td>
+answer<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>factual answer to the question (e.g. &#39;true&#39;, &#39;false&#39;, &#39;48 hours&#39;, &#39;ISO 27001&#39;); retained permanently even if the question text changes, because question_key is the stable reference not the display name</p>
+</td>
+</tr>
+<tr>
+<td>
+notes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>optional justification or context for the assigned impact and likelihood</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityID<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CreateVendorScoringConfigInput
+
+CreateVendorScoringConfigInput is used for create VendorScoringConfig object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+questions<br />
+<a href="scalars#vendorscoringquestionsconfig"><code>VendorScoringQuestionsConfig</code></a>
+</td>
+<td>
+<p>org-custom question overrides and additions; system defaults from models.DefaultVendorScoringQuestions are merged at read time via VendorScoringQuestionsConfig.All()</p>
+</td>
+</tr>
+<tr>
+<td>
+scoringMode<br />
+<a href="enums#vendorscoringconfigvendorscoringmode"><code>VendorScoringConfigVendorScoringMode</code></a>
+</td>
+<td>
+<p>controls how unanswered questions affect the aggregate score: ANSWERED_ONLY sums only answered questions; FULL_QUESTIONNAIRE treats unanswered as maximum risk; MANUAL disables automatic aggregation</p>
+</td>
+</tr>
+<tr>
+<td>
+riskThresholds<br />
+<a href="scalars#riskthresholdsconfig"><code>RiskThresholdsConfig</code></a>
+</td>
+<td>
+<p>org-custom risk rating threshold overrides; system defaults from models.DefaultRiskThresholds are merged at read time via RiskThresholdsConfig.All()</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## CreateVulnerabilityInput
 
 CreateVulnerabilityInput is used for create Vulnerability object.
@@ -50871,6 +52292,69 @@ impacts<br />
 </tr>
 <tr>
 <td>
+cweIds<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>CWE identifiers associated with the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRange<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>version range affected by the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>earliest version that fixes the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+packageName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>name of the vulnerable package or dependency</p>
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystem<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ecosystem of the vulnerable package such as npm, pip, or maven</p>
+</td>
+</tr>
+<tr>
+<td>
+manifestPath<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>path to the manifest file declaring the vulnerable dependency</p>
+</td>
+</tr>
+<tr>
+<td>
+dependencyScope<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>scope of the dependency such as runtime or development</p>
+</td>
+</tr>
+<tr>
+<td>
 publishedAt<br />
 <a href="scalars#datetime"><code>DateTime</code></a>
 </td>
@@ -50894,6 +52378,51 @@ sourceUpdatedAt<br />
 </td>
 <td>
 <p>timestamp when the source last updated the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+dismissedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when the vulnerability was dismissed</p>
+</td>
+</tr>
+<tr>
+<td>
+dismissedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>reason the vulnerability was dismissed such as tolerable_risk, not_used, ineligible, or no_bandwidth</p>
+</td>
+</tr>
+<tr>
+<td>
+dismissedComment<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>free-text explanation provided when the vulnerability was dismissed</p>
+</td>
+</tr>
+<tr>
+<td>
+fixedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when the vulnerability was marked as fixed</p>
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when the vulnerability was automatically dismissed by the source system</p>
 </td>
 </tr>
 <tr>
@@ -52891,6 +54420,42 @@ trustCenterIDEqualFold<br />
 <td>
 trustCenterIDContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domainType<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+<p>domain_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+domainTypeNEQ<br />
+<a href="enums#customdomaincustomdomaintype"><code>CustomDomainCustomDomainType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domainTypeIn<br />
+<a href="enums#customdomaincustomdomaintype"><code>[CustomDomainCustomDomainType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+domainTypeNotIn<br />
+<a href="enums#customdomaincustomdomaintype"><code>[CustomDomainCustomDomainType!]</code></a>
 </td>
 <td>
 
@@ -56773,6 +58338,141 @@ platformIDContainsFold<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_instance_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 identityHolderID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -58951,6 +60651,366 @@ lastLoginAtNotNil<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>first_seen_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>last_seen_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>added_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>removed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 observedAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
@@ -59268,6 +61328,24 @@ sourceVersionEqualFold<br />
 <td>
 sourceVersionContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+primarySource<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>primary_source field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+primarySourceNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -61154,6 +63232,141 @@ platformIDContainsFold<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_instance_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 directorySyncRunID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -61848,6 +64061,366 @@ memberCountIsNil<br />
 <tr>
 <td>
 memberCountNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>first_seen_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>last_seen_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>added_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>removed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -63348,6 +65921,141 @@ scopeNameContainsFold<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_instance_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 role<br />
 <a href="enums#directorymembershipdirectorymembershiprole"><code>DirectoryMembershipDirectoryMembershipRole</code></a>
 </td>
@@ -63709,6 +66417,186 @@ lastSeenAtIsNil<br />
 <tr>
 <td>
 lastSeenAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>added_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+addedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>removed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+removedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAtNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -65571,6 +68459,141 @@ platformIDEqualFold<br />
 <td>
 platformIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>directory_instance_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -75441,159 +78464,6 @@ templateContextNotIn<br />
 </tr>
 <tr>
 <td>
-templateContextIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateContextNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>email_branding_id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNEQ<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNotIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDGT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDGTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDLT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDLTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDContains<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDHasPrefix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDHasSuffix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDEqualFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDContainsFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 integrationID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -76010,6 +78880,60 @@ hasOwner<br />
 <td>
 hasOwnerWith<br />
 <a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasBlockedGroupsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEditorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasViewers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>viewers edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasViewersWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
 
@@ -82547,8 +85471,98 @@ riskScoreNotNil<br />
 </tr>
 <tr>
 <td>
+riskScoreCoverage<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>risk_score_coverage field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageNEQ<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageIn<br />
+<a href="scalars#int"><code>[Int!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageNotIn<br />
+<a href="scalars#int"><code>[Int!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageGT<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageGTE<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageLT<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageLTE<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskScoreCoverageNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 tier<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#entityvendortier"><code>EntityVendorTier</code></a>
 </td>
 <td>
 <p>tier field predicates</p>
@@ -82557,7 +85571,7 @@ tier<br />
 <tr>
 <td>
 tierNEQ<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#entityvendortier"><code>EntityVendorTier</code></a>
 </td>
 <td>
 
@@ -82566,7 +85580,7 @@ tierNEQ<br />
 <tr>
 <td>
 tierIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
+<a href="enums#entityvendortier"><code>[EntityVendorTier!]</code></a>
 </td>
 <td>
 
@@ -82575,70 +85589,7 @@ tierIn<br />
 <tr>
 <td>
 tierNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#entityvendortier"><code>[EntityVendorTier!]</code></a>
 </td>
 <td>
 
@@ -82657,24 +85608,6 @@ tierIsNil<br />
 <td>
 tierNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tierContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -83044,6 +85977,231 @@ logoFileIDEqualFold<br />
 <td>
 logoFileIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>observed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -83429,6 +86587,24 @@ hasAssessmentResponsesWith<br />
 </tr>
 <tr>
 <td>
+hasVendorRiskScores<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vendor_risk_scores edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVendorRiskScoresWith<br />
+<a href="inputObjects#vendorriskscorewhereinput"><code>[VendorRiskScoreWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasIntegrations<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -83537,6 +86713,24 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasPlatforms<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -83620,6 +86814,24 @@ hasLogoFile<br />
 <td>
 hasLogoFileWith<br />
 <a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
 </td>
 <td>
 
@@ -86855,7 +90067,7 @@ collectionProcedureContainsFold<br />
 <tr>
 <td>
 creationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>creation_date field predicates</p>
@@ -86864,7 +90076,7 @@ creationDate<br />
 <tr>
 <td>
 creationDateNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86873,7 +90085,7 @@ creationDateNEQ<br />
 <tr>
 <td>
 creationDateIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -86882,7 +90094,7 @@ creationDateIn<br />
 <tr>
 <td>
 creationDateNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -86891,7 +90103,7 @@ creationDateNotIn<br />
 <tr>
 <td>
 creationDateGT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86900,7 +90112,7 @@ creationDateGT<br />
 <tr>
 <td>
 creationDateGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86909,7 +90121,7 @@ creationDateGTE<br />
 <tr>
 <td>
 creationDateLT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86918,7 +90130,7 @@ creationDateLT<br />
 <tr>
 <td>
 creationDateLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86927,7 +90139,7 @@ creationDateLTE<br />
 <tr>
 <td>
 renewalDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>renewal_date field predicates</p>
@@ -86936,7 +90148,7 @@ renewalDate<br />
 <tr>
 <td>
 renewalDateNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86945,7 +90157,7 @@ renewalDateNEQ<br />
 <tr>
 <td>
 renewalDateIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -86954,7 +90166,7 @@ renewalDateIn<br />
 <tr>
 <td>
 renewalDateNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
 </td>
 <td>
 
@@ -86963,7 +90175,7 @@ renewalDateNotIn<br />
 <tr>
 <td>
 renewalDateGT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86972,7 +90184,7 @@ renewalDateGT<br />
 <tr>
 <td>
 renewalDateGTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86981,7 +90193,7 @@ renewalDateGTE<br />
 <tr>
 <td>
 renewalDateLT<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -86990,7 +90202,7 @@ renewalDateLT<br />
 <tr>
 <td>
 renewalDateLTE<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 
@@ -110282,6 +113494,24 @@ hasControlsWith<br />
 </tr>
 <tr>
 <td>
+hasSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subcontrols edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubcontrolsWith<br />
+<a href="inputObjects#subcontrolwhereinput"><code>[SubcontrolWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasPlatforms<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -110419,6 +113649,24 @@ hasUser<br />
 <td>
 hasUserWith<br />
 <a href="inputObjects#userwhereinput"><code>[UserWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
 </td>
 <td>
 
@@ -113124,6 +116372,24 @@ statusNotIn<br />
 </tr>
 <tr>
 <td>
+primaryDirectory<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>primary_directory field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+primaryDirectoryNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -113333,6 +116599,24 @@ hasActionPlans<br />
 <td>
 hasActionPlansWith<br />
 <a href="inputObjects#actionplanwhereinput"><code>[ActionPlanWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAssets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>assets edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAssetsWith<br />
+<a href="inputObjects#assetwhereinput"><code>[AssetWhereInput!]</code></a>
 </td>
 <td>
 
@@ -117174,6 +120458,78 @@ hasWorkflowObjectRefs<br />
 <td>
 hasWorkflowObjectRefsWith<br />
 <a href="inputObjects#workflowobjectrefwhereinput"><code>[WorkflowObjectRefWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAssets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>assets edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAssetsWith<br />
+<a href="inputObjects#assetwhereinput"><code>[AssetWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEntities<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>entities edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEntitiesWith<br />
+<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolders<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>identity_holders edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHoldersWith<br />
+<a href="inputObjects#identityholderwhereinput"><code>[IdentityHolderWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasReviews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>reviews edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasReviewsWith<br />
+<a href="inputObjects#reviewwhereinput"><code>[ReviewWhereInput!]</code></a>
 </td>
 <td>
 
@@ -143173,6 +146529,42 @@ hasDiscussionsWith<br />
 </tr>
 <tr>
 <td>
+hasVendorScoringConfigs<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vendor_scoring_configs edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVendorScoringConfigsWith<br />
+<a href="inputObjects#vendorscoringconfigwhereinput"><code>[VendorScoringConfigWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasVendorRiskScores<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vendor_risk_scores edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVendorRiskScoresWith<br />
+<a href="inputObjects#vendorriskscorewhereinput"><code>[VendorRiskScoreWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasMembers<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -153402,6 +156794,60 @@ hasFilesWith<br />
 </tr>
 <tr>
 <td>
+hasArchitectureDiagrams<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>architecture_diagrams edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasArchitectureDiagramsWith<br />
+<a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDataFlowDiagrams<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>data_flow_diagrams edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDataFlowDiagramsWith<br />
+<a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustBoundaryDiagrams<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_boundary_diagrams edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustBoundaryDiagramsWith<br />
+<a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasRisks<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -163009,6 +166455,60 @@ titleContainsFold<br />
 </tr>
 <tr>
 <td>
+status<br />
+<a href="enums#remediationremediationstatus"><code>RemediationRemediationStatus</code></a>
+</td>
+<td>
+<p>status field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+statusNEQ<br />
+<a href="enums#remediationremediationstatus"><code>RemediationRemediationStatus</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIn<br />
+<a href="enums#remediationremediationstatus"><code>[RemediationRemediationStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotIn<br />
+<a href="enums#remediationremediationstatus"><code>[RemediationRemediationStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 state<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -169268,6 +172768,24 @@ hasFilesWith<br />
 </tr>
 <tr>
 <td>
+hasInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal_policies edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInternalPoliciesWith<br />
+<a href="inputObjects#internalpolicywhereinput"><code>[InternalPolicyWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 tagsHas<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -171219,6 +174737,366 @@ scopeIDContainsFold<br />
 </tr>
 <tr>
 <td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>external_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+externalIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>observed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+observedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 externalUUID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -172398,6 +176276,510 @@ delegateIDContainsFold<br />
 </tr>
 <tr>
 <td>
+mitigatedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>mitigated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>review_required field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewRequiredNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewRequiredIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewRequiredNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>last_reviewed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequency<br />
+<a href="enums#riskfrequency"><code>RiskFrequency</code></a>
+</td>
+<td>
+<p>review_frequency field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyNEQ<br />
+<a href="enums#riskfrequency"><code>RiskFrequency</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyIn<br />
+<a href="enums#riskfrequency"><code>[RiskFrequency!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyNotIn<br />
+<a href="enums#riskfrequency"><code>[RiskFrequency!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>next_review_due_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScore<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>residual_score field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+residualScoreNEQ<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScoreIn<br />
+<a href="scalars#int"><code>[Int!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScoreNotIn<br />
+<a href="scalars#int"><code>[Int!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScoreGT<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScoreGTE<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScoreLT<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScoreLTE<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScoreIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScoreNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskDecision<br />
+<a href="enums#riskriskdecision"><code>RiskRiskDecision</code></a>
+</td>
+<td>
+<p>risk_decision field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+riskDecisionNEQ<br />
+<a href="enums#riskriskdecision"><code>RiskRiskDecision</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskDecisionIn<br />
+<a href="enums#riskriskdecision"><code>[RiskRiskDecision!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskDecisionNotIn<br />
+<a href="enums#riskriskdecision"><code>[RiskRiskDecision!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskDecisionIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskDecisionNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -172805,6 +177187,42 @@ hasDiscussions<br />
 <td>
 hasDiscussionsWith<br />
 <a href="inputObjects#discussionwhereinput"><code>[DiscussionWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasReviews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>reviews edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasReviewsWith<br />
+<a href="inputObjects#reviewwhereinput"><code>[ReviewWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRemediations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>remediations edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationsWith<br />
+<a href="inputObjects#remediationwhereinput"><code>[RemediationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -187025,6 +191443,60 @@ hasWorkflowObjectRefs<br />
 <td>
 hasWorkflowObjectRefsWith<br />
 <a href="inputObjects#workflowobjectrefwhereinput"><code>[WorkflowObjectRefWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAssets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>assets edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAssetsWith<br />
+<a href="inputObjects#assetwhereinput"><code>[AssetWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEntities<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>entities edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEntitiesWith<br />
+<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolders<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>identity_holders edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHoldersWith<br />
+<a href="inputObjects#identityholderwhereinput"><code>[IdentityHolderWhereInput!]</code></a>
 </td>
 <td>
 
@@ -217952,6 +222424,24 @@ clearCategories<br />
 </tr>
 <tr>
 <td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this asset was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
+clearObservedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -218367,6 +222857,60 @@ removeControlIDs<br />
 <tr>
 <td>
 clearControls<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -219643,6 +224187,60 @@ status<br />
 </td>
 <td>
 <p>status of the contact</p>
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that sourced this contact, when populated via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearIntegrationID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this contact was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
+clearObservedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -222911,6 +227509,24 @@ clearScopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate accounts across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryInstanceID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 directoryName<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223181,6 +227797,78 @@ clearLastLoginAt<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFirstSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this account was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearLastSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the account was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAddedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the account was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRemovedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 profileHash<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223208,6 +227896,24 @@ clearProfile<br />
 </tr>
 <tr>
 <td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
+</td>
+</tr>
+<tr>
+<td>
+clearMetadata<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 sourceVersion<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223222,6 +227928,15 @@ clearSourceVersion<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+primarySource<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates this directory account originates from the installation designated as the primary directory source for its owner organization</p>
 </td>
 </tr>
 <tr>
@@ -223473,6 +228188,24 @@ clearScopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate groups across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryInstanceID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 email<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223581,6 +228314,78 @@ clearMemberCount<br />
 </tr>
 <tr>
 <td>
+firstSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was first observed by Openlane from directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFirstSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastSeenAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>time this group was most recently confirmed by directory ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearLastSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the group was added or provisioned in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAddedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the group was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRemovedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 profileHash<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -223600,6 +228405,24 @@ profile<br />
 <tr>
 <td>
 clearProfile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+metadata<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>provider-specific metadata captured alongside the normalized profile to preserve directory quirks without schema sprawl</p>
+</td>
+</tr>
+<tr>
+<td>
+clearMetadata<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -223756,6 +228579,24 @@ clearScopeName<br />
 </tr>
 <tr>
 <td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier used to correlate memberships across multiple integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryInstanceID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 role<br />
 <a href="enums#directorymembershipdirectorymembershiprole"><code>DirectoryMembershipDirectoryMembershipRole</code></a>
 </td>
@@ -223814,12 +228655,48 @@ lastSeenAt<br />
 <a href="scalars#time"><code>Time</code></a>
 </td>
 <td>
-<p>most recent time the membership was detected</p>
+<p>most recent time the membership was confirmed by directory ingest</p>
 </td>
 </tr>
 <tr>
 <td>
 clearLastSeenAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported time the membership was added in the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAddedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>provider-reported or locally-recorded time the membership was removed from the source directory</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRemovedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -224013,6 +228890,24 @@ scopeName<br />
 <tr>
 <td>
 clearScopeName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryInstanceID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable external workspace, tenant, or installation identifier derived from integration installation metadata for grouping runs across integrations pointed at the same directory instance</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryInstanceID<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -225502,15 +230397,6 @@ templateContext<br />
 </tr>
 <tr>
 <td>
-clearTemplateContext<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 defaults<br />
 <a href="scalars#map"><code>Map</code></a>
 </td>
@@ -225529,8 +230415,98 @@ clearDefaults<br />
 </tr>
 <tr>
 <td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
+addBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addViewerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeViewerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearViewers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEmailBrandingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEmailBrandingIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -226389,10 +231365,10 @@ clearRiskScore<br />
 <tr>
 <td>
 tier<br />
-<a href="scalars#string"><code>String</code></a>
+<a href="enums#entityvendortier"><code>EntityVendorTier</code></a>
 </td>
 <td>
-<p>the tier classification for the entity</p>
+<p>the vendor risk tier classification, used to determine the depth of TPRM assessment required</p>
 </td>
 </tr>
 <tr>
@@ -226470,6 +231446,42 @@ vendorMetadata<br />
 <tr>
 <td>
 clearVendorMetadata<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this entity was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
+clearObservedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -226937,6 +231949,33 @@ clearAssessmentResponses<br />
 </tr>
 <tr>
 <td>
+addVendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeVendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearVendorRiskScores<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addIntegrationIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -227099,6 +232138,33 @@ clearControls<br />
 </tr>
 <tr>
 <td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addPlatformIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -227208,6 +232274,33 @@ logoFileID<br />
 <tr>
 <td>
 clearLogoFile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -227886,7 +232979,7 @@ clearCollectionProcedure<br />
 <tr>
 <td>
 creationDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence was retrieved</p>
@@ -227895,7 +232988,7 @@ creationDate<br />
 <tr>
 <td>
 renewalDate<br />
-<a href="scalars#time"><code>Time</code></a>
+<a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
 <p>the date the evidence should be renewed, defaults to a year from entry date</p>
@@ -233574,6 +238667,33 @@ clearControls<br />
 </tr>
 <tr>
 <td>
+addSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubcontrolIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubcontrols<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addPlatformIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -233773,6 +238893,33 @@ userID<br />
 <tr>
 <td>
 clearUser<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -234767,6 +239914,114 @@ removeWorkflowObjectRefIDs<br />
 <tr>
 <td>
 clearWorkflowObjectRefs<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addAssetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeAssetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEntityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEntityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEntities<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addIdentityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeIdentityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearIdentityHolders<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviews<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -237298,6 +242553,33 @@ topicPattern<br />
 </td>
 <td>
 <p>topic name or wildcard pattern this template targets</p>
+</td>
+</tr>
+<tr>
+<td>
+destinations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>optional explicit provider destination identifiers for this template, such as Slack channel IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+appendDestinations<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDestinations<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -240303,6 +245585,60 @@ clearDiscussions<br />
 </tr>
 <tr>
 <td>
+addVendorScoringConfigIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeVendorScoringConfigIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearVendorScoringConfigs<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addVendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeVendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearVendorRiskScores<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addOrgMembers<br />
 <a href="inputObjects#createorgmembershipinput"><code>[CreateOrgMembershipInput!]</code></a>
 </td>
@@ -242102,6 +247438,87 @@ removeFileIDs<br />
 <tr>
 <td>
 clearFiles<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addArchitectureDiagramIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeArchitectureDiagramIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearArchitectureDiagrams<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDataFlowDiagramIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDataFlowDiagramIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDataFlowDiagrams<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustBoundaryDiagramIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustBoundaryDiagramIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustBoundaryDiagrams<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -244511,6 +249928,24 @@ clearTitle<br />
 </tr>
 <tr>
 <td>
+status<br />
+<a href="enums#remediationremediationstatus"><code>RemediationRemediationStatus</code></a>
+</td>
+<td>
+<p>status of the remediation, such as pending, in_progress, or completed</p>
+</td>
+</tr>
+<tr>
+<td>
+clearStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 state<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -246241,6 +251676,33 @@ clearFiles<br />
 
 </td>
 </tr>
+<tr>
+<td>
+addInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInternalPolicyIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInternalPolicies<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -246347,6 +251809,60 @@ scopeName<br />
 <tr>
 <td>
 clearScopeName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+externalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable identifier assigned by the source system, used for integration ingest deduplication</p>
+</td>
+</tr>
+<tr>
+<td>
+clearExternalID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>integration that surfaced this risk, when sourced via integration ingest</p>
+</td>
+</tr>
+<tr>
+<td>
+clearIntegrationID<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+observedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>time when this risk was last observed by the source integration</p>
+</td>
+</tr>
+<tr>
+<td>
+clearObservedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -246581,6 +252097,132 @@ appendBusinessCostsJSON<br />
 <tr>
 <td>
 clearBusinessCostsJSON<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+mitigatedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the risk was mitigated</p>
+</td>
+</tr>
+<tr>
+<td>
+clearMitigatedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if a periodic review is required for the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+clearReviewRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+lastReviewedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the risk was last reviewed</p>
+</td>
+</tr>
+<tr>
+<td>
+clearLastReviewedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequency<br />
+<a href="enums#riskfrequency"><code>RiskFrequency</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviewFrequency<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+nextReviewDueAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the next review is due for the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+clearNextReviewDueAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+residualScore<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>score of the residual risk based on impact and likelihood (1-4 unlikely, 5-9 likely, 10-16 highly likely, 17-20 critical)</p>
+</td>
+</tr>
+<tr>
+<td>
+clearResidualScore<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskDecision<br />
+<a href="enums#riskriskdecision"><code>RiskRiskDecision</code></a>
+</td>
+<td>
+<p>the decision made for the risk - accept, transfer, avoid, mitigate, or none</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRiskDecision<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -247121,6 +252763,60 @@ removeDiscussionIDs<br />
 <tr>
 <td>
 clearDiscussions<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeReviewIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviews<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRemediationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRemediationIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRemediations<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -249999,6 +255695,87 @@ removeWorkflowObjectRefIDs<br />
 <tr>
 <td>
 clearWorkflowObjectRefs<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addAssetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeAssetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEntityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEntityIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEntities<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addIdentityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeIdentityHolderIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearIdentityHolders<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -255363,6 +261140,302 @@ clearDefaultOrg<br />
 </tbody>
 </table>
 
+## UpdateVendorRiskScoreInput
+
+UpdateVendorRiskScoreInput is used for update VendorRiskScore object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+appendTags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTags<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKey<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>stable key referencing a VendorScoringQuestionDef; used for grouping across vendors and resolving the current question definition</p>
+</td>
+</tr>
+<tr>
+<td>
+questionName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>question text as it existed when this assessment was created; preserved for historical accuracy if the question wording changes later</p>
+</td>
+</tr>
+<tr>
+<td>
+questionDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>question description captured at assessment time</p>
+</td>
+</tr>
+<tr>
+<td>
+clearQuestionDescription<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionCategory<br />
+<a href="enums#vendorriskscorevendorscoringcategory"><code>VendorRiskScoreVendorScoringCategory</code></a>
+</td>
+<td>
+<p>question category captured at assessment time</p>
+</td>
+</tr>
+<tr>
+<td>
+impact<br />
+<a href="enums#vendorriskscorevendorriskimpact"><code>VendorRiskScoreVendorRiskImpact</code></a>
+</td>
+<td>
+<p>user-assigned impact for this specific vendor using the 5-point TPRM scale (VERY_LOW=1 through CRITICAL=5); the same question may carry different impact across vendors</p>
+</td>
+</tr>
+<tr>
+<td>
+likelihood<br />
+<a href="enums#vendorriskscorevendorrisklikelihood"><code>VendorRiskScoreVendorRiskLikelihood</code></a>
+</td>
+<td>
+<p>user-assigned likelihood of the risk condition occurring for this vendor using the 5-point TPRM scale (VERY_LOW=0.5 through VERY_HIGH=4)</p>
+</td>
+</tr>
+<tr>
+<td>
+answer<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>factual answer to the question (e.g. &#39;true&#39;, &#39;false&#39;, &#39;48 hours&#39;, &#39;ISO 27001&#39;); retained permanently even if the question text changes, because question_key is the stable reference not the display name</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAnswer<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>optional justification or context for the assigned impact and likelihood</p>
+</td>
+</tr>
+<tr>
+<td>
+clearNotes<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearVendorScoringConfig<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssessmentResponse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## UpdateVendorScoringConfigInput
+
+UpdateVendorScoringConfigInput is used for update VendorScoringConfig object.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+tags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>tags associated with the object</p>
+</td>
+</tr>
+<tr>
+<td>
+appendTags<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTags<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questions<br />
+<a href="scalars#vendorscoringquestionsconfig"><code>VendorScoringQuestionsConfig</code></a>
+</td>
+<td>
+<p>org-custom question overrides and additions; system defaults from models.DefaultVendorScoringQuestions are merged at read time via VendorScoringQuestionsConfig.All()</p>
+</td>
+</tr>
+<tr>
+<td>
+scoringMode<br />
+<a href="enums#vendorscoringconfigvendorscoringmode"><code>VendorScoringConfigVendorScoringMode</code></a>
+</td>
+<td>
+<p>controls how unanswered questions affect the aggregate score: ANSWERED_ONLY sums only answered questions; FULL_QUESTIONNAIRE treats unanswered as maximum risk; MANUAL disables automatic aggregation</p>
+</td>
+</tr>
+<tr>
+<td>
+riskThresholds<br />
+<a href="scalars#riskthresholdsconfig"><code>RiskThresholdsConfig</code></a>
+</td>
+<td>
+<p>org-custom risk rating threshold overrides; system defaults from models.DefaultRiskThresholds are merged at read time via RiskThresholdsConfig.All()</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addVendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeVendorRiskScoreIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearVendorRiskScores<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## UpdateVulnerabilityInput
 
 UpdateVulnerabilityInput is used for update Vulnerability object.
@@ -255897,6 +261970,141 @@ clearImpacts<br />
 </tr>
 <tr>
 <td>
+cweIds<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>CWE identifiers associated with the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+appendCweIds<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCweIds<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRange<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>version range affected by the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+clearVulnerableVersionRange<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>earliest version that fixes the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFirstPatchedVersion<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>name of the vulnerable package or dependency</p>
+</td>
+</tr>
+<tr>
+<td>
+clearPackageName<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystem<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>ecosystem of the vulnerable package such as npm, pip, or maven</p>
+</td>
+</tr>
+<tr>
+<td>
+clearPackageEcosystem<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPath<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>path to the manifest file declaring the vulnerable dependency</p>
+</td>
+</tr>
+<tr>
+<td>
+clearManifestPath<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScope<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>scope of the dependency such as runtime or development</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDependencyScope<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 publishedAt<br />
 <a href="scalars#datetime"><code>DateTime</code></a>
 </td>
@@ -255943,6 +262151,96 @@ sourceUpdatedAt<br />
 <tr>
 <td>
 clearSourceUpdatedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when the vulnerability was dismissed</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDismissedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>reason the vulnerability was dismissed such as tolerable_risk, not_used, ineligible, or no_bandwidth</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDismissedReason<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedComment<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>free-text explanation provided when the vulnerability was dismissed</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDismissedComment<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when the vulnerability was marked as fixed</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFixedAt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>timestamp when the vulnerability was automatically dismissed by the source system</p>
+</td>
+</tr>
+<tr>
+<td>
+clearAutoDismissedAt<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -261310,6 +267608,2900 @@ tagsHas<br />
 </tbody>
 </table>
 
+## VendorRiskScoreOrder
+
+Ordering options for VendorRiskScore connections
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+direction<br />
+<a href="enums#orderdirection"><code>OrderDirection!</code></a>
+</td>
+<td>
+<p>The ordering direction.</p>
+</td>
+</tr>
+<tr>
+<td>
+field<br />
+<a href="enums#vendorriskscoreorderfield"><code>VendorRiskScoreOrderField!</code></a>
+</td>
+<td>
+<p>The field by which to order VendorRiskScores.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorRiskScoreWhereInput
+
+VendorRiskScoreWhereInput is used for filtering VendorRiskScore objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#vendorriskscorewhereinput"><code>VendorRiskScoreWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#vendorriskscorewhereinput"><code>[VendorRiskScoreWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#vendorriskscorewhereinput"><code>[VendorRiskScoreWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>owner_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKey<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>question_key field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+questionKeyNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionKeyContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>question_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+questionNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescription<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>question_description field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionDescriptionContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionCategory<br />
+<a href="enums#vendorriskscorevendorscoringcategory"><code>VendorRiskScoreVendorScoringCategory</code></a>
+</td>
+<td>
+<p>question_category field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+questionCategoryNEQ<br />
+<a href="enums#vendorriskscorevendorscoringcategory"><code>VendorRiskScoreVendorScoringCategory</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionCategoryIn<br />
+<a href="enums#vendorriskscorevendorscoringcategory"><code>[VendorRiskScoreVendorScoringCategory!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+questionCategoryNotIn<br />
+<a href="enums#vendorriskscorevendorscoringcategory"><code>[VendorRiskScoreVendorScoringCategory!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerType<br />
+<a href="enums#vendorriskscorevendorscoringanswertype"><code>VendorRiskScoreVendorScoringAnswerType</code></a>
+</td>
+<td>
+<p>answer_type field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+answerTypeNEQ<br />
+<a href="enums#vendorriskscorevendorscoringanswertype"><code>VendorRiskScoreVendorScoringAnswerType</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerTypeIn<br />
+<a href="enums#vendorriskscorevendorscoringanswertype"><code>[VendorRiskScoreVendorScoringAnswerType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerTypeNotIn<br />
+<a href="enums#vendorriskscorevendorscoringanswertype"><code>[VendorRiskScoreVendorScoringAnswerType!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+impact<br />
+<a href="enums#vendorriskscorevendorriskimpact"><code>VendorRiskScoreVendorRiskImpact</code></a>
+</td>
+<td>
+<p>impact field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+impactNEQ<br />
+<a href="enums#vendorriskscorevendorriskimpact"><code>VendorRiskScoreVendorRiskImpact</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+impactIn<br />
+<a href="enums#vendorriskscorevendorriskimpact"><code>[VendorRiskScoreVendorRiskImpact!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+impactNotIn<br />
+<a href="enums#vendorriskscorevendorriskimpact"><code>[VendorRiskScoreVendorRiskImpact!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+likelihood<br />
+<a href="enums#vendorriskscorevendorrisklikelihood"><code>VendorRiskScoreVendorRiskLikelihood</code></a>
+</td>
+<td>
+<p>likelihood field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+likelihoodNEQ<br />
+<a href="enums#vendorriskscorevendorrisklikelihood"><code>VendorRiskScoreVendorRiskLikelihood</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+likelihoodIn<br />
+<a href="enums#vendorriskscorevendorrisklikelihood"><code>[VendorRiskScoreVendorRiskLikelihood!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+likelihoodNotIn<br />
+<a href="enums#vendorriskscorevendorrisklikelihood"><code>[VendorRiskScoreVendorRiskLikelihood!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+score<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+<p>score field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+scoreNEQ<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoreIn<br />
+<a href="scalars#float"><code>[Float!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoreNotIn<br />
+<a href="scalars#float"><code>[Float!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoreGT<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoreGTE<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoreLT<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoreLTE<br />
+<a href="scalars#float"><code>Float</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answer<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>answer field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+answerNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+answerContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>notes field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+notesNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notesContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>vendor_scoring_config_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>entity_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+entityIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>assessment_response_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>owner edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasOwnerWith<br />
+<a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasVendorScoringConfig<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vendor_scoring_config edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVendorScoringConfigWith<br />
+<a href="inputObjects#vendorscoringconfigwhereinput"><code>[VendorScoringConfigWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEntity<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>entity edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEntityWith<br />
+<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAssessmentResponse<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>assessment_response edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAssessmentResponseWith<br />
+<a href="inputObjects#assessmentresponsewhereinput"><code>[AssessmentResponseWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tagsHas<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Filter for tagsHas to contain a specific value</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorScoringConfigOrder
+
+Ordering options for VendorScoringConfig connections
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+direction<br />
+<a href="enums#orderdirection"><code>OrderDirection!</code></a>
+</td>
+<td>
+<p>The ordering direction.</p>
+</td>
+</tr>
+<tr>
+<td>
+field<br />
+<a href="enums#vendorscoringconfigorderfield"><code>VendorScoringConfigOrderField!</code></a>
+</td>
+<td>
+<p>The field by which to order VendorScoringConfigs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorScoringConfigWhereInput
+
+VendorScoringConfigWhereInput is used for filtering VendorScoringConfig objects.
+Input was generated by ent.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+not<br />
+<a href="inputObjects#vendorscoringconfigwhereinput"><code>VendorScoringConfigWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+and<br />
+<a href="inputObjects#vendorscoringconfigwhereinput"><code>[VendorScoringConfigWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+or<br />
+<a href="inputObjects#vendorscoringconfigwhereinput"><code>[VendorScoringConfigWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+idNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+idContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>created_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>updated_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>created_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+createdByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+createdByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>updated_by field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+updatedByNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+updatedByContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>owner_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ownerIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoringMode<br />
+<a href="enums#vendorscoringconfigvendorscoringmode"><code>VendorScoringConfigVendorScoringMode</code></a>
+</td>
+<td>
+<p>scoring_mode field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+scoringModeNEQ<br />
+<a href="enums#vendorscoringconfigvendorscoringmode"><code>VendorScoringConfigVendorScoringMode</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoringModeIn<br />
+<a href="enums#vendorscoringconfigvendorscoringmode"><code>[VendorScoringConfigVendorScoringMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scoringModeNotIn<br />
+<a href="enums#vendorscoringconfigvendorscoringmode"><code>[VendorScoringConfigVendorScoringMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasOwner<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>owner edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasOwnerWith<br />
+<a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasVendorRiskScores<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vendor_risk_scores edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVendorRiskScoresWith<br />
+<a href="inputObjects#vendorriskscorewhereinput"><code>[VendorRiskScoreWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tagsHas<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Filter for tagsHas to contain a specific value</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## VulnerabilityOrder
 
 Ordering options for Vulnerability connections
@@ -265348,6 +274540,816 @@ validatedNotNil<br />
 </tr>
 <tr>
 <td>
+vulnerableVersionRange<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>vulnerable_version_range field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerableVersionRangeContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersion<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>first_patched_version field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+firstPatchedVersionContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>package_name field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+packageNameNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageNameContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystem<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>package_ecosystem field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+packageEcosystemContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPath<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>manifest_path field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+manifestPathNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+manifestPathContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScope<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>dependency_scope field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dependencyScopeContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 publishedAt<br />
 <a href="scalars#datetime"><code>DateTime</code></a>
 </td>
@@ -265610,6 +275612,546 @@ sourceUpdatedAtIsNil<br />
 <tr>
 <td>
 sourceUpdatedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>dismissed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>dismissed_reason field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedReasonContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedComment<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>dismissed_comment field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dismissedCommentContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>fixed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+fixedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+fixedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>auto_dismissed_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+autoDismissedAtNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -266172,6 +276714,15 @@ impactsHas<br />
 </td>
 <td>
 <p>Filter for impactsHas to contain a specific value</p>
+</td>
+</tr>
+<tr>
+<td>
+cweIdsHas<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Filter for cweIdsHas to contain a specific value</p>
 </td>
 </tr>
 </tbody>
