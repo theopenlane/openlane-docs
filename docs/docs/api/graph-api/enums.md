@@ -502,6 +502,12 @@ AssetAssetType is enum for the field asset_type
 
 </td>
 </tr>
+<tr>
+<td>REPOSITORY</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -594,6 +600,12 @@ Properties by which Asset connections can be ordered.
 </tr>
 <tr>
 <td>purchase_date</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>observed_at</td>
 <td>
 
 </td>
@@ -1048,6 +1060,18 @@ Properties by which Contact connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>observed_at</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1086,6 +1110,12 @@ ContactUserStatus is enum for the field status
 </tr>
 <tr>
 <td>ONBOARDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
 <td>
 
 </td>
@@ -1579,6 +1609,36 @@ ControlTrustCenterControlVisibility is enum for the field trust_center_visibilit
 </tbody>
 </table>
 
+## CustomDomainCustomDomainType
+
+CustomDomainCustomDomainType is enum for the field domain_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PREVIEW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>EXTERNAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## CustomDomainOrderField
 
 Properties by which CustomDomain connections can be ordered.
@@ -1781,6 +1841,12 @@ Properties by which DirectoryAccount connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>directory_instance_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>directory_name</td>
 <td>
 
@@ -1890,6 +1956,12 @@ Properties by which DirectoryGroup connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>directory_instance_id</td>
 <td>
 
 </td>
@@ -2879,6 +2951,12 @@ Properties by which Entity connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>risk_score_coverage</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>tier</td>
 <td>
 
@@ -2898,6 +2976,18 @@ Properties by which Entity connections can be ordered.
 </tr>
 <tr>
 <td>contract_renewal_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>observed_at</td>
 <td>
 
 </td>
@@ -2928,6 +3018,42 @@ Properties by which EntityType connections can be ordered.
 </tr>
 <tr>
 <td>name</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## EntityVendorTier
+
+EntityVendorTier is enum for the field tier
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>CRITICAL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>STANDARD</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LOW</td>
 <td>
 
 </td>
@@ -2968,6 +3094,12 @@ EvidenceEvidenceStatus is enum for the field status
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>REQUESTED</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>DRAFT</td>
 <td>
@@ -3173,7 +3305,19 @@ ExportExportType is enum for the field export_type
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>ASSESSMENT</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>ASSET</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CAMPAIGN</td>
 <td>
 
 </td>
@@ -3282,6 +3426,18 @@ ExportExportType is enum for the field export_type
 </tr>
 <tr>
 <td>TRUST_CENTER_SUBPROCESSOR</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VENDOR_RISK_SCORE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VENDOR_SCORING_CONFIG</td>
 <td>
 
 </td>
@@ -3766,6 +3922,30 @@ IdentityHolderIdentityHolderType is enum for the field identity_holder_type
 
 </td>
 </tr>
+<tr>
+<td>UNSPECIFIED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INTERN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SERVICE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PARTNER</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3924,6 +4104,12 @@ IdentityHolderUserStatus is enum for the field status
 </tr>
 <tr>
 <td>ONBOARDING</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
 <td>
 
 </td>
@@ -6119,7 +6305,55 @@ Properties by which Remediation connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>status</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>state</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## RemediationRemediationStatus
+
+RemediationRemediationStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>OPEN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IN_PROGRESS</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IN_REVIEW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>WONT_DO</td>
 <td>
 
 </td>
@@ -6175,6 +6409,48 @@ Properties by which Review connections can be ordered.
 </tbody>
 </table>
 
+## RiskFrequency
+
+RiskFrequency is enum for the field review_frequency
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>YEARLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>QUARTERLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BIANNUALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MONTHLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## RiskOrderField
 
 Properties by which Risk connections can be ordered.
@@ -6192,6 +6468,18 @@ Properties by which Risk connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>observed_at</td>
 <td>
 
 </td>
@@ -6228,6 +6516,90 @@ Properties by which Risk connections can be ordered.
 </tr>
 <tr>
 <td>business_costs</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>mitigated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>review_required</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>last_reviewed_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>review_frequency</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>next_review_due_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>residual_score</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>risk_decision</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## RiskRiskDecision
+
+RiskRiskDecision is enum for the field risk_decision
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>AVOID</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MITIGATE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>ACCEPT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRANSFER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
 <td>
 
 </td>
@@ -8056,6 +8428,312 @@ UserSettingUserStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>UNKNOWN</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorRiskScoreOrderField
+
+Properties by which VendorRiskScore connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>question_key</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>question_category</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>impact</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>likelihood</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>score</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorRiskScoreVendorRiskImpact
+
+VendorRiskScoreVendorRiskImpact is enum for the field impact
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>VERY_LOW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LOW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MEDIUM</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CRITICAL</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorRiskScoreVendorRiskLikelihood
+
+VendorRiskScoreVendorRiskLikelihood is enum for the field likelihood
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>VERY_LOW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>LOW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MEDIUM</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>VERY_HIGH</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorRiskScoreVendorScoringAnswerType
+
+VendorRiskScoreVendorScoringAnswerType is enum for the field answer_type
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>BOOLEAN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SINGLE_SELECT</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NUMERIC</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorRiskScoreVendorScoringCategory
+
+VendorRiskScoreVendorScoringCategory is enum for the field question_category
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>DATA_ACCESS</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SECURITY_PRACTICES</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>REGULATORY_COMPLIANCE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FINANCIAL_STABILITY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>OPERATIONAL_DEPENDENCY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BUSINESS_CONTINUITY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>SUPPLY_CHAIN_RISK</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INCIDENT_RESPONSE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>DATA_PRIVACY</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorScoringConfigOrderField
+
+Properties by which VendorScoringConfig connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>scoring_mode</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## VendorScoringConfigVendorScoringMode
+
+VendorScoringConfigVendorScoringMode is enum for the field scoring_mode
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>ANSWERED_ONLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FULL_QUESTIONNAIRE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MANUAL</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8262,6 +8940,12 @@ WorkflowAssignmentTargetWorkflowTargetType is enum for the field target_type
 </tr>
 <tr>
 <td>RESOLVER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>CHANNEL</td>
 <td>
 
 </td>

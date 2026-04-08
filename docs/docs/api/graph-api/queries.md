@@ -10516,6 +10516,188 @@ where<br />
 </tbody>
 </table>
 
+## vendorRiskScore
+
+**Type:** [VendorRiskScore!](objects#vendorriskscore)
+
+Look up vendorRiskScore by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the vendorRiskScore</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## vendorRiskScores
+
+**Type:** [VendorRiskScoreConnection!](objects#vendorriskscoreconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vendorriskscoreorder"><code>[VendorRiskScoreOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for VendorRiskScores returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vendorriskscorewhereinput"><code>VendorRiskScoreWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for VendorRiskScores returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## vendorScoringConfig
+
+**Type:** [VendorScoringConfig!](objects#vendorscoringconfig)
+
+Look up vendorScoringConfig by ID
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the vendorScoringConfig</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## vendorScoringConfigs
+
+**Type:** [VendorScoringConfigConnection!](objects#vendorscoringconfigconnection)
+
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vendorscoringconfigorder"><code>[VendorScoringConfigOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for VendorScoringConfigs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vendorscoringconfigwhereinput"><code>VendorScoringConfigWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for VendorScoringConfigs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## vulnerabilities
 
 **Type:** [VulnerabilityConnection!](objects#vulnerabilityconnection)

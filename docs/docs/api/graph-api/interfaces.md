@@ -102,6 +102,8 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [TrustCenterWatermarkConfig](objects#trustcenterwatermarkconfig)
 - [User](objects#user)
 - [UserSetting](objects#usersetting)
+- [VendorRiskScore](objects#vendorriskscore)
+- [VendorScoringConfig](objects#vendorscoringconfig)
 - [Vulnerability](objects#vulnerability)
 - [Webauthn](objects#webauthn)
 - [WorkflowAssignment](objects#workflowassignment)
