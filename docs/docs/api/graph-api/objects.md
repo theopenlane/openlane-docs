@@ -35561,6 +35561,15 @@ alternateEmail<br />
 </tr>
 <tr>
 <td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
+</td>
+</tr>
+<tr>
+<td>
 phoneNumber<br />
 <a href="scalars#string"><code>String</code></a>
 </td>

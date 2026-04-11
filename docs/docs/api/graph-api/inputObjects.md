@@ -40957,6 +40957,15 @@ alternateEmail<br />
 </tr>
 <tr>
 <td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
+</td>
+</tr>
+<tr>
+<td>
 phoneNumber<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -113679,6 +113688,15 @@ tagsHas<br />
 </td>
 <td>
 <p>Filter for tagsHas to contain a specific value</p>
+</td>
+</tr>
+<tr>
+<td>
+emailAliasesHas<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Filter for emailAliasesHas to contain a specific value</p>
 </td>
 </tr>
 </tbody>
@@ -238074,6 +238092,33 @@ alternateEmail<br />
 <tr>
 <td>
 clearAlternateEmail<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
+</td>
+</tr>
+<tr>
+<td>
+appendEmailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEmailAliases<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
