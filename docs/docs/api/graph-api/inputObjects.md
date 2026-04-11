@@ -40957,6 +40957,15 @@ alternateEmail<br />
 </tr>
 <tr>
 <td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
+</td>
+</tr>
+<tr>
+<td>
 phoneNumber<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -46918,6 +46927,15 @@ state<br />
 </td>
 <td>
 <p>state of the review</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+<p>status of the review</p>
 </td>
 </tr>
 <tr>
@@ -113681,6 +113699,15 @@ tagsHas<br />
 <p>Filter for tagsHas to contain a specific value</p>
 </td>
 </tr>
+<tr>
+<td>
+emailAliasesHas<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Filter for emailAliasesHas to contain a specific value</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -170997,6 +171024,60 @@ stateEqualFold<br />
 <td>
 stateContainsFold<br />
 <a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+<p>status field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+statusNEQ<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIn<br />
+<a href="enums#reviewreviewstatus"><code>[ReviewReviewStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotIn<br />
+<a href="enums#reviewreviewstatus"><code>[ReviewReviewStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -238082,6 +238163,33 @@ clearAlternateEmail<br />
 </tr>
 <tr>
 <td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
+</td>
+</tr>
+<tr>
+<td>
+appendEmailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEmailAliases<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 phoneNumber<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -250923,6 +251031,24 @@ state<br />
 <tr>
 <td>
 clearState<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+<p>status of the review</p>
+</td>
+</tr>
+<tr>
+<td>
+clearStatus<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
