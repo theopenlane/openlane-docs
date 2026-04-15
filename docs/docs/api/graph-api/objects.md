@@ -24986,6 +24986,15 @@ status<br />
 </tr>
 <tr>
 <td>
+reviewFrequency<br />
+<a href="enums#evidencefrequency"><code>EvidenceFrequency</code></a>
+</td>
+<td>
+<p>the cadence for reviewing the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -35557,6 +35566,15 @@ alternateEmail<br />
 </td>
 <td>
 <p>alternate email address for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
 </td>
 </tr>
 <tr>
@@ -65268,6 +65286,15 @@ state<br />
 </tr>
 <tr>
 <td>
+status<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+<p>status of the review</p>
+</td>
+</tr>
+<tr>
+<td>
 category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -67275,6 +67302,15 @@ reviewFrequency<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+dueDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the risk is due to be resolved by, based on the sla config but can be manually updated</p>
 </td>
 </tr>
 <tr>
