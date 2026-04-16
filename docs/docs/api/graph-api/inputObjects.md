@@ -38668,6 +38668,15 @@ status<br />
 </tr>
 <tr>
 <td>
+reviewFrequency<br />
+<a href="enums#evidencefrequency"><code>EvidenceFrequency</code></a>
+</td>
+<td>
+<p>the cadence for reviewing the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -40953,6 +40962,15 @@ alternateEmail<br />
 </td>
 <td>
 <p>alternate email address for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
 </td>
 </tr>
 <tr>
@@ -46922,6 +46940,15 @@ state<br />
 </tr>
 <tr>
 <td>
+status<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+<p>status of the review</p>
+</td>
+</tr>
+<tr>
+<td>
 category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -47462,6 +47489,15 @@ reviewFrequency<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+dueDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the risk is due to be resolved by, based on the sla config but can be manually updated</p>
 </td>
 </tr>
 <tr>
@@ -90588,6 +90624,60 @@ statusNotNil<br />
 </tr>
 <tr>
 <td>
+reviewFrequency<br />
+<a href="enums#evidencefrequency"><code>EvidenceFrequency</code></a>
+</td>
+<td>
+<p>review_frequency field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyNEQ<br />
+<a href="enums#evidencefrequency"><code>EvidenceFrequency</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyIn<br />
+<a href="enums#evidencefrequency"><code>[EvidenceFrequency!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyNotIn<br />
+<a href="enums#evidencefrequency"><code>[EvidenceFrequency!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewFrequencyNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -113679,6 +113769,15 @@ tagsHas<br />
 </td>
 <td>
 <p>Filter for tagsHas to contain a specific value</p>
+</td>
+</tr>
+<tr>
+<td>
+emailAliasesHas<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Filter for emailAliasesHas to contain a specific value</p>
 </td>
 </tr>
 </tbody>
@@ -171004,6 +171103,60 @@ stateContainsFold<br />
 </tr>
 <tr>
 <td>
+status<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+<p>status field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+statusNEQ<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIn<br />
+<a href="enums#reviewreviewstatus"><code>[ReviewReviewStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotIn<br />
+<a href="enums#reviewreviewstatus"><code>[ReviewReviewStatus!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+statusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -176538,6 +176691,96 @@ reviewFrequencyIsNil<br />
 <tr>
 <td>
 reviewFrequencyNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>due_date field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+dueDateNEQ<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDateIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDateNotIn<br />
+<a href="scalars#datetime"><code>[DateTime!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDateGT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDateGTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDateLT<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDateLTE<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDateIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDateNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -233077,6 +233320,24 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
+reviewFrequency<br />
+<a href="enums#evidencefrequency"><code>EvidenceFrequency</code></a>
+</td>
+<td>
+<p>the cadence for reviewing the evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+clearReviewFrequency<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 environmentID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -238074,6 +238335,33 @@ alternateEmail<br />
 <tr>
 <td>
 clearAlternateEmail<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
+</td>
+</tr>
+<tr>
+<td>
+appendEmailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEmailAliases<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -250931,6 +251219,24 @@ clearState<br />
 </tr>
 <tr>
 <td>
+status<br />
+<a href="enums#reviewreviewstatus"><code>ReviewReviewStatus</code></a>
+</td>
+<td>
+<p>status of the review</p>
+</td>
+</tr>
+<tr>
+<td>
+clearStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 category<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -252169,6 +252475,24 @@ reviewFrequency<br />
 <tr>
 <td>
 clearReviewFrequency<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+dueDate<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>the time when the risk is due to be resolved by, based on the sla config but can be manually updated</p>
+</td>
+</tr>
+<tr>
+<td>
+clearDueDate<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>

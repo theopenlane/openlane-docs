@@ -46,6 +46,12 @@ ActionPlanDocumentStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1314,6 +1320,12 @@ ControlImplementationDocumentStatus is enum for the field status
 </tr>
 <tr>
 <td>ARCHIVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PENDING</td>
 <td>
 
 </td>
@@ -3151,6 +3163,48 @@ EvidenceEvidenceStatus is enum for the field status
 </tbody>
 </table>
 
+## EvidenceFrequency
+
+EvidenceFrequency is enum for the field review_frequency
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>YEARLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>QUARTERLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BIANNUALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MONTHLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>NONE</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## EvidenceOrderField
 
 Properties by which Evidence connections can be ordered.
@@ -3192,6 +3246,12 @@ Properties by which Evidence connections can be ordered.
 </tr>
 <tr>
 <td>STATUS</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>REVIEW_FREQUENCY</td>
 <td>
 
 </td>
@@ -4266,6 +4326,12 @@ InternalPolicyDocumentStatus is enum for the field status
 </tr>
 <tr>
 <td>ARCHIVED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>PENDING</td>
 <td>
 
 </td>
@@ -6010,6 +6076,12 @@ ProcedureDocumentStatus is enum for the field status
 
 </td>
 </tr>
+<tr>
+<td>PENDING</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6409,6 +6481,48 @@ Properties by which Review connections can be ordered.
 </tbody>
 </table>
 
+## ReviewReviewStatus
+
+ReviewReviewStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>OPEN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IN_PROGRESS</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>IN_REVIEW</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>COMPLETED</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>WONT_DO</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## RiskFrequency
 
 RiskFrequency is enum for the field review_frequency
@@ -6540,6 +6654,12 @@ Properties by which Risk connections can be ordered.
 </tr>
 <tr>
 <td>review_frequency</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>due_date</td>
 <td>
 
 </td>
