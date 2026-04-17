@@ -14861,6 +14861,24 @@ canonicalEmail<br />
 </tr>
 <tr>
 <td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
+</td>
+</tr>
+<tr>
+<td>
+phoneNumber<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>phone number for the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
 displayName<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -26737,6 +26755,33 @@ scopeID<br />
 </tr>
 <tr>
 <td>
+categoryName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the file</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the category of the file</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user-facing display name of the file</p>
+</td>
+</tr>
+<tr>
+<td>
 providedFileName<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -26813,6 +26858,8 @@ categoryType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: use category_status_name instead</blockquote>
+
 <p>the category type of the file, if any (e.g. evidence, invoice, etc.)</p>
 </td>
 </tr>
@@ -26900,6 +26947,15 @@ environment<br />
 <tr>
 <td>
 scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+category<br />
 <a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
@@ -35565,6 +35621,8 @@ alternateEmail<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: use email_aliases instead</blockquote>
+
 <p>alternate email address for the identity holder</p>
 </td>
 </tr>
@@ -35719,6 +35777,15 @@ metadata<br />
 </td>
 <td>
 <p>additional metadata about the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the avatar of the identity holder</p>
 </td>
 </tr>
 <tr>
