@@ -1,0 +1,374 @@
+---
+title: Building an Integration
+description: Step-by-step guide for building a new provider integration, covering the builder pattern, credential slots, client registration, health checks, and installation metadata
+sidebar_position: 10
+keywords:
+  - integration
+  - builder
+  - credential registration
+  - client registration
+  - health check
+  - installation metadata
+  - operator config
+  - user input
+  - OAuth
+  - definition spec
+  - CEL
+  - filter expression
+  - mapping expression
+tags:
+  - integrations
+  - builder
+  - oauth
+  - cel
+---
+
+# Building an Integration
+
+This guide walks through how to build a new integration. A companion page covers what's additionally required for [Directory Sync integrations](./building-a-directory-sync-integration.mdx).
+
+---
+
+## Directory Structure
+
+Every integration lives under `internal/integrations/definitions/<provider>/`. A typical package contains:
+
+```
+internal/integrations/definitions/<provider>/
+├── builder.go          # Definition assembly — the entry point
+├── config.go           # Operator-level config (secrets, URLs)
+├── types.go            # Credential types, UserInput, InstallationMetadata, package-level refs
+├── installation.go     # Resolves InstallationMetadata from credentials after connection
+├── client.go           # Builds the SDK client used by operations
+├── operation_health.go # Health check — validates credentials work
+├── mappings.go         # CEL mapping expressions (for ingest operations)
+└── errors.go           # Sentinel errors
+```
+
+---
+
+## `config.go` — Operator Config
+
+`Config` holds secrets and URLs that the operator (Openlane) provides at deploy time — things like OAuth client IDs and secrets. These are never set by end users.
+
+```go
+type Config struct {
+    ClientID     string `json:"clientid"     koanf:"clientid"`
+    ClientSecret string `json:"clientsecret" koanf:"clientsecret" sensitive:"true"`
+    RedirectURL  string `json:"redirecturl"  koanf:"redirecturl"  default:"https://api.theopenlane.io/v1/integrations/auth/callback"`
+}
+```
+
+The `Config` is passed into `Builder(cfg Config)` and used when wiring up the OAuth registration and building clients.
+
+---
+
+## `types.go` — Package-Level Refs and Credential Types
+
+`types.go` declares the stable, package-level handles that the rest of the package shares:
+
+```go
+var (
+    definitionID    = types.NewDefinitionRef("def_<ulid>")
+    installation    = types.NewInstallationRef(resolveInstallationMetadata)
+    _, myCredential = providerkit.CredentialSchema[myCred]()
+    myClient        = types.NewClientRef[*sdk.Client]()
+    healthCheckSchema, healthCheckOperation = providerkit.OperationSchema[HealthCheck]()
+)
+```
+
+- **`definitionID`** — stable ULID string; must be unique across all integrations
+- **`installation`** — typed ref that wires `resolveInstallationMetadata` into the connection registration
+- **credential ref** — `providerkit.CredentialSchema` returns a JSON schema (for registration) and a typed `CredentialRef[T]` (for resolving at runtime)
+- **`myClient`** — typed `ClientRef[T]` used to cast the built client in operation handlers
+- **operation refs** — `providerkit.OperationSchema` returns a config schema and a typed operation ref
+
+The credential type (`myCred`) holds whatever the OAuth callback returns:
+
+```go
+type myCred struct {
+    AccessToken  string     `json:"accessToken"`
+    RefreshToken string     `json:"refreshToken,omitempty"`
+    Expiry       *time.Time `json:"expiry,omitempty"`
+}
+```
+
+`UserInput` holds per-installation config that the end user provides during setup (e.g. filter expressions, flags).
+
+`InstallationMetadata` holds the stable target identity resolved during connection. It must implement `InstallationIdentifiable` to surface a display name in the UI:
+
+```go
+func (m InstallationMetadata) InstallationIdentity() types.IntegrationInstallationIdentity {
+    return types.IntegrationInstallationIdentity{
+        ExternalName: m.Domain,
+        ExternalID:   m.CustomerID,
+    }
+}
+```
+
+---
+
+## `builder.go` — Definition Assembly
+
+`builder.go` is where all pieces are wired together into a `types.Definition`:
+
+```go
+func Builder(cfg Config) registry.Builder {
+    return registry.Builder(func() (types.Definition, error) {
+        return types.Definition{ ... }, nil
+    })
+}
+```
+
+### `DefinitionSpec` — Catalog Metadata
+
+```go
+DefinitionSpec: types.DefinitionSpec{
+    ID:          definitionID.ID(),
+    Family:      "google",
+    DisplayName: "My Integration",
+    Description: "...",
+    Category:    "identity",       // e.g. identity, security-posture
+    DocsURL:     "https://docs.theopenlane.io/...",
+    Tags:        []string{"directory-sync"},
+    Active:      false,            // set false until ready to deploy
+    Visible:     false,            // set false until ready to show in catalog
+},
+```
+
+**`Active` and `Visible` must both start as `false`** for a new integration. Flip them to `true` once the integration is complete, tested, and ready for production.
+
+- **`Active`** — controls whether the definition is enabled for use at the operator level
+- **`Visible`** — controls whether the integration appears in the catalog UI
+
+### `OperatorConfig` and `UserInput`
+
+```go
+OperatorConfig: &types.OperatorConfigRegistration{
+    Schema: providerkit.SchemaFrom[Config](),
+},
+UserInput: &types.UserInputRegistration{
+    Schema: providerkit.SchemaFrom[UserInput](),
+},
+```
+
+Both use `providerkit.SchemaFrom[T]()` to generate a JSON schema from the struct tags on your config/input types.
+
+### `CredentialRegistrations`
+
+Declares the named credential slots the integration uses. Each slot corresponds to one `CredentialRef`.
+
+```go
+CredentialRegistrations: []types.CredentialRegistration{
+    {
+        Ref:         myCredential.ID(),
+        Name:        "My Provider Credential",
+        Description: "OAuth credential used to access the provider API.",
+    },
+},
+```
+
+### `Connections`
+
+A `ConnectionRegistration` binds together a credential slot, the clients it unlocks, the validation operation, and the auth flow:
+
+```go
+Connections: []types.ConnectionRegistration{
+    {
+        CredentialRef:       myCredential.ID(),
+        Name:                "My Provider OAuth",
+        Description:         "Connect via OAuth.",
+        CredentialRefs:      []types.CredentialSlotID{myCredential.ID()},
+        ClientRefs:          []types.ClientID{myClient.ID()},
+        ValidationOperation: healthCheckOperation.Name(),
+        Integration:         installation.Registration(),
+        Auth: auth.OAuthRegistration(auth.OAuthRegistrationOptions[myCred]{
+            CredentialRef: myCredential,
+            Config: auth.OAuthConfig{
+                ClientID:     cfg.ClientID,
+                ClientSecret: cfg.ClientSecret,
+                AuthURL:      "https://provider.example.com/oauth/authorize",
+                TokenURL:     "https://provider.example.com/oauth/token",
+                RedirectURL:  cfg.RedirectURL,
+                Scopes:       []string{"scope.readonly"},
+                AuthParams:   map[string]string{"access_type": "offline", "prompt": "consent"},
+            },
+            Material: func(m auth.OAuthMaterial) (myCred, error) {
+                return myCred{
+                    AccessToken:  m.AccessToken,
+                    RefreshToken: m.RefreshToken,
+                    Expiry:       m.Expiry,
+                }, nil
+            },
+            EncodeCredentialError: ErrCredentialEncode,
+        }),
+        Disconnect: &types.DisconnectRegistration{
+            CredentialRef: myCredential.ID(),
+            Description:   "Removes the stored OAuth credential. Revoke access directly in the provider's admin console.",
+        },
+    },
+},
+```
+
+### `Clients`
+
+```go
+Clients: []types.ClientRegistration{
+    {
+        Ref:            myClient.ID(),
+        CredentialRefs: []types.CredentialSlotID{myCredential.ID()},
+        Description:    "Provider SDK client",
+        Build:          Client{cfg: cfg}.Build,
+    },
+},
+```
+
+`Build` is a `ClientBuilderFunc` that receives a `types.ClientBuildRequest` (which includes `CredentialBindings`) and returns the constructed SDK client as `any`.
+
+### `Operations`
+
+Every integration needs at least a health check operation:
+
+```go
+Operations: []types.OperationRegistration{
+    {
+        Name:         healthCheckOperation.Name(),
+        Description:  "Validate credentials by calling a lightweight provider endpoint",
+        Topic:        definitionID.OperationTopic(healthCheckOperation.Name()),
+        ClientRef:    myClient.ID(),
+        Policy:       types.ExecutionPolicy{Inline: true},
+        ConfigSchema: healthCheckSchema,
+        Handle:       HealthCheck{}.Handle(),
+    },
+},
+```
+
+- **`Inline: true`** — runs synchronously as part of the connection flow; used for validation
+- **`Reconcile: true`** — runs on a schedule or on-demand; used for data collection
+
+---
+
+## `operation_health.go` — Health Check
+
+The health check calls a lightweight, read-only provider endpoint to confirm the credential is valid. It uses `Handle()`, not `IngestHandle()`:
+
+```go
+type HealthCheck struct{}
+
+func (h HealthCheck) Handle() types.OperationHandler {
+    return providerkit.WithClientRequest(myClient, func(ctx context.Context, req types.OperationRequest, client *sdk.Client) (json.RawMessage, error) {
+        // call a lightweight endpoint
+        // return a small JSON result
+    })
+}
+```
+
+---
+
+## `installation.go` — Resolving Installation Metadata
+
+After a user connects, `resolveInstallationMetadata` derives the stable display identity (e.g. what account or tenant was connected). This runs once during connection setup.
+
+```go
+func resolveInstallationMetadata(ctx context.Context, req types.InstallationRequest) (InstallationMetadata, bool, error) {
+    cred, _, err := myCredential.Resolve(req.Credentials)
+    if err != nil {
+        return InstallationMetadata{}, false, ErrCredentialDecode
+    }
+
+    // call provider API to resolve account/tenant identity
+    return InstallationMetadata{...}, true, nil
+}
+```
+
+Return `(meta, false, nil)` when metadata cannot be resolved yet but it is not an error (e.g. token not present). Return `(meta, false, err)` for hard failures.
+
+---
+
+## CEL Expressions
+
+CEL (Common Expression Language) is used by ingest operations to filter and map provider payloads onto normalized schema keys. Any integration that uses `IngestHandle` will define CEL expressions.
+
+### Available Variables
+
+Every CEL expression has access to the following variables, bound from the `MappingEnvelope`:
+
+| Variable | Type | Value |
+|---|---|---|
+| `payload` | `dyn` | The raw provider JSON object, deserialized to a map |
+| `resource` | `dyn` | The resource identifier passed to `MarshalEnvelope` |
+| `envelope` | `dyn` | The full envelope as a map: `{variant, resource, action, payload}` |
+| `action` | `dyn` | The event action name (populated for webhook-driven flows) |
+| `variant` | `dyn` | The variant selector (if set on the mapping registration) |
+
+All variables are typed as `dyn` — use field existence checks (`'field' in payload`) before accessing optional fields.
+
+### Filter Expressions
+
+A filter expression is a CEL boolean expression evaluated against each envelope before it is mapped. Envelopes where the expression evaluates to `false` are dropped.
+
+- An empty `FilterExpr` or `"true"` passes all records through
+- A 100ms evaluation timeout applies per envelope
+- Returning a non-boolean type is treated as an evaluation failure
+
+```cel
+// pass all records
+true
+
+// drop suspended accounts
+!('suspended' in payload && payload.suspended)
+
+// only include accounts from a specific org unit
+'orgUnitPath' in payload && payload.orgUnitPath == "/Engineering"
+
+// only include admin-created groups
+'adminCreated' in payload && payload.adminCreated
+```
+
+### Map Expressions
+
+A map expression is a CEL object literal that projects provider payload fields onto the target schema keys. Use `providerkit.CelMapExpr` to build it from a slice of key/expression pairs — each value is automatically wrapped in `dyn(...)` to handle type coercion.
+
+```go
+var mapExprDirectoryAccount = providerkit.CelMapExpr([]providerkit.CelMapEntry{
+    {Key: integrationgenerated.IntegrationMappingDirectoryAccountExternalID,
+     Expr: `'id' in payload ? payload.id : ""`},
+
+    {Key: integrationgenerated.IntegrationMappingDirectoryAccountStatus,
+     Expr: `'deletionTime' in payload && payload.deletionTime != "" ? "DELETED"
+            : ('suspended' in payload && payload.suspended ? "SUSPENDED"
+            : "ACTIVE")`},
+
+    // store the full provider object for reference
+    {Key: integrationgenerated.IntegrationMappingDirectoryAccountProfile,
+     Expr: "payload"},
+})
+```
+
+When building membership envelopes, pass the group identifier as `resourceID` in `MarshalEnvelope` — it becomes available as `resource` in the CEL expression, letting you associate the membership back to its group without duplicating the value in the payload:
+
+```go
+{Key: integrationgenerated.IntegrationMappingDirectoryMembershipDirectoryGroupID,
+ Expr: `resource`},
+```
+
+### Registering Mappings
+
+Register one `MappingRegistration` per schema in `mappings.go` and include it in the `Definition`:
+
+```go
+func myProviderMappings() []types.MappingRegistration {
+    return []types.MappingRegistration{
+        {
+            Schema: integrationgenerated.IntegrationMappingSchemaDirectoryAccount,
+            Spec:   types.MappingOverride{FilterExpr: "true", MapExpr: mapExprDirectoryAccount},
+        },
+        // one entry per schema the operation declares in its Ingest contracts
+    }
+}
+```
+
+```go
+// in builder.go
+Mappings: myProviderMappings(),
+```
