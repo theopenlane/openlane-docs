@@ -21,7 +21,7 @@ tags:
 
 # Building a Directory Sync Integration
 
-This guide covers what's additionally required on top of the [core integration builder](./building-an-integration.mdx) for integrations that implement **Directory Sync** — the process of collecting accounts, groups, and memberships from a provider and emitting them through the ingest pipeline.
+This guide covers what's additionally required on top of the [core integration builder](./basics.mdx) for integrations that implement **Directory Sync** — the process of collecting accounts, groups, and memberships from a provider and emitting them through the ingest pipeline.
 
 Google Workspace is used as the reference example throughout.
 
@@ -52,7 +52,7 @@ type UserInput struct {
 }
 ```
 
-- **`FilterExpr`** — a CEL expression evaluated against each envelope before ingest; see [CEL Expressions](./building-an-integration.mdx#cel-expressions)
+- **`FilterExpr`** — a CEL expression evaluated against each envelope before ingest; see [CEL Expressions](./basics.mdx#cel-expressions)
 - **`PrimaryDirectory`** — when `true`, this installation's data drives identity holder enrichment and lifecycle derivation; see [Identity Holder Sync](#identity-holder-sync) below
 
 ---

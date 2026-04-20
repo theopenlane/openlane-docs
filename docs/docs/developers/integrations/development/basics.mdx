@@ -1,7 +1,7 @@
 ---
 title: Building an Integration
 description: Step-by-step guide for building a new provider integration, covering the builder pattern, credential slots, client registration, health checks, and installation metadata
-sidebar_position: 10
+sidebar_position: 2
 keywords:
   - integration
   - builder
@@ -25,7 +25,7 @@ tags:
 
 # Building an Integration
 
-This guide walks through how to build a new integration. A companion page covers what's additionally required for [Directory Sync integrations](./building-a-directory-sync-integration.mdx).
+This guide walks through how to build a new integration. A companion page covers what's additionally required for [Directory Sync integrations](./directory-sync.mdx).
 
 ---
 
@@ -372,3 +372,61 @@ func myProviderMappings() []types.MappingRegistration {
 // in builder.go
 Mappings: myProviderMappings(),
 ```
+
+---
+
+## Registering the Integration in the Catalog
+
+Once the integration package is built, it must be registered in two places in `internal/integrations/definitions/catalog/`.
+
+### `catalog.go` — Add the Builder
+
+Import the new package and add its `Builder` call to the `Builders` slice:
+
+```go
+import (
+    // existing imports ...
+    "github.com/theopenlane/core/internal/integrations/definitions/myprovider"
+)
+
+func Builders(cfg Config) []registry.Builder {
+    return []registry.Builder{
+        // existing builders ...
+        myprovider.Builder(cfg.MyProvider),
+    }
+}
+```
+
+If the integration requires no operator config, call `myprovider.Builder()` with no arguments.
+
+### `types.go` — Add the Config Field
+
+If the integration has a `Config` struct (i.e. it needs OAuth credentials or other operator-held settings), add a field to the catalog `Config`:
+
+```go
+import (
+    // existing imports ...
+    "github.com/theopenlane/core/internal/integrations/definitions/myprovider"
+)
+
+type Config struct {
+    // existing fields ...
+
+    // MyProvider holds operator credentials for the My Provider definition
+    MyProvider myprovider.Config `json:"myprovider" koanf:"myprovider"`
+}
+```
+
+Integrations that have no `Config` struct (e.g. they need no operator secrets) do not need a field here.
+
+---
+
+## Generating Updated Config
+
+After modifying the catalog `Config`, run the config generation task to regenerate the koanf-based config output:
+
+```sh
+task config:generate
+```
+
+This updates the generated config files that wire operator settings through to the catalog. **Always run this after adding or modifying a `Config` field.**
