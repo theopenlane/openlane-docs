@@ -4034,11 +4034,29 @@ entityFiles<br />
 </tr>
 <tr>
 <td>
+entityFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 logoFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
 <td>
 <p>file to upload as the logo of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -4114,6 +4132,15 @@ input<br />
 <td>
 evidenceFiles<br />
 <a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+evidenceFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
 </td>
 <td>
 
@@ -4238,6 +4265,15 @@ input<br />
 <td>
 avatarFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
@@ -4428,6 +4464,15 @@ identityHolderFiles<br />
 
 </td>
 </tr>
+<tr>
+<td>
+identityHolderFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -4504,6 +4549,15 @@ jobResultFiles<br />
 </td>
 <td>
 <p>files to upload as jobResult attachments</p>
+</td>
+</tr>
+<tr>
+<td>
+jobResultFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -4791,6 +4845,15 @@ avatarFile<br />
 
 </td>
 </tr>
+<tr>
+<td>
+avatarFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -4844,6 +4907,15 @@ avatarFile<br />
 </td>
 <td>
 <p>avatar file to Upload</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+<p>metadata for the avatar file</p>
 </td>
 </tr>
 <tr>
@@ -4935,6 +5007,15 @@ architectureDiagrams<br />
 </tr>
 <tr>
 <td>
+architectureDiagramsMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 dataFlowDiagrams<br />
 <a href="scalars#upload"><code>[Upload!]</code></a>
 </td>
@@ -4944,8 +5025,26 @@ dataFlowDiagrams<br />
 </tr>
 <tr>
 <td>
+dataFlowDiagramsMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 trustBoundaryDiagrams<br />
 <a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustBoundaryDiagramsMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
 </td>
 <td>
 
@@ -5098,6 +5197,15 @@ reviewFiles<br />
 <p>Files to attach to the review</p>
 </td>
 </tr>
+<tr>
+<td>
+reviewFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5245,6 +5353,15 @@ logoFile<br />
 <p>file to upload as the logo to represent the standard</p>
 </td>
 </tr>
+<tr>
+<td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5298,6 +5415,15 @@ logoFile<br />
 </td>
 <td>
 <p>file to upload as the logo of the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -5424,6 +5550,15 @@ templateFiles<br />
 
 </td>
 </tr>
+<tr>
+<td>
+templateFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5525,6 +5660,15 @@ trustCenterDocFile<br />
 
 </td>
 </tr>
+<tr>
+<td>
+trustCenterDocFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5580,6 +5724,15 @@ logoFile<br />
 <p>logo file for the trustCenterEntity</p>
 </td>
 </tr>
+<tr>
+<td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5633,6 +5786,15 @@ templateFiles<br />
 </td>
 <td>
 <p>NDA file</p>
+</td>
+</tr>
+<tr>
+<td>
+templateFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -5692,6 +5854,15 @@ logoFile<br />
 </tr>
 <tr>
 <td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 faviconFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
@@ -5701,8 +5872,26 @@ faviconFile<br />
 </tr>
 <tr>
 <td>
+faviconFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 heroImageFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+heroImageFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
@@ -5742,6 +5931,15 @@ logoFile<br />
 </tr>
 <tr>
 <td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 faviconFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
@@ -5751,8 +5949,26 @@ faviconFile<br />
 </tr>
 <tr>
 <td>
+faviconFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 heroImageFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+heroImageFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
@@ -5813,6 +6029,15 @@ watermarkFile<br />
 
 </td>
 </tr>
+<tr>
+<td>
+watermarkFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -5834,6 +6059,15 @@ internalPolicyFile<br />
 </td>
 <td>
 <p>file containing values of the internalPolicy</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicyFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -5866,6 +6100,15 @@ procedureFile<br />
 </td>
 <td>
 <p>file containing values of the procedure</p>
+</td>
+</tr>
+<tr>
+<td>
+procedureFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -5904,6 +6147,15 @@ input<br />
 <td>
 avatarFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
@@ -12994,6 +13246,15 @@ noteFiles<br />
 <p>Files to attach to the comment</p>
 </td>
 </tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -13355,6 +13616,15 @@ documentDataFile<br />
 <p>File to upload for the documentData</p>
 </td>
 </tr>
+<tr>
+<td>
+documentDataFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -13462,11 +13732,29 @@ entityFiles<br />
 </tr>
 <tr>
 <td>
+entityFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 logoFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
 <td>
 <p>file to upload as the logo of the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -13574,6 +13862,15 @@ evidenceFiles<br />
 
 </td>
 </tr>
+<tr>
+<td>
+evidenceFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -13615,6 +13912,15 @@ noteFiles<br />
 <p>Files to attach to the comment</p>
 </td>
 </tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -13654,6 +13960,15 @@ exportFiles<br />
 </td>
 <td>
 <p>Files to attach to the export</p>
+</td>
+</tr>
+<tr>
+<td>
+exportFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -13756,6 +14071,15 @@ input<br />
 <td>
 avatarFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
@@ -13898,6 +14222,15 @@ identityHolderFiles<br />
 
 </td>
 </tr>
+<tr>
+<td>
+identityHolderFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -13939,6 +14272,15 @@ internalPolicyFile<br />
 <p>file containing values of the internalPolicy</p>
 </td>
 </tr>
+<tr>
+<td>
+internalPolicyFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -13978,6 +14320,15 @@ noteFiles<br />
 </td>
 <td>
 <p>Files to attach to the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -14051,6 +14402,15 @@ jobResultFiles<br />
 </td>
 <td>
 <p>files to upload as jobResult attachments</p>
+</td>
+</tr>
+<tr>
+<td>
+jobResultFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -14350,6 +14710,15 @@ avatarFile<br />
 
 </td>
 </tr>
+<tr>
+<td>
+avatarFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -14489,6 +14858,15 @@ architectureDiagrams<br />
 </tr>
 <tr>
 <td>
+architectureDiagramsMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 dataFlowDiagrams<br />
 <a href="scalars#upload"><code>[Upload!]</code></a>
 </td>
@@ -14498,8 +14876,26 @@ dataFlowDiagrams<br />
 </tr>
 <tr>
 <td>
+dataFlowDiagramsMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 trustBoundaryDiagrams<br />
 <a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustBoundaryDiagramsMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
 </td>
 <td>
 
@@ -14546,6 +14942,15 @@ procedureFile<br />
 <p>file containing values of the procedure</p>
 </td>
 </tr>
+<tr>
+<td>
+procedureFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -14585,6 +14990,15 @@ noteFiles<br />
 </td>
 <td>
 <p>Files to attach to the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -14724,6 +15138,15 @@ reviewFiles<br />
 <p>Files to attach to the review</p>
 </td>
 </tr>
+<tr>
+<td>
+reviewFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -14795,6 +15218,15 @@ noteFiles<br />
 </td>
 <td>
 <p>Files to attach to the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -14966,6 +15398,15 @@ logoFile<br />
 <p>file to upload as the logo to represent the standard</p>
 </td>
 </tr>
+<tr>
+<td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15039,6 +15480,15 @@ noteFiles<br />
 <p>Files to attach to the comment</p>
 </td>
 </tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15078,6 +15528,15 @@ logoFile<br />
 </td>
 <td>
 <p>file to upload as the logo of the subprocessor</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -15249,6 +15708,15 @@ noteFiles<br />
 <p>Files to attach to the comment</p>
 </td>
 </tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15285,6 +15753,15 @@ input<br />
 <td>
 templateFiles<br />
 <a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
 </td>
 <td>
 
@@ -15420,8 +15897,26 @@ trustCenterDocFile<br />
 </tr>
 <tr>
 <td>
+trustCenterDocFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 watermarkedTrustCenterDocFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+watermarkedTrustCenterDocFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
@@ -15466,6 +15961,15 @@ logoFile<br />
 </td>
 <td>
 <p>logo file for the trustCenterEntity</p>
+</td>
+</tr>
+<tr>
+<td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -15541,6 +16045,15 @@ noteFiles<br />
 <p>Files to attach to the comment</p>
 </td>
 </tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15571,6 +16084,15 @@ templateFiles<br />
 </td>
 <td>
 <p>NDA file</p>
+</td>
+</tr>
+<tr>
+<td>
+templateFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 </tbody>
@@ -15646,6 +16168,15 @@ noteFiles<br />
 <p>Files to attach to the post</p>
 </td>
 </tr>
+<tr>
+<td>
+noteFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15680,6 +16211,15 @@ logoFile<br />
 </tr>
 <tr>
 <td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 faviconFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
@@ -15689,8 +16229,26 @@ faviconFile<br />
 </tr>
 <tr>
 <td>
+faviconFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 heroImageFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+heroImageFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
@@ -15739,6 +16297,15 @@ logoFile<br />
 </tr>
 <tr>
 <td>
+logoFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 faviconFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
 </td>
@@ -15748,8 +16315,26 @@ faviconFile<br />
 </tr>
 <tr>
 <td>
+faviconFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 heroImageFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+heroImageFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
@@ -15828,6 +16413,15 @@ watermarkFile<br />
 
 </td>
 </tr>
+<tr>
+<td>
+watermarkFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -15864,6 +16458,15 @@ input<br />
 <td>
 avatarFile<br />
 <a href="scalars#upload"><code>Upload</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+avatarFileMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>FileMetadataInput</code></a>
 </td>
 <td>
 
