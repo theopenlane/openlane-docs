@@ -1631,6 +1631,24 @@ deletedIDs<br />
 <p>Deleted actionPlan IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2020,6 +2038,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted apiToken IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -2858,6 +2894,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted assessment IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -5029,6 +5083,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted asset IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -7860,6 +7932,24 @@ deletedIDs<br />
 <p>Deleted contact IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -10672,6 +10762,24 @@ deletedIDs<br />
 <p>Deleted control IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -11760,6 +11868,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted controlImplementation IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -13035,6 +13161,24 @@ deletedIDs<br />
 <p>Deleted controlObjective IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -13436,6 +13580,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted customDomain IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -14857,6 +15019,24 @@ canonicalEmail<br />
 </td>
 <td>
 <p>lower-cased primary email address, if present</p>
+</td>
+</tr>
+<tr>
+<td>
+emailAliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>alternate email address for the identity holder in an array</p>
+</td>
+</tr>
+<tr>
+<td>
+phoneNumber<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>phone number for the identity holder</p>
 </td>
 </tr>
 <tr>
@@ -18248,6 +18428,24 @@ deletedIDs<br />
 <p>Deleted dnsVerification IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -18763,6 +18961,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted documentData IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -19523,6 +19739,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted emailBranding IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -20481,6 +20715,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted emailTemplate IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -23025,6 +23277,24 @@ deletedIDs<br />
 <p>Deleted entity IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -23402,6 +23672,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted entityType IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -24597,6 +24885,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted event IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -25962,6 +26268,24 @@ deletedIDs<br />
 <p>Deleted evidence IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -26470,6 +26794,24 @@ deletedIDs<br />
 <p>Deleted export IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -26737,6 +27079,33 @@ scopeID<br />
 </tr>
 <tr>
 <td>
+categoryName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the category of the file</p>
+</td>
+</tr>
+<tr>
+<td>
+categoryID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the category of the file</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the user-facing display name of the file</p>
+</td>
+</tr>
+<tr>
+<td>
 providedFileName<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -26813,6 +27182,8 @@ categoryType<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: use category_status_name instead</blockquote>
+
 <p>the category type of the file, if any (e.g. evidence, invoice, etc.)</p>
 </td>
 </tr>
@@ -26900,6 +27271,15 @@ environment<br />
 <tr>
 <td>
 scope<br />
+<a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+category<br />
 <a href="objects#customtypeenum"><code>CustomTypeEnum</code></a>
 </td>
 <td>
@@ -29653,6 +30033,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted finding IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -33788,6 +34186,24 @@ deletedIDs<br />
 <p>Deleted group IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -34147,6 +34563,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted groupMembership IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -34598,6 +35032,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted groupSetting IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -35219,6 +35671,24 @@ deletedIDs<br />
 <p>Deleted hush IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -35565,6 +36035,8 @@ alternateEmail<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
+<blockquote>Deprecated: use email_aliases instead</blockquote>
+
 <p>alternate email address for the identity holder</p>
 </td>
 </tr>
@@ -35719,6 +36191,15 @@ metadata<br />
 </td>
 <td>
 <p>additional metadata about the identity holder</p>
+</td>
+</tr>
+<tr>
+<td>
+avatarRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the avatar of the identity holder</p>
 </td>
 </tr>
 <tr>
@@ -37300,6 +37781,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted identityHolder IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -40949,6 +41448,24 @@ deletedIDs<br />
 <p>Deleted internalPolicy IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -41437,6 +41954,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted invite IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -43187,6 +43722,24 @@ deletedIDs<br />
 <p>Deleted jobTemplate IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -43549,6 +44102,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted mappableDomain IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -44336,6 +44907,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted mappedControl IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -45195,6 +45784,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted narrative IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -46430,6 +47037,24 @@ deletedIDs<br />
 <p>Deleted notificationPreference IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -47035,6 +47660,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted notificationTemplate IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -55154,6 +55797,15 @@ paymentMethodAdded<br />
 </tr>
 <tr>
 <td>
+pendingDeletionAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when will this organization be deleted? usually this is after org has not added a payment method afte n period</p>
+</td>
+</tr>
+<tr>
+<td>
 organization<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -55273,6 +55925,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted organizationSetting IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -55706,6 +56376,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted orgMembership IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -61080,6 +61768,24 @@ deletedIDs<br />
 <p>Deleted export IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -62776,6 +63482,24 @@ deletedIDs<br />
 <p>Deleted program IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -63063,6 +63787,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted programMembership IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -64944,6 +65686,24 @@ deletedIDs<br />
 <p>Deleted remediation IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -66791,6 +67551,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted trustCenterNDARequest IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -68741,6 +69519,24 @@ deletedIDs<br />
 <p>Deleted risk IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -70320,6 +71116,24 @@ deletedIDs<br />
 <p>Deleted scan IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -70817,6 +71631,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted scheduledJob IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -72123,6 +72955,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted slaDefinition IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -74989,6 +75839,24 @@ deletedIDs<br />
 <p>Deleted subcontrol IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -75516,6 +76384,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted subprocessor IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -76301,6 +77187,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted systemDetail IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -78438,6 +79342,24 @@ deletedIDs<br />
 <p>Deleted task IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -79241,6 +80163,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted template IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -80887,6 +81827,24 @@ deletedIDs<br />
 <p>Deleted trustCenterCompliance IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -81519,6 +82477,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted trustCenterDoc IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -82492,6 +83468,24 @@ deletedIDs<br />
 <p>Deleted trustCenterFAQ IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -83145,6 +84139,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted trustCenterNDARequest IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -84239,6 +85251,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted trustCenterSubprocessor IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -86878,6 +87908,24 @@ deletedIDs<br />
 <p>Deleted userSetting IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -87314,6 +88362,24 @@ deletedIDs<br />
 <p>Deleted vendorRiskScore IDs</p>
 </td>
 </tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -87703,6 +88769,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted vendorScoringConfig IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
@@ -89777,6 +90861,24 @@ deletedIDs<br />
 </td>
 <td>
 <p>Deleted vulnerability IDs</p>
+</td>
+</tr>
+<tr>
+<td>
+notDeletedIDs<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs that were not deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+error<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Error message when the bulk delete did not apply to every requested ID</p>
 </td>
 </tr>
 </tbody>
