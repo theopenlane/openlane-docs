@@ -21,6 +21,7 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [Asset](objects#asset)
 - [Campaign](objects#campaign)
 - [CampaignTarget](objects#campaigntarget)
+- [CheckResult](objects#checkresult)
 - [Contact](objects#contact)
 - [Control](objects#control)
 - [ControlImplementation](objects#controlimplementation)
