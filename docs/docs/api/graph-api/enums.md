@@ -1015,6 +1015,78 @@ Properties by which CampaignTarget connections can be ordered.
 </tbody>
 </table>
 
+## CheckResultCheckStatus
+
+CheckResultCheckStatus is enum for the field status
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>PASS</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>FAIL</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## CheckResultOrderField
+
+Properties by which CheckResult connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>source</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>observed_at</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ContactOrderField
 
 Properties by which Contact connections can be ordered.
@@ -1996,6 +2068,12 @@ Properties by which DirectoryGroup connections can be ordered.
 
 </td>
 </tr>
+<tr>
+<td>directory_name</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2046,6 +2124,12 @@ Properties by which DirectoryMembership connections can be ordered.
 </tr>
 <tr>
 <td>updated_at</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>directory_name</td>
 <td>
 
 </td>
@@ -3383,6 +3467,12 @@ ExportExportType is enum for the field export_type
 </td>
 </tr>
 <tr>
+<td>CHECK_RESULT</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>CONTACT</td>
 <td>
 
@@ -3660,6 +3750,18 @@ Properties by which Finding connections can be ordered.
 </tr>
 <tr>
 <td>severity</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>event_time</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>reported_at</td>
 <td>
 
 </td>
