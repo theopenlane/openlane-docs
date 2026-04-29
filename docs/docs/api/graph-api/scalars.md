@@ -133,6 +133,10 @@ The builtin Time type
 The `Upload` scalar type represents a file upload.
 This scalar is typically used to handle file uploads in GraphQL mutations.
 
+## UploadFileName
+
+UploadFileName allows passing file name overrides for uploaded files without requiring a resolver.
+
 ## VendorScoringQuestionsConfig
 
 VendorScoringQuestionsConfig holds org-custom question overrides and additions for vendor scoring
