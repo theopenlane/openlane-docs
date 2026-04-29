@@ -13,42 +13,47 @@ If your organization uses Google Workspace for identity and collaboration, this 
 
 - **OAuth Connectivity Validation:** Confirms Workspace token access and directory API availability.
 - **Directory Metadata Sync:** Reads user directory data and group memberships, giving you the identity baseline for access reviews and audits (SOC 2: CC6.2, CC6.3).
-- **Scoped Directory Collection:** Supports optional OU and customer scoping so you only collect identities within your compliance boundary.
+- **Scoped Directory Collection:** Supports optional OU filtering so you only collect identities within your compliance boundary.
 
 ## Prerequisites
 
-- Google OAuth client with Openlane callback URL configured.
-- Admin SDK API enabled in the Google Cloud project.
-- Workspace admin consent for requested directory scopes (`admin.directory.user.readonly`, `admin.directory.group.readonly`).
+- Google Workspace super admin account to authorize directory access during OAuth.
+- Admin SDK API enabled in your Google Cloud project.
+
+## Supported Operations
+
+| Operation | Description |
+|---|---|
+| `DirectorySync` | Collect Google Workspace directory users, groups, and memberships and emit directory ingest envelopes |
 
 ## Step-by-Step Setup
 
-### Step 1: Configure Google OAuth and APIs
-
-1. Configure OAuth app and callback URI in the Google Cloud console.
-2. Enable the Admin SDK API.
-3. Grant required scopes and admin consent.
-
-### Step 2: Connect in Openlane
+### Step 1: Authorize Google Workspace
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Google Workspace**.
-2. Click **Connect**. You will be redirected to Google to authorize access.
-3. Sign in with a Workspace admin account and grant the requested permissions.
-4. After authorization, you are redirected back to Openlane and the connection is saved.
+2. Click **Configure**.
+3. Click **Continue to Authorization** — you will be redirected to Google. There are no credentials to enter manually.
+4. Sign in with a Workspace super admin account and grant the requested directory permissions.
+5. After authorization, you are redirected back to Openlane and the connection is saved.
 
-### Step 3: Post-Connection Configuration (Optional)
+### Step 2: Configure Sync Behavior
 
-After the OAuth connection is established, you can refine the sync scope with additional settings:
+Optionally configure which data is collected and how records are filtered before ingestion:
 
-| Field | Required | Purpose |
-|---|---|---|
-| `adminEmail` | No | Workspace administrator to impersonate during directory sync |
-| `customerId` | No | Explicit directory customer scope for Admin SDK queries |
-| `subjectUser` | No | Subject user for domain-wide delegation scenarios |
-| `organizationalUnitPath` | No | Restricts sync operations to a specific OU path |
-| `includeSuspendedUsers` | No | Include suspended accounts in compliance exports (default: off) |
-| `enableGroupSync` | No | Enable group synchronization in addition to users (default: on) |
-| `syncInterval` | No | Duration string indicating refresh frequency |
+#### Directory Sync
+
+| Setting | Description |
+|---|---|
+| **Primary Directory** | Designate this connection as the primary directory source for your organization — the primary directory is the authoritative source that populates the majority of fields on identity holder records |
+| **Filter Expression** | Optional CEL expression evaluated against each record — only records that match are ingested (allows inclusion) |
+
+Filter expression example:
+
+```
+payload.orgUnitPath.startsWith('/engineering/')
+```
+
+CEL expressions have access to the full raw payload for each record via `payload.<field>`.
 
 ## Validate Connection
 
@@ -64,8 +69,8 @@ To remove this integration, navigate to **Organization Settings** > **Integratio
 
 ## Troubleshooting
 
-- **Directory API errors:** verify Admin SDK enablement and scope grants.
-- **No user data:** verify admin visibility permissions and customer ID.
+- **Directory API errors:** verify Admin SDK is enabled and that all required OAuth scopes were granted during authorization.
+- **No user data:** verify the authorizing account has super admin or equivalent directory read permissions.
 
 ## References
 

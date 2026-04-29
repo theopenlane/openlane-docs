@@ -15,22 +15,19 @@ If your team runs infrastructure on Google Cloud, this integration brings Securi
 |---|---|
 | Primary use case | Continuous ingestion of SCC findings into Openlane |
 | Data direction | One-way (GCP -> Openlane), read-only |
-| GCP services used | Security Command Center, IAM, IAM Credentials, STS (for WIF) |
-| Setup model | Service account key (simple path) or Workload Identity Federation (keyless path) |
-| Openlane records created | Vulnerabilities (created or updated), linked to your SCC integration |
+| GCP services used | Security Command Center, IAM |
+| Setup model | Service account key JSON |
+| Openlane records created | Findings, Vulnerabilities and Risks (created or updated), linked to your SCC integration |
 
 ## Key Capabilities
 
 - **Findings Ingestion:** Pulls SCC findings and normalizes them into Openlane vulnerability records, giving you a unified view for remediation tracking and SLA compliance (SOC 2: CC7, CC8).
 - **Scoped Collection:** Supports source and filter scoping to match your operating model and compliance boundary.
-- **Flexible Auth:** Supports service-account key auth and Workload Identity Federation, so you can choose what fits your environment.
-
 ## Prerequisites
 
 - `gcloud` CLI access with permissions to create service accounts and grant IAM bindings.
 - Security Command Center API enabled in the target project.
 - Organization ID or project ID to define your SCC collection scope.
-- If using Workload Identity Federation, an OIDC issuer configuration.
 
 ## Step-by-Step Setup
 
@@ -46,55 +43,67 @@ curl -fsSL https://docs.theopenlane.io/integrations/setup/gcp/openlane-gcp-scc-s
 chmod +x openlane-gcp-scc-setup.sh
 ```
 
-2. Run key-based setup (service account key path):
+2. Run the setup:
 
 ```bash
 ./openlane-gcp-scc-setup.sh \
   --project-id <PROJECT_ID> \
-  --organization-id <ORGANIZATION_ID> \
-  --source-id <SCC_SOURCE_ID>
+  --organization-id <ORGANIZATION_ID>
 ```
 
-3. Or run keyless setup (WIF path):
-
-```bash
-./openlane-gcp-scc-setup.sh \
-  --project-id <PROJECT_ID> \
-  --organization-id <ORGANIZATION_ID> \
-  --source-id <SCC_SOURCE_ID> \
-  --enable-wif \
-  --skip-key \
-  --oidc-issuer-url <OIDC_ISSUER_URL> \
-  --oidc-allowed-audience <OIDC_AUDIENCE>
-```
-
-The script prints the values to paste into Openlane.
+The script prints the service account key JSON and other values to paste into Openlane.
 
 ### Step 2: Connect Google Cloud SCC in Openlane
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Google Cloud SCC**.
-2. Click **Configure** and enter the required fields:
+2. Click **Configure** and enter the credential fields:
 
-| Field | Required | Purpose |
+| Field | Required | Description |
 |---|---|---|
-| `organizationId` | Yes (one of `organizationId` or `projectId`) | GCP organization used as the SCC parent for org-wide collection |
-| `projectId` | Yes (one of `organizationId` or `projectId`) | GCP project for single-project SCC access and quota defaults |
-| `sourceId` | Recommended | SCC source identifier to scope findings (e.g. `organizations/123/sources/456`) |
-| `sourceIds` | Recommended | List of SCC source identifiers; bare IDs are expanded against selected parents |
-| `serviceAccountKey` | Yes (key path) | Service account key JSON from setup script output |
-| `workloadIdentityProvider` | Yes (WIF path) | Fully-qualified Workload Identity Provider resource name |
-| `audience` | Yes (WIF path) | STS audience for token exchange |
-| `serviceAccountEmail` | Yes (WIF path) | Target service account email for impersonation |
-| `subjectToken` | Yes (WIF path) | OIDC/JWT subject token used in federation exchange |
-| `projectScope` | No | `all` (default) or `specific` to restrict fan-out |
-| `projectIds` | Conditional | Required when `projectScope` is `specific` |
-| `findingFilter` | No | CEL filter applied when querying SCC findings |
-| `scopes` | No | Additional OAuth scopes requested during impersonation |
-| `tokenLifetime` | No | Access token lifetime override (default: `3600s`) |
-| `audienceHint` | No | Audience override if multiple STS exchanges are supported |
-| `workloadPoolProject` | No | Project that owns the workload identity pool (if different from `projectId`) |
+| `serviceAccountKeyJson` | Yes | Service account key JSON used to authenticate to GCP SCC |
+| `organizationId` | Yes (one of `organizationId` or `projectId`) | ID of the organization to use as the parent |
+| `projectId` | Yes (one of `organizationId` or `projectId`) | ID of the project to use as the parent |
+| `projectScope` | No | Filter project scope; only applies when using an Organization ID as the parent (`all` or `specific`) |
+| `projectIds` | Conditional | List of project IDs to include; required when `projectScope` is `specific` |
+| `sccSourceIds` | No | List of SCC source IDs to limit which sources findings are pulled from |
+| `oauthScopes` | No | OAuth scopes to request for the service account; defaults to `https://www.googleapis.com/auth/cloud-platform` |
 
-3. Click **Save**.
+:::tip Finding your SCC source IDs
+**Option A — GCP Console:** Go to **Security Command Center** > **Settings** > **Sources**. Each row shows a source — the numeric ID at the end of the resource name is what you need.
+
+**Option B — REST API:**
+```bash
+curl -s \
+  -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+  -H "x-goog-user-project: <PROJECT_ID>" \
+  "https://securitycenter.googleapis.com/v2/organizations/<ORG_ID>/sources?pageSize=100"
+```
+This returns source resource names like `organizations/123/sources/456` — paste the full name or just the numeric suffix into `sccSourceIds`.
+:::
+
+3. Optionally configure data ingestion behavior:
+
+#### Configuration
+
+| Setting | Description |
+|---|---|
+| **Filter Expression** | CEL expression evaluated against each finding — only findings that match are ingested |
+
+Filter expression examples:
+
+```
+# Exclude GKE security bulletins
+payload.category != "GKE_SECURITY_BULLETIN"
+```
+
+```
+# Ingest only critical findings
+payload.severity == "CRITICAL"
+```
+
+CEL expressions have access to the full raw payload for each finding via `payload.<field>`.
+
+4. Click **Save & Connect**.
 
 ## Validate Connection
 
@@ -123,8 +132,7 @@ To remove this integration, navigate to **Organization Settings** > **Integratio
 
 ## Troubleshooting
 
-- **Token exchange failure:** verify workload identity provider, audience, and subject token.
-- **Permission errors:** verify service account SCC read permissions at selected scope.
+- **Permission errors:** verify the service account has SCC read permissions at the configured scope.
 - **No findings ingested:** verify source scope and finding filter configuration.
 
 ## References
@@ -132,4 +140,3 @@ To remove this integration, navigate to **Organization Settings** > **Integratio
 - [Openlane GCP setup script](https://docs.theopenlane.io/integrations/setup/gcp/openlane-gcp-scc-setup.sh)
 - [Security Command Center overview](https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview)
 - [Security Command Center findings concepts](https://cloud.google.com/security-command-center/docs/concepts-findings)
-- [Google Cloud Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation)

@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: >-
-  Creates a read-only cross-account IAM role for the Openlane AWS integration. #magic___^_^___line
+  Creates a read-only cross-account IAM role for the Openlane AWS integration.
 Parameters:
   RoleName:
     Type: String
@@ -18,6 +18,20 @@ Parameters:
     Type: String
     Default: us-east-1
     Description: Security Hub aggregation home region used in Openlane.
+  EnableIAMAccess:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Grant Openlane read access to IAM users and groups.
+  EnableAuditConfig:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Grant Openlane read access to Config rules and Audit Manager assessments.
+
+Conditions:
+  IAMAccessEnabled: !Equals [!Ref EnableIAMAccess, "true"]
+  AuditConfigEnabled: !Equals [!Ref EnableAuditConfig, "true"]
 
 Resources:
   OpenlaneIntegrationRole:
@@ -44,18 +58,39 @@ Resources:
               - Sid: HealthCheckIdentity
                 Effect: Allow
                 Action:
-                  - sts:GetCallerIdentity
+                  - "securityhub:Describe*"
                 Resource: "*"
               - Sid: SecurityHubReadFindings
                 Effect: Allow
                 Action:
-                  - securityhub:GetFindings
+                  - "securityhub:Get*"
+                  - "securityhub:List*"
+                  - "securityhub:BatchGet*"
+                  - "securityhub:Describe*"
                 Resource: "*"
-              - Sid: AuditManagerReadAssessments
-                Effect: Allow
-                Action:
-                  - auditmanager:ListAssessments
-                Resource: "*"
+              - !If
+                - IAMAccessEnabled
+                - Sid: IAMReadUsers
+                  Effect: Allow
+                  Action:
+                    - iam:ListUsers
+                    - iam:ListGroups
+                    - iam:ListGroupsForUser
+                    - iam:ListUserTags
+                  Resource: "*"
+                - !Ref AWS::NoValue
+              - !If
+                - AuditConfigEnabled
+                - Sid: AuditConfigReadRules
+                  Effect: Allow
+                  Action:
+                    - config:DescribeConfigRules
+                    - config:DescribeComplianceByConfigRule
+                    - controlcatalog:ListControls
+                    - controlcatalog:ListControlMappings
+                    - controlcatalog:ListCommonControls
+                  Resource: "*"
+                - !Ref AWS::NoValue
 
 Outputs:
   RoleArn:

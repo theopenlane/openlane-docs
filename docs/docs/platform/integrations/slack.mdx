@@ -7,34 +7,76 @@ sidebar_label: Slack
 
 # ![slack integration](./assets/slack.png) Slack Integration Guide
 
-If your team lives in Slack, this integration lets Openlane deliver security and compliance notifications directly into your channels. Vulnerability SLA reminders, access review deadlines, policy attestation nudges, right where your team already works.
+If your team lives in Slack, this integration lets Openlane deliver security and compliance notifications directly into your channels and sync your workspace users as directory accounts. Vulnerability SLA reminders, access review deadlines, policy attestation nudges — right where your team already works.
 
 ## Key Capabilities
 
 - **Workspace Connectivity Validation:** Confirms Slack token health and channel availability.
-- **Workspace Metadata Sync:** Reads team and workspace metadata for notification routing context.
 - **Outbound Notifications:** Sends compliance event messages (remediation deadlines, review reminders, policy updates) to configured channels.
+- **Directory Account Sync:** Collects workspace users as directory accounts for identity governance and access reviews.
 
 ## Prerequisites
 
-- Slack app configured with Openlane callback URL.
-- Required OAuth scopes granted (`identity.basic`, `identity.email`, `chat:write`).
-- App installed in target workspace and invited to target channels for message delivery.
+- Permission to install a Slack app in the target workspace, or a bot token from an existing custom Slack app.
+
+## Supported Operations
+
+| Operation | Description |
+|---|---|
+| `MessageSendOperation` | Send a Slack message via chat postMessage |
+| `DirectorySync` | Collect workspace users as directory accounts |
 
 ## Step-by-Step Setup
 
-### Step 1: Configure Slack App and Scopes
+### Step 1: Connect Slack
 
-1. Configure the callback URI for Openlane in your Slack app settings.
-2. Add required OAuth scopes (including `chat:write` for message delivery).
-3. Install the app to your workspace.
+Choose the authentication method that fits your setup:
 
-### Step 2: Connect in Openlane
+#### Option A: Slack OAuth Credential
+
+Connect your Slack workspace via OAuth — no credentials to enter manually.
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Slack**.
-2. Click **Connect**. You will be redirected to Slack to authorize access.
-3. Review and approve the requested permissions.
-4. After authorization, you are redirected back to Openlane and the connection is saved.
+2. Click **Configure** and expand **Slack OAuth Credential**.
+3. Click **Continue to Authorization** — you will be redirected to Slack to authorize access.
+4. Review and approve the requested permissions.
+5. After authorization, you are redirected back to Openlane and the connection is saved.
+
+#### Option B: Slack Bot Token
+
+Connect using a bot token from a custom Slack app. Use this option if your workspace requires a dedicated app with explicit scope control.
+
+1. Go to [api.slack.com/apps](https://api.slack.com/apps) and create or select an app.
+2. Under **OAuth & Permissions**, add the required bot token scopes (`channels:read`, `chat:write`, `chat:write.public`, and any others needed).
+3. Install the app to your workspace.
+4. Copy the **Bot User OAuth Token** from the **OAuth & Permissions** page.
+5. Navigate to **Organization Settings** > **Integrations** > **Slack** > **Configure** and expand **Slack Bot Token**.
+6. Enter the bot token and click **Save**.
+
+### Step 2: Configure Sync Behavior
+
+Optionally configure which data is collected and how records are filtered before ingestion:
+
+#### Directory Account Sync
+
+| Setting | Description |
+|---|---|
+| **Disable** | Turn off user ingestion from Slack without disconnecting the integration |
+| **Filter Expression** | Optional CEL expression evaluated against each user record — only records that match are ingested |
+
+Filter expression examples:
+
+```
+# Exclude external users (Slack Connect, single-channel and multi-channel guests)
+payload.is_external == false
+```
+
+```
+# Exclude bot users
+payload.is_bot == false
+```
+
+CEL expressions have access to the full raw payload for each record via `payload.<field>`. Expressions can be combined with `&&` to apply multiple filters at once.
 
 ## Validate Connection
 
@@ -42,7 +84,7 @@ After saving, Openlane runs a health check against Slack and displays the result
 
 ## What Openlane Syncs
 
-Openlane reads workspace metadata (team name, workspace ID) for context and supports outbound channel notifications. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. Helps demonstrate timely response and escalation under SOC 2 CC7.2 and CC7.3.
+Openlane reads workspace metadata and user records for directory sync, and sends outbound notification messages to Slack channels. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. Helps demonstrate timely response and escalation under SOC 2 CC7.2 and CC7.3.
 
 ## Disconnect
 
@@ -50,8 +92,9 @@ To remove this integration, navigate to **Organization Settings** > **Integratio
 
 ## Troubleshooting
 
-- **`not_in_channel` errors:** invite the app bot user to the target channel.
-- **Scope errors:** update scopes in app settings and reinstall the app.
+- **`not_in_channel` errors:** invite the app bot user to the target channel before sending messages.
+- **Scope errors:** update bot token scopes in your app settings and reinstall the app to the workspace.
+- **No users synced:** verify the bot has `users:read` scope and check any active filter expressions.
 
 ## References
 
