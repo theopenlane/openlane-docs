@@ -1,6 +1,6 @@
 ---
-title: Building a Directory Sync Integration
-description: Guide for building Directory Sync integrations that collect accounts, groups, and memberships from a provider and emit them through the ingest pipeline, using Google Workspace as the reference example
+title: Directory Sync Integrations
+description: Guide for building Directory Sync integrations that collect accounts, groups, and memberships from a provider and emit them through the ingest pipeline
 sidebar_position: 11
 keywords:
   - directory sync
@@ -41,10 +41,12 @@ Directory Sync integrations collect and emit three normalized schemas:
 
 ## Additional `UserInput` Fields
 
-Directory Sync integrations include two additional fields on `UserInput`:
+Directory Sync integrations can include a fields on the `UserInput` config:
 
 ```go
 type UserInput struct {
+	// DisableGroupSync will just sync users and no groups or group memberships
+	DisableGroupSync bool `json:"disableGroupSync,omitempty" jsonschema:"title=Disable Group Sync,description=Only sync users, disable groups sync operations"`
     // FilterExpr limits imported records to envelopes matching a CEL expression
     FilterExpr string `json:"filterExpr,omitempty" jsonschema:"title=Filter Expression,description=Optional CEL expression to apply to records before ingesting"`
     // PrimaryDirectory marks this installation as the authoritative source for identity holder sync
@@ -52,8 +54,9 @@ type UserInput struct {
 }
 ```
 
-- **`FilterExpr`** — a CEL expression evaluated against each envelope before ingest; see [CEL Expressions](./basics.mdx#cel-expressions)
-- **`PrimaryDirectory`** — when `true`, this installation's data drives identity holder enrichment and lifecycle derivation; see [Identity Holder Sync](#identity-holder-sync) below
+- **`DisableGroupSync`** - when true, only users are synced, skipping group and group membership ingestion
+- **`FilterExpr`** — a CEL expression evaluated against each envelope before ingest allowing for users to only ingest relevant data; see [CEL Expressions](./basics.mdx#cel-expressions)
+- **`PrimaryDirectory`** — when `true`, this installation's data drives identity holder enrichment and lifecycle derivation; see [Identity Holder Sync](#identity-holder-sync) below. This should only be used on directories that are token issuers, and not secondary directories. For example, Google Workspace is a primary directory, but GitHub would not be.
 
 ---
 
@@ -80,13 +83,11 @@ In `builder.go`, register the directory sync operation alongside the health chec
 
 ---
 
-## `operation_directory_sync.go` — Collecting Directory Data
+## Collecting Directory Data - `operation_directory_sync.go`
 
 The operation struct implements `IngestHandle()`, which wraps the provider API calls and returns one `IngestPayloadSet` per schema.
 
 ```go
-type DirectorySync struct{}
-
 func (d DirectorySync) IngestHandle() types.IngestHandler {
     return providerkit.WithClientRequest(myClient, func(ctx context.Context, req types.OperationRequest, client *sdk.Client) ([]types.IngestPayloadSet, error) {
         // 1. Resolve installation metadata (e.g. tenant ID) stored at connection time
@@ -144,19 +145,3 @@ When a user sets `UserInput.PrimaryDirectory = true`, the integration's director
 This flag surfaces in `UserInput` and is read downstream by the identity holder sync hooks. No additional code is required in the integration package itself — declaring the field and including it in the `UserInputRegistration` schema is sufficient.
 
 Only one installation per organization should be marked as the primary directory. This is enforced at the application layer.
-
----
-
-## Checklist
-
-- [ ] `types.go` — stable `definitionID`, credential ref, client ref, operation refs for health check and directory sync
-- [ ] `config.go` — operator-level secrets and URLs
-- [ ] `UserInput` — includes `FilterExpr` and `PrimaryDirectory`
-- [ ] `InstallationMetadata` — holds tenant/account identity, implements `InstallationIdentifiable`
-- [ ] `installation.go` — resolves `InstallationMetadata` from credentials post-connection
-- [ ] `client.go` — builds the provider SDK client from the credential
-- [ ] `operation_health.go` — lightweight credential validation
-- [ ] `operation_directory_sync.go` — collects accounts, groups, memberships; returns three `IngestPayloadSet`s
-- [ ] `mappings.go` — CEL expressions for `DirectoryAccount`, `DirectoryGroup`, `DirectoryMembership`
-- [ ] `builder.go` — wires all of the above; starts with `Active: false, Visible: false`
-- [ ] `errors.go` — sentinel errors for credential decode, payload encode, API failures, missing metadata
