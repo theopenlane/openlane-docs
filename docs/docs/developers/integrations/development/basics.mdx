@@ -1,0 +1,503 @@
+---
+title: Building an Integration
+description: Step-by-step guide for building a new provider integration, covering the builder pattern, credential slots, client registration, health checks, and installation metadata
+sidebar_position: 2
+keywords:
+  - integration
+  - builder
+  - credential registration
+  - client registration
+  - health check
+  - installation metadata
+  - operator config
+  - user input
+  - OAuth
+  - definition spec
+  - CEL
+  - filter expression
+  - mapping expression
+tags:
+  - integrations
+  - builder
+  - oauth
+  - cel
+---
+
+# Building an Integration
+
+This guide walks through how to build a new integration. A companion page covers what's additionally required for [Directory Sync integrations](./directory-sync.mdx).
+
+---
+
+## Directory Structure
+
+Every integration lives under `internal/integrations/definitions/<provider>/`. A typical package contains:
+
+```
+internal/integrations/definitions/<provider>/
+├── builder.go          # Definition assembly — the entry point
+├── config.go           # Operator-level config (secrets, URLs)
+├── types.go            # Credential types, UserInput, InstallationMetadata, package-level refs
+├── installation.go     # Resolves InstallationMetadata from credentials after connection
+├── client.go           # Builds the SDK client used by operations
+├── operation_health.go # Health check — validates credentials work
+├── operation_<type>.go # Logic for pulling the data from the integration source and creating the envelopes for ingestion, e.g. `operation_directory_sync.go` would be for directory sync operations
+├── mappings.go         # CEL mapping expressions (for ingest operations)
+└── errors.go           # Sentinel errors
+```
+
+---
+
+## Operator Config - `config.go`
+
+`Config` holds secrets and URLs that the operator (Openlane) provides at deploy time — things like OAuth client IDs and secrets. These are never set by end users.
+
+```go
+type Config struct {
+    ClientID     string `json:"clientid"     koanf:"clientid"`
+    ClientSecret string `json:"clientsecret" koanf:"clientsecret" sensitive:"true"`
+    RedirectURL  string `json:"redirecturl"  koanf:"redirecturl"  default:"https://api.theopenlane.io/v1/integrations/auth/callback"`
+}
+```
+
+The `Config` is passed into `Builder(cfg Config)` and used when wiring up the OAuth registration and building clients.
+
+---
+
+## Package-Level Refs and Credential Types - `types.go`
+
+`types.go` declares the stable, package-level handles that the rest of the package shares:
+
+```go
+var (
+    definitionID    = types.NewDefinitionRef("def_<ulid>")
+    installation    = types.NewInstallationRef(resolveInstallationMetadata)
+    mySchema, myCredential = providerkit.CredentialSchema[MyCredentialSchema]()
+    myClient        = types.NewClientRef[*sdk.Client]()
+    healthCheckSchema, healthCheckOperation = providerkit.OperationSchema[HealthCheck]()
+    <operation>SyncSchema, <operation>SyncOperation = providerkit.OperationSchema[<operation>Sync]()
+)
+```
+
+:::info
+The name of the `Type` passed into the `OperationSchema` is what will show to the user in console when showing operations so it is important that this is consistent, e.g. for directory sync it should always
+be called `DirectorySync`
+:::
+
+- **`definitionID`** — stable ULID string; must be unique across all integrations and should contain a reference to the integration, e.g. `def_01K0SLACK000000000000000001` for slack v1 definition
+- **`installation`** — typed ref that wires `resolveInstallationMetadata` into the connection registration
+- **`myCredential`** — `providerkit.CredentialSchema` returns a JSON schema (for registration) and a typed `CredentialRef[T]` (for resolving at runtime)
+- **`myClient`** — typed `ClientRef[T]` used to cast the built client in operation handlers
+- **`<operation>SyncOperation`** — `providerkit.OperationSchema` returns a config schema and a typed operation ref
+
+The credential type (`myCredential`) holds whatever the OAuth callback returns:
+
+```go
+type myCred struct {
+    AccessToken  string     `json:"accessToken"`
+    RefreshToken string     `json:"refreshToken,omitempty"`
+    Expiry       *time.Time `json:"expiry,omitempty"`
+}
+```
+
+### User Config - `UserInput`
+
+`UserInput` holds per-installation config that the end user provides during setup (e.g. filter expressions, flags). If an integration has multiple operations, e.g. `DirectorySync` and `FindingSync`, each operation should have it's own config within `UserInput`. The individual per-sync configs are what are passed to the `OperationSchema`. This will allow for configuration of each operation individually, for example:
+
+```go
+// UserInput holds installation-specific configuration collected from the user
+type UserInput struct {
+	// FindingSync includes the configuration for findings from AWS Security Hub
+	FindingSync FindingSyncConfig `json:"findingSync,omitempty" jsonschema:"title=AWS Security Hub Sync"`
+	// DirectorySync includes the configuration for identity accounts from AWS IAM
+	DirectorySync DirectorySync `json:"directorySync,omitempty" jsonschema:"title=Directory Account Sync"`
+	// CheckSync includes the configuration for rules from AWS Config
+	CheckSync CheckSync `json:"checkSync,omitempty" jsonschema:"title=AWS Config Rule Sync"`
+	// AssetSync includes the configuration for assets from AWS
+	AssetSync AssetSync `json:"assetSync,omitempty" jsonschema:"title=AWS Asset Sync"`
+}
+
+// DirectorySync holds the configuration for collecting directory account information
+type DirectorySync struct {
+	// Disable is used to disable the directory sync operation from aws
+	Disable bool `json:"disable,omitempty" jsonschema:"title=Disable,description=Disable the syncing of users and groups from AWS IAM"`
+	// DisableGroupSync will just sync users and no groups or group memberships
+	DisableGroupSync bool `json:"disableGroupSync,omitempty" jsonschema:"title=Disable Group Sync,description=Only sync users from AWS IAM, disable groups sync operations"`
+	// FilterExpr limits imported records to envelopes matching the CEL expression
+	FilterExpr string `json:"filterExpr,omitempty" jsonschema:"title=Filter Expression,description=Optional CEL expression to apply to records before ingesting.,example=Example: payload.path.startsWith('/engineering/')"`
+}
+```
+
+### InstallationMetadata - `InstallationMetadata`
+
+`InstallationMetadata` holds the stable target identity resolved during connection. It must implement `InstallationIdentifiable` to surface a display name in the UI:
+
+```go
+func (m InstallationMetadata) InstallationIdentity() types.IntegrationInstallationIdentity {
+    return types.IntegrationInstallationIdentity{
+        ExternalName: m.Domain,
+        ExternalID:   m.CustomerID,
+    }
+}
+```
+
+---
+
+## Definition Assembly - `builder.go`
+
+`builder.go` is where all pieces are wired together into a `types.Definition`:
+
+```go
+func Builder(cfg Config) registry.Builder {
+    return registry.Builder(func() (types.Definition, error) {
+        return types.Definition{ ... }, nil
+    })
+}
+```
+
+### Catalog Metadata - `DefinitionSpec`
+
+```go
+DefinitionSpec: types.DefinitionSpec{
+    ID:          definitionID.ID(),
+    Family:      "Google",
+    DisplayName: "GCP Security Command Center",
+    Description: "...",
+    Category:    "identity",       // e.g. identity, security-posture
+    DocsURL:     "https://docs.theopenlane.io/...",
+    Tags:        []string{"directory-sync"},
+    Active:      false,            // set false until ready to deploy
+    Visible:     false,            // set false until ready to show in catalog
+},
+```
+
+**`Active` and `Visible` must both start as `false`** for a new integration. Flip them to `true` once the integration is complete, tested, and ready for production.
+
+- **`Active`** — controls whether the definition is enabled for use at the operator level
+- **`Visible`** — controls whether the integration appears in the catalog UI
+
+### `OperatorConfig` and `UserInput`
+
+```go
+OperatorConfig: &types.OperatorConfigRegistration{
+    Schema: providerkit.SchemaFrom[Config](),
+},
+UserInput: &types.UserInputRegistration{
+    Schema: providerkit.SchemaFrom[UserInput](),
+},
+```
+
+Both use `providerkit.SchemaFrom[T]()` to generate a JSON schema from the struct tags on your config/input types.
+
+### Authenticating - `CredentialRegistrations`
+
+This declares the named credential slots the integration uses. Each slot corresponds to one `CredentialRef`. Most integrations should have a single credential definition, but in some cases there may be more than one. If one method is preferred over the other due to security reasons, it should be marked as `Recommended: true`.
+
+```go
+CredentialRegistrations: []types.CredentialRegistration{
+    {
+        Ref:         myCredential.ID(),
+        Name:        "My Provider Credential",
+        Description: "OAuth credential used to access the provider API.",
+    },
+},
+```
+
+### Connections
+
+`Connections` describes the connection modes exposed by the definition. A `ConnectionRegistration` binds together a credential slot, the clients it unlocks, the validation operation, and the auth flow:
+
+```go
+Connections: []types.ConnectionRegistration{
+    {
+        CredentialRef:       myCredential.ID(),
+        Name:                "My Provider OAuth",
+        Description:         "Connect via OAuth.",
+        CredentialRefs:      []types.CredentialSlotID{myCredential.ID()},
+        ClientRefs:          []types.ClientID{myClient.ID()},
+        ValidationOperation: healthCheckOperation.Name(),
+        Integration:         installation.Registration(),
+        Auth: auth.OAuthRegistration(auth.OAuthRegistrationOptions[myCred]{
+            CredentialRef: myCredential,
+            Config: auth.OAuthConfig{
+                ClientID:     cfg.ClientID,
+                ClientSecret: cfg.ClientSecret,
+                AuthURL:      "https://provider.example.com/oauth/authorize",
+                TokenURL:     "https://provider.example.com/oauth/token",
+                RedirectURL:  cfg.RedirectURL,
+                Scopes:       []string{"scope.readonly"},
+                AuthParams:   map[string]string{"access_type": "offline", "prompt": "consent"},
+            },
+            Material: func(m auth.OAuthMaterial) (myCred, error) {
+                return myCred{
+                    AccessToken:  m.AccessToken,
+                    RefreshToken: m.RefreshToken,
+                    Expiry:       m.Expiry,
+                }, nil
+            },
+            EncodeCredentialError: ErrCredentialEncode,
+        }),
+        Disconnect: &types.DisconnectRegistration{
+            CredentialRef: myCredential.ID(),
+            Description:   "Removes the stored OAuth credential. Revoke access directly in the provider's admin console.",
+        },
+    },
+},
+```
+
+### Clients
+
+Client lists the clients the definition can build that are used for the integration. Some integrations, such as the `AWS` integration will have multiple clients for different operations, while others will only have a single client definition.
+
+```go
+Clients: []types.ClientRegistration{
+    {
+        Ref:            myClient.ID(),
+        CredentialRefs: []types.CredentialSlotID{myCredential.ID()},
+        Description:    "Provider SDK client",
+        Build:          Client{cfg: cfg}.Build,
+    },
+},
+```
+
+`Build` is a `ClientBuilderFunc` that receives a `types.ClientBuildRequest` (which includes `CredentialBindings`) and returns the constructed SDK client as `any`.
+
+### `Operations`
+
+#### Health Check - `operation_health.go`
+
+Every integration needs at least a health check operation, this will run immediately after connection to confirm the integration is setup correctly.
+
+```go
+Operations: []types.OperationRegistration{
+    {
+        Name:         healthCheckOperation.Name(),
+        Description:  "Validate credentials by calling a lightweight provider endpoint",
+        Topic:        definitionID.OperationTopic(healthCheckOperation.Name()),
+        ClientRef:    myClient.ID(),
+        Policy:       types.ExecutionPolicy{Inline: true},
+        ConfigSchema: healthCheckSchema,
+        Handle:       HealthCheck{}.Handle(),
+    },
+},
+```
+
+- **`Inline: true`** — runs synchronously as part of the connection flow; used for validation
+- **`Reconcile: true`** — runs on a schedule or on-demand; used for data collection
+
+The health check calls a lightweight, read-only provider endpoint to confirm the credential is valid. It uses `Handle()`, not `IngestHandle()`:
+
+```go
+type HealthCheck struct{}
+
+func (h HealthCheck) Handle() types.OperationHandler {
+    return providerkit.WithClientRequest(myClient, func(ctx context.Context, req types.OperationRequest, client *sdk.Client) (json.RawMessage, error) {
+        // call a lightweight endpoint
+        // return a small JSON result
+    })
+}
+```
+
+
+#### Additional Operations - `operation_<operation_name>.go`
+
+Each additional operation performed by an integration will follow this same pattern as the health check but defines the how the data is pulled and what schemas the data is pulled into Openlane. For example, a `directory_sync` operation will almost always have an ingest schema that includes DirectoryAccounts, DirectoryGroups, and DirectoryMemberships. Go to [directory sync](./directory-sync.mdx) for more specific details on directory sync operations.
+
+```go
+{
+    Name:           directorySyncOperation.Name(),
+    Description:    "Sync AWS IAM users, groups, and memberships as directory accounts",
+    Topic:          definitionID.OperationTopic(directorySyncOperation.Name()),
+    ClientRef:      iamClient.ID(),
+    ConfigSchema:   directorySyncSchema,
+    Policy:         types.ExecutionPolicy{Reconcile: true},
+    Disabled:       providerkit.DisabledWhen(func(u UserInput) bool { return u.DirectorySync.Disable }),
+    ConfigResolver: providerkit.ConfigFrom(func(u UserInput) DirectorySync { return u.DirectorySync }),
+    Ingest: []types.IngestContract{
+        {
+            Schema: integrationgenerated.IntegrationMappingSchemaDirectoryAccount,
+        },
+        {
+            Schema: integrationgenerated.IntegrationMappingSchemaDirectoryGroup,
+        },
+        {
+            Schema: integrationgenerated.IntegrationMappingSchemaDirectoryMembership,
+        },
+    },
+    IngestHandle:        DirectorySync{}.IngestHandle(),
+    RequiredPermissions: []string{"iam:ListUsers", "iam:ListGroups", "iam:ListGroupsForUser", "iam:ListUserTags"},
+},
+```
+
+:::info
+Adding `RequiredPermissions` to the operation will show the permissions to the user in the UI. This is important when the integration requires the user to add scopes to a role or token and should match
+the minimum required permissions for the integration to work.
+:::
+
+---
+
+## Resolving Installation Metadata - `installation.go`
+
+After a user connects, `resolveInstallationMetadata` derives the stable display identity (e.g. what account or tenant was connected). This runs once during connection setup.
+
+```go
+func resolveInstallationMetadata(ctx context.Context, req types.InstallationRequest) (InstallationMetadata, bool, error) {
+    cred, _, err := myCredential.Resolve(req.Credentials)
+    if err != nil {
+        return InstallationMetadata{}, false, ErrCredentialDecode
+    }
+
+    // call provider API to resolve account/tenant identity
+    return InstallationMetadata{...}, true, nil
+}
+```
+
+Return `(meta, false, nil)` when metadata cannot be resolved yet but it is not an error (e.g. token not present). Return `(meta, false, err)` for hard failures.
+
+---
+
+## CEL Expressions
+
+CEL (Common Expression Language) is used by ingest operations to filter and map provider payloads onto normalized schema keys. Any integration that uses `IngestHandle` will define CEL expressions.
+
+### Available Variables
+
+Every CEL expression has access to the following variables, bound from the `MappingEnvelope`:
+
+| Variable | Type | Value |
+|---|---|---|
+| `payload` | `dyn` | The raw provider JSON object, deserialized to a map |
+| `resource` | `dyn` | The resource identifier passed to `MarshalEnvelope` |
+| `envelope` | `dyn` | The full envelope as a map: `{variant, resource, action, payload}` |
+| `action` | `dyn` | The event action name (populated for webhook-driven flows) |
+| `variant` | `dyn` | The variant selector (if set on the mapping registration) |
+
+All variables are typed as `dyn` — use field existence checks (`'field' in payload`) before accessing optional fields.
+
+### Filter Expressions
+
+A filter expression is a CEL boolean expression evaluated against each envelope before it is mapped. Envelopes where the expression evaluates to `false` are dropped.
+
+- An empty `FilterExpr` or `"true"` passes all records through
+- A 100ms evaluation timeout applies per envelope
+- Returning a non-boolean type is treated as an evaluation failure
+
+```cel
+// pass all records
+true
+
+// drop suspended accounts
+!('suspended' in payload && payload.suspended)
+
+// only include accounts from a specific org unit
+'orgUnitPath' in payload && payload.orgUnitPath == "/Engineering"
+
+// only include admin-created groups
+'adminCreated' in payload && payload.adminCreated
+```
+
+### Map Expressions
+
+A map expression is a CEL object literal that projects provider payload fields onto the target schema keys. Use `providerkit.CelMapExpr` to build it from a slice of key/expression pairs — each value is automatically wrapped in `dyn(...)` to handle type coercion.
+
+```go
+var mapExprDirectoryAccount = providerkit.CelMapExpr([]providerkit.CelMapEntry{
+    {Key: integrationgenerated.IntegrationMappingDirectoryAccountExternalID,
+     Expr: `'id' in payload ? payload.id : ""`},
+
+    {Key: integrationgenerated.IntegrationMappingDirectoryAccountStatus,
+     Expr: `'deletionTime' in payload && payload.deletionTime != "" ? "DELETED"
+            : ('suspended' in payload && payload.suspended ? "SUSPENDED"
+            : "ACTIVE")`},
+
+    // store the full provider object for reference
+    {Key: integrationgenerated.IntegrationMappingDirectoryAccountProfile,
+     Expr: "payload"},
+})
+```
+
+When building membership envelopes, pass the group identifier as `resourceID` in `MarshalEnvelope` — it becomes available as `resource` in the CEL expression, letting you associate the membership back to its group without duplicating the value in the payload:
+
+```go
+{Key: integrationgenerated.IntegrationMappingDirectoryMembershipDirectoryGroupID,
+ Expr: `resource`},
+```
+
+### Registering Mappings
+
+Register one `MappingRegistration` per schema in `mappings.go` and include it in the `Definition`:
+
+```go
+func myProviderMappings() []types.MappingRegistration {
+    return []types.MappingRegistration{
+        {
+            Schema: integrationgenerated.IntegrationMappingSchemaDirectoryAccount,
+            Spec:   types.MappingOverride{FilterExpr: "true", MapExpr: mapExprDirectoryAccount},
+        },
+        // one entry per schema the operation declares in its Ingest contracts
+    }
+}
+```
+
+```go
+// in builder.go
+Mappings: myProviderMappings(),
+```
+
+---
+
+## Registering the Integration in the Catalog
+
+Once the integration package is built, it must be registered in two places in `internal/integrations/definitions/catalog/`.
+
+### Add the Builder - `catalog.go`
+
+Import the new package and add its `Builder` call to the `Builders` slice:
+
+```go
+import (
+    // existing imports ...
+    "github.com/theopenlane/core/internal/integrations/definitions/myprovider"
+)
+
+func Builders(cfg Config) []registry.Builder {
+    return []registry.Builder{
+        // existing builders ...
+        myprovider.Builder(cfg.MyProvider),
+    }
+}
+```
+
+If the integration requires no operator config, call `myprovider.Builder()` with no arguments.
+
+### Add the Config Field - `types.go`
+
+If the integration has a `Config` struct (i.e. it needs OAuth credentials or other operator-held settings), add a field to the catalog `Config`:
+
+```go
+import (
+    // existing imports ...
+    "github.com/theopenlane/core/internal/integrations/definitions/myprovider"
+)
+
+type Config struct {
+    // existing fields ...
+
+    // MyProvider holds operator credentials for the My Provider definition
+    MyProvider myprovider.Config `json:"myprovider" koanf:"myprovider"`
+}
+```
+
+Integrations that have no `Config` struct (e.g. they need no operator secrets) do not need a field here.
+
+---
+
+## Generating Updated Config
+
+After modifying the catalog `Config`, run the config generation task to regenerate the koanf-based config output:
+
+```sh
+task config:generate
+```
+
+This updates the generated config files that wire operator settings through to the catalog. **Always run this after adding or modifying a `Config` field.**

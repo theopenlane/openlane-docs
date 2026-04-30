@@ -1,0 +1,147 @@
+---
+title: Directory Sync Integrations
+description: Guide for building Directory Sync integrations that collect accounts, groups, and memberships from a provider and emit them through the ingest pipeline
+sidebar_position: 11
+keywords:
+  - directory sync
+  - identity holder sync
+  - CEL filter expression
+  - ingest pipeline
+  - DirectoryAccount
+  - DirectoryGroup
+  - DirectoryMembership
+  - MappingEnvelope
+  - filter expression
+  - primary directory
+tags:
+  - integrations
+  - directory-sync
+  - identity
+---
+
+# Building a Directory Sync Integration
+
+This guide covers what's additionally required on top of the [core integration builder](./basics.mdx) for integrations that implement **Directory Sync** — the process of collecting accounts, groups, and memberships from a provider and emitting them through the ingest pipeline.
+
+Google Workspace is used as the reference example throughout.
+
+---
+
+## What Directory Sync Produces
+
+Directory Sync integrations collect and emit three normalized schemas:
+
+| Schema | What It Represents |
+|---|---|
+| `DirectoryAccount` | A user or service account in the provider directory |
+| `DirectoryGroup` | A group or distribution list |
+| `DirectoryMembership` | A user's membership in a group |
+
+---
+
+## Additional `UserInput` Fields
+
+Directory Sync integrations can include a fields on the `UserInput` config:
+
+```go
+type UserInput struct {
+	// DisableGroupSync will just sync users and no groups or group memberships
+	DisableGroupSync bool `json:"disableGroupSync,omitempty" jsonschema:"title=Disable Group Sync,description=Only sync users, disable groups sync operations"`
+    // FilterExpr limits imported records to envelopes matching a CEL expression
+    FilterExpr string `json:"filterExpr,omitempty" jsonschema:"title=Filter Expression,description=Optional CEL expression to apply to records before ingesting"`
+    // PrimaryDirectory marks this installation as the authoritative source for identity holder sync
+    PrimaryDirectory bool `json:"primaryDirectory,omitempty" jsonschema:"title=Primary Directory"`
+}
+```
+
+- **`DisableGroupSync`** - when true, only users are synced, skipping group and group membership ingestion
+- **`FilterExpr`** — a CEL expression evaluated against each envelope before ingest allowing for users to only ingest relevant data; see [CEL Expressions](./basics.mdx#cel-expressions)
+- **`PrimaryDirectory`** — when `true`, this installation's data drives identity holder enrichment and lifecycle derivation; see [Identity Holder Sync](#identity-holder-sync) below. This should only be used on directories that are token issuers, and not secondary directories. For example, Google Workspace is a primary directory, but GitHub would not be.
+
+---
+
+## Registering the Directory Sync Operation
+
+In `builder.go`, register the directory sync operation alongside the health check. Note `Reconcile: true` — directory sync runs on a schedule, not inline during connection.
+
+```go
+{
+    Name:         directorySyncOperation.Name(),
+    Description:  "Collect directory users, groups, and memberships and emit directory ingest envelopes",
+    Topic:        definitionID.OperationTopic(directorySyncOperation.Name()),
+    ClientRef:    myClient.ID(),
+    ConfigSchema: directorySyncSchema,
+    Policy:       types.ExecutionPolicy{Reconcile: true},
+    Ingest: []types.IngestContract{
+        {Schema: integrationgenerated.IntegrationMappingSchemaDirectoryAccount},
+        {Schema: integrationgenerated.IntegrationMappingSchemaDirectoryGroup},
+        {Schema: integrationgenerated.IntegrationMappingSchemaDirectoryMembership},
+    },
+    IngestHandle: DirectorySync{}.IngestHandle(),
+},
+```
+
+---
+
+## Collecting Directory Data - `operation_directory_sync.go`
+
+The operation struct implements `IngestHandle()`, which wraps the provider API calls and returns one `IngestPayloadSet` per schema.
+
+```go
+func (d DirectorySync) IngestHandle() types.IngestHandler {
+    return providerkit.WithClientRequest(myClient, func(ctx context.Context, req types.OperationRequest, client *sdk.Client) ([]types.IngestPayloadSet, error) {
+        // 1. Resolve installation metadata (e.g. tenant ID) stored at connection time
+        var meta InstallationMetadata
+        if req.Integration != nil {
+            _ = jsonx.UnmarshalIfPresent(req.Integration.InstallationMetadata.Attributes, &meta)
+        }
+
+        // 2. Guard on required metadata fields
+        if meta.TenantID == "" {
+            return nil, ErrTenantIDMissing
+        }
+
+        return d.Run(ctx, client, meta.TenantID)
+    })
+}
+```
+
+`Run` performs the API calls and builds the payload sets:
+
+```go
+func (DirectorySync) Run(ctx context.Context, client *sdk.Client, tenantID string) ([]types.IngestPayloadSet, error) {
+    users, err := listUsers(ctx, client, tenantID)
+    if err != nil {
+        return nil, err
+    }
+
+    accountEnvelopes := make([]types.MappingEnvelope, 0, len(users))
+    for _, user := range users {
+        envelope, err := providerkit.MarshalEnvelope(user.Email, user, ErrPayloadEncode)
+        if err != nil {
+            return nil, err
+        }
+        accountEnvelopes = append(accountEnvelopes, envelope)
+    }
+
+    // ... collect groups and memberships similarly
+
+    return []types.IngestPayloadSet{
+        {Schema: integrationgenerated.IntegrationMappingSchemaDirectoryAccount,    Envelopes: accountEnvelopes},
+        {Schema: integrationgenerated.IntegrationMappingSchemaDirectoryGroup,      Envelopes: groupEnvelopes},
+        {Schema: integrationgenerated.IntegrationMappingSchemaDirectoryMembership, Envelopes: membershipEnvelopes},
+    }, nil
+}
+```
+
+`providerkit.MarshalEnvelope(resourceID, rawProviderObject, errSentinel)` serializes the provider object into a `MappingEnvelope`. The `resourceID` is a stable string that identifies the resource within the provider — for memberships, use the group identifier so membership envelopes can be associated back to their group via the `resource` CEL variable.
+
+---
+
+## Identity Holder Sync
+
+When a user sets `UserInput.PrimaryDirectory = true`, the integration's directory data is used to drive **identity holder sync** — the process that enriches and manages the lifecycle of identity holders in Openlane based on the provider's directory state.
+
+This flag surfaces in `UserInput` and is read downstream by the identity holder sync hooks. No additional code is required in the integration package itself — declaring the field and including it in the `UserInputRegistration` schema is sufficient.
+
+Only one installation per organization should be marked as the primary directory. This is enforced at the application layer.

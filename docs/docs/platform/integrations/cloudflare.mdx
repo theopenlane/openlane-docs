@@ -17,35 +17,46 @@ If your traffic runs through Cloudflare, this integration connects your account 
 
 ## Prerequisites
 
-- Cloudflare account access with permission to create API tokens.
-- A custom API token with read scopes for required account and zone resources.
-- Cloudflare account ID (and optional zone IDs if scoping to specific zones).
+- Cloudflare account access with permission to create API tokens under **Manage Account**.
+- Your Cloudflare account ID (visible in the Cloudflare dashboard under **Account Home** > right sidebar).
 
 ## Step-by-Step Setup
 
 ### Step 1: Create a Cloudflare API Token
 
-1. Sign in to the Cloudflare dashboard.
-2. Create a custom API token for integration use.
-3. Assign read-only scopes for your Cloudflare environment (account settings, Zero Trust policies, and scanning features as needed).
-4. Save the token securely.
+1. In Cloudflare, go to **Manage Account** > **API tokens**.
+2. Click **Create Token** and build a custom token with read scopes for the resources you want Openlane to access.
+3. Save the token value — it is only shown once.
+
+:::warning
+Create an **Account API Token**, not a User API Token. User tokens are tied to an individual account and will break if that user is removed.
+:::
 
 ### Step 2: Connect in Openlane
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Cloudflare**.
-2. Click **Configure** and enter the required fields:
+2. Click **Configure** and enter the credential fields:
 
-| Field | Required | Purpose |
+| Field | Required | Description |
 |---|---|---|
-| `apiToken` | Yes | Authenticates Cloudflare API requests |
-| `accountId` | Yes | Defines account-level scope |
-| `zoneIds` | No | Restricts collection to selected zones |
-| `email` | No | Account email (required for legacy key authentication) |
-| `apiKey` | No | Global API key (legacy email/key authentication path) |
-| `enableScanner` | No | Enables Cloudflare scanning utility if the account is licensed |
-| `scannerLabel` | No | Label recorded with scan jobs for traceability |
+| `apiToken` | Yes | API token scoped to your Cloudflare account and zones |
+| `accountId` | Yes | Cloudflare account ID required for listing account members |
 
-3. Click **Save**.
+3. Optionally configure data ingestion behavior:
+
+#### Configuration
+
+| Setting | Description |
+|---|---|
+| **Filter Expression** | CEL expression evaluated against each record — only records that match are ingested |
+
+Filter expression example:
+
+```
+payload.status = 'ACTIVE'
+```
+
+4. Click **Save & Connect**.
 
 ## Validate Connection
 
@@ -57,13 +68,18 @@ Openlane validates your token and records account and zone scope context. This d
 
 ## Disconnect
 
-To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+To remove this integration:
+1. Navigate to **Organization Settings** > **Integrations**
+1. Select the **Installed** tab
+1. Open the menu on the integration card and select **Disconnect**.
+
+This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
 
 ## Troubleshooting
 
-- **Token verification failed:** verify token value and permissions.
-- **Scope mismatch:** verify `accountId` and selected zone scope are correct.
-- **Permission issues:** expand token read scopes for required resources.
+- **Token verification failed:** verify the token value and that it is an Account API Token, not a User API Token.
+- **Permission errors:** expand token read scopes for the resources Openlane needs to access.
+- **Account ID mismatch:** confirm the account ID matches the account the token was created under.
 
 ## References
 
