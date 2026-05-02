@@ -231424,24 +231424,6 @@ primarySource<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearOwner<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 environmentID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -249769,7 +249751,7 @@ pendingDeletionAt<br />
 <a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
-<p>when will this organization be deleted? usually this is after org has not added a payment method afte n period</p>
+<p>when will this organization be deleted? usually this is after org has not added a payment method after n period</p>
 </td>
 </tr>
 <tr>

@@ -15697,7 +15697,7 @@ ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
-<p>the organization id that owns the object</p>
+<p>the ID of the organization owner of the object</p>
 </td>
 </tr>
 <tr>
@@ -56759,7 +56759,7 @@ pendingDeletionAt<br />
 <a href="scalars#datetime"><code>DateTime</code></a>
 </td>
 <td>
-<p>when will this organization be deleted? usually this is after org has not added a payment method afte n period</p>
+<p>when will this organization be deleted? usually this is after org has not added a payment method after n period</p>
 </td>
 </tr>
 <tr>
