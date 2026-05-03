@@ -40449,6 +40449,24 @@ webhookURLs<br />
 
 </td>
 </tr>
+<tr>
+<td>
+credentials<br />
+<a href="scalars#json"><code>JSON</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+config<br />
+<a href="scalars#json"><code>JSON</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
