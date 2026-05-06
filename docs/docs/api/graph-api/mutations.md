@@ -977,29 +977,6 @@ input<br />
 </tbody>
 </table>
 
-## createBulkCSVEmailBranding
-
-**Type:** [EmailBrandingBulkCreatePayload!](objects#emailbrandingbulkcreatepayload)
-
-Create multiple new emailBrandings via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the emailBranding</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## createBulkCSVEmailTemplate
 
 **Type:** [EmailTemplateBulkCreatePayload!](objects#emailtemplatebulkcreatepayload)
@@ -2361,29 +2338,6 @@ input<br />
 </td>
 <td>
 <p>values of the documentData</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createBulkEmailBranding
-
-**Type:** [EmailBrandingBulkCreatePayload!](objects#emailbrandingbulkcreatepayload)
-
-Create multiple new emailBrandings
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createemailbrandinginput"><code>[CreateEmailBrandingInput!]</code></a>
-</td>
-<td>
-<p>values of the emailBranding</p>
 </td>
 </tr>
 </tbody>
@@ -4012,29 +3966,6 @@ input<br />
 </td>
 <td>
 <p>values of the documentData</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## createEmailBranding
-
-**Type:** [EmailBrandingCreatePayload!](objects#emailbrandingcreatepayload)
-
-Create a new emailBranding
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#createemailbrandinginput"><code>CreateEmailBrandingInput!</code></a>
-</td>
-<td>
-<p>values of the emailBranding</p>
 </td>
 </tr>
 </tbody>
@@ -6739,29 +6670,6 @@ ids<br />
 </tbody>
 </table>
 
-## deleteBulkEmailBranding
-
-**Type:** [EmailBrandingBulkDeletePayload!](objects#emailbrandingbulkdeletepayload)
-
-Delete multiple emailBrandings
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-ids<br />
-<a href="scalars#id"><code>[ID!]!</code></a>
-</td>
-<td>
-<p>IDs of the emailBrandings to delete</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## deleteBulkEmailTemplate
 
 **Type:** [EmailTemplateBulkDeletePayload!](objects#emailtemplatebulkdeletepayload)
@@ -8160,29 +8068,6 @@ id<br />
 </td>
 <td>
 <p>ID of the documentData</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## deleteEmailBranding
-
-**Type:** [EmailBrandingDeletePayload!](objects#emailbrandingdeletepayload)
-
-Delete an existing emailBranding
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the emailBranding</p>
 </td>
 </tr>
 </tbody>
@@ -10734,29 +10619,6 @@ input<br />
 </tbody>
 </table>
 
-## updateBulkCSVEmailBranding
-
-**Type:** [EmailBrandingBulkUpdatePayload!](objects#emailbrandingbulkupdatepayload)
-
-Update multiple existing emailBrandings via file upload
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-input<br />
-<a href="scalars#upload"><code>Upload!</code></a>
-</td>
-<td>
-<p>csv file containing values of the emailBranding, must include ID column</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## updateBulkCSVEmailTemplate
 
 **Type:** [EmailTemplateBulkUpdatePayload!](objects#emailtemplatebulkupdatepayload)
@@ -11837,38 +11699,6 @@ input<br />
 </td>
 <td>
 <p>values to update the documentDatas with</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## updateBulkEmailBranding
-
-**Type:** [EmailBrandingBulkUpdatePayload!](objects#emailbrandingbulkupdatepayload)
-
-Update multiple existing emailBrandings
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-ids<br />
-<a href="scalars#id"><code>[ID!]!</code></a>
-</td>
-<td>
-<p>IDs of the emailBrandings to update</p>
-</td>
-</tr>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#updateemailbrandinginput"><code>UpdateEmailBrandingInput!</code></a>
-</td>
-<td>
-<p>values to update the emailBrandings with</p>
 </td>
 </tr>
 </tbody>
@@ -13825,38 +13655,6 @@ documentDataFileMetadata<br />
 </td>
 <td>
 
-</td>
-</tr>
-</tbody>
-</table>
-
-## updateEmailBranding
-
-**Type:** [EmailBrandingUpdatePayload!](objects#emailbrandingupdatepayload)
-
-Update an existing emailBranding
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the emailBranding</p>
-</td>
-</tr>
-<tr>
-<td>
-input<br />
-<a href="inputObjects#updateemailbrandinginput"><code>UpdateEmailBrandingInput!</code></a>
-</td>
-<td>
-<p>New values for the emailBranding</p>
 </td>
 </tr>
 </tbody>
