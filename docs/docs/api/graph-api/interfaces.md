@@ -35,7 +35,6 @@ Follows the [Relay Global Object Identification Specification](https://relay.dev
 - [DirectorySyncRun](objects#directorysyncrun)
 - [Discussion](objects#discussion)
 - [DocumentData](objects#documentdata)
-- [EmailBranding](objects#emailbranding)
 - [EmailTemplate](objects#emailtemplate)
 - [Entity](objects#entity)
 - [EntityType](objects#entitytype)

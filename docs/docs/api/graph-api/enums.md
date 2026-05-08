@@ -94,6 +94,18 @@ ActionPlanFrequency is enum for the field review_frequency
 
 </td>
 </tr>
+<tr>
+<td>BIENNIALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIENNIALLY</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -774,6 +786,18 @@ CampaignFrequency is enum for the field recurrence_frequency
 </tr>
 <tr>
 <td>NONE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BIENNIALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIENNIALLY</td>
 <td>
 
 </td>
@@ -2521,126 +2545,6 @@ Properties by which DocumentData connections can be ordered.
 </tbody>
 </table>
 
-## EmailBrandingFont
-
-EmailBrandingFont is enum for the field font_family
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>COURIER</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>COURIER_BOLD</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>COURIER_BOLDOBLIQUE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>COURIER_OBLIQUE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>HELVETICA</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>HELVETICA_BOLD</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>HELVETICA_BOLDOBLIQUE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>HELVETICA_OBLIQUE</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>SYMBOL</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>TIMES_BOLD</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>TIMES_BOLDITALIC</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>TIMES_ITALIC</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>TIMES_ROMAN</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingOrderField
-
-Properties by which EmailBranding connections can be ordered.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
-
-<table>
-<thead><tr><th>Value</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>created_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>updated_at</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>name</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## EmailTemplateNotificationTemplateFormat
 
 EmailTemplateNotificationTemplateFormat is enum for the field format
@@ -2880,6 +2784,18 @@ EntityFrequency is enum for the field review_frequency
 </tr>
 <tr>
 <td>NONE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BIENNIALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIENNIALLY</td>
 <td>
 
 </td>
@@ -3282,6 +3198,18 @@ EvidenceFrequency is enum for the field review_frequency
 </tr>
 <tr>
 <td>NONE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BIENNIALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIENNIALLY</td>
 <td>
 
 </td>
@@ -4476,6 +4404,18 @@ InternalPolicyFrequency is enum for the field review_frequency
 </tr>
 <tr>
 <td>NONE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BIENNIALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIENNIALLY</td>
 <td>
 
 </td>
@@ -6226,6 +6166,18 @@ ProcedureFrequency is enum for the field review_frequency
 
 </td>
 </tr>
+<tr>
+<td>BIENNIALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIENNIALLY</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6660,6 +6612,18 @@ RiskFrequency is enum for the field review_frequency
 </tr>
 <tr>
 <td>NONE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>BIENNIALLY</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>TRIENNIALLY</td>
 <td>
 
 </td>

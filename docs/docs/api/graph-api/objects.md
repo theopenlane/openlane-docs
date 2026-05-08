@@ -5520,20 +5520,20 @@ recurrenceInterval<br />
 </tr>
 <tr>
 <td>
-recurrenceCron<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cron schedule to run the campaign in cron 6-field syntax, e.g. 0 0 0 * * *</p>
-</td>
-</tr>
-<tr>
-<td>
 recurrenceTimezone<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>timezone used for the recurrence schedule</p>
+</td>
+</tr>
+<tr>
+<td>
+recurrenceCron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron schedule to run the campaign in cron 6-field syntax, e.g. 0 0 0 * * *</p>
 </td>
 </tr>
 <tr>
@@ -5592,20 +5592,20 @@ lastResentAt<br />
 </tr>
 <tr>
 <td>
-templateID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>the template associated with the campaign</p>
-</td>
-</tr>
-<tr>
-<td>
 entityID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the entity associated with the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+templateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the template associated with the campaign</p>
 </td>
 </tr>
 <tr>
@@ -5628,20 +5628,29 @@ metadata<br />
 </tr>
 <tr>
 <td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>the email branding associated with the campaign</p>
-</td>
-</tr>
-<tr>
-<td>
 emailTemplateID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the email template associated with the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the email integration used for campaign dispatch</p>
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the email branding associated with the campaign</p>
 </td>
 </tr>
 <tr>
@@ -5907,8 +5916,8 @@ template<br />
 </tr>
 <tr>
 <td>
-emailBranding<br />
-<a href="objects#emailbranding"><code>EmailBranding</code></a>
+integration<br />
+<a href="objects#integration"><code>Integration</code></a>
 </td>
 <td>
 
@@ -19960,784 +19969,6 @@ documentData<br />
 </tbody>
 </table>
 
-## EmailBranding
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
-
-- [Node](interfaces#node)
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>friendly name for this email branding configuration</p>
-</td>
-</tr>
-<tr>
-<td>
-brandName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>brand name displayed in templates</p>
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the brand logo for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-primaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>primary brand color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-secondaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>secondary brand color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-backgroundColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-textColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>text color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-buttonColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>button background color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>button text color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-linkColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-fontFamily<br />
-<a href="enums#emailbrandingfont"><code>EmailBrandingFont</code></a>
-</td>
-<td>
-<p>font family for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-isDefault<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether this is the default email branding for the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-owner<br />
-<a href="objects#organization"><code>Organization</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-blockedGroups<br />
-<a href="objects#groupconnection"><code>GroupConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Groups returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Groups returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-editors<br />
-<a href="objects#groupconnection"><code>GroupConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Groups returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Groups returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-viewers<br />
-<a href="objects#groupconnection"><code>GroupConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#grouporder"><code>[GroupOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Groups returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#groupwhereinput"><code>GroupWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Groups returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-campaigns<br />
-<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for Campaigns returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for Campaigns returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-emailTemplates<br />
-<a href="objects#emailtemplateconnection"><code>EmailTemplateConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#emailtemplateorder"><code>[EmailTemplateOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for EmailTemplates returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#emailtemplatewhereinput"><code>EmailTemplateWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for EmailTemplates returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingBulkCreatePayload
-
-Return response for createBulkEmailBranding mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-emailBrandings<br />
-<a href="objects#emailbranding"><code>[EmailBranding!]</code></a>
-</td>
-<td>
-<p>Created emailBrandings</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingBulkDeletePayload
-
-Return response for deleteBulkEmailBranding mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedIDs<br />
-<a href="scalars#id"><code>[ID!]!</code></a>
-</td>
-<td>
-<p>Deleted emailBranding IDs</p>
-</td>
-</tr>
-<tr>
-<td>
-notDeletedIDs<br />
-<a href="scalars#id"><code>[ID!]!</code></a>
-</td>
-<td>
-<p>IDs that were not deleted</p>
-</td>
-</tr>
-<tr>
-<td>
-error<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Error message when the bulk delete did not apply to every requested ID</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingBulkUpdatePayload
-
-Return response for updateBulkEmailBranding mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-emailBrandings<br />
-<a href="objects#emailbranding"><code>[EmailBranding!]</code></a>
-</td>
-<td>
-<p>Updated emailBrandings</p>
-</td>
-</tr>
-<tr>
-<td>
-updatedIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-<p>IDs of the updated emailBrandings</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingConnection
-
-A connection to a list of items.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-edges<br />
-<a href="objects#emailbrandingedge"><code>[EmailBrandingEdge]</code></a>
-</td>
-<td>
-<p>A list of edges.</p>
-</td>
-</tr>
-<tr>
-<td>
-pageInfo<br />
-<a href="objects#pageinfo"><code>PageInfo!</code></a>
-</td>
-<td>
-<p>Information to aid in pagination.</p>
-</td>
-</tr>
-<tr>
-<td>
-totalCount<br />
-<a href="scalars#int"><code>Int!</code></a>
-</td>
-<td>
-<p>Identifies the total count of items in the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingCreatePayload
-
-Return response for createEmailBranding mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-emailBranding<br />
-<a href="objects#emailbranding"><code>EmailBranding!</code></a>
-</td>
-<td>
-<p>Created emailBranding</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingDeletePayload
-
-Return response for deleteEmailBranding mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-deletedID<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>Deleted emailBranding ID</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingEdge
-
-An edge in a connection.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-node<br />
-<a href="objects#emailbranding"><code>EmailBranding</code></a>
-</td>
-<td>
-<p>The item at the end of the edge.</p>
-</td>
-</tr>
-<tr>
-<td>
-cursor<br />
-<a href="scalars#cursor"><code>Cursor!</code></a>
-</td>
-<td>
-<p>A cursor for use in pagination.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingUpdatePayload
-
-Return response for updateEmailBranding mutation
-
-<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-emailBranding<br />
-<a href="objects#emailbranding"><code>EmailBranding!</code></a>
-</td>
-<td>
-<p>Updated emailBranding</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## EmailTemplate
 
 
@@ -20871,7 +20102,7 @@ description<br />
 <tr>
 <td>
 format<br />
-<a href="enums#emailtemplatenotificationtemplateformat"><code>EmailTemplateNotificationTemplateFormat!</code></a>
+<a href="enums#emailtemplatenotificationtemplateformat"><code>EmailTemplateNotificationTemplateFormat</code></a>
 </td>
 <td>
 <p>template format for rendering</p>
@@ -20884,60 +20115,6 @@ locale<br />
 </td>
 <td>
 <p>locale for the template, e.g. en-US</p>
-</td>
-</tr>
-<tr>
-<td>
-subjectTemplate<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>subject template for email notifications</p>
-</td>
-</tr>
-<tr>
-<td>
-preheaderTemplate<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>preheader/preview text template for email notifications</p>
-</td>
-</tr>
-<tr>
-<td>
-bodyTemplate<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>body template for the email</p>
-</td>
-</tr>
-<tr>
-<td>
-textTemplate<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>plain text fallback template for the email</p>
-</td>
-</tr>
-<tr>
-<td>
-jsonconfig<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>jsonschema for template data requirements</p>
-</td>
-</tr>
-<tr>
-<td>
-uischema<br />
-<a href="scalars#map"><code>Map</code></a>
-</td>
-<td>
-<p>uischema for a template builder</p>
 </td>
 </tr>
 <tr>
@@ -20970,7 +20147,7 @@ version<br />
 <tr>
 <td>
 templateContext<br />
-<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext!</code></a>
+<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext</code></a>
 </td>
 <td>
 <p>runtime data context defining available variable keys for this template</p>
@@ -21234,15 +20411,6 @@ where<br />
 </tr>
 </tbody>
 </table>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBranding<br />
-<a href="objects#emailbranding"><code>[EmailBranding!]</code></a>
-</td>
-<td>
 
 </td>
 </tr>
@@ -21577,6 +20745,81 @@ updatedIDs<br />
 </td>
 <td>
 <p>IDs of the updated emailTemplates</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EmailTemplateCatalog
+
+EmailTemplateCatalog contains the available customer-selectable email template types
+from the operation catalog.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+entries<br />
+<a href="objects#emailtemplatecatalogentry"><code>[EmailTemplateCatalogEntry!]!</code></a>
+</td>
+<td>
+<p>Available email template types.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EmailTemplateCatalogEntry
+
+EmailTemplateCatalogEntry describes a single customer-selectable email template
+type from the operation catalog. The key is stored on the EmailTemplate record to
+link it back to the rendering pipeline at send time.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+key<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Stable catalog key stored on the EmailTemplate record to resolve the
+rendering pipeline at send time.</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Human-readable description of the template type.</p>
+</td>
+</tr>
+<tr>
+<td>
+configSchema<br />
+<a href="scalars#map"><code>Map!</code></a>
+</td>
+<td>
+<p>JSON Schema describing the configurable fields for this template type.
+The UI uses this to render a dynamic form; the submitted values become
+the EmailTemplate defaults field.</p>
+</td>
+</tr>
+<tr>
+<td>
+htmlPreview<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Rendered HTML preview of the template with default/example values.</p>
 </td>
 </tr>
 </tbody>
@@ -39110,6 +38353,15 @@ primaryDirectory<br />
 </tr>
 <tr>
 <td>
+campaignEmail<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>designates this email integration as the one to use for campaign dispatch within its owner organization</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -40361,6 +39613,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for EmailTemplates returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -48329,7 +47653,7 @@ description<br />
 <tr>
 <td>
 channel<br />
-<a href="enums#notificationtemplatechannel"><code>NotificationTemplateChannel!</code></a>
+<a href="enums#notificationtemplatechannel"><code>NotificationTemplateChannel</code></a>
 </td>
 <td>
 <p>channel this template is intended for</p>
@@ -50919,78 +50243,6 @@ where<br />
 </td>
 <td>
 <p>Filtering options for APITokens returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandings<br />
-<a href="objects#emailbrandingconnection"><code>EmailBrandingConnection!</code></a>
-</td>
-<td>
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#emailbrandingorder"><code>[EmailBrandingOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for EmailBrandings returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#emailbrandingwhereinput"><code>EmailBrandingWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for EmailBrandings returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -73235,15 +72487,6 @@ customTypeEnums<br />
 </tr>
 <tr>
 <td>
-emailBrandings<br />
-<a href="objects#emailbrandingconnection"><code>EmailBrandingConnection</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 emailTemplates<br />
 <a href="objects#emailtemplateconnection"><code>EmailTemplateConnection</code></a>
 </td>
@@ -81231,6 +80474,79 @@ totalCount<br />
 </tbody>
 </table>
 
+## TemplateContextEntry
+
+TemplateContextEntry describes a registered template data context, including its
+human-readable label, description, and reflected JSON Schema for UI tooling.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+context<br />
+<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext!</code></a>
+</td>
+<td>
+<p>The template context enum value identifying this context.</p>
+</td>
+</tr>
+<tr>
+<td>
+label<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Human-readable name for this context.</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Describes when this context is used.</p>
+</td>
+</tr>
+<tr>
+<td>
+schema<br />
+<a href="scalars#map"><code>Map!</code></a>
+</td>
+<td>
+<p>JSON Schema describing the template data shape for this context.
+For UI tooling only — not used for runtime validation.</p>
+</td>
+</tr>
+<tr>
+<td>
+reservedFields<br />
+<a href="scalars#string"><code>[String!]!</code></a>
+</td>
+<td>
+<p>Top-level template variable names injected by the system at render time.
+These are available in templates but are not user-supplied inputs. The UI
+should display them as read-only reference, not as input controls.</p>
+</td>
+</tr>
+<tr>
+<td>
+variables<br />
+<a href="objects#templatevariable"><code>[TemplateVariable!]!</code></a>
+</td>
+<td>
+<p>System-provided template variables available in this context, with
+human-readable descriptions for the UI variable picker. Each entry
+includes the variable name (as used in &#123;&#123; .name &#125;&#125; syntax) and a
+description of what the variable contains.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## TemplateCreatePayload
 
 Return response for createTemplate mutation
@@ -81319,6 +80635,37 @@ template<br />
 </td>
 <td>
 <p>Updated template</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## TemplateVariable
+
+TemplateVariable describes a single system-provided template variable
+available for use in email templates.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>The variable key as used in templates (e.g. &quot;companyName&quot; for &#123;&#123; .companyName &#125;&#125;).</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Human-readable description of what the variable contains.</p>
 </td>
 </tr>
 </tbody>

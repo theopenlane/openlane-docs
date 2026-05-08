@@ -2684,156 +2684,6 @@ where<br />
 </tbody>
 </table>
 
-## emailBranding
-
-**Type:** [EmailBranding!](objects#emailbranding)
-
-Look up emailBranding by ID
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID!</code></a>
-</td>
-<td>
-<p>ID of the emailBranding</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## emailBrandings
-
-**Type:** [EmailBrandingConnection!](objects#emailbrandingconnection)
-
-
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-orderBy<br />
-<a href="inputObjects#emailbrandingorder"><code>[EmailBrandingOrder!]</code></a>
-</td>
-<td>
-<p>Ordering options for EmailBrandings returned from the connection.</p>
-</td>
-</tr>
-<tr>
-<td>
-where<br />
-<a href="inputObjects#emailbrandingwhereinput"><code>EmailBrandingWhereInput</code></a>
-</td>
-<td>
-<p>Filtering options for EmailBrandings returned from the connection.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## emailBrandingSearch
-
-**Type:** [EmailBrandingConnection](objects#emailbrandingconnection)
-
-Search across EmailBranding objects
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-query<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>Query string to search across objects</p>
-</td>
-</tr>
-<tr>
-<td>
-after<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come after the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-first<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the first <em>n</em> elements from the list.</p>
-</td>
-</tr>
-<tr>
-<td>
-before<br />
-<a href="scalars#cursor"><code>Cursor</code></a>
-</td>
-<td>
-<p>Returns the elements in the list that come before the specified cursor.</p>
-</td>
-</tr>
-<tr>
-<td>
-last<br />
-<a href="scalars#int"><code>Int</code></a>
-</td>
-<td>
-<p>Returns the last <em>n</em> elements from the list.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## emailTemplate
 
 **Type:** [EmailTemplate!](objects#emailtemplate)
@@ -2856,6 +2706,15 @@ id<br />
 </tr>
 </tbody>
 </table>
+
+## emailTemplateCatalog
+
+**Type:** [EmailTemplateCatalog!](objects#emailtemplatecatalog)
+
+Returns all customer-selectable email template types from the operation catalog.
+Each entry describes a template layout the customer can choose when creating an
+email template, including the JSON schema for its configurable fields and a
+rendered HTML preview of the template with default values.
 
 ## emailTemplates
 
@@ -9328,6 +9187,13 @@ id<br />
 </tr>
 </tbody>
 </table>
+
+## templateContexts
+
+**Type:** [[TemplateContextEntry!]!](objects#templatecontextentry)
+
+Returns all registered template data contexts with their JSON schemas.
+Used by UI tooling to populate the variable picker when composing email templates.
 
 ## templates
 
