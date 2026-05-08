@@ -19705,141 +19705,6 @@ lastResentAtNotNil<br />
 </tr>
 <tr>
 <td>
-templateID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>template_id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-templateIDNEQ<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDNotIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDGT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDGTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDLT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDLTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDContains<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDHasPrefix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDHasSuffix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDEqualFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-templateIDContainsFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 entityID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -19967,6 +19832,141 @@ entityIDEqualFold<br />
 <tr>
 <td>
 entityIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>template_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+templateIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -20110,141 +20110,6 @@ assessmentIDContainsFold<br />
 </tr>
 <tr>
 <td>
-emailBrandingID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>email_branding_id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNEQ<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNotIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDGT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDGTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDLT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDLTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDContains<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDHasPrefix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDHasSuffix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDEqualFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDContainsFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 emailTemplateID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -20373,6 +20238,276 @@ emailTemplateIDEqualFold<br />
 <td>
 emailTemplateIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>integration_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+integrationIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>email_branding_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDNEQ<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDNotIn<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDGT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDGTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDLT<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDLTE<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDContains<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDHasPrefix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDHasSuffix<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDEqualFold<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingIDContainsFold<br />
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 
@@ -20524,17 +20659,17 @@ hasTemplateWith<br />
 </tr>
 <tr>
 <td>
-hasEmailBranding<br />
+hasIntegration<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>email_branding edge predicates</p>
+<p>integration edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasEmailBrandingWith<br />
-<a href="inputObjects#emailbrandingwhereinput"><code>[EmailBrandingWhereInput!]</code></a>
+hasIntegrationWith<br />
+<a href="inputObjects#integrationwhereinput"><code>[IntegrationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -35367,20 +35502,20 @@ recurrenceInterval<br />
 </tr>
 <tr>
 <td>
-recurrenceCron<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cron schedule to run the campaign in cron 6-field syntax, e.g. 0 0 0 * * *</p>
-</td>
-</tr>
-<tr>
-<td>
 recurrenceTimezone<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>timezone used for the recurrence schedule</p>
+</td>
+</tr>
+<tr>
+<td>
+recurrenceCron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron schedule to run the campaign in cron 6-field syntax, e.g. 0 0 0 * * *</p>
 </td>
 </tr>
 <tr>
@@ -35444,6 +35579,15 @@ metadata<br />
 </td>
 <td>
 <p>additional metadata about the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the email branding associated with the campaign</p>
 </td>
 </tr>
 <tr>
@@ -35520,7 +35664,7 @@ templateID<br />
 </tr>
 <tr>
 <td>
-emailBrandingID<br />
+integrationID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -38827,190 +38971,6 @@ fileIDs<br />
 </tbody>
 </table>
 
-## CreateEmailBrandingInput
-
-CreateEmailBrandingInput is used for create EmailBranding object.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String!</code></a>
-</td>
-<td>
-<p>friendly name for this email branding configuration</p>
-</td>
-</tr>
-<tr>
-<td>
-brandName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>brand name displayed in templates</p>
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the brand logo for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-primaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>primary brand color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-secondaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>secondary brand color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-backgroundColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-textColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>text color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-buttonColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>button background color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>button text color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-linkColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-fontFamily<br />
-<a href="enums#emailbrandingfont"><code>EmailBrandingFont</code></a>
-</td>
-<td>
-<p>font family for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-isDefault<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether this is the default email branding for the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-blockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-editorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-viewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-campaignIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailTemplateIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## CreateEmailTemplateInput
 
 CreateEmailTemplateInput is used for create EmailTemplate object.
@@ -39177,7 +39137,7 @@ version<br />
 <tr>
 <td>
 templateContext<br />
-<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext!</code></a>
+<a href="enums#emailtemplatetemplatecontext"><code>EmailTemplateTemplateContext</code></a>
 </td>
 <td>
 <p>runtime data context defining available variable keys for this template</p>
@@ -39222,15 +39182,6 @@ editorIDs<br />
 <tr>
 <td>
 viewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -44997,7 +44948,7 @@ description<br />
 <tr>
 <td>
 channel<br />
-<a href="enums#notificationtemplatechannel"><code>NotificationTemplateChannel!</code></a>
+<a href="enums#notificationtemplatechannel"><code>NotificationTemplateChannel</code></a>
 </td>
 <td>
 <p>channel this template is intended for</p>
@@ -45572,15 +45523,6 @@ personalAccessTokenIDs<br />
 <tr>
 <td>
 apiTokenIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-emailBrandingIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -76014,2290 +75956,6 @@ tagsHas<br />
 </tbody>
 </table>
 
-## EmailBrandingOrder
-
-Ordering options for EmailBranding connections
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-direction<br />
-<a href="enums#orderdirection"><code>OrderDirection!</code></a>
-</td>
-<td>
-<p>The ordering direction.</p>
-</td>
-</tr>
-<tr>
-<td>
-field<br />
-<a href="enums#emailbrandingorderfield"><code>EmailBrandingOrderField!</code></a>
-</td>
-<td>
-<p>The field by which to order EmailBrandings.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## EmailBrandingWhereInput
-
-EmailBrandingWhereInput is used for filtering EmailBranding objects.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-not<br />
-<a href="inputObjects#emailbrandingwhereinput"><code>EmailBrandingWhereInput</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-and<br />
-<a href="inputObjects#emailbrandingwhereinput"><code>[EmailBrandingWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-or<br />
-<a href="inputObjects#emailbrandingwhereinput"><code>[EmailBrandingWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-id<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-idNEQ<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-idIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-idNotIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-idGT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-idGTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-idLT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-idLTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-idEqualFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-idContainsFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>created_at field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-createdAtNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAtIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAtNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAtGT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAtGTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAtLT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAtLTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAtIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdAtNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAt<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-<p>updated_at field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-updatedAtNEQ<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAtIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAtNotIn<br />
-<a href="scalars#time"><code>[Time!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAtGT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAtGTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAtLT<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAtLTE<br />
-<a href="scalars#time"><code>Time</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAtIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedAtNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>created_by field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-createdByNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-createdByContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedBy<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>updated_by field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-updatedByNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-updatedByContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>owner_id field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-ownerIDNEQ<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDNotIn<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDGT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDGTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDLT<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDLTE<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDContains<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDHasPrefix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDHasSuffix<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDEqualFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-ownerIDContainsFold<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>name field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-nameNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-nameContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>brand_name field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-brandNameNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-brandNameContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>logo_remote_url field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURLContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>primary_color field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-primaryColorNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColorContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>secondary_color field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColorContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background_color field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColorContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>text_color field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-textColorNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColorContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>button_color field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-buttonColorNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColorContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>button_text_color field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColorContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link_color field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-linkColorNEQ<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorNotIn<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorGT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorGTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorLT<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorLTE<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorContains<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorHasPrefix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorHasSuffix<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorEqualFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColorContainsFold<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-fontFamily<br />
-<a href="enums#emailbrandingfont"><code>EmailBrandingFont</code></a>
-</td>
-<td>
-<p>font_family field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-fontFamilyNEQ<br />
-<a href="enums#emailbrandingfont"><code>EmailBrandingFont</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-fontFamilyIn<br />
-<a href="enums#emailbrandingfont"><code>[EmailBrandingFont!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-fontFamilyNotIn<br />
-<a href="enums#emailbrandingfont"><code>[EmailBrandingFont!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-fontFamilyIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-fontFamilyNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isDefault<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>is_default field predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-isDefaultNEQ<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isDefaultIsNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isDefaultNotNil<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasOwner<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>owner edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasOwnerWith<br />
-<a href="inputObjects#organizationwhereinput"><code>[OrganizationWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasBlockedGroups<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>blocked_groups edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasBlockedGroupsWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>editors edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasEditorsWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasViewersWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasCampaigns<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>campaigns edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasCampaignsWith<br />
-<a href="inputObjects#campaignwhereinput"><code>[CampaignWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasEmailTemplates<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>email_templates edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasEmailTemplatesWith<br />
-<a href="inputObjects#emailtemplatewhereinput"><code>[EmailTemplateWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-tagsHas<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>Filter for tagsHas to contain a specific value</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ## EmailTemplateOrder
 
 Ordering options for EmailTemplate connections
@@ -79888,6 +77546,24 @@ formatNotIn<br />
 </tr>
 <tr>
 <td>
+formatIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+formatNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 locale<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -80671,6 +78347,24 @@ templateContextNotIn<br />
 </tr>
 <tr>
 <td>
+templateContextIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateContextNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 integrationID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -81141,24 +78835,6 @@ hasViewers<br />
 <td>
 hasViewersWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasEmailBranding<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>email_branding edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasEmailBrandingWith<br />
-<a href="inputObjects#emailbrandingwhereinput"><code>[EmailBrandingWhereInput!]</code></a>
 </td>
 <td>
 
@@ -119266,6 +116942,24 @@ primaryDirectoryNEQ<br />
 </tr>
 <tr>
 <td>
+campaignEmail<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>campaign_email field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+campaignEmailNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -119637,6 +117331,24 @@ hasEmailTemplates<br />
 <td>
 hasEmailTemplatesWith<br />
 <a href="inputObjects#emailtemplatewhereinput"><code>[EmailTemplateWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasCampaigns<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>campaigns edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignsWith<br />
+<a href="inputObjects#campaignwhereinput"><code>[CampaignWhereInput!]</code></a>
 </td>
 <td>
 
@@ -141809,6 +139521,24 @@ channelNotIn<br />
 </tr>
 <tr>
 <td>
+channelIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+channelNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 format<br />
 <a href="enums#notificationtemplatenotificationtemplateformat"><code>NotificationTemplateNotificationTemplateFormat</code></a>
 </td>
@@ -148192,24 +145922,6 @@ hasAPITokens<br />
 <td>
 hasAPITokensWith<br />
 <a href="inputObjects#apitokenwhereinput"><code>[APITokenWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasEmailBrandings<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>email_brandings edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasEmailBrandingsWith<br />
-<a href="inputObjects#emailbrandingwhereinput"><code>[EmailBrandingWhereInput!]</code></a>
 </td>
 <td>
 
@@ -226384,24 +224096,6 @@ clearRecurrenceInterval<br />
 </tr>
 <tr>
 <td>
-recurrenceCron<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>cron schedule to run the campaign in cron 6-field syntax, e.g. 0 0 0 * * *</p>
-</td>
-</tr>
-<tr>
-<td>
-clearRecurrenceCron<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 recurrenceTimezone<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -226412,6 +224106,24 @@ recurrenceTimezone<br />
 <tr>
 <td>
 clearRecurrenceTimezone<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+recurrenceCron<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>cron schedule to run the campaign in cron 6-field syntax, e.g. 0 0 0 * * *</p>
+</td>
+</tr>
+<tr>
+<td>
+clearRecurrenceCron<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -226538,6 +224250,24 @@ metadata<br />
 <tr>
 <td>
 clearMetadata<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailBrandingID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the email branding associated with the campaign</p>
+</td>
+</tr>
+<tr>
+<td>
+clearEmailBrandingID<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -226699,7 +224429,7 @@ clearTemplate<br />
 </tr>
 <tr>
 <td>
-emailBrandingID<br />
+integrationID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -226708,7 +224438,7 @@ emailBrandingID<br />
 </tr>
 <tr>
 <td>
-clearEmailBranding<br />
+clearIntegration<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -233243,388 +230973,6 @@ clearFiles<br />
 </tbody>
 </table>
 
-## UpdateEmailBrandingInput
-
-UpdateEmailBrandingInput is used for update EmailBranding object.
-Input was generated by ent.
-
-<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
-
-<table>
-<thead><tr><th>Name</th><th>Description</th></tr></thead>
-<tbody>
-<tr>
-<td>
-tags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-<p>tags associated with the object</p>
-</td>
-</tr>
-<tr>
-<td>
-appendTags<br />
-<a href="scalars#string"><code>[String!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearTags<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-name<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>friendly name for this email branding configuration</p>
-</td>
-</tr>
-<tr>
-<td>
-brandName<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>brand name displayed in templates</p>
-</td>
-</tr>
-<tr>
-<td>
-clearBrandName<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-logoRemoteURL<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>URL of the brand logo for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearLogoRemoteURL<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-primaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>primary brand color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearPrimaryColor<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-secondaryColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>secondary brand color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearSecondaryColor<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-backgroundColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>background color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearBackgroundColor<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-textColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>text color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearTextColor<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>button background color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearButtonColor<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-buttonTextColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>button text color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearButtonTextColor<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-linkColor<br />
-<a href="scalars#string"><code>String</code></a>
-</td>
-<td>
-<p>link color for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearLinkColor<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-fontFamily<br />
-<a href="enums#emailbrandingfont"><code>EmailBrandingFont</code></a>
-</td>
-<td>
-<p>font family for emails</p>
-</td>
-</tr>
-<tr>
-<td>
-clearFontFamily<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-isDefault<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>whether this is the default email branding for the organization</p>
-</td>
-</tr>
-<tr>
-<td>
-clearIsDefault<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addBlockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeBlockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearBlockedGroups<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addEditorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeEditorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addCampaignIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeCampaignIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearCampaigns<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addEmailTemplateIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeEmailTemplateIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEmailTemplates<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## UpdateEmailTemplateInput
 
 UpdateEmailTemplateInput is used for update EmailTemplate object.
@@ -233732,6 +231080,15 @@ format<br />
 </td>
 <td>
 <p>template format for rendering</p>
+</td>
+</tr>
+<tr>
+<td>
+clearFormat<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -233898,6 +231255,15 @@ templateContext<br />
 </tr>
 <tr>
 <td>
+clearTemplateContext<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 defaults<br />
 <a href="scalars#map"><code>Map</code></a>
 </td>
@@ -233989,33 +231355,6 @@ removeViewerIDs<br />
 <tr>
 <td>
 clearViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addEmailBrandingIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeEmailBrandingIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEmailBranding<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -246175,6 +243514,15 @@ channel<br />
 </tr>
 <tr>
 <td>
+clearChannel<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 format<br />
 <a href="enums#notificationtemplatenotificationtemplateformat"><code>NotificationTemplateNotificationTemplateFormat</code></a>
 </td>
@@ -247260,33 +244608,6 @@ removeAPITokenIDs<br />
 <tr>
 <td>
 clearAPITokens<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addEmailBrandingIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeEmailBrandingIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEmailBrandings<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
