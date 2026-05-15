@@ -2301,6 +2301,33 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+systemOwned<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>indicates if the record is owned by the the openlane system and not by an organization</p>
+</td>
+</tr>
+<tr>
+<td>
+internalNotes<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>internal notes about the object creation, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+systemInternalID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
 name<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -2875,6 +2902,15 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+accessURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3142,8 +3178,17 @@ entityID<br />
 </tr>
 <tr>
 <td>
+displayName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>display name for the submitted assessment response</p>
+</td>
+</tr>
+<tr>
+<td>
 email<br />
-<a href="scalars#string"><code>String!</code></a>
+<a href="scalars#string"><code>String</code></a>
 </td>
 <td>
 <p>the email address of the recipient</p>
@@ -21499,6 +21544,15 @@ vendorMetadata<br />
 </td>
 <td>
 <p>vendor metadata such as additional enrichment info, company size, public, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+logoRemoteURL<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>URL of the logo for the entity</p>
 </td>
 </tr>
 <tr>
@@ -79944,6 +79998,15 @@ trustCenterID<br />
 </td>
 <td>
 <p>the id of the trust center this template is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+transformConfiguration<br />
+<a href="scalars#templateprojectionconfig"><code>TemplateProjectionConfig</code></a>
+</td>
+<td>
+<p>configuration for converting a submitted assesment into records for the organization</p>
 </td>
 </tr>
 <tr>
