@@ -120,6 +120,10 @@ This scalar is used to track SSO verification times for organizations in the con
 
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
 
+## TemplateProjectionConfig
+
+TemplateProjectionConfig describes how submitted template document data is projected into typed records.
+
 ## TestingProcedures
 
 The TestingProcedures scalar type that represents steps to take to test a control; they can come directly from the control source or pulled from external sources
