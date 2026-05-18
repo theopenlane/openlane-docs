@@ -401,6 +401,12 @@ Properties by which AssessmentResponse connections can be ordered.
 </td>
 </tr>
 <tr>
+<td>display_name</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>email</td>
 <td>
 
@@ -7860,6 +7866,12 @@ TemplateTemplateKind is enum for the field kind
 </tr>
 <tr>
 <td>TRUSTCENTER_NDA</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>EXTERNAL_INTAKE</td>
 <td>
 
 </td>
