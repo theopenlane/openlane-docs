@@ -6079,6 +6079,17 @@ ownerID<br />
 <p>ID of the owner organization</p>
 </td>
 </tr>
+<tr>
+<td>
+managementMode<br />
+<a href="enums#internalpolicydocumentmanagementmode"><code>InternalPolicyDocumentManagementMode</code></a>
+</td>
+<td>
+<p>How the uploaded policy should be managed: parsed and edited in Openlane
+(OPENLANE_MANAGED, default) or kept as an external reference file viewed
+in Openlane (EXTERNAL_REFERENCE, e.g. Word documents managed in Microsoft Word)</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6118,6 +6129,17 @@ ownerID<br />
 </td>
 <td>
 <p>ID of the owner organization</p>
+</td>
+</tr>
+<tr>
+<td>
+managementMode<br />
+<a href="enums#proceduredocumentmanagementmode"><code>ProcedureDocumentManagementMode</code></a>
+</td>
+<td>
+<p>How the uploaded procedure should be managed: parsed and edited in Openlane
+(OPENLANE_MANAGED, default) or kept as an external reference file viewed
+in Openlane (EXTERNAL_REFERENCE, e.g. Word documents managed in Microsoft Word)</p>
 </td>
 </tr>
 </tbody>
