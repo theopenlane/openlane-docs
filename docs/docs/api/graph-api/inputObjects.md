@@ -922,6 +922,60 @@ statusNotNil<br />
 </tr>
 <tr>
 <td>
+managementMode<br />
+<a href="enums#actionplandocumentmanagementmode"><code>ActionPlanDocumentManagementMode</code></a>
+</td>
+<td>
+<p>management_mode field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+managementModeNEQ<br />
+<a href="enums#actionplandocumentmanagementmode"><code>ActionPlanDocumentManagementMode</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeIn<br />
+<a href="enums#actionplandocumentmanagementmode"><code>[ActionPlanDocumentManagementMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeNotIn<br />
+<a href="enums#actionplandocumentmanagementmode"><code>[ActionPlanDocumentManagementMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -34474,6 +34528,15 @@ status<br />
 </tr>
 <tr>
 <td>
+managementMode<br />
+<a href="enums#actionplandocumentmanagementmode"><code>ActionPlanDocumentManagementMode</code></a>
+</td>
+<td>
+<p>how the action_plan is managed: parsed and edited in Openlane (OPENLANE_MANAGED) or kept as an external reference file viewed in Openlane (EXTERNAL_REFERENCE)</p>
+</td>
+</tr>
+<tr>
+<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -43596,6 +43659,15 @@ status<br />
 </tr>
 <tr>
 <td>
+managementMode<br />
+<a href="enums#internalpolicydocumentmanagementmode"><code>InternalPolicyDocumentManagementMode</code></a>
+</td>
+<td>
+<p>how the policy is managed: parsed and edited in Openlane (OPENLANE_MANAGED) or kept as an external reference file viewed in Openlane (EXTERNAL_REFERENCE)</p>
+</td>
+</tr>
+<tr>
+<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -47842,6 +47914,15 @@ status<br />
 </td>
 <td>
 <p>status of the procedure, e.g. draft, published, archived, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+managementMode<br />
+<a href="enums#proceduredocumentmanagementmode"><code>ProcedureDocumentManagementMode</code></a>
+</td>
+<td>
+<p>how the procedure is managed: parsed and edited in Openlane (OPENLANE_MANAGED) or kept as an external reference file viewed in Openlane (EXTERNAL_REFERENCE)</p>
 </td>
 </tr>
 <tr>
@@ -119631,6 +119712,60 @@ statusNotNil<br />
 </tr>
 <tr>
 <td>
+managementMode<br />
+<a href="enums#internalpolicydocumentmanagementmode"><code>InternalPolicyDocumentManagementMode</code></a>
+</td>
+<td>
+<p>management_mode field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+managementModeNEQ<br />
+<a href="enums#internalpolicydocumentmanagementmode"><code>InternalPolicyDocumentManagementMode</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeIn<br />
+<a href="enums#internalpolicydocumentmanagementmode"><code>[InternalPolicyDocumentManagementMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeNotIn<br />
+<a href="enums#internalpolicydocumentmanagementmode"><code>[InternalPolicyDocumentManagementMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -159865,6 +160000,60 @@ statusIsNil<br />
 <tr>
 <td>
 statusNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementMode<br />
+<a href="enums#proceduredocumentmanagementmode"><code>ProcedureDocumentManagementMode</code></a>
+</td>
+<td>
+<p>management_mode field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+managementModeNEQ<br />
+<a href="enums#proceduredocumentmanagementmode"><code>ProcedureDocumentManagementMode</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeIn<br />
+<a href="enums#proceduredocumentmanagementmode"><code>[ProcedureDocumentManagementMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeNotIn<br />
+<a href="enums#proceduredocumentmanagementmode"><code>[ProcedureDocumentManagementMode!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementModeNotNil<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -222019,6 +222208,24 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
+managementMode<br />
+<a href="enums#actionplandocumentmanagementmode"><code>ActionPlanDocumentManagementMode</code></a>
+</td>
+<td>
+<p>how the action_plan is managed: parsed and edited in Openlane (OPENLANE_MANAGED) or kept as an external reference file viewed in Openlane (EXTERNAL_REFERENCE)</p>
+</td>
+</tr>
+<tr>
+<td>
+clearManagementMode<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -240861,6 +241068,24 @@ clearStatus<br />
 </tr>
 <tr>
 <td>
+managementMode<br />
+<a href="enums#internalpolicydocumentmanagementmode"><code>InternalPolicyDocumentManagementMode</code></a>
+</td>
+<td>
+<p>how the policy is managed: parsed and edited in Openlane (OPENLANE_MANAGED) or kept as an external reference file viewed in Openlane (EXTERNAL_REFERENCE)</p>
+</td>
+</tr>
+<tr>
+<td>
+clearManagementMode<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 details<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -249902,6 +250127,24 @@ status<br />
 <tr>
 <td>
 clearStatus<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+managementMode<br />
+<a href="enums#proceduredocumentmanagementmode"><code>ProcedureDocumentManagementMode</code></a>
+</td>
+<td>
+<p>how the procedure is managed: parsed and edited in Openlane (OPENLANE_MANAGED) or kept as an external reference file viewed in Openlane (EXTERNAL_REFERENCE)</p>
+</td>
+</tr>
+<tr>
+<td>
+clearManagementMode<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
