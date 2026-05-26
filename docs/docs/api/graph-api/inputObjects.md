@@ -45855,11 +45855,74 @@ avatarUpdatedAt<br />
 </tr>
 <tr>
 <td>
-dedicatedDb<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
+actionPlanCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
-<p>Whether the organization has a dedicated database</p>
+
+</td>
+</tr>
+<tr>
+<td>
+apiTokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assessmentCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assetCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargetCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+checkResultCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
 </td>
 </tr>
 <tr>
@@ -45891,6 +45954,105 @@ controlObjectiveCreatorIDs<br />
 </tr>
 <tr>
 <td>
+customDomainCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+customTypeEnumCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryAccountCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryGroupCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directoryMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+directorySyncRunCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+discussionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+documentDataCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityTypeCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 evidenceCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -45900,7 +46062,7 @@ evidenceCreatorIDs<br />
 </tr>
 <tr>
 <td>
-assetCreatorIDs<br />
+fileCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -45918,7 +46080,7 @@ findingCreatorIDs<br />
 </tr>
 <tr>
 <td>
-vulnerabilityCreatorIDs<br />
+findingControlCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -45936,7 +46098,88 @@ groupCreatorIDs<br />
 </tr>
 <tr>
 <td>
+groupMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+groupSettingCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hushCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+identityHolderCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 internalPolicyCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+inviteCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerRegistrationTokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobRunnerTokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+jobTemplateCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -45963,6 +46206,42 @@ narrativeCreatorIDs<br />
 </tr>
 <tr>
 <td>
+noteCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notificationTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orgMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+platformCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 procedureCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -45981,6 +46260,33 @@ programCreatorIDs<br />
 </tr>
 <tr>
 <td>
+programMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+remediationCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 riskCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -45990,7 +46296,7 @@ riskCreatorIDs<br />
 </tr>
 <tr>
 <td>
-identityHolderCreatorIDs<br />
+scanCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -46008,6 +46314,24 @@ scheduledJobCreatorIDs<br />
 </tr>
 <tr>
 <td>
+scheduledJobRunCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+slaDefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 standardCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -46017,7 +46341,7 @@ standardCreatorIDs<br />
 </tr>
 <tr>
 <td>
-templateCreatorIDs<br />
+subcontrolCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -46035,7 +46359,97 @@ subprocessorCreatorIDs<br />
 </tr>
 <tr>
 <td>
+subscriberCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+systemDetailCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+tagDefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+taskCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+templateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterComplianceCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 trustCenterDocCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterEntityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterFaqCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterNdaRequestCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -46053,7 +46467,115 @@ trustCenterSubprocessorCreatorIDs<br />
 </tr>
 <tr>
 <td>
-actionPlanCreatorIDs<br />
+trustCenterWatermarkConfigCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorRiskScoreCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vendorScoringConfigCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowDefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignsManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+complianceManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+groupManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+policiesManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+registryManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+riskManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowsManagerIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -52189,7 +52711,7 @@ transformConfiguration<br />
 <a href="scalars#templateprojectionconfig"><code>TemplateProjectionConfig</code></a>
 </td>
 <td>
-<p>configuration for converting a submitted assesment into records for the organization</p>
+<p>configuration for converting a submitted assessment into records for the organization</p>
 </td>
 </tr>
 <tr>
@@ -146352,6 +146874,150 @@ avatarUpdatedAtNotNil<br />
 </tr>
 <tr>
 <td>
+hasActionPlanCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>action_plan_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasActionPlanCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAPITokenCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>api_token_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAPITokenCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAssessmentCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>assessment_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAssessmentCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasAssetCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>asset_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasAssetCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>campaign_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignTargetCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>campaign_target_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignTargetCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasCheckResultCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>check_result_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCheckResultCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasContactCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>contact_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasContactCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasControlCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146406,6 +147072,204 @@ hasControlObjectiveCreatorsWith<br />
 </tr>
 <tr>
 <td>
+hasCustomDomainCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>custom_domain_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCustomDomainCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasCustomTypeEnumCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>custom_type_enum_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCustomTypeEnumCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryAccountCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_account_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryAccountCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryGroupCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_group_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryGroupCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryMembershipCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_membership_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectoryMembershipCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDirectorySyncRunCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>directory_sync_run_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDirectorySyncRunCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDiscussionCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>discussion_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDiscussionCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasDocumentDataCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>document_data_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasDocumentDataCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEmailTemplateCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>email_template_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEmailTemplateCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEntityCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>entity_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEntityCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEntityTypeCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>entity_type_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEntityTypeCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasEvidenceCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146424,16 +147288,16 @@ hasEvidenceCreatorsWith<br />
 </tr>
 <tr>
 <td>
-hasAssetCreators<br />
+hasFileCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>asset_creators edge predicates</p>
+<p>file_creators edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasAssetCreatorsWith<br />
+hasFileCreatorsWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -146460,16 +147324,16 @@ hasFindingCreatorsWith<br />
 </tr>
 <tr>
 <td>
-hasVulnerabilityCreators<br />
+hasFindingControlCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>vulnerability_creators edge predicates</p>
+<p>finding_control_creators edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasVulnerabilityCreatorsWith<br />
+hasFindingControlCreatorsWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -146496,6 +147360,78 @@ hasGroupCreatorsWith<br />
 </tr>
 <tr>
 <td>
+hasGroupMembershipCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>group_membership_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasGroupMembershipCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasGroupSettingCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>group_setting_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasGroupSettingCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasHushCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>hush_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasHushCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolderCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>identity_holder_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasIdentityHolderCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasInternalPolicyCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146506,6 +147442,96 @@ hasInternalPolicyCreators<br />
 <tr>
 <td>
 hasInternalPolicyCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasInviteCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>invite_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasInviteCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasJobRunnerCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>job_runner_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasJobRunnerCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasJobRunnerRegistrationTokenCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>job_runner_registration_token_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasJobRunnerRegistrationTokenCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasJobRunnerTokenCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>job_runner_token_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasJobRunnerTokenCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasJobTemplateCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>job_template_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasJobTemplateCreatorsWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -146550,6 +147576,78 @@ hasNarrativeCreatorsWith<br />
 </tr>
 <tr>
 <td>
+hasNoteCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>note_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasNoteCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasNotificationTemplateCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>notification_template_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasNotificationTemplateCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasOrgMembershipCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>org_membership_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasOrgMembershipCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPlatformCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>platform_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasPlatformCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasProcedureCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146586,6 +147684,60 @@ hasProgramCreatorsWith<br />
 </tr>
 <tr>
 <td>
+hasProgramMembershipCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>program_membership_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasProgramMembershipCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>remediation_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasReviewCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>review_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasReviewCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasRiskCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146604,16 +147756,16 @@ hasRiskCreatorsWith<br />
 </tr>
 <tr>
 <td>
-hasIdentityHolderCreators<br />
+hasScanCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>identity_holder_creators edge predicates</p>
+<p>scan_creators edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasIdentityHolderCreatorsWith<br />
+hasScanCreatorsWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -146640,6 +147792,42 @@ hasScheduledJobCreatorsWith<br />
 </tr>
 <tr>
 <td>
+hasScheduledJobRunCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>scheduled_job_run_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasScheduledJobRunCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSLADefinitionCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>sla_definition_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSLADefinitionCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasStandardCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146658,16 +147846,16 @@ hasStandardCreatorsWith<br />
 </tr>
 <tr>
 <td>
-hasTemplateCreators<br />
+hasSubcontrolCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>template_creators edge predicates</p>
+<p>subcontrol_creators edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasTemplateCreatorsWith<br />
+hasSubcontrolCreatorsWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -146694,6 +147882,132 @@ hasSubprocessorCreatorsWith<br />
 </tr>
 <tr>
 <td>
+hasSubscriberCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subscriber_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubscriberCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSystemDetailCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>system_detail_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSystemDetailCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTagDefinitionCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>tag_definition_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTagDefinitionCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTaskCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>task_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTaskCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTemplateCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>template_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTemplateCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterComplianceCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_compliance_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterComplianceCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasTrustCenterDocCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -146704,6 +148018,60 @@ hasTrustCenterDocCreators<br />
 <tr>
 <td>
 hasTrustCenterDocCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterEntityCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_entity_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterEntityCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterFaqCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_faq_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterFaqCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterNdaRequestCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_nda_request_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterNdaRequestCreatorsWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -146730,16 +148098,232 @@ hasTrustCenterSubprocessorCreatorsWith<br />
 </tr>
 <tr>
 <td>
-hasActionPlanCreators<br />
+hasTrustCenterWatermarkConfigCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>action_plan_creators edge predicates</p>
+<p>trust_center_watermark_config_creators edge predicates</p>
 </td>
 </tr>
 <tr>
 <td>
-hasActionPlanCreatorsWith<br />
+hasTrustCenterWatermarkConfigCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasVendorRiskScoreCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vendor_risk_score_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVendorRiskScoreCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasVendorScoringConfigCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vendor_scoring_config_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVendorScoringConfigCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasVulnerabilityCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>vulnerability_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasVulnerabilityCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowDefinitionCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>workflow_definition_creators edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowDefinitionCreatorsWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignsManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>campaigns_manager edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignsManagerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasComplianceManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>compliance_manager edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasComplianceManagerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasGroupManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>group_manager edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasGroupManagerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPoliciesManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>policies_manager edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasPoliciesManagerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRegistryManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>registry_manager edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRegistryManagerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRiskManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>risk_manager edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRiskManagerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center_manager edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterManagerWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowsManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>workflows_manager edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowsManagerWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -223566,24 +225150,6 @@ clearResponseDueDuration<br />
 </tr>
 <tr>
 <td>
-ownerID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearOwner<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -244994,6 +246560,222 @@ clearAvatarUpdatedAt<br />
 </tr>
 <tr>
 <td>
+addActionPlanCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeActionPlanCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearActionPlanCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addAPITokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeAPITokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAPITokenCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addAssessmentCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeAssessmentCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssessmentCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addAssetCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeAssetCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearAssetCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addCampaignCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCampaignCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCampaignCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addCampaignTargetCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCampaignTargetCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCampaignTargetCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addCheckResultCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCheckResultCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCheckResultCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addContactCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeContactCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearContactCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addControlCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -245075,6 +246857,303 @@ clearControlObjectiveCreators<br />
 </tr>
 <tr>
 <td>
+addCustomDomainCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCustomDomainCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCustomDomainCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addCustomTypeEnumCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCustomTypeEnumCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCustomTypeEnumCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDirectoryAccountCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectoryAccountCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryAccountCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDirectoryGroupCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectoryGroupCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryGroupCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDirectoryMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectoryMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectoryMembershipCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDirectorySyncRunCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDirectorySyncRunCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDirectorySyncRunCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDiscussionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDiscussionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDiscussionCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addDocumentDataCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeDocumentDataCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearDocumentDataCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEmailTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEmailTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEmailTemplateCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEntityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEntityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEntityCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEntityTypeCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEntityTypeCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEntityTypeCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addEvidenceCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -245102,7 +247181,7 @@ clearEvidenceCreators<br />
 </tr>
 <tr>
 <td>
-addAssetCreatorIDs<br />
+addFileCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245111,7 +247190,7 @@ addAssetCreatorIDs<br />
 </tr>
 <tr>
 <td>
-removeAssetCreatorIDs<br />
+removeFileCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245120,7 +247199,7 @@ removeAssetCreatorIDs<br />
 </tr>
 <tr>
 <td>
-clearAssetCreators<br />
+clearFileCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -245156,7 +247235,7 @@ clearFindingCreators<br />
 </tr>
 <tr>
 <td>
-addVulnerabilityCreatorIDs<br />
+addFindingControlCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245165,7 +247244,7 @@ addVulnerabilityCreatorIDs<br />
 </tr>
 <tr>
 <td>
-removeVulnerabilityCreatorIDs<br />
+removeFindingControlCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245174,7 +247253,7 @@ removeVulnerabilityCreatorIDs<br />
 </tr>
 <tr>
 <td>
-clearVulnerabilityCreators<br />
+clearFindingControlCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -245210,6 +247289,114 @@ clearGroupCreators<br />
 </tr>
 <tr>
 <td>
+addGroupMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeGroupMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearGroupMembershipCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addGroupSettingCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeGroupSettingCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearGroupSettingCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addHushCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeHushCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearHushCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addIdentityHolderCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeIdentityHolderCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearIdentityHolderCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addInternalPolicyCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -245229,6 +247416,141 @@ removeInternalPolicyCreatorIDs<br />
 <tr>
 <td>
 clearInternalPolicyCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addInviteCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeInviteCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearInviteCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addJobRunnerCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeJobRunnerCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearJobRunnerCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addJobRunnerRegistrationTokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeJobRunnerRegistrationTokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearJobRunnerRegistrationTokenCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addJobRunnerTokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeJobRunnerTokenCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearJobRunnerTokenCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addJobTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeJobTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearJobTemplateCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -245291,6 +247613,114 @@ clearNarrativeCreators<br />
 </tr>
 <tr>
 <td>
+addNoteCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeNoteCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearNoteCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addNotificationTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeNotificationTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearNotificationTemplateCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addOrgMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeOrgMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearOrgMembershipCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addPlatformCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removePlatformCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearPlatformCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addProcedureCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -245345,6 +247775,87 @@ clearProgramCreators<br />
 </tr>
 <tr>
 <td>
+addProgramMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeProgramMembershipCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearProgramMembershipCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRemediationCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRemediationCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRemediationCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addReviewCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeReviewCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviewCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addRiskCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -245372,7 +247883,7 @@ clearRiskCreators<br />
 </tr>
 <tr>
 <td>
-addIdentityHolderCreatorIDs<br />
+addScanCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245381,7 +247892,7 @@ addIdentityHolderCreatorIDs<br />
 </tr>
 <tr>
 <td>
-removeIdentityHolderCreatorIDs<br />
+removeScanCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245390,7 +247901,7 @@ removeIdentityHolderCreatorIDs<br />
 </tr>
 <tr>
 <td>
-clearIdentityHolderCreators<br />
+clearScanCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -245426,6 +247937,60 @@ clearScheduledJobCreators<br />
 </tr>
 <tr>
 <td>
+addScheduledJobRunCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeScheduledJobRunCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearScheduledJobRunCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addSLADefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSLADefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSLADefinitionCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addStandardCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -245453,7 +248018,7 @@ clearStandardCreators<br />
 </tr>
 <tr>
 <td>
-addTemplateCreatorIDs<br />
+addSubcontrolCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245462,7 +248027,7 @@ addTemplateCreatorIDs<br />
 </tr>
 <tr>
 <td>
-removeTemplateCreatorIDs<br />
+removeSubcontrolCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245471,7 +248036,7 @@ removeTemplateCreatorIDs<br />
 </tr>
 <tr>
 <td>
-clearTemplateCreators<br />
+clearSubcontrolCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -245507,6 +248072,195 @@ clearSubprocessorCreators<br />
 </tr>
 <tr>
 <td>
+addSubscriberCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubscriberCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubscriberCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addSystemDetailCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSystemDetailCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSystemDetailCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTagDefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTagDefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTagDefinitionCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTaskCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTaskCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTaskCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTemplateCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTemplateCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterComplianceCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterComplianceCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterComplianceCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addTrustCenterDocCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -245526,6 +248280,87 @@ removeTrustCenterDocCreatorIDs<br />
 <tr>
 <td>
 clearTrustCenterDocCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterEntityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterEntityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterEntityCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterFaqCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterFaqCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterFaqCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterNdaRequestCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterNdaRequestCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterNdaRequestCreators<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -245561,7 +248396,7 @@ clearTrustCenterSubprocessorCreators<br />
 </tr>
 <tr>
 <td>
-addActionPlanCreatorIDs<br />
+addTrustCenterWatermarkConfigCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245570,7 +248405,7 @@ addActionPlanCreatorIDs<br />
 </tr>
 <tr>
 <td>
-removeActionPlanCreatorIDs<br />
+removeTrustCenterWatermarkConfigCreatorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -245579,7 +248414,331 @@ removeActionPlanCreatorIDs<br />
 </tr>
 <tr>
 <td>
-clearActionPlanCreators<br />
+clearTrustCenterWatermarkConfigCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addVendorRiskScoreCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeVendorRiskScoreCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearVendorRiskScoreCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addVendorScoringConfigCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeVendorScoringConfigCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearVendorScoringConfigCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addVulnerabilityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeVulnerabilityCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearVulnerabilityCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addWorkflowDefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeWorkflowDefinitionCreatorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearWorkflowDefinitionCreators<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addCampaignsManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCampaignsManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCampaignsManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addComplianceManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeComplianceManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearComplianceManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addGroupManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeGroupManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearGroupManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addPoliciesManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removePoliciesManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearPoliciesManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRegistryManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRegistryManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRegistryManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRiskManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRiskManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRiskManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addTrustCenterManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeTrustCenterManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenterManager<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addWorkflowsManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeWorkflowsManagerIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearWorkflowsManager<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -259658,7 +262817,7 @@ transformConfiguration<br />
 <a href="scalars#templateprojectionconfig"><code>TemplateProjectionConfig</code></a>
 </td>
 <td>
-<p>configuration for converting a submitted assesment into records for the organization</p>
+<p>configuration for converting a submitted assessment into records for the organization</p>
 </td>
 </tr>
 <tr>
