@@ -48488,15 +48488,6 @@ avatarUpdatedAt<br />
 </tr>
 <tr>
 <td>
-dedicatedDb<br />
-<a href="scalars#boolean"><code>Boolean!</code></a>
-</td>
-<td>
-<p>Whether the organization has a dedicated database</p>
-</td>
-</tr>
-<tr>
-<td>
 stripeCustomerID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -80033,7 +80024,7 @@ transformConfiguration<br />
 <a href="scalars#templateprojectionconfig"><code>TemplateProjectionConfig</code></a>
 </td>
 <td>
-<p>configuration for converting a submitted assesment into records for the organization</p>
+<p>configuration for converting a submitted assessment into records for the organization</p>
 </td>
 </tr>
 <tr>
