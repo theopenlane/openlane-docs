@@ -28,6 +28,12 @@ ActionPlanDocumentManagementMode is enum for the field management_mode
 
 </td>
 </tr>
+<tr>
+<td>INTEGRATION</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -4378,6 +4384,12 @@ InternalPolicyDocumentManagementMode is enum for the field management_mode
 
 </td>
 </tr>
+<tr>
+<td>INTEGRATION</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6174,6 +6186,12 @@ ProcedureDocumentManagementMode is enum for the field management_mode
 </tr>
 <tr>
 <td>EXTERNAL_REFERENCE</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>INTEGRATION</td>
 <td>
 
 </td>
