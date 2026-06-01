@@ -277,6 +277,24 @@ fileID<br />
 </tr>
 <tr>
 <td>
+externalFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Documents managed externally may have IDs we need to reference, this holds them</p>
+</td>
+</tr>
+<tr>
+<td>
+externalContents<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The contents of externally managed files, if available</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -38812,6 +38830,78 @@ where<br />
 </tr>
 <tr>
 <td>
+internalPolicies<br />
+<a href="objects#internalpolicyconnection"><code>InternalPolicyConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#internalpolicyorder"><code>[InternalPolicyOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#internalpolicywhereinput"><code>InternalPolicyWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 reviews<br />
 <a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
 </td>
@@ -40237,6 +40327,24 @@ fileID<br />
 </td>
 <td>
 <p>This will contain the most recent file id if this policy was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
+externalFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Documents managed externally may have IDs we need to reference, this holds them</p>
+</td>
+</tr>
+<tr>
+<td>
+externalContents<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The contents of externally managed files, if available</p>
 </td>
 </tr>
 <tr>
@@ -41672,6 +41780,78 @@ where<br />
 </tr>
 <tr>
 <td>
+integrations<br />
+<a href="objects#integrationconnection"><code>IntegrationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#integrationorder"><code>[IntegrationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#integrationwhereinput"><code>IntegrationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Integrations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 hasPendingWorkflow<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
@@ -41776,6 +41956,16 @@ includeEmitFailures<br />
 </tbody>
 </table>
 
+</td>
+</tr>
+<tr>
+<td>
+liveExternalContents<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Live external document contents fetched from the integration provider (e.g. Google Drive HTML export).
+Only populated when managementMode is INTEGRATION and an externalFileID is set.</p>
 </td>
 </tr>
 </tbody>
@@ -65147,6 +65337,24 @@ fileID<br />
 </td>
 <td>
 <p>This will contain the most recent file id if this procedure was created from a file</p>
+</td>
+</tr>
+<tr>
+<td>
+externalFileID<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>Documents managed externally may have IDs we need to reference, this holds them</p>
+</td>
+</tr>
+<tr>
+<td>
+externalContents<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>The contents of externally managed files, if available</p>
 </td>
 </tr>
 <tr>
