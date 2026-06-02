@@ -28,6 +28,12 @@ ActionPlanDocumentManagementMode is enum for the field management_mode
 
 </td>
 </tr>
+<tr>
+<td>INTEGRATION</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -4378,6 +4384,12 @@ InternalPolicyDocumentManagementMode is enum for the field management_mode
 
 </td>
 </tr>
+<tr>
+<td>INTEGRATION</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6178,6 +6190,12 @@ ProcedureDocumentManagementMode is enum for the field management_mode
 
 </td>
 </tr>
+<tr>
+<td>INTEGRATION</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -7842,6 +7860,12 @@ Properties by which Task connections can be ordered.
 </tr>
 <tr>
 <td>completed</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>is_template</td>
 <td>
 
 </td>
