@@ -4660,6 +4660,18 @@ InviteRole is enum for the field role
 
 </td>
 </tr>
+<tr>
+<td>SUPER_ADMIN</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>AUDITOR</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 

@@ -54321,6 +54321,15 @@ heroImageFileID<br />
 
 </td>
 </tr>
+<tr>
+<td>
+ndaApproverGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -219441,6 +219450,141 @@ ndaApprovalRequiredNotNil<br />
 </tr>
 <tr>
 <td>
+ndaApproverGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>nda_approver_group_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 statusPageURL<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -219659,6 +219803,24 @@ hasHeroImageFile<br />
 <td>
 hasHeroImageFileWith<br />
 <a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasNdaApproverGroup<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>nda_approver_group edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasNdaApproverGroupWith<br />
+<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
 
@@ -266059,6 +266221,24 @@ heroImageFileID<br />
 <tr>
 <td>
 clearHeroImageFile<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearNdaApproverGroup<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
