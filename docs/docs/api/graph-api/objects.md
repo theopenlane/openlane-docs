@@ -89472,6 +89472,15 @@ ndaApprovalRequired<br />
 </tr>
 <tr>
 <td>
+ndaApproverGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>group whose members approve trust center NDA requests</p>
+</td>
+</tr>
+<tr>
+<td>
 statusPageURL<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -89645,6 +89654,15 @@ faviconFile<br />
 <td>
 heroImageFile<br />
 <a href="objects#file"><code>File</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+ndaApproverGroup<br />
+<a href="objects#group"><code>Group</code></a>
 </td>
 <td>
 
