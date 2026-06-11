@@ -3482,6 +3482,15 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+questionnaireTransformError<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -20883,6 +20892,39 @@ configSchema<br />
 <p>JSON Schema describing the configurable fields for this template type.
 The UI uses this to render a dynamic form; the submitted values become
 the EmailTemplate defaults field.</p>
+</td>
+</tr>
+<tr>
+<td>
+uiSchema<br />
+<a href="scalars#map"><code>Map!</code></a>
+</td>
+<td>
+<p>RJSF-style UI schema describing how the configurable fields should be
+rendered as a form: authoring order, color widgets for hex fields,
+repeatable lists for body paragraphs, and hidden per-send fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+variables<br />
+<a href="objects#templatevariable"><code>[TemplateVariable!]!</code></a>
+</td>
+<td>
+<p>System-provided template variables available for interpolation in this
+template&#39;s string fields (e.g. &#123;&#123; .firstName &#125;&#125;), with descriptions for
+the UI variable picker.</p>
+</td>
+</tr>
+<tr>
+<td>
+exampleValues<br />
+<a href="scalars#map"><code>Map</code></a>
+</td>
+<td>
+<p>Example/default field values used to render the preview, keyed by the same
+field names as configSchema. The UI pre-fills the editor form with these so
+the author starts from — and can see — what the default preview renders.</p>
 </td>
 </tr>
 <tr>

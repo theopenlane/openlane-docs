@@ -6786,6 +6786,41 @@ last<br />
 </tbody>
 </table>
 
+## previewEmailTemplate
+
+**Type:** [String!](scalars#string)
+
+Renders a customer-selectable email template to HTML for live preview. The
+catalog example is the base layer and the supplied draft values override it,
+so fields the author has not yet filled in still render with representative
+demo content.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+key<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>Catalog key identifying the template to preview.</p>
+</td>
+</tr>
+<tr>
+<td>
+defaults<br />
+<a href="scalars#map"><code>Map!</code></a>
+</td>
+<td>
+<p>In-progress form values overlaid on the example payload.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## procedure
 
 **Type:** [Procedure!](objects#procedure)
