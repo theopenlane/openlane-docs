@@ -65,7 +65,7 @@ API tokens are essential for:
 
 ### Access Control
 
-- **Scopes**: Array of permission scopes (read, write, admin)
+- **Scopes**: Array of per-object permission scopes in `object:action` format (e.g. `evidence:read`, `evidence:write`, `control:delete`). Most object type support `read`, `write`, and `delete` actions independently
 - **Active Status**: Boolean indicating if token is active
 - **SSO Authorizations**: Organization-specific SSO verification timestamps
 
@@ -162,8 +162,8 @@ mutation DeleteAPIToken($id: ID!) {
 
 ### Access Control
 
-- **Role-Based Permissions**: Tokens inherit permissions from their owner's roles
-- **Scope Limitation**: Restrict token permissions to minimum required access
+- **Per-Object Scopes**: Permissions are granted per object type using `object:action` format — grant only the specific read, write, or delete actions each token requires
+- **Scope Limitation**: Restrict token permissions to the minimum required access; avoid SELECT ALL for production tokens
 - **Organization Boundaries**: Tokens cannot access resources outside their organization
 - **SSO Integration**: Supports organization-level SSO authorization requirements
 
