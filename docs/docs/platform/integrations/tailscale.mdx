@@ -1,7 +1,7 @@
 ---
 title: Tailscale
 description: Tailscale integration guide for device inventory and identity governance
-sidebar_position: 15
+sidebar_position: 16
 sidebar_label: Tailscale
 ---
 
@@ -36,6 +36,9 @@ If your organization uses Tailscale to manage private network connectivity, this
 2. Click **Create trust credential**.
 3. Select **OAuth** as the credential type.
 4. Enter a description (e.g. `Openlane Integration`).
+
+![tailscale new credential settings](./assets/screenshots/tailscale_new_credential.png)
+
 5. Click **Continue** to proceed to the Scopes step.
 6. Select **Custom scopes** and enable the following scopes:
 
@@ -46,6 +49,8 @@ If your organization uses Tailscale to manage private network connectivity, this
 | `devices:core:read` | Device inventory sync |
 | `devices:posture_attributes:read` | Device posture attribute sync |
 | `devices:routes:read` | Device subnet route sync |
+
+![tailscale scopes](./assets/screenshots/tailscale_scopes.png)
 
 7. Click **Create credential** and copy the **Client ID** and **Client secret** — the secret is only shown once.
 

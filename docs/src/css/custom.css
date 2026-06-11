@@ -229,6 +229,14 @@ html[data-theme='dark'] {
   font-size: 1.75rem;
 }
 
+.markdown h1:first-child img {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
 .theme-doc-markdown .openapi-tabs__code-container .openapi-tabs__code-item span {
   text-transform: none;
 }
