@@ -20,25 +20,44 @@ tags:
 
 ## API Tokens
 
-API Tokens provide organization-level programmatic access to Openlane APIs. They are designed for automation, integrations, and services that need to interact with Openlane on behalf of the organization.
+API Tokens are organization-scoped credentials designed for system integrations, automation, and service-to-service communication. Access is controlled through configurable scopes that define read, write, and delete permissions for each object type across the organization.
 
 :::info
-   In order to create any tokens, your organization must have a payment method on file
+In order to create any tokens, your organization must have a payment method on file.
+:::
+
+![API Tokens list](../../../../static/img/screenshots/auth/api_tokens_list.png)
+
+### Scopes
+
+Permissions are granted per object type using the format `object:action`. Each object supports up to three actions:
+
+| Action | Effect |
+|---|---|
+| `read` | Retrieve records of this object type |
+| `write` | Create and update records of this object type |
+| `delete` | Delete records of this object type |
+
+For example, a token with `evidence:read` and `evidence:write` can read and create evidence but cannot delete it. Scopes are displayed as chips on the token list and can be filtered in the permission selector when creating a token.
+
+:::tip
+Follow the principle of least privilege — only grant the minimum scopes required for the job or workflow. A token used for automated evidence collection only needs `evidence:read`, `evidence:write`, and the read scope for any related objects it queries.
 :::
 
 ### Creating an API Token
 
-1. Navigation to **Developer Settings** in the Openlane console
-1. Select [API Tokens](https://console.theopenlane.io/organization-settings/developers) from the sidebar
+1. Navigate to **Organization Settings** > **Developers** > [**API Tokens**](https://console.theopenlane.io/organization-settings/developers)
 1. Click **Create**
 1. Fill in the required fields:
-   - **Name**: A human-readable name for the token
+   - **Token name**: A human-readable name for the token
    - **Description**: Optional description of the token's purpose
-   - **Scopes**: Select the appropriate permission scopes for the token
-   - **Expires At**: Expiration date for automatic revocation or choose to never expire
-1. Click **Create Token** to generate the token. Make sure to copy the token value as it will only be shown once
-1. If your organization requires SSO enforcement, authorize the token for SSO access
+   - **Expiration**: Set an expiration date or toggle **Never expires**
 
+![Create API token form](../../../../static/img/screenshots/auth/api_tokens_create.png)
+
+4. Under **Permissions**, expand each object type and select the actions the token should be allowed to perform. Use the search box to filter by object name, or click **SELECT ALL** to enable every scope (not recommended for production tokens).
+1. Click **Create Token** and copy the token value immediately — it is only shown once.
+1. If your organization enforces SSO, authorize the token for SSO access after creation.
 
 ### Using the API Token
 
