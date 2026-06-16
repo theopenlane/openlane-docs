@@ -61107,6 +61107,15 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+additionalRoles<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
 </tbody>
 </table>
 
