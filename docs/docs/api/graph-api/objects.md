@@ -34396,6 +34396,15 @@ last<br />
 
 </td>
 </tr>
+<tr>
+<td>
+additionalRoles<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>additionalRoles are the functional/organization roles assigned to the group on top of object permissions</p>
+</td>
+</tr>
 </tbody>
 </table>
 
