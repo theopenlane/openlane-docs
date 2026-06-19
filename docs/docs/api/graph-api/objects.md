@@ -5736,6 +5736,15 @@ emailBrandingID<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the trust center this campaign sends updates for, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -6017,6 +6026,15 @@ emailTemplate<br />
 <td>
 entity<br />
 <a href="objects#entity"><code>Entity</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
 </td>
 <td>
 
@@ -7024,6 +7042,15 @@ groupID<br />
 </tr>
 <tr>
 <td>
+subscriberID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the trust center subscriber this target was generated from, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 email<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -7116,6 +7143,15 @@ user<br />
 <td>
 group<br />
 <a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriber<br />
+<a href="objects#subscriber"><code>Subscriber</code></a>
 </td>
 <td>
 
@@ -8697,6 +8733,78 @@ where<br />
 </td>
 <td>
 <p>Filtering options for Files returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+subscribers<br />
+<a href="objects#subscriberconnection"><code>SubscriberConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subscriberorder"><code>[SubscriberOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subscribers returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subscriberwhereinput"><code>SubscriberWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subscribers returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -11606,6 +11714,15 @@ includeEmitFailures<br />
 
 </td>
 </tr>
+<tr>
+<td>
+relatedControls<br />
+<a href="objects#controlinfo"><code>[ControlInfo!]</code></a>
+</td>
+<td>
+<p>relatedControls show the controls and frameworks mapped to this control</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -11982,6 +12099,54 @@ cursor<br />
 </td>
 <td>
 <p>A cursor for use in pagination.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlEvidence
+
+ControlEvidence summarizes the evidence status across all evidence linked to a control
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>total number of evidence items linked to the control</p>
+</td>
+</tr>
+<tr>
+<td>
+worstStatus<br />
+<a href="enums#evidenceevidencestatus"><code>EvidenceEvidenceStatus</code></a>
+</td>
+<td>
+<p>the most severe evidence status among all linked evidence items</p>
+</td>
+</tr>
+<tr>
+<td>
+approvedCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>number of evidence items with auditor-approved status</p>
+</td>
+</tr>
+<tr>
+<td>
+countByStatus<br />
+<a href="objects#evidencecountbystatus"><code>[EvidenceCountByStatus!]</code></a>
+</td>
+<td>
+<p>breakdown of evidence item counts by status</p>
 </td>
 </tr>
 </tbody>
@@ -12934,6 +13099,108 @@ controlImplementation<br />
 </td>
 <td>
 <p>Updated controlImplementation</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlInfo
+
+ControlInfo provides a lightweight summary of a control or subcontrol, used when referencing related controls
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>unique identifier of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of what the control is supposed to accomplish</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>human readable title of the control for quick identification</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#controlcontrolstatus"><code>ControlControlStatus</code></a>
+</td>
+<td>
+<p>status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlOwner<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>the group of users who are responsible for the control, will be assigned tasks, approval, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFramework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework this control belongs to, e.g. SOC2, ISO27001</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+subcategory<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subcategory of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+isSubcontrol<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>whether this entry is a subcontrol rather than a top-level control</p>
 </td>
 </tr>
 </tbody>
@@ -14225,6 +14492,278 @@ controlObjective<br />
 </td>
 <td>
 <p>Updated controlObjective</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlPolicies
+
+ControlPolicies summarizes the internal policies linked to a control
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>total number of policies linked to the control</p>
+</td>
+</tr>
+<tr>
+<td>
+internalPolicies<br />
+<a href="objects#policysummary"><code>[PolicySummary!]</code></a>
+</td>
+<td>
+<p>the policies linked to the control</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlReport
+
+ControlReport is a custom resolver that is used to show detailed, but selective information about
+an organizations controls vs. the standards
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>unique identifier of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+refCode<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the unique reference code for the control</p>
+</td>
+</tr>
+<tr>
+<td>
+description<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>description of what the control is supposed to accomplish</p>
+</td>
+</tr>
+<tr>
+<td>
+title<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>human readable title of the control for quick identification</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#controlcontrolstatus"><code>ControlControlStatus</code></a>
+</td>
+<td>
+<p>status of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+controlOwner<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+<p>the group of users who are responsible for the control, will be assigned tasks, approval, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+referenceFramework<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the reference framework this control belongs to, e.g. SOC2, ISO27001</p>
+</td>
+</tr>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>category of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+subcategory<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>subcategory of the control</p>
+</td>
+</tr>
+<tr>
+<td>
+relatedControls<br />
+<a href="objects#controlinfo"><code>[ControlInfo!]</code></a>
+</td>
+<td>
+<p>controls from other frameworks that map to this control</p>
+</td>
+</tr>
+<tr>
+<td>
+evidenceStatus<br />
+<a href="objects#controlevidence"><code>ControlEvidence</code></a>
+</td>
+<td>
+<p>aggregated evidence status across all evidence linked to this control</p>
+</td>
+</tr>
+<tr>
+<td>
+linkedPolicies<br />
+<a href="objects#controlpolicies"><code>ControlPolicies</code></a>
+</td>
+<td>
+<p>internal policies linked to this control</p>
+</td>
+</tr>
+<tr>
+<td>
+subcontrols<br />
+<a href="objects#controlreport"><code>[ControlReport!]</code></a>
+</td>
+<td>
+<p>child subcontrols nested under this control</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlReportCategory
+
+ControlReportCategory groups control reports by their category
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+category<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the category name; empty string when controls have no category assigned</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>total number of controls in this category</p>
+</td>
+</tr>
+<tr>
+<td>
+controls<br />
+<a href="objects#controlreport"><code>[ControlReport!]!</code></a>
+</td>
+<td>
+<p>controls belonging to this category</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlReportConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#controlreportedge"><code>[ControlReportEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+pageInfo<br />
+<a href="objects#pageinfo"><code>PageInfo!</code></a>
+</td>
+<td>
+<p>Information to aid in pagination.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlReportEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#controlreport"><code>ControlReport</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+<tr>
+<td>
+cursor<br />
+<a href="scalars#cursor"><code>Cursor!</code></a>
+</td>
+<td>
+<p>A cursor for use in pagination.</p>
 </td>
 </tr>
 </tbody>
@@ -20272,6 +20811,15 @@ workflowInstanceID<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the trust center this template is associated with, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -20517,6 +21065,15 @@ workflowDefinition<br />
 <td>
 workflowInstance<br />
 <a href="objects#workflowinstance"><code>WorkflowInstance</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
 </td>
 <td>
 
@@ -26533,6 +27090,36 @@ totalCount<br />
 </td>
 <td>
 <p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## EvidenceCountByStatus
+
+EvidenceCountByStatus pairs an evidence status with the number of evidence items in that state
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+status<br />
+<a href="enums#evidenceevidencestatus"><code>EvidenceEvidenceStatus!</code></a>
+</td>
+<td>
+<p>the evidence status value</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>number of evidence items with this status</p>
 </td>
 </tr>
 </tbody>
@@ -42371,7 +42958,7 @@ ownershipTransfer<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes admin and invitee becomes owner</p>
+<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes super admin and invitee becomes owner</p>
 </td>
 </tr>
 <tr>
@@ -46719,6 +47306,24 @@ trustCenterID<br />
 </td>
 <td>
 <p>the trust center this note belongs to, if applicable</p>
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>when set on a trust center post, sends the published update to the trust center&#39;s subscribers</p>
+</td>
+</tr>
+<tr>
+<td>
+notifiedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>when subscribers were notified about this post</p>
 </td>
 </tr>
 <tr>
@@ -65134,6 +65739,49 @@ platform<br />
 </tbody>
 </table>
 
+## PolicySummary
+
+PolicySummary provides a lightweight summary of an internal policy
+
+<p style={{ marginBottom: "0.4em" }}><strong>Implements</strong></p>
+
+- [Node](interfaces#node)
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>unique identifier of the policy</p>
+</td>
+</tr>
+<tr>
+<td>
+name<br />
+<a href="scalars#string"><code>String!</code></a>
+</td>
+<td>
+<p>the name of the policy</p>
+</td>
+</tr>
+<tr>
+<td>
+status<br />
+<a href="enums#internalpolicydocumentstatus"><code>InternalPolicyDocumentStatus!</code></a>
+</td>
+<td>
+<p>status of the policy, e.g. draft, published, archived, etc.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Procedure
 
 
@@ -68804,6 +69452,108 @@ program<br />
 </td>
 <td>
 <p>Updated program</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## RelatedControlConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#relatedcontroledge"><code>[RelatedControlEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## RelatedControlEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#control"><code>Control!</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## RelatedSubcontrolConnection
+
+A connection to a list of items.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+edges<br />
+<a href="objects#relatedsubcontroledge"><code>[RelatedSubcontrolEdge]</code></a>
+</td>
+<td>
+<p>A list of edges.</p>
+</td>
+</tr>
+<tr>
+<td>
+totalCount<br />
+<a href="scalars#int"><code>Int!</code></a>
+</td>
+<td>
+<p>Identifies the total count of items in the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## RelatedSubcontrolEdge
+
+An edge in a connection.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Fields</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+node<br />
+<a href="objects#subcontrol"><code>Subcontrol!</code></a>
+</td>
+<td>
+<p>The item at the end of the edge.</p>
 </td>
 </tr>
 </tbody>
@@ -80498,6 +81248,15 @@ where<br />
 </tr>
 <tr>
 <td>
+relatedControls<br />
+<a href="objects#controlinfo"><code>[ControlInfo!]</code></a>
+</td>
+<td>
+<p>relatedControls show the controls and frameworks mapped to this control</p>
+</td>
+</tr>
+<tr>
+<td>
 hasPendingWorkflow<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
@@ -81454,6 +82213,15 @@ ownerID<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the trust center the subscriber is subscribed to, null for legacy organization-level subscribers</p>
+</td>
+</tr>
+<tr>
+<td>
 email<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -81513,6 +82281,24 @@ sendAttempts<br />
 </td>
 <td>
 <p>the number of attempts made to perform email send of the subscription, maximum of 5</p>
+</td>
+</tr>
+<tr>
+<td>
+contactID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the contact record matched to this subscriber by email, set automatically when a matching contact exists</p>
+</td>
+</tr>
+<tr>
+<td>
+userID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user matched to this subscriber by email, set automatically when a matching user exists</p>
 </td>
 </tr>
 <tr>
@@ -81593,6 +82379,105 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenter<br />
+<a href="objects#trustcenter"><code>TrustCenter</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargets<br />
+<a href="objects#campaigntargetconnection"><code>CampaignTargetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaigntargetorder"><code>[CampaignTargetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaigntargetwhereinput"><code>CampaignTargetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for CampaignTargets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+contact<br />
+<a href="objects#contact"><code>Contact</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+user<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -86443,6 +87328,222 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+subscribers<br />
+<a href="objects#subscriberconnection"><code>SubscriberConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subscriberorder"><code>[SubscriberOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subscribers returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subscriberwhereinput"><code>SubscriberWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subscribers returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+emailTemplates<br />
+<a href="objects#emailtemplateconnection"><code>EmailTemplateConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#emailtemplateorder"><code>[EmailTemplateOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for EmailTemplates returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#emailtemplatewhereinput"><code>EmailTemplateWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for EmailTemplates returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+campaigns<br />
+<a href="objects#campaignconnection"><code>CampaignConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#campaignorder"><code>[CampaignOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#campaignwhereinput"><code>CampaignWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Campaigns returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -89532,6 +90633,24 @@ ndaApprovalRequired<br />
 </tr>
 <tr>
 <td>
+notifySubscribersOnSubprocessorChange<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether to email trust center subscribers when subprocessors are added, updated, or removed</p>
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>watermark of the most recent subprocessor change subscribers have been notified about</p>
+</td>
+</tr>
+<tr>
+<td>
 ndaApproverGroupID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -91258,6 +92377,78 @@ setting<br />
 <a href="objects#usersetting"><code>UserSetting!</code></a>
 </td>
 <td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscribers<br />
+<a href="objects#subscriberconnection"><code>SubscriberConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#subscriberorder"><code>[SubscriberOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Subscribers returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#subscriberwhereinput"><code>SubscriberWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Subscribers returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
