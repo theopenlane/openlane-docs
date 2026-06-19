@@ -29418,6 +29418,36 @@ field<br />
 </tbody>
 </table>
 
+## ControlReportOrder
+
+Ordering options for ControlReport connections
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+direction<br />
+<a href="enums#orderdirection"><code>OrderDirection!</code></a>
+</td>
+<td>
+<p>The ordering direction.</p>
+</td>
+</tr>
+<tr>
+<td>
+field<br />
+<a href="enums#controlreportorderfield"><code>ControlReportOrderField!</code></a>
+</td>
+<td>
+<p>The field by which to order ControlReport.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlWhereInput
 
 ControlWhereInput is used for filtering Control objects.
@@ -44423,7 +44453,7 @@ ownershipTransfer<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes admin and invitee becomes owner</p>
+<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes super admin and invitee becomes owner</p>
 </td>
 </tr>
 <tr>
@@ -244946,7 +244976,7 @@ ownershipTransfer<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes admin and invitee becomes owner</p>
+<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes super admin and invitee becomes owner</p>
 </td>
 </tr>
 <tr>

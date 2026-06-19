@@ -1735,6 +1735,48 @@ Properties by which Control connections can be ordered.
 </tbody>
 </table>
 
+## ControlReportOrderField
+
+Properties by which ControlReport connections can be ordered.
+
+<p style={{ marginBottom: "0.4em" }}><strong>Values</strong></p>
+
+<table>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td>
+<p>Order by creation time</p>
+</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>
+<p>Order by last update time</p>
+</td>
+</tr>
+<tr>
+<td>refCode</td>
+<td>
+<p>Order by reference code</p>
+</td>
+</tr>
+<tr>
+<td>title</td>
+<td>
+<p>Order by title</p>
+</td>
+</tr>
+<tr>
+<td>referenceFramework</td>
+<td>
+<p>Order by reference framework</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## ControlTrustCenterControlVisibility
 
 ControlTrustCenterControlVisibility is enum for the field trust_center_visibility
