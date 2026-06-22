@@ -1564,6 +1564,97 @@ last<br />
 </tbody>
 </table>
 
+## controlReports
+
+**Type:** [ControlReportConnection!](objects#controlreportconnection)
+
+Returns a paginated list of control reports for the organization, showing control compliance status against standards
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#controlreportorder"><code>[ControlReportOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for ControlReport returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlReport returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## controlReportsByCategory
+
+**Type:** [[ControlReportCategory!]!](objects#controlreportcategory)
+
+Returns control reports grouped by category for the organization
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#controlwhereinput"><code>ControlWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for ControlReport returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## controls
 
 **Type:** [ControlConnection!](objects#controlconnection)
