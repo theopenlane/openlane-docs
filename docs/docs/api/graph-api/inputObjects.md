@@ -17100,6 +17100,141 @@ groupIDContainsFold<br />
 </tr>
 <tr>
 <td>
+subscriberID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>subscriber_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 email<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -17651,6 +17786,24 @@ hasGroup<br />
 <td>
 hasGroupWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSubscriber<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subscriber edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubscriberWith<br />
+<a href="inputObjects#subscriberwhereinput"><code>[SubscriberWhereInput!]</code></a>
 </td>
 <td>
 
@@ -21298,6 +21451,141 @@ emailBrandingIDContainsFold<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>trust_center_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -21489,6 +21777,24 @@ hasEntity<br />
 <td>
 hasEntityWith<br />
 <a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenter<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterWith<br />
+<a href="inputObjects#trustcenterwhereinput"><code>[TrustCenterWhereInput!]</code></a>
 </td>
 <td>
 
@@ -25400,6 +25706,24 @@ hasFiles<br />
 <td>
 hasFilesWith<br />
 <a href="inputObjects#filewhereinput"><code>[FileWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subscribers edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubscribersWith<br />
+<a href="inputObjects#subscriberwhereinput"><code>[SubscriberWhereInput!]</code></a>
 </td>
 <td>
 
@@ -29413,6 +29737,36 @@ field<br />
 </td>
 <td>
 <p>The field by which to order Controls.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## ControlReportOrder
+
+Ordering options for ControlReport connections
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+direction<br />
+<a href="enums#orderdirection"><code>OrderDirection!</code></a>
+</td>
+<td>
+<p>The ordering direction.</p>
+</td>
+</tr>
+<tr>
+<td>
+field<br />
+<a href="enums#controlreportorderfield"><code>ControlReportOrderField!</code></a>
+</td>
+<td>
+<p>The field by which to order ControlReport.</p>
 </td>
 </tr>
 </tbody>
@@ -36528,6 +36882,15 @@ entityID<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 campaignTargetIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -36713,6 +37076,15 @@ userID<br />
 <tr>
 <td>
 groupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
@@ -37039,6 +37411,15 @@ campaignTargetIDs<br />
 <tr>
 <td>
 fileIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -40054,6 +40435,15 @@ workflowInstanceID<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 campaignIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -40509,15 +40899,6 @@ blockedGroupIDs<br />
 <tr>
 <td>
 editorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-viewerIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -42327,15 +42708,6 @@ editorIDs<br />
 </tr>
 <tr>
 <td>
-viewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 environmentID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -42874,60 +43246,6 @@ controlImplementationViewerIDs<br />
 </tr>
 <tr>
 <td>
-scanEditorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-scanBlockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-scanViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-entityEditorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-entityBlockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-entityViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 actionPlanEditorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -43073,6 +43391,96 @@ mappedControlEditorIDs<br />
 <tr>
 <td>
 mappedControlBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scanEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+scanBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+entityBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+findingEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+findingBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+remediationEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+remediationBlockedGroupIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -44423,7 +44831,7 @@ ownershipTransfer<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes admin and invitee becomes owner</p>
+<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes super admin and invitee becomes owner</p>
 </td>
 </tr>
 <tr>
@@ -45336,6 +45744,15 @@ isEdited<br />
 </td>
 <td>
 <p>whether the note has been edited</p>
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>when set on a trust center post, sends the published update to the trust center&#39;s subscribers</p>
 </td>
 </tr>
 <tr>
@@ -49805,15 +50222,6 @@ editorIDs<br />
 </tr>
 <tr>
 <td>
-viewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 environmentID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -50206,15 +50614,6 @@ blockedGroupIDs<br />
 <tr>
 <td>
 editorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-viewerIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -51041,15 +51440,6 @@ editorIDs<br />
 </tr>
 <tr>
 <td>
-viewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 reviewedByUserID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -51434,15 +51824,6 @@ blockedGroupIDs<br />
 <tr>
 <td>
 editorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-viewerIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
@@ -52360,6 +52741,42 @@ ownerID<br />
 <td>
 eventIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignTargetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userID<br />
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 
@@ -53760,6 +54177,33 @@ trustCenterFaqIDs<br />
 </tr>
 <tr>
 <td>
+subscriberIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+emailTemplateIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+campaignIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 createTrustCenterSetting<br />
 <a href="inputObjects#createtrustcentersettinginput"><code>CreateTrustCenterSettingInput</code></a>
 </td>
@@ -54269,6 +54713,15 @@ ndaApprovalRequired<br />
 </tr>
 <tr>
 <td>
+notifySubscribersOnSubprocessorChange<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether to email trust center subscribers when subprocessors are added, updated, or removed</p>
+</td>
+</tr>
+<tr>
+<td>
 statusPageURL<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -54733,6 +55186,15 @@ tfaSettingIDs<br />
 <td>
 settingID<br />
 <a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
 </td>
 <td>
 
@@ -80228,6 +80690,141 @@ workflowInstanceIDContainsFold<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>trust_center_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -80347,6 +80944,24 @@ hasWorkflowInstance<br />
 <td>
 hasWorkflowInstanceWith<br />
 <a href="inputObjects#workflowinstancewhereinput"><code>[WorkflowInstanceWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenter<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterWith<br />
+<a href="inputObjects#trustcenterwhereinput"><code>[TrustCenterWhereInput!]</code></a>
 </td>
 <td>
 
@@ -87866,24 +88481,6 @@ hasEditors<br />
 <tr>
 <td>
 hasEditorsWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasViewersWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -104506,24 +105103,6 @@ hasEditorsWith<br />
 </tr>
 <tr>
 <td>
-hasViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasViewersWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasEnvironment<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -109307,114 +109886,6 @@ hasControlImplementationViewersWith<br />
 </tr>
 <tr>
 <td>
-hasScanEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>scan_editors edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasScanEditorsWith<br />
-<a href="inputObjects#scanwhereinput"><code>[ScanWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasScanBlockedGroups<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>scan_blocked_groups edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasScanBlockedGroupsWith<br />
-<a href="inputObjects#scanwhereinput"><code>[ScanWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasScanViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>scan_viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasScanViewersWith<br />
-<a href="inputObjects#scanwhereinput"><code>[ScanWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasEntityEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>entity_editors edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasEntityEditorsWith<br />
-<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasEntityBlockedGroups<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>entity_blocked_groups edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasEntityBlockedGroupsWith<br />
-<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasEntityViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>entity_viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasEntityViewersWith<br />
-<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasActionPlanEditors<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -109714,6 +110185,186 @@ hasMappedControlBlockedGroups<br />
 <td>
 hasMappedControlBlockedGroupsWith<br />
 <a href="inputObjects#mappedcontrolwhereinput"><code>[MappedControlWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasScanEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>scan_editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasScanEditorsWith<br />
+<a href="inputObjects#scanwhereinput"><code>[ScanWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasScanBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>scan_blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasScanBlockedGroupsWith<br />
+<a href="inputObjects#scanwhereinput"><code>[ScanWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEntityEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>entity_editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEntityEditorsWith<br />
+<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEntityBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>entity_blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEntityBlockedGroupsWith<br />
+<a href="inputObjects#entitywhereinput"><code>[EntityWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasFindingEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>finding_editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasFindingEditorsWith<br />
+<a href="inputObjects#findingwhereinput"><code>[FindingWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasFindingBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>finding_blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasFindingBlockedGroupsWith<br />
+<a href="inputObjects#findingwhereinput"><code>[FindingWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasReviewEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>review_editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasReviewEditorsWith<br />
+<a href="inputObjects#reviewwhereinput"><code>[ReviewWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasReviewBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>review_blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasReviewBlockedGroupsWith<br />
+<a href="inputObjects#reviewwhereinput"><code>[ReviewWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>remediation_editors edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationEditorsWith<br />
+<a href="inputObjects#remediationwhereinput"><code>[RemediationWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>remediation_blocked_groups edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasRemediationBlockedGroupsWith<br />
+<a href="inputObjects#remediationwhereinput"><code>[RemediationWhereInput!]</code></a>
 </td>
 <td>
 
@@ -137427,6 +138078,132 @@ trustCenterIDEqualFold<br />
 <td>
 trustCenterIDContainsFold<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>notify_subscribers field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribersNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribersIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribersNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>notified_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifiedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -172641,24 +173418,6 @@ hasEditorsWith<br />
 </tr>
 <tr>
 <td>
-hasViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasViewersWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasEnvironment<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -176678,24 +177437,6 @@ hasEditors<br />
 <tr>
 <td>
 hasEditorsWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasViewersWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -184629,24 +185370,6 @@ hasEditorsWith<br />
 </tr>
 <tr>
 <td>
-hasViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasViewersWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 hasReviewedByUser<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -188551,24 +189274,6 @@ hasEditors<br />
 <tr>
 <td>
 hasEditorsWith<br />
-<a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-hasViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-<p>viewers edge predicates</p>
-</td>
-</tr>
-<tr>
-<td>
-hasViewersWith<br />
 <a href="inputObjects#groupwhereinput"><code>[GroupWhereInput!]</code></a>
 </td>
 <td>
@@ -198301,6 +199006,141 @@ ownerIDContainsFold<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>trust_center_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+trustCenterIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 email<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -198697,6 +199537,276 @@ sendAttemptsLTE<br />
 </tr>
 <tr>
 <td>
+contactID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>contact_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+contactIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>user_id field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+userIDNEQ<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDNotIn<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDGT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDGTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDLT<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDLTE<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDContains<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDHasPrefix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDHasSuffix<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDEqualFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userIDContainsFold<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 hasOwner<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
@@ -198726,6 +199836,78 @@ hasEvents<br />
 <td>
 hasEventsWith<br />
 <a href="inputObjects#eventwhereinput"><code>[EventWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenter<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>trust_center edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasTrustCenterWith<br />
+<a href="inputObjects#trustcenterwhereinput"><code>[TrustCenterWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignTargets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>campaign_targets edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignTargetsWith<br />
+<a href="inputObjects#campaigntargetwhereinput"><code>[CampaignTargetWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasContact<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>contact edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasContactWith<br />
+<a href="inputObjects#contactwhereinput"><code>[ContactWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasUser<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>user edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasUserWith<br />
+<a href="inputObjects#userwhereinput"><code>[UserWhereInput!]</code></a>
 </td>
 <td>
 
@@ -219450,6 +220632,132 @@ ndaApprovalRequiredNotNil<br />
 </tr>
 <tr>
 <td>
+notifySubscribersOnSubprocessorChange<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>notify_subscribers_on_subprocessor_change field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribersOnSubprocessorChangeNEQ<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribersOnSubprocessorChangeIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribersOnSubprocessorChangeNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAt<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+<p>subprocessors_notified_at field predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtNEQ<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtNotIn<br />
+<a href="scalars#time"><code>[Time!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtGT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtGTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtLT<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtLTE<br />
+<a href="scalars#time"><code>Time</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtIsNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subprocessorsNotifiedAtNotNil<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 ndaApproverGroupID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -224796,6 +226104,60 @@ hasTrustCenterFaqsWith<br />
 </tr>
 <tr>
 <td>
+hasSubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subscribers edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubscribersWith<br />
+<a href="inputObjects#subscriberwhereinput"><code>[SubscriberWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasEmailTemplates<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>email_templates edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasEmailTemplatesWith<br />
+<a href="inputObjects#emailtemplatewhereinput"><code>[EmailTemplateWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasCampaigns<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>campaigns edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasCampaignsWith<br />
+<a href="inputObjects#campaignwhereinput"><code>[CampaignWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 tagsHas<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -228200,6 +229562,24 @@ clearEntity<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenter<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addCampaignTargetIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -228592,6 +229972,24 @@ groupID<br />
 <tr>
 <td>
 clearGroup<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+subscriberID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubscriber<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -229221,6 +230619,33 @@ removeFileIDs<br />
 <tr>
 <td>
 clearFiles<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addSubscriberIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubscriberIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubscribers<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -235134,6 +236559,24 @@ clearWorkflowInstance<br />
 </tr>
 <tr>
 <td>
+trustCenterID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearTrustCenter<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addCampaignIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -236111,33 +237554,6 @@ removeEditorIDs<br />
 <tr>
 <td>
 clearEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearViewers<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -240107,33 +241523,6 @@ clearEditors<br />
 </tr>
 <tr>
 <td>
-addViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 environmentID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -241353,168 +242742,6 @@ clearControlImplementationViewers<br />
 </tr>
 <tr>
 <td>
-addScanEditorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeScanEditorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearScanEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addScanBlockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeScanBlockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearScanBlockedGroups<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addScanViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeScanViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearScanViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addEntityEditorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeEntityEditorIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEntityEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addEntityBlockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeEntityBlockedGroupIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEntityBlockedGroups<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addEntityViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeEntityViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearEntityViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 addActionPlanEditorIDs<br />
 <a href="scalars#id"><code>[ID!]</code></a>
 </td>
@@ -241966,6 +243193,276 @@ removeMappedControlBlockedGroupIDs<br />
 <tr>
 <td>
 clearMappedControlBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addScanEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeScanEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearScanEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addScanBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeScanBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearScanBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEntityEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEntityEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEntityEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEntityBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEntityBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEntityBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addFindingEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeFindingEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearFindingEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addFindingBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeFindingBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearFindingBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addReviewEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeReviewEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviewEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addReviewBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeReviewBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearReviewBlockedGroups<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRemediationEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRemediationEditorIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRemediationEditors<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addRemediationBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeRemediationBlockedGroupIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearRemediationBlockedGroups<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -244946,7 +246443,7 @@ ownershipTransfer<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
-<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes admin and invitee becomes owner</p>
+<p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes super admin and invitee becomes owner</p>
 </td>
 </tr>
 <tr>
@@ -256726,33 +258223,6 @@ clearEditors<br />
 </tr>
 <tr>
 <td>
-addViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 environmentID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -257667,33 +259137,6 @@ removeEditorIDs<br />
 <tr>
 <td>
 clearEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearViewers<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -259654,33 +261097,6 @@ clearEditors<br />
 </tr>
 <tr>
 <td>
-addViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearViewers<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
 reviewedByUserID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -260460,33 +261876,6 @@ removeEditorIDs<br />
 <tr>
 <td>
 clearEditors<br />
-<a href="scalars#boolean"><code>Boolean</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-addViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-removeViewerIDs<br />
-<a href="scalars#id"><code>[ID!]</code></a>
-</td>
-<td>
-
-</td>
-</tr>
-<tr>
-<td>
-clearViewers<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -262609,6 +263998,69 @@ removeEventIDs<br />
 <tr>
 <td>
 clearEvents<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addCampaignTargetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCampaignTargetIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCampaignTargets<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+contactID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearContact<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+userID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearUser<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -265429,6 +266881,87 @@ clearTrustCenterFaqs<br />
 </tr>
 <tr>
 <td>
+addSubscriberIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubscriberIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addEmailTemplateIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeEmailTemplateIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearEmailTemplates<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addCampaignIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeCampaignIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearCampaigns<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
 addPost<br />
 <a href="inputObjects#createnoteinput"><code>CreateNoteInput</code></a>
 </td>
@@ -266095,6 +267628,24 @@ ndaApprovalRequired<br />
 <tr>
 <td>
 clearNdaApprovalRequired<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+notifySubscribersOnSubprocessorChange<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether to email trust center subscribers when subprocessors are added, updated, or removed</p>
+</td>
+</tr>
+<tr>
+<td>
+clearNotifySubscribersOnSubprocessorChange<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
@@ -266990,6 +268541,33 @@ clearTfaSettings<br />
 <td>
 settingID<br />
 <a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+addSubscriberIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+removeSubscriberIDs<br />
+<a href="scalars#id"><code>[ID!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+clearSubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 
@@ -273804,6 +275382,24 @@ hasSetting<br />
 <td>
 hasSettingWith<br />
 <a href="inputObjects#usersettingwhereinput"><code>[UserSettingWhereInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+hasSubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>subscribers edge predicates</p>
+</td>
+</tr>
+<tr>
+<td>
+hasSubscribersWith<br />
+<a href="inputObjects#subscriberwhereinput"><code>[SubscriberWhereInput!]</code></a>
 </td>
 <td>
 
