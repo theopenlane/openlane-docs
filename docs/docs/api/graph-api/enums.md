@@ -1385,6 +1385,12 @@ ControlControlStatus is enum for the field status
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>DRAFT</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>PREPARING</td>
 <td>
 
@@ -7570,6 +7576,12 @@ SubcontrolControlStatus is enum for the field status
 <table>
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
+<tr>
+<td>DRAFT</td>
+<td>
+
+</td>
+</tr>
 <tr>
 <td>PREPARING</td>
 <td>
