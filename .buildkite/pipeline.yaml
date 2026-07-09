@@ -14,7 +14,7 @@ steps:
       location: "NYC"
     cancel_on_build_failing: true
     plugins:
-      - docker#v5.13.0:
+      - docker#v5.14.0:
           image: "ghcr.io/theopenlane/build-image:latest"
           always_pull: true
           propagate-environment: true
