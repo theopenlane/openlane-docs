@@ -20,72 +20,41 @@ keywords:
 
 # Subcontrols
 
-Subcontrols are granular components or sub-requirements within larger compliance controls that provide detailed, specific requirements for achieving control objectives.
+Some controls are too broad to implement or test as a single unit. Subcontrols split a [control](./overview.mdx) into smaller pieces that can each be implemented, tested, and verified on their own, while keeping the parent control as the thing your framework maps to.
 
-## What Are Subcontrols?
+Take a broad access control requirement: the encryption configuration, the approval workflow, and the physical badge system might all live under it, but they're owned by different teams and verified in completely different ways. As three subcontrols, each piece gets its own implementation and its own verification, and the parent control rolls them up.
 
-Subcontrols break down complex controls into smaller, more manageable components that can be implemented, tested, and verified independently. They provide detailed specifications for control implementation while maintaining the hierarchical relationship to their parent control.
+When an auditor tests a broad control, they test its parts, and "partially implemented" is not a status you want to explain. Splitting a control into subcontrols makes the real state visible: two components verified, one still in progress, each with a specific owner. It also keeps evidence precise, because an artifact attaches to the component it actually demonstrates rather than to a control that covers five different things.
 
-## Compliance Significance
+## Working with Subcontrols
 
-Subcontrols are essential for:
+Each subcontrol has its own reference code, name, and description, and belongs to exactly one parent control. From there it behaves like a control:
 
-- **Granular Implementation**: Breaking complex controls into manageable implementation units
-- **Detailed Testing**: Enabling specific testing of individual control components
-- **Precise Mapping**: Mapping specific requirements to implementation activities
-- **Audit Granularity**: Providing detailed audit trails for control components
-- **Risk Mitigation**: Addressing specific risk scenarios within broader control objectives
+- **Implementations**: a [control implementation](./implementations.mdx) can belong to a subcontrol directly, describing how that specific component operates and who's accountable for it
+- **Verification**: each subcontrol is tested independently, so verifying one component doesn't hide gaps in another
+- **Categories**: like controls, subcontrols span administrative, technical, and physical territory (see [control categories](./overview.mdx#control-categories)), which is often exactly why the split exists: different categories mean different implementers and different verification methods
 
-## Subcontrol Categories
+For the full field list, see the [GraphQL object reference](/docs/api/graph-api/).
 
-### Technical Subcontrols
+## FAQ
 
-- **Purpose**: Specific technical implementation requirements
-- **Examples**: Encryption algorithms, access control mechanisms, logging requirements
-- **Implementation**: Technical configuration and system settings
-- **Verification**: Automated testing and technical validation
+<details>
+<summary>When should I split a control into subcontrols?</summary>
 
-### Administrative Subcontrols
+When its components have different owners, different implementation types, or different verification methods. If one person implements and one test verifies the whole control, a single [implementation](./implementations.mdx) is simpler; don't split for the sake of splitting.
 
-- **Purpose**: Process and procedure requirements
-- **Examples**: Approval workflows, documentation requirements, training mandates
-- **Implementation**: Policy development and process implementation
-- **Verification**: Process audits and compliance checks
+</details>
 
-### Physical Subcontrols
+<details>
+<summary>Do subcontrols map to frameworks separately?</summary>
 
-- **Purpose**: Physical security and environmental requirements
-- **Examples**: Access controls, environmental monitoring, equipment protection
-- **Implementation**: Physical security measures and controls
-- **Verification**: Physical inspections and monitoring
+No, framework mapping happens at the [control](./overview.mdx) level. Subcontrols organize the work underneath a control; the parent is what satisfies the requirement.
 
-### Operational Subcontrols
+</details>
 
-- **Purpose**: Ongoing operational requirements
-- **Examples**: Monitoring procedures, maintenance activities, incident response
-- **Implementation**: Operational procedures and workflows
-- **Verification**: Operational audits and performance monitoring
+<details>
+<summary>Can a subcontrol have its own implementation?</summary>
 
-## Properties
+Yes. That's the point: each subcontrol carries its own implementation narrative and verification, independent of its siblings, and [evidence](../evidence/overview.mdx) collected for it demonstrates exactly that component.
 
-### Core Information
-
-- **ID**: Unique identifier for the subcontrol
-- **Reference Code**: Specific reference code for the subcontrol
-- **Name**: Descriptive name of the subcontrol
-- **Description**: Detailed description of the subcontrol requirement
-- **Control ID**: Parent control this subcontrol belongs to
-
-### Implementation Details
-
-- **Implementation Type**: Technical, administrative, physical, or operational
-- **Implementation Priority**: Priority level for implementation
-- **Implementation Status**: Current status of implementation
-- **Implementation Date**: When the subcontrol was implemented
-
-### Verification and Testing
-
-- **Verification Method**: How the subcontrol is verified
-- **Test Frequency**: How often the subcontrol should be tested
-- **Last Verification**: Date of most recent verification
-- **Verification Results**: Results from the latest verification
+</details>

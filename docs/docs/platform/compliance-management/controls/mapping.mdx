@@ -14,9 +14,11 @@ keywords:
   - compliance frameworks
 ---
 
+import Steps from '@site/src/components/Steps';
+
 # Control Mapping
 
-Control mapping is a crucial aspect of compliance management, allowing organizations to align controls across various frameworks and standards and eliminate duplicate work. This guide provides an overview of how to effectively map controls within the Openlane platform.
+Control mapping lets you align controls across frameworks and standards and eliminate duplicate work.
 
 ## What is Control Mapping?
 
@@ -24,13 +26,17 @@ Control mapping involves linking controls from one compliance framework to anoth
 
 ## Benefits of Control Mapping
 
-1. **Efficiency**: Reduces duplication of effort by reusing existing controls across frameworks.
-2. **Clarity**: Provides a clear view of how different standards align, making it easier to manage compliance.
-3. **Risk Management**: Helps identify gaps in controls and areas of potential risk.
-4. **Streamlined Audits**: Simplifies the audit process by providing a unified view of compliance efforts.
-5. **Improved Collaboration**: Facilitates communication between teams working on different compliance frameworks.
+| Benefit | Description |
+| ------- | ----------- |
+| Efficiency | Reduces duplication of effort by reusing existing controls across frameworks |
+| Clarity | Provides a clear view of how different standards align, making it easier to manage compliance |
+| Risk Management | Helps identify gaps in controls and areas of potential risk |
+| Streamlined Audits | Simplifies the audit process by providing a unified view of compliance efforts |
+| Improved Collaboration | Facilitates communication between teams working on different compliance frameworks |
 
 ## How to Map Controls
+
+<Steps>
 
 1. **Identify Controls**: Start by identifying the controls that need to be mapped. This can include controls from different frameworks such as SOC 2, ISO 27001, NIST, etc.
 2. **Access Control Mapping**: Navigate to the control mapping section in the Openlane Console
@@ -44,3 +50,5 @@ Control mapping involves linking controls from one compliance framework to anoth
     - Select the target control (the control you are mapping to).
     - Provide a description of the mapping to clarify the relationship between the controls.
 4. **Review and Save**: Review the mapping details and click "Save" to create the mapping.
+
+</Steps>

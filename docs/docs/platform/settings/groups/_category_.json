@@ -1,0 +1,9 @@
+{
+  "label": "Groups",
+  "position": 6,
+  "link": {
+    "type": "doc",
+    "id": "platform/settings/groups/overview"
+  },
+  "collapsed": true
+}

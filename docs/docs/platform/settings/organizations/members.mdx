@@ -1,0 +1,76 @@
+---
+title: Members and Roles
+sidebar_label: Members
+sidebar_position: 3
+description: Membership, roles, and automatic joining for your organization
+tags:
+  - organizations
+  - members
+  - roles
+keywords:
+  - organization members
+  - invitations
+  - roles
+  - auto-join
+  - member management
+---
+
+import Steps from '@site/src/components/Steps';
+
+# Members and Roles
+
+People become members of your organization through an invitation, by auto-joining on a verified email domain, or through your identity provider when SSO is enforced. Every member carries a role that determines what they can do. Member management lives under `Organization Settings` → `Members`.
+
+## Inviting Members
+
+<Steps>
+
+1. Click **Invite Member**
+
+2. Enter the person's email address and select their role (see [Roles](#roles) below)
+
+3. Optionally assign them to specific groups
+
+4. Click **Send Invitation**
+
+</Steps>
+
+The person receives an email with a link to accept the invitation. The link is valid for 14 days; if they don't accept in time, you can resend the invitation or create a new one. Invitations work regardless of your SSO settings, and an invitation marked SSO-exempt carries that exemption onto the resulting member.
+
+:::tip
+There are no per-user fees, so we recommend inviting your whole team rather than a single "compliance owner". The program works best when it reflects how your organization actually operates.
+:::
+
+## Roles
+
+Each member has one role:
+
+| Role | What it can do |
+| ---- | -------------- |
+| Owner | Full control, including billing, ownership transfer, and deleting the organization; always exempt from SSO enforcement so you cannot lock yourself out |
+| Super Admin | Everything an admin can do, plus billing and subscriptions |
+| Admin | Manages organization settings, members, and most objects; no billing access |
+| Member | Day-to-day work with organization resources, including sending invites |
+| Auditor | Read-oriented access designed for external auditors, with the ability to work with evidence and reviews |
+
+The exact object-by-object permissions for each role are laid out in the [authorization matrix](../authorization/overview.mdx); when role-level access is too coarse, [groups](../groups/overview.mdx) refine it per object.
+
+## Managing Members
+
+The Members section lists every current member, their role, and when they joined.
+
+- **Change a role**: find the member, click their current role, select the new role, and confirm.
+- **Remove a member**: find the member, click the remove option, and confirm. Members can also leave the organization themselves at any time.
+
+## Joining Automatically
+
+Beyond invitations, there are two mechanisms that add people to your organization without a manual invite, and which one applies depends on whether SSO is enforced:
+
+- **Auto-join by email domain** (SSO not enforced): anyone who verifies an email address on one of your allowed email domains is added as a member.
+- **Just-in-time provisioning** (SSO enforced): anyone who successfully authenticates against your identity provider is added as a member, optionally restricted to specific email domains.
+
+Both are configured under `Organization Settings` → `Authentication`, and the [SSO guide](../authentication/sso.mdx#getting-people-into-your-organization) covers the mechanics, the settings, and how to choose between them. Restricting allowed email domains also constrains who can be invited; free email providers like Gmail cannot be used as allowed domains.
+
+:::tip
+If you're working with a fractional CISO or consultant, adding their domain upfront (as an allowed domain, or as an [SSO exempt domain](../authentication/sso.mdx#exemptions) when SSO is enforced) makes collaboration much smoother.
+:::

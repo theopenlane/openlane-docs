@@ -1,9 +1,9 @@
 {
-  "label": "Integration Providers",
+  "label": "Building Integrations",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "First class integration providers from data ingestion into Openlane"
+    "type": "doc",
+    "id": "developers/integrations/development/architecture"
   },
   "collapsed": true
 }

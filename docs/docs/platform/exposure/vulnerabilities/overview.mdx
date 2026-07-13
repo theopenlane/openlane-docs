@@ -1,0 +1,167 @@
+---
+title: Vulnerabilities
+description: Track known weaknesses and remediation timelines
+sidebar_position: 1
+sidebar_label: Overview
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Vulnerabilities
+
+A vulnerability is a known weakness that could be exploited: a flaw in software you run, an outdated dependency in your codebase, or an exposed service missing a patch. Most are cataloged publicly with a CVE identifier and scored with CVSS, which is why they arrive from scanners with a name, a severity label, and a numeric score attached. This distinguishes them from [findings](../findings.mdx), which describe issues observed in your specific environment: a vulnerability says "OpenSSL versions below X have this flaw," while a finding says "this host is running one of those versions."
+
+Prioritization matters more than raw detection. Scanners routinely surface hundreds or thousands of results, and CVSS severity alone is not enough to rank them: a critical-scored vulnerability in a development-only dependency with no known exploit often matters less than a high-scored one on an internet-facing production system with a patch available. Useful triage also weighs exploitability, whether the affected system is in production, and whether a fix exists.
+
+Compliance frameworks turn this into a timeliness question. SOC 2 CC7 and ISO 27001's technical vulnerability management requirements expect you to define remediation timelines by severity (7, 30, and 90 days is a common pattern) and then meet them. Auditors sample: they pick vulnerabilities from your records and check whether the time from discovery to fix stayed inside your own stated SLA. That means your records need reliable discovery dates, fix dates, and a documented decision for everything you chose not to fix.
+
+## How Vulnerabilities Work in Openlane
+
+Most vulnerability records arrive through integrations. The [AWS](../../integrations/aws.mdx), [GCP Security Command Center](../../integrations/gcp_scc.mdx), and [Microsoft Defender for Cloud](../../integrations/azure_security_center.mdx) integrations pull provider security findings and normalize them into vulnerability records. The AWS and GCP integrations deduplicate by `externalID` (with CVE fallback matching) so repeated syncs update existing records instead of creating duplicates, and accept CEL filter expressions that control what gets ingested, so you can exclude noise before it ever becomes a record. For scanners without an integration, bulk CSV import and the API accept the same shape: carry the scanner's stable identifier and the CVE where one exists.
+
+Because sources describe severity differently, each record keeps both signals: the severity label as the source reported it, and a normalized security level that lets you filter consistently across every source. Where the source provides it, numeric context rides along too: a CVSS-style score, how practical exploitation is, and whether a patched version exists.
+
+Dependency-scanner output gets first-class treatment: package name and ecosystem, the vulnerable version range, the first patched version, and the manifest path that declared the dependency. Lifecycle tracking covers the timeline auditors ask about, from discovery through fix, with a remediation SLA recording your committed window in days. When you decide not to fix something, dismissal fields capture when, why (tolerable risk, component not in use, ineligible, or no bandwidth), and a free-text explanation, and a validated flag records that your security team confirmed the issue is real.
+
+Vulnerabilities connect outward to the rest of the [exposure pipeline](../overview.mdx): the scans that observed them, the assets and entities they affect, related findings, the remediations fixing them, and the risks they roll up into. The full field list is in the [API reference](/graphql).
+
+## Working with Vulnerabilities
+
+### Triage This Week's Intake
+
+Filter open vulnerabilities by `securityLevel` for `CRITICAL` and `HIGH`, then narrow to production systems. For each real issue, set `validated` to true, check `fixAvailable` and `firstPatchedVersion` to gauge effort, and create a [remediation](../remediations.mdx) with an owner and a due date derived from the record's `remediationSLA`. Anything that turns out to be a scanner artifact gets dismissed with a reason rather than silently closed, so the decision survives the person who made it.
+
+### Prove SLA Compliance
+
+Your SLA lives on the record as `remediationSLA`, and the measurable window is `discoveredAt` to `fixedAt`. Query open vulnerabilities whose age exceeds their SLA to drive your weekly escalation list, and use the same query during audit prep to find the exceptions before the auditor does. When an exception is legitimate, the linked remediation's due date and ticket reference document why the clock is still running.
+
+### Dismiss What You Will Not Fix, Defensibly
+
+Not every vulnerability deserves a fix: the affected code path may be unused, the risk may be tolerable, or the dependency may be unreachable. Record that decision with `dismissedReason` and a `dismissedComment` explaining the rationale. If the same class of vulnerability keeps getting dismissed for capacity reasons, that pattern is telling you something: promote it to a [risk](../risks/overview.mdx) so the accepted exposure is visible in the register instead of buried in closed records.
+
+## FAQ
+
+<details>
+<summary>What is the difference between a vulnerability and a finding?</summary>
+
+A vulnerability is a known weakness, usually with a CVE and a severity score: the thing that could be exploited. A finding is an observed issue in your environment, such as a specific misconfigured resource, and may or may not involve a CVE. The two link to each other in Openlane, and cloud integrations create both kinds of records depending on what the source reported.
+
+</details>
+
+<details>
+<summary>My scanner is not one of the built-in integrations. Can I still use this?</summary>
+
+Yes. Bulk CSV import and the API accept vulnerability records from any source. Use the scanner's stable identifier as `externalID` and include the CVE where one exists so records stay traceable back to the tool that found them.
+
+</details>
+
+<details>
+<summary>Do we have to fix every vulnerability before an audit?</summary>
+
+No, and auditors do not expect zero open vulnerabilities. They expect prioritization by severity, remediation inside your stated SLAs, and documented decisions for anything you accepted rather than fixed. A dismissed vulnerability with a reason and a comment is defensible; a silently closed one is not.
+
+</details>
+
+## Examples
+
+<Tabs groupId="api-format" queryString>
+  <TabItem value="csv" label="CSV">
+
+```csv
+# Create
+ExternalID,CveID,DisplayName,Severity,Score,Status,RemediationSLA,Source
+scanner-8842,CVE-2025-12345,OpenSSL out-of-date,HIGH,8.1,OPEN,30,scanner
+scanner-8843,CVE-2024-77890,Container privilege escalation,CRITICAL,9.6,OPEN,7,scanner
+```
+
+```csv
+# Update
+ID,Severity,Status,RemediationSLA,Validated
+VUL01J9VULN11111111111111,MEDIUM,IN_PROGRESS,21,true
+VUL01J9VULN22222222222222,LOW,CLOSED,7,true
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+```graphql
+mutation {
+  createVulnerability(
+    input: {
+      externalID: "scanner-8842"
+      cveID: "CVE-2025-12345"
+      displayName: "OpenSSL out-of-date"
+      severity: "HIGH"
+      source: "scanner"
+    }
+  ) {
+    vulnerability {
+      id
+      externalID
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateVulnerability(
+    id: "VUL01J9VULN11111111111111"
+    input: {
+      severity: "MEDIUM"
+      status: "IN_PROGRESS"
+    }
+  ) {
+    vulnerability {
+      id
+      status
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+```go
+ctx := context.Background()
+
+displayName := "OpenSSL out-of-date"
+cve := "CVE-2025-12345"
+
+_, err := client.CreateVulnerability(ctx, graphclient.CreateVulnerabilityInput{
+	ExternalID:  "scanner-8842",
+	DisplayName: &displayName,
+	CveID:       &cve,
+})
+if err != nil {
+	return err
+}
+
+severity := "MEDIUM"
+_, err = client.UpdateVulnerability(ctx, "VUL01J9VULN11111111111111", graphclient.UpdateVulnerabilityInput{
+	Severity: &severity,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+```bash
+openlane vulnerability create \
+  --external-id "scanner-8842" \
+  --cve-id "CVE-2025-12345" \
+  --display-name "OpenSSL out-of-date" \
+  --severity HIGH
+
+openlane vulnerability update \
+  --id "VUL01J9VULN11111111111111" \
+  --severity MEDIUM
+```
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,76 @@
+---
+title: Policies to Framework Mapping
+sidebar_label: Policies by Framework
+sidebar_position: 2
+description: Which policies each compliance framework expects, and which policies apply universally across frameworks
+keywords:
+  - policy framework mapping
+  - required policies
+  - SOC 2 policies
+  - ISO 27001 policies
+  - HIPAA policies
+  - compliance policies
+  - policy requirements
+tags:
+  - policies
+  - compliance
+  - frameworks
+---
+
+# Policies to Framework Mapping
+
+Each framework has its own set of requirements, but the policies they expect overlap heavily. This page maps common policies to the frameworks that expect them, so you can see which documents you need for the standards you are pursuing and which ones will carry you across every framework you add later.
+
+The core takeaway: a well-scoped set of foundational policies satisfies effectively every security and privacy framework. Framework-specific policies only enter the picture for specialized regimes (HIPAA's privacy rules, federal control catalogs, AI management standards, and the like).
+
+In the table, **All** means the policy maps to effectively every commonly pursued framework, including SOC 2, ISO 27001, ISO 27701, NIST 800-53, NIST 800-171, NIST CSF, NIST AI RMF, PCI DSS, HIPAA, GDPR, CCPA/CPRA, CMMC, FedRAMP, DORA, NIS 2, COBIT, FFIEC, Cyber Essentials, CCM, CIS Controls, HITRUST, SOX ITGC, Microsoft SSPA, Essential Eight, and ISO 42001.
+
+| Policy | Frameworks |
+| ------ | ---------- |
+| Acceptable Use Policy | All |
+| Asset Management Policy | All |
+| Backup Policy | All |
+| Business Continuity Plan | All |
+| Change Management Policy | All |
+| Code of Conduct | All |
+| Data Classification Policy | All |
+| Data Protection Policy | All |
+| Data Retention Policy | All |
+| Disaster Recovery Plan | All |
+| Encryption Policy | All |
+| Incident Response Plan | All |
+| Information Security Policy | All |
+| Logging and Monitoring Policy | All |
+| Network Security Policy | All |
+| Password Policy | All |
+| Physical Security Policy | All |
+| Risk Assessment Policy | All |
+| Software Development Life Cycle Policy | All |
+| System Access Control Policy | All |
+| Vendor Management Policy | All |
+| Vulnerability Management Policy | All |
+| AI Governance Policy | NIST AI RMF, ISO/IEC 42001 |
+| AI Risk Management Policy | NIST AI RMF, ISO/IEC 42001 |
+| AI System Development and Evaluation Policy | NIST AI RMF, ISO/IEC 42001 |
+| Artificial Intelligence Management System (AIMS) Plan | ISO/IEC 42001 |
+| Breach Notification Policy | HIPAA |
+| Business Associate Policy | HIPAA |
+| Information Governance Policy | DORA, CCM, HITRUST |
+| Internal Privacy Policy | ISO/IEC 27701, HITRUST |
+| ISMS Plan | ISO/IEC 27001 |
+| ISMS and PIMS Plan | ISO/IEC 27701 |
+| Maintenance Management Policy | FedRAMP, CMMC, NIST 800-53, NIST 800-171, NIST CSF, DORA, CIS Controls, HITRUST |
+| PCI DSS Compliance Policy | PCI DSS v4 |
+| Personal Data Management Policy | CCPA, CPRA, GDPR, HITRUST |
+| Privacy, Use, and Disclosure Policy | HIPAA |
+| Public Cloud PII Protection Policy | ISO/IEC 27018, NIST AI RMF, HITRUST |
+| Shared Responsibility Policy | ISO/IEC 27017, ISO/IEC 27018, CCM |
+| System and Information Integrity Policy | FedRAMP, CMMC, NIST 800-53, NIST 800-171, NIST CSF, DORA, CIS Controls, HITRUST, Essential Eight |
+| System and Services Acquisition Policy | FedRAMP, CMMC, NIS 2, NIST 800-53, NIST 800-171, DORA |
+| System Security Planning Policy | FedRAMP, CMMC, NIST 800-53, NIST 800-171, CCM |
+
+## How to Use This
+
+If you are pursuing your first framework, start with the universal set: those policies are the working core of a compliance program, and every framework you add later will reuse them. Then add the framework-specific documents only for the regimes you actually operate under; there is no reason to maintain a Business Associate Policy if you never touch HIPAA.
+
+Because one policy satisfies many frameworks, write each policy once and [map it to controls](../controls/mapping.mdx) across the standards you pursue rather than maintaining per-framework copies. See [Policies and Procedures](./policies.mdx) for guidance on consolidating and writing these documents, and the [import guide](./import.mdx) for bringing existing policies into Openlane.

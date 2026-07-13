@@ -1,0 +1,111 @@
+---
+title: Business Continuity Plan Guidance
+sidebar_label: Business Continuity
+sidebar_position: 5
+description: What a business continuity plan should contain, including roles and response teams, the business impact analysis, recovery metrics (MTD, RTO, RPO), and annual testing requirements
+keywords:
+  - business continuity
+  - business continuity plan
+  - BCP
+  - business impact analysis
+  - BIA
+  - maximum tolerable downtime
+  - RTO
+  - RPO
+  - operational resilience
+tags:
+  - compliance
+  - best practices
+  - business continuity
+---
+
+import Steps from '@site/src/components/Steps';
+
+# Business Continuity Plan Guidance
+
+A business continuity plan (BCP) documents how your organization keeps operating through a disruption. It works in conjunction with the [disaster recovery plan](./disaster-recovery.mdx): the DR plan restores systems, while the BCP covers the rest of the business, including people, facilities, communications, and the processes that depend on those systems. Store the plan with your policy documents in [Policies and Procedures](/docs/platform/compliance-management/policy-and-procedure-management/policies) and map it to the [controls](/docs/platform/compliance-management/controls/overview) it satisfies.
+
+## Core Requirements
+
+Most continuity policies commit the organization to three things. First, a plan and process for business continuity, including backup and recovery of systems and data, is defined and documented. Second, the plan is simulated and tested at least once a year, with metrics captured and identified improvements filed and tracked. Third, security controls stay operational at both primary and backup sites throughout any continuity event; a disruption is not a reason to run without logging, access control, or monitoring. If your continuity policy makes these commitments, your BCP and its test results are the evidence that you keep them.
+
+## Roles and Response Teams
+
+Assign continuity responsibilities to roles rather than individuals, and adjust the titles to your actual structure:
+
+| Role | Responsibility |
+| ---- | -------------- |
+| Security officer and privacy officer | Maintain the plan and keep it current |
+| CEO (or equivalent) | Personnel safety and authority to activate the plan |
+| Executive leadership | Notified of any contingency event; provides direction and resources |
+| Head of engineering | Recovery of the technical environment, per the DR plan |
+| Business operations lead | Succession authority if primary decision-makers are unavailable |
+
+Most organizations also define response teams: an HR and facilities team for physical safety and the work environment, an infrastructure or DevOps team for cloud applications and damage assessment, and a security team for cybersecurity incidents and recovery support. Every team needs offline copies of the plan and contact information, since the disruption may take out the systems that normally hold both.
+
+## Operational Resilience Inputs
+
+The plan is only as good as the analysis behind it. Three activities feed it. A risk assessment identifies internal and external threats across technology, people, facilities, and third-party dependencies; track these in the [risk register](/docs/platform/exposure/risks/overview) so they stay visible outside the planning cycle. A vulnerability analysis identifies weaknesses that would amplify a disruption. And a business impact analysis (BIA) determines which processes are mission critical and what their outage actually costs.
+
+## Business Impact Analysis
+
+The BIA is the step most organizations skip, and it is the one that turns a template into a plan. It proceeds in three steps:
+
+<Steps>
+
+1. **Determine process criticality.** Identify the business processes that depend on your systems and characterize the impact of a disruption to each, including the maximum downtime the organization can tolerate while still maintaining its mission.
+2. **Identify resource requirements.** For each critical process, evaluate what rapid resumption actually requires: facilities, personnel, equipment, software, data files, system components, and vital records.
+3. **Establish recovery priorities.** Link system resources to the critical processes they support and set the order in which they are recovered.
+
+</Steps>
+
+## Recovery Metrics
+
+The BIA produces three metrics that drive both the BCP and the DR plan:
+
+| Metric | Definition |
+| ------ | ---------- |
+| Maximum tolerable downtime (MTD) | The total time the organization can tolerate a process being unavailable, including all impact considerations |
+| Recovery time objective (RTO) | The maximum time a system resource can remain unavailable before there is unacceptable impact on other resources, the processes it supports, and the MTD |
+| Recovery point objective (RPO) | The point in time before the disruption to which process data must be recoverable, which determines how much data loss is acceptable and therefore how frequently backups run |
+
+MTD is typically larger than RTO and RPO, since it accounts for the whole process rather than a single system. Customer-facing processes usually warrant stricter objectives than internal functions: an hour of billing-report downtime is an inconvenience, while an hour of production API downtime may breach contractual commitments.
+
+## Work Site Recovery
+
+If a facility becomes unusable, the plan should state where people work: remote from home or from a secondary location with internet access. Confirm ahead of time that everyone can operate securely from an alternate location, including access to the systems they need and the security controls (device management, VPN or zero-trust access) that apply there.
+
+## Customer Communication
+
+Decide in advance how customers learn about a disruption and track recovery progress. A public status page is common practice, and publishing incident updates through your [Trust Center](/docs/platform/trust-center/updates) keeps customers and prospects informed from the same page they already use to review your security posture.
+
+## Testing the Plan
+
+Test at least annually using tabletop exercises, technical failover simulations, or live incident walkthroughs; pick the method that matches your risk profile and operational complexity, and vary it year to year. Capture metrics from each test against your RTO and RPO targets, record the results as [evidence](/docs/platform/compliance-management/evidence/overview), and file identified improvements as [tasks](/docs/platform/automation/tasks) so they are completed rather than rediscovered at the next test.
+
+## What the Document Should Include
+
+Beyond the sections above, a complete BCP typically documents the system architecture (diagrams and descriptions), the operating environment and where users are located, external partners and dependencies, backup procedures, how BIA data was collected, business process descriptions and their impact categories, equipment and redundancy analysis, the recovery priority sequence, and a revision history. Keep the revision history current: auditors read it first to confirm the plan is maintained rather than written once.
+
+## FAQ
+
+<details>
+<summary>Can the BCP and DR plan be one document?</summary>
+
+They can be, especially for small organizations, as long as both concerns are covered: business operations and people on one side, system recovery on the other. As the organization grows, separate documents with clear cross-references are easier to maintain and test independently.
+
+</details>
+
+<details>
+<summary>How detailed does the BIA need to be?</summary>
+
+Proportionate to your operation. A single-product SaaS company may have a short list of critical processes and one obvious recovery priority. What auditors look for is that the analysis was actually performed and that the MTD, RTO, and RPO values trace back to it rather than being copied from a template.
+
+</details>
+
+<details>
+<summary>What counts as a valid annual test?</summary>
+
+A documented exercise with a scenario, participants, findings, and follow-up actions. A tabletop walkthrough qualifies; an undocumented hallway conversation does not. Testing both the people side (notification, decision-making) and the technical side (restore, failover) over time gives the strongest evidence.
+
+</details>

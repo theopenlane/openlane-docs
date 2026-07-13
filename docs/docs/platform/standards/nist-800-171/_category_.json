@@ -1,0 +1,9 @@
+{
+  "label": "NIST 800-171",
+  "position": 7,
+  "link": {
+    "type": "doc",
+    "id": "platform/standards/nist-800-171/overview"
+  },
+  "collapsed": true
+}

@@ -1,0 +1,112 @@
+---
+title: Email
+description: Send your Openlane campaign emails from your own provider and sender address
+sidebar_position: 7
+sidebar_label: Email
+keywords:
+  - email integration
+  - campaign email
+  - resend
+  - sender address
+tags:
+  - integrations
+  - email
+  - messaging
+  - notifications
+---
+
+import Steps from '@site/src/components/Steps';
+
+# Email Integration
+
+By default, Openlane sends emails on your behalf from a shared Openlane sending address. The Email integration lets you send your campaign emails, such as [Trust Center update announcements](../trust-center/notifications.mdx) to your subscribers, from your own [Resend](https://resend.com) account and sender address instead.
+
+:::note
+Resend is currently the only supported email provider.
+:::
+
+## Key Capabilities
+
+- **Your Own Sender Address:** Send campaign emails from an address you choose rather than the shared Openlane one.
+- **Resend Delivery:** Send through your own Resend account using a Resend API key.
+
+## Prerequisites
+
+- A [Resend](https://resend.com) account.
+- A Resend API key with permission to send email.
+- The address you want to send from.
+
+## Step-by-Step Setup
+
+### Step 1: Create a Resend API Key
+
+<Steps>
+
+1. In Resend, create an API key with permission to send email.
+2. Copy the key value; it is only shown once.
+
+</Steps>
+
+### Step 2: Connect in Openlane
+
+<Steps>
+
+1. Navigate to **Organization Settings** > **Integrations** and find **Email**.
+2. Click **Configure** and provide the following:
+
+   | Field | Required | Description |
+   |---|---|---|
+   | `provider` | Yes | Email provider; `resend` |
+   | `apiKey` | Yes | Resend API key, used to authorize sending |
+   | `fromEmail` | Yes | The address your emails are sent from |
+   | `companyName` | Yes | Company display name shown in the email footer |
+   | `companyAddress` | No | Company mailing address shown in the footer for CAN-SPAM compliance |
+
+3. Click **Save & Connect**.
+
+</Steps>
+
+:::note
+The integration controls only who an email comes from and the footer identity. The look and feel of an email (its logo, colors, layout, and body content) comes from the email template used for the send. Trust Center update emails additionally use your [Trust Center branding](../trust-center/branding.mdx), so set your logo and styling there.
+:::
+
+## Validate Connection
+
+After saving, Openlane runs a health check that confirms your Resend credentials can send email. The result appears on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming the connection. If it shows **Needs Attention**, review the troubleshooting section below.
+
+## What This Integration Powers
+
+Once connected and enabled for campaigns, Resend delivers Openlane's campaign emails, such as:
+
+- **Trust Center update announcements** sent to your [subscribers](../trust-center/notifications.mdx)
+- **Questionnaire campaign** invitations sent to recipients
+
+Trust Center emails continue to use your [Trust Center branding](../trust-center/branding.mdx) for their look and feel; this integration controls the sender address they come from.
+
+:::note
+Some system messages, such as subscription confirmation emails and subprocessor change notifications, are always sent by Openlane on your behalf and are not affected by this integration.
+:::
+
+## Disconnect
+
+To remove this integration:
+
+<Steps>
+
+1. Navigate to **Organization Settings** > **Integrations**
+1. Select the **Installed** tab
+1. Open the menu on the integration card and select **Disconnect**.
+
+</Steps>
+
+This removes the stored credentials and stops sending through Resend. Openlane resumes sending on your behalf from its default address.
+
+## Troubleshooting
+
+- **Health check failed:** verify the Resend API key value.
+- **From address rejected by Resend:** make sure the `fromEmail` you entered is an address Resend allows you to send from.
+
+## References
+
+- [Resend documentation](https://resend.com/docs)
+- [Trust Center Subscriber Notifications](../trust-center/notifications.mdx)

@@ -6,7 +6,26 @@ sidebar_position: 2
 
 # Style Guide
 
-This document outlines the style guide for the Openlane documentation. It covers the general layout, formatting text, lists, tables, dates and times, diagrams and images, language, grammar and tone, punctuation, links, and attribution.
+The style guide for the Openlane documentation: how we write, format, and structure every page.
+
+## Voice and Tone
+
+Openlane documentation speaks with one voice across product and developer docs:
+
+* Write with conversational directness. Meet the reader where they are (setting up an integration, preparing for an audit, debugging a failed flow) and get to the point
+* The Openlane team speaks as "we". State recommendations as positions with reasons: "We recommend X because Y". Do not hedge behind passive constructions like "it is recommended"
+* Explain why alongside how. A procedure without a reason invites misuse; a recommendation without a trade-off invites distrust
+* Address the reader as "you"
+* In procedures, tell the reader what success looks like: follow "do this" with "you should see this" where the outcome is known
+* Every page opens with a 1 to 3 sentence context paragraph between the title and the first `H2`. The opener describes the subject itself, never the page: no "This page covers...", "This section explains...", or any other sentence that narrates the page's own structure. State the facts the reader came for and let the headings show what the page contains
+
+Equally important is what the voice is not:
+
+* No marketing or blog register: no aphorism openers, rhetorical-question hooks, punchline contrasts, or dramatized failure stories. State facts declaratively
+* No humor, memes, slang, or pop culture references. These docs are read by security reviewers and auditors evaluating a compliance product
+* No exclamation points, no emoji, no filler ("simply", "just", "please note")
+* No inventories: do not enumerate schema fields, enum values, or function names in user-facing docs. Describe what the reader can do, not what the code contains
+* Docs are product-forward: Openlane is the system of record, and external tools feed it. Do not scope-shrink Openlane by deferring to competing tooling
 
 ## Layout
 
@@ -59,6 +78,7 @@ When using code blocks:
 
 * Capitalize the first character of each entry unless the item is explicitly case sensitive
 * Leave exactly 1 new line after a list
+* Use numbered lists only when order matters: implementation sequences, ranked recommendations, maturity progressions, and procedures. Do not number independent best practices; numbering implies order or priority even when none exists
 * Ordered lists should use repeating `1.` should _not_ enumerate the lists (e.g. `1. 2. 3.`)
 * Every ordered bullet should only have `1.`
 * Unordered lists should use `*` as delimiters instead of `-` ; when needing different sub points use `+`
@@ -78,12 +98,72 @@ When using code blocks:
 * When inserting a code block into an ordered list, indent (space) an additional
   two times
 
-## Tables
+## Structuring Content
 
-* Use tables for structured information
-* Prefer tables over long unordered lists or lists with large indentation
-* Avoid long inline links
-* Do not use excessively wide tables
+Choose the structure by what the reader is doing, not by what is easiest to write:
+
+* **Tables are for comparison, not explanation.** A two-column table works for very short guidance (practice | one-sentence why) and shines when readers need to compare many items quickly. Tables become poor reading experiences when the rationale runs longer than one sentence, when cells contain lists or code, when the page must work well on mobile, or when recommendations carry supporting notes or exceptions. A table is not the default for teaching
+* **Cards** (the `cards-row` grid) suit small sets of parallel items with a title and a short body, such as compare-and-contrast concepts or label-plus-fact sets
+* **`H3` subsections** suit 2 to 4 distinct concepts that each need a few sentences; the labels become headings and appear in the page ToC
+* **Prose** carries explanation. When items need teaching rather than scanning, write paragraphs; the would-be label becomes the sentence subject
+* **Never write definition-bullet lists** (`- **Bold label**: text about the label`). Convert them to one of the structures above
+* Avoid long inline links and excessively wide tables
+
+## Callouts
+
+Keep the main recommendation clean, then use callouts (admonitions) for information that changes how someone should apply it: exceptions, consequences, and warnings.
+
+:::info[Important]
+Emergency administrator accounts may be exempt from SSO, but they should be tightly controlled and monitored.
+:::
+
+Useful callout framings: Important, Warning, Example, Exception, Recommendation. Avoid giving every item its own callout; when everything is emphasized, nothing is.
+
+For supplementary detail that most readers should be able to skip, use the collapsible callout, which renders like an admonition but collapsed by default:
+
+```jsx
+import Callout from '@site/src/components/Callout';
+
+<Callout type="warning" title="Exception">
+  Emergency administrator accounts may be exempt from SSO, but they should be
+  tightly controlled and monitored.
+</Callout>
+```
+
+## Icon Cards
+
+For grids of short parallel points (a single container with an icon and text, no header), use compact cards with a [lucide](https://lucide.dev/icons/) icon:
+
+```jsx
+import {ShieldCheck, KeyRound} from 'lucide-react';
+
+<div className="row cards-row">
+<div className="col col--6">
+<div className="card card--compact">
+<ShieldCheck />
+<span>MFA is enforced independently of SSO for every member.</span>
+</div>
+</div>
+<div className="col col--6">
+<div className="card card--compact">
+<KeyRound />
+<span>API tokens are organization-scoped; PATs follow the person.</span>
+</div>
+</div>
+</div>
+```
+
+## Glossary Terms
+
+Link compliance terminology to the glossary with a hover tooltip. Definitions are generated from the [glossary page](/docs/platform/glossary) at build time, and unknown slugs degrade to plain text:
+
+```jsx
+import Term from '@site/src/components/Term';
+
+Every <Term t="subprocessor">subprocessor</Term> should be under a DPA.
+```
+
+The slug is the kebab-cased term name (`carve-out-method`, `residual-risk`). Tag the first meaningful mention on a page, not every occurrence.
 
 ## Dates and Times
 
@@ -104,7 +184,7 @@ point and with alt text in place of the link text.
 ![Alt text](../img/.png)
 ```
 
-## Language, Grammar and Tone
+## Language and Grammar
 
 * Prefer an active voice and present tense
     * Active voice is when the subject of the sentence performs the action. Whereas with passive voice the subject receives the action. Writing with an active voice in mind easily conveys to the reader who or what is performing
@@ -113,16 +193,16 @@ point and with alt text in place of the link text.
     created
     * **Bad example:** A ReplicaSet is created by updating the Deployment
 * Use simple, direct, unambiguous language
-    * Avoid using unnecessary or extra language * be straightforward and direct
+    * Avoid using unnecessary or extra language; be straightforward and direct
     * **Good example:** Wait for the Pod to start
     * **Bad example:** Please be patient and wait for the Pod to start
 * Use gender-neutral language
-* Address the reader as "you"
 * If using acronyms, ensure they are clearly defined in the same document
 * If using an abbreviation, spell it out the first time it is used in the document unless it is commonly known (example: TCP/IP)
 
 ## Punctuation
 
+* Do not use em dashes. Use commas, periods, or parentheses instead
 * Do not use punctuation in headings
 * End full sentences with a period, except when in an unordered bulleted list or when using a link at the end of a sentence (where it would be confusing if the period is a part of the link element)
 * Add a single space after a period when beginning a new sentence

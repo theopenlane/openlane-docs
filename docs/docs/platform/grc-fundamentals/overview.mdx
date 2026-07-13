@@ -1,0 +1,174 @@
+---
+title: Overview
+sidebar_position: 1
+description: What governance, risk, and compliance means, how the three disciplines fit together, and the concepts behind a GRC program
+keywords:
+  - GRC
+  - governance risk compliance
+  - what is GRC
+  - governance
+  - risk management
+  - compliance management
+  - audit preparation
+  - compliance fundamentals
+tags:
+  - grc
+  - fundamentals
+---
+
+# GRC Fundamentals
+
+The concepts behind the product live here: what GRC actually is, how laws, regulations, and frameworks differ, and how to prepare for an audit. For the objects you manage day to day, see [Compliance Management](../compliance-management/overview.mdx).
+
+## What is GRC?
+
+Governance, risk, and compliance is the coordinated strategy an organization uses to align its security policies, manage operational risk, and meet regulatory requirements. The value is in the coordination: a GRC program gives business leaders, security teams, compliance officers, and risk managers one shared picture and clear accountability, instead of three departments solving overlapping problems independently.
+
+The three disciplines each answer a different question:
+
+<div className="row cards-row">
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Governance</h4></div>
+<div className="card__body">
+
+**Answers:** who decides, and how is it enforced?
+
+How the organization makes strategic decisions, enforces internal controls, and oversees the risk and compliance work. Governance keeps operations aligned with business goals and the standards you have committed to.
+
+**In Openlane:** [policies and procedures](../compliance-management/policy-and-procedure-management/policies.mdx), [approval workflows](../automation/workflows/overview.mdx), and [groups and permissions](../settings/authorization/overview.mdx)
+
+</div>
+</div>
+</div>
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Risk Management</h4></div>
+<div className="card__body">
+
+**Answers:** what could hurt us, and what are we doing about it?
+
+The structured approach to identifying, evaluating, and mitigating the threats that could disrupt business processes, information security, or compliance itself.
+
+**In Openlane:** the [risk register](../exposure/risks/risk-register.mdx) and the [exposure pipeline](../exposure/overview.mdx) that feeds it
+
+</div>
+</div>
+</div>
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Compliance</h4></div>
+<div className="card__body">
+
+**Answers:** are we meeting our obligations, and can we prove it?
+
+Making sure the organization meets regulatory requirements, industry standards, and its own internal policies, with the evidence to demonstrate it.
+
+**In Openlane:** [controls](../compliance-management/controls/overview.mdx), [evidence](../compliance-management/evidence/overview.mdx), and [programs](../compliance-management/programs/overview.mdx) mapped to the [standards catalog](../standards/overview.mdx)
+
+</div>
+</div>
+</div>
+</div>
+
+When these operate in silos, the failure modes are predictable: duplicate effort, inconsistent policies, risk assessments that use different criteria in different teams, and compliance gaps that nobody owns. We built Openlane as a single platform for all three so the risk register, the control set, and the evidence trail reference each other instead of living in separate tools.
+
+## Why GRC Matters
+
+- **Better decisions.** A structured program gives leadership real-time visibility into risks, compliance status, and internal controls, so decisions are made on data rather than in reaction to incidents. A gap analysis before an ISO 27001 audit, for example, tells you exactly which corrective actions to prioritize before the formal assessment.
+- **Less wasted effort.** Manual compliance tracking in spreadsheets and email produces duplicate work, expensive audits, and evidence scavenger hunts. Centralizing the program and automating the recurring pieces (evidence collection, access reviews, attestation campaigns) removes most of that overhead.
+- **Reduced exposure.** Unmanaged third-party risk, weak access controls, and missed regulatory changes carry real costs in fines, breaches, and stalled deals. A proactive program surfaces these before they escalate.
+
+There is also a commercial driver: enterprise buyers routinely require SOC 2, ISO 27001, or GDPR compliance before signing, and investors evaluate risk management as part of diligence. A program that can produce current attestations on demand (see [Trust Center](../trust-center/overview.mdx)) shortens those conversations.
+
+## Who Owns GRC?
+
+GRC is shared across security, IT, legal, and leadership, but who leads it day to day varies with organization size:
+
+| Typical owner | Common in | Owns |
+| ------------- | --------- | ---- |
+| CISO | Larger organizations | Strategic direction, executive alignment, oversight of risk and compliance initiatives |
+| Head of GRC or Compliance | Mid-market and enterprise | Control implementation, audit readiness, internal policies |
+| Engineering or DevSecOps lead | Smaller and tech-driven companies | Secure-by-design practices, automation, evidence collection |
+
+Whoever leads, the program only works with executive buy-in: leadership sets the resourcing and treats compliance as a company-wide responsibility rather than an IT problem.
+
+## Laws, Regulations, and Frameworks
+
+Not everything called a "compliance requirement" carries the same force. The summary table on each page in [Frameworks & Standards](../standards/overview.mdx) classifies it as one of three types:
+
+<div className="row cards-row">
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Law</h4></div>
+<div className="card__body">
+
+**Created by:** legislatures
+
+**Binding on:** everyone in the jurisdiction
+
+**Enforced through:** courts and government action
+
+**Consequences:** civil and criminal penalties, sometimes a private right to sue
+
+**Style:** broad principles that agencies interpret
+
+**Examples:** HIPAA, SOX, GDPR
+
+</div>
+</div>
+</div>
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Regulation</h4></div>
+<div className="card__body">
+
+**Created by:** government agencies, under authority delegated by law
+
+**Binding on:** entities the agency oversees
+
+**Enforced through:** the agency itself
+
+**Consequences:** fines, license loss, contract debarment
+
+**Style:** more prescriptive than the underlying law
+
+**Examples:** CMMC, DFARS, NY DFS Part 500
+
+</div>
+</div>
+</div>
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Framework</h4></div>
+<div className="card__body">
+
+**Created by:** standards bodies and industry groups
+
+**Binding on:** no one, until a customer or contract requires it
+
+**Enforced through:** contracts and market expectations
+
+**Consequences:** contractual and reputational
+
+**Style:** control catalogs and best practices
+
+**Examples:** ISO 27001, NIST CSF, SOC 2, CIS Controls, PCI DSS (via card network contracts)
+
+</div>
+</div>
+</div>
+</div>
+
+The practical difference is who can compel you and what happens if you fall short: laws and regulations apply to you whether or not you agree, while frameworks become binding through the deals you sign. Most compliance programs juggle all three at once, which is why one control mapped across several sources is the working unit of the [controls model](/docs/platform/compliance-management/controls/overview).
+
+## GRC Frameworks
+
+Beyond the security and privacy standards covered in [Frameworks & Standards](../standards/overview.mdx), a few published frameworks structure the GRC program itself. COSO's internal control framework underpins financial-reporting governance (it is what SOX compliance builds on, and the SOC 2 Trust Services Criteria are built on it as well). COBIT, from ISACA, structures IT governance and separates governance from management. On the risk side, [Risk Management Frameworks](../exposure/risks/riskmanagement.mdx) surveys COSO ERM, ISO 31000, the NIST RMF, FAIR, and others.
+
+You do not need to adopt one of these wholesale; most organizations borrow the structure they need. What matters is that governance, risk, and compliance run on shared definitions and shared data, which is the practice the rest of this section and the [Glossary](../glossary/index.mdx) support.
+
+## What's in This Section
+
+- [Audit Preparation](./audit/index.mdx): the planning work before an audit, ordered the way the tasks happen: scoping, stakeholders, gap analysis, and firm selection
+- [Audit Procedures](./auditprocedures.mdx): how auditors test controls and what evidence they expect

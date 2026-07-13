@@ -1,0 +1,49 @@
+---
+title: Defining the Audit Scope
+sidebar_label: Scoping
+sidebar_position: 2
+description: How to define the system scope for a compliance audit, including services, systems, Trust Services Categories, and subservice organizations
+keywords:
+  - audit scope
+  - system scope
+  - audit scoping
+  - Trust Services Categories
+  - subservice organizations
+  - carve-out method
+  - SOC 2 scope
+tags:
+  - audit
+  - audit prep
+  - SOC 2
+---
+
+import Term from '@site/src/components/Term';
+
+# Defining the Audit Scope
+
+Scoping decides what the audit actually covers: which services, which systems, which Trust Services Categories, and which third parties. Getting it right up front prevents the two expensive scoping failures, auditing more than you needed to, or discovering mid-audit that something material was left out.
+
+Prior to the engagement with an auditing firm or service auditor, the management at the service organization should have properly defined the system scope. With smaller organizations, that is not always the case. These are the high-level steps you can take to define the system scope:
+
+1. Identify the services provided to customers
+1. Identify the system(s) used to provide those services
+1. Identify business partners or consultants that provide copyrights, patents, intellectual property, or services to the system(s)
+1. Define and select the Trust Services Categories to be included in the scope of attestation
+1. Decide whether the organization should undergo a Type I or Type II SOC 2 audit
+1. Define the "As of Date" as notated for a SOC 2 Type 1 report
+1. Determine whether subservice organizations or sub-level services are part of the overall system and whether they need to be included in the attestation report
+1. Identify and analyze risks that hinder the organization from meeting its service commitments and defined SLAs; see [risk assessments](../../exposure/risks/risk-management-guide.mdx) for how to run this
+1. Obtain system-level requirements as they relate to business partners
+
+## Subservice Organizations
+
+Once you have a solid understanding of the system scope, get confirmation from the organization's management team that all sub-level service organizations have been identified and are listed as in scope for the audit. Also verify with management whether these subservices will be included in the attestation report or whether a <Term t="carve-out-method">carve-out method</Term> will be used. If it is the latter, section 1 of the report should clearly specify that all controls relating to the subservice organization are excluded.
+
+The two approaches:
+
+| Method | What it means |
+| ------ | ------------- |
+| Carve-out | The nature of the subservice organization's services is described in the report, but its controls are excluded from the description and from the service auditor's scope |
+| Inclusive | The subservice organization's controls are included in the system description and tested by the service auditor |
+
+The next step is to map out which control types, if any, the subservice organizations cover. A common example is availability: when evaluating cloud services, controls that deal with availability usually fall to the cloud hosting provider (AWS, Google Cloud, Microsoft Azure). It remains your organization's responsibility to ensure the relevant configurations and processes are in place on your side.

@@ -1,0 +1,349 @@
+---
+title: Example Evidence
+sidebar_label: Example Evidence
+sidebar_position: 2
+description: Example evidence artifacts for commonly manually evidenced PCI DSS control areas
+---
+
+# PCI DSS Example Evidence
+
+The table below lists commonly evidenced control areas for PCI DSS and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview). Several areas apply only to service providers or to environments with wireless networks; mark those out of scope where they do not apply.
+
+| Control Area | Example Evidence |
+| ------------ | ---------------- |
+| Architecture diagram | An approved architecture diagram |
+| Annual risk assessment | The most recent completed risk assessment report |
+| Targeted risk analysis | The documented targeted risk analysis for each control frequency you define yourself and for each customized approach control, identifying the assets protected, the threats addressed, the factors affecting likelihood and impact, and the justification for the chosen frequency, with evidence of review within the last 12 months |
+| BCP/DR tests conducted annually | Results from the most recent business continuity or disaster recovery test |
+| Firewall and router configuration standards | Documented testing and approval procedures for network connections and for firewall and router changes, plus example records showing a connection and a recent change were tested and approved |
+| CDE network diagram | The cardholder data environment (CDE) network diagram, including the date it was finalized or last updated |
+| CDE network diagram review | Formal sign-off on the CDE network diagram with the reviewer's name and date |
+| Dataflow diagram | The CDE data flow diagram, including the date it was finalized |
+| Dataflow diagram review | Formal sign-off on the data flow diagram with the reviewer's name and date |
+| Firewall configuration | The documented firewall and router configuration standards, plus screenshots showing firewalls match those standards |
+| Network diagram consistent with firewall configuration | Firewall ruleset screenshots showing traffic restrictions match the network and data flow diagrams |
+| Network management roles and responsibilities | A network administrator job description or a skills matrix for CDE network staff, plus configuration standards identifying firewall and router management responsibilities |
+| Approved services, protocols, and ports | Configuration standards listing the services, protocols, and ports authorized in the CDE, with approval and justification for each |
+| Insecure services, protocols, and ports | Configuration standards listing any insecure services, protocols, or ports in use with mitigating controls, plus screenshots showing those controls are implemented |
+| Firewall and router rule review standard | Configuration standards specifying rule review frequency, at least every six months |
+| Firewall and router rule review | The documented ruleset review from the last six months |
+| Network traffic restrictions | Configuration standards defining required inbound and outbound CDE traffic, plus ruleset screenshots showing traffic explicitly allowed in both directions |
+| Network traffic denial | Screenshots showing a final deny-all rule in firewall and router rulesets, or vendor documentation confirming an implicit deny |
+| Secured router configuration files | Router configuration exports, screenshots of who can access them, and evidence running configurations match the standard |
+| Perimeter firewalls between CDE and wireless | Screenshots and configuration files from firewalls and routers between wireless networks and the CDE showing traffic restriction, plus the network diagram |
+| No direct public access to the CDE | Firewall and router configuration showing public access is limited to authorized publicly accessible services, protocols, and ports |
+| DMZ implemented | Network diagram showing a DMZ, plus firewall and router configurations showing it only passes approved services, ports, and protocols |
+| DMZ IP addresses | Configurations showing inbound internet traffic is restricted to authorized IP addresses within the DMZ |
+| Anti-spoofing measures | Screenshots showing anti-spoofing controls, such as blocking inbound DMZ traffic whose source IP matches internal CDE addresses |
+| Explicit authorization for CDE outbound traffic | Ruleset screenshots showing outbound traffic must be explicitly allowed |
+| Established connections only | Screenshots from an example inbound connection showing non-established connection attempts are dropped, typically via stateful packet filtering |
+| Cardholder data in internal network zone | Internal firewall and router configurations plus the network diagram showing the internal zone is separated from the DMZ and untrusted networks |
+| Prevention of private IP disclosure | Firewall and router configurations showing private IP information is not disclosed, via NAT, proxies in front of CDE servers, filtered route advertisements, or RFC1918 addressing |
+| External private IP disclosure restricted | The same configurations as above, plus documented authorization for anyone permitted to receive private IP information |
+| Personal firewall on portable devices | Policies or standard configurations requiring personal firewalls on laptops and portable devices (company or employee owned) that connect to the CDE, plus the firewall configuration standard; out of scope if devices cannot reach the CDE externally |
+| Personal firewall configured properly | Screenshots showing personal firewalls installed, active, configured to standard, and locked so non-administrators cannot disable or change them |
+| Firewall security policy | Documented firewall security policies and procedures |
+| Default accounts changed | Policy requiring all vendor-supplied default credentials to be changed, plus screenshots showing default accounts removed, reconfigured, or disabled |
+| Unnecessary default accounts removed | The same policy plus screenshots showing unneeded vendor default accounts are removed or disabled |
+| Wireless encryption keys changed | Policy requiring default encryption keys to change at deployment and when someone with key knowledge leaves, plus screenshots showing vendor-supplied wireless keys were replaced; out of scope with no wireless connected to the CDE |
+| SNMP community strings changed | Policy requiring vendor default SNMP strings to change, plus screenshots showing replacements; out of scope with no wireless connected to the CDE |
+| Default passwords on access points changed | Policy requiring vendor defaults to change, plus screenshots showing wireless access point passwords were replaced; out of scope with no wireless connected to the CDE |
+| Updated firmware on wireless devices | Wireless device hardening procedures plus screenshots showing firmware is updated; out of scope with no wireless connected to the CDE |
+| Other wireless vendor defaults changed | Policy plus screenshots showing remaining vendor defaults changed on wireless devices; out of scope with no wireless connected to the CDE |
+| Configuration standards updated for new vulnerabilities | System hardening procedures |
+| System configuration standards | Hardening procedures covering vendor default changes, one primary function per server, only necessary services enabled, extra protection for insecure services, security parameter configuration, and removal of unnecessary functionality |
+| One primary function per server | Configuration screenshots showing each CDE component serves a single primary function, for example web, database, and DNS on separate servers |
+| One primary function per virtual component | The same evidence for virtual servers in the CDE |
+| Only necessary services enabled | Screenshots of the enabled services running on CDE components |
+| Justification for insecure services | Documented justification for any insecure services in use, such as Telnet or FTP |
+| Security features for insecure services | Screenshots or documentation showing how enabled insecure services are secured, for example files encrypted before placement on an FTP server; out of scope if none run |
+| Proficiency in security parameter settings | No documentation required; assessors interview personnel for this requirement |
+| Security parameters in configuration standards | Server configuration standards containing the security parameter settings |
+| Security parameters set appropriately | Screenshots showing CDE components are configured per the standard |
+| Unnecessary functions removed | Screenshots showing unneeded scripts, drivers, features, subsystems, and file systems are removed from CDE components |
+| Enabled functions documented | Configuration documentation listing enabled functionality with the rationale for each |
+| Documented functionality on components | Screenshots of the services and functions running on CDE components |
+| Encrypted non-console administrative access | Screenshots of encryption settings and the login process for network-based administrative access to CDE components |
+| Insecure remote login commands prevented | Screenshots showing insecure remote login commands such as Telnet cannot connect to the CDE |
+| Vendor management security policies accessible | Vendor management policy plus operational procedures such as hardening procedures for CDE components |
+| Shared hosting provider secure configurations | For an example hosted customer: configurations showing processes run under the entity's unique non-privileged ID, permissions limited to owned files, no write access to shared binaries, log viewing restricted to the owner, resource limits on disk, bandwidth, memory, and CPU, logging enabled and available to customers, and documented forensic evidence procedures |
+| Cardholder data deleted securely | Policies and procedures for disposing of cardholder data |
+| Cardholder data retention requirements | Screenshots of files and records on storing components verifying data does not exceed the retention policy |
+| Quarterly cardholder data retention review | Documented procedures requiring at least quarterly evaluation of adherence to retention guidelines |
+| Stored data within retention policy | Screenshots showing the oldest cardholder data in the CDE falls within the retention guidelines |
+| Sensitive authentication data storage | For issuers or issuing-service supporters that store sensitive authentication data, the documented business justification |
+| Sensitive authentication data secured | For those entities, screenshots of data stores and configurations showing the data is secured |
+| Sensitive authentication data deleted after authorization | For non-issuers, documented deletion procedures plus screenshots showing the process is configured and executed as documented |
+| Full track contents not stored | Screenshots from example CDE components showing full magnetic stripe or chip track data is absent from transaction data, logs, history files, trace files, and database schemas and contents after authorization |
+| Card verification code not stored | Screenshots showing CVV2, CVC2, CID, and CAV2 values are absent from those same data sources after authorization |
+| PIN not stored | Screenshots showing PINs and encrypted PIN blocks are absent from those same data sources after authorization |
+| PAN masked when displayed | Policies listing which roles may see more than the first six and last four digits with justification, plus screenshots showing full PAN displays only for those roles and masked output everywhere else, on screen and on receipts |
+| PAN unreadable wherever stored | Documentation of the protection method (strong one-way hashing, truncation, index tokens with secured pads, or strong cryptography with key management), plus screenshots of encrypted data in files, databases, removable media, and audit logs, and proof a hashed plus truncated pair cannot reconstruct the PAN |
+| Separate encrypted file system access | If disk encryption is used, configuration screenshots showing encrypted file system access uses a mechanism separate from OS authentication |
+| Cryptographic keys stored securely | Screenshots showing how cryptographic keys are stored securely |
+| Cardholder data on removable media encrypted | Configuration screenshots and examples of encrypted cardholder data on removable media, or the alternate method rendering it unreadable |
+| Cryptographic architecture description (service providers only) | A diagram or description of algorithms, protocols, and keys in use, including strength, expiration, per-key usage, and an inventory of HSMs and other secure cryptographic devices |
+| Restricted key access | Access lists for key storage locations verifying access is limited to the fewest custodians possible |
+| Secret and private key storage | Procedures requiring keys be stored under a key-encrypting key stored separately, in an HSM or approved device, or as key shares, plus screenshots showing storage matches the procedures |
+| Key storage locations limited | A list of all locations where keys are stored |
+| Guidance for shared key management (service providers only) | The documentation given to customers with whom keys are shared, covering secure transmission, storage, and key updates |
+| Strong key generation procedure | Documented key management procedures specifying strong key generation, plus screenshots of the generation process |
+| Secure key distribution procedure | Documented procedures for distributing cryptographic keys securely |
+| Secure key storage procedure | Documented storage procedures plus screenshots showing keys stored securely |
+| Key changes for retired keys | Procedures covering the key lifecycle, key lifespans, and the process for changing keys at end of life |
+| Key retirement procedures | Procedures covering retirement or replacement of weakened keys, replacement of suspected-compromised keys, and non-use of retained keys for encryption |
+| Replacement of compromised keys | Key management procedures with guidance for replacing known or suspected compromised keys |
+| Retained keys not used for encryption | Procedures stating whether keys are retained after replacement and confirming retained keys are never used for encryption |
+| Split knowledge and dual control of keys | For manual clear-text key operations, procedures requiring key components split among at least two custodians and dual control so no one person can complete an operation alone |
+| Unauthorized key substitution | Key management procedures documenting the controls that prevent unauthorized key substitution |
+| Key custodian acknowledgment | Procedures requiring custodians to formally acknowledge their responsibilities, plus example signed acknowledgment forms |
+| Secure and encrypted data transmission | A list of everywhere cardholder data crosses open public networks, documented protocol and algorithm standards, and configuration screenshots showing those protections implemented |
+| Only trusted keys or certificates accepted | Policies specifying acceptance of trusted keys and certificates only, plus screenshots showing those in use are trusted |
+| Inventory of trusted keys and certificates | A maintained inventory of the keys and certificates used to protect cardholder data in transit, including the issuing authority and expiration date for each |
+| Insecure versions or configurations not supported | Policies requiring secure versions and configurations only, plus configuration screenshots confirming |
+| Proper encryption strength | Policies documenting required strength per methodology, plus screenshots showing listed methods implemented and others unsupported |
+| Cryptographic suite and protocol review | An inventory of the cipher suites and protocols in use, plus the documented annual review confirming they remain effective and the plan for responding to anticipated cryptographic weaknesses |
+| TLS enabled during transmission | Screenshots showing TLS in place, for example HTTPS in the URL wherever cardholder data is collected in a browser |
+| Strong encryption for wireless transmission | A list of wireless networks carrying cardholder data or touching the CDE, their documented standards, and configurations showing strong encryption with no WEP |
+| PAN secured in end-user messaging | If email or similar carries PANs, configuration screenshots showing protection plus a secured example message |
+| Unprotected PANs not sent via messaging | Written policies prohibiting unprotected PANs over end-user messaging platforms |
+| Anti-virus capability | Vendor documentation for CDE anti-virus plus tool screenshots verifying it detects, removes, and protects against known malware types, including viruses, trojans, worms, spyware, adware, and rootkits |
+| Periodic evaluation of malware threats | For systems not commonly affected by malware, the job description of whoever evaluates emerging threats plus screenshots of the tools or mailing lists used |
+| Anti-virus kept current | Configuration screenshots, including the master installation, showing anti-virus and definitions stay updated |
+| Anti-virus automatic and periodic scans | Configuration screenshots showing periodic scans run |
+| Anti-virus audit logs | Configuration screenshots showing anti-virus logs are enabled and retained at least one year, with three months immediately available |
+| Anti-virus cannot be disabled | Screenshots showing anti-virus actively running and locked so users cannot disable or alter it |
+| Phishing protection mechanisms | Configuration screenshots showing technical anti-phishing controls, such as SPF, DKIM, and DMARC records for your domains and link or attachment scanning in corporate email |
+| Critical patches installed | Vendor patch lists for CDE systems plus screenshots showing critical security patches are installed |
+| Software and component inventory | An inventory of bespoke and custom software and the third-party components it embeds, such as a software bill of materials produced by a composition analysis tool |
+| Information security in SDLC | SDLC policy or procedures requiring information security throughout the system lifecycle |
+| Software development in line with PCI | SDLC policy requiring systems be developed and deployed per PCI DSS requirements, such as log generation and retention |
+| Removal of accounts before release | SDLC policy requiring pre-production accounts, user IDs, and passwords be removed before production deployment |
+| Code review prior to release | SDLC policy requiring review by someone other than the author against secure coding guidelines with corrections before release, plus example change records showing the process was followed and management approved |
+| Separate test and production environments | Policies requiring separation with access control, plus network device configurations enforcing it |
+| Separation of duties across environments | Policies requiring different personnel in test and production, plus access control lists showing the split |
+| Test data removed before activation | Screenshots showing live PANs are absent from non-production and test accounts are removed |
+| Documentation of change impact | Change control procedures requiring impact documentation, plus a recent change record showing the impact was documented |
+| Documented change approval | Change control procedures requiring authorized approval, plus a recent change record showing approval before implementation |
+| Functionality testing | Change control procedures requiring functionality testing to confirm a change does not harm system security, plus a recent change record showing the testing occurred |
+| PCI compliance testing of changes | Change records showing code changes are tested against PCI DSS requirements before deployment |
+| Back-out procedures | Change control procedures requiring back-out plans, plus a recent change record documenting one |
+| PCI requirements after significant change | For an example significant CDE change: documentation showing affected systems were retested against PCI DSS and system documentation was updated |
+| Common coding vulnerabilities | Development policies requiring developers to receive secure coding training at least annually, based on industry guidance |
+| Annual developer secure coding training | Training records showing developers completed secure coding training, including avoiding common vulnerabilities, within the last 12 months |
+| Development based on secure coding guidelines | Development policies with processes protecting custom code from the common vulnerability classes below |
+| Injection flaws | Development policies covering input validation so user data cannot alter commands or queries, and use of parameterized queries |
+| Buffer overflow | Development policies covering buffer boundary validation and input string truncation |
+| Insecure cryptographic storage | Development policies covering prevention of cryptographic flaws and use of strong algorithms and keys |
+| Insecure communications | Development policies covering proper authentication and encryption of all sensitive communications |
+| Improper error handling | Development policies requiring generic error messages that do not leak information |
+| High risk vulnerabilities | Development policies with processes protecting custom code from high risk vulnerabilities found during vulnerability management |
+| Cross-site scripting (XSS) | For web applications and interfaces, development policies covering parameter validation and context-sensitive escaping |
+| Improper access control | Development policies covering user authentication, input sanitization, non-exposure of internal object references, and interfaces that block unauthorized functions |
+| Cross-site request forgery (CSRF) | Development policies ensuring applications do not rely on credentials and tokens browsers submit automatically |
+| Broken authentication and session management | Development policies covering secure session token flags, no session IDs in URLs, timeouts, and session ID rotation after login |
+| Public-facing web application vulnerability assessment | Documented web application scan policies and assessment records (at least annual, after changes, by an application security specialist, covering the vulnerability classes above, with correction and reassessment), or WAF screenshots showing it sits in front of public applications, runs current, logs, and blocks or alerts for immediate investigation |
+| Payment page script management | An inventory of all scripts loaded on payment pages with a written justification for each, plus evidence each script is authorized and its integrity verified, such as Content Security Policy configuration or subresource integrity attributes |
+| Payment page change and tamper detection | Configuration screenshots from the mechanism that detects unauthorized modifications to payment page headers and content as received by the browser, plus its alert logs and the documented evaluation frequency |
+| Secure systems and applications policy | Documented policies and procedures for developing and maintaining secure systems and applications |
+| System access control policy | Documented access control policy defining access needs and privilege per role, least privilege for privileged IDs, assignment by job classification and function, and documented approval listing specific privileges |
+| System access roles defined | Documented access needs per CDE role: the components and data required for the job, and the privilege level needed |
+| Documented approval by authorized parties | Screenshots of an example user's privileges plus the documented approval by an authorized party showing assigned privileges match what was approved |
+| Periodic user access review | Records of user access reviews performed at least every six months, including the access listings reviewed, reviewer sign-off, and evidence that requested changes were carried out |
+| Access control system in place | Screenshots from the access control system covering all system components |
+| Role-based access control | Screenshots showing the access control system enforces privileges by job classification and function |
+| Default deny-all on access control | Screenshots showing the access control system defaults to denying all access |
+| Access restriction policy available | Screenshots showing where employees can access the system access control policy |
+| Unique user ID | Identity management procedures requiring a unique ID before access to components or cardholder data, plus user access listings showing every user has one |
+| Privileged and general user authorization | Identity management procedures for adding, deleting, and modifying IDs and credentials, plus documented authorization and matching permission screenshots for an example privileged and an example general user |
+| Inactive user accounts removed | Procedures requiring removal or disabling of accounts inactive 90 days, plus access lists showing no such account remains active |
+| Third-party remote account management | Procedures requiring vendor accounts be disabled when idle and enabled only when needed, plus screenshots or access lists confirming |
+| Third-party remote account monitoring | Procedures requiring monitoring of active vendor access, plus screenshots showing how those accounts and their activity are watched |
+| User lockout after repeated attempts | Procedures requiring lockout after at most six failed attempts, plus configuration screenshots enforcing it |
+| Customer password lockout (service providers only) | Internal processes and customer documentation stating accounts lock after six failed attempts, plus enforcing configuration screenshots |
+| Lockout duration | Procedures requiring lockouts last at least 30 minutes or until an administrator unlocks, plus enforcing configuration screenshots |
+| Reauthentication of idle sessions | Procedures requiring reauthentication after 15 minutes of inactivity, plus enforcing configuration screenshots |
+| User authentication methods | Documented guidance on authentication methods for non-consumer and administrator accounts, plus screenshots of the login methods used for CDE components |
+| Strong encryption of credentials | Vendor documentation on credential handling plus configuration screenshots showing passwords are protected with strong cryptography in transit and at rest |
+| Encryption of customer credentials (service providers only) | Configuration screenshots showing customer password files are unreadable in transit and at rest |
+| Identity verification before credential changes | Procedures requiring identity verification before modifying authentication data, such as password resets or new keys |
+| Minimum password requirements | Configuration screenshots enforcing at least 7 characters with both numeric and alphabetic characters, or equivalent complexity |
+| Customer minimum password requirements (service providers only) | Internal and customer documentation requiring customer passwords of at least 7 characters with numeric and alphabetic characters |
+| Periodic password change | Configuration screenshots showing password changes are required every 90 days |
+| Customer periodic password change (service providers only) | Internal and customer documentation requiring periodic customer password changes with guidance on when |
+| Passwords different from last four | Configuration screenshots showing new passwords must differ from the previous four |
+| Customer password history (service providers only) | Internal and customer documentation requiring new customer passwords differ from the previous four |
+| Unique first-time passwords | Password procedures requiring unique per-user first-time and reset passwords that must change after first use, plus screenshots of the process |
+| MFA for non-admin remote CDE access | Configuration screenshots enforcing MFA for all non-administrative remote CDE access, plus authentication flow screenshots confirming |
+| MFA for non-console administrative access | Configuration screenshots enforcing MFA for non-console administrative CDE access, plus authentication flow screenshots confirming |
+| MFA for remote network access | Configuration screenshots enforcing MFA for all remote network access to the CDE, with authentication flow evidence for both an administrative and a non-administrative user |
+| Authentication policy inclusions | Screenshots of where employees find authentication policies, plus documented guidance on strong credentials, protecting them, avoiding reuse, and changing suspected-compromised passwords |
+| Shared authentication prohibited | Access lists showing generic IDs are disabled and no shared IDs exist for administration or critical functions, plus policy strictly prohibiting shared or group credentials |
+| Unique credentials per customer (service providers only) | For providers with remote access to customer systems, policy requiring a unique authentication credential per customer environment |
+| Authentication mechanism use | For non-password mechanisms (smart cards, tokens), policy requiring assignment to a single account without sharing, plus configuration or physical control evidence that only the intended account can use each mechanism |
+| Programmatic database access | Database and application configuration screenshots showing all user access, queries, and actions go through programmatic methods such as stored procedures |
+| Direct database access restricted | Access control screenshots showing direct access and queries are limited to database administrators |
+| Application IDs restricted to applications | Configuration screenshots showing application IDs are usable only by the applications, not individuals or other processes |
+| Credentials not hard-coded | Evidence that system and application account credentials are kept out of source code and configuration files, such as secret scanning enabled in the CI pipeline and screenshots of a secrets vault in use |
+| Entry controls in place | For each room housing CDE systems: photos of badge readers, locks, or other entry controls, plus screenshots or video showing consoles lock against unauthorized use |
+| Physical access monitoring of sensitive areas | Photos showing cameras or access control mechanisms monitor entry and exit points of sensitive areas |
+| Tamper-protected access mechanisms | Photos showing cameras and access control devices are protected from tampering or disablement |
+| Access mechanism data review | Documented procedures for reviewing camera and access control data |
+| Access mechanism data retention | Screenshots showing camera and access control data is kept at least three months unless law restricts it |
+| Publicly accessible network jacks restricted | Procedures for restricting public jacks, such as disabling them unless explicitly authorized, plus photos or video of the implementation |
+| Physical access to network components restricted | Photos or video showing restricted access to wireless access points, gateways, handhelds, network hardware, and telecom lines |
+| Onsite identification management | Physical access procedures covering identification of personnel and visitors, handling access changes, and revoking terminated personnel and expired visitor badges |
+| Onsite identification methods | Photos showing visitors are clearly identified and easily distinguished from onsite personnel |
+| Restricted access to badge system | User access lists for the badge provisioning system showing access is limited to authorized personnel |
+| Role-based physical access | Physical access control lists showing role-based access, plus an offboarding checklist showing physical access revocation |
+| Visitors preauthorized and escorted | Procedures requiring visitors be authorized before entry and escorted at all times |
+| Visitor badges | Photos of the badges issued to authorized visitors |
+| Visitor badge expiration | Photos showing visitor badges carry an expiration |
+| Visitor badge control | Photos showing visitors must surrender badges when leaving |
+| Visitor log for facility and data areas | Photos showing a visitor log covers the facility plus computer, server, data center, and storage rooms |
+| Visitor log inclusions | Log photos showing visitor name, the firm represented, and the authorizing personnel are captured |
+| Visitor log retention | Photos showing the log is retained at least three months |
+| Media physically secured | Documented policies covering physical security of all media: computers, removable media, paper records, receipts, faxes |
+| Backup media storage security review | The documented security review of the backup media storage location from the last 12 months |
+| Media transfer procedures | Documented policies covering distribution of all media types, including distribution to individuals |
+| Media classification | Screenshots or photos showing media is labeled by data sensitivity |
+| Media transferred securely | Transfer procedures covering acceptable methods, authorized couriers, and tracking, plus logging evidence and a recent tracked transfer |
+| Manager approval for media transfer | Records from a recent media transfer showing approval by an authorized manager |
+| Media storage and accessibility | Documented storage policy including a periodic media inventory requirement |
+| Media inventory logs | The documented media inventory logs |
+| Periodic media inventory | A documented media inventory from the past 12 months |
+| Media destruction | Documented media destruction policies and procedures |
+| Periodic media destruction policy | Destruction policies requiring crosscut shredding, incineration, or pulping of hard copy, secured containers for material awaiting destruction, and unrecoverable disposal of cardholder data on electronic media |
+| Destruction of hardcopy material | Procedures listing acceptable destruction methods: crosscut shredding, incineration, or pulping |
+| Storage containers for destroyable material | Photos showing containers holding material awaiting destruction are secured |
+| Cardholder data unrecoverable on deletion | Procedures for rendering cardholder data on electronic media unrecoverable, naming the industry deletion standard followed |
+| Payment card device management policy | If card-present devices are used, policies requiring a device inventory, periodic tamper inspection, and personnel training on spotting and reporting tampering |
+| Payment device inventory | A documented inventory of card reading devices: make, model, location, and serial number or other unique identifier |
+| Payment device periodic inspection | Procedures for periodic device inspection with a defined frequency |
+| Payment device training and reporting | Training materials covering verifying third-party repair personnel, not installing or returning devices without verification, spotting suspicious activity, and reporting tampering, plus records the training was delivered |
+| Payment device list inclusions | The device inventory documenting make, model, location, and serial numbers |
+| Accurate payment device list | A photo of a device with its serial number visible to confirm inventory accuracy |
+| Payment device list updates | Procedures detailing when and how the device inventory is updated |
+| Payment device surface inspection | Procedures for periodic device inspection with a defined frequency |
+| Payment device inspection procedures | Procedures for periodic device inspection with a defined frequency |
+| Payment device tampering awareness training | Training materials covering identity verification of repair personnel, verified installs and returns, awareness of suspicious activity, and reporting |
+| Payment device training received | Training records showing the material was delivered to personnel |
+| Audit trails enabled and active | Screenshots showing audit trails are enabled and active for CDE systems |
+| System access linked to users | User access lists from CDE systems showing access ties to individual users |
+| Audit trail for access to cardholder data | Log settings screenshots showing individual access to cardholder data is captured, plus an example log entry confirming |
+| Audit trail for root and admin actions | Log settings screenshots showing all root and administrator actions are captured, plus an example log entry confirming |
+| Audit trail access logged | Log settings screenshots showing access to the logs themselves is logged, plus an example entry confirming |
+| Invalid logical access attempts | Log settings screenshots showing failed logins are captured, plus an example entry confirming |
+| Audit trail for authentication mechanism changes | Log settings screenshots showing use of authentication mechanisms, privilege elevation, and changes to administrative accounts are captured, plus example entries confirming |
+| Audit trail of changes to audit logs | Log settings screenshots showing starting, stopping, and pausing of logging is itself logged, plus confirmation it works |
+| Audit trail of system-level object changes | Log settings screenshots showing creation and deletion of system-level objects is captured, plus an example entry confirming |
+| Log entries: user identification | An example log showing user IDs captured in entries |
+| Log entries: event type | An example log showing the event type captured in entries |
+| Log entries: date and time | An example log showing date and time attached to entries |
+| Log entries: pass/fail indication | An example log showing event success and failure captured in entries |
+| Log entries: origination | An example log showing the event source, such as an IP address, captured in entries |
+| Log entries: affected item name | An example log showing the affected resource ID or name captured in entries |
+| Clock synchronization procedures | Documented CDE time synchronization procedures: only the central time server takes signals from the external source, time arrives in UTC or International Atomic Time, multiple servers peer with each other, and systems sync only from the designated servers |
+| Time-related system parameters | Screenshots showing the process implemented, for example NTP configured with UTC time, server peering, and systems syncing only from designated servers |
+| Time server peering | Screenshots showing multiple central time servers peer with one another |
+| System time source | Screenshots showing systems receive time only from the designated central time servers |
+| Need-to-know access to time data | Access lists and time settings showing time data access is limited to users with a business need |
+| Time settings changes logged and reviewed | Screenshots of time synchronization change logging, an example log of a change, and documented log monitoring and review processes |
+| Time settings source | Screenshots showing central time servers only accept trusted, industry-accepted sources, or encrypted time data restricted by access lists to approved client IPs |
+| Secured audit trails | Logging system screenshots showing audit trails cannot be altered |
+| Limited access to audit trails | Logging system screenshots or access lists showing only users with a business need can reach audit trails |
+| Audit trail files protected | Screenshots or photos showing logs are protected from unauthorized access, modification, or deletion via access controls or physical or network segregation |
+| Audit trail files backed up | Backup procedures covering prompt backup to a centralized logging server or media, the backup frequency, and protections making the central copies hard to alter |
+| Logs for external-facing technologies | Screenshots showing logs from externally facing systems (DNS, firewalls, mail servers) flow to centralized logging |
+| File integrity monitoring on logs | Screenshots of FIM or change detection configured to alert on log alteration: system settings, monitored files, and generated alerts |
+| Daily log review policy for critical systems | A log review policy requiring at least daily review of security events, logs from systems handling cardholder or sensitive authentication data, critical components, and security-function servers |
+| Critical system logs reviewed daily | Screenshots showing the daily review process for those log categories |
+| Periodic log review policy for other systems | A policy requiring periodic review of remaining system logs on a schedule set by your risk assessment |
+| Risk-aligned non-critical log review | The documented risk assessment describing the risks present on non-critical systems |
+| Follow-up procedures for log anomalies | Log review procedures detailing how anomalies and exceptions get followed up |
+| Follow-up on anomalies performed | Records showing the follow-up happened, such as tickets tracking an anomaly investigation |
+| Audit log retention policy | The documented audit log retention policy |
+| Audit log retention period | Policy requiring at least one year of retention, plus screenshots showing logs or archives held that long |
+| Audit logs available for analysis | Policy requiring three months of logs immediately available, plus screenshots confirming |
+| Security control failure detection and reporting | Procedures for detecting and reporting failures of firewalls, IDS/IPS, FIM, anti-virus, physical and logical access controls, audit logging, and segmentation controls if used |
+| Security control failure alerts | Screenshots of alert configurations for each of those control systems |
+| Security control failure response | Procedures covering restoring the function, documenting failure duration and root cause, addressing issues that arose, risk assessing follow-on actions, preventing recurrence, and resuming monitoring |
+| Security control failure documentation | Failure records capturing root cause, start-to-end duration, and the remediation applied |
+| Network access monitoring policy | Documented policies for monitoring all access to network resources and cardholder data, plus screenshots showing where staff can access them |
+| Wireless access point detection | Documented procedures for detecting and identifying authorized and unauthorized wireless access points at least quarterly |
+| Unauthorized wireless access points identified | Procedures covering detection of inserted WLAN cards, portable devices turned into hotspots, and wireless devices attached to ports or network devices |
+| Quarterly wireless scan | Results from the most recent wireless scan, within the last quarter, identifying authorized and unauthorized access points across all facilities |
+| Wireless monitoring alerts | If automated monitoring is used (wireless IDS/IPS, NAC), alerting configuration screenshots showing personnel are notified |
+| Inventory of authorized wireless access points | A documented inventory of authorized wireless devices with a business justification for each |
+| Incident response for rogue access points | The incident response plan section covering response to unauthorized wireless access points |
+| Actions against rogue access points | A wireless scan from the past three months plus response documentation showing identified rogue devices were handled per the plan |
+| Quarterly internal vulnerability scans | Internal scan results from the past four quarters with supporting documentation (initial compliance requires only the most recent) |
+| High risk vulnerabilities resolved | Remediation documentation and rescan reports showing high-risk findings from quarterly internal scans were fixed |
+| Internal scans by competent independent party | For internal scanners: an org chart plus a resume or profile demonstrating competence; for external scanners: evidence of independence and competence |
+| Quarterly external vulnerability scans | ASV scan output from the past four quarters (initial compliance requires only the most recent) |
+| External rescans until pass | Documentation showing rescans continued until ASV Program Guide passing criteria were met, such as no CVSS 4.0+ findings |
+| External scans by approved vendor | Evidence the scans were performed by a PCI SSC Approved Scanning Vendor |
+| Scans after significant change | Policies defining what counts as a significant change, plus scan results showing scans follow significant CDE changes |
+| Vulnerability rescans | Initial and post-change scan reports showing external findings scored CVSS 4.0+ are gone and internal high-risk findings are remediated |
+| Rescans by competent independent party | The same competence and independence evidence as for scan personnel above |
+| Penetration testing methodology | Documented methodology based on an industry-accepted approach, covering the full CDE perimeter and critical systems, inside and outside testing, segmentation validation, application-layer tests for the common vulnerability classes, network-layer tests, review of the past year's threats, and retention of results and remediation records |
+| External penetration testing scope | The scope of work for the latest external test (approved methodology, at least annual, after significant changes) plus the test report |
+| External pen test by competent independent party | Competence and independence evidence for whoever performed the test |
+| Internal penetration testing scope | The scope of work for the latest internal test plus the test report |
+| Internal pen test by competent independent party | Competence and independence evidence for whoever performed the test |
+| Resolving pen test vulnerabilities | Test reports, retest reports, and remediation records showing exploitable findings were fixed and retested until resolved |
+| Penetration testing of segmentation | If the CDE is segmented, methodology documentation requiring segmentation controls be tested |
+| Segmentation testing requirements | The latest test results showing segmentation controls were tested within 12 months and after changes, all controls were covered, and isolation of out-of-scope systems was verified |
+| Segmentation verification by independent party | Competence and independence evidence for whoever tested segmentation |
+| Semiannual segmentation testing (service providers only) | Segmentation penetration test results from within the past six months |
+| Segmentation test scope (service providers only) | Test results showing all segmentation controls and methods were covered |
+| Segmentation effectiveness verification (service providers only) | Test results verifying segmentation controls are operational, effective, and isolate out-of-scope systems |
+| Segmentation tests by independent party (service providers only) | Competence and independence evidence for whoever performed the tests |
+| IDS/IPS up to date | Vendor documentation for the IDS/IPS plus configuration screenshots showing the engine and signatures stay current |
+| Change detection mechanism in place | Screenshots from the FIM or change detection tool showing what it monitors, plus the documented list of monitored files |
+| Change detection alerts | Alerting configuration showing who is notified, plus settings showing critical file comparisons run at least weekly |
+| Change detection alert response | Documented procedures for responding to change detection alerts |
+| Security monitoring and testing policy | Documented security monitoring and testing policies, plus screenshots showing where staff can access them |
+| Explicit approval for technology use | Acceptable use policy requiring explicit approval from authorized parties before using critical technologies |
+| Technology use authentication | Acceptable use policy requiring a user ID and password or other authentication for technology use |
+| Device and personnel access list | Acceptable use policy requiring a list of devices in the environment and the personnel authorized to use them |
+| Technology user tags | Acceptable use policy requiring devices be labeled with owner, contact information, and purpose |
+| Acceptable network locations | Acceptable use policy defining the acceptable network locations for each technology type |
+| Company-approved product list | Acceptable use policy requiring a maintained list of company-approved products |
+| Automatic disconnect of idle remote access | Acceptable use policy requiring remote access disconnect after inactivity, plus configuration screenshots enforcing it |
+| Third-party remote access usage | Acceptable use policy stating vendor and partner remote access is enabled only when needed and deactivated immediately after |
+| Employee remote access usage | Acceptable use policy forbidding copying, moving, or storing cardholder data to local drives or removable media during remote access |
+| Cardholder data protection per PCI | Acceptable use policy requiring employees authorized to access cardholder data to follow PCI DSS protections |
+| Information security responsibilities | The information security policy and supporting procedures defining security responsibilities for all personnel |
+| PCI DSS compliance program (service providers only) | The documented PCI DSS compliance program |
+| PCI DSS compliance accountability (service providers only) | The compliance program assigning overall accountability for maintaining compliance |
+| PCI DSS compliance charter (service providers only) | The charter describing how the program is organized and communicated to executive management |
+| Scope validation | Documentation of the PCI DSS scope review performed at least every 12 months and after significant changes, including any resulting scope changes and sign-off by the responsible party; service providers document the review every six months |
+| Designated information security official | Policies formally assigning information security responsibility to a CISO, information security officer, or similar role |
+| Designated owner of security policies | Policies assigning responsibility for establishing, documenting, and distributing security policies and procedures |
+| Designated owner of security alert monitoring | Policies assigning responsibility for monitoring and analyzing alerts and distributing information to security and business unit personnel |
+| Designated owner of incident response procedures | Policies assigning responsibility for establishing, documenting, and distributing incident response and escalation procedures |
+| Designated owner of user account administration | Policies assigning responsibility for adding, deleting, and modifying user accounts and managing authentication |
+| Designated owner of data access control | Policies assigning responsibility for monitoring and controlling all access to data |
+| Cardholder data security awareness program | A documented awareness training program covering data security policies and procedures for all personnel |
+| Multiple methods for security awareness | The training program showing multiple communication methods: posters, memos, web-based training, meetings, and similar |
+| Security awareness training records | Records showing all personnel are trained on cardholder data security at hire and at least annually |
+| Phishing awareness training | Records showing security awareness training covers phishing and social engineering, plus phishing simulation campaign configurations and results if simulations are run |
+| List of service providers | A maintained list of all service providers with the specific services each provides |
+| Service provider agreements | An executed agreement in which the provider acknowledges responsibility for the security of cardholder data it stores, processes, or transmits, or could otherwise affect |
+| Pre-agreement due diligence for service providers | Documented procedures for engaging providers, including the due diligence performed before engagement |
+| Annual provider PCI compliance monitoring | The vendor management program's procedures for checking providers' PCI DSS compliance at least annually |
+| Provider PCI responsibility matrix | A documented breakdown of which PCI DSS requirements you manage and which each provider manages |
+| Acknowledged security responsibilities (service providers only) | Policies requiring your written agreements acknowledge your PCI DSS responsibilities for customer cardholder data you handle or could affect |
+| Incident response management | The incident response plan covering roles, responsibilities, and communication strategies, including notification of payment brands at a minimum |
+| Specific incident response procedures | Documented step-by-step procedures executed when responding to an incident |
+| Reporting compromise | The plan's analysis of your legal requirements for reporting security compromises |
+| Critical system coverage and response | The plan's coverage and response steps for all critical system components |
+| Payment brand response procedures | The plan's references to or inclusion of the applicable payment brands' incident response procedures |
+| Security breach response training | Policies requiring periodic training for staff with incident response roles |
+| Security monitoring system alerts | Incident response procedures covering alerts from IDS/IPS, firewalls, and file integrity monitoring |
+| Incident response plan review and update | Plan procedures for folding lessons learned and industry developments back into the plan |
+| Response to cleartext PAN discovery | Incident response procedures covering the detection of cleartext PAN anywhere it is not expected to exist, plus incident records or test scenarios showing the procedures are executed |
+| Incident response review inclusions (service providers only) | The plan covering daily log reviews, firewall ruleset reviews, configuration standards for new systems, security alert response, and change management |
+| Quarterly adherence review (service providers only) | Evidence of quarterly reviews confirming personnel follow the incident response plan |
+| Quarterly plan review report (service providers only) | Evidence the plan is reviewed quarterly, with documented sign-off by the personnel responsible for the PCI compliance program |

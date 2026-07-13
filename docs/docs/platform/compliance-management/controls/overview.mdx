@@ -31,24 +31,24 @@ A Control in Openlane represents a specific compliance requirement, security saf
 
 <Tabs className="unique-tabs">
   <TabItem value="Detective" label="Detective">
-    Controls which alert employees to an action.
+    Detective controls alert employees to an action that has occurred.
     <br/>
     **Example**: Log Monitoring with Alerts, Data leak Prevention, Intrusion Detection System
   </TabItem>
   <TabItem value="Preventative" label="Preventative">
-    Controls used to help prevent certain events from occurring.<br/>
+    Preventative controls help prevent certain events from occurring.<br/>
     <br/>
     **Example**: A signature is required before an employee spends over $2,000.00 on a service or equipment<br/>
     <br/>
     **Example**: Firewalls, access controls, encryption
   </TabItem>
   <TabItem value="Corrective" label="Corrective">
-    Controls that take corrective action based upon an event that occurred.<br/>
+    Corrective controls take action based upon an event that occurred.<br/>
     <br/>
     **Example**: The DevOps team developed a script to spin up in a new region if their current region goes down
   </TabItem>
     <TabItem value="Compensating" label="Compensating">
-    Compensating controls are used when a process or technology is deficient and would require enormous changes, or it would be very costly for the organization to remediate. Oftentimes compensating controls are used more to assist information systems and IT processes, rather than business processes. It's important to understand what controls are, and the different types that can be implemented.
+    Compensating controls are used when a process or technology is deficient and would require enormous changes, or it would be very costly for the organization to remediate. Oftentimes compensating controls are used more to assist information systems and IT processes, rather than business processes.
   </TabItem>
 </Tabs>
 
@@ -62,26 +62,6 @@ A Control in Openlane represents a specific compliance requirement, security saf
 | **Assessment Framework** | Enable systematic compliance evaluation | Allows measurement and improvement of compliance posture |
 | **Certification Support** | Provide foundation for formal certifications | Enables SOC 2, ISO 27001, and other compliance certifications |
 
-## Relationship Diagram
-
-```mermaid
-graph TD
-    A[Standards] --> B[Controls]
-    B --> C[Control Implementations]
-    B --> D[Evidence]
-    B --> E[Subcontrols]
-    F[Risks] --> B
-    G[Programs] --> B
-    B --> H[Tasks]
-    I[Groups] --> B
-    B --> J[Audit Reports]
-
-    style B fill:#e1f5fe,stroke:#039be5,color:#333
-    style A fill:#f3e5f5,stroke:#8e24aa,color:#333
-    style F fill:#ffebee,stroke:#e53935,color:#333
-    style G fill:#e8f5e8,stroke:#43a047,color:#333
-```
-
 
 ## Control Categories
 
@@ -93,12 +73,7 @@ graph TD
 
 ## Key Points to Remember
 
-* Policies set the direction:
-    * Policies define the overall goals and expectations for managing risks, acting as the foundation for creating controls.
-* Controls are the active measures:
-    * Controls are the actual mechanisms or processes used to manage risks, including things like approvals, verifications, monitoring systems, and security protocols.
-* Procedures provide the steps:
-    * Procedures outline the specific actions and steps employees need to take to follow the policies and implement the controls effectively.
+Policies set the direction: they define the overall goals and expectations for managing risks, acting as the foundation for creating controls. Controls are the active measures: the actual mechanisms or processes used to manage risks, including things like approvals, verifications, monitoring systems, and security protocols. Procedures provide the steps, outlining the specific actions employees need to take to follow the policies and implement the controls effectively.
 
 ## Control Classifications
 
@@ -140,9 +115,13 @@ stateDiagram-v2
 
 | Status | Meaning | Next Actions |
 |--------|---------|-------------|
-| `PREPARING` | Control being designed and planned | Complete implementation guidance, assign owners |
-| `NEEDS_APPROVAL` | Ready for management review | Review requirements, approve or request changes |
-| `CHANGES_REQUESTED` | Requires modifications before approval | Address feedback, resubmit for approval |
-| `APPROVED` | Approved and ready for implementation | Begin implementation, collect evidence |
-| `NOT_IMPLEMENTED` | Approved but not yet active | Complete implementation activities |
-| `ARCHIVED` | No longer active or relevant | Document reason for archival |
+| Preparing | Control being designed and planned | Complete implementation guidance, assign owners |
+| Needs approval | Ready for management review | Review requirements, approve or request changes |
+| Changes requested | Requires modifications before approval | Address feedback, resubmit for approval |
+| Approved | Approved and ready for implementation | Begin implementation, collect evidence |
+| Not implemented | Approved but not yet active | Complete implementation activities |
+| Archived | No longer active or relevant | Document reason for archival |
+
+---
+
+*For programmatic access, see the [Controls GraphQL examples](../../../developers/graphql-examples/controls.mdx) in the developer docs.*

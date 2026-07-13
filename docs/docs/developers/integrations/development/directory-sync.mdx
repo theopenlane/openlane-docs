@@ -1,7 +1,7 @@
 ---
 title: Directory Sync Integrations
 description: Guide for building Directory Sync integrations that collect accounts, groups, and memberships from a provider and emit them through the ingest pipeline
-sidebar_position: 11
+sidebar_position: 3
 keywords:
   - directory sync
   - identity holder sync
@@ -21,7 +21,7 @@ tags:
 
 # Building a Directory Sync Integration
 
-This guide covers what's additionally required on top of the [core integration builder](./basics.mdx) for integrations that implement **Directory Sync** — the process of collecting accounts, groups, and memberships from a provider and emitting them through the ingest pipeline.
+On top of the [core integration builder](./basics.mdx), additional pieces are required for integrations that implement **Directory Sync**, the process of collecting accounts, groups, and memberships from a provider and emitting them through the ingest pipeline.
 
 Google Workspace is used as the reference example throughout.
 
@@ -41,7 +41,7 @@ Directory Sync integrations collect and emit three normalized schemas:
 
 ## Additional `UserInput` Fields
 
-Directory Sync integrations can include a fields on the `UserInput` config:
+Directory Sync integrations can include fields on the `UserInput` config:
 
 ```go
 type UserInput struct {
@@ -54,15 +54,15 @@ type UserInput struct {
 }
 ```
 
-- **`DisableGroupSync`** - when true, only users are synced, skipping group and group membership ingestion
-- **`FilterExpr`** — a CEL expression evaluated against each envelope before ingest allowing for users to only ingest relevant data; see [CEL Expressions](./basics.mdx#cel-expressions)
-- **`PrimaryDirectory`** — when `true`, this installation's data drives identity holder enrichment and lifecycle derivation; see [Identity Holder Sync](#identity-holder-sync) below. This should only be used on directories that are token issuers, and not secondary directories. For example, Google Workspace is a primary directory, but GitHub would not be.
+- **`DisableGroupSync`**: when true, only users are synced, skipping group and group membership ingestion
+- **`FilterExpr`**: a CEL expression evaluated against each envelope before ingest, allowing users to ingest only relevant data; see [CEL Expressions](./basics.mdx#cel-expressions)
+- **`PrimaryDirectory`**: when `true`, this installation's data drives identity holder enrichment and lifecycle derivation; see [Identity Holder Sync](#identity-holder-sync) below. This should only be used on directories that are token issuers, and not secondary directories. For example, Google Workspace is a primary directory, but GitHub would not be.
 
 ---
 
 ## Registering the Directory Sync Operation
 
-In `builder.go`, register the directory sync operation alongside the health check. Note `Reconcile: true` — directory sync runs on a schedule, not inline during connection.
+In `builder.go`, register the directory sync operation alongside the health check. Note `Reconcile: true`. Directory sync runs on a schedule rather than inline during connection.
 
 ```go
 {
@@ -134,14 +134,14 @@ func (DirectorySync) Run(ctx context.Context, client *sdk.Client, tenantID strin
 }
 ```
 
-`providerkit.MarshalEnvelope(resourceID, rawProviderObject, errSentinel)` serializes the provider object into a `MappingEnvelope`. The `resourceID` is a stable string that identifies the resource within the provider — for memberships, use the group identifier so membership envelopes can be associated back to their group via the `resource` CEL variable.
+`providerkit.MarshalEnvelope(resourceID, rawProviderObject, errSentinel)` serializes the provider object into a `MappingEnvelope`. The `resourceID` is a stable string that identifies the resource within the provider; for memberships, use the group identifier so membership envelopes can be associated back to their group via the `resource` CEL variable.
 
 ---
 
 ## Identity Holder Sync
 
-When a user sets `UserInput.PrimaryDirectory = true`, the integration's directory data is used to drive **identity holder sync** — the process that enriches and manages the lifecycle of identity holders in Openlane based on the provider's directory state.
+When a user sets `UserInput.PrimaryDirectory = true`, the integration's directory data is used to drive **identity holder sync**, the process that enriches and manages the lifecycle of identity holders in Openlane based on the provider's directory state.
 
-This flag surfaces in `UserInput` and is read downstream by the identity holder sync hooks. No additional code is required in the integration package itself — declaring the field and including it in the `UserInputRegistration` schema is sufficient.
+This flag surfaces in `UserInput` and is read downstream by the identity holder sync hooks. No additional code is required in the integration package itself; declaring the field and including it in the `UserInputRegistration` schema is sufficient.
 
 Only one installation per organization should be marked as the primary directory. This is enforced at the application layer.

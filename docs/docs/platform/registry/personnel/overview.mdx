@@ -1,0 +1,173 @@
+---
+title: Identity Holders
+description: Maintain an auditable roster of employees and contractors
+sidebar_position: 1
+sidebar_label: Overview
+compliance:
+  - "SOC 2 CC1"
+  - "SOC 2 CC2"
+  - "SOC 2 CC5"
+  - "SOC 2 CC6"
+  - "SOC 2 CC7"
+  - "ISO 27001 A.6"
+  - "ISO 27001 A.7"
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Identity Holders
+
+Personnel records (or Identity Holders) are the workforce roster for your compliance program: employees, contractors, interns, partner staff, and service identities, whether or not they ever log in to Openlane. Access reviews, offboarding checks, and training or policy attestations are all evaluated against this roster, so most programs maintain it deliberately rather than reconstructing it from HR exports at audit time.
+
+The roster intentionally covers more than payroll. Agency contractors, short-tenure interns, partner staff with credentials, and service accounts all hold access that auditors expect you to govern, so they belong in scope regardless of who employs them. A field engineer who must attest to your acceptable use policy needs a roster record and a campaign target rather than a platform seat.
+
+## How Personnel Records Work
+
+Beyond manual entry and imports, the roster can sync from an identity integration such as [Google Workspace](../../integrations/google_workspace.mdx), [Azure Entra ID](../../integrations/azure_entra_id.mdx), or [Authentik](../../integrations/authentik.mdx). When you connect an identity provider, you can designate it as your primary directory: the authoritative source that populates most fields on the identity holder records it manages, keeping the roster in step with the directory itself. How synced accounts from multiple sources resolve into one record per person is covered in [Directory Sync and Identity Resolution](./directory-sync.mdx).
+
+Every record classifies the working relationship (employee, contractor, intern, partner, or a non-human service identity) and carries a status covering the lifecycle from onboarding through deactivation, with start and end dates that anchor tenure. Contractors can point at their agency through an employer [entity](../entities.mdx), so third-party staff always trace back to the vendor relationship that brought them in.
+
+Personnel records connect to the [campaigns](../../automation/campaigns.mdx) and assessments they respond to and the [assets](../assets.mdx) and [platforms](../platforms.mdx) they own or access. For the complete field list, see the [GraphQL object reference](/graphql).
+
+## Working with Personnel
+
+### Build the Roster Once, Then Keep It Synced
+
+Connect your identity provider and mark it as the primary directory so employee records stay current without manual upkeep. Then fill the gaps the directory cannot see: import contractors and partner staff via CSV, set their type and employer entity, and give each record start dates and an owner. The goal is a single roster where filtering on `isActive` answers "who works in the environment today" without caveats.
+
+### Run a Policy Attestation Campaign
+
+The evidence value of a quarterly or annual attestation depends on the accuracy of its target list. Filter the roster to active personnel, create a policy attestation [campaign](../../automation/campaigns.mdx) with those records as targets, and launch. Openlane tracks completion per target, so you can resend to anyone incomplete and keep the completion metrics as evidence that the communication control operated during the period.
+
+### Produce Offboarding Evidence
+
+When someone leaves, update their record rather than deleting it: set the end date, flip `isActive` to false, and move the status to Deactivated. The record and its history remain queryable, which is exactly what you need when an auditor samples terminated personnel. If you sync a primary directory, the synced directory accounts on each record let you verify that a departed person's upstream accounts were actually deactivated, not just that HR processed the exit.
+
+## FAQ
+
+<details>
+<summary>Do personnel need Openlane accounts?</summary>
+
+No. Identity holders exist independently of Openlane logins, so your roster can cover everyone in scope without buying seats for people who never use the platform. When a person does have an Openlane account, the record links to that user, so their roster entry and platform identity stay connected.
+
+</details>
+
+<details>
+<summary>What should happen to a record when someone leaves?</summary>
+
+Update it, do not delete it. Set the end date, mark the record inactive, and set the status to Deactivated. Auditors routinely sample departed personnel to test offboarding controls, and a deleted record leaves you reconstructing history from email threads. A deactivated record with dates intact is the evidence.
+
+</details>
+
+<details>
+<summary>How do directory sync and manually created records coexist?</summary>
+
+The integration you designate as the primary directory is the authoritative source for the records it manages, and it populates most fields on those records. People your directory cannot see, such as agency contractors or partner staff, live alongside them as manually created or CSV-imported records. Filtering and campaigns treat both the same way, so a mixed roster still behaves as one roster.
+
+</details>
+
+## Examples
+
+<Tabs groupId="api-format" queryString>
+  <TabItem value="csv" label="CSV">
+
+```csv
+# Create
+FullName,Email,IdentityHolderType,Department,Team,Title,Location,IsActive
+Avery Jordan,avery@acme.io,EMPLOYEE,Engineering,Platform,Senior Engineer,New York,true
+Riley Chen,riley@vendor-partner.com,CONTRACTOR,Security,GRC,Security Analyst,Remote,true
+```
+
+```csv
+# Update
+ID,Team,Title,IsActive,EndDate
+IDH01J9ABCDEF1234567890XYZ,Security Operations,Security Engineer,true,
+IDH01J9ABCDEFFFEDCBA098765,Security,GRC Contractor,false,2026-03-31T00:00:00Z
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+```graphql
+mutation {
+  createIdentityHolder(
+    input: {
+      fullName: "Avery Jordan"
+      email: "avery@acme.io"
+      identityHolderType: EMPLOYEE
+      department: "Engineering"
+      title: "Senior Engineer"
+    }
+  ) {
+    identityHolder {
+      id
+      fullName
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateIdentityHolder(
+    id: "IDH01J9ABCDEF1234567890XYZ"
+    input: {
+      team: "Security Operations"
+      title: "Security Engineer"
+    }
+  ) {
+    identityHolder {
+      id
+      team
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+```go
+ctx := context.Background()
+
+department := "Engineering"
+title := "Senior Engineer"
+
+_, err := client.CreateIdentityHolder(ctx, graphclient.CreateIdentityHolderInput{
+	FullName:   "Avery Jordan",
+	Email:      "avery@acme.io",
+	Department: &department,
+	Title:      &title,
+})
+if err != nil {
+	return err
+}
+
+team := "Security Operations"
+_, err = client.UpdateIdentityHolder(ctx, "IDH01J9ABCDEF1234567890XYZ", graphclient.UpdateIdentityHolderInput{
+	Team: &team,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+```bash
+openlane identityHolder create \
+  --name "Avery Jordan" \
+  --email "avery@acme.io" \
+  --type EMPLOYEE \
+  --department "Engineering"
+
+openlane identityHolder update \
+  --id "IDH01J9ABCDEF1234567890XYZ" \
+  --full-name "Avery Jordan" \
+  --environment "production"
+```
+
+  </TabItem>
+</Tabs>

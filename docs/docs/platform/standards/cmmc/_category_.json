@@ -1,9 +1,0 @@
-{
-  "label": "CMMC",
-  "position": 10,
-  "link": {
-    "type": "generated-index",
-    "description": "Information around Cybersecurity Maturity Model Certification (CMMC) compliance standards"
-  },
-  "collapsed": true
-}

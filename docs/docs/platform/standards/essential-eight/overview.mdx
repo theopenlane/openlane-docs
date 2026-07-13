@@ -1,0 +1,87 @@
+---
+title: Essential Eight
+sidebar_label: Overview
+description: ACSC Essential Eight - Australian baseline cybersecurity mitigation strategies and maturity model
+sidebar_position: 1
+keywords:
+  - Essential Eight
+  - ACSC Essential Eight
+  - Essential Eight maturity model
+  - Australian cybersecurity
+  - ASD mitigation strategies
+  - Essential Eight maturity levels
+tags:
+  - Essential Eight
+  - ACSC
+  - cybersecurity
+  - Australia
+---
+
+import StandardMeta from '@site/src/components/StandardMeta';
+
+# Essential Eight
+
+The Essential Eight is a prioritized set of eight cybersecurity mitigation strategies published by the Australian Cyber Security Centre (ACSC), part of the Australian Signals Directorate (ASD). Drawn from ASD's broader Strategies to Mitigate Cyber Security Incidents, it targets the attack techniques behind most intrusions: malware delivery, credential theft, privilege abuse, and ransomware. Progress is measured against a four-tier maturity model rather than a pass/fail audit.
+
+<StandardMeta
+  fullName={"ACSC Essential Eight"}
+  type={"Cybersecurity mitigation framework with a maturity model"}
+  source={"Essential Eight Maturity Model, published by ASD on cyber.gov.au"}
+  established={"Essential Eight published February 2017; maturity model first published June 2017"}
+  managedBy={"Australian Cyber Security Centre (Australian Signals Directorate)"}
+  appliesTo={"Mandatory for Australian non-corporate Commonwealth entities; recommended for all organizations"}
+  certification={"No: self-assessment or independent assessment against the maturity model"}
+/>
+
+## Who Needs It
+
+The Essential Eight is a government mandate for part of the Australian public sector and a voluntary baseline for everyone else:
+
+- **Non-corporate Commonwealth entities** (federal departments and agencies) are required by the Protective Security Policy Framework (PSPF) to implement all eight strategies to at least Maturity Level Two.
+- **Corporate Commonwealth entities and state agencies** are encouraged to meet the same bar, and several state governments have adopted the model in their own security frameworks.
+- **Private sector organizations** adopt it voluntarily, often because government customers ask for it in procurement, or because it is a concrete, technically specific starting point compared with broader frameworks like ISO 27001.
+
+The model was designed for internet-connected Windows-based networks. It can inform the security of other environments, but ASD notes that alternative guidance may fit cloud services and OT environments better.
+
+## The Eight Mitigation Strategies
+
+The strategies group into three objectives: preventing attacks, limiting their impact, and recovering data.
+
+| Strategy | What It Mitigates |
+| -------- | ----------------- |
+| **Application control** | Execution of unapproved programs, scripts, and installers on workstations and servers |
+| **Patch applications** | Exploitation of known vulnerabilities in internet-facing services and productivity software |
+| **Configure Microsoft Office macro settings** | Macro-based malware delivery, one of the most common initial access vectors |
+| **User application hardening** | Exploitation through browsers, PDF readers, and legacy features such as Java and web advertisements |
+| **Restrict administrative privileges** | Lateral movement and damage from compromised privileged accounts |
+| **Patch operating systems** | Exploitation of known vulnerabilities in operating systems, drivers, and firmware |
+| **Multi-factor authentication** | Account takeover through stolen or guessed credentials |
+| **Regular backups** | Data loss from ransomware and other destructive incidents |
+
+Each strategy carries specific technical requirements that tighten at each maturity level. For example, patching timeframes shrink from one month to 48 hours for critical vulnerabilities, and MFA requirements progress from covering internet-facing services to phishing-resistant methods across all systems.
+
+## The Maturity Level Model
+
+ASD defines four maturity levels, assessed per strategy:
+
+| Level | Meaning |
+| ----- | ------- |
+| **Maturity Level Zero** | Weaknesses exist in the organization's overall cyber security posture |
+| **Maturity Level One** | Mitigates adversaries using widely available tools and techniques opportunistically |
+| **Maturity Level Two** | Mitigates adversaries willing to invest more time and capability in targeting a specific organization |
+| **Maturity Level Three** | Mitigates adaptive adversaries who rely less on public tooling and actively work to evade detection |
+
+Your overall maturity level is set by your weakest strategy, and ASD advises reaching a given level across all eight strategies before working toward the next one. A risk-based target is normal; Maturity Level Three is not intended for every organization, and even it does not stop a sufficiently resourced adversary. ASD updates the maturity model periodically, so requirements at each level change over time.
+
+There is no certificate. Organizations self-assess or engage an independent assessor, and ASD publishes an assessment process guide describing how maturity should be tested and evidenced.
+
+For the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).
+
+## Additional Resources
+
+- [Essential Eight (ACSC)](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight)
+- [Essential Eight Maturity Model](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model)
+- [Essential Eight Maturity Model FAQ](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model-faq)
+- [Essential Eight Assessment Process Guide](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-assessment-process-guide)
+- [Protective Security Policy Framework (PSPF)](https://www.protectivesecurity.gov.au/)
+- [Australian Cyber Security Centre](https://www.cyber.gov.au/)

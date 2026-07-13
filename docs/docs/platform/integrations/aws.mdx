@@ -5,6 +5,8 @@ sidebar_position: 3
 sidebar_label: Amazon Web Services
 ---
 
+import Steps from '@site/src/components/Steps';
+
 # ![aws integration](./assets/aws.png) AWS Integration Guide
 
 If your team runs infrastructure on AWS, this integration brings Security Hub findings and AWS Config assessment data into Openlane automatically. It uses a read-only, cross-account IAM role, so Openlane reads your security data without touching your configuration.
@@ -40,72 +42,80 @@ Before creating anything in AWS, retrieve the two values Openlane provides for y
 
 # ![aws setup](./assets/aws_setup.png)
 
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations** and find **AWS**.
 2. Click **Configure**.
 3. Copy the pre-generated values shown on the configuration page:
-   - **Openlane Principal ARN** — the ARN of the Openlane IAM identity that will assume the role in your account
-   - **External ID** — a unique identifier scoped to your Openlane tenant, used to prevent confused deputy attacks
+   - **Openlane Principal ARN**: the ARN of the Openlane IAM identity that will assume the role in your account
+   - **External ID**: a unique identifier scoped to your Openlane tenant, used to prevent confused deputy attacks
+
+</Steps>
 
 You will need both of these in the next step.
 
 ### Step 2: Create the Cross-Account IAM Role
 
-Choose the method that fits your workflow. Both produce the same result — a cross-account IAM role with a trust policy that allows Openlane to assume it.
+Choose the method that fits your workflow. Both produce the same result: a cross-account IAM role with a trust policy that allows Openlane to assume it.
 
 #### Option A: CloudFormation
 
 Use the Openlane CloudFormation template to create the role. Security Hub access is always granted. IAM and Config access are opt-in and default to disabled.
 
+<Steps>
+
 1. Download the template:
 
-```bash
-curl -fsSL https://docs.theopenlane.io/integrations/setup/aws/openlane-aws-integration-role.yaml \
-  -o openlane-aws-integration-role.yaml
-```
+   ```bash
+   curl -fsSL https://docs.theopenlane.io/integrations/setup/aws/openlane-aws-integration-role.yaml \
+     -o openlane-aws-integration-role.yaml
+   ```
 
-:::info
-Run `aws sts get-caller-identity` to confirm you are targeting the correct account before proceeding.
-:::
+   :::info
+   Run `aws sts get-caller-identity` to confirm you are targeting the correct account before proceeding.
+   :::
 
 2. Deploy the stack using the values copied from the Openlane configuration page:
 
-```bash
-aws cloudformation deploy \
-  --stack-name openlane-aws-integration \
-  --template-file openlane-aws-integration-role.yaml \
-  --capabilities CAPABILITY_NAMED_IAM \
-  --parameter-overrides \
-    OpenlanePrincipalArn=<OPENLANE_PRINCIPAL_ARN> \
-    ExternalId=<OPENLANE_EXTERNAL_ID> \
-    HomeRegion=<SECURITY_HUB_HOME_REGION> \
-    EnableIAMAccess=false \
-    EnableAuditConfig=false
-```
+   ```bash
+   aws cloudformation deploy \
+     --stack-name openlane-aws-integration \
+     --template-file openlane-aws-integration-role.yaml \
+     --capabilities CAPABILITY_NAMED_IAM \
+     --parameter-overrides \
+       OpenlanePrincipalArn=<OPENLANE_PRINCIPAL_ARN> \
+       ExternalId=<OPENLANE_EXTERNAL_ID> \
+       HomeRegion=<SECURITY_HUB_HOME_REGION> \
+       EnableIAMAccess=false \
+       EnableAuditConfig=false
+   ```
 
-Replace the following values before running:
+   Replace the following values before running:
 
-- `<OPENLANE_PRINCIPAL_ARN>` — copied from the **Openlane Principal ARN** field on the configuration page
-- `<OPENLANE_EXTERNAL_ID>` — copied from the **External ID** field on the configuration page
-- `<SECURITY_HUB_HOME_REGION>` — your Security Hub aggregation home region (e.g. `us-east-1`)
+   - `<OPENLANE_PRINCIPAL_ARN>`: copied from the **Openlane Principal ARN** field on the configuration page
+   - `<OPENLANE_EXTERNAL_ID>`: copied from the **External ID** field on the configuration page
+   - `<SECURITY_HUB_HOME_REGION>`: your Security Hub aggregation home region (e.g. `us-east-1`)
 
-Optionally enable additional data sources by setting `EnableIAMAccess` or `EnableAuditConfig` to `true`.
+   Optionally enable additional data sources by setting `EnableIAMAccess` or `EnableAuditConfig` to `true`.
 
-| Parameter | Required | Description |
-|---|---|---|
-| `OpenlanePrincipalArn` | Yes | Copied from the Openlane configuration page |
-| `ExternalId` | Yes | Copied from the Openlane configuration page |
-| `HomeRegion` | Yes | Your Security Hub aggregation home region (e.g. `us-east-1`) |
-| `EnableIAMAccess` | No | Set to `true` to grant IAM user and group read access (default: `false`) |
-| `EnableAuditConfig` | No | Set to `true` to grant AWS Config and Control Catalog read access (default: `false`) |
+   | Parameter | Required | Description |
+   |---|---|---|
+   | `OpenlanePrincipalArn` | Yes | Copied from the Openlane configuration page |
+   | `ExternalId` | Yes | Copied from the Openlane configuration page |
+   | `HomeRegion` | Yes | Your Security Hub aggregation home region (e.g. `us-east-1`) |
+   | `EnableIAMAccess` | No | Set to `true` to grant IAM user and group read access (default: `false`) |
+   | `EnableAuditConfig` | No | Set to `true` to grant AWS Config and Control Catalog read access (default: `false`) |
 
 3. Once the stack deploys, capture the `RoleArn` output:
 
-```bash
-aws cloudformation describe-stacks \
-  --stack-name openlane-aws-integration \
-  --query 'Stacks[0].Outputs[*].[OutputKey,OutputValue]' \
-  --output table
-```
+   ```bash
+   aws cloudformation describe-stacks \
+     --stack-name openlane-aws-integration \
+     --query 'Stacks[0].Outputs[*].[OutputKey,OutputValue]' \
+     --output table
+   ```
+
+</Steps>
 
 Example output:
 
@@ -118,127 +128,138 @@ Example output:
 | `RoleArn` | `arn:aws:iam::<YOUR_ACCOUNT_ID>:role/OpenlaneIntegrationReadOnlyRole` |
 
 
-Copy the `RoleArn` value — you will enter it into Openlane in Step 4.
+Copy the `RoleArn` value; you will enter it into Openlane in Step 4.
 
 #### Option B: AWS Console
+
+<Steps>
 
 1. In the [AWS Console](https://console.aws.amazon.com/), navigate to **IAM** > **Roles** > **Create role**.
 2. Under **Trusted entity type**, select **Custom trust policy**.
 3. Paste the following, replacing the placeholders with the values from the Openlane configuration page:
 
-<details>
-<summary>Trust policy JSON</summary>
+   <details>
+   <summary>Trust policy JSON</summary>
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "<OPENLANE_PRINCIPAL_ARN>"
-      },
-      "Action": "sts:AssumeRole",
-      "Condition": {
-        "StringEquals": {
-          "sts:ExternalId": "<OPENLANE_EXTERNAL_ID>"
-        }
-      }
-    }
-  ]
-}
-```
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+           "AWS": "<OPENLANE_PRINCIPAL_ARN>"
+         },
+         "Action": "sts:AssumeRole",
+         "Condition": {
+           "StringEquals": {
+             "sts:ExternalId": "<OPENLANE_EXTERNAL_ID>"
+           }
+         }
+       }
+     ]
+   }
+   ```
 
-</details>
+   </details>
 
 4. Click **Next**.
-5. Click **Next** again to skip attaching managed policies — you will add an inline policy instead.
+5. Click **Next** again to skip attaching managed policies; you will add an inline policy instead.
 6. Give the role a name (e.g. `OpenlaneIntegrationReadOnlyRole`) and click **Create role**.
 7. Open the role you just created, go to the **Permissions** tab, and click **Add permissions** > **Create inline policy**.
 8. Switch to the **JSON** editor and paste the policy below, removing any blocks for data sources you do not want to grant:
 
-<details>
-<summary>Inline policy JSON</summary>
+   <details>
+   <summary>Inline policy JSON</summary>
 
-```json
-{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "HealthCheckIdentity",
-			"Effect": "Allow",
-			"Action": [
-				"securityhub:Describe*"
-			],
-			"Resource": "*"
-		},
-		{
-			"Sid": "SecurityHubReadFindings",
-			"Effect": "Allow",
-			"Action": [
-				"securityhub:GetFindings",
-				"securityhub:Get*",
-				"securityhub:List*",
-				"securityhub:BatchGet*",
-				"securityhub:Describe*"
-			],
-			"Resource": "*"
-		},
-		{
-			"Sid": "IAMReadUsers",
-			"Effect": "Allow",
-			"Action": [
-				"iam:ListUsers",
-				"iam:ListGroups",
-				"iam:ListGroupsForUser",
-				"iam:ListUserTags"
-			],
-			"Resource": "*"
-		},
-		{
-			"Sid": "AuditConfigReadRules",
-			"Effect": "Allow",
-			"Action": [
-				"config:DescribeConfigRules",
-				"config:DescribeComplianceByConfigRule",
-				"controlcatalog:ListControls",
-				"controlcatalog:ListControlMappings",
-				"controlcatalog:ListCommonControls"
-			],
-			"Resource": "*"
-		}
-	]
-}
-```
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Sid": "HealthCheckIdentity",
+         "Effect": "Allow",
+         "Action": [
+           "securityhub:Describe*"
+         ],
+         "Resource": "*"
+       },
+       {
+         "Sid": "SecurityHubReadFindings",
+         "Effect": "Allow",
+         "Action": [
+           "securityhub:GetFindings",
+           "securityhub:Get*",
+           "securityhub:List*",
+           "securityhub:BatchGet*",
+           "securityhub:Describe*"
+         ],
+         "Resource": "*"
+       },
+       {
+         "Sid": "IAMReadUsers",
+         "Effect": "Allow",
+         "Action": [
+           "iam:ListUsers",
+           "iam:ListGroups",
+           "iam:ListGroupsForUser",
+           "iam:ListUserTags"
+         ],
+         "Resource": "*"
+       },
+       {
+         "Sid": "AuditConfigReadRules",
+         "Effect": "Allow",
+         "Action": [
+           "config:DescribeConfigRules",
+           "config:DescribeComplianceByConfigRule",
+           "controlcatalog:ListControls",
+           "controlcatalog:ListControlMappings",
+           "controlcatalog:ListCommonControls"
+         ],
+         "Resource": "*"
+       }
+     ]
+   }
+   ```
 
-</details>
+   </details>
 
 9. Click **Next**, give the policy a name, and click **Save**.
-10. Copy the **ARN** shown at the top of the role summary page — you will enter it into Openlane in Step 4.
+10. Copy the **ARN** shown at the top of the role summary page; you will enter it into Openlane in Step 4.
 
-### Step 3 : Configure Security Hub Coverage
+</Steps>
+
+### Step 3: Configure Security Hub Coverage
+
+<Steps>
 
 1. Enable Security Hub for the target accounts and regions.
 2. If you use AWS Organizations, configure delegated admin and cross-region aggregation.
 3. Use the same home region for `HomeRegion` in the CloudFormation parameters and in Openlane.
 
+</Steps>
+
 ### Step 4: Connect AWS in Openlane
 
-1. Return to **Organization Settings** > **Integrations** > **AWS** > **Configure**.
-2. Enter the following — the External ID is already pre-populated from Step 1 but ensure it matches if you've navigated away from the page:
+<Steps>
 
-| Field | Required | Purpose |
-|---|---|---|
-| `roleArn` | Yes | Cross-account IAM role ARN from the CloudFormation `RoleArn` output |
-| `homeRegion` | Yes | Security Hub aggregation home region (default: `us-east-1`) |
-| `linkedRegions` | No | Explicit region list to filter findings by region |
-| `accountId` | No || AWS account identifier for reference |
-| `accountScope` | No | `all` (default) or `specific` to limit to listed account IDs |
-| `accountIds` | Conditional | Required when `accountScope` is `specific` |
-| `sessionToken` | No | Session token when using temporary static credentials |
-| `sessionDuration` | No | STS session duration override (Go duration string, e.g. `1h30m`) |
-| `sessionName` | No | STS session name override |
-| `accountId` | No | AWS account identifier for reference |
+1. Return to **Organization Settings** > **Integrations** > **AWS** > **Configure**.
+2. Enter the following. The External ID is already pre-populated from Step 1, but confirm it matches if you have navigated away from the page:
+
+   | Field | Required | Purpose |
+   |---|---|---|
+   | `roleArn` | Yes | Cross-account IAM role ARN from the CloudFormation `RoleArn` output |
+   | `homeRegion` | Yes | Security Hub aggregation home region (default: `us-east-1`) |
+   | `linkedRegions` | No | Explicit region list to filter findings by region |
+   | `accountScope` | No | `all` (default) or `specific` to limit to listed account IDs |
+   | `accountIds` | Conditional | Required when `accountScope` is `specific` |
+   | `sessionToken` | No | Session token when using temporary static credentials |
+   | `sessionDuration` | No | STS session duration override (Go duration string, e.g. `1h30m`) |
+   | `sessionName` | No | STS session name override |
+   | `accountId` | No | AWS account identifier for reference |
+
+</Steps>
 
 ### Configuration
 
@@ -249,7 +270,7 @@ Optionally configure data ingestion behavior:
 | Setting | Description |
 |---|---|
 | **Disable** | Turn off Security Hub finding ingestion without disconnecting the integration |
-| **Filter Expression** | CEL expression evaluated against each finding — only findings that match are ingested |
+| **Filter Expression** | CEL expression evaluated against each finding; only findings that match are ingested |
 
 Filter expression examples:
 
@@ -268,8 +289,8 @@ payload.Type != 'Software and Configuration Checks/Vulnerabilities/CVE'
 | Setting | Description |
 |---|---|
 | **Disable** | Turn off IAM user and group ingestion without disconnecting the integration |
-| **Disable Group Sync** | Sync IAM users only — skip group membership |
-| **Filter Expression** | CEL expression evaluated against each IAM user record — only records that match are ingested |
+| **Disable Group Sync** | Sync IAM users only; skip group membership |
+| **Filter Expression** | CEL expression evaluated against each IAM user record; only records that match are ingested |
 
 Filter expression examples:
 
@@ -282,105 +303,117 @@ CEL expressions have access to the full raw payload for each record via `payload
 
 ## Alternate Authentication: Static Credentials Setup
 
-If cross-account IAM role assumption is not available in your environment — for example, if your AWS account does not support STS, if you are working in an isolated environment, or if you need to get started quickly without setting up a cross-account role — you can authenticate using a long-lived IAM user access key instead.
+If cross-account IAM role assumption is not available in your environment (for example, if your AWS account does not support STS, if you are working in an isolated environment, or if you need to get started quickly without setting up a cross-account role), you can authenticate using a long-lived IAM user access key instead.
 
 :::warning
-Static credentials do not rotate automatically and carry more risk than the cross-account role approach. Use them only when role assumption is not an option, scope the IAM user permissions as narrowly as possible, and rotate the key on a regular cadence.
+We recommend the cross-account role approach because static credentials do not rotate automatically and carry more risk. Use static credentials only when role assumption is not an option, scope the IAM user permissions as narrowly as possible, and rotate the key on a regular cadence.
 :::
 
 ### Step 1: Create a Dedicated IAM User
 
+<Steps>
+
 1. In the [AWS Console](https://console.aws.amazon.com/), navigate to **IAM** > **Users** > **Create user**.
 2. Enter a name (e.g. `openlane-integration-readonly`) and click **Next**.
-3. Select **Attach policies directly** and click **Next** — you will add an inline policy after creation instead of using a managed policy.
+3. Select **Attach policies directly** and click **Next**; you will add an inline policy after creation instead of using a managed policy.
 4. Click **Create user**.
 5. Open the user you just created, go to the **Permissions** tab, and click **Add permissions** > **Create inline policy**.
 6. Switch to the **JSON** editor and paste the policy below, removing any blocks for data sources you do not need:
 
-<details>
-<summary>Inline policy JSON</summary>
+   <details>
+   <summary>Inline policy JSON</summary>
 
-```json
-{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "HealthCheckIdentity",
-			"Effect": "Allow",
-			"Action": [
-				"securityhub:Describe*"
-			],
-			"Resource": "*"
-		},
-		{
-			"Sid": "SecurityHubReadFindings",
-			"Effect": "Allow",
-			"Action": [
-				"securityhub:GetFindings",
-				"securityhub:Get*",
-				"securityhub:List*",
-				"securityhub:BatchGet*",
-				"securityhub:Describe*"
-			],
-			"Resource": "*"
-		},
-		{
-			"Sid": "IAMReadUsers",
-			"Effect": "Allow",
-			"Action": [
-				"iam:ListUsers",
-				"iam:ListGroups",
-				"iam:ListGroupsForUser",
-				"iam:ListUserTags"
-			],
-			"Resource": "*"
-		},
-		{
-			"Sid": "AuditConfigReadRules",
-			"Effect": "Allow",
-			"Action": [
-				"config:DescribeConfigRules",
-				"config:DescribeComplianceByConfigRule",
-				"controlcatalog:ListControls",
-				"controlcatalog:ListControlMappings",
-				"controlcatalog:ListCommonControls"
-			],
-			"Resource": "*"
-		}
-	]
-}
-```
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Sid": "HealthCheckIdentity",
+         "Effect": "Allow",
+         "Action": [
+           "securityhub:Describe*"
+         ],
+         "Resource": "*"
+       },
+       {
+         "Sid": "SecurityHubReadFindings",
+         "Effect": "Allow",
+         "Action": [
+           "securityhub:GetFindings",
+           "securityhub:Get*",
+           "securityhub:List*",
+           "securityhub:BatchGet*",
+           "securityhub:Describe*"
+         ],
+         "Resource": "*"
+       },
+       {
+         "Sid": "IAMReadUsers",
+         "Effect": "Allow",
+         "Action": [
+           "iam:ListUsers",
+           "iam:ListGroups",
+           "iam:ListGroupsForUser",
+           "iam:ListUserTags"
+         ],
+         "Resource": "*"
+       },
+       {
+         "Sid": "AuditConfigReadRules",
+         "Effect": "Allow",
+         "Action": [
+           "config:DescribeConfigRules",
+           "config:DescribeComplianceByConfigRule",
+           "controlcatalog:ListControls",
+           "controlcatalog:ListControlMappings",
+           "controlcatalog:ListCommonControls"
+         ],
+         "Resource": "*"
+       }
+     ]
+   }
+   ```
 
-</details>
+   </details>
 
 7. Click **Next**, give the policy a name (e.g. `OpenlaneIntegrationReadOnly`), and click **Save**.
 
+</Steps>
+
 ### Step 2: Generate an Access Key
+
+<Steps>
 
 1. Open the IAM user you just created and go to the **Security credentials** tab.
 2. Under **Access keys**, click **Create access key**.
 3. Select **Third-party service** as the use case and click **Next**.
 4. Click **Create access key**.
-5. Copy both the **Access key ID** and the **Secret access key** — the secret is only shown once and cannot be retrieved later.
+5. Copy both the **Access key ID** and the **Secret access key**; the secret is only shown once and cannot be retrieved later.
+
+</Steps>
 
 ### Step 3: Connect AWS in Openlane Using Static Credentials
 
-1. Navigate to **Organization Settings** > **Integrations** > **AWS** > **Configure**.
-2. Enter the following fields — leave `roleArn` and `externalId` empty, as they are not used with static credentials:
+<Steps>
 
-| Field | Required | Purpose |
-|---|---|---|
-| `accessKeyId` | Yes | AWS Access Key ID from the IAM user |
-| `secretAccessKey` | Yes | AWS Secret Access Key from the IAM user |
-| `sessionToken` | No | Include only when using temporary credentials obtained via `sts:GetSessionToken` |
+1. Navigate to **Organization Settings** > **Integrations** > **AWS** > **Configure**.
+2. Enter the following fields, leaving `roleArn` and `externalId` empty, as they are not used with static credentials:
+
+   | Field | Required | Purpose |
+   |---|---|---|
+   | `accessKeyId` | Yes | AWS Access Key ID from the IAM user |
+   | `secretAccessKey` | Yes | AWS Secret Access Key from the IAM user |
+   | `sessionToken` | No | Include only when using temporary credentials obtained via `sts:GetSessionToken` |
 
 3. Click **Save**.
+
+</Steps>
 
 Openlane authenticates directly with the provided key pair without attempting role assumption. All data collection capabilities are identical to the cross-account role approach.
 
 ## Validate Connection
 
-After saving, Openlane runs a health check against AWS and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+After saving, Openlane runs a health check against AWS and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
 
 ## Supported Operations
 

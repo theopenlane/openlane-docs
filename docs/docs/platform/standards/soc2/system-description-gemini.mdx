@@ -1,0 +1,99 @@
+---
+title: SOC 2 System Description
+sidebar_label: System Description
+sidebar_position: 2
+description: What the SOC 2 system description is, the sections auditors expect it to contain, who writes it, when to write it, and how an inaccurate description can affect your audit opinion
+keywords:
+  - SOC 2 system description
+  - system description
+  - description criteria
+  - DC section 200
+  - subservice organization
+  - complementary user entity controls
+  - CUEC
+  - qualified opinion
+  - SOC 2 report
+tags:
+  - SOC 2
+  - compliance
+  - audit
+---
+
+# SOC 2 System Description
+
+The system description is Section 3 of a SOC 2 report. It describes the system the audit was performed against and the boundaries of that system: the people, processes, technology, and controls that fall inside those boundaries. Teams preparing for a first audit often spend months on controls and evidence, then discover late in the process that a substantial narrative document is also due. Knowing what the description contains, and starting it early, keeps it from delaying your report.
+
+## Why the Description Is Required
+
+Your audit firm is required to issue an opinion on whether the description is accurate, complete, and presented in accordance with the description criteria defined by the AICPA attestation standards (DC section 200). The description is examined and quality-reviewed the same way the rest of the audit is.
+
+The description also carries information report readers cannot get anywhere else: how your organization is structured and governed, which systems and vendors you depend on to deliver the service, which controls your customers are expected to operate on their side, and which third parties can affect the security of your system.
+
+## Who Writes It
+
+You do. As the service organization, you are responsible for producing an accurate, objective, and complete description. Auditors assist in one of two common ways: they provide a template with guidance for each section, or they send a questionnaire and draft the description from your answers for you to review and correct. In either case the content, and responsibility for its accuracy, is yours.
+
+## Sections Auditors Expect
+
+The exact template varies by audit firm, but the description criteria mean every description covers the same ground:
+
+| Section | What to cover |
+| ------- | ------------- |
+| Company and services overview | What the organization does and the specific services in scope for the report |
+| Principal service commitments and system requirements | The security, availability, and other commitments you make to customers (contracts, SLAs, published terms) and the internal requirements that support them |
+| System components | The infrastructure, software, people, procedures, and data that make up the system, including system boundaries |
+| System incidents | Significant incidents during the period that affected the service commitments, and how they were handled |
+| Applicable Trust Services Criteria and related controls | Which criteria are in scope and the controls you operate to meet them |
+| Complementary user entity controls (CUECs) | Controls your customers must implement for the system to meet its commitments, such as managing their own user access |
+| Subservice organizations | The vendors your system depends on (cloud provider, data center), the controls you expect them to operate (CSOCs), and whether the report uses the carve-out or inclusive method |
+| Significant changes | For a Type 2 report, material changes to the system during the audit period |
+
+Most of the raw material already exists in Openlane: your in-scope controls and their framework mappings live in your [program](/docs/platform/compliance-management/programs/overview), commitments and operating procedures live in [Policies and Procedures](/docs/platform/compliance-management/policy-and-procedure-management/policies), and incidents and changes are reflected in your [evidence](/docs/platform/compliance-management/evidence/overview). Writing the description is largely a matter of narrating what is already documented.
+
+## Setting System Boundaries and Granularity
+
+The single largest trap when writing Section 3 is misdefining the **System Boundary**. A poorly bounded description can inadvertently multiply your audit scope, generating an extensive paperwork trail and a high volume of unexpected evidence requests.
+
+When breaking down your system components, use **high-level functional granularity** rather than ultra-low-level configurations. Avoid detailing exact server serial numbers, minor software library versions, or interior database schemas. Ensure your system component narrative strictly enforces the boundary using these asset classes:
+
+*   **Infrastructure:** Define core hosting infrastructure (such as AWS regions or GCP projects) and edge-routing perimeters. Consolidate your tooling footprint into structural vendor environments rather than listing every cloud service line-by-line (e.g., group container orchestrators, caching layers, and managed relational databases under your primary cloud hosting provider).
+*   **Software:** Document only the software stacks that sit directly inside the production data-handling path. Explicitly declare operational engineering tools that do not store or process client production data (such as CI/CD runners, code quality engines, linters, internal ticket software, and local project trackers) as **Out of Scope**.
+*   **People:** Frame the organizational structure based on your actual, current operational model rather than copying large enterprise templates. If you are operating as a tight founding team, focus on functional ownership, explicit segregation of non-technical duties, and system-enforced multi-party controls (like mandatory code reviews) rather than listing missing corporate divisions or HR departments.
+*   **Data:** Define high-level data classifications (e.g., Customer Production Data vs. Administrative Configuration Profiles). Map your precise cryptographic termination points, noting exactly where data is encrypted at rest and where sessions are terminated along the public network path.
+*   **Procedures:** Summarize the operational and change management frameworks that govern system behavior. Focus on structural controls—such as mandatory peer-approval gates for application builds, repository branching protections, and automation-driven dependency patch cycles.
+
+## Writing It Well
+
+The description is meant to be an objective account of the system that was audited. The AICPA guidance specifically warns against subjective marketing language, which it calls advertising puffery, so keep claims factual and verifiable.
+
+Incorporate the following architectural guidelines to ensure a clean, audit-ready text:
+*   **Match Code Realities:** Never use aspirational architecture vocabulary. If your system runs as a containerized monolith within a cluster network, explicitly call it a monolith. Describing your platform as a "microservices network" out of convenience can prompt the auditor to demand service-mesh topologies, inter-service token validations, and distributed trace maps.
+*   **Isolate Administrative Traffic:** Differentiate between transactional platform events and business logging pipelines. Do not expand the audit scope to encompass payment providers, analytics suites, or corporate email engines unless they process primary tenant data files.
+*   **Optimize for Scan-Readiness:** Modern compliance systems process formatting cleanly when content is flat and direct. If using asset inventory structures, rely on simple text configurations or highly compressed standard tables to prevent word-processing software from vertically stretching pages or introducing hidden white-space formatting bugs during document extraction.
+
+## When to Write It
+
+The description can be completed at any point before the audit concludes. In practice it is written before the end of fieldwork for a Type 1 report, or near the end of the observation period for a Type 2. There is no hard deadline, but the reporting process cannot proceed without a completed description because it goes through the same quality control review as the audit itself. A missing description at the end of the audit directly delays your final report.
+
+## Consequences of an Inaccurate Description
+
+A misstated description can result in a qualified opinion. The typical example is an omitted subservice organization: if a vendor materially supports your system and the auditor concludes the description is misleading without it, the auditor can qualify the opinion on that basis. We recommend treating the description with the same rigor as your controls.
+
+## FAQ
+
+<details>
+<summary>Will my auditor write the system description for me?</summary>
+
+No. Auditors provide a template or turn questionnaire answers into a draft, but the service organization owns the content and is responsible for its accuracy and completeness.
+
+</details>
+
+<details>
+<summary>Do we have to name every vendor we use?</summary>
+
+No. You describe the subservice organizations your system relies on to meet its service commitments, such as your cloud infrastructure provider. General enterprise tooling, corporate productivity suites, billing processors, and internal team aggregators do not belong in the description. Omitting a significant data-path partner risks a qualified opinion, while over-reporting minor tools creates unnecessary evidence requirements. Discuss borderline cases with your auditor.
+
+</details>
+
+<details>
+<summary>How long should the description be?</summary>

@@ -1,0 +1,9 @@
+{
+  "label": "Vulnerabilities",
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "platform/exposure/vulnerabilities/overview"
+  },
+  "collapsed": true
+}

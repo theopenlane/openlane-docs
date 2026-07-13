@@ -26,33 +26,6 @@ tags:
     - GRC
 ---
 
-<head>
-  <meta name="keywords" content="compliance glossary, security terminology, GRC definitions, SOC 2, ISO 27001, GDPR, HIPAA, audit terms, risk management" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:title" content="Compliance & Security Glossary - Terms & Definitions | Openlane" />
-  <meta property="og:description" content="Comprehensive glossary of compliance, security, and GRC terminology for professionals" />
-  <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://docs.theopenlane.io/docs/platform/glossary" />
-  <script type="application/ld+json">
-    {JSON.stringify({
-      '@context': 'https://schema.org/',
-      '@type': 'DefinedTermSet',
-      name: 'Compliance and Security Glossary',
-      description: 'Comprehensive glossary of compliance, security, and GRC terminology',
-      author: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      }
-    })}
-  </script>
-</head>
-
 ## A
 
 **Action Plan**
@@ -67,11 +40,19 @@ information an entity has on file about them and how the information is being us
 
 **American Institute for Certified Public Accountants (AICPA)**
 
-The American Institute for Certified Public Accountants (AICPA) is the governing body that establishes the standards, criteria, and guidance for all SOC 2 Audits. All official SOC 2 reports must be issues by a licensed CPA firm that is accredited by the AICPA.
+The American Institute for Certified Public Accountants (AICPA) is the governing body that establishes the standards, criteria, and guidance for all SOC 2 Audits. All official SOC 2 reports must be issued by a licensed CPA firm that is accredited by the AICPA.
 
 **Architecture**
 
 The design of the structure of a system, including logical components, and the logical interrelationships of computers, operating systems, networks, or other elements, whether internally or externally hosted.
+
+**Assessment Boundary**
+
+The defined scope an assessment applies to: the people, processes, technologies, data, and facilities under evaluation. A boundary can cover the entire organization, a single business unit, a specific contract or initiative, or a geographic region, and one assessment may span several boundaries. In Openlane, [platforms](/docs/platform/registry/platforms) and their in-scope and out-of-scope relationships capture assessment boundaries.
+
+**Assessment Object**
+
+The specific item an assessment method is applied to during an assessment, such as a specification, a mechanism, an activity, or an individual.
 
 **Audit Scoping**
 
@@ -99,7 +80,7 @@ A structured questionnaire or evaluation used to collect information about secur
 
 **Availability**
 One of the Trust Services Criteria established by the AICPA, Availability means that the system is accessible and usable for agreed-upon use.
-⚠ Risk example: A denial of service attack brings your service unexpectedly offline.
+Risk example: A denial of service attack brings your service unexpectedly offline.
 
 ## B
 
@@ -151,6 +132,18 @@ The process of obtaining personal information from the individual directly (for 
 Declarations made by management to customers regarding the performance of one or more systems that provide services or products. Commitments can be communicated in written individualized agreements, standardized contracts, service-level agreements, or published statements (for example, a security practices statement). A commitment may relate to one or more trust services categories. Commitments may be made on many different aspects of the service
 being provided or the product, production, manufacturing, or distribution specifications.
 
+**Carve-out Method**
+
+A method of handling the services provided by a subservice organization in a SOC 2 report. The nature of the subservice organization's services is included in the system description, but its controls are excluded from the description and from the service auditor's scope: they are "carved out." Contrast with the inclusive method.
+
+**Compensating Control**
+
+An alternative control implemented in place of a required control that cannot be met as stated, providing equivalent or comparable protection. Compensating controls can be administrative, technical, or physical, and should reduce risk to a level comparable to the original control operating effectively.
+
+**Complementary User Entity Controls (CUEC)**
+
+Controls that reside at the user entity level of a service organization; user entities are the organizations that use the service organization's services. A SOC 2 report identifies CUECs because the service organization's controls only achieve their objectives if customers implement their side (for example, managing their own users' access).
+
 **Compliance Framework**
 
 Part of a Compliance program, a Compliance framework lays out the strategies an organization uses to ensure that it remains in Compliance with both internal and external regulations. The Compliance framework should provide a set of tools and a common language for stakeholders to conduct and maintain their Compliance processes across departments.
@@ -170,11 +163,19 @@ Refers to a loss of confidentiality, integrity, or availability of information, 
 **Confidentiality**
 
 One of the Trust Services Criteria established by the AICPA, Confidentiality means that only the right people can access the information held by the organization.
-⚠ Risk example: Criminals get hold of your clients’ login details and sell them.
+Risk example: Criminals get hold of your clients’ login details and sell them.
+
+**Conformity Assessment**
+
+The process of demonstrating that specified requirements are fulfilled, such as certification against ISO 27001 or an accredited SOC 2 examination.
 
 **Contacts**
 
 Contacts are those people or entities you intend to target with marketing campaigns such as emails or other notifications. Contacts may be a simple email address or may include more information, such as name or phone number. Contacts may be organized into Private or Public lists for managing anything from marketing emails to system messages.
+
+**Control Inheritance**
+
+When a system receives protection from controls that are developed, implemented, assessed, and monitored by a party other than the team responsible for the system itself. Common in cloud environments: a provider's physical security controls are inherited by everything running on the platform. See the [NIST glossary](https://csrc.nist.gov/glossary/term/security_control_inheritance) for the formal definition.
 
 **Controls**
 
@@ -285,6 +286,10 @@ Many companies subject to HIPAA comply with HITRUST, an optional framework that 
 
 A record representing an individual affiliated with an organization, including employees and contractors. Unlike user accounts (which represent platform login credentials), Identity Holders track personnel for compliance and security management purposes such as assessment completion, access management, and security training. In Openlane, Identity Holders can be linked to user accounts.
 
+**Implemented Capability**
+
+A technical, administrative, or physical mechanism that exists in a production environment and can demonstrate reasonable effectiveness, as distinct from one that is only planned or documented.
+
 **Information Assets**
 
 Data and the associated software and infrastructure used to process, transmit, and store information or to produce, manufacture, or distribute products.
@@ -296,6 +301,10 @@ One of the Trust Services Criteria established by the AICPA, Integrity means tha
 **Integration**
 
 A configured connection between Openlane and an external system that enables automated data synchronization and evidence collection. Integrations connect to cloud providers, security tools, identity providers, collaboration platforms, and storage services. Examples include GitHub, AWS Security Hub, Slack, and Okta.
+
+**Inclusive Method**
+
+A method of handling the services provided by a subservice organization in a SOC 2 report where the subservice organization's controls are included in the system description and tested by the service auditor. Contrast with the carve-out method.
 
 **Infrastructure**
 
@@ -341,13 +350,28 @@ There are other important entries in the ISO 27000 family including:
 
 A risk that has been realized, or a problem that has already occurred and requires immediate attention and action.
 
-## J
-
-## K
-
-## L
 
 ## M
+**Material Control**
+
+A control so fundamental that no compensating control can substitute for it, and whose absence or failure could have a material impact on the organization.
+
+**Material Incident**
+
+An incident with actual or potential material impact, whether by jeopardizing the confidentiality, integrity, availability, or safety of systems and data, or by violating organizational policy at a scale that matters. Reasonably foreseeable material incidents should be reflected in the incident response plan.
+
+**Material Risk**
+
+A risk whose exposure to danger, harm, or loss would have a material impact on the organization, such as significant financial damage, litigation, or safety consequences. Material risks belong in the [risk register](/docs/platform/exposure/risks/overview) with an accountable owner.
+
+**Material Threat**
+
+A threat vector capable of causing damage with material impact, such as nation-state operations, supply chain compromise, or poorly governed AI initiatives, documented in the organization's threat catalog.
+
+**Material Weakness**
+
+A deficiency, or combination of control deficiencies, that makes it probable that reasonable threats will not be prevented or detected in a timely manner, undermining assurance that the organization can operate within its stated risk tolerance. Material weaknesses typically surface as findings in a gap assessment or audit and are tracked to remediation.
+
 **Member**
 
 Members are people you have invited to manage your workspace at Openlane.
@@ -360,7 +384,7 @@ A legal agreement that protects confidential information shared between parties.
 
 **NIST CSF**
 
-NIST is a federal agency within the US Department of Commerce that creates guidelines, frameworks, and policies that support innovation in science and technology. It was created in response to Presidential Executive Order 13636, The National Institute of Standards and Technology (NIST) created a Cybersecurity Framework (CSF) in 2014.
+NIST is a federal agency within the US Department of Commerce that creates guidelines, frameworks, and policies that support innovation in science and technology. In response to Presidential Executive Order 13636, the National Institute of Standards and Technology (NIST) created a Cybersecurity Framework (CSF) in 2014.
 
 The NIST Cybersecurity Framework provides guidance to organizations on how to mitigate, handle, and monitor security threats. Only federal agencies and their vendors, contractors, and partners are mandated to comply with NIST CSF.
 
@@ -368,16 +392,23 @@ Many private organizations voluntarily implement NIST CSF principles into their 
 
 NIST CSF is based on five core functions intended to holistically safeguard organizations from security risks.
 
-*Identify: Develop an understanding of possible security risks as they relate to a company’s people, processes, and technology.
-*Protect: Establish cybersecurity protocols and principles that actively and passively defend a company’s infrastructure from security breaches.
-*Detect: Continuously monitor a company’s infrastructure for anomalous events, malicious activity, and system weaknesses.
-*Respond: Ensure a proper response strategy that effectively eliminates a security threat while also keeping company production on track.
-‍*Recover: Maintain the integrity of all systems so that a company’s people, processes, and technologies can return to a stronger, more efficient state of operations.
+| Function | Purpose |
+| --- | --- |
+| Identify | Develop an understanding of possible security risks as they relate to a company’s people, processes, and technology. |
+| Protect | Establish cybersecurity protocols and principles that actively and passively defend a company’s infrastructure from security breaches. |
+| Detect | Continuously monitor a company’s infrastructure for anomalous events, malicious activity, and system weaknesses. |
+| Respond | Ensure a proper response strategy that effectively eliminates a security threat while also keeping company production on track. |
+| Recover | Maintain the integrity of all systems so that a company’s people, processes, and technologies can return to a stronger, more efficient state of operations. |
 
 ## O
+
+**Operating Effectiveness**
+
+Whether a control functioned as intended over a period of time (for example, throughout the period January 1 to December 31). Auditors conclude on operating effectiveness by testing a sample from the control's population; if any sampled instance fails, the control is deemed not to have operated effectively for the period. Testing operating effectiveness is what distinguishes a Type II audit from a Type I.
+
 **Open Source**
 
-Open source software is software with source code that anyone can inspect, modify, and enhance. Openlane is an example of an [open-source company] (https://github.com/theopenlane).
+Open source software is software with source code that anyone can inspect, modify, and enhance. Openlane is an example of an [open-source company](https://github.com/theopenlane).
 
 **Organization**
 
@@ -388,6 +419,10 @@ Organizations are the highest level grouping within Openlane. Organizations are 
 **Personal Information**
 
 Information that is about, or can be related to, an identifiable individual.
+
+**Population**
+
+The number of occurrences of a control's performance during the audit period, from which the auditor samples. For example, if 100 users were terminated and each termination required a signed offboarding form, the auditor's population for testing terminated users is 100.
 
 **Policies**
 
@@ -422,7 +457,7 @@ from individuals, it typically provides a privacy notice to those individuals.
 
 **Project**
 
-A Project is a grouping inside an account. Typically, users leverage projects to separate development and production environments or otherwise group assets for shared identification and management.
+A Project is a grouping inside an account, typically used to separate development and production environments or otherwise group assets for shared identification and management.
 
 **Process or Control Framework**
 
@@ -439,9 +474,12 @@ frameworks relate to security and privacy.
 Tangible or intangible goods manufactured or produced by an entity. Throughout this
 document, the term is used interchangeably with goods.
 
-## Q
 
 ## R
+
+**Reciprocity**
+
+An agreement between organizations to accept each other's security assessments or assessed postures rather than re-assessing, commonly used to reuse authorizations across agencies or partners.
 
 **Remediation**
 
@@ -461,15 +499,31 @@ future use or reference.
 
 A potential future event with possible negative impacts on the company's objectives. Risks may be quantified using metrics including likelihood and impact, and should be managed and treated within organizations.
 
+**Risk Appetite**
+
+The types and amount of risk an organization is willing to accept, at a broad level, in pursuit of its objectives.
+
 **Risk Response**
 
 The decision to accept, avoid, reduce, or share a risk.
+**Risk Threshold**
+
+The concrete values that trigger management action or escalation when crossed, turning risk appetite and tolerance into operational decision points.
+**Risk Tolerance**
+
+The level of risk an organization is willing to assume to achieve a specific result. Narrower and more operational than risk appetite.
+
+
 
 ## S
 
 **Scan**
 
 A systematic security assessment that examines a target for vulnerabilities, misconfigurations, or compliance gaps. Scans may be automated (scheduled vulnerability scans), on-demand (triggered by events), or manual (penetration tests). In Openlane, scans track target, type (Domain, Vulnerability, Vendor, Provider), status, and discovered vulnerabilities.
+
+**Sampling**
+
+Selecting a number of instances from a control's population to test its operation. The auditor's sampling methodology stipulates how many samples to select based on the population size; for example, a sample of 5 from a population of 100 terminated users. Management then provides evidence for the selected samples.
 
 **Security Event**
 
@@ -486,6 +540,14 @@ assets and resources.
 **Senior Management**
 
 The CEO or equivalent organizational leader and senior management team.
+
+**Service Auditor**
+
+A professional accountant in public practice who, at the request of the service organization, provides an assurance report (such as a SOC 2) on controls at a service organization.
+
+**Service Organization**
+
+A third-party organization (or segment of one) that provides services to user entities that are likely to be relevant to those user entities' control environment. In a SOC 2 engagement, the service organization is the company being audited.
 
 **Service Provider**
 
@@ -519,9 +581,13 @@ example, operating systems, drivers, utilities, programming software, and interf
 Parties that are affected by the entity, such as shareholders, the communities in which
 an entity operates, employees, customers, and suppliers.
 
+**Subservice Organization**
+
+A service organization used by another service organization to perform some of the services provided to user entities, where those services are likely to be relevant to the user entities' control environment. A SOC 2 report addresses subservice organizations through either the carve-out or the inclusive method.
+
 **Subprocessor**
 
-A third-party vendor or service that processes personal data on behalf of an organization. Common examples include cloud infrastructure providers, payment processors, email services, and customer support platforms. Regulatory frameworks like GDPR require organizations to disclose their subprocessors. In Openlane, subprocessors are listed on the Trust Center to provide transparency about data processing relationships.
+A third-party vendor or service that processes personal data on behalf of an organization, extending the controller-processor chain one link further: the customer is the controller, the organization is the processor, and vendors the organization engages with that data are subprocessors. Common examples include cloud infrastructure providers, payment processors, email services, and customer support platforms; vendors with no customer-data involvement are not subprocessors. GDPR Article 28 requires organizations to disclose subprocessors and bind them under data processing agreements. In Openlane, subprocessors are listed on the Trust Center to provide transparency about data processing relationships.
 
 **System**
 
@@ -529,6 +595,10 @@ Refers to the infrastructure, software, procedures, and data that are designed, 
 and operated by people to achieve one or more of the entity’s specific business objectives (for
 example, delivery of services or production of goods) in accordance with management-specified
 requirements.
+
+**System Description**
+
+The section of a SOC 2 report (Section 3) describing the policies and procedures the service organization designed and implemented to provide the services covered by the report. It identifies the services covered, the IT elements involved, the relevant Trust Services Criteria, and the related controls.
 
 **System Boundaries**
 
@@ -599,6 +669,10 @@ denial of service.
 
 Third Party Risk Management refers to the methodologies used by organizations to understand and mitigate risks introduced by suppliers, partners, or other entities outside the organization.
 
+**Type I / Type II**
+
+The two forms of a SOC audit. In a Type I audit, the auditor tests only the design and implementation of controls at a point in time. In a Type II audit, the auditor tests design, implementation, and operating effectiveness of controls over a period of time (6 to 12 months).
+
 **Trust Center**
 
 A customer-facing portal where organizations share their security posture, compliance certifications, and data protection practices with customers, prospects, and auditors. Trust Centers provide a centralized location for security documentation, compliance frameworks, subprocessor disclosures, and security updates. In Openlane, Trust Centers support custom branding, vanity domains, document management with NDA-gated access, and watermarking for sensitive documents.
@@ -638,6 +712,3 @@ Weakness in a component of a system, particularly information assets, system sec
 
 A continuous process of identifying, classifying, prioritizing, and addressing security weaknesses in systems and software. Vulnerability management includes identification (discovery through scanning), assessment (evaluating severity and impact), prioritization (ranking by risk and business context), remediation (implementing fixes), verification (confirming fix effectiveness), and reporting (documenting for compliance). ISO 27001 Annex A 8.8 and SOC 2 CC7.1 require vulnerability management controls.
 
-## W
-
-## X Y, and Z

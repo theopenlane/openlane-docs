@@ -1,0 +1,127 @@
+---
+title: Building a Risk Register
+sidebar_label: Risk Register
+sidebar_position: 3
+description: Building and maintaining a risk register in Openlane
+keywords:
+  - risk register
+  - risk log
+  - risk management
+  - risk tracking
+  - risk owner
+  - risk categories
+  - risk register template
+tags:
+  - risk
+  - exposure
+  - compliance
+---
+
+import Steps from '@site/src/components/Steps';
+
+# Building a Risk Register
+
+A risk register is the centralized log where you identify, analyze, and manage the risks facing your organization: each entry documents what could go wrong, how likely and how damaging it would be, who owns it, and what you have decided to do about it. In Openlane, the [Risks](./overview.mdx) section is the register.
+
+## Why You Need One
+
+Without a formal register, risk knowledge lives in people's heads and scattered documents, and audit preparation turns into reconstruction. A maintained register lets you:
+
+- Track the risks that could derail the organization in one place
+- Decide which risks need immediate action and which can wait
+- Plan responses to major threats before they occur
+- Demonstrate due diligence to auditors, partners, and customers
+- Give compliance, engineering, IT, and legal teams a shared view of exposure
+
+Every major framework expects one. SOC 2 and ISO 27001 both look for a maintained register showing that you identify threats, prioritize by severity, and select controls based on actual risk.
+
+## What Each Entry Carries
+
+A register entry needs enough structure to be actionable and comparable. In Openlane, these are native fields on every risk record rather than spreadsheet columns you maintain by hand:
+
+| Component | What it captures | In Openlane |
+| --------- | ---------------- | ----------- |
+| Name and description | The specific threat, the business context, and what triggers it | Risk name and details |
+| Category | The type of risk, so you can filter and report by domain | Category, customizable through [custom enums](../../settings/custom-data.mdx) |
+| Owner | Who is responsible for monitoring the risk and driving the response | Stakeholder, plus a delegate for day-to-day follow-through |
+| Probability and impact | Likelihood and severity on a consistent scale | Impact and likelihood fields; the score is computed as impact × likelihood |
+| Priority | A comparable score that ranks risks against each other | Risk score, with the [scoring matrix](./overview.mdx#scoring-risks) defining the bands |
+| Response | The treatment decision (mitigate, transfer, accept, avoid) and the plan behind it | Risk decision and mitigation plan, with linked action plans for the concrete steps |
+| Residual risk | The exposure that remains after treatment | Residual score |
+| Status | Where the risk stands in its lifecycle | Risk status |
+| Review cadence | When the risk is next due for a look | Review frequency and next review date |
+
+## Common Risk Categories
+
+Categories keep a growing register navigable. Most registers draw from a set like this, and you can define your own vocabulary through custom enums:
+
+| Category | Covers | Examples |
+| -------- | ------ | -------- |
+| Compliance | Noncompliance with laws, regulations, or frameworks | Missing evidence, outdated policies, audit gaps |
+| Financial | Ability to meet financial obligations | Customer non-payment, rising costs |
+| Operational | Day-to-day work and output | System outages, change failures, onboarding errors |
+| Physical | Premises and property | Data center loss, extreme weather, power failure |
+| Reputational | Trust with customers, partners, and investors | Data breaches, employee misconduct |
+| Strategic | Business decisions with long-term consequences | Market entry, acquisitions, legal exposure |
+| Technical | Hardware and software weaknesses | Software vulnerabilities, outdated dependencies, shadow IT |
+| Vendor | Events at third parties you depend on | Service outages, non-compliant subprocessors, vendor closure |
+
+## Building the Register
+
+<Steps>
+
+1. **Identify risks.** Work with stakeholders across the business rather than compiling the list alone: brainstorm with cross-functional teams, review past incidents and audit findings, and examine regulatory requirements for compliance gaps. The [risk identification techniques](./risk-management-guide.mdx#risk-identification-techniques) in the practical guide (threat modeling, compliance gap analysis, process reviews) give you repeatable methods. In Openlane you can create risks individually, import an existing register [in bulk via CSV](./overview.mdx#examples), or promote recurring [findings](../findings.mdx) from the exposure pipeline into register entries.
+
+1. **Describe each risk.** Write descriptions specific enough that someone outside the conversation understands the threat: the failure scenario, the business context and why it matters, the conditions that would trigger it, and who would be affected. "Unauthorized access to customer data through misconfigured cloud storage" is actionable; "security risk" is not.
+
+1. **Rate impact and likelihood.** Assess each risk's severity and probability on a consistent scale, and record the reasoning in the risk details so the rating survives the person who made it. Openlane computes the risk score from the two ratings; the [scoring matrix](./overview.mdx#scoring-risks) shows how the bands break down. The [assessment methodologies](./risk-management-guide.mdx#risk-assessment-methodologies) in the practical guide cover quantitative and qualitative approaches to producing the ratings.
+
+1. **Prioritize.** Rank by score so the worst risks get attention first. The score bands tell you what demands immediate action and what can be monitored; consistency matters more than precision, because the register's job is to make risks comparable.
+
+1. **Decide the response.** For each risk, choose a treatment (mitigate, transfer, accept, or avoid; see [treating risks](./overview.mdx#treating-risks) for the criteria) and record the decision on the risk. For mitigations, capture the plan: the specific actions, timelines, and expected outcome. Linking the risk to the [controls](../../compliance-management/controls/overview.mdx) that mitigate it is what later lets you spot risks whose controls have gaps. After treatment, set the residual score so the register reflects remaining exposure rather than the original rating.
+
+1. **Assign an owner.** Every risk needs a named stakeholder responsible for monitoring it and driving the response, assigned by expertise rather than availability. Openlane also supports a delegate on each risk, which keeps progress moving when the accountable owner is a senior stakeholder who does not do the day-to-day work.
+
+1. **Monitor and review.** A register is a living record. Set a review frequency on each risk so the next review date is tracked for you, and update statuses as treatment progresses. We recommend quarterly reviews for most organizations, with owners escalating between reviews whenever a risk's probability or impact changes.
+
+</Steps>
+
+## Keeping It Alive
+
+The register fails when it becomes a document someone made once. What keeps it current:
+
+| Habit | Why it works |
+| ----- | ------------ |
+| Regular review cycles | Recurring quarterly reviews catch drift, and per-risk review scheduling makes overdue reviews visible instead of forgotten |
+| Link risks to controls | A risk connected to its mitigating controls shows you immediately when a control gap leaves it untreated, and gives auditors the thread from threat to control to evidence |
+| Feed it from real signals | Regulatory changes, new vendors, and recurring findings from the [exposure pipeline](../overview.mdx) should all produce register updates, not just the annual review |
+| Standardize the scale | The same rating criteria for every risk; a register where "high" means different things in different rows cannot prioritize anything |
+
+## FAQ
+
+<details>
+<summary>What's the difference between a risk register and a risk matrix?</summary>
+
+The register is the detailed record: every risk, its ratings, owner, and response plan. The matrix is the visualization that plots impact against likelihood to make priorities visible. They work together; the [scoring matrix](./overview.mdx#scoring-risks) prioritizes what the register documents.
+
+</details>
+
+<details>
+<summary>How often should the register be updated?</summary>
+
+Review it at least quarterly, and update it immediately when a new risk is identified or a major business change occurs (a new vendor, a new market, a significant incident). Set the review frequency on each risk so the cadence is enforced rather than remembered.
+
+</details>
+
+<details>
+<summary>Who should maintain it?</summary>
+
+A GRC or risk manager typically owns the register as a whole, while individual risk owners maintain their assigned risks. The stakeholder and delegate fields on each risk make both layers of ownership explicit.
+
+</details>
+
+## Related Documentation
+
+- [Risks Overview](./overview.mdx): scoring, treatment, and how risks connect to the rest of the platform
+- [Practical Risk Management Guide](./risk-management-guide.mdx): identification techniques and assessment methods with worked examples
+- [Gap Analysis](../../grc-fundamentals/audit/gapanalysis.mdx): comparing current controls against framework requirements

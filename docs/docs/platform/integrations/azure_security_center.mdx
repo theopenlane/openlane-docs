@@ -5,6 +5,8 @@ sidebar_position: 12
 sidebar_label: Microsoft Defender for Cloud
 ---
 
+import Steps from '@site/src/components/Steps';
+
 :::info
 This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
 :::
@@ -16,7 +18,7 @@ If your team runs workloads on Azure, this integration brings Defender for Cloud
 ## Key Capabilities
 
 - **Security Findings Ingestion:** Collects security alerts, vulnerability assessments, and recommendations from Defender workload protection plans, giving you a single view for remediation tracking and SLA compliance (SOC 2: CC7, CC8).
-- **Compliance Assessment Context:** Reads regulatory compliance assessment results and secure score data, so when an auditor asks how you're tracking control effectiveness, you have an answer (ISO 27001: A.18.2).
+- **Compliance Assessment Context:** Reads regulatory compliance assessment results and secure score data, so you can show auditors how you track control effectiveness (ISO 27001: A.18.2).
 - **Read-Only Subscription Access:** Authenticates with a service principal and reads security data without modifying subscription settings or Defender configuration.
 
 ## Prerequisites
@@ -29,6 +31,8 @@ If your team runs workloads on Azure, this integration brings Defender for Cloud
 
 ### Step 1: Configure Azure App and Permissions
 
+<Steps>
+
 1. In the Azure portal, create or select an app registration and generate a client secret.
 2. Navigate to the target subscription's **Access control (IAM)** blade and assign the **Security Reader** role to the service principal.
 3. Record the following values for use in Openlane:
@@ -37,25 +41,31 @@ If your team runs workloads on Azure, this integration brings Defender for Cloud
    - **Client Secret:** the secret value (shown only at creation time).
    - **Subscription ID:** from the subscription's overview page.
 
+</Steps>
+
 ### Step 2: Connect in Openlane
+
+<Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Microsoft Defender for Cloud**.
 2. Click **Configure** and enter the required fields:
 
-| Field | Required | Purpose |
-|---|---|---|
-| `tenantId` | Yes | Azure AD tenant that owns the subscription |
-| `clientId` | Yes | Application (client) ID of the service principal |
-| `clientSecret` | Yes | Client secret for the service principal |
-| `subscriptionId` | Yes | Azure subscription with Defender for Cloud enabled |
-| `resourceGroup` | No | Restrict scope to a specific resource group |
-| `workspaceId` | No | Log Analytics Workspace ID for workspace-scoped alert queries |
+   | Field | Required | Purpose |
+   |---|---|---|
+   | `tenantId` | Yes | Azure AD tenant that owns the subscription |
+   | `clientId` | Yes | Application (client) ID of the service principal |
+   | `clientSecret` | Yes | Client secret for the service principal |
+   | `subscriptionId` | Yes | Azure subscription with Defender for Cloud enabled |
+   | `resourceGroup` | No | Restrict scope to a specific resource group |
+   | `workspaceId` | No | Log Analytics Workspace ID for workspace-scoped alert queries |
 
 3. Click **Save**.
 
+</Steps>
+
 ## Validate Connection
 
-After saving, Openlane runs a health check that verifies the service principal can authenticate and access Defender for Cloud APIs on the configured subscription. The result appears on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+After saving, Openlane runs a health check that verifies the service principal can authenticate and access Defender for Cloud APIs on the configured subscription. The result appears on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
 
 ## What Openlane Syncs
 

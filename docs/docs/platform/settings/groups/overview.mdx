@@ -1,0 +1,77 @@
+---
+title: Overview
+description: User groups and access management for compliance teams
+sidebar_position: 1
+keywords:
+  - groups
+  - access management
+  - role-based access control
+  - compliance teams
+  - user groups
+  - permissions
+  - group management
+tags:
+  - groups
+  - access control
+  - compliance
+---
+
+# Groups
+
+Groups do two jobs in Openlane: they organize your people, and they carry permissions. Put users in a group, give the group access to the right objects (programs, controls, policies, evidence), and everyone in it can do their work without per-person permission bookkeeping.
+
+Access control is itself a compliance requirement: auditors will ask who can edit controls, who can approve policies, and how you keep those lists current. Managing access through groups gives you an answer that's both operable and auditable: permissions live in one reviewable place, and membership changes leave a trail.
+
+Groups also enforce segregation of duties: the people who write policies, the people who approve them, and the auditors who read everything shouldn't hold the same permissions.
+
+## Built-in Groups
+
+Every organization starts with three groups we maintain for you (**Viewers**, **Admins**, and **All Members**), kept in sync with each user's organization role automatically. Their membership isn't editable (that's the point), but they're the fastest way to assign broad permissions: granting "All Members" view access to your policies takes one step and never goes stale as people join or leave.
+
+See [System Managed Groups](./system-managed.mdx) for details.
+
+## Organizing Your Own Groups
+
+There's no prescribed structure; create groups that match how your team actually divides the work. Common shapes:
+
+- **Functional**: a Security Team group that can edit controls and evidence; a Compliance group that can approve policies
+- **Project-based**: a SOC 2 Audit group for this year's audit, with access scoped to that program, archived when it's done
+- **Approval**: a Risk Committee group whose members sign off on risk acceptance and treatment decisions
+
+We recommend starting small: the system-managed groups plus one or two functional groups cover most teams until an audit or a new framework gives you a reason for more structure.
+
+## How Permissions Behave
+
+Two rules explain most of what you'll observe:
+
+- **Permissions inherit.** Access granted through a group flows to related objects; an editor of a group can inherit editor access to programs associated with that group, so you don't re-grant permissions object by object.
+- **The most permissive grant wins.** If someone is in one group that can edit a program and another that can only view it, they can edit it. Keep this in mind when someone appears to have more access than a group suggests: check their other memberships.
+
+The [Permissions](./permissions.mdx) page covers inheritance, overlap, and how to inspect effective access in depth.
+
+## FAQ
+
+<details>
+<summary>What's the difference between an organization role and a group?</summary>
+
+Your organization role (Member, Admin, Owner) sets your baseline access to the organization itself. Groups grant additional, object-level access on top: which controls you can edit, which programs you can see.
+
+</details>
+
+<details>
+<summary>Someone has access I didn't grant. Why?</summary>
+
+This is almost always permission overlap: they're in another group with a more permissive grant, or they inherited access through a related object. Check their group memberships first.
+
+</details>
+
+<details>
+<summary>Should auditors get their own group?</summary>
+
+Yes. A read-only group scoped to the program under audit is the cleanest pattern. They see everything they need and can't change any of it, and removing access after the audit is one membership change.
+
+</details>
+
+---
+
+*For programmatic access, see the [Groups GraphQL examples](../../../developers/graphql-examples/groups.mdx) in the developer docs.*

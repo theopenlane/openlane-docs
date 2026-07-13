@@ -5,17 +5,19 @@ sidebar_position: 10
 sidebar_label: Google Drive
 ---
 
+import Steps from '@site/src/components/Steps';
+
 # ![google drive integration](./assets/google_workspace.png) Google Drive Integration Guide
 
-If your organization stores policies and compliance documents in Google Drive, this integration surfaces them directly in Openlane — no copy-paste, no version drift. Documents remain editable in Drive; Openlane displays them read-only and keeps them in sync automatically.
+If your organization stores policies and compliance documents in Google Drive, this integration surfaces them directly in Openlane, with no copying between systems and no version drift. Documents remain editable in Drive; Openlane displays them read-only and keeps them in sync automatically.
 
 ## Key Capabilities
 
-- **OAuth Connectivity:** Connects to Google Drive using a workspace admin OAuth flow — no service account credentials or API keys to manage.
+- **OAuth Connectivity:** Connects to Google Drive using a workspace admin OAuth flow, with no service account credentials or API keys to manage.
 - **Policy Document Sync:** Syncs documents from a specified Drive folder into Openlane so policies are always current without manual uploads.
-- **Read-Only Display in Openlane:** Documents sourced from Drive are marked as managed by the integration — edits are made in Google Drive and reflected automatically in Openlane.
+- **Read-Only Display in Openlane:** Documents sourced from Drive are marked as managed by the integration; edits are made in Google Drive and reflected automatically in Openlane.
 - **Primary Document Manager:** Designate Google Drive as your primary document source so new policies default to Drive-managed documents.
-- **Scoped Folder Sync:** Limit ingestion to a specific Drive folder so only your compliance documents are synced, not your entire Drive.
+- **Scoped Folder Sync:** Limit ingestion to a specific Drive folder so only your compliance documents are synced rather than your entire Drive.
 
 ## Prerequisites
 
@@ -26,12 +28,16 @@ If your organization stores policies and compliance documents in Google Drive, t
 
 ### Step 1: Authorize Google Drive
 
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations** and find **Google Drive**.
 2. Click **Configure**.
-3. Click **Continue to Authorization** — you will be redirected to Google. There are no credentials to enter manually.
+3. Click **Continue to Authorization**. You will be redirected to Google. There are no credentials to enter manually.
 4. Sign in with a Google Workspace account that has access to the target Drive folder.
 5. Grant the requested Drive permissions.
 6. After authorization, you are redirected back to Openlane and the connection is saved.
+
+</Steps>
 
 ### Step 2: Configure Sync Behavior
 
@@ -39,8 +45,8 @@ After authorizing, configure which documents Openlane pulls in and how they are 
 
 | Setting | Description |
 |---|---|
-| **Folder ID** | The Google Drive folder ID to sync — only documents within this folder are ingested. Leave blank to sync from the root of My Drive |
-| **Primary Document Manager** | Designate Google Drive as the primary document source for your organization — new policies default to Drive-managed documents |
+| **Folder ID** | The Google Drive folder ID to sync; only documents within this folder are ingested. Leave blank to sync from the root of My Drive |
+| **Primary Document Manager** | Designate Google Drive as the primary document source for your organization; new policies default to Drive-managed documents |
 
 :::tip
 To find a folder ID, open the folder in Google Drive. The ID is the string at the end of the URL: `https://drive.google.com/drive/folders/<FOLDER_ID>`.
@@ -48,15 +54,15 @@ To find a folder ID, open the folder in Google Drive. The ID is the string at th
 
 ### Step 3: Link Documents to Policies
 
-Once the integration is connected and a folder is synced, Drive documents automatically appear in openlane as policies. Policies linked to a Drive document show a **Google Drive** banner with a direct link to open and edit the source file.
+Once the integration is connected and a folder is synced, Drive documents automatically appear in Openlane as policies. Policies linked to a Drive document show a **Google Drive** banner with a direct link to open and edit the source file.
 
 ![google drive policy view in openlane](./assets/screenshots/google_drive_policy.png)
 
-Documents sourced from Google Drive are **read-only in Openlane** — all edits happen in Google Drive and are reflected in Openlane on the next sync.
+Documents sourced from Google Drive are **read-only in Openlane**; all edits happen in Google Drive and are reflected in Openlane on the next sync.
 
 ## Validate Connection
 
-After saving, Openlane runs a health check against the Drive API and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+After saving, Openlane runs a health check against the Drive API and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
 
 ## What Openlane Syncs
 
@@ -70,9 +76,13 @@ Policy content is surfaced inline in Openlane alongside your compliance controls
 
 To remove this integration:
 
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations**
 1. Select the **Installed** tab
 1. Open the menu on the integration card and select **Disconnect**
+
+</Steps>
 
 This removes stored credentials and stops document sync. Existing policies that were linked to Drive documents retain their content but will no longer update automatically. You can reconnect later by configuring the integration again.
 
@@ -80,7 +90,7 @@ This removes stored credentials and stops document sync. Existing policies that 
 
 - **Authorization errors:** verify the authorizing account has access to the target Drive folder and that all requested OAuth scopes were granted.
 - **No documents syncing:** verify the folder ID is correct and that the authorizing account has access to the folder.
-- **Documents not updating:** refresh the page, updates should come in immediately
+- **Documents not updating:** refresh the page; updates should appear immediately.
 - **Drive API errors:** verify that the Google Drive API is enabled in the Google Cloud project associated with your Workspace.
 
 ## References

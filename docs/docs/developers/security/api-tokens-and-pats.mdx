@@ -1,16 +1,17 @@
 ---
-title: "API Tokens"
-description: "API tokens for programmatic access to Openlane"
-sidebar_position: 3
+title: "API Tokens & Personal Access Tokens"
+sidebar_label: "API Tokens & PATs"
+description: "Organization API tokens and personal access tokens for programmatic access to Openlane"
+sidebar_position: 4
 keywords:
   - api tokens
+  - personal access tokens
   - authentication
   - programmatic access
   - security tokens
   - token management
   - api security
   - organization tokens
-  - personal access tokens
   - token lifecycle
   - graphql api
 tags:
@@ -19,101 +20,31 @@ tags:
   - tokens
 ---
 
-# API Tokens
+# API Tokens & Personal Access Tokens
 
-API tokens enable programmatic access to Openlane systems and are critical for secure system integration and automation. They provide a mechanism for authenticating machine-to-machine communications and service integrations.
+Anything that talks to Openlane without a browser (CI pipelines, scripts, integrations, the CLI) authenticates with a token. Openlane has two kinds, and picking the right one is mostly a question of who the action should be attributed to.
 
-## What Are API Tokens?
+## Which Token Should I Use?
 
-API tokens are authentication credentials that allow external systems, applications, and services to programmatically access Openlane APIs. They serve as a secure alternative to user credentials for automated processes, system integrations, and service-to-service communications.
+| | Organization API Token | Personal Access Token (PAT) |
+| --- | --- | --- |
+| **Prefix** | `tola_` | `tolp_` |
+| **Acts as** | The organization, with explicitly granted scopes | You, with your existing permissions |
+| **Managed by** | Organization administrators | The individual user |
+| **Best for** | CI/CD, system integrations, shared automation | Personal scripts, local development, CLI use |
 
-## Compliance Significance
+The rule of thumb: if the automation should keep working after you leave the company, use an organization API token. If it's your personal tooling and its actions should show up in the audit trail as you, use a PAT.
 
-API tokens are essential for:
+## Scopes
 
-- **Access Control**: Implementing fine-grained access permissions for automated systems
-- **Audit Trail**: Tracking programmatic access to compliance-sensitive data
-- **Security Compliance**: Meeting requirements for secure API authentication (SOC 2, ISO 27001)
-- **Segregation of Duties**: Separating automated access from human user access
-- **Incident Response**: Quickly identifying and revoking compromised automated access
+Organization API tokens are scoped per object type in `object:action` format, for example `evidence:read`, `evidence:write`, or `control:delete`. Most object types support `read`, `write`, and `delete` actions independently, so grant each token only the specific actions it needs. Avoid broad grants for production tokens: a token that uploads evidence doesn't need `control:delete`.
 
-## API Token Types
+PATs don't need explicit scoping for most uses; they inherit the permissions of the user who created them, including group memberships.
 
-### Organization-Level API Tokens
+## Creating and Managing Tokens
 
-- **Scope**: Organization-wide access with configurable permissions
-- **Prefix**: `tola_` (Token Openlane API)
-- **Use Case**: System integrations, organizational automation
-- **Lifecycle**: Managed by organization administrators
+Create tokens in the console under [developer settings](https://console.theopenlane.io/organization-settings/developers), or via the API:
 
-### Personal Access Tokens
-
-- **Scope**: User-specific access with inherited permissions
-- **Prefix**: `tolp_` (Token Openlane Personal)
-- **Use Case**: User-specific automation, personal tooling
-- **Lifecycle**: Managed by individual users
-
-## Properties
-
-### Core Information
-
-- **ID**: Unique identifier for the token
-- **Name**: Human-readable token name for identification
-- **Token**: Cryptographically secure token value (write-only)
-- **Description**: Purpose and usage description
-- **Owner**: Organization or user that owns the token
-
-### Access Control
-
-- **Scopes**: Array of per-object permission scopes in `object:action` format (e.g. `evidence:read`, `evidence:write`, `control:delete`). Most object type support `read`, `write`, and `delete` actions independently
-- **Active Status**: Boolean indicating if token is active
-- **SSO Authorizations**: Organization-specific SSO verification timestamps
-
-### Lifecycle Management
-
-- **Created At**: Token creation timestamp
-- **Expires At**: Optional expiration date
-- **Last Used At**: Timestamp of most recent usage
-- **Revoked At**: Revocation timestamp (if applicable)
-- **Revoked By**: User who revoked the token
-- **Revoked Reason**: Reason for token revocation
-
-## GraphQL Operations
-
-### Query API Tokens
-```graphql
-query GetAPITokens($first: Int, $where: APITokenWhereInput) {
-  apiTokens(first: $first, where: $where) {
-    edges {
-      node {
-        id
-        name
-        description
-        scopes
-        isActive
-        expiresAt
-        lastUsedAt
-        createdAt
-        revokedReason
-        revokedBy
-        owner {
-          id
-          name
-        }
-      }
-    }
-    pageInfo {
-      hasNextPage
-      hasPreviousPage
-      startCursor
-      endCursor
-    }
-    totalCount
-  }
-}
-```
-
-### Create API Token
 ```graphql
 mutation CreateAPIToken($input: CreateAPITokenInput!) {
   createAPIToken(input: $input) {
@@ -121,106 +52,96 @@ mutation CreateAPIToken($input: CreateAPITokenInput!) {
       id
       name
       token
-      description
       scopes
       expiresAt
-      isActive
-      createdAt
     }
   }
 }
 ```
 
-### Update API Token (Revoke)
 ```graphql
-mutation UpdateAPIToken($id: ID!, $input: UpdateAPITokenInput!) {
-  updateAPIToken(id: $id, input: $input) {
-    apiToken {
+mutation CreatePersonalAccessToken($input: CreatePersonalAccessTokenInput!) {
+  createPersonalAccessToken(input: $input) {
+    personalAccessToken {
       id
       name
-      isActive
-      revokedReason
-      revokedBy
-      updatedAt
+      token
+      expiresAt
     }
   }
 }
 ```
 
-### Delete API Token
+The token value is returned **once, at creation**. Store it in your secrets manager immediately; you can't retrieve it again.
+
+Revoke a token by setting it inactive (or deleting it outright with `deleteAPIToken`):
+
 ```graphql
-mutation DeleteAPIToken($id: ID!) {
-  deleteAPIToken(id: $id) {
-    deletedID
+mutation RevokeAPIToken($id: ID!) {
+  updateAPIToken(id: $id, input: { isActive: false }) {
+    apiToken {
+      id
+      isActive
+    }
   }
 }
 ```
 
-## API Access
+The same pattern works for PATs via `updatePersonalAccessToken`. For the complete field reference, see the [GraphQL object reference](/docs/api/graph-api/).
 
-## Security and Compliance Considerations
+## Using a Token
 
-### Access Control
+Pass the token as a bearer token in the `Authorization` header:
 
-- **Per-Object Scopes**: Permissions are granted per object type using `object:action` format — grant only the specific read, write, or delete actions each token requires
-- **Scope Limitation**: Restrict token permissions to the minimum required access; avoid SELECT ALL for production tokens
-- **Organization Boundaries**: Tokens cannot access resources outside their organization
-- **SSO Integration**: Supports organization-level SSO authorization requirements
-
-### Audit and Monitoring
-
-- **Usage Tracking**: All API token usage is logged for audit purposes
-- **Access Patterns**: Monitor for unusual access patterns or suspicious activity
-- **Revocation Audit**: Complete audit trail for token lifecycle events
-- **Compliance Reporting**: Generate reports on token usage for compliance reviews
-
-### Security Best Practices
-
-- **Token Rotation**: Implement regular token rotation schedules
-- **Expiration Policies**: Set appropriate expiration dates for all tokens
-- **Secure Storage**: Store tokens securely and never expose in logs
-- **Least Privilege**: Grant minimum necessary permissions
-- **Regular Review**: Periodically review and audit active tokens
-
-## Common Use Cases
-
-### CI/CD Pipeline Integration
 ```yaml
-# GitHub Actions example using GraphQL
+# GitHub Actions example
 env:
   OPENLANE_API_TOKEN: ${{ secrets.OPENLANE_API_TOKEN }}
 
 steps:
-  - name: Deploy compliance artifacts
+  - name: Upload compliance evidence
     run: |
-      # Use GraphQL to create evidence records
-      curl -X POST "https://api.openlane.io/query" \
+      curl -X POST "https://api.theopenlane.io/query" \
         -H "Authorization: Bearer $OPENLANE_API_TOKEN" \
         -H "Content-Type: application/json" \
         -d '{"query": "mutation { createEvidence(input: {...}) { evidence { id } } }"}'
 ```
 
-### Automated Compliance Monitoring
+## Security Practices
 
-Monitor control implementation status through GraphQL queries using authenticated API requests to retrieve control information including ID, name, and status.
+- **Set expiration dates.** Every token should have one; an expired token that breaks a pipeline is a minor annoyance, but a forgotten token that never expires is a liability.
+- **Rotate on a schedule** and immediately when someone with access to the token leaves.
+- **Grant least privilege.** Scope organization tokens to the specific `object:action` pairs the job needs.
+- **Never log token values.** Store them in a secrets manager; treat any exposed token as compromised and revoke it.
+- **Review active tokens periodically.** Token usage is logged, and `lastUsedAt` makes stale tokens easy to spot.
 
-### Security Scanning Integration
+Every token operation and use is recorded for audit purposes, so token activity can serve as evidence of controlled programmatic access (relevant to SOC 2 CC6 and similar criteria).
 
-Automated vulnerability scan results can be uploaded via GraphQL mutations using the createScan mutation with scan type and results data.
+## Troubleshooting
 
-## Relationships
+- **401 / authentication failed**: check the prefix; organization tokens start with `tola_`, PATs with `tolp_`. Make sure the full value was copied and the token hasn't expired or been revoked.
+- **403 / permission denied**: for organization tokens, the scope grant is missing the `object:action` you're attempting; for PATs, the owning user lacks the permission.
+- **Works locally, fails in CI**: usually a secrets configuration issue; echo the token *length* (never the value) to confirm it's set.
 
-API tokens integrate with several other Openlane objects:
+## FAQ
 
-### Direct Relationships
+<details>
+<summary>What happens to a PAT when the user is deactivated?</summary>
 
-- **Organization**: Organizational API tokens belong to organizations
-- **User**: Personal access tokens belong to individual users
-- **Events**: All token operations generate audit events
+Its access goes with them; PATs act as their owner. This is exactly why shared automation belongs on organization API tokens.
 
-### Indirect Relationships
+</details>
 
-- **Controls**: API tokens can be used to automate control evidence collection
-- **Evidence**: Tokens enable automated evidence upload and management
-- **Risks**: API tokens can trigger risk assessments based on automated findings
-- **Tasks**: Tokens can create and update compliance tasks programmatically
+<details>
+<summary>Can I see a token's value again after creation?</summary>
+
+No. The value is shown once. If it's lost, revoke the token and create a new one.
+
+</details>
+
+<details>
+<summary>Where do I see what a token has been doing?</summary>
+
+Token operations generate audit events, and each token records its last-used timestamp; start there when reviewing or investigating token activity.
+
+</details>

@@ -4,26 +4,31 @@ description: Install core dependencies for local development
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Local Setup
 
 Before running Openlane locally, install the base tooling used across the repository.
 
 ## Required Tools
 
-1. [Go](https://go.dev/)
-1. [Task](https://taskfile.dev/)
-1. [Docker](https://www.docker.com/)
-1. [PostgreSQL client tools](https://www.postgresql.org/)
+* [Go](https://go.dev/)
+* [Task](https://taskfile.dev/)
+* [Docker](https://www.docker.com/)
+* [PostgreSQL client tools](https://www.postgresql.org/)
 
 ## Primary Frameworks and Services
 
 Openlane development commonly touches:
 
-1. [ent](https://entgo.io/) for schema-driven data modeling
-1. [atlas](https://atlasgo.io/) and [goose](https://github.com/pressly/goose) for migrations
-1. [gqlgen](https://gqlgen.com/) and [gqlgenc](https://github.com/Yamashou/gqlgenc) for GraphQL server/client generation
-1. [openfga](https://openfga.dev/) for authorization enforcement
-1. [koanf](https://github.com/knadh/koanf) for configuration management
+| Tool | Used For |
+|---|---|
+| [ent](https://entgo.io/) | Schema-driven data modeling |
+| [atlas](https://atlasgo.io/) and [goose](https://github.com/pressly/goose) | Database migrations |
+| [gqlgen](https://gqlgen.com/) and [gqlgenc](https://github.com/Yamashou/gqlgenc) | GraphQL server and client generation |
+| [openfga](https://openfga.dev/) | Authorization enforcement |
+| [koanf](https://github.com/knadh/koanf) | Configuration management |
 
 ## Install Dependencies
 
@@ -38,3 +43,22 @@ After install, list available commands:
 ```bash
 task
 ```
+
+## IDE Build Tags
+
+The core codebase uses [build tags](../schema-and-codegen/multi-module-structure.mdx#build-tags) for conditional compilation. Configure your IDE with the `cli,test,codegen` tags, or functions gated behind them will appear undefined and your language server will flag imports as unused.
+
+<Tabs groupId="ide" queryString>
+    <TabItem value="vscode" label="VSCode">
+        Add to `.vscode/settings.json`:
+
+        ```json
+        {
+          "go.buildTags": "cli,test,codegen"
+        }
+        ```
+    </TabItem>
+    <TabItem value="goland" label="GoLand">
+        Navigate to _Settings > Go > Build Tags_ and add `cli,test,codegen` as a comma-separated list.
+    </TabItem>
+</Tabs>

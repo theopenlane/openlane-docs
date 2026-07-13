@@ -23,12 +23,14 @@ tags:
 This document describes the [theopenlane/setup-openlane](https://github.com/theopenlane/setup-openlane) GitHub Action, which automates the installation and configuration of the Openlane CLI tool within GitHub Actions workflows.
 :::
 
+
+
 ## How it works
 This GitHub Action automates the installation and setup of the Openlane CLI tool within your GitHub Actions workflows. It typically does the following:
-1. Downloads and installs the Openlane CLI tool in your GitHub Actions job
-1. Adds it to `PATH` so that subsequent workflow steps can use the CLI.
-1. Optionally configures environment variables, tokens, or default settings for the CLI.
-1. Simplifies your workflow so you don’t have to manually script install/setup each time.
+- Downloads and installs the Openlane CLI tool in your GitHub Actions job
+- Adds it to `PATH` so that subsequent workflow steps can use the CLI.
+- Optionally configures environment variables, tokens, or default settings for the CLI.
+- Simplifies your workflow so you don’t have to manually script install/setup each time.
 
 ## Getting Started
 
@@ -78,11 +80,11 @@ Replace `v0.0.1` with the appropriate version tag of the action you wish to use
 
 When using the `theopenlane/setup-openlane` action, consider these best practices:
 
-1. **Pin the action version** rather than `@main` to avoid surprises when breaking changes are introduced
-1. **Pin the openlane CLI version** input to a specific version for reproducible builds
-1. Use [renovate](https://docs.renovatebot.com/) to keep both the action and CLI versions up to date automatically
-1. Use **secrets** for tokens (e.g., `secrets.OPENLANE_API_TOKEN`) so you don’t expose credentials in logs
-1. To test the setup, **verify** the CLI by running `openlane version` or a small smoke command to ensure it's correctly installed. The `openlane version` does not require authentication so it is a good test command.
+- **Pin the action version** rather than `@main` to avoid surprises when breaking changes are introduced
+- **Pin the openlane CLI version** input to a specific version for reproducible builds
+- Use [renovate](https://docs.renovatebot.com/) to keep both the action and CLI versions up to date automatically
+- Use **secrets** for tokens (e.g., `secrets.OPENLANE_API_TOKEN`) so you don't expose credentials in logs
+- **Verify** the CLI by running `openlane version` or a small smoke command to confirm it's correctly installed. `openlane version` does not require authentication, so it is a good test command.
 
 ## Compatibility & Requirements
 

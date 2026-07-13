@@ -20,19 +20,27 @@ tags:
   - entitlements
 ---
 
+import Steps from '@site/src/components/Steps';
+
 # Billing Integration
 
-Openlane integrates with Stripe to provide module-based billing and subscription management. The billing system manages organization subscriptions, feature entitlements, and usage-based pricing through a combination of Stripe APIs, OpenFGA authorization, and Redis caching.
+:::info
+Entitlements are for the Openlane SaaS product. Running the server **without** the entitlements option enabled (the default for open-source deployments) means no feature gating at all: every feature of the platform is accessible.
+:::
+
+We integrate with Stripe to provide module-based billing and subscription management. The billing system manages organization subscriptions, feature entitlements, and usage-based pricing through a combination of Stripe APIs, OpenFGA authorization, and Redis caching.
 
 ## Architecture Overview
 
 The billing system consists of several interconnected components:
 
-- **Stripe Integration** - Customer, subscription, and webhook management
-- **Module Catalog** - Defines available modules and add-ons with pricing
-- **Entitlements Service** - Manages feature authorization and usage limits
-- **OpenFGA Tuples** - Authorization checks for module-based features
-- **Redis Cache** - Performance optimization for feature checks
+| Component | Role |
+|---|---|
+| Stripe Integration | Customer, subscription, and webhook management |
+| Module Catalog | Defines available modules and add-ons with pricing |
+| Entitlements Service | Manages feature authorization and usage limits |
+| OpenFGA Tuples | Authorization checks for module-based features |
+| Redis Cache | Performance optimization for feature checks |
 
 ## Module-Based Billing
 
@@ -47,25 +55,33 @@ Openlane uses a two-tier billing structure:
 
 ### Available Modules
 
-#### Core Modules
-- **Base Module** - Free core system access (included with all subscriptions)
-- **Compliance Module** - Core compliance automation and standards library ($450/month)
-- **Trust Center Module** - Public security portal ($300/month)
-- **Entity Management Module** - Vendor risk management ($200/month)
-- **Vulnerability Management Module** - Vulnerability tracking ($100/month)
+| Module | Description | Monthly Price |
+|---|---|---|
+| Base Module | Free core system access (included with all subscriptions) | Free |
+| Compliance Module | Core compliance automation and standards library | $450 |
+| Trust Center Module | Public security portal | $300 |
+| Entity Management Module | Vendor risk management | $200 |
+| Vulnerability Management Module | Vulnerability tracking | $100 |
 
-#### Available Add-ons
-- **Domain Scanning Add-on** - Domain and vulnerability scanning ($100/month)
-- **Extra Evidence Storage** - Additional 100GB storage ($10/month)
-- **Policy Management Add-on** - Policy and procedure management ($10/month)
-- **Risk Management Add-on** - Enhanced risk management ($10/month)
+### Available Add-ons
+
+| Add-on | Description | Monthly Price |
+|---|---|---|
+| Domain Scanning Add-on | Domain and vulnerability scanning | $100 |
+| Extra Evidence Storage | Additional 100GB storage | $10 |
+| Policy Management Add-on | Policy and procedure management | $10 |
+| Risk Management Add-on | Enhanced risk management | $10 |
+
+:::info
+Prices here reflect the catalog at the time of writing. The authoritative source is `pkg/catalog/catalog.yaml`, which is synchronized to Stripe on startup; check it before relying on these numbers.
+:::
 
 ## Stripe Integration
 
 ### Core Components
 
 #### StripeClient
-The `pkg/entitlements` package provides a wrapper around the official Stripe Go client:
+The [`pkg/entitlements`](https://github.com/theopenlane/core/blob/main/pkg/entitlements/README.md) package provides a wrapper around the official Stripe Go client (the [catalog README](https://github.com/theopenlane/core/blob/main/pkg/catalog/README.md) and [catalog CLI](https://github.com/theopenlane/core/blob/main/cmd/catalog/README.md) cover the module catalog and seeding):
 
 ```go
 type StripeClient struct {
@@ -305,32 +321,43 @@ Usage limits are enforced through:
 
 ### Local Development Setup
 
+<Steps>
+
 1. **Configure Stripe keys** in your development environment:
-```bash
-export STRIPE_PRIVATE_KEY="sk_test_..."
-export STRIPE_WEBHOOK_SECRET="whsec_..."
-```
+
+   ```bash
+   export STRIPE_PRIVATE_KEY="sk_test_..."
+   export STRIPE_WEBHOOK_SECRET="whsec_..."
+   ```
 
 2. **Set up webhook forwarding** using Stripe CLI:
-```bash
-stripe login
-stripe listen --forward-to localhost:17608/v1/stripe/webhook
-```
+
+   ```bash
+   stripe login
+   stripe listen --forward-to localhost:17608/v1/stripe/webhook
+   ```
 
 3. **Test webhook events**:
-```bash
-stripe trigger customer.subscription.updated
-stripe trigger payment_intent.succeeded
-```
+
+   ```bash
+   stripe trigger customer.subscription.updated
+   stripe trigger payment_intent.succeeded
+   ```
+
+</Steps>
 
 ### Testing Environment
 
 For testing, create a separate Stripe account and:
 
+<Steps>
+
 1. Generate test API keys
 2. Create a clean catalog configuration
 3. Use the catalog CLI to seed products and prices
 4. Test webhook integration with Stripe CLI
+
+</Steps>
 
 ### Sandbox Seeding
 

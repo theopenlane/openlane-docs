@@ -1,0 +1,98 @@
+---
+title: Disaster Recovery Plan Guidance
+sidebar_label: Disaster Recovery
+sidebar_position: 6
+description: What a disaster recovery plan should contain, how to classify critical systems, the notification, recovery, and reconstitution phases, and how to test the plan annually
+keywords:
+  - disaster recovery
+  - disaster recovery plan
+  - DR plan
+  - recovery phases
+  - tabletop exercise
+  - critical systems
+  - failover
+  - business continuity
+tags:
+  - compliance
+  - best practices
+  - disaster recovery
+---
+
+# Disaster Recovery Plan Guidance
+
+A disaster recovery (DR) plan documents the procedures your organization follows to restore systems and infrastructure after a disruptive event. It is the technical companion to the [business continuity plan](./business-continuity.mdx): the BCP covers keeping the whole business operating, while the DR plan covers getting systems back. Frameworks that include availability commitments, such as the SOC 2 Availability criteria and ISO 27001, expect a documented and tested plan. Keep yours with the rest of your policy documents in [Policies and Procedures](/docs/platform/compliance-management/policy-and-procedure-management/policies) and map it to the [controls](/docs/platform/compliance-management/controls/overview) it satisfies.
+
+## What the Plan Should Accomplish
+
+A useful DR plan does five things. It defines an effective response across the notification, recovery, and reconstitution phases. It identifies the resources needed to keep operating through an extended interruption. It states the scope of impact when specific systems go down. It assigns responsibilities to named roles. And it establishes how internal teams and external vendors coordinate during recovery.
+
+The plan should account for the full range of disruptive events: natural disasters, infrastructure and facility failures, external attacks, and malicious activity by insiders. You do not need a separate playbook per event type; the phases below apply regardless of cause, and the [risk register](/docs/platform/exposure/risks/overview) is the right place to track which scenarios are most likely for your environment.
+
+## Classifying Systems
+
+Recovery order depends on knowing which systems matter most. A practical test: if a system going down means you can no longer deliver your service, it is critical.
+
+| Classification | Definition | Recovery expectation |
+| -------------- | ---------- | -------------------- |
+| Critical | Systems required to deliver the service, typically the infrastructure hosting application and database servers | Restore immediately, ahead of everything else |
+| Non-critical | Everything else, such as internal tooling and reporting systems | Restore after critical systems, at lower priority |
+
+For each critical system, record a recovery time objective (RTO) and recovery point objective (RPO). These metrics, along with maximum tolerable downtime, are defined in the [business continuity guidance](./business-continuity.mdx#recovery-metrics); the business impact analysis there is where the numbers come from.
+
+## The Three Recovery Phases
+
+### Notification and Activation
+
+This phase covers detecting the event, assessing damage, and deciding whether to activate the plan. The first responder notifies the designated technical leader (often the CTO, but use whatever role fits your organization), who directs a damage assessment. Define explicit activation criteria so the decision is not improvised under pressure. Common examples: activate if critical systems are expected to be unavailable for more than 48 hours, or if the hosting facility is expected to be damaged for more than 24 hours. Treat those thresholds as starting points and set values your customer commitments can tolerate. Once activated, notifications cascade to team leads and executive leadership.
+
+### Recovery
+
+Recovery focuses on rebuilding the environment, at an alternate site for physical infrastructure or an alternate region or availability zone for cloud environments. A typical sequence:
+
+1. Notify affected customers and partners
+2. Assess the extent of the damage to the primary environment
+3. Rebuild the environment at the alternate location, ideally from infrastructure-as-code and automated scripts
+4. Run pre-written validation tests against the rebuilt environment
+5. Confirm logging, monitoring, alerting, and security controls are functioning
+6. Verify systems are fully patched
+7. Deploy to production and update DNS records to cut traffic over
+
+The more of this sequence that is automated, the shorter your real recovery time. Organizations running entirely on cloud infrastructure should adapt the physical-site language in template plans: alternate sites become alternate regions, and equipment disposal procedures become resource deprovisioning.
+
+### Reconstitution
+
+Reconstitution restores normal business operations once systems are running again, including returning to the primary site or region when it is available. The same replicate, test, deploy, and DNS-update sequence from the recovery phase applies in reverse. Set a target for how quickly operations return to normal after systems are restored; 24 hours is a common goal.
+
+## Testing and Maintenance
+
+Test the plan at least annually. Two complementary test types cover different failure modes:
+
+| Test type | What it validates |
+| --------- | ----------------- |
+| Tabletop exercise | Stakeholders walk through a simulated disaster scenario to validate that notification chains, activation criteria, and role assignments actually work |
+| Technical test | Backups restore successfully, data is recoverable to the stated RPO, and the alternate site or region can actually run the workload |
+
+Record test results, gaps found, and remediation as [evidence](/docs/platform/compliance-management/evidence/overview) against your availability and continuity controls, and file the improvements as [tasks](/docs/platform/automation/tasks) so they are tracked to completion. Review the plan itself annually and whenever the architecture, hosting provider, or team structure changes materially.
+
+## FAQ
+
+<details>
+<summary>Do we need a DR plan if we run entirely on a cloud provider?</summary>
+
+Yes. The cloud provider's resilience covers their infrastructure, and their own outages still take your service down. Your plan covers your side: rebuilding in another region, restoring your data, validating your deployment, and communicating with your customers.
+
+</details>
+
+<details>
+<summary>How is the DR plan different from the business continuity plan?</summary>
+
+The DR plan is about restoring systems and infrastructure. The BCP is about keeping the business operating as a whole, including people, facilities, and processes. They activate together and reference each other; see the [business continuity guidance](./business-continuity.mdx).
+
+</details>
+
+<details>
+<summary>Who should own the plan?</summary>
+
+Ownership of the document typically sits with the security officer, with the senior technical leader owning execution. What matters to an auditor is that named roles exist, the people in them know their responsibilities, and the assignments survive personnel changes.
+
+</details>

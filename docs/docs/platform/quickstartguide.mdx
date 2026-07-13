@@ -2,116 +2,100 @@
 sidebar_position: 1
 sidebar_label: Quickstart Guide
 title: Quickstart Guide -  Getting Started with Openlane
-description: Open-source compliance automation platform for managing security, risk, and regulatory requirements. Streamline SOC 2, ISO 27001, NIST, GDPR, and HIPAA compliance.
+description: Open-source compliance automation platform for managing security, risk, and regulatory requirements. Automate SOC 2, ISO 27001, NIST, GDPR, and HIPAA compliance.
 ---
 
-You made it to Openlane! 
-The fastest way to understand the platform is to build something real, so this guide walks you through the first few steps to get your environment set up and your compliance program taking shape.
+import Steps from '@site/src/components/Steps';
 
+# Quickstart Guide
 
-## Set Up Your Organization
+Welcome to Openlane. The fastest way to understand the platform is to build something real: stand up your compliance program in four phases, each one building on the last.
 
-Start by configuring how your team will access Openlane.
+<Steps>
 
-**Navigate to:** `Organization settings`
+1. [**Configure your organization**](#1-configure-your-organization): access, authentication, and your team
+2. [**Represent your organization in the Registry**](#2-represent-your-organization-in-the-registry): the systems, vendors, and people your program describes
+3. [**Establish your compliance posture**](#3-establish-your-compliance-posture): your policies and the standards you're working toward
+4. [**Align your program**](#4-align-your-program): controls grounded in your policies, and a plan for proving they operate
 
-### What to do:
-- In `Authentication`, add your **allowed email domains**
-  - Example: `yourcompany.ai`
-  - Include domains for any **fractional support** (consultants, VCISOs) if applicable
-- Choose whether to **allow auto-join**
-  - Enabled → anyone with an approved domain can join automatically  
-  - Disabled → users must be invited manually
+</Steps>
 
-:::tip
-If you're working with a fractional CISO or consultant, adding their domain upfront makes collaboration much smoother.
-:::
+## Configure Your Organization
 
-## Invite Your Team
+Start with how your team accesses Openlane. The full configuration guide lives in [Settings](./settings/overview.mdx); the short version:
 
-Compliance is a team sport. Bring in the people who are helping you build and manage your program.
+- **Set up authentication.** Add [allowed email domains and auto-join](./settings/authentication/sso.mdx#getting-people-into-your-organization) if you're not using SSO, or configure your identity provider through [Single Sign-On](./settings/authentication/sso.mdx) if you are. Only turn on **Enforce SSO** after a successful test connection; the organization owner is always exempt, so you can't lock yourself out.
+- **[Invite your team](./settings/organizations/members.mdx#inviting-members)** across Engineering, Security / IT, HR / People Ops, and Leadership, and use [groups](./settings/groups/overview.mdx) to organize who owns what. There are no per-user fees, so bring in everyone the program touches.
 
-**Navigate to:** `User Management`
+## Represent Your Organization in the Registry
 
-### What to do:
-- Invite teammates across:
-  - Engineering
-  - Security / IT
-  - HR / People Ops
-  - Leadership
-- Assign roles as needed
+Before writing policies or controls, give your program something concrete to describe. The [Registry](./registry/overview.mdx) is your source of truth for who is involved, what you rely on, and what is in scope. Everything you build later points back at these records.
 
-:::tip
-**No per-user fees.**  
-Invite your whole team — not just a “compliance owner.” The best programs reflect how your organization actually operates, so we don't charge you more for building your program the right way and growing your business.
-:::
+**Navigate to:** `Registry`
 
-## Add a Standard
+- Add your [**Platforms**](./registry/platforms.mdx): the systems and boundaries that define your compliance scope, along with their system details
+- Add your [**Vendors**](./registry/entities.mdx): the third parties your business depends on (your cloud provider, payroll, monitoring, and so on)
+- Add your [**Personnel**](./registry/personnel/overview.mdx): employees and contractors who work in the environment
+- Add your key [**Assets**](./registry/assets.mdx): the systems, services, and devices you need to govern
+
+## Establish Your Compliance Posture
+
+With the foundation in place, define what your organization intends to do and what you're working toward.
+
+### Write your policies
+
+Policies define intent; they're the commitments your controls will operationalize.
+
+**Navigate to:** `Policies & Procedures`
+
+- [Import existing policies](./compliance-management/policy-and-procedure-management/import.mdx) if you have them (Markdown, Word, or synced from GitHub)
+- Or generate new ones using Openlane's integrated AI, then edit them to match reality
+
+### Add a standard
 
 Next, define what you're working toward.
 
 **Navigate to:** `Standards Catalog`
 
-### What to do:
 - Click `Details` and select a relevant domain. For SOC 2, these are the Trust Services Criteria (remember, Security is the only required TSC)
-- Select and enable a framework:
-  - SOC 2
-  - ISO 27001
-  - HIPAA
-  - ISO 42001
-- You can enable **multiple frameworks** without duplicating work.
+- Select and enable a framework: SOC 2, ISO 27001, HIPAA, ISO 42001, and more
+- You can enable **multiple frameworks** without duplicating work; one control can satisfy requirements across several
 
-:::tip
-**Openlane is made to support your success.** Turn on only what you need now and expand later without starting over.
-:::
+## Align Your Program
 
-## Upload Controls
+Now connect the pieces: controls that put your policies into practice, mapped to your standard, with a plan for proving they operate.
 
-Controls are the backbone of your program. They define how you actually meet requirements.
+### Create your controls
 
-[Full guide](https://docs.theopenlane.io/docs/platform/compliance-management/onboarding/controls)
+Controls are the backbone of your program. They define how you actually meet requirements, grounded in the policies you just wrote.
 
-### What to do:
-- Create or import controls that reflect your **real processes**
-- Map them to your selected framework(s)
+[Full guide](./compliance-management/controls/import.mdx)
 
-:::tip
-**Don’t over-engineer this.** Your selected auditor will likely provide "suggested controls", which can help you get started.
-:::
+- Clone controls from your enabled standard's catalog, or [import controls](./compliance-management/controls/import.mdx) you already have
+- Link each control to the policies it operationalizes and map it to your framework(s)
+- Assign owners: the people from your Registry personnel records who actually run each process
 
-## Upload Policies
+### Establish evidence collection
 
-Policies define intent. Controls prove execution.
+Evidence is how you prove controls operate over time. Decide upfront how you'll collect it, rather than scrambling at audit time.
 
-[Full guide](https://docs.theopenlane.io/docs/platform/compliance-management/onboarding/policies)
+- Review the [evidence guide](./compliance-management/evidence/overview.mdx) and attach [evidence](./compliance-management/evidence/create.mdx) to your controls as you go
+- Use [integrations](./integrations/overview.mdx) to pull posture data automatically where you can
+- Use [tasks and automation](./automation/overview.mdx) to put recurring collection (access reviews, policy attestations) on a cadence
 
-### What to do:
-- Upload existing policies (if you have them)
-- Or generate new ones using Openlane's integrated AI
-- Link policies to relevant controls
-
-:::tip
-**Policies don’t need to be perfect on day one.** They should evolve alongside your program.
-:::
-
-
-## What’s Next: Start Customizing
+## What's Next
 
 Now that you have the foundation:
 
-- Refine controls to match how your team actually works  
-- Upload real evidence from your existing tools  
-- Assign ownership across your team  
-
-### Explore next:
-- **Registry** → Track assets, vendors, and personnel  
-- **Exposure** → Manage vulnerabilities, findings, and remediations  
-
+- Refine controls to match how your team actually works
+- Create a [program](./compliance-management/programs/overview.mdx) to track your first audit period
+- Explore [**Exposure**](./exposure/overview.mdx) to manage vulnerabilities, findings, and remediations
+- Stand up your [**Trust Center**](./trust-center/overview.mdx) to share your posture with customers
 
 ## Want Help?
 
-If you want to go faster, we’ll build it with you.
+If you want to go faster, we'll build it with you.
 
 [Book time](https://calendly.com/kwaters-theopenlane)
 
-_No slides. No sales pitch. Just direct access to our experience._
+_There are no slides and no sales pitch, just direct access to our experience._

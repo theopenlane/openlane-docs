@@ -1,0 +1,9 @@
+{
+  "label": "NIST CSF",
+  "position": 5,
+  "link": {
+    "type": "doc",
+    "id": "platform/standards/nist-csf/overview"
+  },
+  "collapsed": true
+}

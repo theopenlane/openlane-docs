@@ -1,0 +1,29 @@
+---
+title: Overview
+description: Core backend architecture and development workflows
+sidebar_position: 1
+---
+
+# Architecture
+
+How the core service works. For environment setup, start with [Getting Started](../getting-started/overview.mdx); for making changes, see [Schema & Codegen](../schema-and-codegen/graphql-and-codegen.mdx); for where the code lives, browse the [core repository](https://github.com/theopenlane/core) directly.
+
+## How the System Works
+
+* [Request Lifecycle](./request-lifecycle.mdx): middleware stack, transaction boundaries, REST and GraphQL coexistence
+* [Workflows Engine](./workflows-engine.mdx): approval and automation flows
+
+For orientation to the compliance object model, the [platform overview](/docs/platform/overview.mdx) covers the domains and their relationships, and the [GraphQL object reference](/docs/api/graph-api/) is the authoritative schema.
+
+Authorization lives with the rest of the access-control material; see [Privacy and Authorization](../security/privacy-and-authorization.mdx) in the Security section. The tenancy model itself (organization isolation, hierarchy, and permission inheritance) is covered in [Organizations](/docs/platform/settings/organizations/overview).
+
+## Supporting Repositories
+
+The core service leans on shared libraries maintained in their own repos; see [Helper Repositories](./repo-helpers.mdx) for what lives where.
+
+Several in-repo packages also carry their own documentation, maintained beside the code:
+
+* [Object storage](https://github.com/theopenlane/core/blob/main/pkg/objects/README.md): the provider-agnostic storage layer (S3, R2, disk, database)
+* [Gala](https://github.com/theopenlane/core/blob/main/pkg/gala/README.md): durable event dispatch built on River
+* [Integrations framework](https://github.com/theopenlane/core/blob/main/internal/integrations/README.md): the provider builder system
+* [Config generation](https://github.com/theopenlane/core/blob/main/config/README.md): how Helm values and external-secrets resources are generated from Go structs

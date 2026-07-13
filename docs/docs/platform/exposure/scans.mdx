@@ -9,31 +9,70 @@ import TabItem from '@theme/TabItem';
 
 # Scans
 
-## Overview
+Security scanning is the recurring, automated inspection of your environment for weaknesses: network scanners probe hosts, ports, and services; web application scanners exercise running applications for injection flaws and broken authentication; dependency scanners check your code's third-party packages against known vulnerability databases. External scans view your systems the way an attacker on the internet would, while internal scans assess what someone who already has network access could reach.
 
-Scans capture when a security check ran, what target it evaluated, and the resulting status. In Openlane, scans provide traceable evidence that monitoring and review activities are happening on schedule.
+How a scan runs matters as much as what it targets. Authenticated (credentialed) scans log in to systems and can verify patch levels and configuration directly; unauthenticated scans approximate an outsider's view and miss anything not exposed to the network. Agent-based scanning installs software on each host for continuous visibility, while agentless approaches query infrastructure over the network or through provider APIs, which is how most cloud posture tools work. Mature programs combine several of these rather than relying on one; [Vulnerability Scanning Guidance](./vulnerabilities/scanning-guidance.mdx) covers the scan types, cadences, and scanner options in detail.
 
-Scan records are typically related to the asset or vendor being scanned, along with uploaded evidence or files from that run. Downstream records such as vulnerabilities and findings can then reference the scan as their source.
+For compliance, the execution record is the evidence. Most frameworks do not mandate an exact frequency (PCI DSS is the notable exception, requiring quarterly external scans), but auditors consistently test three things: that you defined a scanning cadence, that you followed it, and that you acted on the results. Scan records in Openlane hold that proof: when scans ran, what they covered, and who reviewed them.
 
-## Compliance Significance
+## How Scans Work in Openlane
 
-- SOC 2: CC7 monitoring expectations
-- ISO 27001: operational monitoring and technical review evidence
+A scan record represents one execution of a security check against a named target such as a domain, an IP address, or a codebase. Every record carries a scan type and a status. Statuses follow the execution lifecycle: pending, processing, and finally completed or failed.
 
-## Practical Examples
+| Scan type | Typical use |
+| --- | --- |
+| Domain | Checks against a public domain or endpoint you operate |
+| Vulnerability | Vulnerability scans of infrastructure or application targets |
+| Vendor | Security review scans of a third party |
+| Provider | Scans generated from a cloud or service provider |
 
-- A security team records monthly domain and vulnerability scans, then links outcomes to follow-up tasks.
-- A GRC lead uses scan history to demonstrate control operation during audit interviews.
+Scan records come from two places. You can create them from your own tooling through the API, CLI, or bulk CSV import, recording each run of the scanners you already operate. We also offer domain and vulnerability scanning as a platform add-on for teams that want scans executed for them.
+
+Cadence is part of the record, not a separate spreadsheet. Each scan carries an optional cron-style schedule and next-run timestamp alongside the date of the actual execution. Accountability fields track who performed the scan, who it is assigned to, and who reviewed it, either as free text or as linked users and groups.
+
+Scans sit at the front of the [exposure pipeline](./overview.mdx). They link to the assets and entities from your registry that they cover, and the vulnerabilities and findings they surface reference the scan as their source. You can attach the raw report as a file, connect the scan to evidence records, and link it to the controls and subcontrols it operates so each completed run doubles as control evidence. The full field list is in the [API reference](/graphql).
+
+## Working with Scans
+
+### Prove Your Scan Cadence to an Auditor
+
+Give each recurring scan job a record with its `scanSchedule` and `nextScanRunAt` set, then update `scanDate` and status after every run and attach the report file. Link the scan to the monitoring control it operates, such as your SOC 2 CC7 system monitoring control. When the auditor asks how you know scans run on schedule, you filter scan records by target and hand over a dated, reviewable history instead of assembling screenshots from a scanner console.
+
+### Record Runs from Your Existing Scanner
+
+Add a post-run step to your scanner's pipeline that creates a scan record with the target, type, date, and `performedBy`, sets the status to `COMPLETED`, and uploads the output file. If the results include vulnerabilities, create those records and link them back to the scan so the discovery chain stays intact. When a run fails, record it as `FAILED` rather than skipping it: auditors ask about coverage gaps, and a documented failure with an `assignedTo` owner reads as a working process, while a silent gap reads as a lapse.
+
+### Track Vendor and Provider Review Scans
+
+Use the `VENDOR` scan type for security scans you run against third parties during due diligence, linked to the vendor's entity in your registry, and the `PROVIDER` type for scans originating from a cloud or service provider. The `reviewedBy` fields capture who signed off on the results, which is exactly what a vendor management control expects you to demonstrate.
+
+## FAQ
+
+<details>
+<summary>Does Openlane run scans for me, or do I record scans from my own tools?</summary>
+
+Both. Domain and vulnerability scanning is available as a platform add-on if you want Openlane to execute scans. Independently of that, any scanner you already run can feed scan records through the API, CLI, or bulk CSV import, which is how most teams keep their existing tooling while centralizing the evidence trail.
+
+</details>
+
+<details>
+<summary>How often should we scan?</summary>
+
+There is no universal mandate. A monthly external scan plus scans after significant changes is a common baseline; PCI DSS specifically requires quarterly external scans by an approved vendor. What auditors actually test is adherence, so we recommend setting `scanSchedule` to the cadence you genuinely follow, because a documented monthly schedule with quarterly execution is worse than an honest quarterly schedule. See [Vulnerability Scanning Guidance](./vulnerabilities/scanning-guidance.mdx) for cadence recommendations by environment.
+
+</details>
+
+<details>
+<summary>A scan completed with no results. Should I still record it?</summary>
+
+Yes. A completed scan with nothing found is cadence evidence: it shows the check ran and the target was clean at that point in time. Monitoring that never produces a record looks indistinguishable from monitoring that never happened.
+
+</details>
 
 ## Examples
 
-<Tabs>
+<Tabs groupId="api-format" queryString>
   <TabItem value="csv" label="CSV">
-
-| Operation | API |
-| --- | --- |
-| Create | `createBulkCSVScan` |
-| Update | `updateBulkCSVScan` |
 
 ```csv
 # Create
@@ -51,11 +90,6 @@ SCN01J9SCAN22222222222222,FAILED,2026-02-10T02:10:00Z,2026-02-11T02:00:00Z,Secur
 
   </TabItem>
   <TabItem value="graphql" label="GraphQL">
-
-| Operation | Mutation |
-| --- | --- |
-| Create | `createScan` |
-| Update | `updateScan` |
 
 ```graphql
 mutation {
@@ -94,11 +128,6 @@ mutation {
   </TabItem>
   <TabItem value="go-client" label="Go Client">
 
-| Operation | Method |
-| --- | --- |
-| Create | `client.CreateScan(ctx, input)` |
-| Update | `client.UpdateScan(ctx, id, input)` |
-
 ```go
 ctx := context.Background()
 
@@ -122,11 +151,6 @@ if err != nil {
 
   </TabItem>
   <TabItem value="cli" label="CLI">
-
-| Operation | Command |
-| --- | --- |
-| Create | `openlane scan create` |
-| Update | `openlane scan update` |
 
 ```bash
 openlane scan create \

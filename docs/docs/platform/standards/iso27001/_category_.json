@@ -1,9 +1,9 @@
 {
   "label": "ISO27001",
-  "position": 8,
+  "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "Information around ISO27001 compliance standards"
+    "type": "doc",
+    "id": "platform/standards/iso27001/overview"
   },
   "collapsed": true
 }

@@ -1,0 +1,9 @@
+{
+  "label": "Personnel (Identity Holders)",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "platform/registry/personnel/overview"
+  },
+  "collapsed": true
+}

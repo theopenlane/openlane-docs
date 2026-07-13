@@ -1,0 +1,9 @@
+{
+  "label": "GRC Fundamentals",
+  "position": 9,
+  "link": {
+    "type": "doc",
+    "id": "platform/grc-fundamentals/overview"
+  },
+  "collapsed": true
+}

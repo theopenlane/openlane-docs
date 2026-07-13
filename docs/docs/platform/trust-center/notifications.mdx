@@ -1,0 +1,95 @@
+---
+title: Subscriber Notifications
+description: Let visitors subscribe to your Trust Center and keep them informed when things change
+sidebar_position: 9
+sidebar_label: Notifications
+keywords:
+  - trust center subscribers
+  - subscriber notifications
+  - subprocessor notifications
+  - email notifications
+  - subscribe
+  - unsubscribe
+tags:
+  - trust center
+  - subscribers
+  - notifications
+  - email
+---
+
+import Steps from '@site/src/components/Steps';
+
+# Subscriber Notifications
+
+Visitors can subscribe to your Trust Center to be notified when it changes. Once someone subscribes, we email them automatically when you publish a new update or change your subprocessors, so customers and prospects stay informed without anyone on your team sending a manual notice.
+
+## How Visitors Subscribe
+
+Your published Trust Center includes a subscribe option where a visitor enters their email address. Subscriptions use a double opt-in flow to confirm the address is real and that the person genuinely wants updates:
+
+<Steps>
+
+1. The visitor enters their email on your Trust Center
+2. Openlane sends them a confirmation email titled **Confirm your subscription**
+3. They click **Confirm subscription** to verify their address
+4. Once confirmed, they begin receiving notifications
+
+</Steps>
+
+Until a visitor confirms their email, they are not subscribed and receive no updates. This protects you from sending to unverified or mistyped addresses.
+
+## Accepting Subscribers
+
+Accepting new subscribers is controlled by a setting on your Trust Center and is **on by default**. If you turn it off, the subscribe option stops accepting new registrations, but anyone who already subscribed remains subscribed and continues to receive updates.
+
+Turn off new subscribers when you want to pause growth of your list (for example, while you finalize your Trust Center before a launch).
+
+## What Subscribers Are Notified About
+
+There are two kinds of notifications, each controlled independently.
+
+### Trust Center Updates
+
+When you publish an [Update](./updates.mdx) (a short announcement post), you can choose to notify subscribers. Subscribers receive a branded email containing the update's title and text, along with a button linking back to your Trust Center.
+
+Choosing to notify subscribers is decided when you publish the update. Updates published without that option are shown on your Trust Center but do not generate an email.
+
+### Subprocessor Changes
+
+When you add, update, or remove a [Subprocessor](./subprocessors.mdx), subscribers can be notified that your subprocessor list has changed. This notification is **off by default** and is enabled with a single setting on your Trust Center.
+
+When enabled, subscribers receive an email titled **Subprocessor update** that lists each changed vendor and whether it was **Added**, **Updated**, or **Removed**, with a button to view your Trust Center.
+
+:::note
+Subprocessor change notifications are turned off until you enable them. Enable them once and every future subprocessor change is announced automatically.
+:::
+
+## When Notifications Are Sent
+
+Notifications are not sent the instant you make a change. We wait for a short quiet period (about an hour) after your most recent change before sending. This gives you time to make further edits, fix a typo, or add another related change without generating multiple emails.
+
+Because of this:
+
+- Several subprocessor changes made close together are grouped into a single email
+- An update you publish and then quickly edit is sent based on its final state
+- Each change is announced only once; subscribers are never re-notified about the same change
+
+## Unsubscribing
+
+Every notification email includes an unsubscribe link in the footer. A subscriber clicks it once to stop receiving updates, with no login or account required. Unsubscribing takes effect immediately. If they later want updates again, they can subscribe again from your Trust Center.
+
+## Branding Your Notification Emails
+
+Notification emails automatically use your Trust Center [branding](./branding.mdx): your company name, logo, and colors. When a branding value isn't set, the email falls back to a clean default style. Keeping your branding current ensures notifications look like they come from you.
+
+## Sending From Your Own Domain
+
+By default, we send notification emails on your behalf. If you'd rather have update announcements come from your own sending domain and address, connect the [Email integration](../integrations/email.mdx) and enable it for campaigns. Your published update emails will then be delivered through your own email provider. Subscription confirmations and subprocessor change notifications are always sent by Openlane.
+
+## Best Practices
+
+- Confirm your [branding](./branding.mdx) is complete before enabling notifications so emails look polished
+- Enable subprocessor change notifications if you commit to keeping your subprocessor list current; it turns transparency into a proactive signal
+- Use the notify option on updates for meaningful announcements; avoid notifying on minor edits
+- Make a single batch of related changes rather than many small ones to keep emails concise
+- Connect the Email integration if brand consistency on the sending domain matters to you

@@ -5,9 +5,11 @@ sidebar_position: 16
 sidebar_label: Slack
 ---
 
+import Steps from '@site/src/components/Steps';
+
 # ![slack integration](./assets/slack.png) Slack Integration Guide
 
-If your team lives in Slack, this integration lets Openlane deliver security and compliance notifications directly into your channels and sync your workspace users as directory accounts. Vulnerability SLA reminders, access review deadlines, policy attestation nudges — right where your team already works.
+If your team lives in Slack, this integration lets Openlane deliver security and compliance notifications directly into your channels and sync your workspace users as directory accounts. Vulnerability SLA reminders, access review deadlines, and policy attestation nudges arrive where your team already works.
 
 ## Key Capabilities
 
@@ -34,17 +36,23 @@ Choose the authentication method that fits your setup:
 
 #### Option A: Slack OAuth Credential
 
-Connect your Slack workspace via OAuth — no credentials to enter manually.
+Connect your Slack workspace via OAuth, with no credentials to enter manually.
+
+<Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Slack**.
 2. Click **Configure** and expand **Slack OAuth Credential**.
-3. Click **Continue to Authorization** — you will be redirected to Slack to authorize access.
+3. Click **Continue to Authorization**. You will be redirected to Slack to authorize access.
 4. Review and approve the requested permissions.
 5. After authorization, you are redirected back to Openlane and the connection is saved.
+
+</Steps>
 
 #### Option B: Slack Bot Token
 
 Connect using a bot token from a custom Slack app. Use this option if your workspace requires a dedicated app with explicit scope control.
+
+<Steps>
 
 1. Go to [api.slack.com/apps](https://api.slack.com/apps) and create or select an app.
 2. Under **OAuth & Permissions**, add the required bot token scopes (`channels:read`, `chat:write`, `chat:write.public`, and any others needed).
@@ -52,6 +60,8 @@ Connect using a bot token from a custom Slack app. Use this option if your works
 4. Copy the **Bot User OAuth Token** from the **OAuth & Permissions** page.
 5. Navigate to **Organization Settings** > **Integrations** > **Slack** > **Configure** and expand **Slack Bot Token**.
 6. Enter the bot token and click **Save**.
+
+</Steps>
 
 ### Step 2: Configure Sync Behavior
 
@@ -62,7 +72,7 @@ Optionally configure which data is collected and how records are filtered before
 | Setting | Description |
 |---|---|
 | **Disable** | Turn off user ingestion from Slack without disconnecting the integration |
-| **Filter Expression** | Optional CEL expression evaluated against each user record — only records that match are ingested |
+| **Filter Expression** | Optional CEL expression evaluated against each user record; only records that match are ingested |
 
 Filter expression examples:
 
@@ -80,18 +90,22 @@ CEL expressions have access to the full raw payload for each record via `payload
 
 ## Validate Connection
 
-After saving, Openlane runs a health check against Slack and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+After saving, Openlane runs a health check against Slack and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
 
 ## What Openlane Syncs
 
-Openlane reads workspace metadata and user records for directory sync, and sends outbound notification messages to Slack channels. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. Helps demonstrate timely response and escalation under SOC 2 CC7.2 and CC7.3.
+Openlane reads workspace metadata and user records for directory sync, and sends outbound notification messages to Slack channels. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. This helps demonstrate timely response and escalation under SOC 2 CC7.2 and CC7.3.
 
 ## Disconnect
 
 To remove this integration:
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations**
 1. Select the **Installed** tab
 1. Open the menu on the integration card and select **Disconnect**.
+
+</Steps>
 
 This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
 

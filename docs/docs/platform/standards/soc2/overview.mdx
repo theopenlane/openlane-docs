@@ -28,236 +28,101 @@ tags:
   - TSC
 ---
 
-<head>
-  <meta name="keywords" content="SOC 2, SOC 2 compliance, Trust Services Criteria, AICPA, service organization controls, data security, cloud compliance" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:title" content="SOC 2 Overview - Trust Services Criteria & Compliance Guide | Openlane" />
-  <meta property="og:description" content="Comprehensive guide to SOC 2 compliance including Trust Services Criteria, implementation, and audit requirements" />
-  <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://docs.theopenlane.io/docs/platform/standards/soc2/overview" />
-  <script type="application/ld+json">
-    {JSON.stringify({
-      '@context': 'https://schema.org/',
-      '@type': 'TechArticle',
-      headline: 'SOC 2 Compliance Overview',
-      description: 'Comprehensive guide to SOC 2 compliance framework, Trust Services Criteria, and implementation for service organizations',
-      keywords: ['SOC 2', 'Trust Services Criteria', 'AICPA', 'compliance', 'audit', 'service organization controls'],
-      author: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      }
-    })}
-  </script>
-</head>
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import StandardMeta from '@site/src/components/StandardMeta';
 
 # SOC 2 (Service Organization Control 2)
 
-SOC 2 stands for Service Organization Controls and is a comprehensive auditing framework developed by the American Institute of Certified Public Accountants (AICPA). It defines criteria for managing customer data based on five "Trust Service Principles" and is specifically designed for service organizations that store, process, or transmit customer data.
+SOC 2 is how service organizations prove to customers that their controls over customer data actually work. Developed by the American Institute of Certified Public Accountants (AICPA), it's an attestation framework: a licensed CPA firm examines your controls against the Trust Services Criteria and issues a report your customers can read. There's no certificate and no pass/fail stamp; the report itself, including the auditor's opinion and any exceptions, is the deliverable.
 
-## Framework Information
+<StandardMeta
+  fullName={"Service Organization Control 2"}
+  type={"Attestation standard"}
+  source={"AICPA Trust Services Criteria (2017, revised points of focus 2022)"}
+  established={"2010; current criteria TSC 2017 (2022 revision)"}
+  managedBy={"AICPA"}
+  appliesTo={"Service organizations handling customer data (SaaS, cloud, MSPs)"}
+  certification={"No: attestation report by licensed CPA firm"}
+/>
 
-| **Aspect** | **Details** |
-|------------|-------------|
-| **Full Name** | Service Organization Control 2 |
-| **Governing Body** | American Institute of Certified Public Accountants (AICPA) |
-| **Current Version** | 2017 Trust Services Criteria |
-| **Framework Type** | Voluntary audit framework |
-| **Primary Focus** | Data security and availability for service organizations |
-| **Geographic Scope** | Primarily United States, accepted globally |
-| **Target Users** | SaaS companies, cloud providers, managed service providers, any organization handling customer data |
-| **Typical Implementation Time** | 6-18 months |
-| **Average Annual Cost** | $15,000 - $50,000 (audit costs) + internal resources |
-| **Certification Validity** | Typically 12 months (Type II reports) |
-| **Official Website** | [AICPA SOC Reports](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report.html) |
+## Who Needs It
 
-## Compliance Snapshot
+Nobody is legally required to have a SOC 2 report. You need one when your customers do, and for SaaS companies, cloud and managed service providers, data centers, and anyone processing customer data on others' behalf, that moment usually arrives with the first enterprise deal, when procurement asks for your SOC 2 report as part of a security review.
 
-| **Metric** | **Value** |
-|------------|-----------|
-| **Total Trust Service Criteria** | 5 (Security, Availability, Processing Integrity, Confidentiality, Privacy) |
-| **Common Criteria Points** | 17 (minimum security requirements) |
-| **Additional Criteria Points** | 46 (across the 4 optional criteria) |
-| **Total Points of Focus** | 63 across all criteria |
-| **Control Categories** | 8 (based on COSO framework components) |
-| **Report Types** | 2 (Type I - design, Type II - operating effectiveness) |
-| **Minimum Audit Period** | 3 months (Type II) |
-| **Maximum Audit Period** | 12 months (Type II) |
+That makes SOC 2 the default first framework for US-market B2B companies: it's what buyers' vendor risk teams are trained to ask for.
 
-## What is SOC 2?
+## Trust Services Criteria
 
-SOC 2 is a framework that dictates how service organizations should process and handle customer information. It ensures the confidentiality, availability, and integrity of customer data. The framework is built on the Committee of Sponsoring Organizations (COSO) internal control framework and provides assurance that service organizations have appropriate controls in place.
+A SOC 2 examination covers one or more of five Trust Services Criteria. You and your auditor agree on scope before the audit period begins:
 
-### Key Characteristics
+| Criteria | Required? | What it covers |
+| -------- | --------- | -------------- |
+| **Security** | Yes, every SOC 2 | Protection against unauthorized access and disclosure; the "Common Criteria" (CC-series) |
+| **Availability** | Optional | Uptime commitments, disaster recovery, business continuity |
+| **Processing Integrity** | Optional | Complete, accurate, timely, authorized processing |
+| **Confidentiality** | Optional | Protection of information designated confidential |
+| **Privacy** | Optional | Collection, use, retention, and disposal of personal information |
 
-- **Risk-Based**: Controls are selected based on the organization's specific risks and business model
-- **Flexible**: Organizations can choose which Trust Service Criteria apply to their business
-- **Evidence-Based**: Requires documented evidence of control implementation and effectiveness
-- **Third-Party Validated**: Independent auditors assess and report on control effectiveness
+Security is mandatory; the rest are added based on what you promise customers. Most companies start with Security alone or Security plus Availability, and add Confidentiality when contracts demand it. We recommend against scoping in Privacy casually because it's the heaviest criteria and often better served by dedicated privacy work.
 
-## AICPA COSO Framework
+A few signals help decide whether an optional criteria belongs in scope. Availability earns its place when contracts or SLAs carry uptime commitments and a disruption would materially affect customers. Confidentiality fits when you hold customer intellectual property or information covered by NDAs, where unauthorized disclosure would cause financial or competitive harm. Processing Integrity fits when your system performs calculations, transformations, or transactions where errors would create financial, legal, or operational risk for customers. And note that a Privacy examination does not substitute for compliance with privacy regulations such as GDPR, CCPA, or HIPAA; it attests to your controls over personal information, not your regulatory standing.
 
-**What is the COSO Framework?**
+The criteria are built on the COSO internal control framework, which is why a SOC 2 audit examines your whole control environment (governance, risk assessment, communication, monitoring), not just technical safeguards. Under each criterion, the AICPA publishes **points of focus**: guidance on what a control meeting the criterion might look like. They are guidance rather than requirements: you don't have to satisfy every point of focus, and auditors evaluate your controls against the criteria themselves.
 
-The COSO Framework is a framework for designing, implementing, and monitoring internal controls to be incorporated into business processes. Additionally, the framework provides a level of assurance that the organization is ethically sound, transparent in its operating procedures, and aligned with industry best practices.
+## Type 1 vs Type 2
 
-**What makes up the framework?**
+There are two report types, and the difference matters more than anything else on this page:
 
-The framework consists of five different components. Along with three internal objectives. The three internal objectives that the COSO framework aims to achieve are the following:
+- A **Type 1** report says your controls were suitably designed *at a point in time*. It's a snapshot, useful as a fast first milestone.
+- A **Type 2** report says your controls were designed suitably *and operated effectively over a period*, typically 3 to 12 months. The auditor samples evidence across the whole window.
 
-1. Operations Objectives
-2. Reporting Objectives
-3. Compliance Objectives
+The evidence burden differs accordingly. A Type 1 mostly needs point-in-time proof such as policies and configuration screenshots, while a Type 2 involves the auditor sampling logs, tickets, and records across the whole period, so preparation and fieldwork take longer.
 
-**The five components that help achieve the objectives above are the following**
+Enterprise customers almost always want Type 2. A common path: complete a Type 1 to show early progress, open the Type 2 observation window immediately, and deliver the Type 2 after the first period closes. Some organizations skip the Type 1 and go straight to Type 2, which avoids paying for two separate audits; the trade-off is a longer wait before you have any report to show. Repeating Type 1 audits year after year is uncommon and rarely satisfies customers as your business grows.
 
-1. Control Environment
-2. Risk Assessment
-3. Control Activities
-4. Information & Communication
-5. Monitoring Activities
+For the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).
 
-It's important to note that the control environment is the scope of the environment where control activities are taking place. Oftentimes companies and auditors will limit the scope of the environment depending on the size of the organization and how the data is moved across the platform. This will then impact things such as risk assessments and control activities.
+## FAQ
 
-Risk assessments should be actively taking place in the organization. This will include a subset of controls such as evaluating vendor risk and software vendors. In today's fast-paced business world security assessments often come in the form of a security questionnaire. Which is then evaluated by the business from a security perspective. Alternatively, businesses are also requesting attestation reports such as a SOC 2, or ISO 27001 report before deciding between vendors. Monitoring activities come in the form of many different processes and procedures. However, with regards to SOC 2, there are two different types: Administrative and technical. As we continue through this course you will start to see and notate the difference between administrative and technical controls.
+<details>
+<summary>What happens after we submit evidence?</summary>
 
-## Trust Services Criteria and Points of Focus
+The audit team reviews each item against the control it supports. For each control they either accept the evidence and move on, come back with questions and requests for additional information, or write up a finding. Deviations appear in the report alongside the affected controls under "results of service auditor's test of controls," either as "no exceptions noted" or with the reason the control failed. Enough deviations result in a qualified, disclaimer, or adverse opinion, which is why internal evidence review before submission matters.
 
-**What are Trust Service Criteria?**
+</details>
 
-The trust service criteria are the overall criteria that your organization will be audited on. The organization will have gone over the criteria beforehand with the auditor. Or if you're an auditor, you will go over the Trust Service Criteria with your client to ensure that a proper scope has been defined before the auditing period begins. The Trust Service Criteria are listed below.
+<details>
+<summary>Is SOC 2 a certification?</summary>
 
-<Tabs className="unique-tabs">
-  <TabItem value="Security">**Security (Required)** - Ensuring that the information systems and data are protected against unauthorized access and disclosure. Also make sure that damage from malicious software doesn't impact your information systems to the extent that it would impact confidentiality, integrity, or availability. Also known as the CIA triad. This is the only mandatory criteria for all SOC 2 audits.</TabItem>
-  <TabItem value="Availability">**Availability (Optional)** - Ensuring that your Information Systems are operational during normal operating hours, and their intended use is not impacted by your organizations' processes. This includes system uptime, disaster recovery, and business continuity planning.</TabItem>
-  <TabItem value="Processing Integrity">**Processing Integrity (Optional)** - The system or solution that has been developed processes information correctly, in a timely manner, and encompasses proper authorization when doing so. Meaning proper access is defined and reports or data cannot be accessed by a user who doesn't have the appropriate access rights.</TabItem>
-  <TabItem value="Confidentiality">**Confidentiality (Optional)** - Information that has been classified as confidential is secure within the documented scope of Information systems and is free from tampering or misuse. This goes beyond general security to protect specifically designated confidential information.</TabItem>
-  <TabItem value="Privacy">**Privacy (Optional)** - Customer or personal information that is obtained, used, disclosed, or retained is properly obtained using legal methods; such as a DPA, Contract, Data sharing agreement. Also, the organization should have a policy and process in place for collection methods, and data deletion.</TabItem>
-</Tabs>
+No, it's an attestation. A CPA firm issues an opinion on your controls, and you receive a report rather than a certificate. That is also why claims of being "SOC 2 certified" are technically inaccurate.
 
-When reviewing the trust services criteria it is important to note that not all of the trust service criteria have to be met in order to obtain a satisfactory SOC 2 report. However, the business has to meet the objectives that have been defined as part of the scope between the business and the auditing firm. Also at a minimum, the business will need to comply with the **Security** criteria (Common Criteria), which is mandatory for all SOC 2 audits.
+</details>
 
-### Points of Focus
+<details>
+<summary>How long is a report valid?</summary>
 
-Points of Focus are intended for you as a SOC implementer or consultant to help customers achieve controls that are suitable to their organization. You can think of points of focus like helpful hints, tips, and tricks in regards to what the control is trying to prevent, mitigate or detect. Additionally, organizations that are trying to achieve a SOC 2 attestation do not have to comply with all of the Points of Focus. It's important to understand that these are not requirements but rather guidance.
+Reports don't technically expire, but customers expect a Type 2 report covering a period ending within the last 12 months. Most companies run back-to-back annual audit periods, and use a [bridge letter](./bridge-letter.mdx) to cover the gap between the period end date and today.
 
-**Example**
+</details>
 
-Let's review several examples of point-of-focus statements.
+<details>
+<summary>Type 1 or Type 2: which do we actually need?</summary>
 
-![COSO Reference](img/coso_ref.png)
+Ask your customers, but expect the answer to be Type 2. Type 1 buys credibility while your first Type 2 period runs; it rarely satisfies enterprise procurement on its own.
 
-When reviewing the above figure you can see how the trust service criteria, component of COSO (control environment), common criteria, and point of focus are laid out.
+</details>
 
-**Point of Focus Example**
+<details>
+<summary>How long does the audit period have to be?</summary>
 
-![COSO Point of Focus](img/coso_pof.png)
+Type 2 periods typically run 3 to 12 months. First-timers often choose 3 or 6 months to get a report in hand sooner, then move to annual 12-month periods.
 
-![COSO Point of Focus Detail](img/coso_pof_detail.png)
-
-There are two points of focus mentioned above. They are the following:
-
-1. Uses Defined Configuration Standards
-2. Monitors Infrastructure and Software
-
-Breaking down the points of focus: Using the scope that was defined early on in the audit engagement, you as a SOC 2 Lead Implementer should know what information systems and processes are in scope. The first point of focus talks about configuration management. This is talking about the configuration standards for the information systems that are in scope. The second point of focus is referring to infrastructure and monitoring of software. The organization should be monitoring for system outages or more specifically when the CIA triad is violated. The second part of this point of focus is the organization should be monitoring what type of software is deployed in the environment.
-
-## Target Users and Applications
-
-### Primary Target Organizations
-- **SaaS Companies**: Software-as-a-Service providers handling customer data
-- **Cloud Service Providers**: Organizations offering cloud infrastructure or platform services
-- **Managed Service Providers**: Companies providing IT services to other organizations
-- **Data Centers**: Facilities hosting customer systems and data
-- **Healthcare Technology Companies**: Organizations handling protected health information
-- **Financial Services**: Companies processing financial data for customers
-- **E-commerce Platforms**: Organizations handling customer transactions and personal data
-
-### Business Drivers for SOC 2
-- **Customer Requirements**: Enterprise customers often require SOC 2 reports before signing contracts
-- **Competitive Advantage**: Differentiation in the marketplace through demonstrated security controls
-- **Risk Management**: Systematic approach to identifying and managing security risks
-- **Regulatory Readiness**: Foundation for meeting various regulatory requirements
-- **Insurance Benefits**: Potential reductions in cybersecurity insurance premiums
-
-## Implementation Timeline and Costs
-
-### Typical Implementation Phases
-
-| **Phase** | **Duration** | **Activities** | **Key Deliverables** |
-|-----------|--------------|----------------|---------------------|
-| **Gap Analysis** | 2-4 weeks | Current state assessment, control mapping | Gap assessment report, remediation roadmap |
-| **Control Design** | 4-8 weeks | Policy development, procedure creation, system configuration | Policies, procedures, control documentation |
-| **Implementation** | 8-16 weeks | Control deployment, staff training, system hardening | Implemented controls, trained personnel |
-| **Pre-Audit Testing** | 4-6 weeks | Internal testing, evidence collection, remediation | Test results, evidence portfolio |
-| **Audit Period** | 3-12 months | Operating controls, evidence generation | Control evidence, audit-ready documentation |
-| **Audit Execution** | 4-8 weeks | Auditor testing, interviews, final review | SOC 2 report |
-
-### Cost Breakdown
-
-| **Cost Category** | **Range** | **Notes** |
-|-------------------|-----------|-----------|
-| **External Audit Fees** | $15,000 - $50,000 | Varies by organization size, complexity, and audit firm |
-| **Implementation Consulting** | $20,000 - $100,000 | Optional, depends on internal capabilities |
-| **Internal Resources** | $50,000 - $200,000 | FTE costs for implementation and maintenance |
-| **Technology/Tools** | $5,000 - $25,000 | GRC platforms, monitoring tools, security solutions |
-| **Training and Certification** | $2,000 - $10,000 | Staff training and professional certifications |
-| **Annual Maintenance** | $30,000 - $100,000 | Ongoing audit, monitoring, and compliance activities |
-
-## Benefits of SOC 2 Compliance
-
-### Business Benefits
-- **Market Access**: Qualification for enterprise sales opportunities
-- **Customer Trust**: Demonstrated commitment to data security and privacy
-- **Competitive Differentiation**: Advantage over non-compliant competitors
-- **Sales Acceleration**: Streamlined due diligence processes
-- **Partnership Opportunities**: Access to partner ecosystems requiring compliance
-
-### Operational Benefits
-- **Risk Reduction**: Systematic identification and mitigation of security risks
-- **Process Improvement**: Standardized policies and procedures
-- **Incident Response**: Formal incident management capabilities
-- **Vendor Management**: Structured approach to third-party risk assessment
-- **Employee Awareness**: Enhanced security culture and training
-
-### Financial Benefits
-- **Premium Pricing**: Ability to charge premium prices for secure services
-- **Reduced Insurance Costs**: Potential cybersecurity insurance discounts
-- **Avoided Breach Costs**: Prevention of costly data breaches and incidents
-- **Investor Confidence**: Demonstrated operational maturity for funding rounds
-
-## Common Implementation Challenges
-
-### Technical Challenges
-- **Legacy Systems**: Integrating security controls with older systems
-- **Cloud Complexity**: Managing controls across multiple cloud environments
-- **Data Classification**: Identifying and protecting sensitive data across systems
-- **Access Management**: Implementing least-privilege access controls
-- **Monitoring and Logging**: Comprehensive security monitoring across all systems
-
-### Organizational Challenges
-- **Resource Constraints**: Limited budget and staff for implementation
-- **Change Management**: Adapting to new policies and procedures
-- **Cross-Functional Coordination**: Aligning IT, security, legal, and business teams
-- **Documentation Overhead**: Maintaining comprehensive documentation
-- **Continuous Compliance**: Sustaining controls over time
+</details>
 
 ## Related Documentation
 
-- [SOC 2 Audit Principles](./auditprinciples.mdx)
-- [SOC 2 Audit Procedures](./auditprocedures.mdx)
-- [Conducting a SOC 2 Audit](./conducting-a-soc-2-audit.mdx)
-- [Planning and Preparation](./planningandprep.mdx)
-- [Required Documentation](./requireddocumentation.mdx)
+- [Audit Procedures](../../grc-fundamentals/auditprocedures.mdx)
+- [Audit Preparation](../../grc-fundamentals/audit/index.mdx)
 - [Framework Subject Matter](./framework-subject-matter.mdx)
-- [Security Management Procedures](./security-management-procedures.mdx)
 - [SOC 2 FAQ](./faq.mdx)
 - [Bridge Letter](./bridge-letter.mdx)
 

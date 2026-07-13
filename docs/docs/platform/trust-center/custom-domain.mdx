@@ -14,6 +14,8 @@ tags:
   - dns
 ---
 
+import Steps from '@site/src/components/Steps';
+
 # Custom Domain
 
 Host your Trust Center on your own domain (e.g., `trust.yourcompany.com`) instead of the default Openlane URL. Both URLs remain accessible after setup.
@@ -22,35 +24,31 @@ Host your Trust Center on your own domain (e.g., `trust.yourcompany.com`) instea
 
 Setting up a vanity domain requires adding two DNS records with your domain provider.
 
-### Step 1: Enter Your Domain
+<Steps>
 
-In the Domain settings, enter your desired subdomain (e.g., `trust.yourcompany.com`) and click **Set**. The system generates the DNS records you need.
+1. **Enter your domain.** In the Domain settings, enter your desired subdomain (e.g., `trust.yourcompany.com`) and click **Set**. You should see the DNS records you need to add.
 
-### Step 2: Add a CNAME Record
+1. **Add a CNAME record** with your domain provider. It routes traffic to the Openlane infrastructure:
 
-The CNAME record routes traffic to the Openlane infrastructure.
+    ```
+    Type:  CNAME
+    Host:  trust (or your chosen subdomain)
+    Value: trust.theopenlane.net
+    TTL:   3600 (or Auto)
+    ```
 
-```
-Type:  CNAME
-Host:  trust (or your chosen subdomain)
-Value: trust.theopenlane.net
-TTL:   3600 (or Auto)
-```
+1. **Add a TXT record** to verify domain ownership. Use the exact values shown in the console:
 
-### Step 3: Add a TXT Record
+    ```
+    Type:  TXT
+    Host:  _openlane-verify.trust (shown in console)
+    Value: openlane-verification=abc123... (shown in console)
+    TTL:   3600 (or Auto)
+    ```
 
-The TXT record verifies domain ownership. Use the exact values shown in the console.
+1. **Verify.** Click **Verify** in the console. DNS changes typically propagate within 2-15 minutes, though it can take up to 72 hours in rare cases.
 
-```
-Type:  TXT
-Host:  _openlane-verify.trust (shown in console)
-Value: openlane-verification=abc123... (shown in console)
-TTL:   3600 (or Auto)
-```
-
-### Step 4: Verify
-
-Click **Verify** in the console. DNS changes typically propagate within 2-15 minutes, though it can take up to 72 hours in rare cases.
+</Steps>
 
 ## Provider-Specific Notes
 
@@ -74,7 +72,7 @@ Most DNS providers don't allow CNAME records at the root domain. Use a subdomain
 - Wait longer for DNS propagation
 
 **SSL certificate warnings**
-SSL certificates are provisioned automatically after DNS verification. Wait a few minutes for provisioning to complete.
+We provision SSL certificates automatically after DNS verification. Wait a few minutes for provisioning to complete.
 
 ## Modifying or Removing
 

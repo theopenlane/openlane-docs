@@ -1,0 +1,45 @@
+---
+title: Example Evidence
+sidebar_label: Example Evidence
+sidebar_position: 2
+description: Example evidence artifacts for commonly manually evidenced Essential Eight control areas
+---
+
+# Essential Eight Example Evidence
+
+The table below lists commonly evidenced control areas for the Essential Eight and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
+
+| Control Area | Example Evidence |
+| ------------ | ---------------- |
+| Network architecture | A current network diagram covering in-scope servers, endpoints, network devices, firewalls, and cloud environments |
+| System configuration standards | Hardening standards documenting required security settings, with screenshots showing those settings enforced on representative systems |
+| Application control enforcement | Endpoint management or allowlisting tool screenshots showing default-deny rules in enforcement mode, plus policy settings that block unapproved software installation and execution |
+| Authorized libraries and scripts | The policy defining allowlisting controls and their periodic reassessment, tool configuration screenshots enforcing the allowlist, and logs showing unauthorized libraries or scripts being blocked |
+| Removal of unnecessary software | Endpoint inventory reports, deployment records showing removal or disabling of unneeded software, and hardening standards listing the software to be disabled |
+| Utility program restrictions | Exports showing which utility programs are installed and the access restrictions applied to them |
+| Application and OS patching | Patch management tool screenshots showing critical patches applied within the required timeframes, plus the vulnerability or patch management policy stating those timeframes |
+| Automated software updates | Screenshots of unattended upgrade configuration, infrastructure-as-code snippets, or deployment status reports from a management console |
+| Firmware updates | Current firmware versions for network and wireless devices, taken from a device management console or inventory export |
+| Password and authentication requirements | Identity provider screenshots or exports confirming enforced length and complexity rules, plus the relevant access control policy |
+| MFA for administrative access | Identity provider policy screenshots, sample administrator profiles showing MFA enabled, and access control policy documentation |
+| MFA for remote access | VPN client or identity provider settings enforcing MFA on remote connections, plus the remote access policy |
+| Separate administrative accounts | User listings showing distinct standard and privileged accounts for the same people, with the access control policy requiring the separation |
+| Privileged access authorization | Policies defining high-risk privileged roles, approved access requests showing justification and sign-off, and privileged access management workflow screenshots |
+| Role-based access control | An RBAC matrix or IAM tool screenshots defining roles and their permissions |
+| Application and system account reviews | Records of periodic account reviews with dates, resulting changes, and approvals |
+| Service account management | Configuration showing interactive logon restricted for service accounts, exception approvals with business justification and time limits, rotation settings, and records of password changes after suspected compromise |
+| Backup storage | Screenshots showing backups encrypted and stored separately from source systems, plus failure alerts and the tickets resolving them |
+| Backup restoration testing | Documented restore procedures and validation results confirming data completeness, with dates and approvals |
+| Privileged activity logging | Logging platform screenshots showing administrative actions captured in an audit trail, plus the logging and monitoring policy |
+| Authentication change logging | Audit log screenshots showing account creation, credential changes, and permission changes being recorded |
+| Command-line and script logging | Configuration showing command-line and PowerShell logging enabled, confirmation that the logs reach a central platform, and sample entries with user, timestamp, and command |
+| Log protection | Settings showing write-once storage or retention locks, restricted access lists for log data, and file integrity monitoring alerts on log files |
+| Log review and follow-up | The documented review process, reports from a centralized logging or SIEM platform, and incident tickets showing anomalies investigated and resolved |
+| Clock synchronization | Command output or configuration showing NTP active and synchronized across systems and network devices |
+| Change management | The current approved change management policy, plus change records or merge requests showing review and approval before implementation |
+| Incident response and notification | The incident response plan, appropriately redacted notifications to affected parties or authorities, and internal records of the notification process |
+| Contact with authorities | Documented communication plans identifying the authorities to contact and the events that trigger contact |
+| Business continuity plan | The current approved business continuity plan |
+| Asset discovery | Discovery tool screenshots showing scan schedules and monitored network ranges, plus DHCP logging or IP address management configuration and review records |
+| Memory protection and system integrity | Operating system settings showing exploit mitigations such as memory integrity protections enabled, Secure Boot enabled in firmware, and compliance reports from an endpoint management tool |
+| Control failure remediation | Post-incident reviews documenting a control failure, its cause and duration, and the remediation applied |

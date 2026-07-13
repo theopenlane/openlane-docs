@@ -1,0 +1,159 @@
+---
+title: Example Evidence
+sidebar_label: Example Evidence
+sidebar_position: 3
+description: Example evidence artifacts for commonly manually evidenced ISO 27001 control areas
+---
+
+# ISO 27001 Example Evidence
+
+The table below lists commonly evidenced control areas for ISO 27001 and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview). Note that auditors often request a complete population (users, assets, vendors) and pick their own sample, so a single example may not suffice unless agreed in scope.
+
+| Control Area | Example Evidence |
+| ------------ | ---------------- |
+| Separate environments | Screenshots showing distinct development, testing, staging, and production environments, such as different URLs or separate servers, databases, and networks |
+| Internal communication channels | Screenshots of internal reporting channels for failures, events, and concerns, such as a dedicated security channel in Slack or Teams, or a whistleblower channel |
+| Periodic access reviews | Documentation of the latest user access review: the user and permission lists reviewed, sign-off by at least two people so nobody approves their own access, and tickets showing requested changes were carried out; quarterly cadence is the norm, and physical access rights may be in scope |
+| Risk assessment results | Records of the most recent risk assessment, such as the risk register and risk treatment plan, produced per company policy |
+| Risk treatment plan | Documented remediation plans for risks the assessment identified |
+| Penetration tests | The most recent penetration test report showing scope and results, plus internal tickets tracking remediation of findings; run at least annually or after significant changes |
+| Asset inventory | A documented listing of all assets (workstations, mobile devices, servers, databases) plus cloud console screenshots enumerating infrastructure |
+| Network diagram | The current network diagram plus confirmation it was reviewed for accuracy within the past year, for example an email from the responsible owner |
+| BCP/DR tests | Records of the most recent business continuity or disaster recovery exercise: activities performed, results, lessons learned, and invites showing participants and dates |
+| Incident response team | Documented incident response roles and responsibilities, covering incident managers, handlers, communication coordinators, and advisors |
+| Incident lessons learned | For an event treated as an incident: the tracking ticket, root-cause analysis or post-mortem, and lessons learned |
+| Formal screening process | Recruitment records for a recent hire: interview invites, interviewer feedback, applicant tracking system exports, and resume or credential evaluation; the standard accepts a range of screening methods (identity verification, criminal checks, employment history, character references, education or certification verification), auditors typically sample only personnel onboarded since the last audit, identity verification is the accepted minimum where local law restricts formal background checks, and for agency-sourced contractors the agency contract should assign screening responsibility |
+| Vendor agreement | An executed agreement with a vendor or service provider |
+| Vendor compliance monitoring | Vendor directory screenshots showing risk-based categorization, plus review documents showing vendors' SOC 2 reports were assessed |
+| Secure password storage | Where username and password login exists, database screenshots demonstrating passwords are stored as salted hashes |
+| Session termination | Screenshots showing users are signed out when the browser or tab closes and after a predefined inactivity timeout, with reauthentication required |
+| Access provisioning | An access request ticket with documented approval from the system owner or manager; auditors may also ask for permission-change requests for existing users |
+| Root access control | Evidence that root password authentication to production resources is disabled, such as infrastructure as code configuration disabling password login for root |
+| Critical change management | For a hot fix or emergency change: pull request records or tickets showing the change was reviewed, tested, and approved, or approved retroactively by an authorized person |
+| Intrusion detection/prevention | Screenshots from AWS GuardDuty, Azure Sentinel, GCP Security Command Center, or an equivalent showing the service enabled, the threat types detected, and who gets alerted |
+| Encrypted remote production access | Screenshots showing production servers or databases are unreachable unless the user is on the internal network via an encrypted VPN |
+| Backup restore testing | Records of a test restore completed within the past year: steps taken, results, completion date, and validation that restored data is complete and accurate |
+| Customer data deletion on termination | For a recently churned customer: disposal logs or screenshots showing customer-specific resources decommissioned, plus the agreement stating the disposal commitments and any time window |
+| Test data | Evidence production data stays out of lower environments, such as test databases populated with mock data or anonymization and data generation scripts |
+| Personnel NDAs | An executed confidentiality agreement with a recent hire, such as an NDA, PIIA, or employment agreement with confidentiality clauses |
+| Clean desk and clear screen | Acceptable use policy and, where applicable, records of its acknowledgement |
+| Disposal of sensitive paper records | Observation of hard copy destruction, on-site or over a video call |
+| Secure storage mechanisms | Photos of locked storage or shred bins at office locations |
+| Disposal of sensitive data on hardware | One documented disposal instance, such as a certificate of destruction or screenshots showing a drive was wiped before device reuse |
+| Notice and acknowledgement of privacy practices | Sign-up flow screenshots showing users must accept the privacy notice before using the system |
+| Periodic review of privacy policy | For recent privacy policy changes, evidence customers were notified (for example notification emails) and a screenshot showing the policy's last-updated date |
+| Procedures for information disposal | Documented procedures for erasing or destroying information identified for disposal |
+| Privacy and security requirements in third-party agreements | Executed DPAs, BAAs, or service provider agreements with third parties given access to personal data |
+| Notification of incidents or breaches | For one incident or breach, evidence that affected parties and authorities were notified per your policies and legal or contractual obligations |
+| Data entry validation | Screenshots of a user entering data into the application confirming edit checks apply to input fields |
+| Removable media encryption | If the company issues removable media to employees, evidence the devices are encrypted |
+| Data loss prevention | Evidence of DLP measures, such as rules configured in the corporate email service or configurations from dedicated DLP tools |
+| Automated security updates | Evidence of automated OS security patching, such as unattended-upgrade settings, package update directives in infrastructure as code, or a patch management console |
+| Incident response test | Records of the most recent incident response exercise: activities, results, lessons learned, and invites showing participants and dates; annually or more often based on risk |
+| Testing of changes | Tickets for several changes demonstrating each was tested |
+| Change release approval | For an example release, a pull request or ticket showing sign-off by authorized personnel before production deployment |
+| Management system scope | The ISMS plan defining scope: boundaries (business units, technologies, locations), justification for exclusions, and alignment with organizational context and stakeholder expectations |
+| Statement of Applicability | Your SoA declaring the controls selected from the risk assessment, with defensible justification for any excluded Annex A controls; its version and date appear on your certificate |
+| Interested parties and legal requirements | The ISMS plan section identifying interested parties and applicable legal requirements; an AI governance policy where relevant |
+| Management review | Documentation of the most recent management review, with inputs and outputs recorded per the standard's requirements |
+| Periodic independent assessments | The most recent internal audit program and report covering the full ISMS scope, typically annual |
+| Business continuity plan | Business continuity plan |
+| Business impact analysis | Business impact analysis, often part of the business continuity plan |
+| Vendor management policy | Vendor management policy |
+| Management system objectives | Information security policy and the ISMS plan section stating objectives |
+| Documented operating procedures | The relevant section of your ISMS documentation |
+| Employment terms and conditions | An executed employment contract for one person covering terms, conditions, and responsibilities during and after employment, such as confidentiality and IP protection |
+| Communications plan | The ISMS plan section covering communications |
+| Measurement and monitoring plan | The ISMS plan section covering measurement and monitoring |
+| Record management and control | Evidence policy documents are version controlled, such as the change log of the ISMS documentation |
+| Competence records | Job descriptions for a recent and an existing hire; recruitment process records; a performance evaluation from the past year; records of education, certifications, and training showing competence for management system roles |
+| Secure information transfer | Data protection policy |
+| Asset management policy | Asset management policy |
+| Management system plan | The ISMS plan document |
+| Threat intelligence | A completed threat assessment plan, proof of subscription to a feed or mailing list covering emerging security issues, and evidence threats are assessed per the plan |
+| Data de-identification | Data classification policy and data protection policy |
+| Contact with special interest groups | Evidence of engagement with security or privacy groups: newsletters from professional associations, CISA or similar advisories, conference participation |
+| Vendor default accounts | Policy requiring all vendor-supplied default credentials to be changed, plus screenshots showing default accounts removed, reconfigured, or disabled |
+| Data secure disposal | Data disposal policies and procedures |
+| Key storage locations | Evidence of where cryptographic keys live, such as a console screenshot from your cloud provider's key management service |
+| Strong key generation | Documented key management procedures specifying strong key generation, plus screenshots of the generation process |
+| Key and certificate validation | Encryption policy language requiring only trusted keys and certificates, plus screenshots showing the keys and certificates in use are trusted |
+| Anti-malware capability and updates | Console screenshots showing the anti-malware solution updates automatically and is configured to detect and then remove, block, or contain known malware |
+| Anti-malware scanning behavior | Console screenshots showing periodic plus real-time scanning of files from external sources, or continuous behavioral analysis as an alternative |
+| Production change control | For a non-software change (infrastructure, network, configuration): records showing description, justification, security impact evaluation, authorized approval, rollback procedures, and testing |
+| Secure code development training | Training materials showing topics covered and a completion record for one person within the past year; delivered by a third party or internally |
+| Password history enforcement | Configuration screenshots showing password reuse is prevented on relevant systems, such as your cloud provider, identity provider, code repositories, and password vaults |
+| Unique first-time passwords | Configuration screenshots or a reset walkthrough showing initial and reset passwords are unique and must be changed on first use |
+| Communication of authentication practices | Screenshots of where employees find authentication policies, plus documented guidance on choosing strong credentials, protecting them, not reusing passwords, and changing suspected-compromised passwords |
+| Entry controls | For each computer room or data center: photos of badge readers, locks, or other entry controls, and screenshots or video showing consoles lock against unauthorized use |
+| Tamper-protected access controls | Photos showing cameras and access control devices are physically protected from tampering or disablement |
+| Restricted access to network components | Evidence physical access to wireless access points, gateways, network hardware, and telecom lines is restricted |
+| Visitors authorized and escorted | Auditor observation of a visitor being escorted into company facilities, on-site or via live video |
+| Personnel and visitor badges | Observation of a visitor receiving a badge, plus an example badge |
+| Visitor log | Evidence a visitor log is kept for facilities and rooms holding sensitive systems, such as a scan of the log from a typical day |
+| Media physically secured | Documented policies covering physical security of all media: computers, removable media, paper records, receipts, faxes |
+| Media classification | Screenshots or photos showing media is labeled by data sensitivity |
+| Media transferred securely | Transfer procedures defining acceptable methods and couriers, records showing transfers are logged, and one recent transfer with tracking recorded per procedure |
+| Management approval for media transfer | Records from a recent media transfer showing approval by an authorized manager |
+| Media inventory logs | If you manage electronic media holding sensitive data, your media inventory |
+| Media destruction | Documented destruction policies plus implementation evidence where possible: disposal logs, vendor destruction certificates, or decommissioning screenshots |
+| Audit logging | Screenshots showing audit trails are enabled and active on in-scope systems |
+| Audit log data points | A sample log entry capturing identity, event type, date and time, success or failure, origin, and the affected data or component |
+| Audit trail for privileged access | A sample log showing actions by administrative identities are captured, including privileged functions and interactive use of system accounts |
+| Audit trail for invalid access attempts | A sample log showing failed access attempts are captured |
+| Audit trail for credential changes | A sample log showing changes to identification and authentication credentials are captured, including account creation and privilege elevation |
+| Audit trail of system-level object changes | A sample log showing creation and deletion of system-level objects is captured |
+| Clock synchronization | Evidence clocks are synchronized across critical systems using a time synchronization technology such as NTP |
+| System time source | Evidence internal systems take time only from designated central time servers synced to UTC-based sources, with peering between servers if there is more than one |
+| Limited access to audit trails | A list or screenshots of users with administrative or privileged access to log systems and log data |
+| Audit trail files protected | Screenshots or photos showing logs are protected from unauthorized access, modification, or deletion via access controls or physical or network segregation |
+| Logging policies and procedures | Logging and monitoring policy |
+| Audit log retention | Screenshots of the retention settings configured in logging systems |
+| Change detection mechanism | Screenshots from the file integrity monitoring or change detection tool showing what it watches, plus the documented list of monitored files |
+| Multiple methods for security awareness | Evidence periodic security updates reach personnel through varied channels: newsletters, intranet reminders, chat announcements |
+| Vendor due diligence | Documented due diligence results, including the completion date, from reviewing security questionnaires or compliance certifications such as SOC 2 before engaging a new vendor |
+| Designated data protection officer | Evidence a DPO is formally appointed (privacy policies, RACI matrix, job description) and that a contact mechanism, such as an email address in the public privacy notice, is communicated to data subjects |
+| Shared account management | For highly privileged shared accounts: documented business justification with management approval, plus screenshots showing the credentials are held in a restricted password vault |
+| Restrictions on software installation | Screenshots from MDM or endpoint management showing enforced rules blocking unauthorized software installation or execution on company devices |
+| Management of utility programs | Documented procedures governing who may access utility programs such as antivirus, MDM, and logging admin consoles, plus a current list of users with that access |
+| Management of nonconformities | A nonconformity tracker or tickets showing each issue was reviewed, root-caused, corrected, and the corrective action's effectiveness evaluated, with documentation retained |
+| Change management policy | Change management policy |
+| Information labeling | Data protection policy and data classification policy |
+| Disciplinary process | The documented disciplinary process for information security violations, with a graduated response based on severity, intent, repetition, and prior training; often in the employee handbook, code of conduct, or security policy |
+| Fire detection and suppression | Observation of systems installed in critical locations plus maintenance evidence such as inspection reports or vendor service agreements |
+| Temperature monitoring | Observation of temperature and humidity controls in server rooms or data centers plus maintenance logs or calibration records |
+| Uninterruptible power supply | Observation of UPS systems in data centers or server rooms plus maintenance logs or service records |
+| Mobile device management | Screenshots from the MDM console showing baseline configurations and enforced security policies per device OS |
+| Obscured authentication feedback | A screenshot of the login UI showing password input is masked with dots or asterisks |
+| Media sanitization | For a sample of sanitization and disposal actions, records showing each was reviewed, approved, tracked, and documented per policy |
+| Secure development process | Internal wikis, process documents, or guidelines referencing industry standards, defining security requirements, and showing security is considered at each SDLC stage and across the business, data, application, and technology layers of the architecture |
+| Network security policy | Network security policy |
+| Phishing simulations | Campaign configuration screenshots, results dashboards, and example simulated phishing emails |
+| Redundancy of processing | Evidence redundancy strategies exist for equipment, systems, and processes as defined in business continuity plans |
+| Email protection mechanisms | Evidence of phishing and spam defenses, such as SPF, DKIM, and DMARC configuration screenshots |
+| Return of assets | For one recently departed employee: offboarding checklist or tickets tracking return of devices, badges, and tokens, plus prepaid return labels and tracking for remote staff |
+| On-call team | The on-call rotation schedule, such as screenshots from PagerDuty or an equivalent showing assignments |
+| Unencrypted portable storage | For any unencrypted media or portable devices in use, a documented business justification and formal management approval |
+| Automated audit log reviews | Configuration screenshots from the log review tooling: centralized log management, an event log analyzer, or a SIEM |
+| No hard-coded credentials | Evidence that application and system account credentials are not hard-coded, such as secret scanning integrated into the CI/CD pipeline |
+| Software and library inventory | Your software bill of materials, for example SCA tool screenshots listing components and dependencies |
+| Static application security testing | CI/CD screenshots showing SAST runs on commits, or configurations and dashboards from the SAST tool |
+| Logging and monitoring policy | Logging and monitoring policy |
+| Contact with authorities | Incident response procedures or communication plans identifying which authorities to contact, what triggers contact, and who communicates how |
+| Segregation of duties | Documentation identifying conflicting duties (for example initiating vs approving changes, requesting vs granting access) and the mechanisms enforcing separation, plus compensating controls where full segregation is not feasible |
+| Network segmentation | Evidence the network is split into security boundaries with traffic controlled between them per business and security needs |
+| Leak detection | Observation of leak detection systems at critical facilities, on-site or via live video |
+| Control of audit activities | Records showing audit activities against operational systems were planned and agreed with management, such as scoping communications with penetration test vendors |
+| Changes to supplier services | For a vendor service change, documentation showing management required and authorized review and due diligence |
+| Intellectual property protection | Acceptable use policy |
+| Cloud deletion protection | Screenshots of deletion protection enabled on cloud resources |
+| Principle of least privilege | Per in-scope system, the user access listing with roles and permissions demonstrating least privilege |
+| Cloud resource tagging | The inventory listing with tags assigned |
+| Cryptographic key rotation | Automated rotation settings in the key management system, or tickets showing periodic manual rotation |
+| Web filtering | Configurations blocking known malicious sites and restricting prohibited web resources per the acceptable use policy |
+| Secure login procedures | For internally developed systems: screenshots of successful and failed logins showing no helpful hints for attackers, errors that do not reveal which field was wrong, and masked password entry |
+| Cloud storage lifecycle | Screenshots of lifecycle rules that expire and delete data after defined retention periods |
+| Credentials rotation | Automated secrets rotation configuration in the secrets manager, or tickets showing periodic manual rotation |
+| Software composition analysis | Evidence components and libraries are checked for vulnerabilities, license compliance, and supported versions, such as SCA in the CI/CD pipeline |
+| Secure runtime configurations | Asset management policy plus screenshots of runtime configuration standards for in-scope applications and platforms |
+| Expectations of interested parties | The ISMS plan section documenting interested parties' expectations |

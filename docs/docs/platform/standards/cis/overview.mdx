@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: CIS
+sidebar_label: Overview
 sidebar_position: 1
 description: Comprehensive guide to CIS compliance including benchmarks, certification process, and implementation strategies for cybersecurity best practices
 keywords:
@@ -14,34 +15,74 @@ tags:
   - benchmarks
 ---
 
-# Overview
+import StandardMeta from '@site/src/components/StandardMeta';
 
-The [Center for Internet Security (CIS)](https://www.cisecurity.org/) is a not-for-profit organization which aims to identify and promote best-practice cybersecurity standards and policies. It develops and promotes IT security guidance with the input from a community of cybersecurity experts. CIS draws members from a range of backgrounds including private companies, government, and research institutions. The aim is to take a collaborative approach to improving cybersecurity and responding to known cyber threats.
+# CIS Benchmarks
+
+The [Center for Internet Security (CIS)](https://www.cisecurity.org/) is a not-for-profit organization that aims to identify and promote best-practice cybersecurity standards and policies. It develops and promotes IT security guidance with the input from a community of cybersecurity experts. CIS draws members from a range of backgrounds including private companies, government, and research institutions. The aim is to take a collaborative approach to improving cybersecurity and responding to known cyber threats.
+
+<StandardMeta
+  fullName={"Center for Internet Security Benchmarks"}
+  type={"Framework (configuration baselines)"}
+  source={"CIS Benchmarks, published by the Center for Internet Security"}
+  established={"2000 (CIS founded); benchmarks versioned per product"}
+  managedBy={"Center for Internet Security"}
+  appliesTo={"Any organization hardening operating systems, software, and network devices"}
+  certification={"No: self-assessment; CIS-CAT tooling and vendor product certification exist"}
+/>
 
 To achieve this, CIS provides a range of tools, resources and programs to enable best-practice IT governance within organizations and government. Many of these tools and resources can be accessed free of charge. CIS actively monitors cyber threats to help national and local governments to promote cybersecurity procedures through the Multi-State Information Sharing and Analysis Center (MS-ISAC).
 
-MS-ISAC provides members with resources and tools for improved IT governance, cybersecurity notifications, and reports on active cyber threats. CIS offer different programs to organizations to promote cybersecurity procedures.
+MS-ISAC provides members with resources and tools for improved IT governance, cybersecurity notifications, and reports on active cyber threats. CIS offers different programs to organizations to promote cybersecurity procedures.
 
 ## What is CIS Compliance?
 
-CIS compliance means meeting CIS security standards. CIS compliant organizations will have an established baseline for protecting their systems and data from cyberattacks. This baseline should satisfy the CIS benchmarks, which cover a vast set of vendors and systems.
+CIS compliance means meeting CIS security standards: your systems are configured to satisfy the applicable CIS benchmarks, of which there are more than 100 covering operating systems, cloud platforms, databases, network devices, and desktop software.
 
-Though CIS benchmarks stand alone, compliance with them is part and parcel of broader IT risk management strategy. CIS benchmarks align with essential industry regulations, including the NIST Cybersecurity Framework and HIPAA. As a result, organizations prioritizing CIS compliance will simultaneously achieve compliance with other industry regulations.
+Though CIS benchmarks stand alone, compliance with them is part of a broader IT risk management strategy. CIS publishes mappings from its benchmarks to the NIST Cybersecurity Framework and other regulatory requirements, so hardening against a benchmark also makes measurable progress toward those obligations.
 
+The benchmarks are free to download, and each recommendation is developed through a consensus process of security practitioners. In practice that means you get specific settings and the audit steps to verify them, rather than abstract principles, and applying them closes off the default-configuration weaknesses that common attacks rely on.
 
-Benefits of compliance for CIS Benchmarks include:
+## CIS Controls
 
-* Strengthen vulnerabilities that can cause serious cybersecurity incidents
-* CIS Benchmarks are aligned to the best-known IT systems and technology
-* Free to download and embed
-* Developed with expert input from a community of cybersecurity specialists
-* A clear tool for enhancing IT governance procedures
-* Safeguard vital IT systems within an organization, from operating systems to networks
-* Build a foundation of compliance with other essential industry regulations
+CIS publishes two complementary bodies of guidance. The CIS Critical Security Controls (currently version 8.1) describe what an organization should do across its security program: a prioritized set of safeguards for defending against the most common attack techniques. The CIS Benchmarks describe how to configure specific products in line with that guidance, and each benchmark recommendation maps back to the Controls. Hardening systems against benchmarks therefore also advances a CIS Controls implementation, and many organizations pursue the two together.
+
+The Controls are voluntary best practices rather than a mandated standard, and version 8.1 organizes them into 18 categories:
+
+1. Inventory and Control of Enterprise Assets
+2. Inventory and Control of Software Assets
+3. Data Protection
+4. Secure Configuration of Enterprise Assets and Software
+5. Account Management
+6. Access Control Management
+7. Continuous Vulnerability Management
+8. Audit Log Management
+9. Email and Web Browser Protections
+10. Malware Defenses
+11. Data Recovery
+12. Network Infrastructure Management
+13. Network Monitoring and Defense
+14. Security Awareness and Skills Training
+15. Service Provider Management
+16. Application Software Security
+17. Incident Response Management
+18. Penetration Testing
+
+Each control breaks down into individual safeguards, which are the unit you actually implement and evidence. Not every safeguard produces evidence automatically; for the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).
+
+### Implementation Groups
+
+Every safeguard is assigned to one of three cumulative Implementation Groups (IGs), which tell you where to start based on your organization's size, resources, and risk profile:
+
+* **IG1**: Essential cyber hygiene, the minimum baseline CIS recommends for every enterprise. It targets smaller organizations with limited IT and security resources and defends against the most common, non-targeted attacks.
+* **IG2**: Everything in IG1 plus safeguards for organizations with dedicated IT or security staff managing more operational complexity and more sensitive data.
+* **IG3**: Everything in IG1 and IG2 plus advanced safeguards for larger or higher-risk organizations, particularly those handling sensitive or regulated data that attracts targeted attacks.
+
+We recommend starting with IG1 regardless of organization size, because it establishes the foundation the later groups build on and covers the attack techniques most organizations actually face.
 
 ## What Are CIS Benchmarks?
 
-CIS Benchmarks are frameworks for calibrating a range of IT services and products to ensure the highest standards of cybersecurity and a vital part of your organizations' CIS compliance objectives. There are more than 100 different benchmarks covering a range of well-known vendors and systems. CIS Benchmarks provide compliance guidance for all areas of an IT network, including operating systems, server systems, office software and network devices.
+CIS Benchmarks are frameworks for calibrating a range of IT services and products to a high standard of cybersecurity, and they are a central part of your organization's CIS compliance objectives. There are more than 100 different benchmarks covering a range of well-known vendors and systems. CIS Benchmarks provide compliance guidance for all areas of an IT network, including operating systems, server systems, office software and network devices.
 
 CIS Benchmarks are compatible with existing IT risk management policies and procedures like internal audit. Internal audit can use CIS Benchmarks as a tool to evaluate configurations for systems and data. Once the audit is complete, teams can implement the recommended CIS controls to secure the organization against cyberattacks. CIS Compliance requires organizations to follow specific controls for each benchmark, including malware and behavioral detection.
 
@@ -57,37 +98,24 @@ Each recommendation is either ‘scored’ or ‘not scored.’ ‘Scored’ rec
 
 To help organizations with implementation, each recommendation within a CIS Benchmark is assigned a level-1 or level-2 profile. The profile levels represent the potential impact of a recommendation on the organization’s IT systems and cybersecurity defense. It helps organizations understand which recommendations meet their cybersecurity needs and available resources. Profiles reiterate the importance of using a test environment when implementing CIS Benchmark recommendations.
 
-* **Level-1 Profile**: These profiles are generally assigned to surface-level recommendations that can be implemented quickly. Organizations will generally be able to continue normal operations when introducing recommendations of this level.
-* **Level-2 Profile**: These profiles are linked to recommendations that deal with areas of significant importance to IT systems and cybersecurity. The recommendations will cover policies and parts of IT systems that are vital to cybersecurity. Level-2 profiles deal with areas with heightened security considerations or where there is a risk of negative impact on IT systems.
+* **Level-1 Profile**: Baseline recommendations that harden a system with little or no impact on its normal functionality. Most organizations can apply these without disrupting existing operations.
+* **Level-2 Profile**: Defense-in-depth recommendations for high-security environments. These settings provide stronger protection but can reduce functionality or conflict with existing configurations, so test them before rolling them out broadly.
 
 ## How to Use CIS Benchmarks
 
-CIS Benchmarks provide standards for the proper configuration of a range of IT technologies and systems. Covering everything from desktop software to mobile devices, these systems are integral to any modern organization
-
-Organizations can use CIS compliance standards to make focused improvements to specific areas of their IT systems. Properly embedding IT systems will strengthen vulnerabilities in an organization’s IT network, improving cybersecurity defense.
+CIS Benchmarks provide configuration standards for a wide range of IT technologies. You do not have to adopt them wholesale: pick the benchmarks for the systems you actually run, apply the profile that fits your risk tolerance, and use the audit steps in each recommendation to verify the result.
 
 CIS Benchmarks can be grouped into seven main areas:
 
-1. Server Software: CIS Benchmarks guide the proper configuration of different server software from various vendors. This includes commonly used server software such as VMware or Microsoft Windows Server. The aim is to strengthen cybersecurity through best practice configurations across different areas of the IT server system.
-
-There are CIS Benchmarks for database servers, web servers, DNS servers and authentication servers. Recommendations cover storage settings and restrictions, admin controls and server settings.
-
-1. Multi-function Print Devices: Print devices have become targets for cyber threats as a gateway into an organization’s network. Recommendations cover topics like file sharing, server configurations and secure access to wireless networks.
-
-1. Cloud Providers: Best practice cybersecurity configurations for setting up the most well-known cloud services and infrastructure. There are benchmarks for cloud services and infrastructure from Amazon Web Services, Microsoft Azure, Oracle Cloud Infrastructure and Google Cloud Computing Platform. Recommendations cover network settings, safeguards to ensure compliance with regulations and IT governance and management.
-
-1. Mobile Devices: These benchmarks focus on Apple iOS and Google Android mobile operating systems and devices. They provide guidance for configuring Apple iOS, iPadOS and Android operating systems. Recommendations cover topics such as browser and developer settings, app permissions and privacy and mobile operating system settings.
-
-1. Desktop Software: CIS Benchmarks provide best practice configuration for desktop software commonly used within modern organizations. This includes benchmarks for the Microsoft Office suite of software, an integral part of the modern office.
-    * CIS benchmarks are also provided for the top web browsers, including Google Chrome, Mozilla Firefox, Safari and Microsoft web browser. Recommendations cover areas like browser settings, management of third-party software, server settings and device management.
-
-1. Network Devices: These CIS Benchmarks help configure network devices and hardware used within an organization’s IT system. These cover network devices and products from various vendors, including Cisco, Juniper, Check Point Firewall and Palo Alto Networks.
-
-These recommendations help to ensure cybersecurity standards across all network devices and hardware within an organization to enhance and strengthen the overall IT Governance strategy.
-
-1. Operating systems: CIS Benchmarks help to ensure proper cybersecurity configurations for a range of the top operating systems widely used by organizations. This includes Linux, Microsoft Windows and servers, and Apple macOS. Benchmarks are mapped to different iterations of these operating systems, with best practice guidance for both enterprise and personal versions.
-
-Operating systems form a core part of any organization’s IT systems. CIS Benchmarks help organizations configure them securely, closing vulnerabilities and lowering the risk from cyber threats. Best practice recommendations cover protocols for driver installation, user profile management and remote access restrictions.
+| Area | Coverage |
+| ---- | -------- |
+| Server Software | Proper configuration of server software from various vendors, including commonly used software such as VMware and Microsoft Windows Server, plus database servers, web servers, DNS servers, and authentication servers. Recommendations cover storage settings and restrictions, admin controls, and server settings. |
+| Multi-Function Print Devices | Print devices have become targets for cyber threats as a gateway into an organization’s network. Recommendations cover topics like file sharing, server configurations, and secure access to wireless networks. |
+| Cloud Providers | Best practice cybersecurity configurations for the most well-known cloud services and infrastructure, including Amazon Web Services, Microsoft Azure, Oracle Cloud Infrastructure, and Google Cloud Computing Platform. Recommendations cover network settings, safeguards to ensure compliance with regulations, and IT governance and management. |
+| Mobile Devices | Guidance for configuring Apple iOS, iPadOS, and Google Android operating systems and devices. Recommendations cover browser and developer settings, app permissions and privacy, and mobile operating system settings. |
+| Desktop Software | Best practice configuration for commonly used desktop software, including the Microsoft Office suite and the top web browsers (Google Chrome, Mozilla Firefox, Safari, and Microsoft's browser). Recommendations cover browser settings, management of third-party software, server settings, and device management. |
+| Network Devices | Configuration of network devices and hardware from various vendors, including Cisco, Juniper, Check Point Firewall, and Palo Alto Networks, ensuring cybersecurity standards across all network hardware to strengthen the overall IT governance strategy. |
+| Operating Systems | Proper cybersecurity configurations for the top operating systems, including Linux, Microsoft Windows and servers, and Apple macOS, mapped to different iterations, with guidance for both enterprise and personal versions. Recommendations cover driver installation, user profile management, and remote access restrictions. |
 
 ## What Is CIS Certification?
 

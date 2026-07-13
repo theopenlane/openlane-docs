@@ -1,81 +1,70 @@
 ---
 title: Control Implementations
-description: Implementation details and verification status for security controls
+description: Document how each control is actually met, and track it from draft to verified
 sidebar_position: 3
 ---
 
 # Control Implementations
 
-Control Implementations represent the actual implementation status, details, and verification of security controls within an organization. They bridge the gap between theoretical control requirements and practical implementation.
+A control says what you're supposed to do. A control implementation says how you actually do it: in your environment, with your tools, run by your people. It's the difference between "we have access controls" and something an auditor can test.
 
-## What Are Control Implementations?
+When an auditor samples a control, the implementation is the first thing they read. A specific, current implementation narrative, paired with evidence that matches it, is what makes an audit go smoothly. Vague or stale implementations generate follow-up questions and slow the audit down.
 
-Control Implementations are specific instances of how controls are actually implemented within an organization. They track the implementation status, provide detailed implementation information, and maintain verification records to demonstrate that controls are effectively operating.
+Rolling up implementation status across a framework also shows how far you are from audit-ready.
 
-## Compliance Significance
+## Implementation Status
 
-Control Implementations are essential for:
+Each implementation moves through four statuses:
 
-- **Implementation Tracking**: Monitoring the actual deployment of security controls
-- **Verification Management**: Documenting testing and validation of control effectiveness
-- **Audit Readiness**: Providing evidence of control implementation for auditors
-- **Continuous Monitoring**: Tracking ongoing control operation and maintenance
-- **Gap Analysis**: Identifying implementation gaps and remediation needs
+| Status | What it means | What moves it forward |
+| ------ | ------------- | --------------------- |
+| **Draft** | You're still figuring out the approach | Finish the design, get sign-off to implement |
+| **In Progress** | Active work underway | Complete the rollout and initial testing |
+| **Implemented** | The control is operating | Formal verification that it works as described |
+| **Verified** | Tested and confirmed effective | Ongoing monitoring; re-verify on a cadence |
 
-## Implementation Status Types
+Don't rush to **Verified**. Marking something verified means someone actually tested it; an auditor asking "who verified this and how?" should have a real answer.
 
-### Draft Implementation
+## Writing a Good Implementation
 
-- **Status**: Initial planning and design phase
-- **Activities**: Requirements analysis, design documentation, resource planning
-- **Deliverables**: Implementation plan, design specifications, resource requirements
-- **Next Steps**: Approval for implementation
+The implementation details are prose, and specificity is what makes them useful:
 
-### In Progress Implementation
+- **Vague (avoid):** "Access to production systems is restricted and reviewed."
+- **Specific (aim for):** "Production access requires SSO with hardware MFA and membership in the `prod-access` group. Access reviews run quarterly; the platform team removes non-compliant grants within 5 business days."
 
-- **Status**: Active implementation work underway
-- **Activities**: System configuration, policy deployment, procedure implementation
-- **Deliverables**: Partial implementation, progress reports, interim testing
-- **Next Steps**: Complete implementation and initial testing
+A good implementation names the systems, the owners, and the cadence. Write in present tense about what you *do*, not future tense about what you *plan*; plans belong in Draft status.
 
-### Implemented
+## Verification and Evidence
 
-- **Status**: Implementation complete, control operational
-- **Activities**: Full deployment, documentation completion, initial verification
-- **Deliverables**: Implementation documentation, configuration evidence, operational procedures
-- **Next Steps**: Formal verification and validation
+Verification confirms the implementation works: someone tests the control (walkthrough, sample inspection, technical test) and records the result and date. From there, [evidence](../evidence/overview.mdx) proves it *keeps* working: recurring artifacts collected over the audit period.
 
-### Verified
+A practical rhythm: verify when you first complete an implementation, attach the test results as evidence, then let recurring [tasks](../../automation/tasks.mdx) drive evidence collection on schedule.
 
-- **Status**: Implementation verified and validated as effective
-- **Activities**: Formal testing, validation procedures, effectiveness assessment
-- **Deliverables**: Verification report, test results, effectiveness evidence
-- **Next Steps**: Ongoing monitoring and maintenance
+## How Implementations Connect
 
-## Properties
+Each implementation belongs to a [control](./overview.mdx) (or [subcontrol](./subcontrols.mdx)) and has an assignee: the person accountable for keeping it accurate. Because controls map to your enabled frameworks, one well-written implementation can serve the same requirement across SOC 2, ISO 27001, and anything else that maps to it.
 
-### Core Information
+For the full field list, see the [GraphQL object reference](/docs/api/graph-api/).
 
-- **ID**: Unique identifier for the control implementation
-- **Status**: Current implementation status (draft, in progress, implemented, verified)
-- **Implementation Date**: When the control was implemented
-- **Verified**: Boolean indicating if implementation has been verified
-- **Verification Date**: When verification was completed
+## FAQ
 
-### Implementation Details
-- **Details**: Comprehensive description of how the control is implemented
-- **Implementation Method**: Approach used for implementation (manual, automated, hybrid)
-- **Responsible Party**: Individual or team responsible for implementation
-- **Implementation Evidence**: Supporting documentation and artifacts
+<details>
+<summary>What's the difference between an implementation and evidence?</summary>
 
-### Verification and Testing
-- **Verification Method**: How the control effectiveness is verified
-- **Test Results**: Results from control testing and validation
-- **Verification Evidence**: Evidence supporting control effectiveness
-- **Last Verification**: Date of most recent verification
+The implementation describes how the control operates; evidence proves it operated during the period. Auditors want both: the narrative and the artifacts that back it up.
 
-### Relationships
-- **Control**: Parent control this implementation belongs to
-- **Subcontrol**: Associated subcontrol if applicable
-- **Organization**: Organization responsible for implementation
-- **Assignee**: Person assigned to manage implementation
+</details>
+
+<details>
+<summary>Do I need an implementation for every control?</summary>
+
+For every control in scope for your audit, yes; it's what the auditor tests against. Controls you've enabled but haven't operationalized yet are exactly what Draft status is for.
+
+</details>
+
+<details>
+<summary>Who should own an implementation?</summary>
+
+We recommend the person who actually runs the process rather than the compliance lead, because they'll know when reality drifts from the write-up. Drift between the two is the most common audit finding.
+
+</details>

@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Documentation References
 
-Is markdown scary for you? Confused why you can't just make a pile a google docs? This guide is to help you navigate markdown effectively.
+This page collects reusable markdown, table, and diagram patterns for writing Openlane documentation, along with links to the syntax references we use most often.
 
 * [Mermaid](https://mermaid-js.github.io/mermaid/#/)
 * [Material Icons](https://materialdesignicons.com/icon/)
@@ -63,7 +63,7 @@ Which renders like this:
   </tr>
 </table>
 
-Pro-tip! Instead of going through the motions of building the docker image for your changes, VSCode actually has a markdown render function inside of it you can use to see how things would look in real time, quick is _quite_ convenient when working with visualization or rendering changes. You can enable it in the upper right hand corder:
+Instead of going through the motions of building the docker image for your changes, we recommend using VSCode's built-in markdown preview to see how things would look in real time, which is quite convenient when working with visualization or rendering changes. You can enable it in the upper right hand corner:
 
 ![protip2](/img/vscode_preview.png)
 
@@ -72,9 +72,9 @@ Once you click it, while you type in real-time you can see things like tables or
 ![protip](/img/vscode_protip.png)
 
 
-## Ze copy pasta
+## Copy-Paste Examples
 
-Traditional; each header matches a row entry that spans the table
+A traditional table, where each header matches a row entry that spans the table:
 ```
 <table>
   <tr>
@@ -90,7 +90,7 @@ Traditional; each header matches a row entry that spans the table
 </table>
 ```
 
-More key-value-esk; description on the left, value on the right, no real "header"
+A key-value style table, with the description on the left, the value on the right, and no real "header":
 
 ```
 <table>
@@ -105,7 +105,7 @@ More key-value-esk; description on the left, value on the right, no real "header
 </table>
 ```
 
-Nested lists
+Nested lists:
 ```
 <ul>
   <li></li>
@@ -120,7 +120,7 @@ Nested lists
 </ul>
 ```
 
-Regular markdown table; centered text
+A regular markdown table with centered text:
 
 ```
 |   |   |   |
@@ -128,7 +128,7 @@ Regular markdown table; centered text
 |   |   |   |
 ```
 
-Tabbed table with MDX
+A tabbed table with MDX:
 
 ```
 <Tabs className="unique-tabs">

@@ -1,20 +1,20 @@
 ---
 title: Privacy and Authorization
 description: How Ent privacy policies, OpenFGA tuples, and hooks work together to enforce fine-grained access control
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Privacy and Authorization
 
-Openlane enforces authorization at the ORM layer, not at the resolver or handler level. This means access control follows data everywhere -- whether it is accessed via GraphQL, REST, a hook, or a direct Ent client call. The system combines three mechanisms:
+Openlane enforces authorization at the ORM layer, not at the resolver or handler level. This means access control follows data everywhere, whether it is accessed via GraphQL, REST, a hook, or a direct Ent client call. The system combines three mechanisms:
 
-1. **Privacy policies** on Ent schemas that gate every query and mutation
-1. **OpenFGA tuples** that model relationships between users and resources
-1. **Hooks** that create, update, and delete tuples when data changes
+- **Privacy policies** on Ent schemas that gate every query and mutation
+- **OpenFGA tuples** that model relationships between users and resources
+- **Hooks** that create, update, and delete tuples when data changes
 
 ## The Privacy Policy Sandwich
 
-Every entity's privacy policy is assembled from three layers that execute in order. Think of it as a sandwich: pre-policy bread, custom rule fillings, post-policy bread.
+Every entity's privacy policy is assembled from three layers that execute in order: pre-policy rules, the entity's custom rules, and post-policy defaults. The custom rules sit between the two standard layers, which is where the name comes from.
 
 ```mermaid
 flowchart TD
@@ -33,9 +33,9 @@ flowchart TD
 
 Runs first on every operation. Handles special cases that should bypass normal authorization:
 
-* **Internal requests** -- operations triggered by the system itself (migrations, hooks, background jobs) are allowed unconditionally
-* **History queries** -- read access to audit history is always permitted
-* **Module gating** -- mutations are denied if the organization does not have the required feature module enabled (see [Module Gating](#module-gating) below)
+* **Internal requests**: operations triggered by the system itself (migrations, hooks, background jobs) are allowed unconditionally
+* **History queries**: read access to audit history is always permitted
+* **Module gating**: mutations are denied if the organization does not have the required feature module enabled (see [Module Gating](#module-gating) below)
 
 ### Custom Rules
 
@@ -54,10 +54,10 @@ func (Program) Policy() ent.Policy {
 
 ### Post-Policy
 
-The failsafe. If no custom rule returned a decision:
+This layer is the failsafe. If no custom rule returned a decision:
 
-* **Queries** are **allowed** by default -- if you got past pre-policy without a deny, you can read
-* **Mutations** are **denied** by default -- if no custom rule explicitly allowed the write, it is blocked
+* **Queries** are **allowed** by default: if you got past pre-policy without a deny, you can read
+* **Mutations** are **denied** by default: if no custom rule explicitly allowed the write, it is blocked
 
 :::warning
 This means a new entity with no custom rules will be readable but not writable. If your mutations are silently failing, check that your schema defines mutation rules.
@@ -71,9 +71,9 @@ Every privacy rule returns one of three values:
 |---|---|
 | `privacy.Allow` | Grant access immediately, stop checking further rules |
 | `privacy.Deny` | Deny access immediately, stop checking further rules |
-| `privacy.Skip` | No opinion -- pass to the next rule in the chain |
+| `privacy.Skip` | No opinion; pass to the next rule in the chain |
 
-The first rule to return `Allow` or `Deny` wins. `Skip` means "I do not have enough information to decide, ask someone else."
+The first rule to return `Allow` or `Deny` wins. A rule returns `Skip` when it does not have enough information to decide, and evaluation passes to the next rule.
 
 ## FGA Relationships
 
@@ -114,7 +114,7 @@ Fine-grained access is managed through groups rather than individual user assign
 group:engineering#member → editor → program:soc2
 ```
 
-This gives all members of the `engineering` group editor access to the `soc2` program. The `blocked` relation can override this -- if a user is both a group member and individually blocked, the block wins.
+This gives all members of the `engineering` group editor access to the `soc2` program. The `blocked` relation can override this: if a user is both a group member and individually blocked, the block wins.
 
 ## Tuple Lifecycle
 
@@ -124,8 +124,8 @@ Tuples are not managed manually. Hooks on entity mutations handle creation and d
 
 When an org-owned entity is created, hooks typically write two tuples:
 
-1. **Creator gets admin** -- `user:creator-id → admin → entity:new-id`
-1. **Org gets parent** -- `organization:org-id → parent → entity:new-id`
+- **Creator gets admin**: `user:creator-id → admin → entity:new-id`
+- **Org gets parent**: `organization:org-id → parent → entity:new-id`
 
 For API token-authenticated requests, the token gets `can_edit` instead of the user getting `admin`.
 
@@ -164,7 +164,7 @@ func (Program) Modules() []models.OrgModule {
 }
 ```
 
-The check uses `OR` logic -- the organization needs *any* of the listed modules, not all of them.
+The check uses `OR` logic: the organization needs *any* of the listed modules, not all of them.
 
 Module gating is skipped for:
 
@@ -175,7 +175,7 @@ Module gating is skipped for:
 
 ## Privacy Tokens
 
-Some operations need to bypass normal authorization. Rather than granting broad access, the system uses _privacy tokens_ -- typed markers in the request context that specific rules check for.
+Some operations need to bypass normal authorization. Rather than granting broad access, the system uses _privacy tokens_: typed markers in the request context that specific rules check for.
 
 | Token | Purpose |
 |---|---|
@@ -204,7 +204,7 @@ The invite token rule runs first. If the context contains an `OrgInviteToken`, t
 
 ## Permission Caching
 
-FGA checks involve network round-trips. To reduce latency, the system caches positive authorization decisions in Redis via `pkg/permissioncache/`:
+FGA checks involve network round-trips. To reduce latency, we cache positive authorization decisions in Redis via `pkg/permissioncache/`:
 
 1. Before querying FGA, check the cache
 1. If cached, return the cached decision
@@ -217,11 +217,11 @@ Cache entries are keyed by `(subject, object, relation)` and have a configurable
 
 When a request returns "not found" or "permission denied" on a record you know exists:
 
-1. **Check the privacy policy** on the entity schema -- does it have the right mutation rules?
-1. **Check the user's context** -- is the organization ID set? Is the user authenticated?
-1. **Check FGA tuples** -- does a tuple exist granting the user access to the specific object?
-1. **Check module gating** -- does the organization have the required feature modules?
-1. **Check the permission cache** -- a recently-revoked permission may still be cached
+- **Check the privacy policy** on the entity schema: does it have the right mutation rules?
+- **Check the user's context**: is the organization ID set? Is the user authenticated?
+- **Check FGA tuples**: does a tuple exist granting the user access to the specific object?
+- **Check module gating**: does the organization have the required feature modules?
+- **Check the permission cache**: a recently-revoked permission may still be cached
 
 :::tip
 For local development, you can inspect FGA tuples directly using the OpenFGA CLI or the built-in FGA playground. The FGA module is defined in `fga/model/fga.mod` in the core repository with corresponding model directories.

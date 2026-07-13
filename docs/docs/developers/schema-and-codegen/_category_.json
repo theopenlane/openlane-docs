@@ -1,0 +1,9 @@
+{
+  "label": "Schema & Codegen",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "developers/schema-and-codegen/graphql-and-codegen"
+  },
+  "collapsed": true
+}

@@ -1,0 +1,76 @@
+---
+title: Organizations
+sidebar_label: Overview
+sidebar_position: 1
+description: The organization is your workspace and tenancy boundary in Openlane
+tags:
+  - organizations
+  - multi-tenant
+  - tenancy
+keywords:
+  - organizations
+  - tenancy
+  - multi-tenant management
+  - organization hierarchy
+  - permission inheritance
+---
+
+import Steps from '@site/src/components/Steps';
+
+# Organizations
+
+Your organization is your workspace in Openlane: your team, your data, your configuration. It is also the tenancy boundary, the construct that keeps your data isolated from every other customer's and determines how access flows to everything inside it. Everything you create in Openlane belongs to exactly one organization.
+
+## Organizations Are Isolated Tenants
+
+An organization is a tenant: an isolated tree of data that nobody can see into without an explicit grant. Access to one organization never implies access to another, and membership in a child organization does not grant anything in the parent. When you sign in, you operate inside one organization at a time, and what you can see and do is defined entirely by your membership and role in that organization.
+
+## Personal Organizations
+
+When you sign up for Openlane, we create a personal organization for you automatically. It exists so that you always have a workspace of your own, even before you create or join a company organization, and it keeps flows like registration, email verification, and invitation acceptance from depending on an organization you don't belong to yet.
+
+Personal organizations are deliberately limited: they cannot have child organizations, they can hold only a limited set of objects, and you are their sole member and owner. Your real work happens in the organizations you create or are invited into.
+
+## Organizations Are Hierarchical
+
+Organizations can have child organizations, which can have their own children; the structure is a tree, not a single level. This is useful when your company has subsidiaries, business units, or regional entities that need their own workspace while remaining under one umbrella.
+
+Two rules govern how access flows through the tree. Access granted on a parent flows down: a grant on a parent organization is inherited by all of its children at the same level of access, matching how most organizations think about oversight. Access granted on a child stays there: it implies nothing about the parent or about sibling organizations.
+
+Inheritance cannot be cut off partway down the tree: a grant on a parent reaches every descendant. If a part of your business must be invisible even to parent-level users, it needs to be a separate top-level organization rather than a child.
+
+## Resources Belong to One Organization
+
+Every resource (a control, a policy, a risk, an asset) is owned by exactly one organization. There is no shared ownership across organizations. Access to individual resources within an organization is then managed through roles and [groups](../groups/overview.mdx), which can grant or restrict access at the object level; see [Authorization](../authorization/overview.mdx) for the full model.
+
+## Managing Your Organization
+
+The pages in this section cover day-to-day administration, mirroring what you'll find under `Organization Settings` in the console:
+
+- [Profile](./profile.mdx): name, display name, description, and avatar
+- [Members and Roles](./members.mdx): inviting people, roles, and how people join automatically
+- [Billing and Subscriptions](./billing.mdx): billing contact, payment methods, and feature modules
+
+Authentication settings (SSO, MFA enforcement, email domains) live under [Authentication](../authentication/overview.mdx).
+
+## Deleting an Organization
+
+:::warning
+Deleting an organization is permanent and cannot be undone. All data, resources, and member associations are deleted with it.
+:::
+
+Only organization Owners can delete an organization.
+
+<Steps>
+
+1. Go to Organization Settings
+2. Navigate to the Danger Zone or Delete section
+3. Click **Delete Organization**
+4. Confirm by typing the organization name
+5. Confirm the deletion
+
+</Steps>
+
+---
+
+*For programmatic access, see the [Organizations GraphQL examples](../../../developers/graphql-examples/organizations.mdx) in the developer docs.*
