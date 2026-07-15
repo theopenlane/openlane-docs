@@ -1385,6 +1385,12 @@ ControlControlStatus is enum for the field status
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>DRAFT</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>PREPARING</td>
 <td>
 
@@ -2202,6 +2208,12 @@ DirectoryMembershipDirectoryMembershipRole is enum for the field role
 <tbody>
 <tr>
 <td>MEMBER</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>MAINTAINER</td>
 <td>
 
 </td>
@@ -7571,6 +7583,12 @@ SubcontrolControlStatus is enum for the field status
 <thead><tr><th>Value</th><th>Description</th></tr></thead>
 <tbody>
 <tr>
+<td>DRAFT</td>
+<td>
+
+</td>
+</tr>
+<tr>
 <td>PREPARING</td>
 <td>
 
@@ -9180,6 +9198,12 @@ Properties by which Vulnerability connections can be ordered.
 </tr>
 <tr>
 <td>severity</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>score</td>
 <td>
 
 </td>
