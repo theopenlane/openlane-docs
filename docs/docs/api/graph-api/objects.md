@@ -88,6 +88,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -1901,6 +1910,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -2310,6 +2328,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -2351,6 +2378,15 @@ systemInternalID<br />
 </td>
 <td>
 <p>an internal identifier for the mapping, this field is only available to system admins</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -2931,6 +2967,186 @@ where<br />
 </tr>
 <tr>
 <td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this assessment has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this assessment has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this assessment (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this assessment across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 accessURL<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -3151,11 +3367,29 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -3484,6 +3718,186 @@ where<br />
 </tr>
 <tr>
 <td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this assessmentResponse has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this assessmentResponse has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this assessmentResponse (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this assessmentResponse across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 questionnaireTransformError<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -3682,6 +4096,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -4604,6 +5027,78 @@ where<br />
 </tr>
 <tr>
 <td>
+systemDetails<br />
+<a href="objects#systemdetailconnection"><code>SystemDetailConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#systemdetailorder"><code>[SystemDetailOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#systemdetailwhereinput"><code>SystemDetailWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 outOfScopePlatforms<br />
 <a href="objects#platformconnection"><code>PlatformConnection!</code></a>
 </td>
@@ -4955,6 +5450,294 @@ where<br />
 </td>
 <td>
 <p>Filtering options for InternalPolicies returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+findings<br />
+<a href="objects#findingconnection"><code>FindingConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#findingorder"><code>[FindingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Findings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#findingwhereinput"><code>FindingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Findings returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilities<br />
+<a href="objects#vulnerabilityconnection"><code>VulnerabilityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vulnerabilityorder"><code>[VulnerabilityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vulnerabilitywhereinput"><code>VulnerabilityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+reviews<br />
+<a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#revieworder"><code>[ReviewOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#reviewwhereinput"><code>ReviewWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+remediations<br />
+<a href="objects#remediationconnection"><code>RemediationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#remediationorder"><code>[RemediationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#remediationwhereinput"><code>RemediationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Remediations returned from the connection.</p>
 </td>
 </tr>
 </tbody>
@@ -5426,6 +6209,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -6988,6 +7780,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -7007,7 +7808,7 @@ workflowEligibleMarker<br />
 <tr>
 <td>
 campaignID<br />
-<a href="scalars#id"><code>ID!</code></a>
+<a href="scalars#id"><code>ID</code></a>
 </td>
 <td>
 <p>the campaign this target belongs to</p>
@@ -7115,7 +7916,7 @@ owner<br />
 <tr>
 <td>
 campaign<br />
-<a href="objects#campaign"><code>Campaign!</code></a>
+<a href="objects#campaign"><code>Campaign</code></a>
 </td>
 <td>
 
@@ -7609,6 +8410,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -8333,6 +9143,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -9093,6 +9912,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -10888,6 +11716,78 @@ where<br />
 </tr>
 <tr>
 <td>
+vulnerabilities<br />
+<a href="objects#vulnerabilityconnection"><code>VulnerabilityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vulnerabilityorder"><code>[VulnerabilityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vulnerabilitywhereinput"><code>VulnerabilityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 assets<br />
 <a href="objects#assetconnection"><code>AssetConnection!</code></a>
 </td>
@@ -12351,6 +13251,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -13299,6 +14208,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -14896,6 +15814,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -15313,6 +16240,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -16350,6 +17286,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -17311,6 +18256,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -18065,6 +19019,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -18689,6 +19652,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -19330,6 +20302,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -19693,6 +20674,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -20156,6 +21146,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -20691,6 +21690,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -21734,6 +22742,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -21964,6 +22981,15 @@ domains<br />
 </td>
 <td>
 <p>domains associated with the entity</p>
+</td>
+</tr>
+<tr>
+<td>
+aliases<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>common matching names that should match with the entity</p>
 </td>
 </tr>
 <tr>
@@ -22850,6 +23876,78 @@ where<br />
 </tr>
 <tr>
 <td>
+systemDetails<br />
+<a href="objects#systemdetailconnection"><code>SystemDetailConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#systemdetailorder"><code>[SystemDetailOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#systemdetailwhereinput"><code>SystemDetailWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 scans<br />
 <a href="objects#scanconnection"><code>ScanConnection!</code></a>
 </td>
@@ -23642,6 +24740,294 @@ where<br />
 </tr>
 <tr>
 <td>
+findings<br />
+<a href="objects#findingconnection"><code>FindingConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#findingorder"><code>[FindingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Findings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#findingwhereinput"><code>FindingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Findings returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilities<br />
+<a href="objects#vulnerabilityconnection"><code>VulnerabilityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vulnerabilityorder"><code>[VulnerabilityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vulnerabilitywhereinput"><code>VulnerabilityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+reviews<br />
+<a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#revieworder"><code>[ReviewOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#reviewwhereinput"><code>ReviewWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+remediations<br />
+<a href="objects#remediationconnection"><code>RemediationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#remediationorder"><code>[RemediationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#remediationwhereinput"><code>RemediationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 platforms<br />
 <a href="objects#platformconnection"><code>PlatformConnection!</code></a>
 </td>
@@ -24206,6 +25592,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -25841,6 +27236,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -27252,6 +28656,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 requestorID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -27744,6 +29157,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -28675,6 +30097,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -28698,6 +30129,60 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>who reviewed the finding when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedByUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id that reviewed the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedByGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group id that reviewed the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedTo<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>who the finding is assigned to when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedToUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id assigned to the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedToGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group id assigned to the finding</p>
 </td>
 </tr>
 <tr>
@@ -28779,6 +30264,15 @@ findingStatusID<br />
 </td>
 <td>
 <p>the status of the finding</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -29264,6 +30758,42 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewedByUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewedByGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignedToUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignedToGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -30734,6 +32264,114 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this finding has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this finding has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this finding (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this finding across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -30922,6 +32560,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -31337,6 +32984,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -35446,6 +37102,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 role<br />
 <a href="enums#groupmembershiprole"><code>GroupMembershipRole!</code></a>
 </td>
@@ -35978,6 +37643,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 visibility<br />
 <a href="enums#groupsettingvisibility"><code>GroupSettingVisibility!</code></a>
 </td>
@@ -36332,6 +38006,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -36948,6 +38631,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -39064,6 +40756,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -40921,6 +42622,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -43081,6 +44791,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 requestorID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -43149,6 +44868,15 @@ ownershipTransfer<br />
 </td>
 <td>
 <p>indicates if this invitation is for transferring organization ownership - when accepted, current owner becomes super admin and invitee becomes owner</p>
+</td>
+</tr>
+<tr>
+<td>
+ssoExempt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>when accepted, grants the member an SSO exemption so they are not redirected through the organization&#39;s SSO login flow</p>
 </td>
 </tr>
 <tr>
@@ -43589,6 +45317,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 ownerID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -43877,6 +45614,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -44242,6 +45988,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -44503,6 +46258,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -44879,6 +46643,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -45355,6 +47128,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -45733,6 +47515,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -46538,6 +48329,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -47419,6 +49219,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -47574,6 +49383,15 @@ risk<br />
 <td>
 internalPolicy<br />
 <a href="objects#internalpolicy"><code>InternalPolicy</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+review<br />
+<a href="objects#review"><code>Review</code></a>
 </td>
 <td>
 
@@ -47903,6 +49721,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -48176,6 +50003,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -48684,6 +50520,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -49452,6 +51297,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -49529,6 +51383,15 @@ stripeCustomerID<br />
 </td>
 <td>
 <p>the stripe customer ID this organization is associated to</p>
+</td>
+</tr>
+<tr>
+<td>
+slugName<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>a stable slug identifying the organization in its public SSO initiation URL, e.g. /orgs/<sso_slug>/sso</p>
 </td>
 </tr>
 <tr>
@@ -61138,6 +63001,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -61232,7 +63104,7 @@ allowedEmailDomains<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
-<p>domains allowed to access the organization, if empty all domains are allowed</p>
+<p>domains allowed to access the organization via autojoin</p>
 </td>
 </tr>
 <tr>
@@ -61345,11 +63217,47 @@ identityProviderLoginEnforced<br />
 </tr>
 <tr>
 <td>
+identityProviderJitProvisioning<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>when SSO login is enforced, automatically provision organization membership for users who successfully authenticate against the configured identity provider</p>
+</td>
+</tr>
+<tr>
+<td>
+jitAllowedEmailDomains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>when set, restricts just-in-time provisioning to users whose authenticated email domain is in this list; when empty, any user who authenticates against the identity provider is provisioned</p>
+</td>
+</tr>
+<tr>
+<td>
 multifactorAuthEnforced<br />
 <a href="scalars#boolean"><code>Boolean</code></a>
 </td>
 <td>
 <p>enforce 2fa / multifactor authentication for organization members</p>
+</td>
+</tr>
+<tr>
+<td>
+ssoExemptDomains<br />
+<a href="scalars#string"><code>[String!]</code></a>
+</td>
+<td>
+<p>email domains whose existing members skip the SSO redirect even when SSO is enforced; TFA enforcement still applies</p>
+</td>
+</tr>
+<tr>
+<td>
+allowSupportAccess<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>allow Openlane support to access this organization without a directory account</p>
 </td>
 </tr>
 <tr>
@@ -61796,6 +63704,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 role<br />
 <a href="enums#orgmembershiprole"><code>OrgMembershipRole!</code></a>
 </td>
@@ -61819,6 +63736,42 @@ userID<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+ssoExempt<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>member is exempt from the SSO login redirect for this organization; TFA enforcement still applies. Who may set this is gated by the org membership mutation policy</p>
+</td>
+</tr>
+<tr>
+<td>
+ssoExemptReason<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>reason the member was granted an SSO exemption</p>
+</td>
+</tr>
+<tr>
+<td>
+ssoExemptGrantedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>id of the user that granted the SSO exemption; stamped server-side, not settable via the API</p>
+</td>
+</tr>
+<tr>
+<td>
+ssoExemptGrantedAt<br />
+<a href="scalars#datetime"><code>DateTime</code></a>
+</td>
+<td>
+<p>when the SSO exemption was granted; stamped server-side, not settable via the API</p>
 </td>
 </tr>
 <tr>
@@ -62205,6 +64158,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -62542,6 +64504,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -63017,6 +64988,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -65658,10 +67638,73 @@ platformOwner<br />
 </tr>
 <tr>
 <td>
-systemDetail<br />
-<a href="objects#systemdetail"><code>SystemDetail</code></a>
+systemDetails<br />
+<a href="objects#systemdetailconnection"><code>SystemDetailConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#systemdetailorder"><code>[SystemDetailOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#systemdetailwhereinput"><code>SystemDetailWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -66037,6 +68080,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -67674,6 +69726,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -68943,10 +71004,361 @@ where<br />
 </tr>
 <tr>
 <td>
-systemDetail<br />
-<a href="objects#systemdetail"><code>SystemDetail</code></a>
+systemDetails<br />
+<a href="objects#systemdetailconnection"><code>SystemDetailConnection!</code></a>
 </td>
 <td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#systemdetailorder"><code>[SystemDetailOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#systemdetailwhereinput"><code>SystemDetailWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for SystemDetails returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+findings<br />
+<a href="objects#findingconnection"><code>FindingConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#findingorder"><code>[FindingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Findings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#findingwhereinput"><code>FindingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Findings returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilities<br />
+<a href="objects#vulnerabilityconnection"><code>VulnerabilityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vulnerabilityorder"><code>[VulnerabilityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vulnerabilitywhereinput"><code>VulnerabilityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+reviews<br />
+<a href="objects#reviewconnection"><code>ReviewConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#revieworder"><code>[ReviewOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#reviewwhereinput"><code>ReviewWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Reviews returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+remediations<br />
+<a href="objects#remediationconnection"><code>RemediationConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#remediationorder"><code>[RemediationOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#remediationwhereinput"><code>RemediationWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Remediations returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 </td>
 </tr>
@@ -69363,6 +71775,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -69818,6 +72239,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -69904,6 +72334,15 @@ scopeID<br />
 </td>
 <td>
 <p>the scope of the remediation</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -71337,6 +73776,186 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this remediation has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this remediation has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this remediation (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this remediation across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -71618,6 +74237,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -73417,6 +76045,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -73512,6 +76149,15 @@ scopeID<br />
 </td>
 <td>
 <p>the scope of the risk</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -75098,6 +77744,330 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+vulnerabilities<br />
+<a href="objects#vulnerabilityconnection"><code>VulnerabilityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vulnerabilityorder"><code>[VulnerabilityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vulnerabilitywhereinput"><code>VulnerabilityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+findings<br />
+<a href="objects#findingconnection"><code>FindingConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#findingorder"><code>[FindingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Findings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#findingwhereinput"><code>FindingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Findings returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this risk has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this risk has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this risk (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this risk across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -75383,6 +78353,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -75581,7 +78560,7 @@ generatedByPlatformID<br />
 </tr>
 <tr>
 <td>
-vulnerabilityIds<br />
+discoveredVulnerabilityIds<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
 <td>
@@ -76598,6 +79577,78 @@ where<br />
 </tr>
 <tr>
 <td>
+findings<br />
+<a href="objects#findingconnection"><code>FindingConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#findingorder"><code>[FindingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Findings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#findingwhereinput"><code>FindingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Findings returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 generatedByPlatform<br />
 <a href="objects#platform"><code>Platform</code></a>
 </td>
@@ -76904,6 +79955,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -77400,6 +80460,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -78187,6 +81256,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -78664,6 +81742,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -79364,6 +82451,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -81159,6 +84255,150 @@ where<br />
 </tr>
 <tr>
 <td>
+vulnerabilities<br />
+<a href="objects#vulnerabilityconnection"><code>VulnerabilityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#vulnerabilityorder"><code>[VulnerabilityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#vulnerabilitywhereinput"><code>VulnerabilityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Vulnerabilities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+findings<br />
+<a href="objects#findingconnection"><code>FindingConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#findingorder"><code>[FindingOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Findings returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#findingwhereinput"><code>FindingWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Findings returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
 relatedControls<br />
 <a href="objects#controlinfo"><code>[ControlInfo!]</code></a>
 </td>
@@ -81576,6 +84816,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -82106,6 +85355,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -82608,6 +85866,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -82631,24 +85898,6 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
-</td>
-</tr>
-<tr>
-<td>
-programID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>optional program anchor for this system detail</p>
-</td>
-</tr>
-<tr>
-<td>
-platformID<br />
-<a href="scalars#id"><code>ID</code></a>
-</td>
-<td>
-<p>optional platform anchor for this system detail</p>
 </td>
 </tr>
 <tr>
@@ -82734,20 +85983,290 @@ owner<br />
 </tr>
 <tr>
 <td>
-program<br />
-<a href="objects#program"><code>Program</code></a>
+programs<br />
+<a href="objects#programconnection"><code>ProgramConnection!</code></a>
 </td>
 <td>
-<p>optional program this detail belongs to</p>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
 </td>
 </tr>
 <tr>
 <td>
-platform<br />
-<a href="objects#platform"><code>Platform</code></a>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
 </td>
 <td>
-<p>optional platform this detail belongs to</p>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#programorder"><code>[ProgramOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Programs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#programwhereinput"><code>ProgramWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Programs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+platforms<br />
+<a href="objects#platformconnection"><code>PlatformConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#platformorder"><code>[PlatformOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#platformwhereinput"><code>PlatformWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Platforms returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+entities<br />
+<a href="objects#entityconnection"><code>EntityConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#entityorder"><code>[EntityOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Entities returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#entitywhereinput"><code>EntityWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Entities returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+assets<br />
+<a href="objects#assetconnection"><code>AssetConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#assetorder"><code>[AssetOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for Assets returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#assetwhereinput"><code>AssetWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for Assets returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 </td>
 </tr>
 </tbody>
@@ -83031,6 +86550,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -83339,6 +86867,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -83416,6 +86953,15 @@ scopeID<br />
 </td>
 <td>
 <p>the scope of the task</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -84912,6 +88458,114 @@ tasks<br />
 
 </td>
 </tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this task has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this task has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this task (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this task across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -85193,6 +88847,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -86133,6 +89796,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 verified<br />
 <a href="scalars#boolean"><code>Boolean!</code></a>
 </td>
@@ -86373,6 +90045,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -87539,6 +91220,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -88088,6 +91778,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -88714,6 +92413,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 logoFileID<br />
 <a href="scalars#id"><code>ID</code></a>
 </td>
@@ -89140,6 +92848,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -89669,6 +93386,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -90337,6 +94063,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 trustCenterID<br />
 <a href="scalars#string"><code>String</code></a>
 </td>
@@ -90540,6 +94275,15 @@ ndaApprovalRequired<br />
 </td>
 <td>
 <p>whether NDA requests require approval before being processed</p>
+</td>
+</tr>
+<tr>
+<td>
+allowSubscribers<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>whether the trust center accepts new subscriber registrations; when false, subscriber creation for the trust center is blocked</p>
 </td>
 </tr>
 <tr>
@@ -90970,6 +94714,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -91490,6 +95243,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -93791,6 +97553,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -94196,6 +97967,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -94654,6 +98434,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -95063,6 +98852,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -95086,6 +98884,60 @@ ownerID<br />
 </td>
 <td>
 <p>the ID of the organization owner of the object</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedBy<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>who reviewed the vulnerability when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedByUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id that reviewed the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+reviewedByGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group id that reviewed the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedTo<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>who the vulnerability is assigned to when no user or group is linked</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedToUserID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the user id assigned to the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+assignedToGroupID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>the group id assigned to the vulnerability</p>
 </td>
 </tr>
 <tr>
@@ -95167,6 +99019,15 @@ vulnerabilityStatusID<br />
 </td>
 <td>
 <p>the status of the vulnerability</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowEligibleMarker<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+<p>internal marker field for workflow eligibility, not exposed in API</p>
 </td>
 </tr>
 <tr>
@@ -95769,6 +99630,42 @@ where<br />
 </tr>
 </tbody>
 </table>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewedByUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+reviewedByGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignedToUser<br />
+<a href="objects#user"><code>User</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+assignedToGroup<br />
+<a href="objects#group"><code>Group</code></a>
+</td>
+<td>
 
 </td>
 </tr>
@@ -96879,6 +100776,186 @@ where<br />
 
 </td>
 </tr>
+<tr>
+<td>
+workflowObjectRefs<br />
+<a href="objects#workflowobjectrefconnection"><code>WorkflowObjectRefConnection!</code></a>
+</td>
+<td>
+
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come after the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the first <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+<p>Returns the elements in the list that come before the specified cursor.</p>
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+<p>Returns the last <em>n</em> elements from the list.</p>
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workflowobjectreforder"><code>[WorkflowObjectRefOrder!]</code></a>
+</td>
+<td>
+<p>Ordering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workflowobjectrefwhereinput"><code>WorkflowObjectRefWhereInput</code></a>
+</td>
+<td>
+<p>Filtering options for WorkflowObjectRefs returned from the connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+hasPendingWorkflow<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this vulnerability has pending changes awaiting workflow approval</p>
+</td>
+</tr>
+<tr>
+<td>
+hasWorkflowHistory<br />
+<a href="scalars#boolean"><code>Boolean!</code></a>
+</td>
+<td>
+<p>Indicates if this vulnerability has any workflow history (completed or failed instances)</p>
+</td>
+</tr>
+<tr>
+<td>
+activeWorkflowInstances<br />
+<a href="objects#workflowinstance"><code>[WorkflowInstance!]!</code></a>
+</td>
+<td>
+<p>Returns active workflow instances for this vulnerability (RUNNING or PAUSED)</p>
+</td>
+</tr>
+<tr>
+<td>
+workflowTimeline<br />
+<a href="objects#workfloweventconnection"><code>WorkflowEventConnection!</code></a>
+</td>
+<td>
+<p>Returns the workflow event timeline for this vulnerability across all workflow instances</p>
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+after<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+first<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+before<br />
+<a href="scalars#cursor"><code>Cursor</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+last<br />
+<a href="scalars#int"><code>Int</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+orderBy<br />
+<a href="inputObjects#workfloweventorder"><code>[WorkflowEventOrder!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+where<br />
+<a href="inputObjects#workfloweventwhereinput"><code>WorkflowEventWhereInput</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+includeEmitFailures<br />
+<a href="scalars#boolean"><code>Boolean</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -97468,6 +101545,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -97581,6 +101667,15 @@ invalidationMetadata<br />
 </td>
 <td>
 <p>structured invalidation metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+outcomeMetadata<br />
+<a href="scalars#assignmentoutcome"><code>AssignmentOutcome</code></a>
+</td>
+<td>
+<p>consolidated terminal outcome metadata discriminated by decision (supersedes approval/rejection/invalidation metadata)</p>
 </td>
 </tr>
 <tr>
@@ -97931,6 +102026,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -98165,6 +102269,15 @@ updatedBy<br />
 </td>
 <td>
 
+</td>
+</tr>
+<tr>
+<td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
 </td>
 </tr>
 <tr>
@@ -99058,6 +103171,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -99365,6 +103487,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -99545,6 +103676,78 @@ platformID<br />
 </tr>
 <tr>
 <td>
+assessmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the assessment this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the assessment response this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+findingID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the finding this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+integrationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the integration this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+remediationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the remediation this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+riskID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the risk this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+taskID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the task this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+vulnerabilityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>ID of the vulnerability this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -99649,6 +103852,78 @@ platform<br />
 </td>
 <td>
 <p>Platform this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+assessment<br />
+<a href="objects#assessment"><code>Assessment</code></a>
+</td>
+<td>
+<p>Assessment this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponse<br />
+<a href="objects#assessmentresponse"><code>AssessmentResponse</code></a>
+</td>
+<td>
+<p>Assessment response this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+finding<br />
+<a href="objects#finding"><code>Finding</code></a>
+</td>
+<td>
+<p>Finding this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+integration<br />
+<a href="objects#integration"><code>Integration</code></a>
+</td>
+<td>
+<p>Integration this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+remediation<br />
+<a href="objects#remediation"><code>Remediation</code></a>
+</td>
+<td>
+<p>Remediation this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+risk<br />
+<a href="objects#risk"><code>Risk</code></a>
+</td>
+<td>
+<p>Risk this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+task<br />
+<a href="objects#task"><code>Task</code></a>
+</td>
+<td>
+<p>Task this workflow instance is associated with</p>
+</td>
+</tr>
+<tr>
+<td>
+vulnerability<br />
+<a href="objects#vulnerability"><code>Vulnerability</code></a>
+</td>
+<td>
+<p>Vulnerability this workflow instance is associated with</p>
 </td>
 </tr>
 <tr>
@@ -100153,6 +104428,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 displayID<br />
 <a href="scalars#string"><code>String!</code></a>
 </td>
@@ -100315,6 +104599,51 @@ platformID<br />
 </tr>
 <tr>
 <td>
+vulnerabilityID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Vulnerability referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+riskID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Risk referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Assessment referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponseID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Assessment response referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+remediationID<br />
+<a href="scalars#id"><code>ID</code></a>
+</td>
+<td>
+<p>Remediation referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
 owner<br />
 <a href="objects#organization"><code>Organization</code></a>
 </td>
@@ -100464,6 +104793,51 @@ platform<br />
 </td>
 <td>
 <p>Platform referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+vulnerability<br />
+<a href="objects#vulnerability"><code>Vulnerability</code></a>
+</td>
+<td>
+<p>Vulnerability referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+risk<br />
+<a href="objects#risk"><code>Risk</code></a>
+</td>
+<td>
+<p>Risk referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+assessment<br />
+<a href="objects#assessment"><code>Assessment</code></a>
+</td>
+<td>
+<p>Assessment referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+assessmentResponse<br />
+<a href="objects#assessmentresponse"><code>AssessmentResponse</code></a>
+</td>
+<td>
+<p>Assessment response referenced by this workflow instance</p>
+</td>
+</tr>
+<tr>
+<td>
+remediation<br />
+<a href="objects#remediation"><code>Remediation</code></a>
+</td>
+<td>
+<p>Remediation referenced by this workflow instance</p>
 </td>
 </tr>
 </tbody>
@@ -100664,6 +105038,15 @@ updatedBy<br />
 </tr>
 <tr>
 <td>
+updatedByImpersonator<br />
+<a href="scalars#string"><code>String</code></a>
+</td>
+<td>
+<p>the real user acting through an impersonation session when the record was last mutated, if any</p>
+</td>
+</tr>
+<tr>
+<td>
 tags<br />
 <a href="scalars#string"><code>[String!]</code></a>
 </td>
@@ -100723,6 +105106,15 @@ changes<br />
 </td>
 <td>
 <p>Staged field updates for this domain; applied only after approval</p>
+</td>
+</tr>
+<tr>
+<td>
+proposedChanges<br />
+<a href="scalars#workflowproposedchanges"><code>WorkflowProposedChanges</code></a>
+</td>
+<td>
+<p>Staged field updates as opaque JSON; preferred over changes field</p>
 </td>
 </tr>
 <tr>
