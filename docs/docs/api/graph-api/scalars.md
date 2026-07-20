@@ -29,6 +29,10 @@ The `AssessmentMethod` scalar type represents methods that can be used during th
 
 The `AssessmentObjective` scalar type represents objectives that are validated during the audit to ensure the control is implemented
 
+## AssignmentOutcome
+
+AssignmentOutcome captures consolidated terminal outcome metadata for a workflow assignment, discriminated by decision.
+
 ## Boolean
 
 The `Boolean` scalar type represents `true` or `false`.
@@ -176,4 +180,8 @@ WorkflowEventPayload stores payloads emitted by workflow events and actions.
 ## WorkflowInstanceContext
 
 WorkflowInstanceContext contains runtime context for a workflow instance including assignments and object info.
+
+## WorkflowProposedChanges
+
+WorkflowProposedChanges captures staged field updates as opaque JSON for workflow proposals.
 
