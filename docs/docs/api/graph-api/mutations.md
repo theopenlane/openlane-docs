@@ -6853,6 +6853,29 @@ ids<br />
 </tbody>
 </table>
 
+## deleteBulkFindingControl
+
+**Type:** [FindingControlBulkDeletePayload!](objects#findingcontrolbulkdeletepayload)
+
+Delete multiple findingControls
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+ids<br />
+<a href="scalars#id"><code>[ID!]!</code></a>
+</td>
+<td>
+<p>IDs of the findingControls to delete</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## deleteBulkGroup
 
 **Type:** [GroupBulkDeletePayload!](objects#groupbulkdeletepayload)
@@ -15163,6 +15186,56 @@ reviewFiles<br />
 <tr>
 <td>
 reviewFilesMetadata<br />
+<a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## updateReviewComment
+
+**Type:** [ReviewUpdatePayload!](objects#reviewupdatepayload)
+
+Update an existing review comment
+
+<p style={{ marginBottom: "0.4em" }}><strong>Arguments</strong></p>
+
+<table>
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr>
+<td>
+id<br />
+<a href="scalars#id"><code>ID!</code></a>
+</td>
+<td>
+<p>ID of the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+input<br />
+<a href="inputObjects#updatenoteinput"><code>UpdateNoteInput!</code></a>
+</td>
+<td>
+<p>New values for the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+noteFiles<br />
+<a href="scalars#upload"><code>[Upload!]</code></a>
+</td>
+<td>
+<p>Files to attach to the comment</p>
+</td>
+</tr>
+<tr>
+<td>
+noteFilesMetadata<br />
 <a href="inputObjects#filemetadatainput"><code>[FileMetadataInput!]</code></a>
 </td>
 <td>
