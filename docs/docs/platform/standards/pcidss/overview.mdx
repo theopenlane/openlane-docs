@@ -26,19 +26,18 @@ tags:
 ---
 
 import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
 
-# PCI-DSS (Payment Card Industry Data Security Standard)
+# Payment Card Industry Data Security Standard (PCI-DSS)
 
-PCI-DSS is the security standard for anyone who touches payment card data. It's maintained by the PCI Security Standards Council (founded by Visa, Mastercard, American Express, Discover, and JCB) and enforced contractually through the card brands and your acquiring bank rather than by a government. The current version is 4.0.1, published in June 2024 and the only active version since January 1, 2025.
-
-If you accept cards, PCI-DSS isn't optional. The only real question is how much of it lands on you, and that depends almost entirely on how much cardholder data your systems actually see.
+The Payment Card Industry Data Security Standard (PCI-DSS) is the security standard for anyone who touches payment card data, enforced contractually through the card brands and your acquiring bank rather than by a government. Every organization that accepts payment cards carries PCI-DSS obligations; the applicable requirement set depends on how much cardholder data your systems store, process, or transmit.
 
 <StandardMeta
   fullName={"Payment Card Industry Data Security Standard"}
   type={"Attestation standard (contractually mandated)"}
   source={"PCI DSS v4.0.1, PCI Security Standards Council"}
   established={"2004; current version 4.0.1 (2024)"}
-  managedBy={"PCI Security Standards Council"}
+  managedBy={"PCI Security Standards Council (founded by Visa, Mastercard, American Express, Discover, and JCB)"}
   appliesTo={"Anyone storing, processing, or transmitting cardholder data"}
   certification={"Yes: QSA assessment (ROC and AOC) or SAQ self-attestation, depending on level"}
 />
@@ -85,7 +84,7 @@ Which SAQ you fill out depends on how you accept payments: SAQ A for fully outso
 
 Every requirement can be met through one of two paths. The **defined approach** implements the requirement as written. The **customized approach** meets the requirement's stated security objective with alternative controls, validated by an assessor and supported by a targeted risk analysis demonstrating equivalent protection. The standard also requires documented roles and responsibilities for the activities under each of the twelve requirements, and all requirements are fully in effect (the last future-dated set became mandatory on March 31, 2025).
 
-Notable current provisions: the 30-day patching window applies specifically to critical vulnerabilities, certain MFA requirements do not apply to accounts authenticating with phishing-resistant factors, and e-commerce payment pages carry script integrity and management requirements.
+Notable current provisions: the 30-day patching window applies specifically to critical vulnerabilities, certain multi-factor authentication (MFA) requirements do not apply to accounts authenticating with phishing-resistant factors, and e-commerce payment pages carry script integrity and management requirements.
 
 ## Targeted Risk Analysis
 

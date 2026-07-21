@@ -1,0 +1,113 @@
+---
+title: "CC2.1"
+description: "Uses relevant quality information"
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC2.1
+
+<ControlMeta
+  refCode={"CC2.1"}
+  name={"Uses relevant quality information"}
+  category={"Security"}
+  subcategory={"Communication and Information"}
+  description={"The entity obtains or generates and uses relevant, quality information to support the functioning of internal control. (COSO Principle 13)"}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Identifies Information Requirements</summary>
+
+A process is in place to identify the information required and expected to support the functioning of the other components of internal control and the achievement of the entity's objectives.
+
+</details>
+
+<details>
+<summary>Captures Internal and External Sources of Data</summary>
+
+Information systems capture internal and external sources of data.
+
+</details>
+
+<details>
+<summary>Processes Relevant Data Into Information</summary>
+
+Information systems process and transform relevant data into information.
+
+</details>
+
+<details>
+<summary>Maintains Quality Throughout Processing</summary>
+
+Information systems produce information that is timely, current, accurate, complete, accessible, protected, verifiable, and retained. Information is reviewed to assess its relevance in supporting the internal control components.
+
+</details>
+
+<details>
+<summary>Documents Data Flow</summary>
+
+The entity documents and uses internal and external information and data flows to support the design and operation of controls.
+
+</details>
+
+<details>
+<summary>Manages Assets</summary>
+
+The entity identifies, documents, and maintains records of system components such as infrastructure, software, and other information assets. Information assets include physical endpoint devices and systems, virtual systems, data and data flows, external information systems, and organizational roles.
+
+</details>
+
+<details>
+<summary>Classifies Information</summary>
+
+The entity classifies information by its relevant characteristics (for example, personally identifiable information, confidential customer information, and intellectual property) to support identification of threats to the information and the design and operation of controls.
+
+</details>
+
+<details>
+<summary>Uses Information That Is Complete and Accurate</summary>
+
+The entity uses information and reports that are complete, accurate, current, and valid in the operation of controls.
+
+</details>
+
+<details>
+<summary>Manages the Location of Assets</summary>
+
+The entity identifies, documents, and maintains records of physical location and custody of information assets, particularly for those stored outside the physical security control of the entity (for example, software and data stored on vendor devices or employee mobile phones under a bring-yourown-device policy).
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Data Protection | Network Diagram - Global System View (GSV) | Documented evidence of a high-level network diagram that provides a conceptual, logical depiction of the network(s) to describe the interconnections of the systems/applications/services, including internal and external interfaces. |
+| Data Protection | Network Diagram - Low Level | Documented evidence of a low-level network diagram that provides a detailed, logical depiction of assets on the network(s). |
+| Data Protection | Data Flow Diagram (DFD) | Documented evidence of a Data Flow Diagram (DFD) that accurately identifies where sensitive/regulated data is stored, transmitted and/or processed. |
+| Cryptographic Protections | Cryptographic Protections | Documented evidence of organization-approved cryptographic solutions and modules for both data at rest and in transit. |
+| Data Protection | Data Handling Practices | Documented evidence of an organization-specific data handling practices (e.g., guidance specific the data classification scheme). |
+| Data Protection | Assigned Responsibilities | Documented evidence of data stewardship being assigned and communicated to individuals entrusted with sensitive and/or regulated data. |
+| Data Protection | Data Classification Scheme | Documented evidence of an organization-specific data classification scheme. |
+| Third-Party Management | Service Level Agreements (SLAs) | Documented evidence of third-party Service Level Agreements (SLAs) to support business operations. |
+
+## Example Organization Controls
+
+- **CC2.1.1** - Information security policies and procedures are documented for supporting the functioning of controls and processes and made available to personnel through the company intranet.
+- **CC2.1.2** - Data flow diagrams, process flowcharts, narratives and procedures manuals are documented and maintained by management to identify the relevant internal and external information sources of the system.
+- **CC2.1.3** - Logging and monitoring software is configured to collect events and alert personnel upon detection of unusual system activity.
+- **CC2.1.4** - The customer portal is configured to allow customers to submit support requests and report incidents.
+
+## Example Control Objectives
+
+- **Information and communication quality** - Relevant information is identified, captured, and communicated to internal and external parties to support the functioning of internal controls.
+
+## Example Evidence
+
+- **Notion Policy Library** - Screenshot of the policy library in Notion demonstrating policies are documented and available to all personnel
+- **System Data Flow Diagrams** - Data flow diagrams and narratives identifying internal and external information sources of the system
+- **GCP Log-Based Alerting Configuration** - Cloud Monitoring alert policies showing events are collected and personnel are alerted on unusual system activity
+- **Customer Support Portal Configuration** - Screenshots of the customer portal showing customers can submit support requests and report problems, issues, and incidents

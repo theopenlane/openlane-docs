@@ -1,0 +1,90 @@
+---
+title: "CC6.8"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC6.8
+
+<ControlMeta
+  refCode={"CC6.8"}
+  category={"Security"}
+  subcategory={"Logical and Physical Access Controls"}
+  description={"The entity implements controls to prevent or detect and act upon the introduction of unauthorized or malicious software to meet the entity’s objectives."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Restricts Installation and Modification of Application and Software</summary>
+
+The ability to install and modify applications and software is restricted to authorized individuals. Utility software capable of bypassing normal operating or security procedures is limited to use by authorized individuals and is monitored regularly.
+
+</details>
+
+<details>
+<summary>Detects Unauthorized Changes to Software and Configuration Parameters</summary>
+
+Processes are in place to detect changes to software and configuration parameters that may be indicative of unauthorized or malicious software.
+
+</details>
+
+<details>
+<summary>Uses a Defined Change Control Process</summary>
+
+A management-defined change control process is used for the implementation of software.
+
+</details>
+
+<details>
+<summary>Uses Antivirus and Anti-Malware Software</summary>
+
+Antivirus and anti-malware software on servers and endpoint devices is configured, implemented and maintained to provide for the interception or detection and remediation of malware.
+
+</details>
+
+<details>
+<summary>Scans Information Assets From Outside the Entity for Malware and Other Unauthorized Software</summary>
+
+Procedures are in place to scan information assets that have been transferred or returned to the entity's custody for malware and other unauthorized software. Detected malware or other software is removed prior to connection to the entity's network.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Change Management | Charter - Change Control Board (CCB) | Documented evidence of the organization's Change Control Board (CCB) charter and mission to govern the organization's change control processes. |
+| Event Log Monitoring | Integrity Monitoring | Documented evidence of integrity monitoring, where files and/or configurations on critical systems, applications and/or services are actively monitored for changes that could indicate unauthorized changes. |
+| Endpoint Security | Endpoint Security Tools | Documented evidence of endpoint security tools employed by the organization to ensure secure and compliant systems, applications and processes (e.g., antimalware, file integrity monitoring (FIM), etc.). |
+| Event Log Monitoring | Malware Activity | Documented evidence of malware activity being logged and included as part of the centralized event log collection and review/analysis process. |
+| Network Security | Internal Boundaries | Documented evidence of key internal boundaries. |
+
+## Example Organization Controls
+
+- **CC6.8.1** - Endpoint protection and vulnerability scanning tools are deployed across systems.
+- **CC6.8.2** - Container images are scanned for vulnerabilities using Trivy before deployment.
+
+## Example Control Objectives
+
+- **Malware prevention** - Systems are protected from malicious software through preventive and detective controls.
+
+## Example Control Implementations
+
+- **vulnerability-scanning** - Continuous vulnerability scanning is implemented across the software supply chain. Implementation includes: - Dependabot and Renovate scan dependencies for vulnerabilities - Trivy scans container images before deployment - SonarQube performs static code analysis on every PR - Critical vulnerabilities addressed within 7 days per software development lifecycle (SDLC) Policy - High vulnerabilities addressed within 30 days - Annual third-party penetration testing
+
+## Example Evidence
+
+- **Endpoint Protection Deployment Report** - Deployment report showing endpoint protection and vulnerability scanning tools are active across systems
+- **Container Image Scan Results** - Trivy scan results showing container images are scanned for vulnerabilities before deployment
+
+## Example Action Plans
+
+- **Endpoint management solution** - Employee endpoints currently lack centralized management. Evaluate and implement a mobile device management (MDM) solution (Kandji or Jamf) to enforce security baselines.
+- **Dependency vulnerability remediation** - Renovate and Dependabot have identified vulnerabilities requiring remediation within service level agreement (SLA) timeframes.
+
+## Example Remediations
+
+- **auth-service-cve-remediation** - Update authentication service dependencies to patch CVE-2024-12345 privilege escalation vulnerability.

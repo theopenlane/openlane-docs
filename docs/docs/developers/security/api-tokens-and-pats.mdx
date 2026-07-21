@@ -18,6 +18,8 @@ tags:
   - api
   - authentication
   - tokens
+compliance:
+  - "SOC 2 CC6"
 ---
 
 # API Tokens & Personal Access Tokens
@@ -109,13 +111,13 @@ steps:
 
 ## Security Practices
 
-- **Set expiration dates.** Every token should have one; an expired token that breaks a pipeline is a minor annoyance, but a forgotten token that never expires is a liability.
+- **Set expiration dates.** Every token should have one; expiry bounds the exposure window of a forgotten token, and a pipeline broken by an expired token is recoverable.
 - **Rotate on a schedule** and immediately when someone with access to the token leaves.
 - **Grant least privilege.** Scope organization tokens to the specific `object:action` pairs the job needs.
 - **Never log token values.** Store them in a secrets manager; treat any exposed token as compromised and revoke it.
 - **Review active tokens periodically.** Token usage is logged, and `lastUsedAt` makes stale tokens easy to spot.
 
-Every token operation and use is recorded for audit purposes, so token activity can serve as evidence of controlled programmatic access (relevant to SOC 2 CC6 and similar criteria).
+Every token operation and use is recorded for audit purposes, so token activity can serve as evidence of controlled programmatic access.
 
 ## Troubleshooting
 

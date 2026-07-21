@@ -1,0 +1,80 @@
+---
+title: "CC5.2"
+description: "Selects and develops general control activities over technology"
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC5.2
+
+<ControlMeta
+  refCode={"CC5.2"}
+  name={"Selects and develops general control activities over technology"}
+  category={"Security"}
+  subcategory={"Control Activities"}
+  description={"The entity also selects and develops general control activities over technology to support the achievement of objectives. (COSO Principle 11)"}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Determines Dependency Between the Use of Technology in Business Processes and Technology General Controls</summary>
+
+Management understands and determines the dependency and linkage between business processes, automated control activities, and technology general controls.
+
+</details>
+
+<details>
+<summary>Establishes Relevant Technology Infrastructure Control Activities</summary>
+
+Management selects and develops control activities over the technology infrastructure, which are designed and implemented to help ensure the completeness, accuracy, and availability of technology processing.
+
+</details>
+
+<details>
+<summary>Establishes Relevant Security Management Process Controls Activities</summary>
+
+Management selects and develops control activities that are designed and implemented to restrict technology access rights to authorized users commensurate with their job responsibilities and to protect the entity's assets from external threats.
+
+</details>
+
+<details>
+<summary>Establishes Relevant Technology Acquisition, Development, and Maintenance Process Control Activities</summary>
+
+Management selects and develops control activities over the acquisition, development, and maintenance of technology and its infrastructure to achieve management's objectives.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Resource Management | Portfolio Roadmap | Documented evidence of the organization's roadmap for implementing cybersecurity-related initiatives and technologies. |
+| Resource Management | Secure Development Lifecycle (SDLC) | Documented evidence of a secure development lifecycle that the organization utilizes for new initiatives or significant changes to existing initiatives to ensure cybersecurity & data privacy principles are identified and implemented by default. |
+| Change Management | Business Impact Analysis (BIA) | Documented evidence of a Business Impact Analysis (BIA) for proposed changes. |
+| Privacy | Data Protection Impact Assessment (DPIA) | Documented evidence of Data Protection Impact Assessment (DPIA). |
+| Technology Design & Acquisition | Secure Software Development Principles (SSDP) | Documented evidence of a Secure Software Development Principles (SSDP). This is program-level documentation in the form of a runbook, playbook or a similar format provides guidance on organizational practices that support existing policies and standards. |
+| Technology Design & Acquisition | Secure Engineering & Data Privacy (SEDP) | Documented evidence of a Secure Engineering & Data Privacy (SEDP) program. This is program-level documentation in the form of a runbook, playbook or a similar format provides guidance on organizational practices that support existing policies and standards. |
+| Technology Design & Acquisition | Design and Development Plan (DDP) | Documented evidence of an engineering method to control the design process and govern the lifecycle of the product/service. |
+| Technology Design & Acquisition | Secure Engineering Principles (SEP) | Documented evidence of defined secure engineering principles used to ensure Sensitivity, Integrity, Availability & Safety (CIAS) concerns are properly addressed in the design and implementation of systems, applications and services. |
+| Technology Design & Acquisition | Security Architecture View | Documented evidence that identifies security-relevant system elements and their interfaces: • Define security context, domains, boundaries, and external interfaces of the system; • Align the architecture with (a) the system security objectives and requirements, (b) security design characteristics; and • Establish traceability of architecture elements to user and system security requirements. |
+| Technology Design & Acquisition | System Design Documentation | Documented evidence of system design documentation. |
+| Technology Design & Acquisition | Multi Patient Harm View (MPHV) | Documented evidence of a description of a Multi Patient Harm View (MPHV) that explains how the device / system defends against and/or responds to attacks with the potential to harm multiple patients. [note MPHV is specific to medical device manufacturers] |
+
+## Policies
+
+- **[Information Security Management Standard](https://raw.githubusercontent.com/theopenlane/policy-hub/main/information-security/information-security.md)** - Overarching policy defining the organization's approach to information security
+- **[Risk Management Standard](https://raw.githubusercontent.com/theopenlane/policy-hub/main/risk-management/risk-management.md)** - Establishes the framework for identifying, assessing, and managing information security risks
+
+## Example Organization Controls
+
+- **CC5.2.1** - All new third-party packages are scanned for known vulnerabilities using Dependabot, Trivy, and Renovate before being merged into production.
+
+## Example Control Objectives
+
+- **Control activity implementation** - Control activities are selected and developed to mitigate risks and achieve objectives.
+
+## Example Evidence
+
+- **Dependency Vulnerability Scanning Configuration** - Dependabot, Trivy, and Renovate configuration showing third-party packages are scanned for known vulnerabilities before production merge

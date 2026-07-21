@@ -5,30 +5,27 @@ sidebar_position: 2
 ---
 
 import Steps from '@site/src/components/Steps';
+import Supademo from '@site/src/components/Supademo';
+import Term from '@site/src/components/Term';
 
 # Create Evidence
 
-This guide explains how to create evidence in the Openlane Console for compliance management.
-
-:::info Prerequisites
-- Access to the Openlane Console
-- Appropriate permissions to manage compliance evidence
-:::
+Submit evidence whenever a <Term t="controls">control</Term> needs proof that it operated: a completed access review, a training report, a configuration export. Each submission becomes a reviewable record linked to the controls it supports, which is what an auditor samples during the audit.
 
 ## Steps to Create Evidence
 
 <Steps>
 
 1. **Log in** to the Openlane Console.
-2. Navigate to [Evidence](https://console.theopenlane.io/evidence)
-3. Click the **Submit Evidence** button.
-4. Fill in the details. Three fields do the heavy lifting for audit readiness:
+1. Navigate to [Evidence](https://console.theopenlane.io/evidence)
+1. Click the **Submit Evidence** button.
+1. Fill in the details. Three fields do the heavy lifting for audit readiness:
     - **Collection Procedure** and **Source** are what let an auditor (or a teammate re-collecting next quarter) reproduce the evidence; write them for that reader
     - **Renewal Date** is what turns evidence from a one-time upload into a maintained artifact; most evidence goes stale, so set it
     - **Associated Controls** connect the artifact to what it proves; unlinked evidence helps nobody at audit time
 
     ![Evidence upload screenshot](../../../../static/img/screenshots/evidence/evidence_file_upload.png)
-5. Click **Submit for review** to create the evidence record.
+1. Click **Submit for review** to create the evidence record.
 
 </Steps>
 

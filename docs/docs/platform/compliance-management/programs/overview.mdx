@@ -16,29 +16,43 @@ tags:
   - programs
 ---
 
+import Supademo from '@site/src/components/Supademo';
+import Term from '@site/src/components/Term';
+
 # Programs
 
-A program is the container for a compliance effort with a defined goal and timeline: get SOC 2 ready, complete an ISO 27001 certification, run this year's risk assessment. It pulls the controls, evidence, tasks, risks, and people for that effort into one place.
+A program is the container for a compliance effort with a defined goal and timeline: get System and Organization Controls 2 (SOC 2) ready, complete an ISO 27001 certification, run this year's risk assessment. It pulls the <Term t="controls">controls</Term>, <Term t="evidence">evidence</Term>, tasks, risks, and people for that effort into one place.
 
 An audit is a deadline with a scope, and both live on the program. Scoping a SOC 2 audit means knowing which controls are in, what evidence covers the audit period, and who is responsible for what; the program holds all three.
 
 Programs also keep concurrent efforts from blurring together. Your SOC 2 Type 2 and your ISO 27001 certification can share underlying work, but each has its own scope, timeline, and audit details.
 
+## Create a program walkthrough
+
+<Supademo>{`
+<div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.89; padding: 40px 0 40px 0;">
+  <iframe src="https://app.supademo.com/embed/cmrmkhk210husqm57t2vfr52c?embed_v=2&utm_source=embed" loading="lazy" title="Set Up SOC 2 Compliance Programs in OpenLane" allow="clipboard-write" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+  </div>
+`}</Supademo>
+
 ## Creating a Program
 
-The [program wizard](./create.mdx) walks you through setup and offers five paths: a quick-start **SOC 2** program, a **Risk Assessment** program, a **Framework Based** program (ISO 27001, HIPAA, and others), a blank **Generic Program**, or **Advanced** for full customization.
+The program wizard walks you through setup and offers five paths: a quick-start **SOC 2** program, a **Risk Assessment** program, a **Framework Based** program (ISO 27001, Health Insurance Portability and Accountability Act (HIPAA), and others), a blank **Generic Program**, or **Advanced** for full customization.
 
-Framework-based programs come pre-populated with the relevant controls, and you can add or remove controls after creation from the program settings or the [standards catalog](https://console.theopenlane.io/standards). The wizard choice gets you started; it doesn't lock you in.
+![Program Creation screenshot](../../../../static/img/screenshots/program/create_program.png)
+
+To create one:
+
+1. From any page in the console, click the `+` button at the top of the side navigation bar
+1. Select `Create Program` from the dropdown menu
+1. Choose one of the five paths and follow the wizard prompts for the path you selected
+1. Click `Create` to finalize the program
+
+Framework-based programs come pre-populated with the relevant controls; a SOC 2 program additionally lets you include only specific domains (for example Security and Availability) if you don't want all of the Trust Services Criteria. Controls can be added or removed after creation from the program settings or the [standards catalog](https://console.theopenlane.io/standards), and any field you set in the wizard can be changed later from the programs page or program settings. The wizard choice gets you started; it doesn't lock you in.
 
 ## Program Status
 
-| Status | What it means | What moves it forward |
-| ------ | ------------- | --------------------- |
-| **Not Started** | Planned but not yet kicked off | Set the timeline, invite the team |
-| **In Progress** | Active work underway | Implement controls, collect evidence for the period |
-| **Completed** | The effort reached its goal | Start the next cycle as a new program |
-| **On Hold** | Temporarily paused | Resume when priorities allow |
-| **Cancelled** | Discontinued | N/A |
+A program's status tracks the effort from planning through completion. The one behavior worth knowing in advance: a completed program stays completed as the record of that cycle, and the next cycle (next year's audit period, the annual risk assessment) starts as a new program, which keeps each cycle's scope, evidence period, and audit details distinct.
 
 ## Working with Auditors
 
@@ -70,7 +84,3 @@ Yes. Controls can be added or removed at any time from the program settings or t
 A standard is the framework itself: the catalog of requirements. A program is your organization's initiative against it: the scoped controls, the timeline, the team, and the audit.
 
 </details>
-
----
-
-*For programmatic access, see the [Programs GraphQL examples](../../../developers/graphql-examples/programs.mdx) in the developer docs.*

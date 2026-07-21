@@ -15,18 +15,17 @@ tags:
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # Writing CEL Expressions
 
-Several integrations let you provide a **Filter Expression** in their sync configuration: a small rule, written in [CEL (Common Expression Language)](https://github.com/google/cel-spec), that is evaluated against every record the integration collects. Only records where the expression is true are ingested into Openlane; everything else is skipped.
+Several integrations let you provide a **Filter Expression** in their sync configuration: a small rule, written in [Common Expression Language (CEL)](https://github.com/google/cel-spec), that is evaluated against every record the integration collects. Only records where the expression is true are ingested into Openlane; everything else is skipped.
 
 This lets you keep your compliance data focused: sync only your production devices, only members of your workforce domain, only the record types you actually govern, all without changing anything on the provider side.
 
-This page is a short tutorial on writing these expressions.
-
 ## How Filtering Works
 
-When an integration syncs, each record it collects (a user, a device, a group, a finding) is checked against your filter expression:
+When an integration syncs, each record it collects (a user, a device, a group, a <Term t="finding">finding</Term>) is checked against your filter expression:
 
 - Expression evaluates to **true** → the record is ingested
 - Expression evaluates to **false** → the record is skipped

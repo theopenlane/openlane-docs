@@ -15,40 +15,31 @@ keywords:
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # Control Mapping
 
-Control mapping lets you align controls across frameworks and standards and eliminate duplicate work.
+Control mapping aligns controls across frameworks and standards so one control, and the <Term t="evidence">evidence</Term> collected for it, satisfies every framework that shares the requirement.
 
 ## What is Control Mapping?
 
-Control mapping involves linking controls from one compliance framework to another, enabling organizations to demonstrate compliance with multiple standards without redundant effort. This process helps in identifying overlapping requirements and ensuring that all necessary controls are addressed.
-
-## Benefits of Control Mapping
-
-| Benefit | Description |
-| ------- | ----------- |
-| Efficiency | Reduces duplication of effort by reusing existing controls across frameworks |
-| Clarity | Provides a clear view of how different standards align, making it easier to manage compliance |
-| Risk Management | Helps identify gaps in controls and areas of potential risk |
-| Streamlined Audits | Simplifies the audit process by providing a unified view of compliance efforts |
-| Improved Collaboration | Facilitates communication between teams working on different compliance frameworks |
+Control mapping links a control in one <Term t="compliance-framework">compliance framework</Term> to its counterpart in another. Without mapping, each framework becomes its own silo: the same access review gets evidenced once for System and Organization Controls 2 (SOC 2) and again for ISO 27001, and requirements the frameworks share go unnoticed until an auditor asks about a gap. With mapped controls, you implement once, collect evidence once, and reuse both everywhere the requirement appears.
 
 ## How to Map Controls
 
 <Steps>
 
-1. **Identify Controls**: Start by identifying the controls that need to be mapped. This can include controls from different frameworks such as SOC 2, ISO 27001, NIST, etc.
-2. **Access Control Mapping**: Navigate to the control mapping section in the Openlane Console
+1. **Identify Controls**: Start by identifying the controls that need to be mapped. This can include controls from different frameworks such as SOC 2, ISO 27001, National Institute of Standards and Technology (NIST), etc.
+1. **Access Control Mapping**: Navigate to the control mapping section in the Openlane Console
     - Go to the [Controls](https://console.theopenlane.io/controls) page.
     - Select the control you want to map
     - Go to Related Controls
-3. **Create a Mapping**
+1. **Create a Mapping**
         ![Control Mapping](../../../../static/img/screenshots/controls/mapping.png)
     - Click on the "Map Control" button.
     - Select the source control (the control you are mapping from).
     - Select the target control (the control you are mapping to).
     - Provide a description of the mapping to clarify the relationship between the controls.
-4. **Review and Save**: Review the mapping details and click "Save" to create the mapping.
+1. **Review and Save**: Review the mapping details and click "Save" to create the mapping.
 
 </Steps>

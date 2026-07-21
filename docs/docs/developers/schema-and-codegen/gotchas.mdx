@@ -8,7 +8,7 @@ import Steps from '@site/src/components/Steps';
 
 # Developer Gotchas
 
-This page documents the things that will make you stare at your screen for twenty minutes before you realize what went wrong. Read it before your first PR.
+The core codebase has several non-obvious behaviors that commonly break first PRs: soft deletes, ORM-layer authorization, context propagation, and code generation ordering. Read this before your first PR, because the failure modes below produce errors that do not point back to their cause.
 
 ## IDE Build Tags
 
@@ -43,7 +43,7 @@ The system relies heavily on `context.Context` to carry authentication state, re
 
 | Context Value | What Happens Without It |
 |---|---|
-| Authenticated user | Privacy rules deny access, FGA checks fail |
+| Authenticated user | Privacy rules deny access, fine-grained authorization (FGA) checks fail |
 | Organization ID | Multi-tenant queries return nothing |
 | Transaction | Database writes happen outside the request transaction |
 | Request ID | Log correlation breaks |
@@ -93,7 +93,7 @@ func (a ActionPlan) Mixin() []ent.Mixin {
 }
 ```
 
-This is a little bit of a cart-and-horse situation when creating a new schema. Best advice:
+This creates a circular dependency when adding a new schema: the schema references generated types that do not exist until after the first generation run. Work through it in stages:
 
 <Steps>
 
@@ -106,7 +106,7 @@ This is a little bit of a cart-and-horse situation when creating a new schema. B
 
 ## CSRF Tokens on All Mutating Requests
 
-The server enforces CSRF protection on `POST`, `PUT`, `PATCH`, and `DELETE` requests. If you are testing via `curl` or a REST client:
+The server enforces cross-site request forgery (CSRF) protection on `POST`, `PUT`, `PATCH`, and `DELETE` requests. If you are testing via `curl` or a REST client:
 
 <Steps>
 

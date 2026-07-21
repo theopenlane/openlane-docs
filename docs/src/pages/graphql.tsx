@@ -1,5 +1,4 @@
 import { ApolloExplorer } from '@apollo/explorer/react';
-import React from 'react';
 import Layout from '@theme/Layout';
 
 export default function GrapqhlExplorer() {

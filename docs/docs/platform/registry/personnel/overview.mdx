@@ -9,12 +9,12 @@ compliance:
   - "SOC 2 CC5"
   - "SOC 2 CC6"
   - "SOC 2 CC7"
-  - "ISO 27001 A.6"
-  - "ISO 27001 A.7"
+  - "ISO 27001:2022 A.6"
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Identity Holders
 
@@ -24,9 +24,9 @@ The roster intentionally covers more than payroll. Agency contractors, short-ten
 
 ## How Personnel Records Work
 
-Beyond manual entry and imports, the roster can sync from an identity integration such as [Google Workspace](../../integrations/google_workspace.mdx), [Azure Entra ID](../../integrations/azure_entra_id.mdx), or [Authentik](../../integrations/authentik.mdx). When you connect an identity provider, you can designate it as your primary directory: the authoritative source that populates most fields on the identity holder records it manages, keeping the roster in step with the directory itself. How synced accounts from multiple sources resolve into one record per person is covered in [Directory Sync and Identity Resolution](./directory-sync.mdx).
+The roster can sync from an identity integration such as [Google Workspace](../../integrations/google_workspace.mdx), [Azure Entra ID](../../integrations/azure_entra_id.mdx), or [Authentik](../../integrations/authentik.mdx). When you connect an identity provider, you can designate it as your primary directory: the authoritative source that populates most fields on the identity holder records it manages, keeping the roster in step with the directory itself. How synced accounts from multiple sources resolve into one record per person is covered in [Directory Sync and Identity Resolution](./directory-sync.mdx).
 
-Every record classifies the working relationship (employee, contractor, intern, partner, or a non-human service identity) and carries a status covering the lifecycle from onboarding through deactivation, with start and end dates that anchor tenure. Contractors can point at their agency through an employer [entity](../entities.mdx), so third-party staff always trace back to the vendor relationship that brought them in.
+Every record classifies the working relationship and carries a status covering the lifecycle from onboarding through deactivation, with start and end dates that anchor tenure. Contractors can point at their agency through an employer [entity](../entities.mdx), so third-party staff always trace back to the vendor relationship that brought them in.
 
 Personnel records connect to the [campaigns](../../automation/campaigns.mdx) and assessments they respond to and the [assets](../assets.mdx) and [platforms](../platforms.mdx) they own or access. For the complete field list, see the [GraphQL object reference](/graphql).
 
@@ -38,7 +38,7 @@ Connect your identity provider and mark it as the primary directory so employee 
 
 ### Run a Policy Attestation Campaign
 
-The evidence value of a quarterly or annual attestation depends on the accuracy of its target list. Filter the roster to active personnel, create a policy attestation [campaign](../../automation/campaigns.mdx) with those records as targets, and launch. Openlane tracks completion per target, so you can resend to anyone incomplete and keep the completion metrics as evidence that the communication control operated during the period.
+The <Term t="evidence">evidence</Term> value of a quarterly or annual attestation depends on the accuracy of its target list. Filter the roster to active personnel, create a policy attestation [campaign](../../automation/campaigns.mdx) with those records as targets, and launch. Openlane tracks completion per target, so you can resend to anyone incomplete and keep the completion metrics as evidence that the communication control operated during the period.
 
 ### Produce Offboarding Evidence
 

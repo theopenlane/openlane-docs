@@ -12,15 +12,20 @@ keywords:
   - critical systems
   - failover
   - business continuity
+compliance:
+  - "SOC 2 A1"
+  - "ISO 27001"
 tags:
   - compliance
   - best practices
   - disaster recovery
 ---
 
+import Term from '@site/src/components/Term';
+
 # Disaster Recovery Plan Guidance
 
-A disaster recovery (DR) plan documents the procedures your organization follows to restore systems and infrastructure after a disruptive event. It is the technical companion to the [business continuity plan](./business-continuity.mdx): the BCP covers keeping the whole business operating, while the DR plan covers getting systems back. Frameworks that include availability commitments, such as the SOC 2 Availability criteria and ISO 27001, expect a documented and tested plan. Keep yours with the rest of your policy documents in [Policies and Procedures](/docs/platform/compliance-management/policy-and-procedure-management/policies) and map it to the [controls](/docs/platform/compliance-management/controls/overview) it satisfies.
+A disaster recovery (DR) plan documents the procedures your organization follows to restore systems and infrastructure after a disruptive event. It is the technical companion to the [business continuity plan](./business-continuity.mdx) (BCP): the BCP covers keeping the whole business operating, while the DR plan covers getting systems back. Frameworks that include availability commitments expect a documented and tested plan. Keep yours with the rest of your policy documents in [Policies and Procedures](/docs/platform/compliance-management/policy-and-procedure-management/policies) and map it to the [controls](/docs/platform/compliance-management/controls/overview) it satisfies.
 
 ## What the Plan Should Accomplish
 
@@ -53,7 +58,7 @@ Recovery focuses on rebuilding the environment, at an alternate site for physica
 2. Assess the extent of the damage to the primary environment
 3. Rebuild the environment at the alternate location, ideally from infrastructure-as-code and automated scripts
 4. Run pre-written validation tests against the rebuilt environment
-5. Confirm logging, monitoring, alerting, and security controls are functioning
+5. Confirm logging, monitoring, alerting, and security <Term t="controls">controls</Term> are functioning
 6. Verify systems are fully patched
 7. Deploy to production and update DNS records to cut traffic over
 

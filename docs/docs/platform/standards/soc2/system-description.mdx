@@ -19,48 +19,69 @@ tags:
   - audit
 ---
 
+import Term from '@site/src/components/Term';
+
 # SOC 2 System Description
 
-The system description is Section 3 of a SOC 2 report. It describes the system the audit was performed against and the boundaries of that system: the people, processes, technology, and controls that fall inside those boundaries. Teams preparing for a first audit often spend months on controls and evidence, then discover late in the process that a substantial narrative document is also due. Knowing what the description contains, and starting it early, keeps it from delaying your report.
+The system description is Section 3 of a System and Organization Controls 2 (SOC 2) report. It describes the system the audit was performed against and the boundaries of that system: the people, processes, technology, and controls that fall inside those boundaries. Teams preparing for a first audit often spend months on controls and evidence, then discover late in the process that a substantial narrative document is also due. Knowing what the description contains, and starting it early, keeps it from delaying your report.
 
 ## Why the Description Is Required
 
-Your audit firm is required to issue an opinion on whether the description is accurate, complete, and presented in accordance with the description criteria defined by the AICPA attestation standards (DC section 200). The description is examined and quality-reviewed the same way the rest of the audit is.
+Your audit firm is required to issue an opinion on whether the description is presented in accordance with the description criteria defined by the <Term t="american-institute-of-certified-public-accountants">AICPA</Term>'s *2018 Description Criteria for a Description of a Service Organization's System in a SOC 2 Report* (DC section 200, paragraph .03(a)). The description is examined and quality-reviewed the same way the rest of the audit is.
 
 The description also carries information report readers cannot get anywhere else: how your organization is structured and governed, which systems and vendors you depend on to deliver the service, which controls your customers are expected to operate on their side, and which third parties can affect the security of your system.
 
 ## Who Writes It
 
-You do. As the service organization, you are responsible for producing an accurate, objective, and complete description. Auditors assist in one of two common ways: they provide a template with guidance for each section, or they send a questionnaire and draft the description from your answers for you to review and correct. In either case the content, and responsibility for its accuracy, is yours.
+You do. As the <Term t="service-organization">service organization</Term>, you are responsible for producing an accurate, objective, and complete description (DC 200, paragraphs .04 and .07). Auditors assist in one of two common ways: they provide a template with guidance for each section, or they send a questionnaire and draft the description from your answers for you to review and correct. In either case the content, and responsibility for its accuracy, is yours.
 
 ## Sections Auditors Expect
 
-The exact template varies by audit firm, but the description criteria mean every description covers the same ground:
+The exact template varies by audit firm, but DC 200 defines nine description criteria (DC1–DC9), and a description needs to disclose information about each one to the extent it's applicable to your system and the <Term t="trust-services-criteria">trust services categories</Term> in scope (paragraph .18):
 
-| Section | What to cover |
-| ------- | ------------- |
-| Company and services overview | What the organization does and the specific services in scope for the report |
-| Principal service commitments and system requirements | The security, availability, and other commitments you make to customers (contracts, SLAs, published terms) and the internal requirements that support them |
-| System components | The infrastructure, software, people, procedures, and data that make up the system, including system boundaries |
-| System incidents | Significant incidents during the period that affected the service commitments, and how they were handled |
-| Applicable Trust Services Criteria and related controls | Which criteria are in scope and the controls you operate to meet them |
-| Complementary user entity controls (CUECs) | Controls your customers must implement for the system to meet its commitments, such as managing their own user access |
-| Subservice organizations | The vendors your system depends on (cloud provider, data center), the controls you expect them to operate (CSOCs), and whether the report uses the carve-out or inclusive method |
-| Significant changes | For a Type 2 report, material changes to the system during the audit period |
+| Criterion | Section | What to cover |
+| --------- | ------- | ------------- |
+| DC1 | Company and services overview | What the organization does and the specific services in scope for the report |
+| DC2 | Principal service commitments and system requirements | The security, availability, and other commitments you make to customers (contracts, SLAs, published terms) and the internal requirements that support them |
+| DC3 | System components | Infrastructure, software, people, procedures, and data, plus the boundaries of the system, meaning which of those are actually necessary to provide the service |
+| DC4 | System incidents | Incidents that resulted from a control that wasn't suitably designed or operating effectively, or that significantly affected your service commitments |
+| DC5 | Applicable Trust Services Criteria and related controls | Which criteria are in scope and the controls you operate to meet them |
+| DC6 | Complementary user entity controls (CUECs) | Controls your customers must implement for the system to meet its commitments, such as managing their own user access |
+| DC7 | Subservice organizations | The vendors that operate controls necessary to your service commitments (cloud provider, data center), and whether the report uses the carve-out or inclusive method |
+| DC8 | Criteria not relevant | Any applicable trust services criterion that doesn't apply to your system, and why |
+| DC9 | Significant changes | For a Type 2 report only, material changes to the system during the audit period |
+
+DC8 is narrower than it looks: it only applies to criteria *within* the trust services categories you've actually selected for the examination, not the categories you didn't select. If your engagement covers Security only, Confidentiality/Availability/Processing Integrity/Privacy criteria are simply outside the exam's scope from the outset and don't need a DC8 explanation. DC8 comes up when a specific criterion inside an in-scope category doesn't apply to your system, for example a Security criterion about disposing of physical media when your system has none.
 
 Most of the raw material already exists in Openlane: your in-scope controls and their framework mappings live in your [program](/docs/platform/compliance-management/programs/overview), commitments and operating procedures live in [Policies and Procedures](/docs/platform/compliance-management/policy-and-procedure-management/policies), and incidents and changes are reflected in your [evidence](/docs/platform/compliance-management/evidence/overview). Writing the description is largely a matter of narrating what is already documented.
 
+## Setting the System Boundary
+
+The most consequential decision in the description is where the <Term t="system-boundaries">system boundary</Term> sits. Everything you place inside the boundary is something the auditor can examine, so an over-broad description quietly multiplies your <Term t="audit-scoping">audit scope</Term> and the evidence requests that come with it.
+
+The scoping rule: systems that do not store, process, or transmit customer data, and do not operate a control your report relies on, should not be in scope (DC3; the standard's own examples of control-operating tools are firewalls, intrusion detection/prevention systems, and security information and event management (SIEM) tooling). Name them as out of scope explicitly rather than leaving them ambiguous; an unmentioned tool is a question the auditor has to ask, while a declared out-of-scope tool is a settled one. The systems your controls operate through, such as your identity provider and deployment pipeline, still appear in the description because they govern access to and changes in the production environment, but that is a different role than processing customer data and the description should say so.
+
+Describe components at a functional level rather than a configuration level. Auditors need to know what the pieces are and what they do, not server serial numbers, library versions, or database schemas. Working through the standard asset classes (DC3):
+
+- **Infrastructure**: Name your hosting environments and edge layer (cloud provider, regions, CDN). Group managed services under the provider that runs them instead of listing every service line by line.
+- **Software**: Document the application stack that delivers the service, plus tooling that operates an in-scope control: your CI/CD pipeline enforcing peer review, your identity provider, your vulnerability scanner. Tooling that neither delivers the service nor operates a control (linters, ticketing systems, general collaboration tools) stays out.
+- **People**: Describe the organization you actually run. A small team should describe functional ownership, separation of duties, and system-enforced controls like required code reviews, not corporate divisions it does not have.
+- **Data**: State your classification levels, where data is encrypted at rest, and where TLS terminates on the path from the public internet.
+- **Procedures**: Summarize the change management and operational procedures that govern production, such as required peer approval before merge and branch protection.
+
 ## Writing It Well
 
-The description is meant to be an objective account of the system that was audited. The AICPA guidance specifically warns against subjective marketing language, which it calls advertising puffery, so keep claims factual and verifiable. Involve stakeholders from engineering, operations, security, and compliance when drafting: the document spans all of those areas, and a single author working alone is the most common source of omissions.
+The description is meant to be an objective account of the system that was audited. DC 200 says a description isn't presented in accordance with the criteria if it states IT components exist when they don't, states controls are implemented when they aren't, or "contains statements that cannot be objectively evaluated (for example, advertising puffery)" (paragraph .13). Keep claims factual and verifiable. Involve stakeholders from engineering, operations, security, and compliance when drafting: the document spans all of those areas, and a single author working alone is the most common source of omissions.
+
+Describe the architecture you actually run, in the words your engineers would use. If the backend is a containerized monolith, call it that. Describing it as a microservices architecture because it sounds better invites the auditor to ask for service mesh topologies, inter-service authentication, and distributed tracing you do not have. The same discipline applies to peripheral systems: billing processors, analytics tools, and general email providers stay out of the description unless they also handle customer data or operate a control the report relies on. DC 200 names billing specifically as an example of something not relevant to report users (paragraph .11).
 
 ## When to Write It
 
-The description can be completed at any point before the audit concludes. In practice it is written before the end of fieldwork for a Type 1 report, or near the end of the observation period for a Type 2. There is no hard deadline, but the reporting process cannot proceed without a completed description because it goes through the same quality control review as the audit itself. A missing description at the end of the audit directly delays your final report.
+The description can be completed at any point before the audit concludes. In practice it is written before the end of fieldwork for a <Term t="type-i-type-ii">Type 1</Term> report, or near the end of the observation period for a Type 2. There is no hard deadline, but the reporting process cannot proceed without a completed description because it goes through the same quality control review as the audit itself. A missing description at the end of the audit directly delays your final report.
 
 ## Consequences of an Inaccurate Description
 
-A misstated description can result in a qualified opinion. The typical example is an omitted subservice organization: if a vendor materially supports your system and the auditor concludes the description is misleading without it, the auditor can qualify the opinion on that basis. We recommend treating the description with the same rigor as your controls.
+A misstated description can result in a qualified opinion. The typical example is an omitted <Term t="subservice-organization">subservice organization</Term>: DC 200 defines a subservice organization as a vendor whose controls are necessary, in combination with your own, to achieve your service <Term t="commitments">commitments</Term> (DC7, glossary). If such a vendor is missing from the description and the auditor concludes the description is misleading without it, the auditor can qualify the opinion on that basis. We recommend treating the description with the same rigor as your controls.
 
 ## FAQ
 
@@ -74,7 +95,7 @@ No. Auditors provide a template or turn questionnaire answers into a draft, but 
 <details>
 <summary>Do we have to name every vendor we use?</summary>
 
-You describe the subservice organizations your system relies on to meet its service commitments, such as your cloud infrastructure provider. Immaterial vendors do not belong in the description, but omitting a significant one risks a qualified opinion. Discuss borderline cases with your auditor.
+No. You describe the subservice organizations your system relies on to meet its service commitments (DC7), such as your cloud infrastructure provider. Corporate productivity tools, billing processors, and other vendors that never touch customer data or operate one of your controls do not belong in the description. The risk runs in both directions: omitting a significant vendor in the data path risks a qualified opinion, while over-reporting minor tools creates evidence requests you did not need. Discuss borderline cases with your auditor.
 
 </details>
 
@@ -84,9 +105,3 @@ You describe the subservice organizations your system relies on to meet its serv
 Long enough to satisfy the description criteria and no longer. Most run 10 to 30 pages depending on system complexity. Length is not a quality signal; what matters is completeness against the criteria.
 
 </details>
-
-## Related Documentation
-
-- [SOC 2 Overview](./overview.mdx)
-- [Audit Preparation](../../grc-fundamentals/audit/index.mdx)
-- [Required Documentation](./requireddocumentation.mdx)

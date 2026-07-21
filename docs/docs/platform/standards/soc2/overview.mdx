@@ -29,17 +29,18 @@ tags:
 ---
 
 import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
 
-# SOC 2 (Service Organization Control 2)
+# System and Organization Controls 2 (SOC 2)
 
-SOC 2 is how service organizations prove to customers that their controls over customer data actually work. Developed by the American Institute of Certified Public Accountants (AICPA), it's an attestation framework: a licensed CPA firm examines your controls against the Trust Services Criteria and issues a report your customers can read. There's no certificate and no pass/fail stamp; the report itself, including the auditor's opinion and any exceptions, is the deliverable.
+SOC 2 is how <Term t="service-organization">service organizations</Term> prove to customers that their controls over customer data actually work. It's an attestation framework: a licensed Certified Public Accountant (CPA) firm examines your controls against the <Term t="trust-services-criteria">Trust Services Criteria</Term> and issues a report your customers can read, including the auditor's opinion and any exceptions.
 
 <StandardMeta
-  fullName={"Service Organization Control 2"}
+  fullName={"System and Organization Controls 2"}
   type={"Attestation standard"}
   source={"AICPA Trust Services Criteria (2017, revised points of focus 2022)"}
   established={"2010; current criteria TSC 2017 (2022 revision)"}
-  managedBy={"AICPA"}
+  managedBy={"American Institute of Certified Public Accountants (AICPA)"}
   appliesTo={"Service organizations handling customer data (SaaS, cloud, MSPs)"}
   certification={"No: attestation report by licensed CPA firm"}
 />
@@ -64,18 +65,18 @@ A SOC 2 examination covers one or more of five Trust Services Criteria. You and 
 
 Security is mandatory; the rest are added based on what you promise customers. Most companies start with Security alone or Security plus Availability, and add Confidentiality when contracts demand it. We recommend against scoping in Privacy casually because it's the heaviest criteria and often better served by dedicated privacy work.
 
-A few signals help decide whether an optional criteria belongs in scope. Availability earns its place when contracts or SLAs carry uptime commitments and a disruption would materially affect customers. Confidentiality fits when you hold customer intellectual property or information covered by NDAs, where unauthorized disclosure would cause financial or competitive harm. Processing Integrity fits when your system performs calculations, transformations, or transactions where errors would create financial, legal, or operational risk for customers. And note that a Privacy examination does not substitute for compliance with privacy regulations such as GDPR, CCPA, or HIPAA; it attests to your controls over personal information, not your regulatory standing.
+A few signals help decide whether an optional criteria belongs in scope. Availability earns its place when contracts or SLAs carry uptime <Term t="commitments">commitments</Term> and a disruption would materially affect customers. Confidentiality fits when you hold customer intellectual property or information covered by NDAs, where unauthorized disclosure would cause financial or competitive harm. Processing Integrity fits when your system performs calculations, transformations, or transactions where errors would create financial, legal, or operational risk for customers. And note that a Privacy examination does not substitute for compliance with privacy regulations such as General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), or Health Insurance Portability and Accountability Act (HIPAA); it attests to your controls over personal information, not your regulatory standing.
 
-The criteria are built on the COSO internal control framework, which is why a SOC 2 audit examines your whole control environment (governance, risk assessment, communication, monitoring), not just technical safeguards. Under each criterion, the AICPA publishes **points of focus**: guidance on what a control meeting the criterion might look like. They are guidance rather than requirements: you don't have to satisfy every point of focus, and auditors evaluate your controls against the criteria themselves.
+The criteria are built on the <Term t="committee-of-sponsoring-organizations-of-the-treadway-commission">COSO</Term> internal control framework, which is why a SOC 2 audit examines your whole control environment (governance, risk assessment, communication, monitoring), not just technical safeguards. Under each criterion, the <Term t="american-institute-of-certified-public-accountants">AICPA</Term> publishes **points of focus**: guidance on what a control meeting the criterion might look like. They are guidance rather than requirements: you don't have to satisfy every point of focus, and auditors evaluate your controls against the criteria themselves.
 
 ## Type 1 vs Type 2
 
-There are two report types, and the difference matters more than anything else on this page:
+There are two report types:
 
 - A **Type 1** report says your controls were suitably designed *at a point in time*. It's a snapshot, useful as a fast first milestone.
-- A **Type 2** report says your controls were designed suitably *and operated effectively over a period*, typically 3 to 12 months. The auditor samples evidence across the whole window.
+- A **Type 2** report says your controls were designed suitably *and <Term t="operating-effectiveness">operated effectively</Term> over a period*, typically 3 to 12 months. The auditor samples evidence across the whole window.
 
-The evidence burden differs accordingly. A Type 1 mostly needs point-in-time proof such as policies and configuration screenshots, while a Type 2 involves the auditor sampling logs, tickets, and records across the whole period, so preparation and fieldwork take longer.
+The evidence burden differs accordingly. A <Term t="type-i-type-ii">Type 1</Term> mostly needs point-in-time proof such as policies and configuration screenshots, while a Type 2 involves the auditor <Term t="sampling">sampling</Term> logs, tickets, and records across the whole period, so preparation and fieldwork take longer.
 
 Enterprise customers almost always want Type 2. A common path: complete a Type 1 to show early progress, open the Type 2 observation window immediately, and deliver the Type 2 after the first period closes. Some organizations skip the Type 1 and go straight to Type 2, which avoids paying for two separate audits; the trade-off is a longer wait before you have any report to show. Repeating Type 1 audits year after year is uncommon and rarely satisfies customers as your business grows.
 
@@ -86,7 +87,7 @@ For the artifacts that typically satisfy manually evidenced control areas, see [
 <details>
 <summary>What happens after we submit evidence?</summary>
 
-The audit team reviews each item against the control it supports. For each control they either accept the evidence and move on, come back with questions and requests for additional information, or write up a finding. Deviations appear in the report alongside the affected controls under "results of service auditor's test of controls," either as "no exceptions noted" or with the reason the control failed. Enough deviations result in a qualified, disclaimer, or adverse opinion, which is why internal evidence review before submission matters.
+The audit team reviews each item against the control it supports. For each control they either accept the evidence and move on, come back with questions and requests for additional information, or write up a finding. Deviations appear in the report alongside the affected controls under "results of <Term t="service-auditor">service auditor</Term>'s test of controls," either as "no exceptions noted" or with the reason the control failed. Enough deviations result in a qualified, disclaimer, or adverse opinion, which is why internal evidence review before submission matters.
 
 </details>
 
@@ -122,9 +123,6 @@ Type 2 periods typically run 3 to 12 months. First-timers often choose 3 or 6 mo
 
 - [Audit Procedures](../../grc-fundamentals/auditprocedures.mdx)
 - [Audit Preparation](../../grc-fundamentals/audit/index.mdx)
-- [Framework Subject Matter](./framework-subject-matter.mdx)
-- [SOC 2 FAQ](./faq.mdx)
-- [Bridge Letter](./bridge-letter.mdx)
 
 ## Additional Resources
 

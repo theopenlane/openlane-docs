@@ -15,37 +15,23 @@ keywords:
   - control evidence
 ---
 
+import Term from '@site/src/components/Term';
+
 # Evidence
 
-Evidence is the proof behind your compliance program: the access review export, the training completion report, the configuration screenshot that shows a control actually operated. A [control implementation](../controls/implementations.mdx) describes how a control works; evidence demonstrates it kept working through the audit period.
+Evidence is the proof behind your <Term t="compliance-program">compliance program</Term>: the access review export, the training completion report, the configuration screenshot that shows a <Term t="controls">control</Term> actually operated. A [control implementation](../controls/implementations.mdx) describes how a control works; evidence demonstrates it kept working through the audit period.
 
 Auditors don't take your word for it; they sample controls and ask for the artifacts. When evidence is collected on schedule, linked to the controls it supports, and current for the audit period, an audit is mostly retrieval. When it isn't, audit preparation means hunting through inboxes and shared drives for a report someone generated eight months ago, or discovering it was never generated at all.
 
-Centralizing evidence in Openlane also means one artifact can serve every framework that needs it. A quarterly access review linked to the right controls counts toward SOC 2 and ISO 27001 at once, instead of being uploaded twice into two portals.
+Centralizing evidence in Openlane also means one artifact can serve every <Term t="compliance-framework">framework</Term> that needs it. A quarterly access review linked to the right controls counts toward System and Organization Controls 2 (SOC 2) and ISO 27001 at once, instead of being uploaded twice into two portals.
 
 ## Evidence Status
 
-Evidence moves through a review flow from creation to auditor approval, with a few exception states along the way:
-
-| Status | What it means | What moves it forward |
-| ------ | ------------- | --------------------- |
-| **Draft** | Created but not ready for submission | Attach the artifact, finish the details |
-| **Submitted** | Ready for internal review | Internal reviewer checks it against the control |
-| **Ready for Auditor** | Passed internal review | Auditor picks it up |
-| **In Review** | Auditor is reviewing | Auditor decision |
-| **Auditor Approved** | Accepted by the auditor | Nothing until the renewal date |
-| **Missing Artifact** | A required file or substantiating item is absent | Attach what's missing, resubmit |
-| **Needs Renewal** | Outdated for the current period | Recollect and update |
-| **Rejected** | Didn't meet requirements | Replace with evidence that does |
-
-The [evidence dashboard](./dashboard.mdx) shows these statuses across all evidence, so gaps and stale items surface before an auditor finds them.
+Evidence moves through a review flow from creation to auditor approval: you submit the record, an internal reviewer checks it against the control, and the auditor reviews and accepts or rejects it. Two exception states need action outside that flow: _Missing Artifact_ means a required file or substantiating item is absent and the record cannot progress until it is attached, and _Needs Renewal_ means the artifact is outdated for the current period and must be recollected.
 
 ## Collecting Evidence
 
-Submit evidence from the [Evidence page](https://console.theopenlane.io/evidence) with a name, description, collection procedure, source, and the artifact itself, then link it to the controls it supports; see [Create Evidence](./create.mdx) for the walkthrough. Evidence comes in two flavors:
-
-- **Automated**: collected from integrated systems (cloud providers, ticketing systems) with minimal manual work, and refreshed on a schedule
-- **Manual**: uploaded by people, such as policy documents, meeting minutes, and signed reports
+Submit evidence from the [Evidence page](https://console.theopenlane.io/evidence) with a name, description, collection procedure, source, and the artifact itself, then link it to the controls it supports; see [Create Evidence](./create.mdx) for the walkthrough.
 
 Set a **renewal date** on everything. Most evidence goes stale (a Q1 access review doesn't cover Q3), and renewal dates plus recurring [tasks](../../automation/tasks.mdx) are what turn evidence collection from a pre-audit scramble into a routine.
 

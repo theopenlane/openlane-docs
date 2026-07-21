@@ -22,9 +22,11 @@ tags:
   - cookies
 ---
 
+import Term from '@site/src/components/Term';
+
 # Cookie Consent
 
-If your website sets cookies that process personal data or track visitors, you need consent before those cookies load, and the cookie banner is where you ask for it. The banner is the visible edge of consent management: asking, recording, and acting on each visitor's choices. Under GDPR the details of how you ask matter as much as whether you ask.
+If your website sets cookies that process <Term t="personal-information">personal data</Term> or track visitors, you need consent before those cookies load, and the cookie banner is where you ask for it. The banner is the visible edge of consent management: asking, recording, and acting on each visitor's choices. Under General Data Protection Regulation (GDPR) the details of how you ask matter as much as whether you ask.
 
 ## Why a Banner Is Required
 
@@ -85,7 +87,7 @@ The preference center stays reachable after the banner is dismissed, so a visito
 | Policy links | Your cookie policy or privacy notice, one click away |
 | Settings access | A path to review and change choices later |
 
-A single banner rarely satisfies every jurisdiction. EU member-state data protection authorities publish their own guidance on top of GDPR (what French CNIL expects differs from German or Italian practice in the details), and non-EU regimes differ more fundamentally, so consent tooling commonly serves different banner behavior by visitor location.
+A single banner rarely satisfies every jurisdiction. EU member-state data protection authorities publish their own guidance on top of GDPR (what the French Commission Nationale de l'Informatique et des Libertes (CNIL) expects differs from German or Italian practice in the details), and non-EU regimes differ more fundamentally, so consent tooling commonly serves different banner behavior by visitor location.
 
 ## Beyond the EU
 
@@ -95,7 +97,7 @@ The EU model is opt-in; much of the rest of the world starts from opt-out with o
 | ------ | ------------- |
 | GDPR / ePrivacy (EU) | Opt-in before non-essential cookies load |
 | LGPD (Brazil) | Substantially the GDPR model; opt-in |
-| CPRA (California) | Transparency plus opt-out of sale/sharing; opt-in required for visitors under 16; honoring [Global Privacy Control](https://globalprivacycontrol.org/) browser signals is required |
+| CPRA (California) | Transparency plus opt-out of sale/sharing; opt-in required for visitors under 16; honoring [Global Privacy Control](https://globalprivacycontrol.org/) (GPC) browser signals is required |
 | Other US state laws (Virginia, Colorado, Connecticut, Utah) | Opt-out oriented, with opt-in required for sensitive data categories |
 | PIPL (China), APPI (Japan) | Explicit consent requirements for sensitive data and cross-border transfers |
 
@@ -105,7 +107,7 @@ If you serve one banner globally, it needs to satisfy the strictest regime you'r
 
 GDPR's accountability principle requires you to be able to demonstrate consent, meaning you can show, for any visitor, what they consented to, when, and what the banner looked like when they did. A consent management platform captures this log for you; if you build in-house, the log is a requirement, not a nice-to-have.
 
-These records are also audit and evidence artifacts: consent logs, the deployed banner configuration, and screenshots of the consent flow are the kind of items that satisfy privacy-related control areas, alongside the [example evidence](./example-evidence.mdx) for your broader GDPR program. Store them with your other [evidence](/docs/platform/compliance-management/evidence/overview) so DSARs and regulator questions have a paper trail.
+These records are also audit and <Term t="evidence">evidence</Term> artifacts: consent logs, the deployed banner configuration, and screenshots of the consent flow are the kind of items that satisfy privacy-related control areas, alongside the [example evidence](./example-evidence.mdx) for your broader GDPR program. Store them with your other [evidence](/docs/platform/compliance-management/evidence/overview) so DSARs and regulator questions have a paper trail.
 
 ## Practical Guidance
 
@@ -114,7 +116,7 @@ These records are also audit and evidence artifacts: consent logs, the deployed 
 | Categorize honestly | "Strictly necessary" means the site breaks without it (session cookies, load balancing), not "necessary for our marketing goals"; miscategorized analytics is one of the most common findings in regulator sweeps |
 | Avoid dark patterns | Color-weighting the accept button, hiding reject behind extra clicks, or nagging on every page view all cut against "freely given" and have drawn enforcement attention across EU authorities |
 | Fire tags on consent | The banner is only compliant if the tag manager actually withholds non-essential scripts until consent lands; a banner displayed while trackers load unconditionally does not establish compliance |
-| Honor GPC where it applies | Browser-level signals are legally meaningful under CPRA and increasingly elsewhere; treat them as a recorded opt-out |
+| Honor GPC where it applies | Browser-level signals are legally meaningful under California Privacy Rights Act (CPRA) and increasingly elsewhere; treat them as a recorded opt-out |
 | Refresh consent after material changes | New processing purposes, new vendors, or a redesigned banner warrant fresh consent |
 
 ## FAQ

@@ -1,0 +1,9 @@
+{
+  "label": "CMMC",
+  "position": 11,
+  "link": {
+    "type": "doc",
+    "id": "platform/standards/cmmc/overview"
+  },
+  "collapsed": true
+}

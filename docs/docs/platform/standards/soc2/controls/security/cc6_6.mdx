@@ -1,0 +1,94 @@
+---
+title: "CC6.6"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC6.6
+
+<ControlMeta
+  refCode={"CC6.6"}
+  category={"Security"}
+  subcategory={"Logical and Physical Access Controls"}
+  description={"The entity implements logical access security measures to protect against threats from sources outside its system boundaries."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Restricts Access</summary>
+
+The types of activities that can occur through a communication channel (for example, FTP site, router port) are restricted.
+
+</details>
+
+<details>
+<summary>Protects Identification and Authentication Credentials</summary>
+
+Identification and authentication credentials are protected during transmission outside its system boundaries.
+
+</details>
+
+<details>
+<summary>Requires Additional Authentication or Credentials</summary>
+
+Additional authentication information or credentials are required when accessing the system from outside its boundaries.
+
+</details>
+
+<details>
+<summary>Implements Boundary Protection Systems</summary>
+
+Boundary protection systems (for example, firewalls, demilitarized zones, intrusion detection or prevention systems, and endpoint detection and response systems) are configured, implemented, and maintained to protect external access points.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Asset Management | IT Asset Management (ITAM) | Documented evidence of an IT Asset Management (ITAM) program that addresses the due diligence and due care activities associated with maintaining both secure and compliant systems, applications and services. |
+| Identity & Access Management | Identity & Access Management (IAM) Function | Documented evidence of an Identity & Access Management (IAM), or similar function, that facilitates the implementation of identification and access management controls. |
+| Identity & Access Management | Account Management Documentation | Documented evidence of list of account management practices. |
+| Identity & Access Management | Authenticate, Authorize and Audit (AAA) Solution | Documented evidence of an Authenticate, Authorize and Audit (AAA) solution (on-premises and hosted by External Service Providers (ESP)). |
+| Network Security | Network Security Controls (NSC) | Documented evidence of the organization's network security controls (e.g., boundary protections, content filtering, wireless infrastructure, etc.). |
+| Data Protection | Network Diagram - Global System View (GSV) | Documented evidence of a high-level network diagram that provides a conceptual, logical depiction of the network(s) to describe the interconnections of the systems/applications/services, including internal and external interfaces. |
+| Data Protection | Network Diagram - Low Level | Documented evidence of a low-level network diagram that provides a detailed, logical depiction of assets on the network(s). |
+| Data Protection | Data Flow Diagram (DFD) | Documented evidence of a Data Flow Diagram (DFD) that accurately identifies where sensitive/regulated data is stored, transmitted and/or processed. |
+| Network Security | Internal Boundaries | Documented evidence of key internal boundaries. |
+| Asset Management | Secure Baseline Configurations Reviews | Documented evidence of a review process to ensure Secure Baseline Configurations (SBC) are current and applicable (e.g., system configuration settings and associated documentation). |
+| Asset Management | Secure Baseline Configurations - Network Devices | Documented evidence of secure baseline configurations for all deployed types of network devices. |
+| Network Security | Authorized Network Connections | Documented evidence of systems, applications and/or services authorized to connect to organizational systems, including remote access authorizations. |
+| Network Security | External System Accessibility | Documented evidence of a list of systems, applications and/or services accessible from external systems. |
+| Network Security | Work From Anywhere (WFA) Guidance (remote workers) | Documented evidence of administrative and technical measures that are enforced at "alternate work sites" which includes working from home or working while traveling on business. |
+
+## Policies
+
+- **[Cryptographic Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/cryptography/cryptography.md)** - Defines requirements for the use of cryptographic controls
+- **[Mobile Device Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/mobile-device/mobile-device.md)** - Establishes requirements for the secure use of mobile devices
+- **[Network Security Standard](https://raw.githubusercontent.com/theopenlane/policy-hub/main/network-security/network-security.md)** - Defines requirements for securing network infrastructure and communications
+
+## Example Organization Controls
+
+- **CC6.6.1** - TLS certificates are in place for web communications.
+- **CC6.6.2** - Firewall rulesets are configured to restrict unauthorized network traffic.
+- **CC6.6.3** - Network diagrams are documented and maintained.
+
+## Example Control Objectives
+
+- **Transmission security** - Data transmitted between systems is protected using encryption and secure protocols.
+
+## Example Control Implementations
+
+- **tailscale-vpn-access** - Infrastructure access is controlled through Tailscale mesh VPN. Implementation includes: - All production infrastructure requires Tailscale connection - Tailscale access control lists (ACLs) restrict access based on user role and team membership - Direct internet access to production infrastructure is prohibited - Device registration required in Tailscale admin console - Devices removed promptly upon employee departure
+
+## Example Evidence
+
+- **Tailscale ACL Configuration** - Export of Tailscale ACL policy showing access controls by team and role
+- **GCP Firewall Rules** - Export of virtual private cloud (VPC) firewall rules showing network access controls
+
+## Example Action Plans
+
+- **Cloudflare declarative configuration** - Currently Cloudflare is managed via dashboard (manual). This initiative moves to declarative configuration with Terraform or Pulumi for GitOps-style management.

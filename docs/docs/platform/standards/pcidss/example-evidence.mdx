@@ -5,18 +5,20 @@ sidebar_position: 2
 description: Example evidence artifacts for commonly manually evidenced PCI DSS control areas
 ---
 
+import Term from '@site/src/components/Term';
+
 # PCI DSS Example Evidence
 
-The table below lists commonly evidenced control areas for PCI DSS and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview). Several areas apply only to service providers or to environments with wireless networks; mark those out of scope where they do not apply.
+The table below lists commonly evidenced control areas for Payment Card Industry Data Security Standard (PCI DSS) and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview). Several areas apply only to service providers or to environments with wireless networks; mark those out of scope where they do not apply.
 
 | Control Area | Example Evidence |
 | ------------ | ---------------- |
 | Architecture diagram | An approved architecture diagram |
 | Annual risk assessment | The most recent completed risk assessment report |
 | Targeted risk analysis | The documented targeted risk analysis for each control frequency you define yourself and for each customized approach control, identifying the assets protected, the threats addressed, the factors affecting likelihood and impact, and the justification for the chosen frequency, with evidence of review within the last 12 months |
-| BCP/DR tests conducted annually | Results from the most recent business continuity or disaster recovery test |
+| Business continuity and disaster recovery (BCP/DR) tests conducted annually | Results from the most recent business continuity or disaster recovery test |
 | Firewall and router configuration standards | Documented testing and approval procedures for network connections and for firewall and router changes, plus example records showing a connection and a recent change were tested and approved |
-| CDE network diagram | The cardholder data environment (CDE) network diagram, including the date it was finalized or last updated |
+| Cardholder data environment (CDE) network diagram | The CDE network diagram, including the date it was finalized or last updated |
 | CDE network diagram review | Formal sign-off on the CDE network diagram with the reviewer's name and date |
 | Dataflow diagram | The CDE data flow diagram, including the date it was finalized |
 | Dataflow diagram review | Formal sign-off on the data flow diagram with the reviewer's name and date |
@@ -32,7 +34,7 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Secured router configuration files | Router configuration exports, screenshots of who can access them, and evidence running configurations match the standard |
 | Perimeter firewalls between CDE and wireless | Screenshots and configuration files from firewalls and routers between wireless networks and the CDE showing traffic restriction, plus the network diagram |
 | No direct public access to the CDE | Firewall and router configuration showing public access is limited to authorized publicly accessible services, protocols, and ports |
-| DMZ implemented | Network diagram showing a DMZ, plus firewall and router configurations showing it only passes approved services, ports, and protocols |
+| Demilitarized zone (DMZ) implemented | Network diagram showing a DMZ, plus firewall and router configurations showing it only passes approved services, ports, and protocols |
 | DMZ IP addresses | Configurations showing inbound internet traffic is restricted to authorized IP addresses within the DMZ |
 | Anti-spoofing measures | Screenshots showing anti-spoofing controls, such as blocking inbound DMZ traffic whose source IP matches internal CDE addresses |
 | Explicit authorization for CDE outbound traffic | Ruleset screenshots showing outbound traffic must be explicitly allowed |
@@ -76,13 +78,13 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Sensitive authentication data deleted after authorization | For non-issuers, documented deletion procedures plus screenshots showing the process is configured and executed as documented |
 | Full track contents not stored | Screenshots from example CDE components showing full magnetic stripe or chip track data is absent from transaction data, logs, history files, trace files, and database schemas and contents after authorization |
 | Card verification code not stored | Screenshots showing CVV2, CVC2, CID, and CAV2 values are absent from those same data sources after authorization |
-| PIN not stored | Screenshots showing PINs and encrypted PIN blocks are absent from those same data sources after authorization |
-| PAN masked when displayed | Policies listing which roles may see more than the first six and last four digits with justification, plus screenshots showing full PAN displays only for those roles and masked output everywhere else, on screen and on receipts |
+| Personal identification number (PIN) not stored | Screenshots showing PINs and encrypted PIN blocks are absent from those same data sources after authorization |
+| Primary account number (PAN) masked when displayed | Policies listing which roles may see more than the first six and last four digits with justification, plus screenshots showing full PAN displays only for those roles and masked output everywhere else, on screen and on receipts |
 | PAN unreadable wherever stored | Documentation of the protection method (strong one-way hashing, truncation, index tokens with secured pads, or strong cryptography with key management), plus screenshots of encrypted data in files, databases, removable media, and audit logs, and proof a hashed plus truncated pair cannot reconstruct the PAN |
 | Separate encrypted file system access | If disk encryption is used, configuration screenshots showing encrypted file system access uses a mechanism separate from OS authentication |
 | Cryptographic keys stored securely | Screenshots showing how cryptographic keys are stored securely |
 | Cardholder data on removable media encrypted | Configuration screenshots and examples of encrypted cardholder data on removable media, or the alternate method rendering it unreadable |
-| Cryptographic architecture description (service providers only) | A diagram or description of algorithms, protocols, and keys in use, including strength, expiration, per-key usage, and an inventory of HSMs and other secure cryptographic devices |
+| Cryptographic architecture description (service providers only) | A diagram or description of algorithms, protocols, and keys in use, including strength, expiration, per-key usage, and an inventory of hardware security modules (HSMs) and other secure cryptographic devices |
 | Restricted key access | Access lists for key storage locations verifying access is limited to the fewest custodians possible |
 | Secret and private key storage | Procedures requiring keys be stored under a key-encrypting key stored separately, in an HSM or approved device, or as key shares, plus screenshots showing storage matches the procedures |
 | Key storage locations limited | A list of all locations where keys are stored |
@@ -104,7 +106,7 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Proper encryption strength | Policies documenting required strength per methodology, plus screenshots showing listed methods implemented and others unsupported |
 | Cryptographic suite and protocol review | An inventory of the cipher suites and protocols in use, plus the documented annual review confirming they remain effective and the plan for responding to anticipated cryptographic weaknesses |
 | TLS enabled during transmission | Screenshots showing TLS in place, for example HTTPS in the URL wherever cardholder data is collected in a browser |
-| Strong encryption for wireless transmission | A list of wireless networks carrying cardholder data or touching the CDE, their documented standards, and configurations showing strong encryption with no WEP |
+| Strong encryption for wireless transmission | A list of wireless networks carrying cardholder data or touching the CDE, their documented standards, and configurations showing strong encryption with no Wired Equivalent Privacy (WEP) |
 | PAN secured in end-user messaging | If email or similar carries PANs, configuration screenshots showing protection plus a secured example message |
 | Unprotected PANs not sent via messaging | Written policies prohibiting unprotected PANs over end-user messaging platforms |
 | Anti-virus capability | Vendor documentation for CDE anti-virus plus tool screenshots verifying it detects, removes, and protects against known malware types, including viruses, trojans, worms, spyware, adware, and rootkits |
@@ -113,10 +115,10 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Anti-virus automatic and periodic scans | Configuration screenshots showing periodic scans run |
 | Anti-virus audit logs | Configuration screenshots showing anti-virus logs are enabled and retained at least one year, with three months immediately available |
 | Anti-virus cannot be disabled | Screenshots showing anti-virus actively running and locked so users cannot disable or alter it |
-| Phishing protection mechanisms | Configuration screenshots showing technical anti-phishing controls, such as SPF, DKIM, and DMARC records for your domains and link or attachment scanning in corporate email |
+| Phishing protection mechanisms | Configuration screenshots showing technical anti-phishing controls, such as Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) records for your domains and link or attachment scanning in corporate email |
 | Critical patches installed | Vendor patch lists for CDE systems plus screenshots showing critical security patches are installed |
 | Software and component inventory | An inventory of bespoke and custom software and the third-party components it embeds, such as a software bill of materials produced by a composition analysis tool |
-| Information security in SDLC | SDLC policy or procedures requiring information security throughout the system lifecycle |
+| Information security in the software development lifecycle (SDLC) | SDLC policy or procedures requiring information security throughout the system lifecycle |
 | Software development in line with PCI | SDLC policy requiring systems be developed and deployed per PCI DSS requirements, such as log generation and retention |
 | Removal of accounts before release | SDLC policy requiring pre-production accounts, user IDs, and passwords be removed before production deployment |
 | Code review prior to release | SDLC policy requiring review by someone other than the author against secure coding guidelines with corrections before release, plus example change records showing the process was followed and management approved |
@@ -142,7 +144,7 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Improper access control | Development policies covering user authentication, input sanitization, non-exposure of internal object references, and interfaces that block unauthorized functions |
 | Cross-site request forgery (CSRF) | Development policies ensuring applications do not rely on credentials and tokens browsers submit automatically |
 | Broken authentication and session management | Development policies covering secure session token flags, no session IDs in URLs, timeouts, and session ID rotation after login |
-| Public-facing web application vulnerability assessment | Documented web application scan policies and assessment records (at least annual, after changes, by an application security specialist, covering the vulnerability classes above, with correction and reassessment), or WAF screenshots showing it sits in front of public applications, runs current, logs, and blocks or alerts for immediate investigation |
+| Public-facing web application vulnerability assessment | Documented web application scan policies and assessment records (at least annual, after changes, by an application security specialist, covering the vulnerability classes above, with correction and reassessment), or web application firewall (WAF) screenshots showing it sits in front of public applications, runs current, logs, and blocks or alerts for immediate investigation |
 | Payment page script management | An inventory of all scripts loaded on payment pages with a written justification for each, plus evidence each script is authorized and its integrity verified, such as Content Security Policy configuration or subresource integrity attributes |
 | Payment page change and tamper detection | Configuration screenshots from the mechanism that detects unauthorized modifications to payment page headers and content as received by the browser, plus its alert logs and the documented evaluation frequency |
 | Secure systems and applications policy | Documented policies and procedures for developing and maintaining secure systems and applications |
@@ -174,7 +176,7 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Passwords different from last four | Configuration screenshots showing new passwords must differ from the previous four |
 | Customer password history (service providers only) | Internal and customer documentation requiring new customer passwords differ from the previous four |
 | Unique first-time passwords | Password procedures requiring unique per-user first-time and reset passwords that must change after first use, plus screenshots of the process |
-| MFA for non-admin remote CDE access | Configuration screenshots enforcing MFA for all non-administrative remote CDE access, plus authentication flow screenshots confirming |
+| Multi-factor authentication (MFA) for non-admin remote CDE access | Configuration screenshots enforcing MFA for all non-administrative remote CDE access, plus authentication flow screenshots confirming |
 | MFA for non-console administrative access | Configuration screenshots enforcing MFA for non-console administrative CDE access, plus authentication flow screenshots confirming |
 | MFA for remote network access | Configuration screenshots enforcing MFA for all remote network access to the CDE, with authentication flow evidence for both an administrative and a non-administrative user |
 | Authentication policy inclusions | Screenshots of where employees find authentication policies, plus documented guidance on strong credentials, protecting them, avoiding reuse, and changing suspected-compromised passwords |
@@ -255,7 +257,7 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Audit trail files protected | Screenshots or photos showing logs are protected from unauthorized access, modification, or deletion via access controls or physical or network segregation |
 | Audit trail files backed up | Backup procedures covering prompt backup to a centralized logging server or media, the backup frequency, and protections making the central copies hard to alter |
 | Logs for external-facing technologies | Screenshots showing logs from externally facing systems (DNS, firewalls, mail servers) flow to centralized logging |
-| File integrity monitoring on logs | Screenshots of FIM or change detection configured to alert on log alteration: system settings, monitored files, and generated alerts |
+| File integrity monitoring (FIM) on logs | Screenshots of FIM or change detection configured to alert on log alteration: system settings, monitored files, and generated alerts |
 | Daily log review policy for critical systems | A log review policy requiring at least daily review of security events, logs from systems handling cardholder or sensitive authentication data, critical components, and security-function servers |
 | Critical system logs reviewed daily | Screenshots showing the daily review process for those log categories |
 | Periodic log review policy for other systems | A policy requiring periodic review of remaining system logs on a schedule set by your risk assessment |
@@ -265,24 +267,24 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Audit log retention policy | The documented audit log retention policy |
 | Audit log retention period | Policy requiring at least one year of retention, plus screenshots showing logs or archives held that long |
 | Audit logs available for analysis | Policy requiring three months of logs immediately available, plus screenshots confirming |
-| Security control failure detection and reporting | Procedures for detecting and reporting failures of firewalls, IDS/IPS, FIM, anti-virus, physical and logical access controls, audit logging, and segmentation controls if used |
+| Security control failure detection and reporting | Procedures for detecting and reporting failures of firewalls, intrusion detection and prevention systems (IDS/IPS), FIM, anti-virus, physical and logical access controls, audit logging, and segmentation controls if used |
 | Security control failure alerts | Screenshots of alert configurations for each of those control systems |
 | Security control failure response | Procedures covering restoring the function, documenting failure duration and root cause, addressing issues that arose, risk assessing follow-on actions, preventing recurrence, and resuming monitoring |
 | Security control failure documentation | Failure records capturing root cause, start-to-end duration, and the remediation applied |
 | Network access monitoring policy | Documented policies for monitoring all access to network resources and cardholder data, plus screenshots showing where staff can access them |
 | Wireless access point detection | Documented procedures for detecting and identifying authorized and unauthorized wireless access points at least quarterly |
-| Unauthorized wireless access points identified | Procedures covering detection of inserted WLAN cards, portable devices turned into hotspots, and wireless devices attached to ports or network devices |
+| Unauthorized wireless access points identified | Procedures covering detection of inserted wireless local area network (WLAN) cards, portable devices turned into hotspots, and wireless devices attached to ports or network devices |
 | Quarterly wireless scan | Results from the most recent wireless scan, within the last quarter, identifying authorized and unauthorized access points across all facilities |
-| Wireless monitoring alerts | If automated monitoring is used (wireless IDS/IPS, NAC), alerting configuration screenshots showing personnel are notified |
+| Wireless monitoring alerts | If automated monitoring is used (wireless IDS/IPS, network access control (NAC)), alerting configuration screenshots showing personnel are notified |
 | Inventory of authorized wireless access points | A documented inventory of authorized wireless devices with a business justification for each |
 | Incident response for rogue access points | The incident response plan section covering response to unauthorized wireless access points |
 | Actions against rogue access points | A wireless scan from the past three months plus response documentation showing identified rogue devices were handled per the plan |
 | Quarterly internal vulnerability scans | Internal scan results from the past four quarters with supporting documentation (initial compliance requires only the most recent) |
 | High risk vulnerabilities resolved | Remediation documentation and rescan reports showing high-risk findings from quarterly internal scans were fixed |
 | Internal scans by competent independent party | For internal scanners: an org chart plus a resume or profile demonstrating competence; for external scanners: evidence of independence and competence |
-| Quarterly external vulnerability scans | ASV scan output from the past four quarters (initial compliance requires only the most recent) |
-| External rescans until pass | Documentation showing rescans continued until ASV Program Guide passing criteria were met, such as no CVSS 4.0+ findings |
-| External scans by approved vendor | Evidence the scans were performed by a PCI SSC Approved Scanning Vendor |
+| Quarterly external vulnerability scans | Approved Scanning Vendor (ASV) scan output from the past four quarters (initial compliance requires only the most recent) |
+| External rescans until pass | Documentation showing rescans continued until ASV Program Guide passing criteria were met, such as no Common Vulnerability Scoring System (CVSS) 4.0+ findings |
+| External scans by approved vendor | Evidence the scans were performed by a PCI Security Standards Council (SSC) ASV |
 | Scans after significant change | Policies defining what counts as a significant change, plus scan results showing scans follow significant CDE changes |
 | Vulnerability rescans | Initial and post-change scan reports showing external findings scored CVSS 4.0+ are gone and internal high-risk findings are remediated |
 | Rescans by competent independent party | The same competence and independence evidence as for scan personnel above |
@@ -319,7 +321,7 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | PCI DSS compliance accountability (service providers only) | The compliance program assigning overall accountability for maintaining compliance |
 | PCI DSS compliance charter (service providers only) | The charter describing how the program is organized and communicated to executive management |
 | Scope validation | Documentation of the PCI DSS scope review performed at least every 12 months and after significant changes, including any resulting scope changes and sign-off by the responsible party; service providers document the review every six months |
-| Designated information security official | Policies formally assigning information security responsibility to a CISO, information security officer, or similar role |
+| Designated information security official | Policies formally assigning information security responsibility to a chief information security officer (CISO), information security officer, or similar role |
 | Designated owner of security policies | Policies assigning responsibility for establishing, documenting, and distributing security policies and procedures |
 | Designated owner of security alert monitoring | Policies assigning responsibility for monitoring and analyzing alerts and distributing information to security and business unit personnel |
 | Designated owner of incident response procedures | Policies assigning responsibility for establishing, documenting, and distributing incident response and escalation procedures |
@@ -341,7 +343,7 @@ The table below lists commonly evidenced control areas for PCI DSS and the artif
 | Critical system coverage and response | The plan's coverage and response steps for all critical system components |
 | Payment brand response procedures | The plan's references to or inclusion of the applicable payment brands' incident response procedures |
 | Security breach response training | Policies requiring periodic training for staff with incident response roles |
-| Security monitoring system alerts | Incident response procedures covering alerts from IDS/IPS, firewalls, and file integrity monitoring |
+| Security monitoring system alerts | Incident response procedures covering alerts from IDS/IPS, firewalls, and FIM |
 | Incident response plan review and update | Plan procedures for folding lessons learned and industry developments back into the plan |
 | Response to cleartext PAN discovery | Incident response procedures covering the detection of cleartext PAN anywhere it is not expected to exist, plus incident records or test scenarios showing the procedures are executed |
 | Incident response review inclusions (service providers only) | The plan covering daily log reviews, firewall ruleset reviews, configuration standards for new systems, security alert response, and change management |

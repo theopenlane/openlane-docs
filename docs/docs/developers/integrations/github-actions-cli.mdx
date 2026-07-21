@@ -19,18 +19,12 @@ tags:
 ---
 
 # Setup Openlane Action
-:::note
-This document describes the [theopenlane/setup-openlane](https://github.com/theopenlane/setup-openlane) GitHub Action, which automates the installation and configuration of the Openlane CLI tool within GitHub Actions workflows.
-:::
 
-
+The [theopenlane/setup-openlane](https://github.com/theopenlane/setup-openlane) GitHub Action installs and configures the Openlane CLI in GitHub Actions workflows, so jobs can call `openlane` without scripting the download and setup themselves.
 
 ## How it works
-This GitHub Action automates the installation and setup of the Openlane CLI tool within your GitHub Actions workflows. It typically does the following:
-- Downloads and installs the Openlane CLI tool in your GitHub Actions job
-- Adds it to `PATH` so that subsequent workflow steps can use the CLI.
-- Optionally configures environment variables, tokens, or default settings for the CLI.
-- Simplifies your workflow so you don’t have to manually script install/setup each time.
+
+The action downloads the requested version of the Openlane CLI, installs it on the runner, and adds the binary to `PATH` so subsequent workflow steps can invoke `openlane` directly. When you supply a token input, it also configures the CLI to authenticate with the Openlane API.
 
 ## Getting Started
 

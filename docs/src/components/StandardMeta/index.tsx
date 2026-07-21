@@ -8,6 +8,7 @@ type Props = {
   established?: string;
   managedBy?: string;
   appliesTo?: string;
+  penalties?: string;
   certification?: string;
 };
 
@@ -38,6 +39,7 @@ const FIELDS: {key: keyof Props; label: string}[] = [
   {key: 'established', label: 'Established'},
   {key: 'managedBy', label: 'Managed By'},
   {key: 'appliesTo', label: 'Applies To'},
+  {key: 'penalties', label: 'Penalties'},
   {key: 'certification', label: 'Certification'},
 ];
 

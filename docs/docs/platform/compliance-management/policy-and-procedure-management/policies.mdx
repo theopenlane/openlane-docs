@@ -16,17 +16,19 @@ tags:
   - security
 ---
 
+import Term from '@site/src/components/Term';
+
 # Policies and Procedures
 
-Write, store, and maintain your policies and procedures in Openlane, alongside the controls they satisfy and the evidence that proves you follow them. A policy says what your organization requires; a procedure says how you carry it out. Together they're the documents an auditor reads first.
+A policy says what your organization requires; a procedure says how you carry it out. Together they're the documents an auditor reads first.
 
-Almost every framework asks for the same thing: written policies, approved by someone accountable, reviewed on a schedule, and actually available to your people. Keeping them in Openlane means the document, the controls it maps to, and the revision history live in one place: no hunting for `final_v3.docx` across shared drives mid-audit.
+Almost every framework asks for the same thing: written policies, approved by someone accountable, reviewed on a schedule, and actually available to your people. Keeping them in Openlane means the document, the <Term t="controls">controls</Term> it maps to, and the revision history live in one place: no hunting for `final_v3.docx` across shared drives mid-audit.
 
 Policies also do real work outside the audit: they tell employees exactly what's expected and who to report to when something goes wrong. A policy nobody can find, or nobody reads, fails both jobs.
 
 ## Policies vs. Procedures
 
-A policy sets the requirement ("production access requires MFA and quarterly review"); a procedure describes the steps to meet it (how to request access, who approves it, how the review runs). Openlane stores them as separate document types, but you work with them the same way: same editor, same import options.
+A policy sets the requirement ("production access requires multi-factor authentication (MFA) and quarterly review"); a procedure describes the steps to meet it (how to request access, who approves it, how the review runs). Openlane stores them as separate document types, but you work with them the same way: same editor, same import options.
 
 ## How Many Policies Do You Need
 
@@ -34,7 +36,7 @@ You likely need fewer than you think. A handful of well-scoped documents (inform
 
 When deciding whether to consolidate or split:
 
-- One policy can map to multiple controls. Evidence may differ per control even when the policy is consolidated, so grouping costs you nothing at audit time.
+- One policy can map to multiple controls. <Term t="evidence">Evidence</Term> may differ per control even when the policy is consolidated, so grouping costs you nothing at audit time.
 - Group until the concepts truly diverge. If the audiences or use cases are different, split: an IT security policy can cover a wide range of general user guidance, but infrastructure change management usually belongs on its own.
 - Favor fewer, clearer documents. Policies only work when people read and follow them, and a smaller set is easier to keep consistent and current.
 

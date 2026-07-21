@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Documentation References
 
-This page collects reusable markdown, table, and diagram patterns for writing Openlane documentation, along with links to the syntax references we use most often.
+Openlane documentation reuses a small set of markdown, table, and diagram patterns. Copy the examples below rather than writing the syntax from scratch, and consult these references for anything not covered here:
 
 * [Mermaid](https://mermaid-js.github.io/mermaid/#/)
 * [Material Icons](https://materialdesignicons.com/icon/)
@@ -14,7 +14,7 @@ This page collects reusable markdown, table, and diagram patterns for writing Op
 
 ## Tables
 
-There are two types of tables we can use in our documentation setup: traditional markdown (or github markdown), and HTML. Most folks already know what the markdown table looks like, but here's one for the unacquainted:
+Both markdown and HTML tables are supported, and each renders correctly in GitHub's UI, VSCode preview, and the built site. A markdown table looks like this:
 
 ```
 |       Header 1        |     Header 2          |     Header 3          |
@@ -29,7 +29,7 @@ Which renders like this:
 | stuff                 | about                 | docs and stuff        |
 
 
-We can also create tables in HTML and they are rendered in all the same ways (github's UI, Locally with VSCode, building our site, etc.). Using HTML provides a higher degree of control with respect to customization and is more or less "human readable". That said, HTML can be quite tedious to write and is less tolerant to error, but that has some benefits with things like linting and the ability to visually see errors. Use your best judgement.
+HTML tables provide a higher degree of control over customization and remain reasonably readable in source form. HTML is more tedious to write and less tolerant of errors than markdown, though the strictness helps with linting and makes mistakes easier to spot visually. Use your best judgment.
 
 An Example HTML table looks like this:
 

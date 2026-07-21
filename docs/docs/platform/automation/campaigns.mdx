@@ -1,7 +1,7 @@
 ---
 title: Campaigns
 description: Send and track bulk compliance requests
-sidebar_position: 5
+sidebar_position: 3
 compliance:
   - "SOC 2 CC1"
   - "SOC 2 CC2"
@@ -11,6 +11,7 @@ compliance:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Campaigns
 
@@ -39,13 +40,13 @@ Set a **due date** to give recipients a deadline. Anyone who has not finished by
 
 Each recipient is a target the campaign tracks individually. You can add targets one at a time, in bulk, by importing a CSV, or in the same call that creates the campaign (see the [examples](#examples) below). A target needs an email address and optionally a name; if the email matches an existing Openlane user or contact, we link the records automatically so campaign history shows up wherever that person appears.
 
-Every target carries its own state, from not started, through sent, to completed, with drafts and overdue recipients flagged along the way. Each target also records when it was last sent to and when it finished.
+Every target carries its own state, which is what lets you [resend](#follow-ups-and-resends) to only the recipients who have not finished instead of re-emailing the whole audience. Each target also records when it was last sent to and when it finished.
 
 ## Tracking Progress
 
 The console shows a live breakdown for each campaign: how many recipients have completed, who is still outstanding, and who is overdue. Underneath the rollup, each target tracks delivery-level detail: whether the email was delivered, opened, and clicked, how many times, and when the last event happened. That detail comes from delivery events reported by the email provider, so "sent but never opened" and "opened but never finished" are distinguishable states you can act on.
 
-When the last recipient completes, the campaign marks itself completed and records the completion time, so the finished record doubles as evidence that the run happened and who participated. The completion records, who was asked, who responded, and when, are the artifact an auditor samples.
+When the last recipient completes, the campaign marks itself completed and records the completion time, so the finished record doubles as <Term t="evidence">evidence</Term> that the run happened and who participated. The completion records, who was asked, who responded, and when, are the artifact an auditor samples.
 
 ## Follow-Ups and Resends
 

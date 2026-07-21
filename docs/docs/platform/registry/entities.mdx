@@ -2,20 +2,29 @@
 title: Vendors
 description: Manage vendors and third parties with clear risk and review context
 sidebar_position: 3
+compliance:
+  - "SOC 2 CC3"
+  - "SOC 2 CC5"
+  - "SOC 2 CC7"
+  - "SOC 2 CC9"
+  - "ISO 27001:2022 A.5.19-A.5.23"
+  - "GDPR"
+  - "HIPAA"
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Vendors
 
-Vendors, or "Entities" represent the external organizations your program depends on: suppliers / vendors, subprocessors, and service providers. An entity record holds the relationship in one place, with the risk classification, review schedule, contract terms, security posture, and supporting documents that due diligence requests and audits draw on. Entities support SOC 2 CC3, CC5, CC7, and CC9, ISO 27001 A.5 and A.15, and GDPR and HIPAA third-party accountability expectations.
+Vendors, or "Entities" represent the external organizations your program depends on: suppliers / vendors, <Term t="subprocessor">subprocessors</Term>, and service providers. An entity record holds the relationship in one place, with the risk classification, review schedule, contract terms, security posture, and supporting documents that due diligence requests and audits draw on.
 
-Vendor management programs generally tier vendors by potential impact and let the tier drive the depth and cadence of review: a critical data processor warrants an annual questionnaire, SOC 2 report review, and contract scrutiny, while a low-impact tool gets a lightweight check at renewal. We built tiering and review scheduling into the entity record so assessments recur instead of happening once at onboarding.
+Vendor management programs generally tier vendors by potential impact and let the tier drive the depth and cadence of review: a critical data processor warrants an annual questionnaire, System and Organization Controls 2 (SOC 2) report review, and contract scrutiny, while a low-impact tool gets a lightweight check at renewal. We built tiering and review scheduling into the entity record so assessments recur instead of happening once at onboarding.
 
 ## How Entities Work
 
-Each entity record moves through a lifecycle status that mirrors how vendor relationships actually progress, from draft and review through approval and active use to offboarding and termination.
+Each entity record carries a lifecycle status so terminated vendors stay auditable for the covered period instead of disappearing when the relationship ends, and teams evaluating a new vendor can see where it stands before due diligence completes.
 
 Two settings turn the record into a management tool: the vendor tier classifies how much scrutiny a relationship warrants, and the review frequency plus next review date turn that classification into a schedule. The record also holds the contract terms and security posture details you gather during reviews, and an approved-for-use flag gives teams a simple yes or no to check before adopting a vendor.
 

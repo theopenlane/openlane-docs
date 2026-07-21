@@ -18,7 +18,7 @@ keywords:
 
 ## Login Flows
 
-This page illustrates the major authentication paths supported by Openlane (credential, OAuth, passkey, and organization-enforced SSO), along with the WebFinger discovery endpoint and the SSO enforcement and provisioning behavior behind them. Use it when you need to trace how a login request moves through the handlers.
+Openlane supports credential, OAuth, passkey, and organization-enforced single sign-on (SSO) login, backed by a WebFinger discovery endpoint and SSO enforcement and provisioning logic. The flows below trace how each login request moves through the handlers, which tells you where to look when debugging a failed login.
 
 ### Credential Login
 
@@ -125,7 +125,7 @@ flowchart TD
     L --> M[User authenticated]
 ```
 
-Single sign-on logic is implemented in `internal/httpserve/handlers/sso.go`:
+SSO logic is implemented in `internal/httpserve/handlers/sso.go`:
 
 - `SSOLoginHandler` checks the organization policy via `fetchSSOStatus` and redirects to the configured IdP.
 - On return, `SSOCallbackHandler` exchanges the authorization code with `rp.CodeExchange` and retrieves the user data.
@@ -207,7 +207,7 @@ flowchart TD
     D -->|no| E[MustSSO = SSOEnforced]
 ```
 
-- TFA is independent: `TFARequired` mirrors `multifactor_auth_enforced` regardless of SSO exemption.
+- Two-factor authentication (TFA) is independent: `TFARequired` mirrors `multifactor_auth_enforced` regardless of SSO exemption.
 - The same decision is consulted at every entry point: `login.go` and `oauth_login.go` call `orgEnforcementsForUser` → `fetchSSOStatus`; `switch.go` calls `fetchSSOStatus` for the target org; `webfinger.go` exposes it for the UI. `fetchSSOStatus` (in `sso.go`) only applies the per-user exemptions when a user id is provided, so an `org:`-scoped webfinger lookup reports raw enforcement while an `acct:` lookup reports the specific user's requirement.
 
 ## JIT Provisioning
@@ -218,7 +218,7 @@ flowchart TD
 - When `jit_allowed_email_domains` is non-empty, the authenticated email's domain must be in the list; otherwise provisioning is skipped.
 - Existing members are left untouched; new memberships are created with the Member role under an org-scoped caller so the membership hooks resolve the organization.
 
-The callback also marks the IdP-verified email confirmed (via `setEmailConfirmed`) before session generation. That confirmation triggers the email-confirmation hook, which drives domain auto-join for **non-enforced** organizations (see below); the enforced target org is joined by JIT, not auto-join.
+The callback also marks the IdP-verified email confirmed (via `setEmailConfirmed`) before session generation. That confirmation triggers the email-confirmation hook, which drives domain auto-join for **non-enforced** organizations (see below); the enforced target org is joined by just-in-time (JIT) provisioning, not auto-join.
 
 ```mermaid
 flowchart TD

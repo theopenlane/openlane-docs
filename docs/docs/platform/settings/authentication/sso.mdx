@@ -15,10 +15,11 @@ keywords:
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # Single Sign-On (SSO)
 
-Openlane supports **OIDC (OpenID Connect)** for Single Sign-On (SSO). You will need the following values from your identity provider (IdP) to configure SSO in Openlane.
+Openlane supports **OpenID Connect (OIDC)** for single sign-on (SSO). You will need the following values from your identity provider (IdP) to configure SSO in Openlane.
 
 ## Prerequisites
 
@@ -62,7 +63,7 @@ We'll use Google as an example for creating this configuration:
 
 ## Settings reference
 
-The Authentication settings page surfaces a handful of controls that, together, determine how people sign in to your organization and how they become members. This table is a quick reference; the sections that follow explain how they interact.
+The Authentication settings page surfaces the controls that determine how people sign in to your organization and how they become members.
 
 | **Setting** | **What it does** |
 |-------------|------------------|
@@ -131,7 +132,7 @@ flowchart TD
 ```
 
 :::info
-**SSO exempt domains** is a living rule. If you remove a domain from the list, members on that domain are immediately subject to SSO enforcement again the next time they sign in. A per-member exemption, by contrast, stays in place until you remove it from that member.
+**SSO exempt domains** are re-evaluated at each sign-in. If you remove a domain from the list, members on that domain are subject to SSO enforcement again the next time they sign in. A per-member exemption persists until you remove it from that member.
 :::
 
 ## Getting people into your organization
@@ -215,7 +216,7 @@ flowchart TD
 
 
 <details>
-<summary>What is OIDC and how is it different from SAML or plain OAuth 2.0?</summary>
+<summary>What is OIDC and how is it different from Security Assertion Markup Language (SAML) or plain OAuth 2.0?</summary>
 
 OIDC is an identity layer on OAuth 2.0 that standardizes authentication via JSON/JWTs. Compared to SAML (XML/browser posts), it’s lighter; unlike plain OAuth, OIDC provides an ID token that asserts identity. Read more in the [OIDC overview](https://openid.net/developers/how-connect-works/).
 

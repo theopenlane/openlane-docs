@@ -12,13 +12,16 @@ tags:
   - trust center
   - subprocessors
   - vendors
+compliance:
+  - "SOC 2 CC3"
+  - "ISO 27001:2022 A.5.19-A.5.23"
 ---
 
 import Term from '@site/src/components/Term';
 
 # Subprocessors
 
-List the third-party services that process customer data on your behalf. This transparency helps customers understand your supply chain and meets regulatory requirements like GDPR.
+List the third-party services that process customer data on your behalf. This transparency helps customers understand your supply chain and meets regulatory requirements like General Data Protection Regulation (GDPR).
 
 ## What Counts as a Subprocessor
 
@@ -37,7 +40,7 @@ Not every vendor qualifies. The test is data involvement, not importance: your C
 
 ## Why Disclose Them
 
-Disclosure is a legal requirement before it is a courtesy. GDPR Article 28 requires that customers be informed about the subprocessors handling their personal data, CCPA expects documented data flows and third-party management, and SOC 2's common criteria (CC3) and ISO 27001's supplier controls both look for documented, monitored handling of data by third parties.
+Disclosure is a legal requirement before it is a courtesy. GDPR Article 28 requires that customers be informed about the subprocessors handling their personal data, and California Consumer Privacy Act (CCPA) expects documented data flows and third-party management. Auditors also ask for documented, monitored handling of data by third parties, and the published list is the visible proof of that practice.
 
 The list also does work for your customers: they need it to complete their own vendor assessments and disclosures, because your subprocessors are part of their supply chain too.
 
@@ -51,7 +54,7 @@ The public list is the visible end of a vendor management practice, and auditors
 <div className="card__header"><h4>Data processing agreements</h4></div>
 <div className="card__body">
 
-Every subprocessor should be under a DPA covering data handling, breach notification, and regulatory compliance; GDPR Article 28(3) makes this mandatory when personal data is in scope. You likely owe the mirror-image DPA to your own customers.
+Every subprocessor should be under a data processing agreement (DPA) covering data handling, breach notification, and regulatory compliance; GDPR Article 28(3) makes this mandatory when personal data is in scope. You likely owe the mirror-image DPA to your own customers.
 
 </div>
 </div>
@@ -61,7 +64,7 @@ Every subprocessor should be under a DPA covering data handling, breach notifica
 <div className="card__header"><h4>Due diligence before engagement</h4></div>
 <div className="card__body">
 
-Review a prospective subprocessor's security posture before customer data flows: their SOC 2 report or ISO 27001 certificate, and their incident response commitments. The [vendor records](../registry/entities.mdx) in your registry are where those reviews live.
+Review a prospective subprocessor's security posture before customer data flows: their System and Organization Controls 2 (SOC 2) report or ISO 27001 certificate, and their incident response commitments. The [vendor records](../registry/entities.mdx) in your registry are where those reviews live.
 
 </div>
 </div>
@@ -104,20 +107,10 @@ You can add subprocessors from our existing vendor list or create new ones. For 
 
 ### Categories
 
-Categorize subprocessors so visitors can quickly understand what each vendor does:
-
-| Category | Covers |
-| --- | --- |
-| **Infrastructure** | Cloud providers, hosting services |
-| **Analytics** | Analytics and monitoring tools |
-| **Communications** | Email, messaging, notification services |
-| **Payments** | Payment processing services |
-| **Security** | Security tools and services |
-| **Support** | Customer support platforms |
-| **Storage** | Data storage and backup services |
+Each subprocessor carries a category so visitors can tell at a glance what role a vendor plays without reading every description, which matters when a customer is scanning your list to complete their own vendor assessment.
 
 :::note
- If you need a category that doesn't exist, you can create custom categories to fit the vendors you actually use with the [custom enums](https://console.theopenlane.io/settings/custom-data?tab=enums) feature. Trust center subprocessor categories are based on the `Trust Center Subprocessor Kind` enum. Adding a new value to this enum will allow you to use that category when adding subprocessors. To read more about custom enums and how to use them, see [Custom Data](../settings/custom-data.mdx).
+If you need a category that doesn't exist, you can create custom categories to fit the vendors you actually use with the [custom enums](https://console.theopenlane.io/settings/custom-data?tab=enums) feature. Trust center subprocessor categories are based on the `Trust Center Subprocessor Kind` enum. Adding a new value to this enum will allow you to use that category when adding subprocessors. To read more about custom enums and how to use them, see [Custom Data](../settings/custom-data.mdx).
 :::
 
 ## Keeping the List Current
@@ -154,7 +147,7 @@ When implementing the embed code, keep the following in mind:
 - Set `data-theme` to "light", "dark", or "auto" (default, follows OS preference)
 
 :::info
-- If you use a strict CSP, allow scripts from: `trust.theopenlane.net`
+- If you use a strict Content Security Policy (CSP), allow scripts from: `trust.theopenlane.net`
 - Updates may take up to 5 minutes to reflect due to caching
 :::
 

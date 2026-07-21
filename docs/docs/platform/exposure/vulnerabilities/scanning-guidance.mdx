@@ -5,7 +5,7 @@ sidebar_position: 2
 description: Running a vulnerability scanning program that stands up to an audit
 compliance:
   - "SOC 2 CC7"
-  - "ISO 27001 A.8"
+  - "ISO 27001:2022 A.8.8"
   - "NIST 800-53 RA-5"
   - "PCI DSS 11"
 keywords:
@@ -24,9 +24,11 @@ tags:
   - exposure
 ---
 
+import Term from '@site/src/components/Term';
+
 # Vulnerability Scanning Guidance
 
-A vulnerability scanner probes your systems, collects what they reveal about themselves, and compares the results against databases of known weaknesses: unpatched software, known exploits, and misconfigurations. This page covers the scan types worth running, how often to run them, how to pick a scanner, and what an auditor actually wants to see, with the [scans](../scans.mdx) and [vulnerabilities](./overview.mdx) records in Openlane carrying the results.
+A vulnerability scanner probes your systems, collects what they reveal about themselves, and compares the results against databases of known weaknesses: unpatched software, known exploits, and misconfigurations. The [scans](../scans.mdx) and [vulnerabilities](./overview.mdx) records in Openlane carry the results, turning each run into <Term t="evidence">evidence</Term> an auditor can sample.
 
 ## Scan Types
 
@@ -36,7 +38,7 @@ Two axes matter more than any product feature list: where the scan runs from, an
 
 | Type | Runs from | What it shows |
 | ---- | --------- | ------------- |
-| Internal | Inside your network or VPC | What an insider (or an attacker who got in) can reach; strongest at verifying patch levels |
+| Internal | Inside your network or virtual private cloud (VPC) | What an insider (or an attacker who got in) can reach; strongest at verifying patch levels |
 | External | Outside your perimeter, through your public firewall | What an external attacker sees; validates your exposed surface |
 
 **By access level:**
@@ -56,7 +58,7 @@ Network-based scanners run everything from one place, which is simple to operate
 
 ## How Often to Scan
 
-SOC 2, ISO 27001, HIPAA, and GDPR require a vulnerability management process but set no fixed scanning frequency; NIST 800-53 makes scanning a control (RA-5) with organization-defined cadence; PCI DSS is the exception that prescribes, requiring quarterly external scans by an Approved Scanning Vendor plus rescans after significant changes.
+System and Organization Controls 2 (SOC 2), ISO 27001, Health Insurance Portability and Accountability Act (HIPAA), and General Data Protection Regulation (GDPR) require a vulnerability management process but set no fixed scanning frequency; the National Institute of Standards and Technology (NIST) 800-53 makes scanning a control (RA-5) with organization-defined cadence; Payment Card Industry Data Security Standard (PCI DSS) is the exception that prescribes, requiring quarterly external scans by an Approved Scanning Vendor plus rescans after significant changes.
 
 Absent a mandate, we recommend quarterly as the floor, monthly where infrastructure or application change is frequent, and a scan after any significant change regardless of schedule. Auditors test adherence rather than ambition: a documented quarterly schedule you actually follow beats a monthly one you miss. Set the cadence on your [scan records](../scans.mdx) (`scanSchedule`) to the frequency you genuinely run.
 
@@ -100,7 +102,7 @@ Two artifacts, per cycle:
 1. **The scan report itself**, dated and attributable to a target and scan type.
 2. **Evidence of what happened next**: remediation records for what you fixed, or a documented acceptance for what you chose not to fix.
 
-A clean report is not the goal and auditors don't expect one; they expect a working pipeline from detection to disposition. That pipeline is what the exposure section models: record each run as a [scan](../scans.mdx), let findings and [vulnerabilities](./overview.mdx) link back to the scan that surfaced them, resolve them through [remediations](../remediations.mdx), and document accepted items on the [risk register](../risks/risk-register.mdx) with an owner and review date. When the auditor samples a quarter, the answer is a filtered view rather than a folder hunt.
+A clean report is not the goal and auditors don't expect one; they expect a working pipeline from detection to disposition. That pipeline is what the exposure section models: record each run as a [scan](../scans.mdx), let <Term t="finding">findings</Term> and [vulnerabilities](./overview.mdx) link back to the scan that surfaced them, resolve them through [remediations](../remediations.mdx), and document accepted items on the [risk register](../risks/risk-register.mdx) with an owner and review date. When the auditor samples a quarter, the answer is a filtered view rather than a folder hunt.
 
 ## FAQ
 

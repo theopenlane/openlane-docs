@@ -18,10 +18,11 @@ tags:
 ---
 
 import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
 
-# GDPR (General Data Protection Regulation)
+# General Data Protection Regulation (GDPR)
 
-The GDPR (Regulation (EU) 2016/679, in force since May 25, 2018) governs how organizations collect, use, store, and transfer personal data of people in the EU. It's enforced by national data protection authorities, coordinated through the European Data Protection Board, and the penalties are substantial: fines run up to €20 million or 4% of global annual turnover, whichever is higher. There is no certificate to earn; compliance is a continuous legal obligation.
+The GDPR governs how organizations collect, use, store, and transfer <Term t="personal-information">personal data</Term> of people in the EU.
 
 <StandardMeta
   fullName={"General Data Protection Regulation"}
@@ -30,6 +31,7 @@ The GDPR (Regulation (EU) 2016/679, in force since May 25, 2018) governs how org
   established={"Adopted 2016; in force May 25, 2018"}
   managedBy={"National data protection authorities; European Data Protection Board"}
   appliesTo={"Organizations processing personal data of people in the EU"}
+  penalties={"Fines up to €20 million or 4% of global annual turnover, whichever is higher"}
   certification={"No: ongoing legal obligation enforced by supervisory authorities"}
 />
 
@@ -37,7 +39,7 @@ The GDPR (Regulation (EU) 2016/679, in force since May 25, 2018) governs how org
 
 GDPR reaches well beyond Europe. You're in scope if you:
 
-- Have an establishment in the EU or EEA, or
+- Have an establishment in the EU or European Economic Area (EEA), or
 - Offer goods or services to people in the EU (paid or free), or
 - Monitor the behavior of people in the EU, which includes routine analytics and ad tracking
 
@@ -66,7 +68,7 @@ Beyond the principles and rights, five requirements drive most GDPR programs:
 | Records of processing | 30 | A maintained inventory of what you process, why, and where it flows |
 | Breach notification | 33-34 | 72 hours to your supervisory authority; affected individuals without undue delay when the risk is high |
 | Data Protection Impact Assessments | 35 | Assessment before high-risk processing such as large-scale monitoring or special category data |
-| Data Protection Officer | 37 | Mandatory for public authorities and for organizations whose core activities involve large-scale systematic monitoring or large-scale special category processing |
+| Data Protection Officer (DPO) | 37 | Mandatory for public authorities and for organizations whose core activities involve large-scale systematic monitoring or large-scale special category processing |
 | International transfers | Chapter V | Data leaving the EU needs an adequacy decision, standard contractual clauses, or another Chapter V mechanism |
 
 ## Where to Start
@@ -74,12 +76,12 @@ Beyond the principles and rights, five requirements drive most GDPR programs:
 There is no external audit to schedule; GDPR follows a self-assessment model, and a supervisory authority can ask you to demonstrate compliance at any time. For an organization starting from zero, the early work is mostly mapping and documentation, and sequence matters:
 
 1. **Inventory your personal data.** Map what you process and where it lives for each population separately: customers, prospects, website visitors, employees, and job applicants. Each has its own purposes, lawful bases, and data flows.
-2. **Involve legal counsel early.** GDPR is a law, not a technical standard. Your privacy notice, DPAs, and lawful basis decisions should get legal review; template documents alone do not establish compliance. We also recommend periodic internal gap assessments covering data flows and privacy risks, validated by a privacy attorney or qualified consultant where the stakes warrant it.
+2. **Involve legal counsel early.** GDPR is a law, not a technical standard. Your <Term t="privacy-notice">privacy notice</Term>, DPAs, and lawful basis decisions should get legal review; template documents alone do not establish compliance. We also recommend periodic internal gap assessments covering data flows and privacy risks, validated by a privacy attorney or qualified consultant where the stakes warrant it.
 3. **Settle the role questions.** Determine whether you need a DPO under Article 37, and, if you have no EU establishment but are still in scope, whether you need to appoint an EU representative under Article 27.
 4. **Publish or update your privacy notice** covering website visitors and prospects as well as product users, and have legal review it against the regulation. If your site sets non-essential cookies, [cookie consent](./cookie-consent.mdx) is part of this step.
-5. **Put DPAs in place in both directions:** with your customers, where you act as their processor, and with every subprocessor your product sends personal data to.
+5. **Put DPAs in place in both directions:** with your customers, where you act as their processor, and with every <Term t="subprocessor">subprocessor</Term> your product sends personal data to.
 6. **Build your records of processing.** Two ROPAs cover most SaaS companies: one for the product and its subprocessor data flows (noting any special category data), and one for marketing and sales operations such as CRM usage and deletion practices.
-7. **Stand up a DSAR intake channel** before the first request arrives, such as a monitored privacy@ inbox or a web form, with a documented process that meets the one-month response deadline.
+7. **Stand up a data subject access request (DSAR) intake channel** before the first request arrives, such as a monitored privacy@ inbox or a web form, with a documented process that meets the one-month response deadline.
 
 For the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).
 
@@ -93,7 +95,7 @@ No universally recognized one. Article 42 allows for certification schemes and a
 </details>
 
 <details>
-<summary>Do we need a Data Protection Officer?</summary>
+<summary>Do we need a DPO?</summary>
 
 Only if you hit an Article 37 trigger: public authority, large-scale systematic monitoring, or large-scale special category processing. Many companies appoint a privacy lead anyway; just don't title them "DPO" casually, because the role carries statutory independence requirements.
 

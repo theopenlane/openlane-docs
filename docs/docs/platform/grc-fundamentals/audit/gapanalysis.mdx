@@ -18,9 +18,11 @@ keywords:
   - compliance monitoring
 ---
 
+import Term from '@site/src/components/Term';
+
 # Gap Analysis
 
-A gap analysis compares your organization's current controls and processes against the regulations and standards you are targeting, and identifies where the shortcomings are: gaps in policies, procedures, communication, and training that could result in security flaws, regulatory non-compliance, or non-adherence to best practices. It is a forward-looking exercise: you examine the current implementation, identify areas of concern, and produce a corrective action plan that is reviewed, agreed upon, and approved so remediation has clear guidance.
+A gap analysis compares your organization's current controls and processes against the regulations and standards you are targeting, and identifies where the shortcomings are: gaps in policies, procedures, communication, and training that could result in security flaws, regulatory non-compliance, or non-adherence to best practices. It is a forward-looking exercise: you examine the current implementation, identify areas of concern, and produce a corrective <Term t="action-plan">action plan</Term> that is reviewed, agreed upon, and approved so remediation has clear guidance.
 
 ## When to Do a Gap Analysis
 
@@ -28,7 +30,7 @@ A gap analysis is something to undertake regularly at an organizational level, o
 
 | Trigger | Why It Matters |
 | ------- | -------------- |
-| Regulatory changes | Regulation changes all the time: take the EU's 2022 Digital Operational Resilience Act, or the annual regulatory amendments to HIPAA and OSHA in the U.S. When new legislation or amendments come into force, a gap analysis identifies whether your current policies and procedures meet the new requirements. |
+| Regulatory changes | Regulation changes all the time: take the EU's 2022 Digital Operational Resilience Act, or the annual regulatory amendments to Health Insurance Portability and Accountability Act (HIPAA) and the Occupational Safety and Health Administration (OSHA) in the U.S. When new legislation or amendments come into force, a gap analysis identifies whether your current policies and procedures meet the new requirements. |
 | Before an audit | The gap analysis is the first step of [audit preparation](./index.mdx): it tells you how much remediation work sits between you and the start of the audit period, which drives your timeline. |
 | After risk assessments | A [risk assessment](../../exposure/risks/risk-management-guide.mdx) identifies potential threats and vulnerabilities but doesn't necessarily offer specific guidance on addressing them. A post-assessment gap analysis outlines the differences between your current practices and the controls needed to mitigate identified risks, letting you prioritize interventions and target resources towards the most significant weaknesses. |
 | During internal audits | A gap analysis narrows the audit's focus to high-risk areas and can uncover hidden vulnerabilities, helping you focus strategically on the areas that matter most. |
@@ -38,20 +40,24 @@ A gap analysis is something to undertake regularly at an organizational level, o
 
 The key steps are as follows.
 
+<Steps>
+
 1. Identify the scope of your gap analysis
-    1. Which regulations or standards are you targeting? This could be anything from industry-specific frameworks like HIPAA and OSHA to broader guidelines like ISO 26000. For a SOC 2 gap analysis, scope to the Trust Services Criteria relevant to the audit, as defined during [audit scoping](./scoping.mdx).
-    1. What areas of your organization will be assessed? Focus on departments, processes, or systems relevant to the chosen regulations.
+    * Which regulations or standards are you targeting? This could be anything from industry-specific frameworks like HIPAA and OSHA to broader guidelines like ISO 26000. For a System and Organization Controls 2 (SOC 2) gap analysis, scope to the <Term t="trust-services-criteria">Trust Services Criteria</Term> relevant to the audit, as defined during [audit scoping](./scoping.mdx).
+    * What areas of your organization will be assessed? Focus on departments, processes, or systems relevant to the chosen regulations.
 1. Compare existing practices against the requirements
-    1. Identify all controls and processes relevant to the organization for the chosen scope, then perform a line-by-line review against the requirements. The inconsistencies you find are your compliance gaps.
-    1. Include all relevant parties in this review, using inquiry and walkthroughs to get a precise understanding of how each control actually operates. Involving the people who run the processes gets you accurate answers and establishes accountability for fixing what you find.
-    1. Prioritize the identified gaps based on their potential impact and risk severity. Consider factors like financial penalties, reputational damage, and operational disruptions.
+    * Identify all controls and processes relevant to the organization for the chosen scope, then perform a line-by-line review against the requirements. The inconsistencies you find are your compliance gaps.
+    * Include all relevant parties in this review, using inquiry and walkthroughs to get a precise understanding of how each control actually operates. Involving the people who run the processes gets you accurate answers and establishes accountability for fixing what you find.
+    * Prioritize the identified gaps based on their potential impact and risk severity. Consider factors like financial penalties, reputational damage, and operational disruptions.
 1. Build a remediation plan
-    1. For each gap, create a specific action plan: what needs to be implemented or improved to close it?
-    1. Set clear timelines, assign responsibilities, and allocate resources for each action item. Timelines keep remediation on track and give stakeholders visibility into the forward-looking plan.
-    1. Prioritize critical actions based on the severity of the risks.
+    * For each gap, create a specific action plan: what needs to be implemented or improved to close it?
+    * Set clear timelines, assign responsibilities, and allocate resources for each action item. Timelines keep remediation on track and give stakeholders visibility into the forward-looking plan.
+    * Prioritize critical actions based on the severity of the risks.
 1. Track progress
-    1. Conduct regular reviews to assess the effectiveness of your implemented controls and adherence to the requirements.
-    1. Be prepared to adapt the action plan based on ongoing monitoring and regulatory changes.
+    * Conduct regular reviews to assess the effectiveness of your implemented controls and adherence to the requirements.
+    * Be prepared to adapt the action plan based on ongoing monitoring and regulatory changes.
+
+</Steps>
 
 ## From Gaps to Controls
 
@@ -77,4 +83,4 @@ The clearest benefit is that a gap analysis helps your organization mitigate ris
 - **Prioritized compliance efforts.** Revealing the severity and impact of each gap lets you focus resources on the most pressing needs first.
 - **Proactive risk mitigation.** Gaps hidden in your processes surface before they become financial, legal, operational, or reputational damage.
 - **Cost savings.** Strategic allocation of personnel and technology investment, and avoiding the penalties and scrutiny that come with non-compliance.
-- **More efficient processes.** Identifying and fixing weak spots refines policies, updates procedures, and strengthens internal controls along the way.
+- **More efficient processes.** Identifying and fixing weak spots refines policies, updates procedures, and strengthens <Term t="internal-control">internal controls</Term> along the way.

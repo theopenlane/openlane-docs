@@ -1,7 +1,7 @@
 ---
 title: Questionnaires
 description: Define questionnaires and collect structured responses at scale
-sidebar_position: 6
+sidebar_position: 4
 compliance:
   - "SOC 2 CC2"
   - "SOC 2 CC7"
@@ -10,6 +10,7 @@ compliance:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Questionnaires
 
@@ -17,7 +18,7 @@ Questionnaires are the customizable, reusable definitions you pair with [campaig
 
 Two objects work together. The assessment (this page) is the reusable questionnaire definition: the questions, the type (internal or external), and the response window. A [campaign](./campaigns.mdx) is the distribution run: who receives it, per-recipient completion tracking, and follow-up sends to anyone who hasn't finished. Define once, run repeatedly; the same vendor questionnaire run as an annual campaign produces year-over-year comparable responses.
 
-Together they form the questionnaire half of an end-to-end third-party risk management (TPRM) workflow: [vendor records](../registry/entities.mdx) hold the relationship and its review cadence, campaigns distribute the due-diligence questionnaire to [vendor contacts](../registry/contacts.mdx), and completed responses become the auditable record (who answered, what they said, and when) that SOC 2 governance criteria and ISO 27001 periodic-review and supplier-evaluation requirements expect. The same machinery runs internal attestations and periodic self-assessments.
+Together they form the questionnaire half of an end-to-end <Term t="third-party-risk-management">third-party risk management (TPRM)</Term> workflow: [vendor records](../registry/entities.mdx) hold the relationship and its review cadence, campaigns distribute the due-diligence questionnaire to [vendor contacts](../registry/contacts.mdx), and completed responses become the auditable record (who answered, what they said, and when) that periodic-review and supplier-evaluation requirements expect. The same machinery runs internal attestations and periodic self-assessments.
 
 ## Building a Questionnaire
 
@@ -53,7 +54,7 @@ flowchart TD
 
 ## Tracking Responses and Progress
 
-Every recipient has a response record that tracks when the questionnaire was assigned, when they started, and when they submitted, along with the current state (not started, sent, in draft, completed, or overdue). Responses past their due date flip to overdue automatically.
+Every recipient has a response record that tracks when the questionnaire was assigned, when they started, and when they submitted. Responses past their due date flip to overdue automatically, so identifying who needs follow-up never requires checking dates by hand.
 
 Delivery is tracked at the email level too: whether the message was delivered, opened, and clicked, and how many times. That lets you distinguish a vendor who never received the email from one who opened it and stalled, and to target [resends](./campaigns.mdx#follow-ups-and-resends) accordingly.
 
@@ -63,7 +64,7 @@ Submitted answers are stored with the response, so the record an auditor sees ca
 
 - **Vendor due diligence**: a vendor risk team sends its security baseline questionnaire to every third party and tracks completion before renewal decisions
 - **Policy attestation**: a compliance team runs a quarterly acknowledgment campaign across all active personnel, resending to anyone incomplete
-- **Periodic reviews**: recurring internal self-assessments that keep review evidence current between audits
+- **Periodic reviews**: recurring internal self-assessments that keep review <Term t="evidence">evidence</Term> current between audits
 
 ## FAQ
 
@@ -106,12 +107,6 @@ Yes. Responses can be saved as drafts and submitted later; the tracking record s
 <summary>Where do responses end up?</summary>
 
 Responses live on the campaign, tracked per recipient. Completion records serve as evidence of participation for audits.
-
-</details>
-<details>
-<summary>How come no one responds to my kick-ass questionaires?</summary>
-
-Just give it time :)
 
 </details>
 

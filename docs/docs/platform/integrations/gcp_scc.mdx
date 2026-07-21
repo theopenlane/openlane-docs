@@ -3,13 +3,18 @@ title: GCP Security Command Center
 description: Google Cloud SCC integration guide for security findings ingestion and vulnerability management
 sidebar_position: 9
 sidebar_label: GCP Security Command Center
+compliance:
+  - "SOC 2 CC7"
+  - "SOC 2 CC8"
+  - "ISO 27001:2022 A.8.8"
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # ![gcp scc integration](./assets/gcp_scc.png) Google Cloud SCC Integration Guide
 
-If your team runs infrastructure on Google Cloud, this integration brings Security Command Center findings into Openlane automatically. You get a single place to track cloud security findings, remediation timelines, and SLA compliance (SOC 2: CC7, CC8; ISO 27001: A.12.6).
+If your team runs infrastructure on Google Cloud, this integration brings Security Command Center (SCC) <Term t="finding">findings</Term> into Openlane automatically. You get a single place to track cloud security findings, remediation timelines, and service level agreement (SLA) compliance.
 
 ## Integration Snapshot
 
@@ -17,19 +22,19 @@ If your team runs infrastructure on Google Cloud, this integration brings Securi
 |---|---|
 | Primary use case | Continuous ingestion of SCC findings into Openlane |
 | Data direction | One-way (GCP -> Openlane), read-only |
-| GCP services used | Security Command Center, IAM |
+| GCP services used | SCC, IAM |
 | Setup model | Service account key JSON |
 | Openlane records created | Findings, Vulnerabilities and Risks (created or updated), linked to your SCC integration |
 
 ## Key Capabilities
 
-- **Findings Ingestion:** Pulls SCC findings and normalizes them into Openlane vulnerability records, giving you a unified view for remediation tracking and SLA compliance (SOC 2: CC7, CC8).
+- **Findings Ingestion:** Pulls SCC findings and normalizes them into Openlane vulnerability records, giving you a unified view for remediation tracking and SLA compliance.
 - **Scoped Collection:** Supports source and filter scoping to match your operating model and compliance boundary.
 
 ## Prerequisites
 
-- `gcloud` CLI access with permissions to create service accounts and grant IAM bindings.
-- Security Command Center API enabled in the target project.
+- `gcloud` CLI access with permissions to create service accounts and grant identity and access management (IAM) bindings.
+- SCC API enabled in the target project.
 - Organization ID or project ID to define your SCC collection scope.
 
 ## Step-by-Step Setup
@@ -94,7 +99,7 @@ The script prints the service account key JSON and other values to paste into Op
 
    | Setting | Description |
    |---|---|
-   | **Filter Expression** | CEL expression evaluated against each finding; only findings that match are ingested |
+   | **Filter Expression** | Common Expression Language (CEL) expression evaluated against each finding; only findings that match are ingested |
 
    Filter expression examples:
 
@@ -127,13 +132,13 @@ This integration is read-only and one-directional. Openlane validates connectivi
 Each SCC finding becomes a normalized vulnerability record in Openlane:
 
 - Converts findings into vulnerability payloads with severity, state, category, timestamps, and source URIs preserved.
-- Deduplicates by `externalID` (with CVE fallback when available), so repeated syncs update existing records instead of creating duplicates.
+- Deduplicates by `externalID`, with Common Vulnerabilities and Exposures (CVE) fallback when available, so repeated syncs update existing records instead of creating duplicates.
 - Links each vulnerability to the SCC integration that produced it.
 - Stores raw payload data if raw payload retention is enabled in your integration config.
 
 ### What You Can Do Next
 
-Once vulnerabilities land in Openlane, you can link them to affected assets, create remediation tasks, and track resolution against SLAs. This saves you from manually gathering evidence when an auditor asks about SOC 2 CC7 (system monitoring) or ISO 27001 A.12.6 (technical vulnerability management).
+Once vulnerabilities land in Openlane, you can link them to affected assets, create remediation tasks, and track resolution against SLAs. This saves you from manually gathering evidence when an auditor asks for system monitoring or vulnerability management evidence.
 
 ## Disconnect
 

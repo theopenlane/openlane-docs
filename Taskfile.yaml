@@ -59,12 +59,18 @@ tasks:
     desc: generate graphql docs
     cmd: npx docusaurus docs:generate:graphql
 
+  generate-glossary-data:
+    dir: docs
+    desc: regenerate the glossary tooltip data from the glossary page
+    cmd: node scripts/glossary-data.mjs
+
   generate:
     dir: docs
     desc: generate all docs
     cmds:
       - task: regenerate-api-docs
       - task: generate-graphql-docs
+      - task: generate-glossary-data
 
   dev:
     dir: docs

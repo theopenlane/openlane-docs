@@ -3,32 +3,34 @@ title: Tailscale
 description: Tailscale integration guide for device inventory and identity governance
 sidebar_position: 17
 sidebar_label: Tailscale
+compliance:
+  - "SOC 2 CC6"
+  - "SOC 2 CC6.2"
+  - "SOC 2 CC6.3"
+  - "SOC 2 CC6.6"
+  - "SOC 2 CC6.8"
+  - "ISO 27001:2022 A.5.15-A.5.18"
+  - "ISO 27001:2022 A.8.1"
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # ![tailscale integration](./assets/tailscale.png) Tailscale Integration Guide
 
-If your organization uses Tailscale to manage private network connectivity, this integration pulls device inventory and directory data into Openlane so you have visibility into who is on your tailnet and what devices are enrolled, supporting access control evidence for SOC 2 CC6 and ISO 27001 A.9, A.12.
+If your organization uses Tailscale to manage private network connectivity, this integration pulls device inventory and directory data into Openlane so you have visibility into who is on your tailnet and what devices are enrolled, supporting access control and endpoint <Term t="evidence">evidence</Term>.
 
 ## Key Capabilities
 
 - **OAuth Authentication:** Connects using a scoped OAuth credential from the Tailscale admin panel, so there are no long-lived API keys to manage and access is scoped to specific read-only operations.
-- **Directory Sync:** Reads users from your tailnet, giving you the identity baseline for access reviews and onboarding/offboarding evidence (SOC 2: CC6.2, CC6.3).
-- **Asset Sync:** Ingests enrolled devices with route and posture attribute metadata, supporting device inventory and endpoint visibility (SOC 2: CC6.6, CC6.8; ISO 27001: A.12).
+- **Directory Sync:** Reads users from your tailnet, giving you the identity baseline for access reviews and onboarding/offboarding evidence.
+- **Asset Sync:** Ingests enrolled devices with route and posture attribute metadata, supporting device inventory and endpoint visibility.
 - **Vendor Creation:** If the Tailscale vendor record does not exist in Openlane, the integration creates it automatically on first sync.
 - **Flexible Group Sync:** Group sync can be disabled independently if you only need user and device data.
 
 ## Prerequisites
 
 - Tailscale admin access to create OAuth credentials under [Trust credentials](https://login.tailscale.com/admin/settings/trust-credentials).
-
-## Supported Operations
-
-| Operation | Description |
-|---|---|
-| `DirectorySync` | Collect Tailscale users and groups and emit directory ingest envelopes |
-| `AssetSync` | Collect enrolled Tailscale devices and emit asset ingest envelopes |
 
 ## Step-by-Step Setup
 
@@ -89,7 +91,7 @@ Optionally configure which data is collected and how records are filtered before
 | Setting | Description |
 |---|---|
 | **Disable Group Sync** | When enabled, only users are synced; groups and memberships are skipped |
-| **Filter Expression** | Optional CEL expression evaluated against each record; only records that match are ingested (allows inclusion) |
+| **Filter Expression** | Optional Common Expression Language (CEL) expression evaluated against each record; only records that match are ingested (allows inclusion) |
 
 Filter expression example:
 
@@ -118,14 +120,7 @@ After saving, Openlane runs a health check against the Tailscale API and display
 
 ## What Openlane Syncs
 
-Openlane reads the following resources from Tailscale and normalizes them into its internal schemas:
-
-| Resource | Tailscale Source | Notes |
-|---|---|---|
-| **DirectoryAccount** | Tailscale users | All tailnet members are synced |
-| **DirectoryGroup** | Tailscale groups | Skipped when Disable Group Sync is enabled |
-| **DirectoryMembership** | Group membership relationships | Skipped when Disable Group Sync is enabled |
-| **Asset** | Enrolled devices | Includes device metadata |
+Openlane reads users, groups, and group memberships from your tailnet, along with every enrolled device and its metadata. All tailnet members are synced; groups and memberships are skipped when **Disable Group Sync** is enabled, which is useful if you only need user and device data.
 
 Directory data feeds into User Access Reviews, onboarding/offboarding verification, and identity scope validation. Device data populates your asset inventory with endpoint context for access control evidence.
 

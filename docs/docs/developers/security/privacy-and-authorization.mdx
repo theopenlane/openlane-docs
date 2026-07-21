@@ -39,7 +39,7 @@ Runs first on every operation. Handles special cases that should bypass normal a
 
 ### Custom Rules
 
-Entity-specific rules defined in each schema's `Policy()` method. This is where FGA checks happen:
+Entity-specific rules defined in each schema's `Policy()` method. This is where fine-grained authorization (FGA) checks happen:
 
 ```go
 func (Program) Policy() ent.Policy {

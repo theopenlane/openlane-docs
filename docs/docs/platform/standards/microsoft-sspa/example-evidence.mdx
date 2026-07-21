@@ -7,14 +7,14 @@ description: Example evidence artifacts for commonly manually evidenced Microsof
 
 # Microsoft SSPA Example Evidence
 
-The table below lists commonly evidenced control areas for Microsoft SSPA and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
+The table below lists commonly evidenced control areas for Microsoft Supplier Security and Privacy Assurance (SSPA) and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
 
 | Control Area | Example Evidence |
 | ------------ | ---------------- |
 | Periodic risk assessment | The most recent risk assessment report, dated within the current review period |
 | Annual penetration testing | The latest penetration test report covering scope, methodology, findings, and remediation plans; retest reports showing findings were resolved |
 | Vulnerability scanning | Internal scan results covering each of the last four quarters; external scans run after significant changes, with a policy defining what counts as significant; remediation records and rescan reports for high-risk findings |
-| Asset inventory | Asset listings or CMDB exports plus cloud console screenshots showing deployed resources; a documented list of external systems with owners and locations |
+| Asset inventory | Asset listings or configuration management database (CMDB) exports plus cloud console screenshots showing deployed resources; a documented list of external systems with owners and locations |
 | Supported system components | Asset management policy and screenshots of build or configuration standards showing components remain under vendor support |
 | Business continuity and disaster recovery | The current business continuity plan, a business impact analysis, and results from a recent continuity test with identified issues and corrective actions |
 | Personnel screening | Records from a recent hire's screening, such as interview schedules, interviewer feedback, applicant tracking exports, and credential checks (redacted as needed) |
@@ -30,7 +30,7 @@ The table below lists commonly evidenced control areas for Microsoft SSPA and th
 | Change management | Pull request or ticket screenshots showing review and approval by authorized personnel before production deployment, plus post-implementation review |
 | Security impact assessment for changes | Change management policy with completed impact assessments and post-implementation validation records |
 | Secure development process | Software development lifecycle documentation with security activities at each stage and policies protecting custom-developed code |
-| Static application security testing | Evidence of SAST running in the CI/CD pipeline, or screenshots of the tool's configuration and dashboards |
+| Static application security testing (SAST) | Evidence of SAST running in the CI/CD pipeline, or screenshots of the tool's configuration and dashboards |
 | Hard-coded credentials | Secret scanning configuration in source repositories or other mechanisms that detect credentials in code |
 | Encryption strength | Policies documenting required encryption strength with screenshots confirming deployment |
 | Encryption in transit | Screenshots showing TLS on data transmission paths, such as HTTPS on pages that collect sensitive data |
@@ -43,20 +43,20 @@ The table below lists commonly evidenced control areas for Microsoft SSPA and th
 | Intrusion detection and prevention | Screenshots from your cloud provider's threat detection service showing it is enabled and detecting threats; evidence that signatures are kept current |
 | Logging and monitoring | Logging and monitoring policy; audit log configuration screenshots with sample logs; documented procedures for following up on anomalies and exceptions |
 | File integrity monitoring | Alerting and change detection configuration showing critical file comparisons run on a defined schedule |
-| Data loss prevention | DLP tool screenshots plus an example of a blocked transmission containing sensitive data |
-| Mobile device management | Screenshots from the MDM console showing enforced security policies |
+| Data loss prevention (DLP) | DLP tool screenshots plus an example of a blocked transmission containing sensitive data |
+| Mobile device management (MDM) | Screenshots from the MDM console showing enforced security policies |
 | Telework and endpoint devices | Remote work or information security policy covering endpoint device requirements |
 | Acceptable use | Acceptable use policy requiring explicit approval for end-user technologies; policy requiring devices to be tagged with owner and contact information |
 | Backups | Tickets or monitoring records from the current period showing backup failures are tracked; a documented security review of offline backup media storage from the past 12 months |
 | Data disposal | Data deletion and media destruction policies covering shredding, secured storage containers, and secure electronic deletion; a recent destruction certificate or decommissioning ticket; photos of secure disposal bins; cloud storage lifecycle rules that delete data automatically |
 | Customer data deletion on termination | System logs showing deletion, screenshots of decommissioned resources, and deletion agreement documentation |
-| Vendor management | Due diligence policy and procedures; executed agreements containing privacy and security requirements, such as data processing agreements or business associate agreements; documented review steps and approvals for new and existing contracts; records showing vendor service changes required management review |
+| Vendor management | Due diligence policy and procedures; executed agreements containing privacy and security requirements, such as data processing agreements (DPAs) or business associate agreements; documented review steps and approvals for new and existing contracts; records showing vendor service changes required management review |
 | Incident response and breach notification | Formal breach notification procedures and the template used to notify affected parties; policy requiring staff with incident response roles to receive response training |
 | Customer commitments | An executed service agreement, publicly available terms of service, and screenshots of the account sign-up flow |
 | Privacy notice | A link to the current public privacy policy covering purposes, lawful bases, and data subject rights; registration flow screenshots showing the notice is presented before sign-up completes |
 | Data subject consent | Documentation of how consent is captured, screenshots of consent mechanisms, and records of consent obtained |
 | Data minimization | A documented data minimization policy with technical implementation evidence; screenshots showing optional data collection is disabled by default |
-| Personal data inventory and ROPA | A formal inventory of systems storing or processing personal data including categories, locations, data elements, and owners; a completed record of processing activities covering each population whose data you process |
+| Personal data inventory and record of processing activities (ROPA) | A formal inventory of systems storing or processing personal data including categories, locations, data elements, and owners; a completed ROPA covering each population whose data you process |
 | Data subject requests | Procedures for receiving and fulfilling requests, a log of requests with resolution records, identity verification procedures for requesters, and published submission channels such as a web form or dedicated inbox |
 | Right to access | The access request procedure and redacted records of completed requests |
 | Rights of minors | Privacy policy language and internal procedures covering requests involving data subjects under 16 |

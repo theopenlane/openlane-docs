@@ -1,0 +1,107 @@
+---
+title: "CC7.3"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC7.3
+
+<ControlMeta
+  refCode={"CC7.3"}
+  category={"Security"}
+  subcategory={"System Operations"}
+  description={"The entity evaluates security events to determine whether they could or have resulted in a failure of the entity to meet its objectives (security incidents) and, if so, takes actions to prevent or address such failures."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Responds to Security Incidents</summary>
+
+Procedures are in place for responding to security incidents and evaluating the effectiveness of those policies and procedures on a periodic basis.
+
+</details>
+
+<details>
+<summary>Communicates and Reviews Detected Security Events</summary>
+
+Detected security events are communicated to and reviewed by the individuals responsible for the management of the security program and actions are taken, if necessary.
+
+</details>
+
+<details>
+<summary>Develops and Implements Procedures to Analyze Security Incidents</summary>
+
+Procedures are in place to analyze security incidents and determine system impact.
+
+</details>
+
+<details>
+<summary>Assesses the Impact on Personal Information</summary>
+
+(For Trust Service Criteria of PRIVACY) Detected security events are evaluated to determine whether they could or did result in the unauthorized disclosure or use of personal information and whether there has been a failure to comply with applicable laws or regulations.
+
+</details>
+
+<details>
+<summary>Determines Personal Information Used or Disclosed</summary>
+
+(For Trust Service Criteria of PRIVACY) When an unauthorized use or disclosure of personal information has occurred, the affected information is identified and actions are taken to help prevent future recurrence and address control failures to support the achievement of entity objectives.
+
+</details>
+
+<details>
+<summary>Assesses the Impact on Confidential Information</summary>
+
+(For Trust Service Criteria of CONFIDENTIALITY) Detected security events are evaluated to determine whether they could or did result in the unauthorized disclosure or use of confidential information.
+
+</details>
+
+<details>
+<summary>Determines Confidential Information Used or Disclosed</summary>
+
+(For Trust Service Criteria of CONFIDENTIALITY) When an unauthorized use or disclosure of confidential information has occurred, the affected information is identified and actions are taken to help prevent future recurrence and address control failures to support the achievement of entity objectives.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Event Log Monitoring | Event Log Review & Analysis | Documented evidence of security event log review and analysis (e.g., system monitoring records). |
+| Event Log Monitoring | Centralized Event Log Collection | Documented evidence of security-relevant activities being logged and included as part of the centralized event log collection and review/analysis process. |
+| Event Log Monitoring | Situational Awareness | Documented evidence of the organization leveraging knowledge of event log generation to gain situational awareness of cross-domain activities (e.g., technology issues, security events, policy violations, service provider activities, remote workforce activities, physical security events, etc.). |
+| Incident Response | Incident Response Program (IRP) | Documented evidence of a Incident Response Plan (IRP). This is program-level documentation in the form of a runbook, playbook or a similar format provides guidance on organizational practices that support existing policies and standards. |
+| Incident Response | Incident Tracking | Documented evidence of a centralized repository to track cybersecurity & data privacy incidents. |
+| Risk Management | Cybersecurity Risk Assessment (RA) | Documented evidence of a cybersecurity-specific risk assessment. |
+| Third-Party Management | Third-Party Contracts | Documented evidence of third-party contractual obligations for cybersecurity & data privacy protections. |
+
+## Policies
+
+- **[Incident Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/incident-response/incident-response.md)** - Establishes the framework for detecting, responding to, and recovering from security incidents
+
+## Example Organization Controls
+
+- **CC7.3.1** - Documented incident response and escalation procedures for reporting security incidents are in place.
+- **CC7.3.2** - The incident response and escalation procedures are reviewed at least annually for effectiveness.
+- **CC7.3.3** - The incident response and escalation procedures define the classification of incidents based on severity.
+- **CC7.3.5** - Incidents are documented and tracked in a standardized ticketing system and updated to reflect the planned incident and problem resolution.
+- **CC7.3.7** - Identified incidents are reviewed, monitored and investigated by an incident response team.
+
+## Example Control Objectives
+
+- **Incident response readiness** - Security incidents are identified, responded to, and resolved in a timely manner with lessons learned.
+
+## Example Control Implementations
+
+- **centralized-logging** - Application and infrastructure logs are centrally aggregated. Implementation includes: - GCP Cloud Logging aggregates all application and infrastructure logs - Betterstack provides uptime monitoring and alerting - Grafana provides metrics visualization - Log retention follows Data Retention Policy (90 days active, 1 year archived) - Security events trigger alerts via Slack integration
+
+## Example Evidence
+
+- **Security Incident Documentation** - Documentation of security incidents handled during audit period
+
+## Example Action Plans
+
+- **Incident response tabletop exercise** - Semi-annual tabletop exercise to validate incident response procedures and team readiness.

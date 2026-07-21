@@ -76,16 +76,7 @@ email, err := h.Emailer.NewVerifyEmail(emailtemplates.Recipient{
 
 ### Supported Email Types
 
-| Email Type | Purpose | Category |
-|---|---|---|
-| Email Verification | New user account verification | Authentication |
-| Password Reset | Secure password reset with tokens | Authentication |
-| Password Reset Success | Confirmation of password changes | Authentication |
-| Login Notifications | Security alerts for account access | Authentication |
-| User Invitations | Organization and team invitations | Business |
-| Subscriber Confirmations | Newsletter and update subscriptions | Business |
-| Notification Emails | System alerts and updates | Business |
-| Welcome Messages | Onboarding communications | Business |
+Templates fall into two families: authentication flows (verification, password reset, login notifications) and business notifications (invitations, subscriber confirmations, system alerts). The [emailtemplates](https://github.com/theopenlane/emailtemplates) library holds the full set, so check it rather than this page when you need to confirm whether a template exists.
 
 ### Template Configuration
 
@@ -651,13 +642,13 @@ export CORE_EMAIL_SMTP_TLS=false
 
 | Concern | Mitigation |
 |---|---|
-| Sender spoofing | SPF/DKIM/DMARC records for email authentication |
+| Sender spoofing | Sender Policy Framework and DomainKeys Identified Mail (SPF/DKIM) and Domain-based Message Authentication, Reporting, and Conformance (DMARC) records for email authentication |
 | Transport interception | Encrypted SMTP connections (TLS/SSL) |
 | Email abuse | Rate limiting on send paths |
-| XSS in templates | Content sanitization |
+| Cross-site scripting (XSS) in templates | Content sanitization |
 | Stale action links | Token expiry on time-sensitive links |
-| PII exposure | Careful handling of PII in email content and logs |
+| Personally identifiable information (PII) exposure | Careful handling of PII in email content and logs |
 | Sensitive job payloads | Encryption of sensitive data in the job queue |
 | Accountability | Audit logging of email delivery events |
 | Data accumulation | Retention policies for email job data |
-| EU recipients | GDPR compliance |
+| EU recipients | General Data Protection Regulation (GDPR) compliance |

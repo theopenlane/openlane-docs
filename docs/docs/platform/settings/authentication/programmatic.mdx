@@ -17,10 +17,11 @@ tags:
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # Programmatic Authentication
 
-Two credential types reach Openlane APIs outside the console: organization-scoped API Tokens for integrations and automation, and user-scoped Personal Access Tokens for personal tooling.
+Two credential types reach Openlane APIs outside the console: organization-scoped API Tokens for integrations and automation, and user-scoped Personal Access Tokens (PATs) for personal tooling.
 
 ## API Tokens
 
@@ -42,7 +43,7 @@ Permissions are granted per object type using the format `object:action`. Each o
 | `write` | Create and update records of this object type |
 | `delete` | Delete records of this object type |
 
-For example, a token with `evidence:read` and `evidence:write` can read and create evidence but cannot delete it. Scopes are displayed as chips on the token list and can be filtered in the permission selector when creating a token.
+For example, a token with `evidence:read` and `evidence:write` can read and create <Term t="evidence">evidence</Term> but cannot delete it. Scopes are displayed as chips on the token list and can be filtered in the permission selector when creating a token.
 
 :::tip
 We recommend following the principle of least privilege: grant only the minimum scopes required for the job or workflow. A token used for automated evidence collection only needs `evidence:read`, `evidence:write`, and the read scope for any related objects it queries.
@@ -74,7 +75,7 @@ Authorization: Bearer tola_YOUR_API_TOKEN
 
 ## Personal Access Tokens
 
-Personal Access Tokens (PATs) provide user-specific programmatic access to Openlane APIs. They inherit the permissions of the user who created them and are intended for personal automation, development tools, and user-specific integrations.
+PATs provide user-specific programmatic access to Openlane APIs. They inherit the permissions of the user who created them and are intended for personal automation, development tools, and user-specific integrations.
 
 ### Creating a Personal Access Token
 
@@ -91,14 +92,14 @@ Personal Access Tokens (PATs) provide user-specific programmatic access to Openl
 
 ### Using the Personal Access Token
 
-Include the Personal Access Token in the `Authorization` header of your HTTP requests:
+Include the PAT in the `Authorization` header of your HTTP requests:
 
 ```http
 Authorization: Bearer tolp_YOUR_PERSONAL_ACCESS_TOKEN
 ```
 
 :::tip
-   When using a Personal Access Token that is authorized for multiple organizations, ensure the `owner_id` is always included in the request, or add the `X-Organization-ID` header to specify which organization context to use for the request.
+   When using a PAT that is authorized for multiple organizations, ensure the `owner_id` is always included in the request, or add the `X-Organization-ID` header to specify which organization context to use for the request.
 :::
 
 ## Additional Information

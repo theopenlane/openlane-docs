@@ -69,7 +69,7 @@ Global hooks are hooks registered directly on the ent client on client initializ
 
 **EmitEventHook**: fires after every successful mutation and publishes an event to the event bus. This drives the workflow engine, notifications, and other asynchronous side effects.
 
-**HookDeletePermissions**: fires on every delete operation and removes all FGA tuples where the deleted entity is the object. This prevents orphaned authorization relationships.
+**HookDeletePermissions**: fires on every delete operation and removes all fine-grained authorization (FGA) tuples where the deleted entity is the object. This prevents orphaned authorization relationships.
 
 ### Entity-Specific Hooks
 

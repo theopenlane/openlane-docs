@@ -21,9 +21,11 @@ tags:
   - TSC
 ---
 
+import Term from '@site/src/components/Term';
+
 # Audit Procedures
 
-Auditors test controls in defined stages, and each stage expects specific kinds of evidence. Testing will occur for the different criteria and controls that have been implemented by the service organization. For example, the testing and evidence for availability will be different than that of privacy.
+Auditors test controls in defined stages, and each stage expects specific kinds of evidence. Testing will occur for the different criteria and controls that have been implemented by the <Term t="service-organization">service organization</Term>. For example, the testing and evidence for availability will be different than that of privacy.
 
 The table below provides a basic breakdown of the types of tests that would be performed on any given control:
 
@@ -37,16 +39,16 @@ The table below provides a basic breakdown of the types of tests that would be p
 
 ## Audit Evidence
 
-Currently a SOC 2 audit process uses the trust but verify approach by external auditing teams. The theory behind this approach is that the evidence produced by the service organization is forthright and has not been tampered with or altered. This approach allows the auditing team to stay independent of pulling the evidence. Evidence is obtained from management at three various stages of the audit:
+Currently a System and Organization Controls 2 (SOC 2) audit process uses the trust but verify approach by external auditing teams. The theory behind this approach is that the evidence produced by the service organization is forthright and has not been tampered with or altered. This approach allows the auditing team to stay independent of pulling the evidence. Evidence is obtained from management at three various stages of the audit:
 
 ### Obtaining Evidence Regarding the Description
 
-The auditor will obtain and inspect the system description and will evaluate whether those aspects of the description included in the scope of the engagement are fairly presented, i.e. the way you describe your system is actually the way it works. You can't say you use JIRA for change management when JIRA is still being implemented. The following are the checks on the system description that the service auditor will perform:
+The auditor will obtain and inspect the <Term t="system-description">system description</Term> and will evaluate whether those aspects of the description included in the scope of the engagement are fairly presented, i.e. the way you describe your system is actually the way it works. You can't say you use JIRA for change management when JIRA is still being implemented. The following are the checks on the system description that the <Term t="service-auditor">service auditor</Term> will perform:
 
 * Controls stated in the service organization’s description of its system do address the criteria;
 * Controls identified in that description were implemented;
-* Complementary user entity controls, if any, are adequately described; and
-* Services performed by a subservice organization, if any, are adequately described, including whether the inclusive method or the carve-out method has been used in relation to them.
+* <Term t="complementary-user-entity-controls">Complementary user entity controls</Term>, if any, are adequately described; and
+* Services performed by a <Term t="subservice-organization">subservice organization</Term>, if any, are adequately described, including whether the <Term t="inclusive-method">inclusive method</Term> or the <Term t="carve-out-method">carve-out method</Term> has been used in relation to them.
 
 The auditor shall determine, through other procedures in combination with inquiries, whether the service organization’s system has been implemented. Those other procedures shall include observation, and inspection of records and other documentation, of the manner in which the service organization’s system operates and controls are applied.
 
@@ -74,7 +76,7 @@ Evidence pertaining to the implementation of the control, shall be obtained via 
 
 The auditor will enquire of management to take them through one such example of a user gaining access to Windows i.e. the walkthrough. Should the auditor see that users are given access to Windows via a completed and signed IT form, then they will conclude that the control is implemented as designed. If users are given access to Windows via a completed IT form that is not signed, then the auditors will conclude that the control is not implemented as designed and the control will fail.
 
-Design and implementation of the controls are normally tested together. At this stage it is important to clearly show the auditors that the controls management have in place, are implemented as management say they are. Management cannot say that they have anti-virus installed on all end users' laptops and then have the auditors find, on the first laptop checked, that the anti-virus software is not installed. Failing a control on design and implementation, is a much more significant deficiency than failing a control on an operating effectiveness level, which is discussed below.
+Design and implementation of the controls are normally tested together. At this stage it is important to clearly show the auditors that the controls management have in place, are implemented as management say they are. Management cannot say that they have anti-virus installed on all end users' laptops and then have the auditors find, on the first laptop checked, that the anti-virus software is not installed. Failing a control on design and implementation, is a much more significant deficiency than failing a control on an <Term t="operating-effectiveness">operating effectiveness</Term> level, which is discussed below.
 
 ### Obtaining Evidence Regarding Operating Effectiveness of Controls
 
@@ -82,9 +84,9 @@ When providing a type 2 report, the auditor shall test those controls that the a
 
 This needs to be a period no less than 6 months and no more than 12 months.
 
-As per number 2 above, the auditor tested the design and the implementation of the control, which is a sample of one occurrence. When testing for operating effectiveness the auditor needs to select a sample throughout the period and obtain evidence for the sample to ensure that the control was operating effectively throughout the period of testing.
+As per number 2 above, the auditor tested the design and the implementation of the control, which is a sample of one occurrence. When testing for operating effectiveness the auditor needs to select a <Term t="sampling">sample</Term> throughout the period and obtain evidence for the sample to ensure that the control was operating effectively throughout the period of testing.
 
-When determining the extent of tests of controls, the auditor shall consider matters including the characteristics of the population to be tested, which includes the nature of controls, the frequency of their application (for example, monthly, daily, a number of times per day), and the expected rate of deviation.
+When determining the extent of tests of controls, the auditor shall consider matters including the characteristics of the <Term t="population">population</Term> to be tested, which includes the nature of controls, the frequency of their application (for example, monthly, daily, a number of times per day), and the expected rate of deviation.
 
 For example if we have a population of 50 new users that were added to AWS for the period 01 January to 31 December, the auditor would select a sample of 5 new users and request the relevant evidence for those 5 users.
 

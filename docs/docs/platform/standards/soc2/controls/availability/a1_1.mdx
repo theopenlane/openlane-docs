@@ -1,0 +1,66 @@
+---
+title: "A1.1"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# A1.1
+
+<ControlMeta
+  refCode={"A1.1"}
+  category={"Availability"}
+  subcategory={"Additional Criteria for Availability"}
+  description={"The entity maintains, monitors, and evaluates current processing capacity and use of system components (infrastructure, data, and software) to manage capacity demand and to enable the implementation of additional capacity to help meet its objectives."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Measures Current Usage</summary>
+
+The use of the system components is measured to establish a baseline for capacity management and to use when monitoring and evaluating the risk of impaired availability due to capacity constraints.
+
+</details>
+
+<details>
+<summary>Forecasts Capacity</summary>
+
+The expected average and peak use of system components is forecasted and compared to system capacity and associated tolerances. Forecasting considers system resilience and capacity in the event of the failure of system components that constrain capacity.
+
+</details>
+
+<details>
+<summary>Makes Changes Based on Forecasts</summary>
+
+The system change management process is initiated when forecasted usage exceeds capacity tolerances.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Capacity Management | Capacity Planning | Documented evidence of proactive capacity planning to meet expected and anticipated future technology-related capacity and/or performance requirements. |
+| Capacity Management | Resource Prioritization | Documented evidence of resource prioritization to maintain business performance requirements for critical systems, applications and/or services. |
+
+## Policies
+
+- **[System Availability Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/availability/availability.md)** - Defines requirements for proper controls to protect the availability of the organization's information systems
+
+## Example Organization Controls
+
+- **A1.1.1** - The entity monitors key activities and alerts are generated when those activities are outside normal tolerances.
+- **A1.1.2** - Systems are monitored 24x7 with dedicated personnel to monitor systems and environments and respond to customer inquiries, support issues, and incidents.
+- **A1.1.3** - Future processing demand is forecasted and compared to scheduled capacity on an annual basis.
+
+## Example Control Objectives
+
+- **Capacity management** - System capacity is monitored and managed to meet availability commitments.
+
+## Example Evidence
+
+- **GKE Cluster Autoscaling Configuration** - Screenshot of GKE Horizontal Pod Autoscaler configuration demonstrating automatic scaling capability
+- **Cloud SQL High Availability Configuration** - Screenshot of Cloud SQL instance configuration showing high availability and automatic failover settings
+- **Betterstack Monitoring Dashboard** - Screenshot of Betterstack uptime monitoring showing all monitored endpoints and alert configuration

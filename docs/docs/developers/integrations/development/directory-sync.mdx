@@ -55,7 +55,7 @@ type UserInput struct {
 ```
 
 - **`DisableGroupSync`**: when true, only users are synced, skipping group and group membership ingestion
-- **`FilterExpr`**: a CEL expression evaluated against each envelope before ingest, allowing users to ingest only relevant data; see [CEL Expressions](./basics.mdx#cel-expressions)
+- **`FilterExpr`**: a Common Expression Language (CEL) expression evaluated against each envelope before ingest, allowing users to ingest only relevant data; see [CEL Expressions](./basics.mdx#cel-expressions)
 - **`PrimaryDirectory`**: when `true`, this installation's data drives identity holder enrichment and lifecycle derivation; see [Identity Holder Sync](#identity-holder-sync) below. This should only be used on directories that are token issuers, and not secondary directories. For example, Google Workspace is a primary directory, but GitHub would not be.
 
 ---

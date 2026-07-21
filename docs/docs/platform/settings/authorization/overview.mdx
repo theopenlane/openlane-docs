@@ -21,6 +21,8 @@ tags:
   - groups
 ---
 
+import Term from '@site/src/components/Term';
+
 # Permissions Model
 
 Openlane decides what each user can see and do through three things layered together: a **base role** at the organization level, **role assignments** on groups and programs, and **object-level grants**. Effective access is the union of all three, so you can keep most people at a read-only baseline and grant write access only where they actually work.
@@ -87,11 +89,11 @@ flowchart TB
 
 Every user holds exactly one base role at the organization level: the permission floor before anything else is layered on.
 
-**Owner** (one per organization) has full access and is the only role that can delete the organization, transfer ownership, or bypass organization SSO requirements. Ownership can be transferred but never shared.
+**Owner** (one per organization) has full access and is the only role that can delete the organization, transfer ownership, or bypass organization single sign-on (SSO) requirements. Ownership can be transferred but never shared.
 
 **Super Admin** matches the Owner everywhere else (full access to all objects, actions, and settings) but cannot delete the organization or transfer ownership. There is no cap on Super Admin seats; it's the right role for trusted administrators who need full operational access without holding the single ownership seat.
 
-**Admin** creates and manages most objects (policies, procedures, controls, risks, evidence, control mappings), plus trust center, integrations, registry, and exposure. Admins manage members, roles, and invites, and can create groups (post-creation group membership is managed by group admins or the owner). Admins get **view** access to programs by default; editing a program requires being assigned as a program admin on it. Admins do not have billing access.
+**Admin** creates and manages most objects (policies, procedures, controls, risks, <Term t="evidence">evidence</Term>, control mappings), plus trust center, integrations, registry, and exposure. Admins manage members, roles, and invites, and can create groups (post-creation group membership is managed by group admins or the owner). Admins get **view** access to programs by default; editing a program requires being assigned as a program admin on it. Admins do not have billing access.
 
 **Member** is the default read baseline: view policies, procedures, and controls; create tasks and comments; upload evidence where they have access or via task assignment; invite other members (but not assign roles or invite admins). Members have no program access until explicitly added.
 
@@ -139,7 +141,7 @@ Functional roles are **additive**: assigned on top of a base role to extend perm
 | **Policy Manager** | Internal policies and procedures |
 | **Registry Manager** | Assets, entities, contacts, identity holders, platforms, and system details |
 | **Group Manager** | Organization groups |
-| **Trust Center Manager** | Trust center pages, documents, FAQs, subprocessors, compliance entries, entities, NDA requests, and watermark configuration |
+| **Trust Center Manager** | Trust center pages, documents, FAQs, subprocessors, compliance entries, entities, non-disclosure agreement (NDA) requests, and watermark configuration |
 | **Workflow Manager** | Workflow definitions, scheduled jobs, job runners, job templates, integrations, and integration webhooks |
 | **Campaign Manager** | Campaigns, assessments, templates, email templates, email branding, and notification templates |
 

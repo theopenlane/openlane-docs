@@ -3,9 +3,18 @@ title: Okta
 description: Okta integration guide for sign-on policy metadata and access governance
 sidebar_position: 15
 sidebar_label: Okta
+compliance:
+  - "SOC 2 CC6"
+  - "SOC 2 CC6.1"
+  - "SOC 2 CC6.2"
+  - "ISO 27001:2022 A.5.15-A.5.18"
+  - "ISO 27001:2022 A.8.2"
+  - "ISO 27001:2022 A.8.3"
+  - "ISO 27001:2022 A.8.5"
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 :::info
 This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
@@ -13,12 +22,12 @@ This integration is not yet generally available. It appears in the **Coming Soon
 
 # ![okta integration](./assets/okta.png) Okta Integration Guide
 
-If your organization uses Okta for identity management, this integration brings your directory, application assignments, and authentication policies into Openlane so you can run User Access Reviews, verify MFA enforcement, and maintain a current view of who has access to what (SOC 2: CC6, ISO 27001: A.9).
+If your organization uses Okta for identity management, this integration brings your directory, application assignments, and authentication policies into Openlane so you can run User Access Reviews, verify multi-factor authentication (MFA) enforcement, and maintain a current view of who has access to what.
 
 ## Key Capabilities
 
 - **Directory and Application Sync:** Ingests users, groups, and application assignments from your Okta tenant, giving you the identity baseline for access reviews and entitlement validation.
-- **Authentication Policy Visibility:** Surfaces sign-on policies, MFA requirements, and access rules so you can verify that authentication controls match your security standards (SOC 2: CC6.1).
+- **Authentication Policy Visibility:** Surfaces sign-on policies, MFA requirements, and access rules so you can verify that authentication controls match your security standards.
 - **Read-Only Access:** Ingests identity and policy data without changing Okta settings. Openlane reads your configuration and never modifies it.
 
 ## Prerequisites
@@ -60,7 +69,7 @@ After saving, Openlane runs a health check against Okta and displays the result 
 
 ## What Openlane Syncs
 
-Openlane syncs your Okta directory (users, groups, application assignments) and authentication policy configuration (sign-on policies, MFA rules, access requirements). This gives you a continuously updated view of who has access to which applications, whether MFA is enforced where it should be, and whether sign-on policies match your security standards. This feeds into SOC 2 CC6.1 and CC6.2 (logical access controls) and ISO 27001 A.9.4 (system and application access control).
+Openlane syncs your Okta directory (users, groups, application assignments) and authentication policy configuration (sign-on policies, MFA rules, access requirements). This gives you a continuously updated view of who has access to which applications, whether MFA is enforced where it should be, and whether sign-on policies match your security standards. This is the evidence an auditor expects when reviewing logical access and application access controls.
 
 ## Disconnect
 

@@ -20,10 +20,11 @@ tags:
 ---
 
 import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
 
-# HIPAA (Health Insurance Portability and Accountability Act)
+# Health Insurance Portability and Accountability Act (HIPAA)
 
-HIPAA is the US federal law, enacted in 1996, that governs how protected health information (PHI) is used, disclosed, and secured. The Department of Health and Human Services' Office for Civil Rights (OCR) enforces it, with civil and criminal penalties for violations. Unlike SOC 2 or ISO 27001, HIPAA is not something you certify against; it's an ongoing legal obligation that applies the moment you handle PHI.
+The Health Insurance Portability and Accountability Act (HIPAA) governs how protected health information (PHI) is used, disclosed, and secured; the obligation applies the moment you handle PHI.
 
 <StandardMeta
   fullName={"Health Insurance Portability and Accountability Act"}
@@ -32,6 +33,7 @@ HIPAA is the US federal law, enacted in 1996, that governs how protected health 
   established={"1996; Privacy Rule 2003, Security Rule 2005, Omnibus Rule 2013"}
   managedBy={"HHS Office for Civil Rights"}
   appliesTo={"Covered entities and business associates handling PHI"}
+  penalties={"Civil and criminal penalties for violations"}
   certification={"No: ongoing legal obligation; no formal certification exists"}
 />
 
@@ -69,7 +71,7 @@ A few administrative steps come before any technical work, and OCR asks for the 
 4. **Train the workforce** on HIPAA and PHI handling at onboarding and annually thereafter, and retain completion records.
 5. **Execute BAAs** with every vendor that creates, receives, maintains, or transmits PHI on your behalf before any PHI flows to them.
 6. **Document incident response procedures** that cover breach assessment, mitigation, and the notification obligations described above.
-7. **Evaluate periodically.** Run internal assessments using staff or consultants independent of the controls under review, document findings and corrective actions, and have management review the results.
+7. **Evaluate periodically.** Run internal assessments using staff or consultants independent of the controls under review, document <Term t="finding">findings</Term> and corrective actions, and have management review the results.
 
 For the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).
 

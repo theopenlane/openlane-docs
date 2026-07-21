@@ -32,15 +32,17 @@ tags:
   - security standards
 ---
 
+import Term from '@site/src/components/Term';
+
 # Standards
 
-Standards represent compliance frameworks and regulations that organizations must adhere to. Openlane supports a wide range of industry standards including SOC 2, ISO 27001, NIST frameworks, and industry-specific regulations.
+Standards represent compliance frameworks and regulations that organizations must adhere to. Openlane supports a wide range of industry standards including System and Organization Controls 2 (SOC 2), ISO 27001, National Institute of Standards and Technology (NIST) frameworks, and industry-specific regulations.
 
 ## What is a Standard?
 
-A Standard in Openlane represents a formal compliance framework, regulation, or set of guidelines that defines security, privacy, or operational requirements. Standards provide the foundation for compliance programs by defining the controls and requirements that organizations must implement.
+A Standard in Openlane represents a formal compliance framework, regulation, or set of guidelines that defines security, privacy, or operational requirements. Standards provide the foundation for <Term t="compliance-program">compliance programs</Term> by defining the controls and requirements that organizations must implement.
 
-Standards are established by industry associations, government bodies, or regulatory agencies. Some carry legal force, such as GDPR and HIPAA, while others are voluntary frameworks that customers and auditors expect, such as SOC 2 and ISO 27001.
+Standards are established by industry associations, government bodies, or regulatory agencies. Some carry legal force, such as <Term t="general-data-protection-regulation">GDPR</Term> and <Term t="health-insurance-portability-and-accountability-act">HIPAA</Term>, while others are voluntary frameworks that customers and auditors expect, such as SOC 2 and ISO 27001.
 
 ## Compliance Significance
 
@@ -53,8 +55,8 @@ Compliance standards typically address information security, privacy, risk manag
 | Type | Description | Examples |
 | ---- | ----------- | -------- |
 | Regulatory compliance | Mandated by law; compliance with these frameworks is not optional | GDPR, HIPAA, PCI DSS |
-| Industry-specific compliance | Developed by industry associations as a set of best practices for a particular industry | NIST cybersecurity for the technology sector, FISMA for federal agencies |
-| Operational compliance | Focused on ensuring reliability, integrity, and efficiency of an organization's operations and processes | SOC 2, ISO 27001, COBIT for IT and governance |
+| Industry-specific compliance | Developed by industry associations as a set of best practices for a particular industry | NIST cybersecurity for the technology sector, Federal Information Security Modernization Act (FISMA) for federal agencies |
+| Operational compliance | Focused on ensuring reliability, integrity, and efficiency of an organization's operations and processes | SOC 2, ISO 27001, Control Objectives for Information and Related Technologies (COBIT) for IT and governance |
 
 ## Supported Frameworks
 
@@ -64,20 +66,20 @@ Compliance standards typically address information security, privacy, risk manag
 | [ISO 27001](./iso27001/overview.mdx) | Certification standard | Building and certifying an Information Security Management System (ISMS) | [ISO](https://www.iso.org/isoiec-27001-information-security.html) |
 | [NIST 800-53](./nist-800-53/overview.mdx) | Framework (control catalog) | Security and privacy controls for federal systems and beyond | [NIST](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) |
 | [NIST CSF](./nist-csf/overview.mdx) | Framework | Voluntary, flexible cybersecurity risk management organized around core functions | [NIST](https://www.nist.gov/cyberframework) |
-| [NIST SSDF](./nist-ssdf.mdx) | Framework | Secure software development practices and supply chain attestation | [NIST](https://csrc.nist.gov/projects/ssdf) |
+| [NIST SSDF](./nist-ssdf/overview.mdx) | Framework | Secure software development practices and supply chain attestation | [NIST](https://csrc.nist.gov/projects/ssdf) |
 | [NIST 800-171](./nist-800-171/overview.mdx) | Framework (control requirements) | Protecting Controlled Unclassified Information (CUI) in nonfederal systems | [NIST](https://csrc.nist.gov/pubs/sp/800/171/r3/final) |
 | [GDPR](./gdpr/overview.mdx) | Regulation (EU law) | Personal data of people in the EU, wherever the organization operates | [EU](https://gdpr-info.eu/) |
 | [HIPAA](./hipaa/overview.mdx) | Law | Protected health information (PHI), via the Privacy and Security Rules | [HHS](https://www.hhs.gov/hipaa/index.html) |
 | [PCI DSS](./pcidss/overview.mdx) | Attestation standard (contractual) | Cardholder data security across merchants, processors, and service providers | [PCI SSC](https://www.pcisecuritystandards.org/) |
-| [CMMC](./cmmc.mdx) | Certification standard (regulatory) | Cybersecurity maturity for the US defense industrial base | [DoD](https://dodcio.defense.gov/CMMC/) |
+| [CMMC](./cmmc/overview.mdx) | Certification standard (regulatory) | Cybersecurity maturity for the US defense industrial base | [DoD](https://dodcio.defense.gov/CMMC/) |
 | [CIS Benchmarks](./cis/overview.mdx) | Framework | Configuration baselines for operating systems, cloud providers, and applications | [CIS](https://www.cisecurity.org/) |
-| [CCM](./ccm.mdx) | Framework | Cloud-specific control matrix from the Cloud Security Alliance | [CSA](https://cloudsecurityalliance.org/research/cloud-controls-matrix) |
-| [SAMM](./samm.mdx) | Framework (maturity model) | Software assurance maturity across the development lifecycle | [OWASP](https://owasp.org/www-project-samm/) |
-| [SOX](./sox.mdx) | Law | Financial reporting integrity for US public companies | [Congress](https://www.congress.gov/bill/107th-congress/house-bill/3763) |
+| [CCM](./ccm/overview.mdx) | Framework | Cloud-specific control matrix from the Cloud Security Alliance | [CSA](https://cloudsecurityalliance.org/research/cloud-controls-matrix) |
+| [SAMM](./samm/overview.mdx) | Framework (maturity model) | Software assurance maturity across the development lifecycle | [OWASP](https://owasp.org/www-project-samm/) |
+| [SOX](./sox/overview.mdx) | Law | Financial reporting integrity for US public companies | [Congress](https://www.congress.gov/bill/107th-congress/house-bill/3763) |
 | [ISO 42001](./iso42001/overview.mdx) | Certification standard | Building and certifying an AI Management System (AIMS) | [ISO](https://www.iso.org/standard/42001) |
-| [DORA](./dora.mdx) | Regulation (EU law) | Digital operational resilience for financial entities and their ICT providers | [EU](https://eur-lex.europa.eu/eli/reg/2022/2554/oj) |
-| [FedRAMP](./fedramp.mdx) | Authorization program (US federal) | Security authorization for cloud services used by federal agencies | [FedRAMP](https://www.fedramp.gov/) |
-| [HITRUST](./hitrust.mdx) | Certification standard | Certifiable CSF harmonizing many frameworks, with tiered e1/i1/r2 assessments | [HITRUST Alliance](https://hitrustalliance.net/) |
+| [DORA](./dora/overview.mdx) | Regulation (EU law) | Digital operational resilience for financial entities and their information and communications technology (ICT) providers | [EU](https://eur-lex.europa.eu/eli/reg/2022/2554/oj) |
+| [FedRAMP](./fedramp-rev5-moderate/overview.mdx) | Authorization program (US federal) | Security authorization for cloud services used by federal agencies | [FedRAMP](https://www.fedramp.gov/) |
+| [HITRUST](./hitrust/overview.mdx) | Certification standard | Certifiable Common Security Framework (CSF) harmonizing many frameworks, with tiered e1/i1/r2 assessments | [HITRUST Alliance](https://hitrustalliance.net/) |
 | [Essential Eight](./essential-eight/overview.mdx) | Framework (maturity model) | Baseline mitigation strategies mandated for Australian government entities | [ACSC](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight) |
 | [APRA CPS 230](./apra-cps-230/overview.mdx) | Regulation (Australian prudential standard) | Operational risk, continuity, and service provider management for APRA-regulated entities | [APRA](https://www.apra.gov.au/) |
 | [Microsoft SSPA](./microsoft-sspa/overview.mdx) | Contractual program | Security and privacy requirements for suppliers processing Microsoft data | [Microsoft](https://www.microsoft.com/en-us/procurement/sspa.html) |
@@ -96,8 +98,8 @@ We recommend weighing the following factors when deciding which frameworks to pu
 
 | Factor | Consideration |
 | ------ | ------------- |
-| Industry | The frameworks your business should follow will depend on your industry. For example, HIPAA is mandatory for healthcare while PCI DSS is for those who handle credit card data. |
-| Geography | If you process personal data from the EU, or have personal data collected from California, you will need GDPR and CCPA compliance, respectively. |
+| Industry | The frameworks your business should follow will depend on your industry. For example, HIPAA is mandatory for healthcare while Payment Card Industry Data Security Standard (PCI DSS) is for those who handle credit card data. |
+| Geography | If you process personal data from the EU, or have personal data collected from California, you will need GDPR and California Consumer Privacy Act (CCPA) compliance, respectively. |
 | Customer requirements | Customers are data sensitive and may require compliance with specific standards as a prerequisite for doing business. For example, enterprises require their vendors to be SOC 2 compliant. |
 | Legal requirements | The nature and jurisdiction of your business is another factor. Healthcare industries are required to be HIPAA compliant; companies handling data of EU citizens are required to be GDPR compliant. |
 | Competitive advantage | International and widely recognized standards can differentiate your business and drive enterprise-level deals, setting you apart from competitors and showing invested parties your commitment to security and privacy. |
@@ -110,6 +112,6 @@ Keep in mind that compliance is not a one-time effort. Even with a single regula
 
 While hefty fines and penalties get most of the attention, noncompliance carries a cascade of other consequences for your organization.
 
-In severe cases noncompliance can lead to lawsuits, and even if you prevail, they are very expensive to defend. Chegg, an edutech company, was sued by the FTC for over $40 million for lax data security practices after more than 4 security breaches since 2017 exposed private information the company held. Based on the severity of the noncompliance, regulatory bodies can also disbar your organization from specific activities.
+In severe cases noncompliance can lead to lawsuits and regulatory enforcement actions, and even when you prevail, defending them is expensive. Regulators can also impose orders that restrict how your organization operates, including barring specific business practices.
 
-Noncompliance limits growth. Many businesses require frameworks like SOC 2 or ISO 27001 as a prerequisite for doing business with them, and data breaches and cyberthreats, which usually stem from noncompliance, erode the trust your existing customers have placed in you while hindering your ability to acquire new ones. It also lengthens your sales cycle as you scramble to become compliant and demonstrate it to potential clients, giving your competition an edge and putting valuable deals at risk.
+Noncompliance limits growth. Many businesses require frameworks like SOC 2 or ISO 27001 as a prerequisite for doing business with them, and data breaches and cyberthreats, which usually stem from noncompliance, erode the trust your existing customers have placed in you while hindering your ability to acquire new ones. Lacking a framework that buyers require also lengthens procurement cycles and can disqualify you from vendor selection entirely.

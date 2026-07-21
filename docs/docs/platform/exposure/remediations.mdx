@@ -6,28 +6,29 @@ sidebar_position: 7
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Remediations
 
 A remediation is the tracked fix for a security issue: who owns it, when it is due, what was done, and how it was verified. Frameworks that require monitoring also require acting on what monitoring finds, and a documented issue that was never addressed is a process gap auditors will note. A well-run remediation has an owner, a deadline derived from severity, and verifiable artifacts such as a merged pull request or a configuration change.
 
-Auditors test this chain by sampling. A typical request is "show me a critical finding from the review period and walk me through what happened to it." Answering well requires the finding, the remediation that addressed it, who owned it, when it was due, when it completed, and how the fix was verified, all connected. Remediation records exist to hold that join between the security issue, the engineering work, and the verification, which a ticketing system alone typically cannot reconstruct.
+Auditors test this chain by sampling. A typical request is "show me a critical finding from the review period and walk me through what happened to it." Answering well requires the <Term t="finding">finding</Term>, the remediation that addressed it, who owned it, when it was due, when it completed, and how the fix was verified, all connected. Remediation records exist to hold that join between the security issue, the engineering work, and the verification, which a ticketing system alone typically cannot reconstruct.
 
-Remediation is also not the only valid outcome. Some issues get fixed, some get mitigated by a compensating control, and some get consciously not fixed because the cost outweighs the exposure. The last category is legitimate when it is documented: risk acceptance needs a rationale, an owner, and periodic review.
+Remediation is also not the only valid outcome. Some issues get fixed, some get mitigated by a <Term t="compensating-control">compensating control</Term>, and some get consciously not fixed because the cost outweighs the exposure. The last category is legitimate when it is documented: risk acceptance needs a rationale, an owner, and periodic review.
 
 ## How Remediations Work in Openlane
 
 A remediation record tracks one corrective effort from plan to verification. Status follows the corrective lifecycle: open, in progress, then an in-review step for independent verification before completion. A deliberate decision not to fix is recorded as won't-do with the rationale documented, which is a defensible answer at audit time where a silently closed record is not.
 
-The record carries the plan itself (intent, summary, explanation, and step-by-step instructions) alongside the engineering trail: a ticket reference, the repository URI, and the pull request URI, so the security record and the code change point at each other. Each record carries a due date and completion date, giving you an unambiguous overdue query and a provable time-to-fix. Records you create through the API, CLI, or bulk CSV import sit alongside records carried in from source systems, which keep their origin details, and a timestamp captures when an automated pull request was generated for the remediation.
+The record carries the plan itself (intent, summary, explanation, and step-by-step instructions) alongside the engineering trail: a ticket reference, the repository URI, and the pull request URI, so the security record and the code change point at each other. Each record carries a due date and completion date, giving you an unambiguous overdue query and a provable time-to-fix.
 
-Relationships are what make the record useful. A remediation links to the [findings](./findings.mdx) and [vulnerabilities](./vulnerabilities/overview.mdx) it resolves, the [scans](./scans.mdx) involved in verifying it, the [risks](./risks/overview.mdx) it reduces, and the controls, tasks, and action plans it supports. Attached files hold before-and-after evidence. Per the [exposure pipeline](./overview.mdx), completed remediations are the events that verify fixes and update risk posture. The full field list is in the [API reference](/graphql).
+Relationships are what make the record useful. A remediation links to the [findings](./findings.mdx) and [vulnerabilities](./vulnerabilities/overview.mdx) it resolves, the [scans](./scans.mdx) involved in verifying it, the [risks](./risks/overview.mdx) it reduces, and the controls, tasks, and <Term t="action-plan">action plans</Term> it supports. Attached files hold before-and-after <Term t="evidence">evidence</Term>. Per the [exposure pipeline](./overview.mdx), completed remediations are the events that verify fixes and update risk posture. The full field list is in the [API reference](/graphql).
 
 ## Working with Remediations
 
 ### Turn Triage into Assigned Work
 
-When triage validates a finding or vulnerability, create a remediation linked to it with an owner reference, a ticket reference, and a `dueAt` derived from the issue's remediation SLA. Put the fix approach in the intent and instructions fields rather than only in the ticket, so the security record stands on its own when the ticketing system is out of scope for an auditor.
+When triage validates a finding or vulnerability, create a remediation linked to it with an owner reference, a ticket reference, and a `dueAt` derived from the issue's remediation service level agreement (SLA). Put the fix approach in the intent and instructions fields rather than only in the ticket, so the security record stands on its own when the ticketing system is out of scope for an auditor.
 
 ### Run a Weekly Overdue Review
 

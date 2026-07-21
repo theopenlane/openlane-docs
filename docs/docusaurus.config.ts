@@ -255,6 +255,29 @@ const config: Config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // pages removed or moved on feat-docsupdate
+          { from: "/docs/platform/compliance-management/evidence/dashboard", to: "/docs/platform/compliance-management/evidence/overview" },
+          { from: "/docs/platform/compliance-management/programs/create", to: "/docs/platform/compliance-management/programs/overview" },
+          { from: "/docs/platform/integrations/buildkite", to: "/docs/platform/integrations/overview" },
+          { from: "/docs/platform/integrations/vercel", to: "/docs/platform/integrations/overview" },
+          { from: "/docs/platform/integrations/oidc_generic", to: "/docs/platform/settings/authentication/sso" },
+          { from: "/docs/platform/standards/soc2/framework-subject-matter", to: "/docs/platform/standards/soc2/overview" },
+          { from: "/docs/platform/standards/soc2/requireddocumentation", to: "/docs/platform/standards/soc2/example-evidence" },
+          { from: "/docs/platform/standards/soc2/security-management-procedures", to: "/docs/platform/standards/soc2/overview" },
+          // REST API endpoint and schema pages removed in the regenerated spec
+          { from: ["/docs/api/rest-api/acme-solver", "/docs/api/rest-api/agent-node-registration", "/docs/api/rest-api/api-docs", "/docs/api/rest-api/csrf", "/docs/api/rest-api/end-impersonation", "/docs/api/rest-api/example-csv", "/docs/api/rest-api/favicon", "/docs/api/rest-api/file-download"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/git-hub-callback", "/docs/api/rest-api/git-hub-login", "/docs/api/rest-api/google-callback", "/docs/api/rest-api/google-login", "/docs/api/rest-api/graph-ql-query", "/docs/api/rest-api/graph-ql-query-history", "/docs/api/rest-api/jwks", "/docs/api/rest-api/livez"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/login-handler", "/docs/api/rest-api/o-auth-register", "/docs/api/rest-api/ready", "/docs/api/rest-api/refresh-handler", "/docs/api/rest-api/robots", "/docs/api/rest-api/schemas/accountaccessreply", "/docs/api/rest-api/schemas/accountaccessrequest", "/docs/api/rest-api/schemas/accountfeaturesreply"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/schemas/accountrolesorganizationreply", "/docs/api/rest-api/schemas/accountrolesreply", "/docs/api/rest-api/schemas/accountrolesrequest", "/docs/api/rest-api/schemas/createtrustcenteranonymousjwtresponse", "/docs/api/rest-api/schemas/endimpersonationreply", "/docs/api/rest-api/schemas/endimpersonationrequest", "/docs/api/rest-api/schemas/errorresponse", "/docs/api/rest-api/schemas/filedownload"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/schemas/forgotpasswordreply", "/docs/api/rest-api/schemas/forgotpasswordrequest", "/docs/api/rest-api/schemas/getquestionnaireresponse", "/docs/api/rest-api/schemas/group", "/docs/api/rest-api/schemas/invitereply", "/docs/api/rest-api/schemas/itemsperpage", "/docs/api/rest-api/schemas/jobrunnerregistrationreply", "/docs/api/rest-api/schemas/jobrunnerregistrationrequest"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/schemas/listresponseschemas", "/docs/api/rest-api/schemas/loginreply", "/docs/api/rest-api/schemas/loginrequest", "/docs/api/rest-api/schemas/oauthtokenrequest", "/docs/api/rest-api/schemas/patchrequest", "/docs/api/rest-api/schemas/productcatalogreply", "/docs/api/rest-api/schemas/refreshreply", "/docs/api/rest-api/schemas/refreshrequest"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/schemas/registerreply", "/docs/api/rest-api/schemas/registerrequest", "/docs/api/rest-api/schemas/reply", "/docs/api/rest-api/schemas/resendquestionnairerequest", "/docs/api/rest-api/schemas/resendreply", "/docs/api/rest-api/schemas/resendrequest", "/docs/api/rest-api/schemas/resetpasswordreply", "/docs/api/rest-api/schemas/resetpasswordrequest"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/schemas/resourcemetadata", "/docs/api/rest-api/schemas/resourcetype", "/docs/api/rest-api/schemas/schemaattribute", "/docs/api/rest-api/schemas/schemadefinition", "/docs/api/rest-api/schemas/serviceproviderconfig", "/docs/api/rest-api/schemas/ssostatusreply", "/docs/api/rest-api/schemas/ssotokenauthorizereply", "/docs/api/rest-api/schemas/startimpersonationreply"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/schemas/startimpersonationrequest", "/docs/api/rest-api/schemas/startindex", "/docs/api/rest-api/schemas/submitquestionnaireresponse", "/docs/api/rest-api/schemas/switchorganizationreply", "/docs/api/rest-api/schemas/switchorganizationrequest", "/docs/api/rest-api/schemas/tfareply", "/docs/api/rest-api/schemas/tfarequest", "/docs/api/rest-api/schemas/totalresults"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/schemas/user", "/docs/api/rest-api/schemas/verifyreply", "/docs/api/rest-api/schemas/verifysubscribereply", "/docs/api/rest-api/schemas/webauthnbeginloginresponse", "/docs/api/rest-api/schemas/webauthnbeginregistrationresponse", "/docs/api/rest-api/schemas/webauthnloginfinishrequest", "/docs/api/rest-api/schemas/webauthnloginrequest", "/docs/api/rest-api/schemas/webauthnloginresponse"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/schemas/webauthnregistrationfinishrequest", "/docs/api/rest-api/schemas/webauthnregistrationrequest", "/docs/api/rest-api/schemas/webauthnregistrationresponse", "/docs/api/rest-api/security-txt", "/docs/api/rest-api/sso-callback", "/docs/api/rest-api/sso-login", "/docs/api/rest-api/sso-token-authorize", "/docs/api/rest-api/sso-token-callback"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/start-impersonation", "/docs/api/rest-api/tfa-validation", "/docs/api/rest-api/trust-center-anonymous-jwt", "/docs/api/rest-api/web-authn-well-known", "/docs/api/rest-api/webauthn-authentication", "/docs/api/rest-api/webauthn-authentication-verification", "/docs/api/rest-api/webauthn-registration", "/docs/api/rest-api/webauthn-registration-verification"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/webfinger"], to: "/docs/api" },
           // generated-index category pages replaced by doc-linked overviews
           { from: "/docs/category/automation", to: "/docs/platform/automation/overview" },
           { from: ["/docs/category/basic-concepts", "/docs/platform/basics/overview"], to: "/docs/platform/settings/overview" },
@@ -287,19 +310,23 @@ const config: Config = {
           { from: "/docs/category/operations", to: "/docs/developers/operations/overview" },
           { from: "/docs/category/contributing", to: "/docs/developers/contributing/overview" },
           // flattened single-page standards
-          { from: ["/docs/platform/standards/ccm/overview", "/docs/category/ccm-v4"], to: "/docs/platform/standards/ccm" },
+          { from: ["/docs/platform/standards/ccm", "/docs/category/ccm-v4"], to: "/docs/platform/standards/ccm/overview" },
           { from: ["/docs/category/cis-benchmarks", "/docs/platform/standards/cis"], to: "/docs/platform/standards/cis/overview" },
-          { from: ["/docs/platform/standards/cmmc/overview", "/docs/category/cmmc"], to: "/docs/platform/standards/cmmc" },
+          { from: ["/docs/platform/standards/cmmc", "/docs/category/cmmc"], to: "/docs/platform/standards/cmmc/overview" },
           { from: ["/docs/category/gdpr", "/docs/platform/standards/gdpr"], to: "/docs/platform/standards/gdpr/overview" },
           { from: ["/docs/category/hipaa", "/docs/platform/standards/hipaa"], to: "/docs/platform/standards/hipaa/overview" },
           { from: ["/docs/category/pci-dss", "/docs/platform/standards/pcidss"], to: "/docs/platform/standards/pcidss/overview" },
-          { from: ["/docs/platform/standards/samm/overview", "/docs/category/samm"], to: "/docs/platform/standards/samm" },
-          { from: ["/docs/platform/standards/sox/overview", "/docs/category/sox"], to: "/docs/platform/standards/sox" },
+          { from: ["/docs/platform/standards/samm", "/docs/category/samm"], to: "/docs/platform/standards/samm/overview" },
+          { from: ["/docs/platform/standards/sox", "/docs/category/sox"], to: "/docs/platform/standards/sox/overview" },
+          { from: "/docs/platform/standards/dora", to: "/docs/platform/standards/dora/overview" },
+          { from: "/docs/platform/standards/hitrust", to: "/docs/platform/standards/hitrust/overview" },
+          // fedramp split into its own directory to host per-control pages
+          { from: "/docs/platform/standards/fedramp", to: "/docs/platform/standards/fedramp-rev5-moderate/overview" },
           // NIST consolidation
           { from: "/docs/platform/standards/nist/nist", to: "/docs/platform/standards/overview" },
           { from: ["/docs/platform/standards/nist/80053/overview", "/docs/platform/standards/nist/80053/revision5", "/docs/category/800-53", "/docs/platform/standards/nist-800-53"], to: "/docs/platform/standards/nist-800-53/overview" },
           { from: ["/docs/platform/standards/nist/csf/overview", "/docs/category/csf", "/docs/platform/standards/nist-csf"], to: "/docs/platform/standards/nist-csf/overview" },
-          { from: ["/docs/platform/standards/nist/ssdf/overview", "/docs/platform/standards/nist/ssdf/selfattestation", "/docs/category/ssdf"], to: "/docs/platform/standards/nist-ssdf" },
+          { from: ["/docs/platform/standards/nist/ssdf/overview", "/docs/platform/standards/nist/ssdf/selfattestation", "/docs/category/ssdf", "/docs/platform/standards/nist-ssdf"], to: "/docs/platform/standards/nist-ssdf/overview" },
           // ISO 27001 principles rename
           { from: "/docs/platform/standards/iso27001/iso27001", to: "/docs/platform/standards/iso27001/principles" },
           { from: "/docs/platform/automation/workflows", to: "/docs/platform/automation/workflows/overview" },
@@ -328,7 +355,7 @@ const config: Config = {
           // NIST sub-frameworks pulled up to top-level standards
           { from: "/docs/platform/standards/nist/800-53", to: "/docs/platform/standards/nist-800-53/overview" },
           { from: "/docs/platform/standards/nist/csf", to: "/docs/platform/standards/nist-csf/overview" },
-          { from: "/docs/platform/standards/nist/ssdf", to: "/docs/platform/standards/nist-ssdf" },
+          { from: "/docs/platform/standards/nist/ssdf", to: "/docs/platform/standards/nist-ssdf/overview" },
           { from: "/docs/platform/standards/nist/overview", to: "/docs/platform/standards/overview" },
           // phase C merges: questionnaires into assessments, onboarding dissolved, risks into exposure, guidance under policies
           { from: "/docs/platform/compliance-management/onboarding/controls", to: "/docs/platform/compliance-management/controls/import" },

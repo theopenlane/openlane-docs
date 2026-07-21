@@ -1,5 +1,5 @@
 ---
-sidebar_position: 0
+sidebar_position: 1
 sidebar_label: Platform Overview
 title: Openlane Platform Overview - Compliance Automation & Security
 description: Open-source compliance automation platform for managing security, risk, and regulatory requirements. Automate SOC 2, ISO 27001, NIST, GDPR, and HIPAA compliance.
@@ -29,15 +29,17 @@ tags:
     - SOC2
 ---
 
+import Term from '@site/src/components/Term';
+
 # Platform Overview
 
-Openlane is an open-source compliance automation platform. It gives you a system of record for your compliance program (the people, systems, and vendors in scope; the policies and controls that govern them; the evidence that proves it) and the automation to keep all of it current.
+Openlane is an open-source compliance automation platform. It gives you a system of record for your compliance program (the people, systems, and vendors in scope; the policies and controls that govern them; the <Term t="evidence">evidence</Term> that proves it) and the automation to keep all of it current.
 
-The platform (and this documentation) is organized into a handful of areas that build on each other. Each section below covers what the objects are and how they relate to the outcomes you're working toward.
+The platform (and this documentation) is organized into a handful of areas that build on each other.
 
 ## Organization Settings
 
-Everything in Openlane lives inside an [organization](./settings/organizations/overview.mdx): your tenant, your team, your data. The [Settings](./settings/overview.mdx) section covers the administrative side: profile, members and roles, billing, and the [custom data](./settings/custom-data.mdx) (enums and tags) that shapes how objects are classified to match how your team operates. Getting this foundation right pays off through the whole program: when every control, risk, and policy has a clear owner and audit trail, evidence collection and auditor questions get dramatically easier.
+Everything in Openlane lives inside an [organization](./settings/organizations/overview.mdx): your tenant, your team, your data. The [Settings](./settings/overview.mdx) section covers the administrative side: profile, members and roles, billing, and the [custom data](./settings/custom-data.mdx) (enums and tags) that shapes how objects are classified to match how your team operates. Getting this foundation right pays off through the whole program: when every control, risk, and policy has a clear owner and audit trail, evidence collection takes less time and auditor questions have a named person to answer them.
 
 ## Registry
 
@@ -45,7 +47,7 @@ The [Registry](./registry/overview.mdx) is your source of truth for *who and wha
 
 ## Compliance Management
 
-[Compliance Management](./compliance-management/overview.mdx) is where your program takes shape, and its objects form a chain: [policies and procedures](./compliance-management/policy-and-procedure-management/policies.mdx) document what you intend to do, [controls](./compliance-management/controls/overview.mdx) operationalize those policies and map to the standards you're pursuing, [evidence](./compliance-management/evidence/overview.mdx) attaches to controls to prove they operate, and [programs](./compliance-management/programs/overview.mdx) bundle all of it for a given audit period (say, SOC 2 Type 2 for this year). That chain (policy → control → evidence → program) is the outcome the rest of the platform exists to support, with [questionnaires](./automation/assessments.mdx) and [audit preparation](./grc-fundamentals/audit/index.mdx) rounding out assessment and audit readiness.
+[Compliance Management](./compliance-management/overview.mdx) is where your program takes shape, and its objects form a chain: [policies and procedures](./compliance-management/policy-and-procedure-management/policies.mdx) document what you intend to do, [controls](./compliance-management/controls/overview.mdx) operationalize those policies and map to the standards you're pursuing, [evidence](./compliance-management/evidence/overview.mdx) attaches to controls to prove they operate, and [programs](./compliance-management/programs/overview.mdx) bundle all of it for a given audit period (say, System and Organization Controls 2 (SOC 2) Type 2 for this year). That chain (policy → control → evidence → program) is the outcome the rest of the platform exists to support, with [questionnaires](./automation/assessments.mdx) and [audit preparation](./grc-fundamentals/audit/index.mdx) rounding out assessment and audit readiness.
 
 ## Frameworks & Standards
 
@@ -61,11 +63,11 @@ The [standards catalog](./standards/overview.mdx) covers the frameworks you're l
 
 ## Trust Center
 
-The [Trust Center](./trust-center/overview.mdx) is the public face of the program: a branded portal on your own domain where prospects and customers find your certifications, security documents (public or NDA-gated), subprocessors, and updates, instead of sending you another questionnaire. It publishes what the rest of the platform produces; completed frameworks, approved policies, and subprocessor records flow straight through.
+The [Trust Center](./trust-center/overview.mdx) is the public face of the program: a branded portal on your own domain where prospects and customers find your certifications, security documents (public or NDA-gated), <Term t="subprocessor">subprocessors</Term>, and updates, instead of sending you another questionnaire. It publishes what the rest of the platform produces; completed frameworks, approved policies, and subprocessor records flow straight through.
 
 ## Integrations & Security
 
-[Integrations](./integrations/overview.mdx) connect Openlane to the systems you already run (cloud providers and security tooling for posture collection, Slack and Teams for notifications, identity providers for SSO), so Registry and Exposure data stays current without manual entry. How access to Openlane itself works (authentication methods, the permissions model, and [groups](./settings/groups/overview.mdx)) lives in [Settings](./settings/overview.mdx).
+[Integrations](./integrations/overview.mdx) connect Openlane to the systems you already run (cloud providers and security tooling for posture collection, Slack and Teams for notifications, identity providers for single sign-on (SSO)), so Registry and Exposure data stays current without manual entry. How access to Openlane itself works (authentication methods, the permissions model, and [groups](./settings/groups/overview.mdx)) lives in [Settings](./settings/overview.mdx).
 
 ## Where to Go Next
 
@@ -73,4 +75,4 @@ The [Trust Center](./trust-center/overview.mdx) is the public face of the progra
 - **Coming with an existing program?** [Import your controls](./compliance-management/controls/import.mdx) and [policies](./compliance-management/policy-and-procedure-management/import.mdx) instead of recreating them.
 - **Building against the API?** Head to the [developer documentation](../developers/overview.mdx) and [GraphQL examples](../developers/graphql-examples/overview.mdx).
 - **New to compliance concepts or your first audit?** [GRC Fundamentals](./grc-fundamentals/overview.mdx) covers the concepts, terminology, and audit preparation.
-- **Unfamiliar terms?** The [Glossary](./glossary/index.mdx) has you covered.
+- **Unfamiliar terms?** Compliance and security terminology is defined in the [Glossary](./glossary/index.mdx).

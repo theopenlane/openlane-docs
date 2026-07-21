@@ -53,9 +53,9 @@ These are added on top of base middleware for endpoints that require authenticat
 | Order | Middleware | Purpose |
 |---|---|---|
 | 6 | **Impersonation** | Checks for `X-Impersonate-User` header, validates impersonator permissions |
-| 7 | **Authentication** | Validates JWT, PAT, or API token from `Authorization` header |
+| 7 | **Authentication** | Validates JWT, personal access token (PAT), or API token from `Authorization` header |
 | 8 | **System Admin Context** | Sets system admin flag in context if applicable |
-| 9 | **Additional** | CSRF validation, rate limiting, and other per-deployment middleware |
+| 9 | **Additional** | Cross-site request forgery (CSRF) validation, rate limiting, and other per-deployment middleware |
 
 ### Public Routes
 

@@ -14,10 +14,11 @@ tags:
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # Custom Data
 
-Custom Data lets you shape how your compliance data is categorized without changing core workflows. Two complementary tools live under Organization Settings → Custom Data: **Custom Enums** create structure, and **Custom Tags** create flexibility.
+Custom Data lets you shape how your compliance data is categorized without changing core workflows. Two complementary tools live under Organization Settings → Custom Data: **Custom Enums** define fixed dropdown values so records are classified consistently, and **Custom Tags** apply free-form labels for filtering and grouping.
 
 ## Custom Enums
 
@@ -32,7 +33,7 @@ A Custom Enum is a predefined list of selectable values used throughout the plat
 - Enable filtering and reporting
 - Maintain audit-ready structure
 
-Each enum value can include a name, an optional description, and a color.
+Each enum value can include a name, an optional description, and a color; the color helps you distinguish values at a glance in dropdowns and reports.
 
 ### Global vs. Object-Specific Enums
 
@@ -77,12 +78,7 @@ You should see the new value in dropdowns across the platform immediately.
 
 Tags let you apply flexible, lightweight labels to objects across Openlane. Located in Organization Settings → Custom Data → Custom Tags, tags help teams organize, filter, and segment compliance data without changing core structure or workflows.
 
-A Custom Tag is a reusable label that can be applied to records such as controls, risks, tasks, policies, vendors, assets, and more. Tags are:
-
-- Multi-select
-- Optional
-- Organization-defined
-- Designed for filtering and segmentation
+A Custom Tag is a reusable label that can be applied to records such as controls, risks, tasks, policies, vendors, assets, and more. Reach for a tag instead of an enum when a classification is optional, spans multiple object types, or changes too often to maintain as a fixed value list.
 
 Unlike enums, tags are not tied to strict object structure. They exist to help teams categorize information in ways that reflect how they operate.
 
@@ -117,4 +113,4 @@ You should see the tag available across supported objects immediately. Tags can 
 | Used for lightweight classification | Used for core object structure      |
 | Free-form and optional              | Controlled, standardized values     |
 | Evolve easily over time             | Governed and standardized           |
-| Great for filtering and grouping    | Critical for reporting + governance |
+| Use for filtering and grouping      | Use for reporting and governance    |

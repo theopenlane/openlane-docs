@@ -16,6 +16,7 @@ tags:
 ---
 
 import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
 
 # CIS Benchmarks
 
@@ -37,11 +38,11 @@ MS-ISAC provides members with resources and tools for improved IT governance, cy
 
 ## What is CIS Compliance?
 
-CIS compliance means meeting CIS security standards: your systems are configured to satisfy the applicable CIS benchmarks, of which there are more than 100 covering operating systems, cloud platforms, databases, network devices, and desktop software.
+CIS compliance means your systems are configured to satisfy the recommendations in the applicable CIS Benchmarks, of which there are more than 100 covering operating systems, cloud platforms, databases, network devices, and desktop software.
 
-Though CIS benchmarks stand alone, compliance with them is part of a broader IT risk management strategy. CIS publishes mappings from its benchmarks to the NIST Cybersecurity Framework and other regulatory requirements, so hardening against a benchmark also makes measurable progress toward those obligations.
+Though CIS benchmarks stand alone, compliance with them is part of a broader IT risk management strategy. CIS publishes mappings from its benchmarks to the <Term t="nist-cybersecurity-framework">NIST Cybersecurity Framework</Term> and other regulatory requirements, so hardening against a benchmark also makes measurable progress toward those obligations.
 
-The benchmarks are free to download, and each recommendation is developed through a consensus process of security practitioners. In practice that means you get specific settings and the audit steps to verify them, rather than abstract principles, and applying them closes off the default-configuration weaknesses that common attacks rely on.
+The benchmarks are free to download, and each recommendation is developed through a consensus process of security <Term t="practitioner">practitioners</Term>. In practice that means you get specific settings and the audit steps to verify them, rather than abstract principles, and applying them closes off the default-configuration weaknesses that common attacks rely on.
 
 ## CIS Controls
 
@@ -82,9 +83,9 @@ We recommend starting with IG1 regardless of organization size, because it estab
 
 ## What Are CIS Benchmarks?
 
-CIS Benchmarks are frameworks for calibrating a range of IT services and products to a high standard of cybersecurity, and they are a central part of your organization's CIS compliance objectives. There are more than 100 different benchmarks covering a range of well-known vendors and systems. CIS Benchmarks provide compliance guidance for all areas of an IT network, including operating systems, server systems, office software and network devices.
+Each CIS Benchmark is a set of consensus configuration recommendations for a specific product, such as an operating system, cloud platform, database, or network device. Every recommendation states the setting to apply, the rationale for it, and the audit steps to verify it, which is what makes the benchmarks directly actionable rather than abstract guidance.
 
-CIS Benchmarks are compatible with existing IT risk management policies and procedures like internal audit. Internal audit can use CIS Benchmarks as a tool to evaluate configurations for systems and data. Once the audit is complete, teams can implement the recommended CIS controls to secure the organization against cyberattacks. CIS Compliance requires organizations to follow specific controls for each benchmark, including malware and behavioral detection.
+CIS Benchmarks are compatible with existing IT risk management policies and procedures like internal audit. Internal audit can use CIS Benchmarks as a tool to evaluate configurations for systems and data, and teams can then remediate the recommendations the audit found unmet.
 
 ## What Is the Structure of CIS Benchmarks?
 
@@ -103,7 +104,7 @@ To help organizations with implementation, each recommendation within a CIS Benc
 
 ## How to Use CIS Benchmarks
 
-CIS Benchmarks provide configuration standards for a wide range of IT technologies. You do not have to adopt them wholesale: pick the benchmarks for the systems you actually run, apply the profile that fits your risk tolerance, and use the audit steps in each recommendation to verify the result.
+CIS Benchmarks provide configuration standards for a wide range of IT technologies. You do not have to adopt them wholesale: pick the benchmarks for the systems you actually run, apply the profile that fits your <Term t="risk-tolerance">risk tolerance</Term>, and use the audit steps in each recommendation to verify the result.
 
 CIS Benchmarks can be grouped into seven main areas:
 
@@ -123,12 +124,12 @@ Organizations that provide cybersecurity products as a service can get CIS certi
 
 Organizations must have CIS Security Software Vendor (SSV) membership before getting certified. Certification proves that the IT product or system meets best-practice cybersecurity standards. It also means users can configure the product to meet CIS Benchmark recommendations.
 
-Organizations will need to test and document the product to demonstrate compliance with CIS Benchmarks. The Center for Internet Security will then need to validate the test results before providing certification. Once certified, organizations can display the CIS-certified logo alongside the product to highlight CIS compliance. Potential customers will know that the product complies with CIS Benchmarks, informing IT governance decisions.
+Organizations will need to test and document the product to demonstrate compliance with CIS Benchmarks. CIS will then need to validate the test results before providing certification. Once certified, organizations can display the CIS-certified logo alongside the product to highlight CIS compliance. Potential customers will know that the product complies with CIS Benchmarks, informing IT governance decisions.
 
 ## What is the CIS certification process?
 
-To achieve CIS certification, organizations must first be members of CIS Security Software Vendor (SSV) group. The next step is to record and submit evidence to prove compliance with a CIS Benchmark. Certification is against one CIS Benchmark.
+To achieve CIS certification, organizations must first be members of CIS Security Software Vendor (SSV) group. The next step is to record and submit <Term t="evidence">evidence</Term> to prove compliance with a CIS Benchmark. Certification is against one CIS Benchmark.
 
 To prove compliance, organizations will need to perform tests against each recommendation in the CIS Benchmark. Results are collected and submitted in the main section of the application. Documentation explores each recommendation’s pass or fail state and highlights any exemptions or mitigating factors. This includes detailed explanations for any failure.
 
-It will usually take around two weeks for the Center for Internet Security to review a certification application. This process will take longer if the organization isn’t compliant, needs to make improvements or submits an incomplete application.
+It will usually take around two weeks for CIS to review a certification application. This process will take longer if the organization isn’t compliant, needs to make improvements or submits an incomplete application.

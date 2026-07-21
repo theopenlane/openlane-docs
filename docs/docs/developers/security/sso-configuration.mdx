@@ -21,13 +21,13 @@ import TabItem from '@theme/TabItem';
 
 # SSO & Auth Configuration
 
-Operators supply a small set of values to enable authentication flows: client credentials, discovery endpoints, and redirect URIs. For how the flows themselves work (enforcement, exemptions, JIT provisioning, WebFinger), see [Auth Flows](./auth-flows.mdx). For setting up SSO as an organization admin, see the [product SSO guide](/docs/platform/settings/authentication/sso).
+Operators supply a small set of values to enable authentication flows: client credentials, discovery endpoints, and redirect URIs. For how the flows themselves work (enforcement, exemptions, just-in-time (JIT) provisioning, WebFinger), see [Auth Flows](./auth-flows.mdx). For setting up single sign-on (SSO) as an organization admin, see the [product SSO guide](/docs/platform/settings/authentication/sso).
 
 ## What You Bring
 
 | Value | Scope | Where It Goes |
 | ----- | ----- | ------------- |
-| OIDC Client ID + Client Secret | Per organization | Organization settings, via console or API |
+| OpenID Connect (OIDC) Client ID + Client Secret | Per organization | Organization settings, via console or API |
 | OIDC Discovery Endpoint | Per organization | Organization settings, via console or API |
 | Social login Client ID + Secret pairs (Google, GitHub) | Instance-wide | Helm values / environment variables |
 | Redirect URI registered with the IdP | Per IdP application | Derived from `CORE_DOMAIN`; register `https://api.<domain>/oidc/callback` in the IdP |

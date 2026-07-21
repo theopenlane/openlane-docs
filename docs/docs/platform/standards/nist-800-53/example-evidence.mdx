@@ -7,7 +7,7 @@ description: Example evidence artifacts for commonly manually evidenced NIST 800
 
 # NIST 800-53 Example Evidence
 
-The table below lists commonly evidenced control areas for NIST 800-53 and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
+The table below lists commonly evidenced control areas for National Institute of Standards and Technology (NIST) 800-53 and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
 
 | Control Area | Example Evidence |
 | ------------ | ---------------- |
@@ -25,8 +25,8 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Management roles and responsibilities | The roles and responsibilities section of your information security policy |
 | Offboarding checklist | A completed termination checklist or help desk ticket for a recently departed employee |
 | Vendor register and agreements | A centralized vendor inventory with vendor name, relationship owner, services description, and risk rating, plus a sample executed agreement |
-| Vendor compliance monitoring | Records showing vendor assurance reports (SOC 2 Type II reports, ISO 27001 certificates, or completed questionnaires) are obtained and reviewed annually |
-| Authentication protocol | Screenshots of SSO login, password authentication, and MFA enforcement for employees, plus MFA availability for customers |
+| Vendor compliance monitoring | Records showing vendor assurance reports (System and Organization Controls 2 (SOC 2) Type II reports, International Organization for Standardization (ISO) 27001 certificates, or completed questionnaires) are obtained and reviewed annually |
+| Authentication protocol | Screenshots of single sign-on (SSO) login, password authentication, and multi-factor authentication (MFA) enforcement for employees, plus MFA availability for customers |
 | Role-based application access | Screenshots showing how application users are assigned roles |
 | Session timeout and logout | Screenshots demonstrating logout when the browser closes and forced reauthentication after a defined inactivity period |
 | Access provisioning | A documented access request form or ticket for a recent new hire |
@@ -55,7 +55,7 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Authentication before access | Screenshots of a user authenticating before viewing their information |
 | Self-service data updates | Screenshots of a user modifying their personal information within the application |
 | Incident reporting process | Formally documented incident response procedures |
-| Third-party breach reporting instructions | Executed contracts confirming third parties with access to PII are told how to report breaches to you |
+| Third-party breach reporting instructions | Executed contracts confirming third parties with access to personally identifiable information (PII) are told how to report breaches to you |
 | Breach notification | Documented breach notification procedures and the template used to notify affected individuals |
 | Field validation and confirmation | Screenshots confirming edit checks on application entry fields and prompts asking users to confirm accuracy before submission |
 | Privacy contact information | The section of your public privacy notice giving contact details for inquiries, complaints, and disputes |
@@ -64,7 +64,7 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Physical access policy | Current physical access control policy |
 | Regression testing | An example of regression testing performed before a recent major release |
 | Removable media encryption | Evidence that company-issued removable media devices are encrypted |
-| File integrity monitoring | FIM software screenshots and examples of the tool detecting changes |
+| File integrity monitoring | File integrity monitoring (FIM) software screenshots and examples of the tool detecting changes |
 | OS patching cadence | Evidence from servers or patching systems showing operating systems are patched on the defined schedule |
 | Continuous control monitoring | Compliance automation tooling showing continuous monitoring of controls, test results, and self-assessments |
 | Incident response testing | The most recently completed incident response tabletop exercise |
@@ -92,7 +92,7 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Approved services, protocols, and ports | Configuration standards listing approved services, protocols, and ports with approval and justification for each |
 | Insecure services controls | Standards documenting any insecure services in use and screenshots of the compensating security features applied |
 | Default-deny rules | Screenshots showing a final deny-all rule in firewall or router rule sets |
-| Boundary segmentation | A network diagram showing a DMZ or equivalent boundary zone, with configurations restricting traffic to approved services and ports |
+| Boundary segmentation | A network diagram showing a demilitarized zone (DMZ) or equivalent boundary zone, with configurations restricting traffic to approved services and ports |
 | Private IP protection | Firewall or router configurations concealing internal addressing through NAT, proxies, or route advertisement filtering |
 | Personal firewalls | Screenshots showing personal firewalls installed and active on portable devices, configured to standard, and not disableable by ordinary users |
 | Default account management | Procedures requiring vendor default accounts to be changed, plus screenshots showing defaults removed, reconfigured, or disabled |
@@ -113,7 +113,7 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Anti-malware coverage | Vendor documentation for anti-malware software in use and screenshots verifying detection and removal of malware types |
 | Malware threat evaluation | Job descriptions for personnel evaluating malware threats plus screenshots of monitoring tools or mailing list memberships |
 | Critical patching | Vendor patch lists for in-scope systems and screenshots showing critical security patches installed |
-| Pre-production credential removal | SDLC procedures requiring test accounts, user IDs, and passwords to be removed before production deployment |
+| Pre-production credential removal | Software development lifecycle (SDLC) procedures requiring test accounts, user IDs, and passwords to be removed before production deployment |
 | Test and production duty separation | Procedures requiring separation of duties between test and production personnel, with access configuration screenshots |
 | Test data controls | Screenshots showing live sensitive data is not used in non-production environments and test accounts are removed before activation |
 | Secure coding training | Training records showing developers completed secure coding training, including common vulnerability avoidance, within the past year |
@@ -166,13 +166,13 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Log integrity monitoring | FIM or change detection configured to alert if logs are altered, with settings, monitored files, and resulting alerts |
 | Daily log review policy | A policy requiring at least daily review of security events and of logs from systems handling sensitive data, critical components, and security functions |
 | Log retention | A documented retention policy plus screenshots showing recent months of logs remain immediately available for analysis |
-| Security control failure detection | Procedures for detecting and reporting failures across firewalls, IDS/IPS, FIM, anti-malware, physical and logical access controls, audit logging, and segmentation controls |
+| Security control failure detection | Procedures for detecting and reporting failures across firewalls, intrusion detection and prevention systems (IDS/IPS), FIM, anti-malware, physical and logical access controls, audit logging, and segmentation controls |
 | Control failure alerting | Screenshots showing alerting configured for failures of critical security control systems |
 | Control failure response | Procedures covering restoring security functions, documenting failure duration and root cause, addressing issues that arose, assessing residual risk, and preventing recurrence |
 | Control failure records | Documented failure records including root cause, start and end times, and the remediation performed |
 | Network access monitoring policy | Documented policies for monitoring access to network resources and sensitive data, stored where personnel can reach them |
 | Wireless access point detection | Procedures for at least quarterly detection of authorized and unauthorized wireless access points, covering wireless cards, portable hotspots, and devices attached to network ports |
-| Wireless monitoring alerts | Wireless IDS/IPS or NAC alert configuration showing alerts generated and routed to personnel |
+| Wireless monitoring alerts | Wireless IDS/IPS or network access control (NAC) alert configuration showing alerts generated and routed to personnel |
 | Authorized wireless inventory | A documented inventory of authorized wireless devices with business justification for each |
 | Rogue access point response | A wireless scan from the past quarter and response records showing unauthorized access points were handled per the incident response plan |
 | Penetration testing methodology | Documented methodology based on an industry-accepted approach covering the full perimeter and critical systems, internal and external testing, segmentation validation, and application and network layer testing, with results retained |
@@ -189,24 +189,24 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Responder training | Policies requiring periodic training for staff with incident response roles |
 | Security alert response | Procedures for responding to alerts from monitoring systems including intrusion detection and prevention, firewalls, and FIM |
 | Plan review and update | Incident response plan procedures for incorporating lessons learned and industry developments |
-| Privacy program scope | Documentation summarizing the scope of your privacy program, drawing on your record of processing activities |
+| Privacy program scope | Documentation summarizing the scope of your privacy program, drawing on your record of processing activities (ROPA) |
 | Designated data protection officer | Documentation formally appointing a data protection officer |
 | Sensitive information management | A data classification policy covering PII classification and handling, plus awareness materials on PII handling and issue reporting |
 | Data subject consent | Documentation of how consent is obtained before processing, screenshots of consent mechanisms, and consent records |
 | Record of processing activities | Completed ROPA covering each population whose data you process, such as customers, prospects, website visitors, and employees |
-| Data processing agreements | The DPA template used when sharing PII with third parties and fully executed contracts incorporating it |
-| Data protection impact assessments | Completed DPIA documentation prepared before high-risk processing begins |
+| Data processing agreements | The data processing agreement (DPA) template used when sharing PII with third parties and fully executed contracts incorporating it |
+| Data protection impact assessments | Completed data protection impact assessment (DPIA) documentation prepared before high-risk processing begins |
 | Special category data | ROPA entries identifying whether special categories of PII are collected and which allowable conditions are relied on |
 | Data subject request tracking | Records of data subject requests received and the actions taken to resolve them |
 | Shared account management | The shared account section of your system access control policy |
-| Application allowlisting | MDM or endpoint screenshots showing approved applications and failed installation of non-approved software |
+| Application allowlisting | Mobile device management (MDM) or endpoint screenshots showing approved applications and failed installation of non-approved software |
 | Application denylisting | Screenshots showing prohibited applications and failed installation attempts for them |
 | Anomaly detection baselines | Monitoring system configuration showing alerts for suspicious or anomalous activity, the notification recipients, and example triggered alerts |
 | Test information management | Screenshots showing test data usage in test environments, formal approvals for copying production data, and the related SDLC policy section |
 | Change management policy | Current change management policy |
 | Competence records | Records showing personnel hold the qualifications listed in your skills matrix, such as resumes or copies of certifications |
 | Core security policies | Current maintenance management, system and information integrity, system security planning, and system and services acquisition policies |
-| Automated access management | Screenshots of the admin console used to manage accounts and enforce identification and authentication, such as IAM, PAM, or password manager tooling |
+| Automated access management | Screenshots of the admin console used to manage accounts and enforce identification and authentication, such as identity and access management (IAM), privileged access management (PAM), or password manager tooling |
 | High-risk account disabling | The system access control policy section describing how high-risk accounts are disabled |
 | Encrypted information flow control | Screenshots of boundary protection device rules filtering on packet, header, or message content |
 | Administrator-only unlocks | A documented procedure restricting account unlocks to authorized administrators, plus screenshots of administrative permissions |
@@ -217,10 +217,10 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Wireless configuration authorization | Network configuration screenshots restricting wireless configuration changes to authorized users |
 | Wireless signal management | A wireless signal survey report |
 | External system controls | The information exchange section of your data protection policy |
-| Information sharing controls | DLP system configuration and rule sets, plus user role and permission screenshots |
+| Information sharing controls | Data loss prevention (DLP) system configuration and rule sets, plus user role and permission screenshots |
 | Public content management | Documented review and approval procedures for publishing content publicly |
 | PII in audit records | Log management configuration showing PII identification, masking, or removal, with sample logs showing redaction |
-| Log correlation | A SIEM tool or scripts used to correlate and analyze collected audit records |
+| Log correlation | A security information and event management (SIEM) tool or scripts used to correlate and analyze collected audit records |
 | Audit tool integrity | Measures protecting the integrity of audit tools, such as digital signatures or code signing certificates |
 | Non-repudiation and log modification | Data protection policy sections covering logged activities and controls over administrator and operator logs |
 | Baseline configurations | The change management policy plus baseline configuration files or templates defining desired system state, with prior versions retained |
@@ -257,7 +257,7 @@ The table below lists commonly evidenced control areas for NIST 800-53 and the a
 | Vulnerability disclosure response | Vulnerability management policy and incident response plan coverage of corrective actions for publicly discoverable information |
 | Approved identity verification products | Procedures for selecting only approved personal identity verification products, where US federal requirements apply |
 | System documentation | Architecture diagrams and system descriptions, plus procedures for obtaining, protecting, and distributing that documentation |
-| Secure development process | Current software development lifecycle policy |
+| Secure development process | Current SDLC policy |
 | User and management function separation | System documentation identifying components and services, showing user functionality separated from system management |
 | Shared system security | The data protection policy plus a copy of the system security plan |
 | External connection limits | The system security planning policy plus a network diagram showing limited external connections |

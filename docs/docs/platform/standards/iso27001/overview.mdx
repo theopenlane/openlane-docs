@@ -22,10 +22,11 @@ tags:
 ---
 
 import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
 
-# ISO 27001 (Information Security Management Systems)
+# Information Security Management Systems (ISO 27001)
 
-ISO 27001 is the international standard for building and running an information security management system (ISMS): a risk-driven, continuously improving security program rather than a checklist of controls. It's published jointly by the International Organization for Standardization and the International Electrotechnical Commission; the current edition is ISO/IEC 27001:2022. Unlike SOC 2, ISO 27001 is a true certification: an accredited certification body audits you and issues a certificate valid for three years.
+ISO 27001 is the international standard for building and running an information security management system (ISMS): a risk-driven, continuously improving security program rather than a checklist of controls.
 
 <StandardMeta
   fullName={"ISO/IEC 27001, Information Security Management Systems"}
@@ -39,7 +40,7 @@ ISO 27001 is the international standard for building and running an information 
 
 ## Who Needs It
 
-No law mandates ISO 27001, but it's the assurance currency in much of the world. You'll pursue it when:
+No law mandates ISO 27001, but it is the assurance credential most widely requested outside North America. You'll pursue it when:
 
 - Enterprise customers, especially in Europe, the UK, Asia-Pacific, or the public sector, require certification before signing
 - You sell internationally and want one credential that travels; outside North America, ISO 27001 often carries more weight than SOC 2
@@ -71,7 +72,7 @@ You don't blindly implement all 93. Your risk assessment drives a **Statement of
 Certification runs on a three-year cycle:
 
 1. **Stage 1 audit**: documentation review and readiness check
-2. **Stage 2 audit**: on-site verification that the ISMS actually operates, covering control testing, staff interviews, and evidence sampling
+2. **Stage 2 audit**: on-site verification that the ISMS actually operates, covering control testing, staff interviews, and <Term t="evidence">evidence</Term> <Term t="sampling">sampling</Term>
 3. **Surveillance audits**: annually in years one and two, narrower in scope
 4. **Recertification audit**: in year three to renew the certificate
 
@@ -84,7 +85,7 @@ For the artifacts that typically satisfy manually evidenced control areas, see [
 <details>
 <summary>ISO 27001 vs SOC 2: what's the actual difference?</summary>
 
-ISO 27001 is a certification of your management system against a fixed international standard; SOC 2 is a CPA firm's attestation report on controls you selected against the Trust Services Criteria. ISO gives you a certificate anyone can verify; SOC 2 gives you a detailed report customers read. Many companies end up with both, sharing most of the control set.
+ISO 27001 is a certification of your management system against a fixed international standard; SOC 2 is a Certified Public Accountant (CPA) firm's attestation report on controls you selected against the <Term t="trust-services-criteria">Trust Services Criteria</Term>. ISO gives you a certificate anyone can verify; SOC 2 gives you a detailed report customers read. Many companies end up with both, sharing most of the control set.
 
 </details>
 
@@ -98,7 +99,7 @@ Three years, contingent on passing annual surveillance audits. Skip or fail surv
 <details>
 <summary>Do we have to implement all 93 Annex A controls?</summary>
 
-No, but you must *consider* all 93 and justify inclusions and exclusions in your Statement of Applicability based on your risk assessment. Exclusions are normal (no data center means most physical controls shrink); unjustified exclusions are findings.
+No, but you must *consider* all 93 and justify inclusions and exclusions in your Statement of Applicability based on your risk assessment. Exclusions are normal (no data center means most physical controls shrink); unjustified exclusions are <Term t="finding">findings</Term>.
 
 </details>
 

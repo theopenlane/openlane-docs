@@ -20,6 +20,7 @@ tags:
 ---
 
 import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # Business Continuity Plan Guidance
 
@@ -27,7 +28,7 @@ A business continuity plan (BCP) documents how your organization keeps operating
 
 ## Core Requirements
 
-Most continuity policies commit the organization to three things. First, a plan and process for business continuity, including backup and recovery of systems and data, is defined and documented. Second, the plan is simulated and tested at least once a year, with metrics captured and identified improvements filed and tracked. Third, security controls stay operational at both primary and backup sites throughout any continuity event; a disruption is not a reason to run without logging, access control, or monitoring. If your continuity policy makes these commitments, your BCP and its test results are the evidence that you keep them.
+Most continuity policies commit the organization to three things. First, a plan and process for business continuity, including backup and recovery of systems and data, is defined and documented. Second, the plan is simulated and tested at least once a year, with metrics captured and identified improvements filed and tracked. Third, security <Term t="controls">controls</Term> stay operational at both primary and backup sites throughout any continuity event; a disruption is not a reason to run without logging, access control, or monitoring. If your continuity policy makes these commitments, your BCP and its test results are the <Term t="evidence">evidence</Term> that you keep them.
 
 ## Roles and Response Teams
 
@@ -49,7 +50,7 @@ The plan is only as good as the analysis behind it. Three activities feed it. A 
 
 ## Business Impact Analysis
 
-The BIA is the step most organizations skip, and it is the one that turns a template into a plan. It proceeds in three steps:
+The BIA is where the plan's recovery metrics come from: auditors check that the maximum tolerable downtime (MTD), recovery time objective (RTO), and recovery point objective (RPO) values in the plan trace back to an analysis that was actually performed, not copied from a template. It proceeds in three steps:
 
 <Steps>
 
@@ -65,9 +66,9 @@ The BIA produces three metrics that drive both the BCP and the DR plan:
 
 | Metric | Definition |
 | ------ | ---------- |
-| Maximum tolerable downtime (MTD) | The total time the organization can tolerate a process being unavailable, including all impact considerations |
-| Recovery time objective (RTO) | The maximum time a system resource can remain unavailable before there is unacceptable impact on other resources, the processes it supports, and the MTD |
-| Recovery point objective (RPO) | The point in time before the disruption to which process data must be recoverable, which determines how much data loss is acceptable and therefore how frequently backups run |
+| MTD | The total time the organization can tolerate a process being unavailable, including all impact considerations |
+| RTO | The maximum time a system resource can remain unavailable before there is unacceptable impact on other resources, the processes it supports, and the MTD |
+| RPO | The point in time before the disruption to which process data must be recoverable, which determines how much data loss is acceptable and therefore how frequently backups run |
 
 MTD is typically larger than RTO and RPO, since it accounts for the whole process rather than a single system. Customer-facing processes usually warrant stricter objectives than internal functions: an hour of billing-report downtime is an inconvenience, while an hour of production API downtime may breach contractual commitments.
 

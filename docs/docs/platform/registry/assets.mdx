@@ -2,20 +2,56 @@
 title: Assets
 description: Track systems and resources that define your security and compliance scope
 sidebar_position: 4
+compliance:
+  - "SOC 2 CC6.1"
+  - "ISO 27001:2022 A.5.9"
+  - "HIPAA"
+  - "CIS Control 1"
+  - "FedRAMP"
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Assets
 
-Assets are Openlane's asset inventory: the systems, services, devices, domains, and repositories your organization runs, managed in the same system as the compliance automation built around them. Each record carries ownership, classification, and the relationships that connect it to controls, scans, and evidence, and records can be curated by hand, imported in bulk, or discovered through integrations.
+Assets are the resources your controls operate on, inventoried in the same system as the compliance automation built around them. Each record carries ownership, classification, and the relationships that connect it to controls, scans, and <Term t="evidence">evidence</Term>.
 
-Keeping asset management and compliance together means the inventory frameworks require is the same one your program operates on, with nothing to reconcile between tools. ISO 27001 A.8 requires an inventory of information and associated assets, SOC 2 CC6 and CC7 assume you can enumerate the systems where access is controlled and monitored, and HIPAA expects you to know which systems hold ePHI. Auditors typically start from the inventory: they pick assets and ask who owns each one, what data it holds, and what evidence covers it, and asset records are built to answer exactly those questions.
+## What an Asset Is
+
+Security standards define an asset as anything that has value to the organization, and the National Institute of Standards and Technology (NIST) glossary catalogs several variations on that definition, all deliberately broad. A <Term t="compliance-program">compliance program</Term> needs a narrower working definition, and this is the one Openlane's inventory is built around: an asset is any system or resource that creates, receives, stores, or transmits the information your program protects, or that a control obligation attaches to. If something must be access-controlled, encrypted, scanned, backed up, or accounted for in a risk analysis under your framework, it is an asset and belongs in the inventory.
+
+The inventory is not supporting paperwork for the audit; in most frameworks it is itself a control, and other controls are defined in terms of it:
+
+| Framework | Inventory requirement |
+| --- | --- |
+| **ISO 27001:2022** | A.5.9 requires an inventory of information and other associated assets with an owner for each |
+| **SOC 2** | CC6.1 requires access to systems and data to be restricted to authorized users, which is only demonstrable against a list of what those systems and data are |
+| **HIPAA** | The Security Rule's risk analysis must cover every system that creates, receives, maintains, or transmits electronic protected health information (ePHI), so the analysis starts from a list of those systems |
+| **CIS Controls** | Control 1 makes inventory the first safeguard on the grounds that an enterprise cannot defend assets it does not know it has |
+| **FedRAMP** | A monthly inventory workbook must cover every asset inside the authorization boundary |
+
+Auditors use the inventory in two directions. It defines the <Term t="population">population</Term> your controls claim to cover: when a control says all production systems are scanned or all systems holding personally identifiable information (PII) are encrypted, "all" means the records in the inventory, so an asset missing from it is a control silently not applied. It is also the list auditors sample from: they pick records and ask who owns this, what data does it hold, and what evidence shows the controls operating on it. Asset records carry ownership, classification, and links to controls, scans, and evidence so every sampled record can answer.
+
+## What Belongs in the Inventory
+
+Create an asset record when any of these hold:
+
+* The resource sits inside a <Term t="system-boundaries">system boundary</Term> your program covers (a [platform](./platforms.mdx))
+* It stores, processes, or transmits data your framework regulates or your organization classifies as sensitive
+* A control obligation applies to it directly
+* Its compromise or failure would affect the commitments your report describes
+
+Production services, their databases, the domains they answer on, the repositories their code lives in, and the devices that administer them all typically qualify.
+
+Leave out what no obligation reaches: resources entirely outside your audit boundaries, personal peripherals, and the internals of vendor-managed services. You are accountable for the vendor relationship, not the vendor's infrastructure, and that relationship is tracked as an [entity](./entities.mdx) rather than as assets.
+
+Track assets at the granularity where ownership and controls attach. A production database cluster is one asset; its individual disks are not, because no owner or control applies to a disk separately from its cluster. When two resources share an owner, a data classification, and the controls that cover them, one record can represent both; when they diverge on any of those, split them, because an auditor's question about one will not have the same answer for the other.
 
 ## How Assets Work
 
-Each asset record remembers where it came from: entered by hand, imported, or discovered by an integration, with machine-sourced records keeping their source platform and when they were last observed. Every asset declares what kind of resource it is, whether an application or service, a domain, a device, a source repository, or a telephony resource.
+Not every record deserves the same trust: an asset a person entered or imported reflects a scoping decision someone made, while an asset an integration discovered is an observation that still needs review. The source type keeps that distinction visible, and machine-sourced records carry their source platform and last-observed time, so you can tell a live discovery from a stale one before treating it as part of your scope. Asset types serve the same purpose for audit questions: which domains you answer on, which devices are encrypted, and which repositories feed production are different questions with different evidence, and the type is what lets each query return only the records it is about.
 
 Classification carries much of the record's value: environment, criticality, data classification, and similar fields all draw from your organization's [custom enums](../settings/custom-data.mdx), so records are categorized in your vocabulary rather than a vendor's. Ownership can be a user, a group, or a named person who does not have an account yet, so accountability never depends on everyone being an Openlane user.
 
@@ -25,7 +61,7 @@ Assets connect to the vendor [entities](./entities.mdx) that supply them, the [p
 
 ### Import the In-Scope Inventory
 
-Start from your existing source of truth (a cloud console export, an ITAM report, a spreadsheet) and cut it down to what is actually in scope for your program before importing via CSV. For each record, set the type, an identifier that matches how the resource is known elsewhere, the region, and whether it contains PII. Then assign an owner to every asset; the inventory only functions as a control when each record has an accountable person behind it.
+Start from your existing source of truth (a cloud console export, an IT asset management (ITAM) report, a spreadsheet) and cut it down to what passes the inclusion test above before importing via CSV. For each record, set the type, an identifier that matches how the resource is known elsewhere, the region, and whether it contains PII. Then assign an owner to every asset; the inventory only functions as a control when each record has an accountable person behind it.
 
 ### Classify for Filtering and Evidence
 
@@ -33,7 +69,7 @@ Apply environment, data classification, and criticality values so the inventory 
 
 ### Connect Assets to Security Work
 
-Registry scope feeds the [exposure workflow](../exposure/overview.mdx): scans run against assets, and the resulting vulnerabilities and findings trace back to the affected records. Linking assets to their scans means "what is the security posture of this system" and "which in-scope assets have never been scanned" are both queries against the registry rather than tribal knowledge.
+Registry scope feeds the [exposure workflow](../exposure/overview.mdx): scans run against assets, and the resulting vulnerabilities and <Term t="finding">findings</Term> trace back to the affected records. Linking assets to their scans means "what is the security posture of this system" and "which in-scope assets have never been scanned" are both queries against the registry rather than tribal knowledge.
 
 ### Map Dependencies
 
@@ -42,7 +78,7 @@ Relate each asset to the vendor entities behind it and the platforms it composes
 ## FAQ
 
 <details>
-<summary>Should I import my entire CMDB?</summary>
+<summary>Should I import my entire configuration management database (CMDB)?</summary>
 
 No. We recommend importing only what is in scope for your compliance program, because every asset you list is an asset an auditor can sample, so an inventory padded with unowned, unclassified records weakens your position rather than strengthening it. A useful test: if nobody would notice the record going stale, it probably does not belong in the compliance inventory.
 
@@ -51,14 +87,21 @@ No. We recommend importing only what is in scope for your compliance program, be
 <details>
 <summary>What is the difference between an asset and a platform?</summary>
 
-An asset is an individual resource: a service, domain, device, or repository. A [platform](./platforms.mdx) is a governed system boundary that assets compose, carrying the scope statement, ownership roles, and system description an audit needs. The production API service, its database, and its DNS domain are assets; "Production API" as the system your SOC 2 report describes is a platform that relates to all three.
+An asset is an individual resource: a service, domain, device, or repository. A [platform](./platforms.mdx) is a governed system boundary that assets compose, carrying the scope statement, ownership roles, and system description an audit needs. The production API service, its database, and its DNS domain are assets; "Production API" as the system your System and Organization Controls 2 (SOC 2) report describes is a platform that relates to all three.
+
+</details>
+
+<details>
+<summary>Is a SaaS product we use an asset or an entity?</summary>
+
+The vendor is an [entity](./entities.mdx); your use of their product can be an asset. If your tenant of the tool holds in-scope data or carries control obligations (single sign-on (SSO) enforcement, access reviews, offboarding), record it as an asset linked to the vendor entity. If the relationship is purely contractual and no control in your program operates on the tool itself, the entity record is enough.
 
 </details>
 
 <details>
 <summary>How do I tell curated records apart from machine-created ones?</summary>
 
-Check the source type. Manual and Imported records were created or loaded by a person; Discovered and Api records were produced programmatically and carry their source platform, integration, and observed-at timestamp. Filtering on source type lets you review machine-sourced records before treating them as part of your curated scope.
+Filter on the source type. Records a person created or imported reflect scoping decisions someone made deliberately. Machine-produced records carry their source platform and observed-at timestamp, and they should be reviewed before you treat them as part of your curated scope.
 
 </details>
 

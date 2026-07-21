@@ -1,0 +1,105 @@
+---
+title: "CC7.1"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC7.1
+
+<ControlMeta
+  refCode={"CC7.1"}
+  category={"Security"}
+  subcategory={"System Operations"}
+  description={"To meet its objectives, the entity uses detection and monitoring procedures to identify (1) changes to configurations that result in the introduction of new vulnerabilities, and (2) susceptibilities to newly discovered vulnerabilities."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Uses Defined Configuration Standards</summary>
+
+The entity has defined configuration standards to be used for hardening systems.
+
+</details>
+
+<details>
+<summary>Monitors Infrastructure and Software</summary>
+
+The entity monitors infrastructure and software for noncompliance with the standards, which could threaten the achievement of the entity's objectives.
+
+</details>
+
+<details>
+<summary>Implements Change-Detection Mechanisms</summary>
+
+The IT system includes a change-detection mechanism (for example, file integrity monitoring tools) to alert personnel to unauthorized modifications of critical system files, configuration files, or content files.
+
+</details>
+
+<details>
+<summary>Detects Unknown or Unauthorized Components</summary>
+
+Procedures are in place to detect the introduction of unknown or unauthorized components.
+
+</details>
+
+<details>
+<summary>Conducts Vulnerability Scans</summary>
+
+The entity conducts infrastructure and software vulnerability scans designed to identify potential vulnerabilities or misconfigurations on a periodic basis and after significant changes are made to the environment. Action is taken to remediate identified deficiencies in a timely manner to support the achievement of the entity's objectives.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Asset Management | IT Asset Management (ITAM) | Documented evidence of an IT Asset Management (ITAM) program that addresses the due diligence and due care activities associated with maintaining both secure and compliant systems, applications and services. |
+| Asset Management | Configuration Management | Documented evidence of standardized configuration management practices. |
+| Asset Management | Secure Baseline Configurations Reviews | Documented evidence of a review process to ensure Secure Baseline Configurations (SBC) are current and applicable (e.g., system configuration settings and associated documentation). |
+| Asset Management | Secure Baseline Configurations - Cloud-Based Services | Documented evidence of secure baseline configurations for all deployed types of cloud-based services or applications. |
+| Asset Management | Secure Baseline Configurations - Databases | Documented evidence of secure baseline configurations for all deployed types of databases. |
+| Asset Management | Secure Baseline Configurations - Embedded Technologies | Documented evidence of secure baseline configurations for all deployed types of embedded technologies. |
+| Asset Management | Secure Baseline Configurations - Major Applications | Documented evidence of secure baseline configurations for all deployed types of major applications. |
+| Asset Management | Secure Baseline Configurations - Minor Applications | Documented evidence of secure baseline configurations for all deployed types of minor applications. |
+| Asset Management | Secure Baseline Configurations - Mobile Devices | Documented evidence of secure baseline configurations for all deployed types of mobile devices. |
+| Asset Management | Secure Baseline Configurations - Network Devices | Documented evidence of secure baseline configurations for all deployed types of network devices. |
+| Asset Management | Secure Baseline Configurations - Server Class Systems | Documented evidence of secure baseline configurations for all deployed types of server-class operating systems. |
+| Asset Management | Secure Baseline Configurations - Workstation Class Systems | Documented evidence of secure baseline configurations for all deployed types of workstation-class operating systems. |
+| Event Log Monitoring | Integrity Monitoring | Documented evidence of integrity monitoring, where files and/or configurations on critical systems, applications and/or services are actively monitored for changes that could indicate unauthorized changes. |
+| Vulnerability Management | Vulnerability Assessments | Documented evidence of internal and external vulnerability assessment activities. |
+
+## Policies
+
+- **[Vulnerability Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/vulnerability-management/vulnerability-management.md)** - Establishes requirements for identifying and remediating security vulnerabilities
+
+## Example Organization Controls
+
+- **CC7.1.1** - Management has defined configuration standards in the information security policies and procedures.
+- **CC7.1.2** - Policies and procedures are in place regarding detection, logging, and monitoring of unknown or unauthorized components into the environment.
+- **CC7.1.3** - The entity monitors key activities and alerts are generated when those activities are outside normal tolerances.
+- **CC7.1.4** - Alerts are generated to those responsible for taking action.
+- **CC7.1.7** - An independent third-party performs a penetration test annually to identify and exploit vulnerabilities identified within the environment. Security vulnerabilities that are detected are monitored through resolution.
+
+## Example Control Objectives
+
+- **Security configuration management** - System configurations are managed according to defined security standards.
+
+## Example Control Implementations
+
+- **vulnerability-scanning** - Continuous vulnerability scanning is implemented across the software supply chain. Implementation includes: - Dependabot and Renovate scan dependencies for vulnerabilities - Trivy scans container images before deployment - SonarQube performs static code analysis on every PR - Critical vulnerabilities addressed within 7 days per software development lifecycle (SDLC) Policy - High vulnerabilities addressed within 30 days - Annual third-party penetration testing
+
+## Example Evidence
+
+- **Penetration Test Report** - Most recent third-party penetration test report and remediation evidence
+
+## Example Action Plans
+
+- **Annual penetration test** - Annual penetration test by qualified third-party vendor to identify vulnerabilities in production systems. Required for System and Organization Controls 2 (SOC 2) compliance.
+- **Dependency vulnerability remediation** - Renovate and Dependabot have identified vulnerabilities requiring remediation within service level agreement (SLA) timeframes.
+
+## Example Remediations
+
+- **auth-service-cve-remediation** - Update authentication service dependencies to patch CVE-2024-12345 privilege escalation vulnerability.

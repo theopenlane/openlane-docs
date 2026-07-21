@@ -16,9 +16,11 @@ keywords:
   - faq
 ---
 
+import Term from '@site/src/components/Term';
+
 # SOC 2 FAQ
 
-Answers to the questions we hear most often about SOC 2: whether it is required, how the attestation works, and what the process costs in time and money.
+Answers to the questions we hear most often about System and Organization Controls 2 (SOC 2): whether it is required, how the attestation works, and what the process costs in time and money.
 
 <details>
 <summary>Is SOC 2 mandatory?</summary>
@@ -30,7 +32,7 @@ No, a SOC 2 is not legally required of any organization. However, your customer 
 <details>
 <summary>Is SOC 2 a certification or an attestation?</summary>
 
-There’s no such thing as SOC 2 certification. It is more accurate to call the process of gaining compliance a SOC 2 attestation. This is because SOC 2 audits are conducted by licensed CPAs based on standards set by the AICPA, but there’s no certifying body or official certification. Auditors provide an objective report on your security posture that lacks a pass or fail outcome.
+There’s no such thing as SOC 2 certification. It is more accurate to call the process of gaining compliance a SOC 2 attestation. This is because SOC 2 audits are conducted by licensed CPAs based on standards set by the <Term t="american-institute-of-certified-public-accountants">AICPA</Term>, but there’s no certifying body or official certification. Auditors provide an objective report on your security posture that lacks a pass or fail outcome.
 
 </details>
 
@@ -51,7 +53,7 @@ You can’t technically "fail" a SOC 2 audit, as there’s no pass or fail syste
 <details>
 <summary>What should we review in the draft report?</summary>
 
-Your auditor sends a draft report before issuing the final version, and it deserves a section-by-section review. Section 1 is the auditor's opinion; read it in full and make sure you understand and agree with the language, because it is the headline result of the audit. Section 2 is the management assertion, standard language you cannot change but should still read so you know what your organization is asserting. Section 3 is the system description you provided; skim it to confirm nothing significant was altered from the copy you submitted. Section 4 lists each control alongside the auditor's test results; review both columns carefully to confirm your controls and the outcomes are documented accurately.
+Your auditor sends a draft report before issuing the final version, and it deserves a section-by-section review. Section 1 is the auditor's opinion; read it in full and make sure you understand and agree with the language, because it is the headline result of the audit. Section 2 is the management assertion, standard language you cannot change but should still read so you know what your organization is asserting. Section 3 is the <Term t="system-description">system description</Term> you provided; skim it to confirm nothing significant was altered from the copy you submitted. Section 4 lists each control alongside the auditor's test results; review both columns carefully to confirm your controls and the outcomes are documented accurately.
 
 Exceptions should not surprise you at this stage. Auditors communicate them during fieldwork, so if none were raised along the way, the draft is most likely a clean report.
 
@@ -62,21 +64,19 @@ Exceptions should not surprise you at this stage. Auditors communicate them duri
 
 Taking into account lost productivity, build vs. buy decisions for new tools, and security training, we estimate the cost at $147,000 all-in.
 
-Let’s dig into each of these points to help you understand the costs you may encounter.
-
 **How much will an Auditor charge for a SOC 2 Type 1 audit?**
 
-Expect the cost of an auditor for SOC 2 Type 1 to be in the $12k-$17k range.
+Expect the cost of an auditor for SOC 2 <Term t="type-i-type-ii">Type 1</Term> to be in the $12k-$17k range.
 
-But the cost of the auditor is just the beginning. You will need months of dedicated time from your existing staff or consultants. Once the audit is complete, you will have a laundry list of items to remediate, which may necessitate the purchase of additional tools and training as well.
+But the cost of the auditor is just the beginning. You will need months of dedicated time from your existing staff or consultants. Once the audit is complete, you will have a set of remediation items, which may necessitate the purchase of additional tools and training as well.
 
 **Lost Productivity**
 
-First, assign someone to own the SOC 2 process from start to finish. Expect this to become a full-time focus for the duration of the project. This is a hidden SOC 2 cost that may not be obvious to account for. This responsibility is not something that can be delegated to your IT or security team, nor can it be handled by junior staff. The initiative needs to be led by someone who has sufficient familiarity with technical systems to be efficient with the team’s time. That person will also need to be sufficiently senior to successfully cut through the company politics and get things done.
+First, assign someone to own the SOC 2 process from start to finish. Expect this to become a full-time focus for the duration of the project. This is a hidden SOC 2 cost that may not be obvious to account for. This responsibility is not something that can be delegated to your IT or security team, nor can it be handled by junior staff. The initiative needs to be led by someone who has sufficient familiarity with technical systems to be efficient with the team’s time. That person also needs the authority to direct work across teams, because remediation touches engineering, IT, HR, and legal.
 
 **Readiness Assessment**
 
-Next, you will need a readiness assessment. This assessment is designed to educate your team on the audit scope and conduct preliminary investigative and prep work, including identifying data stores, mapping workflow, and creating an inventory of technical systems. It’s also the right time to give some of your key teams, like legal and HR, a heads up that some of your company’s documentation and policies will need to be changed.
+Next, you will need a readiness assessment. This assessment is designed to educate your team on the <Term t="audit-scoping">audit scope</Term> and conduct preliminary investigative and prep work, including identifying data stores, mapping workflow, and creating an inventory of technical systems. It’s also the right time to give some of your key teams, like legal and HR, a heads up that some of your company’s documentation and policies will need to be changed.
 
 **Legal**
 

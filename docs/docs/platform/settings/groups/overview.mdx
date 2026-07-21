@@ -16,9 +16,11 @@ tags:
   - compliance
 ---
 
+import Term from '@site/src/components/Term';
+
 # Groups
 
-Groups do two jobs in Openlane: they organize your people, and they carry permissions. Put users in a group, give the group access to the right objects (programs, controls, policies, evidence), and everyone in it can do their work without per-person permission bookkeeping.
+Groups do two jobs in Openlane: they organize your people, and they carry permissions. Put users in a group, give the group access to the right objects (programs, controls, policies, <Term t="evidence">evidence</Term>), and everyone in it can do their work without per-person permission bookkeeping.
 
 Access control is itself a compliance requirement: auditors will ask who can edit controls, who can approve policies, and how you keep those lists current. Managing access through groups gives you an answer that's both operable and auditable: permissions live in one reviewable place, and membership changes leave a trail.
 
@@ -26,7 +28,7 @@ Groups also enforce segregation of duties: the people who write policies, the pe
 
 ## Built-in Groups
 
-Every organization starts with three groups we maintain for you (**Viewers**, **Admins**, and **All Members**), kept in sync with each user's organization role automatically. Their membership isn't editable (that's the point), but they're the fastest way to assign broad permissions: granting "All Members" view access to your policies takes one step and never goes stale as people join or leave.
+Every organization starts with three groups we maintain for you (**Viewers**, **Admins**, and **All Members**), kept in sync with each user's organization role automatically. Their membership is derived from each user's organization role rather than edited directly, so grants made through them never go stale: granting "All Members" view access to your policies takes one step and stays current as people join or leave.
 
 See [System Managed Groups](./system-managed.mdx) for details.
 
@@ -35,7 +37,7 @@ See [System Managed Groups](./system-managed.mdx) for details.
 There's no prescribed structure; create groups that match how your team actually divides the work. Common shapes:
 
 - **Functional**: a Security Team group that can edit controls and evidence; a Compliance group that can approve policies
-- **Project-based**: a SOC 2 Audit group for this year's audit, with access scoped to that program, archived when it's done
+- **Project-based**: a System and Organization Controls 2 (SOC 2) Audit group for this year's audit, with access scoped to that program, archived when it's done
 - **Approval**: a Risk Committee group whose members sign off on risk acceptance and treatment decisions
 
 We recommend starting small: the system-managed groups plus one or two functional groups cover most teams until an audit or a new framework gives you a reason for more structure.

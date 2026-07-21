@@ -5,9 +5,11 @@ sidebar_position: 8
 description: Example evidence artifacts for commonly manually evidenced SOC 2 control areas
 ---
 
+import Term from '@site/src/components/Term';
+
 # Evidence Examples for SOC 2
 
-The table below lists commonly evidenced control areas for SOC 2 and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview). Auditors frequently ask for the complete population of an item (users, assets, vendors) and choose their own sample, so plan beyond a single example.
+The table below lists commonly evidenced control areas for System and Organization Controls 2 (SOC 2) and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview). Auditors frequently ask for the complete <Term t="population">population</Term> of an item (users, assets, vendors) and choose their own <Term t="sampling">sample</Term>, so plan beyond a single example.
 
 | Control Area | Example Evidence |
 | ------------ | ---------------- |
@@ -18,14 +20,14 @@ The table below lists commonly evidenced control areas for SOC 2 and the artifac
 | External communication channels | Screenshots of the channels customers use to report issues, bugs, or suspected incidents: support portal, help desk page, in-app feedback features |
 | Internal communication channels | Screenshots of internal reporting channels for failures, events, and concerns, such as a dedicated security channel in Slack or Teams, or a whistleblower channel |
 | User access review | Documentation of the latest access review: the user and permission lists reviewed, sign-off by at least two people so nobody approves their own access, and tickets showing requested changes were made; quarterly cadence is the norm and physical access rights may be in scope |
-| Baseline configuration and hardening standards | Your documented hardening standards, such as CIS Benchmarks, CIS Hardened Images, or NIST configuration checklists, plus evidence of implementation, for example via infrastructure as code |
-| Organizational chart | The current org chart, for example an HRMS export showing people, titles, departments, and reporting lines |
+| Baseline configuration and hardening standards | Your documented hardening standards, such as Center for Internet Security (CIS) Benchmarks, CIS Hardened Images, or National Institute of Standards and Technology (NIST) configuration checklists, plus evidence of implementation, for example via infrastructure as code |
+| Organizational chart | The current org chart, for example a human resources management system (HRMS) export showing people, titles, departments, and reporting lines |
 | Risk assessment results | Records of the most recent risk assessment, such as the risk register and risk treatment plan, produced per company policy |
 | Penetration test | The most recent penetration test report showing scope and results, plus tickets tracking remediation of findings against your SLAs and documented justification for accepted risks |
 | Asset inventory | A documented listing of all assets (workstations, mobile devices, servers, databases) plus cloud console screenshots enumerating infrastructure |
 | Architecture diagram | The current architecture diagram plus confirmation it was reviewed for accuracy within the past year, for example an email from the responsible owner |
 | Network diagram | The current network diagram plus confirmation it was reviewed for accuracy within the past year |
-| Business continuity/disaster recovery test | Records of the most recent BCP or DR exercise: activities performed, results, lessons learned, and invites showing participants and dates |
+| Business continuity/disaster recovery test | Records of the most recent business continuity plan (BCP) or DR exercise: activities performed, results, lessons learned, and invites showing participants and dates |
 | Incident documentation | For an event treated as an incident: the tracking ticket, root-cause analysis or post-mortem, and lessons learned |
 | Incident response roles and responsibilities | Documented incident response procedures naming the roles: incident managers, handlers, communication coordinators, advisors |
 | Employee performance review | A completed performance evaluation from the past year showing the process components (self, peer, manager reviews), with sensitive details redacted |
@@ -33,15 +35,15 @@ The table below lists commonly evidenced control areas for SOC 2 and the artifac
 | Formal screening process | Recruitment records for a recent hire: interview invites, interviewer feedback, applicant tracking system exports, and resume or credential evaluation |
 | Job descriptions | Documented job descriptions for a recent hire and an existing employee, especially for security, engineering, and IT roles that affect data confidentiality, integrity, or availability |
 | Vendor register and agreement | A current centralized vendor inventory with owner, service description, and risk rating; screenshots from your vendor management tooling showing risk categorization; and an executed agreement with a vendor that touches your information assets |
-| Vendor compliance monitoring | Documentation showing critical vendors' assurance artifacts are collected and reviewed at least annually: SOC 2 Type 2 reports, completed security questionnaires (SIG, CAIQ), ISO 27001 certificates |
+| Vendor compliance monitoring | Documentation showing critical vendors' assurance artifacts are collected and reviewed at least annually: SOC 2 Type 2 reports, completed security questionnaires such as Standardized Information Gathering (SIG) and Consensus Assessment Initiative Questionnaire (CAIQ), International Organization for Standardization (ISO) 27001 certificates |
 | Administrative users | User list exports (with the export parameters shown) identifying who holds administrative or privileged access across relevant systems: cloud provider, code repositories, identity provider, password vaults, VPN, customer data stores |
 | Secure secret storage | Evidence stored secrets (passwords, API keys) are protected: not held in plain text, encrypted or hashed and salted, or kept in a secrets manager |
 | Customer data segregation | Database screenshots showing unique identifiers tie data to specific customers, or separate databases or storage buckets per customer |
 | Application logoff | Screenshots showing users are signed out when the browser or tab closes and after a defined inactivity timeout, with reauthentication required |
 | Terms of service | The terms of service published online plus sign-up screenshots showing users must accept them before using the system |
 | Public privacy policy/notice | A link to the published privacy notice covering purpose and lawful basis for processing, data types collected, consent, collection methods such as cookies, retention and disposal, data subject rights, subprocessors, and enforcement |
-| Executed MSA | A recently executed customer service agreement; if you only execute agreements with certain customer tiers, auditors will still want to review those |
-| Multi-factor authentication | MFA configuration screenshots for relevant systems; where MFA is enabled per user rather than globally, evidence every user has it on |
+| Executed master service agreement (MSA) | A recently executed customer service agreement; if you only execute agreements with certain customer tiers, auditors will still want to review those |
+| Multi-factor authentication (MFA) | MFA configuration screenshots for relevant systems; where MFA is enabled per user rather than globally, evidence every user has it on |
 | Password configurations | Screenshots of enforced password requirements (length, complexity) for relevant systems, matching company policy |
 | Access provisioning | An access request ticket with documented approval from the system owner or manager; auditors may also ask for permission-change requests for existing users |
 | Termination/offboarding | The offboarding checklist or ticket for one recent departure, plus account logs showing system and physical access was revoked within policy timelines |
@@ -51,7 +53,7 @@ The table below lists commonly evidenced control areas for SOC 2 and the artifac
 | Backup and retention configurations | Screenshots of production database backup settings: frequency, window, and retention period |
 | Logging system | Screenshots of where system activity logs are stored |
 | Network security configurations | Screenshots of firewall rules or security groups showing inbound and outbound traffic controls for production resources |
-| Web application firewall | Screenshots of the WAF configuration showing active rulesets |
+| Web application firewall (WAF) | Screenshots of the WAF configuration showing active rulesets |
 | Intrusion detection/prevention | Screenshots from AWS GuardDuty, Azure Sentinel, GCP Security Command Center, or an equivalent showing the service enabled, the threat types detected, and who gets alerted |
 | Encrypted connections for remote access | Screenshots showing production servers or databases are unreachable unless connected to the internal network via encrypted VPN |
 | Processing capacity monitoring | Screenshots of observability dashboards for utilization metrics and alert configurations for resource utilization |
@@ -60,7 +62,7 @@ The table below lists commonly evidenced control areas for SOC 2 and the artifac
 | Backup restoration test | Records of a test restore completed within the past year: steps taken, results, completion date, and validation that restored data is complete and accurate |
 | Customer data deletion | For a recently churned customer: disposal logs or screenshots showing customer-specific resources decommissioned, plus the agreement stating the disposal commitments and any time window |
 | Test data in lower environments | Evidence production data stays out of lower environments, such as test databases populated with mock data or anonymization scripts |
-| Employee NDA | An executed confidentiality agreement with a recent hire, such as an NDA, PIIA, or employment agreement with confidentiality clauses |
+| Employee non-disclosure agreement (NDA) | An executed confidentiality agreement with a recent hire, such as an NDA, proprietary information and inventions agreement (PIIA), or employment agreement with confidentiality clauses |
 | Third party NDA | An executed confidentiality agreement with a vendor, contractor, or business partner |
 | Disposal of sensitive data on paper | Observation of hard copy destruction, on-site or over a video call |
 | Secure storage mechanisms | Photos of locked storage or shred bins at office locations |
@@ -69,26 +71,26 @@ The table below lists commonly evidenced control areas for SOC 2 and the artifac
 | Mandatory fields | Screenshots of data entry showing the application requires mandatory fields |
 | Explicit acknowledgement of privacy policy | Sign-up flow screenshots showing users must accept the privacy notice before using the system |
 | Privacy policy changes and review | For recent policy changes: customer notification evidence and the policy's last-updated date; plus records (emails, minutes, redlined drafts) showing the notice was reviewed within the past year |
-| Requests for deletion of PII | For an example deletion request: evidence the data was permanently erased or de-identified within regulatory timelines and the data subject received confirmation |
+| Requests for deletion of personally identifiable information (PII) | For an example deletion request: evidence the data was permanently erased or de-identified within regulatory timelines and the data subject received confirmation |
 | Procedures for information disposal | Documented procedures for erasing or destroying information identified for disposal |
 | Users can update their information | Screenshots showing authenticated users can view, correct, or delete their personal information from profile settings |
 | Privacy requirements communicated to third parties | Your vendor agreement template or an executed agreement containing PII handling instructions and breach notification requirements for third parties |
 | Documentation of breaches or unauthorized disclosures of PII | For any personal data breach: retained documentation of the facts, effects, and remediation, such as a post-mortem report |
 | Notification of incidents or breaches | For one incident or breach, evidence affected parties and authorities were notified per your policies and legal or contractual obligations |
-| Communication of use of subprocessors | Evidence customers can see which subprocessors handle PII: a subprocessor list on your website or an appendix in your DPA template |
+| Communication of use of subprocessors | Evidence customers can see which subprocessors handle PII: a subprocessor list on your website or an appendix in your data processing agreement (DPA) template |
 | Point of contact for privacy inquiries | Evidence of a contact mechanism for privacy requests and reports, such as a privacy email address in agreements or on the website |
 | Privacy inquiries tracked | Screenshots of the log or ticket system tracking privacy requests, capturing date, nature, channel, response date and content, and grounds for any denial, retained per legal requirements |
 | Board meeting minutes | The agenda and minutes from the latest board meeting showing date, participants, and topics; cybersecurity and compliance reporting to the board is worth building in |
 | Removable media device encryption | If the company issues removable media to employees, evidence the devices are encrypted |
-| Data leakage prevention | Evidence of DLP measures, such as rules in the corporate email service or configurations from dedicated DLP tools |
+| Data leakage prevention (DLP) | Evidence of DLP measures, such as rules in the corporate email service or configurations from dedicated DLP tools |
 | Automated operating system upgrades | Evidence of automated OS security patching: unattended-upgrade settings, package update directives in infrastructure as code, or a patch management console |
 | Incident response test | Records of the most recent incident response exercise: activities, results, lessons learned, and invites showing participants and dates |
 | Change release | For an example release, a pull request or ticket showing sign-off by authorized personnel before production deployment |
 | Cyber insurance | Your current certificate of insurance showing errors and omissions or cyber coverage, amounts, and policy dates |
-| Business continuity plan | Business continuity plan |
-| Vendor management policy | Vendor management policy |
+| BCP | The approved plan showing activation criteria, roles and responsibilities, recovery strategies for critical processes, and the approval or last-review date |
+| Vendor management policy | The policy covering due diligence before engagement, risk classification of vendors, contractual security requirements, and ongoing monitoring cadence |
 | Employment contracts | An executed employment contract for one person covering terms, conditions, and responsibilities during and after employment: confidentiality, asset return, IP protection |
-| Asset management policy | Asset management policy |
+| Asset management policy | The policy covering asset inventory, assigned ownership, classification, acceptable handling, and disposal requirements |
 | Dataflow diagram | The current dataflow diagram plus confirmation it was reviewed for accuracy within the past year |
 | Strong key generation policies and procedures | Documented key management procedures specifying strong key generation, plus screenshots of the generation process |
 | Key retirement policies and procedures | Key management procedures covering replacement of known or suspected compromised keys |
@@ -117,36 +119,36 @@ The table below lists commonly evidenced control areas for SOC 2 and the artifac
 | Periodic security updates | Evidence security updates reach personnel through varied channels: newsletters, intranet reminders, chat announcements |
 | Vendor due diligence | Documented due diligence for a new vendor before engagement: security posture evaluation, questionnaire review or compliance certifications such as SOC 2, and the recorded outcome with completion date |
 | Anti-malware scans of media | Anti-malware configuration showing automatic scans or behavioral analysis trigger when removable media is inserted, connected, or mounted |
-| Designated data protection officer | Evidence a DPO is formally appointed (privacy policies, RACI matrix, job description) and that a contact mechanism, such as an email address in the public privacy notice, is available to data subjects |
+| Designated data protection officer (DPO) | Evidence a DPO is formally appointed (privacy policies, RACI matrix, job description) and that a contact mechanism, such as an email address in the public privacy notice, is available to data subjects |
 | Data subject consent | Documented procedures describing what personal information is collected directly from data subjects and how consent is captured first, for example via consent checkboxes |
 | Records of disclosures of personal information to third parties | Documented disclosure records, including an example customer notification for any legally compelled disclosure |
 | Records of processing activities (ROPA) | Your documented ROPA covering what data is processed, why, and the categories of data subjects and personal data |
-| Data processing agreements with subprocessors | One executed DPA with a subprocessor, including the minimum technical and organizational measures the subprocessor must implement |
+| DPAs with subprocessors | One executed DPA with a subprocessor, including the minimum technical and organizational measures the subprocessor must implement |
 | Timely response to privacy matters | For an example privacy inquiry or reported incident: evidence of acknowledgement and response within regulatory timeframes |
 | Procedures for management of data subject rights | Documented policies and procedures for handling data subject rights requests, such as access and deletion |
 | Communication of changes in subprocessors | For recent subprocessor changes, evidence customers were told: notification emails, or announcements on a web page or customer portal |
-| Identity verification for data subject requests | For one DSAR, evidence the requester was verified as the data subject or an authorized agent, or your documented verification procedures |
+| Identity verification for data subject requests | For one data subject access request (DSAR), evidence the requester was verified as the data subject or an authorized agent, or your documented verification procedures |
 | Shared account management | For highly privileged shared accounts: documented business justification with management approval, plus screenshots showing credentials are held in a restricted password vault |
-| Restrictions on software installation | Evidence unauthorized software cannot be installed or run on company assets, such as enforced MDM rules or execution restrictions |
-| Change management policy | Change management policy |
+| Restrictions on software installation | Evidence unauthorized software cannot be installed or run on company assets, such as enforced mobile device management (MDM) rules or execution restrictions |
+| Change management policy | The policy defining how changes are requested, reviewed, tested, approved, and rolled back, including emergency change handling |
 | Disciplinary process | The documented disciplinary process for information security violations, with a graduated response based on severity, intent, repetition, and prior training; often in the employee handbook, code of conduct, or security policy |
 | Fire detection and suppression | Observation of systems installed in critical locations plus maintenance evidence |
 | Temperature monitoring systems | Observation of temperature and humidity controls plus maintenance evidence |
-| Uninterruptible power supply | Observation of UPS systems in data centers or server rooms plus maintenance evidence |
-| Mobile device management | Screenshots from the MDM console showing baseline configurations and security policies enforced per device OS |
+| Uninterruptible power supply (UPS) | Observation of UPS systems in data centers or server rooms plus maintenance evidence |
+| MDM | Screenshots from the MDM console showing baseline configurations and security policies enforced per device OS |
 | Phishing simulations | Campaign configuration screenshots, results dashboards, and example simulated phishing emails |
-| Redundancy of processing | Evidence redundancy strategies exist for equipment, systems, and processes as called for in business continuity plans |
+| Redundancy of processing | Evidence redundancy strategies exist for equipment, systems, and processes as called for in BCPs |
 | Return of assets | For one recent departure: offboarding checklist or tickets tracking return of devices, badges, and tokens, plus prepaid return labels and tracking for remote staff |
 | On-call team | The on-call rotation schedule, such as screenshots from PagerDuty or an equivalent showing assignments |
 | Marketing express consent | Sign-up screenshots showing marketing consent is optional and separate from accepting the terms of service, not a condition of use |
-| Static application security testing | CI/CD screenshots showing SAST runs on every commit, or configurations and dashboards from the SAST tool |
-| Logging and monitoring policy | Logging and monitoring policy |
+| Static application security testing (SAST) | CI/CD screenshots showing SAST runs on every commit, or configurations and dashboards from the SAST tool |
+| Logging and monitoring policy | The policy defining which systems and events are logged, retention periods, who reviews logs, and the review cadence |
 | Privacy training | Records of a PII protection training program: materials such as slides or videos, plus a completion record for one person |
-| Secure logon mechanisms for customers | Screenshots showing customers can enable SSO, MFA, and complex password requirements for their accounts, with masked password entry and minimal disclosure in login errors |
+| Secure logon mechanisms for customers | Screenshots showing customers can enable single sign-on (SSO), MFA, and complex password requirements for their accounts, with masked password entry and minimal disclosure in login errors |
 | Segregation of networks | Evidence the network is split into security boundaries with traffic controlled between them per business and security needs |
 | Leak detection system | Observation of leak detection systems at critical facilities, on-site or via live video |
 | Mechanisms to object to personal information processing | Evidence data subjects can object to processing, for example an unsubscribe option in marketing communications |
-| Procedures for data subject access requests | Documented procedures for fulfilling a DSAR: locating, retrieving, and providing a copy of the personal information, or confirming deletion or de-identification |
+| Procedures for DSARs | Documented procedures for fulfilling a DSAR: locating, retrieving, and providing a copy of the personal information, or confirming deletion or de-identification |
 | Dual opt-in for consent to sell PII | If you sell personal information, screenshots showing a two-step opt-in: the data subject requests to opt in, then separately confirms |
 | User and system guides | Evidence users get design and operation information: a documentation portal, help center, or published user guides |
 | Limit collection of PII | For optional data collected directly from data subjects, screenshots showing collection is off by default, for example unchecked consent boxes enabled only by explicit choice |
@@ -159,7 +161,7 @@ The table below lists commonly evidenced control areas for SOC 2 and the artifac
 | Secure login | For internally developed systems: screenshots of successful and failed logins showing no helpful hints for attackers, errors that do not reveal which field was wrong, and masked password entry |
 | Cloud storage lifecycle rules | Screenshots of lifecycle rules that expire and delete data after defined retention periods |
 | Secrets rotation | Automated secrets rotation configuration in the secrets manager, or tickets showing periodic manual rotation |
-| Software composition analysis | Evidence components and libraries are checked for vulnerabilities, license compliance, and supported versions, such as SCA in the CI/CD pipeline |
+| Software composition analysis (SCA) | Evidence components and libraries are checked for vulnerabilities, license compliance, and supported versions, such as SCA in the CI/CD pipeline |
 | Secure runtime configurations | Asset management policy plus screenshots of runtime configuration standards for in-scope applications and platforms |
 | Defined company objectives | Documented company objectives (mission and vision, financial, strategic, and departmental goals) and evidence they are communicated to personnel through internal channels |
 
@@ -171,4 +173,4 @@ When your service runs on a fully managed platform rather than infrastructure yo
 - The provider's published documentation describing control coverage by plan tier, together with clear identification of the tier you are on
 - Account-level screenshots (billing plan, administrative settings, service indicators) showing the protections are actually enabled for your environment, not just available on paper
 
-For the parts of the environment you do configure, capture labeled screenshots of security groups, IAM roles, firewall rules, logging configurations, and monitoring dashboards. Whatever the mix, describe what each artifact shows and map it to the control it supports; evidence grouped by control is far easier for auditors to assess than a folder of unlabeled screenshots.
+For the parts of the environment you do configure, capture labeled screenshots of security groups, identity and access management (IAM) roles, firewall rules, logging configurations, and monitoring dashboards. Whatever the mix, describe what each artifact shows and map it to the control it supports; evidence grouped by control is far easier for auditors to assess than a folder of unlabeled screenshots.

@@ -161,7 +161,7 @@ All entrypoints (manual API calls, the reconcile scheduler, the workflow engine,
 - Reconciliation dispatches the definition's non-inline operations after the first successful connection
 - Workflow-triggered runs add workflow metadata and complete through the same run path
 - Webhooks either dispatch operations or emit ingest directly; delivery IDs provide idempotency when available
-- Push-style integrations use the same flow but skip per-integration secret credentials and recurring polling (this is basically only SCIM, but it is a good example of the built-in flexibility to accommodate a wide variety of capabilities in the same system)
+- Push-style integrations use the same flow but skip per-integration secret credentials and recurring polling (this is basically only System for Cross-domain Identity Management (SCIM), but it is a good example of the built-in flexibility to accommodate a wide variety of capabilities in the same system)
 
 ## Ingest Handoff
 
@@ -169,7 +169,7 @@ Provider operations and webhook handlers usually stop at provider-shaped payload
 
 1. Verify the emitted schema is declared by the operation or webhook
 1. Resolve the mapping for that schema and variant
-1. Apply integration-level and definition-shipped CEL filters
+1. Apply integration-level and definition-shipped Common Expression Language (CEL) filters
 1. Apply the CEL map expression
 1. Decode and persist the result into our internal data model
 

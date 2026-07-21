@@ -7,7 +7,7 @@ description: Example evidence artifacts for commonly manually evidenced HIPAA co
 
 # HIPAA Example Evidence
 
-The table below lists commonly evidenced control areas for HIPAA and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
+The table below lists commonly evidenced control areas for Health Insurance Portability and Accountability Act (HIPAA) and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
 
 | Control Area | Example Evidence |
 | ------------ | ---------------- |
@@ -21,7 +21,7 @@ The table below lists commonly evidenced control areas for HIPAA and the artifac
 | Asset inventory | A documented listing of all assets (workstations, mobile devices, servers, databases) plus cloud console screenshots enumerating infrastructure |
 | Architecture diagram | An approved architecture diagram |
 | Network diagram | A documented network diagram demonstrating segmentation of your cloud environments |
-| BCP/DR tests | Results from the most recent business continuity or disaster recovery test |
+| Business continuity and disaster recovery (BCP/DR) tests | Results from the most recent business continuity or disaster recovery test |
 | Incident response team | A documented roster of incident response team members with the responsibility and authority to coordinate response procedures |
 | Security team or steering committee | Evidence that a security team owns the design, implementation, management, and review of security policies, standards, baselines, and procedures |
 | Timely security team communication | Screenshots from communication tools showing the path for security events to reach appropriate personnel |
@@ -29,7 +29,7 @@ The table below lists commonly evidenced control areas for HIPAA and the artifac
 | Termination and offboarding checklist | Completed termination checklist or help desk ticket for a recently departed employee |
 | Cryptography policies | A list of everywhere data is sent or received over open public networks, documented standards for the protocols and algorithms protecting that data, and configuration screenshots showing those protocols in place |
 | Vendor register and agreements | A current centralized vendor inventory with relationship owner, service description, and risk rating; screenshots from your vendor management system showing risk categorization; an executed agreement with a vendor that accesses, processes, or stores your information assets |
-| Authentication protocol | Screenshots of a user logging in via SSO or username and password as applicable, plus screenshots showing MFA is required for employees or offered to users |
+| Authentication protocol | Screenshots of a user logging in via single sign-on (SSO) or username and password as applicable, plus screenshots showing multi-factor authentication (MFA) is required for employees or offered to users |
 | Secure password storage | Database screenshots demonstrating passwords are stored as salted hashes |
 | Inactivity and browser exit logout | Screenshots showing users are signed out when the browser or tab closes and after a defined inactivity timeout, with reauthentication required |
 | Commitments communicated to customers | A recently executed customer service agreement, terms of service published online, and sign-up screenshots showing users must accept the terms before use |
@@ -61,11 +61,11 @@ The table below lists commonly evidenced control areas for HIPAA and the artifac
 | Authentication required for access | Screenshots of a user authenticating before viewing their information |
 | Users can access their information | Screenshots of where users find their data in the product, such as a profile page |
 | Users can modify their information | Screenshots of a user editing their personal information inside the application |
-| Privacy requirements communicated to third parties | Evidence that third parties receiving PII were given your handling requirements |
+| Privacy requirements communicated to third parties | Evidence that third parties receiving personally identifiable information (PII) were given your handling requirements |
 | Third-party disclosure provisions | Executed contracts with PII-receiving third parties containing provisions to protect personal information |
 | Authorized third parties for PII | A documented, authorized list of third parties permitted to receive or access PII |
 | Incident report template and process | Documented incident response procedures |
-| Privacy and security requirements in third-party agreements | Executed DPAs, BAAs, or service provider agreements with third parties given access to personal data |
+| Privacy and security requirements in third-party agreements | Executed DPAs, business associate agreements (BAAs), or service provider agreements with third parties given access to personal data |
 | Unauthorized disclosures by third parties | Executed third-party contracts containing personal information protection provisions |
 | Third-party breach reporting instructions | Contracts confirming third parties with PII access are told how to report breaches to you |
 | Notification of incidents or breaches | Documented breach notification procedures and the notification template |
@@ -77,24 +77,24 @@ The table below lists commonly evidenced control areas for HIPAA and the artifac
 | Board oversight briefings | Board meeting minutes showing cybersecurity and privacy risk were discussed |
 | Physical access to facilities | Physical access control policy |
 | Removable media encryption | If the company issues removable media to employees, evidence the devices are encrypted |
-| Data loss prevention | Screenshots of the DLP tooling and an example of an email blocked for containing sensitive data |
-| File integrity monitoring | FIM software screenshots and examples of the tool detecting changes |
+| Data loss prevention (DLP) | Screenshots of the DLP tooling and an example of an email blocked for containing sensitive data |
+| File integrity monitoring (FIM) | FIM software screenshots and examples of the tool detecting changes |
 | Control self-assessments | Annual internal control assessment report with findings, plus evidence corrective actions were taken |
 | Incident response test | The most recent incident response tabletop exercise |
-| Business continuity plan | Business continuity plan |
+| Business continuity plan | The approved plan showing activation criteria, roles and responsibilities, recovery strategies for critical processes, and the approval or last-review date |
 | Business impact analysis | Business impact analysis, often part of the business continuity plan |
-| Vendor management policy | Vendor management policy |
+| Vendor management policy | The policy covering due diligence before engagement, risk classification of vendors, contractual security requirements, and ongoing monitoring cadence |
 | Event logging | The relevant section of the data protection policy |
 | Competence records | Job descriptions for a recent hire and an existing employee; recruitment records such as interview invites, interviewer feedback, and candidate evaluations; a completed performance evaluation from the past year; records of education, certifications, and training demonstrating competence for assigned roles |
-| Asset management policy | Asset management policy |
+| Asset management policy | The policy covering asset inventory, assigned ownership, classification, acceptable handling, and disposal requirements |
 | Activity review | On a cadence you define: tickets recording which audit logs were reviewed, by whom, and when; tickets or minutes recording review of security incident reports; tickets recording review of system activity logs |
 | Designated security officials | Information security policy, or the job description of the designated security official responsible for overseeing security rule compliance |
 | Security updates | Information security policy |
 | Privacy, use, and disclosure | Privacy, use, and disclosure policy |
 | Breach notification | Breach notification policy |
 | Group health plans | Plan documents mapping the requirements to controls; mark out of scope if you are not a group health plan |
-| Business associate agreements | Vendor management policy, business associate policy, and the BAA template if it is not embedded in the policy |
-| HIPAA awareness training | Privacy, use, and disclosure policy, completion certificates from your HIPAA training provider, and any other records of training on PHI handling |
+| BAAs | Vendor management policy, business associate policy, and the BAA template if it is not embedded in the policy |
+| HIPAA awareness training | Privacy, use, and disclosure policy, completion certificates from your HIPAA training provider, and any other records of training on protected health information (PHI) handling |
 | Document retention period | Data protection policy plus a retention schedule listing record types (such as BAAs) and their retention periods (such as 7 years), stored with your evidence and linked to the control |
 | Data secure disposal | Data disposal policies and procedures |
 | Account lockout after failed logins | Lockout configuration for relevant systems showing the failed-attempt threshold and lockout duration |
@@ -102,4 +102,4 @@ The table below lists commonly evidenced control areas for HIPAA and the artifac
 | Management approval for media transfer | Records from a recent media transfer, including distribution to individuals, showing approval by an authorized manager |
 | Multiple methods for security awareness | Evidence that periodic security updates go out through varied channels, such as newsletters, intranet reminders, or chat announcements |
 | Phishing simulations | Campaign configuration screenshots, results dashboards, and an example simulated phishing email |
-| Logging and monitoring policy | Logging and monitoring policy |
+| Logging and monitoring policy | The policy defining which systems and events are logged, retention periods, who reviews logs, and the review cadence |

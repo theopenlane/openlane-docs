@@ -1,0 +1,9 @@
+{
+  "label": "SOX",
+  "position": 15,
+  "link": {
+    "type": "doc",
+    "id": "platform/standards/sox/overview"
+  },
+  "collapsed": true
+}

@@ -18,10 +18,11 @@ tags:
 ---
 
 import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
 
-# NIST 800-53
+# Security and Privacy Controls for Information Systems and Organizations (NIST 800-53)
 
-NIST 800-53 is a cybersecurity standard and compliance framework developed by the National Institute of Standards and Technology (NIST). It outlines a set of security controls for federal information systems, designed to protect the confidentiality, integrity, and availability of data by mitigating risks from various threats through specific controls like access management, awareness training, and incident response procedures.
+NIST 800-53 outlines a set of security controls for federal information systems, designed to protect the confidentiality, integrity, and availability of data by mitigating risks from various threats through specific controls like access management, awareness training, and incident response procedures.
 
 <StandardMeta
   fullName={"NIST SP 800-53, Security and Privacy Controls for Information Systems and Organizations"}
@@ -37,10 +38,6 @@ NIST 800-53 is a cybersecurity standard and compliance framework developed by th
 
 The framework encourages organizations to assess their risks and implement controls based on their specific needs and environment.
 It is primarily used by US government agencies to ensure compliance with security regulations.
-
-## Continuously updated
-
-NIST regularly updates the standard to reflect evolving cybersecurity threats and technologies.
 
 ## Control Categories
 
@@ -77,14 +74,14 @@ For more details, see the [official NIST SP 800-53 Revision 5 publication](https
 
 ## Companion Publications
 
-Two companion documents shape how the catalog is applied in practice. NIST SP 800-53B defines the low, moderate, and high impact control baselines (plus a privacy baseline) that determine which controls apply to a given system, and NIST SP 800-53A defines the assessment objectives and procedures assessors use to verify that each control is implemented as intended. If you are preparing for a FISMA or FedRAMP assessment, the 800-53A assessment objectives are what your evidence will be judged against.
+Two companion documents shape how the catalog is applied in practice. NIST SP 800-53B defines the low, moderate, and high impact control baselines (plus a privacy baseline) that determine which controls apply to a given system, and NIST SP 800-53A defines the assessment objectives and procedures assessors use to verify that each control is implemented as intended. If you are preparing for a FISMA or FedRAMP assessment, the 800-53A assessment objectives are what your <Term t="evidence">evidence</Term> will be judged against.
 
 ## System Security Plans
 
 The Planning (PL) family expects each in-scope system to have a system security plan (SSP): a formal document describing the system and the controls that protect it. An effective SSP:
 
-- Defines the system boundary, identifying which components are inside it
-- Records the system's security categorization for confidentiality, integrity, and availability, following FIPS 199 and NIST SP 800-60
+- Defines the <Term t="system-boundaries">system boundary</Term>, identifying which components are inside it
+- Records the system's security categorization for confidentiality, integrity, and availability, following Federal Information Processing Standards (FIPS) 199 and NIST SP 800-60
 - Describes the system's operational context and its relationships to other systems
 - Summarizes the security requirements and lists the controls in place or planned to meet them
 - Is approved by an authorizing official, reviewed at least annually, and kept consistent with your enterprise architecture

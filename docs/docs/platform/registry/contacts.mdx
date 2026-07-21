@@ -2,22 +2,26 @@
 title: Contacts
 description: Keep a directory of the people behind your vendors and campaigns
 sidebar_position: 6
+compliance:
+  - "SOC 2 CC9"
+  - "ISO 27001:2022 A.5.19-A.5.23"
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Contacts
 
-Contacts are Openlane's directory of external people: the security lead at a vendor, the point of contact at a subprocessor, the recipient of a questionnaire campaign. They are distinct from [personnel](./personnel/overview.mdx), which is your own workforce roster, and from Openlane users, which are platform accounts.
+Contacts are Openlane's directory of external people: the security lead at a vendor, the point of contact at a <Term t="subprocessor">subprocessor</Term>, the recipient of a questionnaire campaign. They are distinct from [personnel](./personnel/overview.mdx), which is your own workforce roster, and from Openlane users, which are platform accounts.
 
-Keeping these people as records serves two purposes. Questionnaires, incident notifications, and renewal conversations need a current, named recipient at each vendor. And vendor review controls are partly communication records: an auditor testing your third-party program looks for evidence of who you engaged and when, which is only retrievable if outreach history lives on the record rather than in individual inboxes. Contacts support SOC 2 vendor and third-party communication records (CC9) and ISO 27001 supplier relationship management (A.5, A.15).
+Keeping these people as records serves two purposes. Questionnaires, incident notifications, and renewal conversations need a current, named recipient at each vendor. And vendor review controls are partly communication records: an auditor testing your third-party program looks for <Term t="evidence">evidence</Term> of who you engaged and when, which is only retrievable if outreach history lives on the record rather than in individual inboxes.
 
 ## How Contacts Work
 
 A contact record carries the person's details plus a status, so the directory can distinguish current points of contact from historical ones without deleting anything.
 
-Contacts sourced from an integration carry an external ID from the source system (used to deduplicate repeat ingests), the integration that produced them, and an observed-at timestamp, so synced records stay tied to their upstream source instead of drifting into hand-maintained copies.
+Synced contact records stay tied to their upstream source, so repeat ingests update the existing record instead of creating duplicates or drifting into hand-maintained copies.
 
 What makes a contact useful is what it connects to. A contact relates to the vendor [entities](./entities.mdx) they represent, and to the [campaigns](../automation/campaigns.mdx) that target them, including the per-recipient campaign target records that track each send and its completion. That means outreach history accumulates on the contact: which questionnaires they received, when, and what happened. For the complete field list, see the [GraphQL object reference](/graphql).
 

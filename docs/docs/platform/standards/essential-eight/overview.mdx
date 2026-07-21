@@ -18,10 +18,11 @@ tags:
 ---
 
 import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
 
 # Essential Eight
 
-The Essential Eight is a prioritized set of eight cybersecurity mitigation strategies published by the Australian Cyber Security Centre (ACSC), part of the Australian Signals Directorate (ASD). Drawn from ASD's broader Strategies to Mitigate Cyber Security Incidents, it targets the attack techniques behind most intrusions: malware delivery, credential theft, privilege abuse, and ransomware. Progress is measured against a four-tier maturity model rather than a pass/fail audit.
+The Essential Eight is a prioritized set of eight cybersecurity mitigation strategies drawn from the Australian Signals Directorate's (ASD) broader Strategies to Mitigate Cyber Security Incidents. It targets the attack techniques behind most intrusions: malware delivery, credential theft, privilege abuse, and ransomware.
 
 <StandardMeta
   fullName={"ACSC Essential Eight"}
@@ -55,7 +56,7 @@ The strategies group into three objectives: preventing attacks, limiting their i
 | **User application hardening** | Exploitation through browsers, PDF readers, and legacy features such as Java and web advertisements |
 | **Restrict administrative privileges** | Lateral movement and damage from compromised privileged accounts |
 | **Patch operating systems** | Exploitation of known vulnerabilities in operating systems, drivers, and firmware |
-| **Multi-factor authentication** | Account takeover through stolen or guessed credentials |
+| **Multi-factor authentication (MFA)** | Account takeover through stolen or guessed credentials |
 | **Regular backups** | Data loss from ransomware and other destructive incidents |
 
 Each strategy carries specific technical requirements that tighten at each maturity level. For example, patching timeframes shrink from one month to 48 hours for critical vulnerabilities, and MFA requirements progress from covering internet-facing services to phishing-resistant methods across all systems.

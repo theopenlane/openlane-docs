@@ -1,0 +1,150 @@
+---
+title: "A1.2"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# A1.2
+
+<ControlMeta
+  refCode={"A1.2"}
+  category={"Availability"}
+  subcategory={"Additional Criteria for Availability"}
+  description={"The entity authorizes, designs, develops or acquires, implements, operates, approves, maintains, and monitors environmental protections, software, data backup processes, and recovery infrastructure to meet its objectives."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Identifies Environmental Threats</summary>
+
+As part of the risk assessment process, management identifies environmental threats that could impair the availability of the system, including threats resulting from adverse weather, failure of environmental control systems, electrical discharge, fire, and water.
+
+</details>
+
+<details>
+<summary>Designs Detection Measures</summary>
+
+Detection measures are implemented to identify anomalies that could result from environmental threat events.
+
+</details>
+
+<details>
+<summary>Implements and Maintains Environmental Protection Mechanisms</summary>
+
+Management implements and maintains environmental protection mechanisms to prevent and mitigate environmental events.
+
+</details>
+
+<details>
+<summary>Implements Alerts to Analyze Anomalies</summary>
+
+Management implements alerts that are communicated to personnel for analysis to identify environmental threat events.
+
+</details>
+
+<details>
+<summary>Responds to Environmental Threat Events</summary>
+
+Procedures are in place for responding to environmental threat events and for evaluating the effectiveness of those policies and procedures on a periodic basis. This includes automatic mitigation systems (for example, uninterruptible power system and generator back-up subsystem).
+
+</details>
+
+<details>
+<summary>Communicates and Reviews Detected Environmental Threat Events</summary>
+
+Detected environmental threat events are communicated to and reviewed by the individuals responsible for the management of the system, and actions are taken, if necessary.
+
+</details>
+
+<details>
+<summary>Determines Data Requiring Backup</summary>
+
+Data is evaluated to determine whether backup is required.
+
+</details>
+
+<details>
+<summary>Performs Data Backup</summary>
+
+Procedures are in place for backing up data, monitoring to detect back-up failures, and initiating corrective action when such failures occur.
+
+</details>
+
+<details>
+<summary>Addresses Offsite Storage</summary>
+
+Back-up data is stored in a location at a distance from its principal storage location sufficient that the likelihood of a security or environmental threat event affecting both sets of data is reduced to an appropriate level.
+
+</details>
+
+<details>
+<summary>Implements Alternate Processing Infrastructure</summary>
+
+Measures are implemented for migrating processing to alternate infrastructure in the event normal processing infrastructure becomes unavailable. Measures may include geographic separation, redundancy, and failover capabilities for components.
+
+</details>
+
+<details>
+<summary>Considers Data Recoverability</summary>
+
+Management identifies threats to data recoverability (for example, ransomware attacks) that could impair the availability of the system and related data and implements mitigation procedures.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Business Continuity | Continuity of Operations Plan (COOP) | Documented evidence of a Continuity of Operations Plan (COOP). This is program-level documentation in the form of a runbook, playbook or a similar format provides guidance on organizational practices that support existing policies and standards. This involves internal and external stakeholders for incident response, disaster recovery and business continuity support requirements. |
+| Third-Party Management | Service Level Agreements (SLAs) | Documented evidence of third-party Service Level Agreements (SLAs) to support business operations. |
+| Business Continuity | Backups | Documented evidence of a Continuity of Operations Plan (COOP)-related data backup scheme that demonstrates the methods of data backup (including protection measures) for all data types to ensure business continuity requirements. |
+| Business Continuity | Backups - Local | Documented evidence of event logs for the on-site / local data backup solution. |
+| Business Continuity | Backups - Remote | Documented evidence of event logs for the off-site / remote data backup solution. |
+| Business Continuity | Backups - Recovery | Documented evidence of a Continuity of Operations Plan (COOP)-related criticality analysis for applications, systems, services, facilities, stakeholders and third-parties. |
+| Asset Management | Asset Inventories - Sensitive / Regulated Data | Documented evidence of an inventory of the organization's sensitive/regulated data (including systems where sensitive/regulated data is stored, processed and/or transmitted) that contains sufficient information to determine the potential impact in the event of a data loss incident. |
+| Business Continuity | Restoration Events | Documented evidence of system, application and/or data recovery events. This can include random testing of data backups to ensure recovery methods are viable. |
+| Physical Security | Environmental Monitoring | Documented evidence of environmental monitoring (e.g., water leaks, temperature, humidity, etc.) |
+| Physical Security | Physical Security Operations | Documented evidence of the organization's physical security capabilities as it pertains to operating and monitoring Physical Access Control (PAC)mechanisms. |
+| Risk Management | Cybersecurity Risk Assessment (RA) | Documented evidence of a cybersecurity-specific risk assessment. |
+
+## Policies
+
+- **[System Availability Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/availability/availability.md)** - Defines requirements for proper controls to protect the availability of the organization's information systems
+- **[Backup Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/backup/backup.md)** - Establishes requirements for data backup and recovery processes
+- **[Business Continuity Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/business-continuity/business-continuity.md)** - Defines the framework for maintaining business operations during disruptions
+
+## Example Organization Controls
+
+- **A1.2.1** - GCP data centers have fire detection and suppression equipment in place.
+- **A1.2.3** - GCP data centers have power management equipment in place.
+- **A1.2.5** - GCP data centers have air conditioning and ventilation equipment to maintain required temperature and humidity levels.
+- **A1.2.8** - Emergency procedures are in place to guide personnel in procedures to protect against disruptions caused by an unexpected event.
+- **A1.2.9** - A business continuity plan is in place to guide personnel in the procedures to protect against disruption caused by an unexpected event.
+- **A1.2.10** - Redundant architecture is in place to migrate business operations to alternate infrastructure in the event normal processing infrastructure becomes unavailable.
+- **A1.2.11** - GCP regions are geographically separated to ensure recoverability in the event of an outage at the primary location.
+- **A1.2.12** - Backup systems are in place to perform scheduled backups of Cloud SQL production databases at predefined times.
+- **A1.2.13** - The backup systems are configured to send alert notifications to personnel regarding backup job status.
+
+## Example Control Objectives
+
+- **Environmental protection** - Environmental protections and redundancies are in place to prevent service disruption.
+
+## Example Control Implementations
+
+- **database-backup-recovery** - Database backups are automated with point-in-time recovery capability. Implementation includes: - Cloud SQL automated backups with 30-day retention - Point-in-time recovery enabled for production database - Backups stored in GCS with encryption - Annual DR test validates recovery procedures - recovery time objective (RTO): 4 hours, recovery point objective (RPO): 1 hour
+
+## Example Evidence
+
+- **Cloud SQL High Availability Configuration** - Screenshot of Cloud SQL instance configuration showing high availability and automatic failover settings
+- **Backup Restoration Test Results** - Documentation of quarterly backup restoration test including time measurements and verification steps
+
+## Example Action Plans
+
+- **Annual disaster recovery test** - Annual full disaster recovery test to validate RTO/RPO objectives and recovery procedures. Tests database restore, application deployment, and failover capabilities.
+
+## Example Remediations
+
+- **backup-verification-remediation** - Conduct and document quarterly backup restore tests to verify data recovery capabilities meet RTO/RPO objectives.

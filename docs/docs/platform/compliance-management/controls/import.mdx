@@ -19,6 +19,7 @@ keywords:
 import Steps from '@site/src/components/Steps';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Import Controls
 
@@ -26,7 +27,7 @@ We built CSV import so you can bring in controls you have already defined in oth
 
 ## Importing Controls
 
-Controls will generally fall into two buckets: those that are from a published framework or standard (ex: NIST 800-53), and custom controls. We recommend that you orient your compliance program to be based on an existing framework / standard even if you may have some custom controls outside of that. This way, you can add implementation details, objectives, evidence, etc., related to the controls from the published framework and receive the ongoing benefits of updates and changes we will publish as the upstream standard(s) are updated.
+Controls will generally fall into two buckets: those that are from a published framework or standard (ex: NIST 800-53), and custom controls. We recommend that you orient your <Term t="compliance-program">compliance program</Term> to be based on an existing framework / standard even if you may have some custom controls outside of that. This way, you can add implementation details, objectives, <Term t="evidence">evidence</Term>, etc., related to the controls from the published framework and receive the ongoing benefits of updates and changes we will publish as the upstream standard(s) are updated.
 
 ### Framework Controls
 
@@ -189,7 +190,7 @@ The above will create a control with the `RefCode` `CO-07`, with an auditor refe
 
 If you are importing custom controls, but want to map them to existing standard controls to show alignment, you can do so via CSV as well.
 
-Prior to creating the mappings, you must ensure all the expected controls exist in your organization. For example, if you imported your custom controls, but are mapping them to SOC 2 controls, you must first add the SOC 2 controls to your organization. This can be done by adding them from the standards catalog or creating a SOC 2 program which will automatically add them to your organization.
+Prior to creating the mappings, you must ensure all the expected controls exist in your organization. For example, if you imported your custom controls, but are mapping them to System and Organization Controls 2 (SOC 2) controls, you must first add the SOC 2 controls to your organization. This can be done by adding them from the standards catalog or creating a SOC 2 program which will automatically add them to your organization.
 
 ### Mapping CSV Fields
 
