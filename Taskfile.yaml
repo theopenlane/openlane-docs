@@ -69,7 +69,6 @@ tasks:
     desc: generate all docs
     cmds:
       - task: regenerate-api-docs
-      - task: generate-graphql-docs
       - task: generate-glossary-data
 
   dev:
