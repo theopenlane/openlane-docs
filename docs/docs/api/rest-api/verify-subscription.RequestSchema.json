@@ -1,1 +1,1 @@
-{"title":"Body"}
+{"title":"Body","body":{"content":{"application/json":{"examples":{"VerifySubscriptionSuccessRequest":{"value":{"Token":"token"}}},"schema":{"description":"VerifySubscribeRequest contains subscription verification information","properties":{"Token":{"description":"The token to be used to verify the subscription, token is sent via email","type":"string"}},"type":"object","title":"VerifySubscribeRequest"}}},"description":"Request body"}}
