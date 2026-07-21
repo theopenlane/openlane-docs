@@ -1,12 +1,12 @@
 ---
 id: loginrequest
 title: "LoginRequest"
-description: ""
+description: "LoginRequest contains credentials for user authentication"
 sidebar_label: "LoginRequest"
 hide_title: true
 hide_table_of_contents: true
 schema: true
-sample: {"password":"Wint3rIsC0ming123!","username":"jsnow@example.com"}
+sample: {"password":"Wint3rIsC0ming123!","reason":"string","target_organization_id":"string","username":"jsnow@example.com"}
 custom_edit_url: null
 ---
 
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 
 
 
-
+LoginRequest contains credentials for user authentication
 
 <Schema
   {...require("./loginrequest.Schema.json")}

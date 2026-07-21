@@ -1,1 +1,1 @@
-{"title":"Body"}
+{"title":"Body","body":{"content":{"application/json":{"examples":{"SubmitQuestionnaireRequest":{"value":{"data":{"q1":"Answer to question 1","q2":"Answer to question 2","q3":{"nested":"data"}}}}},"schema":{"description":"SubmitQuestionnaireRequest is the request to submit questionnaire response data","properties":{"assessment_id":{"type":"string"},"data":{"additionalProperties":{},"type":"object"},"is_draft":{"type":"boolean"}},"type":"object","title":"SubmitQuestionnaireRequest"}}},"description":"Request body"}}
