@@ -1,0 +1,9 @@
+{
+  "label": "Organizations",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "platform/settings/organizations/overview"
+  },
+  "collapsed": true
+}

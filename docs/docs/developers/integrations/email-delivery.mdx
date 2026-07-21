@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 # Email Services Integration
 
-Openlane uses a sophisticated email delivery system built on the `emailtemplates` library with asynchronous processing via the Riverboat job queue system. This architecture ensures reliable, scalable email delivery for user notifications, authentication flows, and business communications.
+Openlane delivers email through the [`emailtemplates`](https://github.com/theopenlane/emailtemplates) library with asynchronous processing via the Riverboat job queue. Handlers render a templated message, enqueue it as a job, and dedicated River workers deliver it through the configured provider; nothing sends email inline on the request path.
 
 ## Architecture Overview
 
@@ -50,19 +50,13 @@ sequenceDiagram
     Worker->>Queue: Mark job complete
 ```
 
-### System Components
-
-- **emailtemplates Library** - Template rendering and email formatting
-- **Riverboat Job Queue** - Asynchronous job processing with River
-- **Email Workers** - Dedicated workers for email delivery
-- **Template System** - Structured email templates with variables
-- **Delivery Tracking** - Job status monitoring and retry logic
+Template rendering lives in the `emailtemplates` library; queueing, delivery, retry, and job-status tracking are handled by Riverboat workers. The sections below cover configuration, delivery behavior, and operational concerns.
 
 ## Email Template System
 
 ### Template Library Integration
 
-Openlane uses the `github.com/theopenlane/emailtemplates` library for consistent, branded email communications:
+We use the `github.com/theopenlane/emailtemplates` library for consistent, branded email communications:
 
 ```go
 // Email configuration in handlers
@@ -82,17 +76,7 @@ email, err := h.Emailer.NewVerifyEmail(emailtemplates.Recipient{
 
 ### Supported Email Types
 
-#### Authentication Emails
-- **Email Verification** - New user account verification
-- **Password Reset** - Secure password reset with tokens
-- **Password Reset Success** - Confirmation of password changes
-- **Login Notifications** - Security alerts for account access
-
-#### Business Communications
-- **User Invitations** - Organization and team invitations
-- **Subscriber Confirmations** - Newsletter and update subscriptions
-- **Notification Emails** - System alerts and updates
-- **Welcome Messages** - Onboarding communications
+Templates fall into two families: authentication flows (verification, password reset, login notifications) and business notifications (invitations, subscriber confirmations, system alerts). The [emailtemplates](https://github.com/theopenlane/emailtemplates) library holds the full set, so check it rather than this page when you need to confirm whether a template exists.
 
 ### Template Configuration
 
@@ -186,7 +170,7 @@ CORE_EMAIL_URLS_RESET=https://console.theopenlane.io/reset
 
 ### Job Queue Architecture
 
-Openlane uses Riverboat (River) for asynchronous email processing:
+We use Riverboat (River) for asynchronous email processing:
 
 ```go
 // Email job definition
@@ -383,10 +367,6 @@ Email templates support rich HTML formatting with variable substitution:
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>{{.Subject}}</title>
-</head>
 <body>
     <div style="max-width: 600px; margin: 0 auto;">
         <img src="{{.LogoURL}}" alt="{{.CompanyName}}" style="height: 50px;">
@@ -570,11 +550,13 @@ CORE_DOMAIN=theopenlane.io
 
 Key metrics to monitor:
 
-- **Email Queue Depth** - Number of pending email jobs
-- **Delivery Success Rate** - Percentage of successfully delivered emails
-- **Delivery Latency** - Time from job creation to delivery
-- **Error Rate by Type** - Failed deliveries categorized by error type
-- **Template Rendering Time** - Performance of template processing
+| Metric | Meaning |
+|---|---|
+| Email Queue Depth | Number of pending email jobs |
+| Delivery Success Rate | Percentage of successfully delivered emails |
+| Delivery Latency | Time from job creation to delivery |
+| Error Rate by Type | Failed deliveries categorized by error type |
+| Template Rendering Time | Performance of template processing |
 
 ### Health Checks
 
@@ -658,18 +640,15 @@ export CORE_EMAIL_SMTP_TLS=false
 
 ## Security Considerations
 
-### Email Security
-- **SPF/DKIM/DMARC** records for email authentication
-- **Encrypted SMTP** connections (TLS/SSL)
-- **Rate limiting** to prevent email abuse
-- **Content sanitization** to prevent XSS in templates
-- **Token expiry** for time-sensitive links
-
-### Data Protection
-- **PII handling** in email content and logs
-- **Encryption** of sensitive data in job queue
-- **Audit logging** of email delivery events
-- **Retention policies** for email job data
-- **GDPR compliance** for EU recipients
-
-This email system provides reliable, scalable, and secure email delivery for all Openlane communications while maintaining excellent developer experience and operational visibility.
+| Concern | Mitigation |
+|---|---|
+| Sender spoofing | Sender Policy Framework and DomainKeys Identified Mail (SPF/DKIM) and Domain-based Message Authentication, Reporting, and Conformance (DMARC) records for email authentication |
+| Transport interception | Encrypted SMTP connections (TLS/SSL) |
+| Email abuse | Rate limiting on send paths |
+| Cross-site scripting (XSS) in templates | Content sanitization |
+| Stale action links | Token expiry on time-sensitive links |
+| Personally identifiable information (PII) exposure | Careful handling of PII in email content and logs |
+| Sensitive job payloads | Encryption of sensitive data in the job queue |
+| Accountability | Audit logging of email delivery events |
+| Data accumulation | Retention policies for email job data |
+| EU recipients | General Data Protection Regulation (GDPR) compliance |

@@ -1,0 +1,9 @@
+{
+  "label": "Authentication",
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "platform/settings/authentication/overview"
+  },
+  "collapsed": true
+}

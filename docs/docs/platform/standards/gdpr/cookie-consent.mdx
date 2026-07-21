@@ -1,0 +1,143 @@
+---
+title: Cookie Consent
+sidebar_label: Cookie Consent
+sidebar_position: 3
+description: Cookie banners and consent management under GDPR and the ePrivacy Directive
+compliance:
+  - "GDPR"
+  - "ePrivacy Directive"
+  - "CPRA"
+keywords:
+  - cookie consent
+  - cookie banner
+  - consent management
+  - ePrivacy
+  - opt-in consent
+  - consent records
+  - Global Privacy Control
+tags:
+  - GDPR
+  - privacy
+  - consent
+  - cookies
+---
+
+import Term from '@site/src/components/Term';
+
+# Cookie Consent
+
+If your website sets cookies that process <Term t="personal-information">personal data</Term> or track visitors, you need consent before those cookies load, and the cookie banner is where you ask for it. The banner is the visible edge of consent management: asking, recording, and acting on each visitor's choices. Under General Data Protection Regulation (GDPR) the details of how you ask matter as much as whether you ask.
+
+## Why a Banner Is Required
+
+Two EU rules combine here. The **ePrivacy Directive** requires consent before storing or reading anything on a visitor's device that isn't strictly necessary to deliver the service, which is what makes non-essential cookies conditional on a yes. The **GDPR** supplies the standard that consent has to meet, and it is a high one: freely given, specific, informed, and unambiguous, given *before* the processing starts, and as easy to withdraw as it was to give.
+
+In practice that means:
+
+<div className="row cards-row">
+<div className="col col--6">
+<div className="card">
+<div className="card__header"><h4>Prior consent</h4></div>
+<div className="card__body">
+
+For a first-time EU visitor, only strictly necessary cookies may load until they've made a choice. Analytics, marketing, and personalization cookies wait.
+
+</div>
+</div>
+</div>
+<div className="col col--6">
+<div className="card">
+<div className="card__header"><h4>Real choice</h4></div>
+<div className="card__body">
+
+Rejecting must be as easy as accepting; a prominent "Accept" with a buried reject path undermines "freely given". Pre-ticked boxes and implied consent from continued browsing don't qualify.
+
+</div>
+</div>
+</div>
+<div className="col col--6">
+<div className="card">
+<div className="card__header"><h4>Granularity</h4></div>
+<div className="card__body">
+
+Visitors choose by purpose (analytics yes, marketing no), typically through a preference center linked from the banner.
+
+</div>
+</div>
+</div>
+<div className="col col--6">
+<div className="card">
+<div className="card__header"><h4>Withdrawal</h4></div>
+<div className="card__body">
+
+The preference center stays reachable after the banner is dismissed, so a visitor can change their mind later.
+
+</div>
+</div>
+</div>
+</div>
+
+## What the Banner Must Cover
+
+| Element | What it provides |
+| ------- | ---------------- |
+| Purpose explanation | What cookies you use and why, in plain language |
+| Accept and reject controls | Equally accessible options, plus per-category selection |
+| Third-party disclosure | Whether data is shared with or collected by third parties through the cookies |
+| Policy links | Your cookie policy or privacy notice, one click away |
+| Settings access | A path to review and change choices later |
+
+A single banner rarely satisfies every jurisdiction. EU member-state data protection authorities publish their own guidance on top of GDPR (what the French Commission Nationale de l'Informatique et des Libertes (CNIL) expects differs from German or Italian practice in the details), and non-EU regimes differ more fundamentally, so consent tooling commonly serves different banner behavior by visitor location.
+
+## Beyond the EU
+
+The EU model is opt-in; much of the rest of the world starts from opt-out with opt-in carve-outs:
+
+| Regime | Consent model |
+| ------ | ------------- |
+| GDPR / ePrivacy (EU) | Opt-in before non-essential cookies load |
+| LGPD (Brazil) | Substantially the GDPR model; opt-in |
+| CPRA (California) | Transparency plus opt-out of sale/sharing; opt-in required for visitors under 16; honoring [Global Privacy Control](https://globalprivacycontrol.org/) (GPC) browser signals is required |
+| Other US state laws (Virginia, Colorado, Connecticut, Utah) | Opt-out oriented, with opt-in required for sensitive data categories |
+| PIPL (China), APPI (Japan) | Explicit consent requirements for sensitive data and cross-border transfers |
+
+If you serve one banner globally, it needs to satisfy the strictest regime you're exposed to, which usually means EU-style opt-in; geolocated banners let you apply each rule where it actually applies.
+
+## Keep Records of Consent
+
+GDPR's accountability principle requires you to be able to demonstrate consent, meaning you can show, for any visitor, what they consented to, when, and what the banner looked like when they did. A consent management platform captures this log for you; if you build in-house, the log is a requirement, not a nice-to-have.
+
+These records are also audit and <Term t="evidence">evidence</Term> artifacts: consent logs, the deployed banner configuration, and screenshots of the consent flow are the kind of items that satisfy privacy-related control areas, alongside the [example evidence](./example-evidence.mdx) for your broader GDPR program. Store them with your other [evidence](/docs/platform/compliance-management/evidence/overview) so DSARs and regulator questions have a paper trail.
+
+## Practical Guidance
+
+| Practice | Why it matters |
+| -------- | -------------- |
+| Categorize honestly | "Strictly necessary" means the site breaks without it (session cookies, load balancing), not "necessary for our marketing goals"; miscategorized analytics is one of the most common findings in regulator sweeps |
+| Avoid dark patterns | Color-weighting the accept button, hiding reject behind extra clicks, or nagging on every page view all cut against "freely given" and have drawn enforcement attention across EU authorities |
+| Fire tags on consent | The banner is only compliant if the tag manager actually withholds non-essential scripts until consent lands; a banner displayed while trackers load unconditionally does not establish compliance |
+| Honor GPC where it applies | Browser-level signals are legally meaningful under California Privacy Rights Act (CPRA) and increasingly elsewhere; treat them as a recorded opt-out |
+| Refresh consent after material changes | New processing purposes, new vendors, or a redesigned banner warrant fresh consent |
+
+## FAQ
+
+<details>
+<summary>Do we need a cookie banner at all?</summary>
+
+If your site only sets strictly necessary cookies, no banner is required (a cookie notice in your privacy policy still is). The moment analytics, advertising, or personalization cookies enter, EU visitors need an opt-in banner.
+
+</details>
+
+<details>
+<summary>Can we rely on legitimate interests instead of consent for analytics?</summary>
+
+Not for the cookie itself. The ePrivacy Directive requires consent for non-essential storage or access on the device regardless of which GDPR lawful basis you claim for the downstream processing. Some authorities tolerate narrowly configured, privacy-hardened first-party analytics without consent; that is jurisdiction-specific and worth legal review before relying on it.
+
+</details>
+
+<details>
+<summary>Does a cookie wall (consent or no access) comply?</summary>
+
+Generally no in the EU: consent forced as the price of entry is not freely given, per European Data Protection Board guidance. Paid ad-free alternatives ("consent or pay") are under active regulatory scrutiny and vary by authority.
+
+</details>

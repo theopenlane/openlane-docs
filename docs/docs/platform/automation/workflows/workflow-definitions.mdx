@@ -1,0 +1,229 @@
+---
+title: Authoring Workflow Definitions
+sidebar_label: Workflow Definitions
+sidebar_position: 2
+description: Reference for writing workflow definitions - triggers, conditions, CEL expressions, actions, and worked examples
+keywords:
+  - workflow definitions
+  - CEL expressions
+  - approval workflows
+  - triggers
+  - notifications
+tags:
+  - workflows
+  - automation
+  - reference
+---
+
+# Authoring Workflow Definitions
+
+Workflow definitions are JSON documents that tell the engine when to act and what to do: which triggers start evaluation, which Common Expression Language (CEL) conditions gate it, and which actions run. The worked examples below can be copied and adapted directly.
+
+For what workflows are and how the engine manages them, see [Workflows and Approvals](./overview.mdx). All definitions conform to the [workflow JSONSchema](https://github.com/theopenlane/core/blob/main/jsonschema/workflow-definition.schema.json) ([generated field reference](https://github.com/theopenlane/core/blob/main/jsonschema/workflow-docs.md)).
+
+## Definition Structure
+
+A workflow definition consists of:
+
+| Field | Required | Purpose |
+| ----- | -------- | ------- |
+| `name` | yes | Human-readable workflow name |
+| `schemaType` | yes | The schema this workflow applies to (e.g., `Control`, `Evidence`) |
+| `workflowKind` | yes | `APPROVAL`, `LIFECYCLE`, or `NOTIFICATION` |
+| `description` | no | What the workflow does |
+| `version` | no | Workflow definition version |
+
+## Triggers
+
+Triggers define when the workflow should be evaluated:
+
+```json
+{
+  "operation": "UPDATE",
+  "objectType": "Control",
+  "fields": ["status"],
+  "edges": ["controls"],
+  "selector": {
+    "tagIds": ["tag-id"],
+    "groupIds": ["group-id"],
+    "objectTypes": ["Control"]
+  },
+  "expression": "..."
+}
+```
+
+- `operation` is `CREATE`, `UPDATE`, or `DELETE`
+- `fields` and `edges` list the changes that trigger evaluation
+- `selector` optionally scopes the trigger to tags, groups, or object types
+- `expression` is an optional CEL expression for finer control
+
+## Conditions
+
+Conditions are CEL expressions that must evaluate to true for the workflow to proceed:
+
+```json
+{
+  "expression": "'status' in changed_fields",
+  "description": "Only when status field changes"
+}
+```
+
+### CEL Variables
+
+Available in trigger and condition expressions:
+
+| Variable | Meaning |
+| -------- | ------- |
+| `object` | The workflow object (typed entity) |
+| `user_id` | Triggering user ID (if available) |
+| `changed_fields` | List of changed field names |
+| `changed_edges` | List of changed edge names |
+| `added_ids` | Map of edge name → added IDs |
+| `removed_ids` | Map of edge name → removed IDs |
+| `event_type` | `CREATE`, `UPDATE`, or `DELETE` |
+
+Additionally available in action `when` expressions (assignment context):
+
+| Variable | Meaning |
+| -------- | ------- |
+| `assignments.total` / `.pending` / `.approved` / `.rejected` | Assignment counts |
+| `assignments.by_action["action_key"]` | Per-action summary: status, total, pending, approved, rejected, approver_ids |
+| `instance.id` / `.state` / `.current_action_index` | Workflow instance context |
+| `initiator` | User ID who triggered the workflow |
+
+### Common CEL Patterns
+
+```cel
+# Field was changed
+'FIELD_NAME' in changed_fields
+
+# Field equals value (use JSON field names, e.g. status, reference_framework)
+object.status == "VALUE"
+
+# Field changed to specific value
+'status' in changed_fields && object.status == "VALUE"
+
+# Edge added
+'controls' in changed_edges && size(added_ids['controls']) > 0
+```
+
+## Actions
+
+Actions define what happens when the workflow executes:
+
+```json
+{
+  "key": "approval",
+  "type": "REQUEST_APPROVAL",
+  "description": "...",
+  "params": {
+    "targets": [
+      {"type": "USER", "id": "user-id"},
+      {"type": "GROUP", "id": "group-id"},
+      {"type": "RESOLVER", "resolver_key": "CONTROL_OWNER"}
+    ],
+    "required": true,
+    "label": "Approval label",
+    "fields": ["status"]
+  }
+}
+```
+
+:::warning Approval action constraints
+- Approval actions must include at least one `fields` entry
+- `fields` must be workflow-eligible for the object type (see GraphQL `workflowMetadata`)
+- Use JSON field names (snake_case), e.g. `status`, `category`, `reference_framework`
+- Approval actions cannot target `edges` yet
+- Only one approval action per distinct field set is allowed in a definition
+:::
+
+## Notification Actions
+
+Notifications can fire conditionally based on assignment state:
+
+```json
+{
+  "key": "notify_on_approval",
+  "type": "NOTIFY",
+  "when": "assignments.by_action[\"approval\"].status == \"APPROVED\"",
+  "params": {
+    "targets": [
+      {"type": "RESOLVER", "resolver_key": "OBJECT_CREATOR"},
+      {"type": "CHANNEL", "channel": "SLACK", "destination": "C01234567"}
+    ],
+    "title": "Request Approved",
+    "body": "Your {{object_type}} change request has been approved",
+    "channels": ["IN_APP"]
+  }
+}
+```
+
+Behavior notes:
+
+- `when` expressions are re-evaluated when assignment status changes; notifications with `when` expressions fire only once per workflow instance
+- `targets` may include user-resolved targets (`USER`, `GROUP`, `ROLE`, `RESOLVER`) and direct channel targets (`CHANNEL`)
+- `CHANNEL` targets require `channel` and `destination`, and bypass per-user notification preferences; `channels` applies to user-resolved targets only
+- Channel values: `IN_APP`, `EMAIL`, `SLACK`, `TEAMS`
+- Built-in resolver keys: `CONTROL_OWNER`, `CONTROL_AUDITOR`, `RESPONSIBLE_PARTY`, `POLICY_OWNER`, `POLICY_APPROVER`, `POLICY_DELEGATE`, `EVIDENCE_OWNER`, `OBJECT_CREATOR`
+- There is no `INITIATOR` resolver; use `OBJECT_CREATOR` or a static `USER`/`GROUP` target, and reference `initiator` in `when` expressions if needed
+- Template variables: `{{instance_id}}`, `{{object_id}}`, `{{object_type}}`, `{{action_key}}`
+
+### Common Notification Patterns
+
+```cel
+# Notify when approval action completes successfully
+assignments.by_action["manager_approval"].status == "APPROVED"
+
+# Notify when quorum is reached (2+ approvals)
+assignments.by_action["team_review"].approved >= 2
+
+# Notify when all approvals complete
+assignments.pending == 0 && assignments.rejected == 0
+
+# Notify on any rejection
+assignments.rejected > 0
+```
+
+## Worked Examples
+
+Copyable definitions live in [`internal/workflows/examples`](https://github.com/theopenlane/core/tree/main/internal/workflows/examples) in the core repo:
+
+| Example | Use Case |
+| ------- | -------- |
+| [Simple approval](https://github.com/theopenlane/core/blob/main/internal/workflows/examples/control-approval.json) | Compliance team approval when control status or category changes |
+| [Multi-step approval](https://github.com/theopenlane/core/blob/main/internal/workflows/examples/multi-step-approval.json) | Engineering review on category updates, then compliance approval for status changes |
+| [Conditional approval](https://github.com/theopenlane/core/blob/main/internal/workflows/examples/conditional-approval.json) | Approval only for Technical category controls |
+| [Webhook notification](https://github.com/theopenlane/core/blob/main/internal/workflows/examples/webhook-notification.json) | Notify external systems (e.g., Slack) when a control reaches APPROVED |
+| [Evidence review](https://github.com/theopenlane/core/blob/main/internal/workflows/examples/evidence-review-workflow.json) | Reviewer approval when evidence is linked to a control (edge trigger) |
+| [Approval with notifications](https://github.com/theopenlane/core/blob/main/internal/workflows/examples/approval-with-notifications.json) | Notify the creator on approval, control owners on rejection |
+| [Quorum notifications](https://github.com/theopenlane/core/blob/main/internal/workflows/examples/multi-approver-with-quorum-notifications.json) | Milestone notifications: first approval, quorum reached, rejection |
+
+To customize an example: copy the file, replace placeholders like `<REPLACE_WITH_GROUP_ID>` (find IDs with `openlane group get` / `openlane user get`), adjust fields and conditions, and import.
+
+## Creating a Workflow
+
+**Console:** navigate to `Workflows` > `Definitions` > `Create`, upload your JSON file, review, and click **Create workflow**.
+
+**CLI** (we recommend this path for system templates):
+
+```bash
+openlane workflowdefinition create \
+  --definition-file control-approval.json
+
+# List all workflows
+openlane workflowdefinition get
+```
+
+**GraphQL:**
+
+```graphql
+mutation CreateWorkflow($input: CreateWorkflowDefinitionInput!) {
+  createWorkflowDefinition(input: $input) {
+    workflowDefinition {
+      id
+      name
+      active
+    }
+  }
+}
+```

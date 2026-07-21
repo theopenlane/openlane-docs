@@ -1,0 +1,127 @@
+---
+title: Writing Controls
+description: How to author organizational control language that stays truthful, testable, and stable as your tooling changes
+sidebar_position: 2
+tags:
+  - controls
+  - compliance
+  - policies
+keywords:
+  - writing controls
+  - control language
+  - control authoring
+  - policy to control mapping
+---
+
+import Term from '@site/src/components/Term';
+
+# Writing Controls
+
+A <Term t="controls">control</Term> is a single, testable assertion about something your organization actually does. Your policies define the requirements and hold the operational parameters; your controls distill each requirement into something an auditor can test.
+
+## Start From the Policy
+
+Every control should trace back to a policy that requires the activity, and every operational obligation in a policy should either map to a control or be a deliberate governance-only statement. When you change one, cite the other - a policy revision note that references the control it aligns with gives auditors a change narrative for free, and keeps the two layers from drifting apart.
+
+The examples below pair real policy language with the control written from it, and each illustrates a rule we apply when authoring controls.
+
+## Example: Access Termination
+
+The Access Onboarding and Termination Policy defines the offboarding procedure, the order in which access is revoked, and the deadline:
+
+> All access revocation is completed within 3 business days of the termination effective date (immediately for involuntary terminations).
+
+The control written from it:
+
+```yaml
+- category: Logical and Physical Access
+  subcategory: Access Provisioning
+  refCode: CC6.2.3
+  description: Logical access to systems is revoked within three business days of
+    employee or contractor termination (immediately for involuntary terminations)
+    in accordance with established access management procedures.
+  soc2Mapping:
+    - CC6.2
+```
+
+This control repeats the policy's number, and that is intentional: the revocation deadline is the thing the auditor samples terminations against, so the number belongs in the control text. When you state a deadline, pair the realistic general case with a strict carve-out for the genuinely risky one. A three business day window the team reliably meets, with immediate revocation for involuntary terminations, tests better than a 24 hour promise that fails its first sample.
+
+**Rule: a parameter belongs in the control only when it is the tested subject.** If the auditor tests against the number, state it in the control and keep it identical to the policy. If the number is an internal working rhythm, leave it in the policy and let the control point there.
+
+## Example: Vendor Reviews
+
+The Vendor Management Policy owns the vendor classification tiers and the review cadence:
+
+> Critical and high-risk vendors are reviewed at least annually. The review includes the vendor's current SOC 2 Type II report or equivalent certification, data access, and significance to the Openlane platform.
+
+The control written from it:
+
+```yaml
+- category: Risk Mitigation
+  subcategory: Vendor Risk
+  refCode: CC9.2.2
+  description: Openlane performs due diligence activities over critical third-parties
+    prior to contract execution and on the recurring cadence defined in the Vendor
+    Management Policy. Due diligence activities include the documented review of
+    third-party attestation reports and reviews of data access and significance to
+    the Openlane platform.
+  soc2Mapping:
+    - CC9.2
+```
+
+Here the control does the opposite of the termination example: it names the activity and defers the cadence to the policy. If the review cycle later moves from annual to semi-annual, the policy changes and the control does not. This is the same reason a system description should say "on the cadence defined in policy" rather than restating the interval; one document owns each parameter, and everything else points at it.
+
+**Rule: one owner per parameter.** Duplicated numbers drift into contradiction, and every copy is a separate audit exposure.
+
+## Example: Container Scanning
+
+The Software Development Lifecycle Policy names the tooling, because at the policy layer the tool is the requirement. Its container image requirements specify approved base images only, a Trivy scan before push, and critical vulnerabilities blocked from deployment.
+
+The control written from it:
+
+```yaml
+- category: Logical and Physical Access
+  subcategory: Malicious Software Prevention
+  refCode: CC6.8.2
+  description: Container images are scanned for known vulnerabilities prior to
+    deployment. Builds with critical or high-severity vulnerabilities are blocked.
+  soc2Mapping:
+    - CC6.8
+```
+
+The control drops the tool name. Controls written as "scanned using Trivy" break the moment you switch scanners, forcing a control edit, remapping, and an awkward conversation about whether the control operated all period. Capability language survives a tool swap; the tool belongs one layer down, in the policy or the [control implementation](./implementations.mdx). The control also keeps the disposition clause: detection without a documented outcome (blocked, tracked, remediated) is half a control, and auditors test the half you left out.
+
+**Rule: capability language, not tool names, and always close the loop.** Say what is detected and what happens to it.
+
+## Example: Candidate Screening
+
+Nearly every control template ships with "background checks are performed for employees as a component of the hiring process." It is an easy control to inherit and a hard one to pass, and the first time an auditor samples a hire with no background check report on file, the control fails, even if your actual screening was thorough. The Hiring Policy describes what actually happens:
+
+> Where permitted by law and appropriate for the position, Openlane may conduct background checks or employment verification prior to a final offer of employment.
+>
+> In lieu of formal background checks, Openlane shall conduct reference check of candidates to verify candidate background, skills, and knowledge.
+
+The control written from it:
+
+```yaml
+- category: Control Environment
+  subcategory: Integrity and Ethics
+  refCode: CC1.1.4
+  description: Hiring Managers personally evaluate all candidates based on key
+    criteria including experience of candidate from previous collaboration,
+    considering background, skill set, and technical competency.
+  soc2Mapping:
+    - CC1.1
+```
+
+Notice the shall/may split doing the work. The policy makes the practice you perform every time (reference checks, hiring manager evaluation) the mandatory control, and keeps the practice you perform sometimes (formal background checks) as a permitted option. The control then attests only to the mandatory half, so every sampled hire can produce evidence: the reference check record and the hiring manager's evaluation. The trust services criteria ask for a demonstrated commitment to competence and integrity in hiring, not for a specific screening product.
+
+**Rule: write the control you actually operate, not the one the template assumes.** If a practice is occasional, the policy can permit it, but the control must attest only to what happens every time; anything else fails on its first sample.
+
+## Keeping the Set Healthy
+
+A few habits keep a control set testable as it grows:
+
+* State each control once and let the framework mapping carry it to every criteria it satisfies. Repeating the same sentence under multiple criteria usually causes drift in the language and adds to your testing burden.
+* Give every control an owner, evidence, and a frequency or trigger. If you cannot name all three you'll have a tough time producing evidence towards it
+* When you consolidate or deduplicate, verify every removed statement has a new home before deleting it. Facts dropped silently during cleanup are a  common way a real practice loses its documentation

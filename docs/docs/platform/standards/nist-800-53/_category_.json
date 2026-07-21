@@ -1,0 +1,9 @@
+{
+  "label": "NIST 800-53",
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "platform/standards/nist-800-53/overview"
+  },
+  "collapsed": true
+}

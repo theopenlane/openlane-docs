@@ -1,0 +1,80 @@
+---
+title: Example Evidence
+sidebar_label: Example Evidence
+sidebar_position: 2
+description: Example evidence artifacts for commonly manually evidenced Microsoft SSPA control areas
+---
+
+# Microsoft SSPA Example Evidence
+
+The table below lists commonly evidenced control areas for Microsoft Supplier Security and Privacy Assurance (SSPA) and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
+
+| Control Area | Example Evidence |
+| ------------ | ---------------- |
+| Periodic risk assessment | The most recent risk assessment report, dated within the current review period |
+| Annual penetration testing | The latest penetration test report covering scope, methodology, findings, and remediation plans; retest reports showing findings were resolved |
+| Vulnerability scanning | Internal scan results covering each of the last four quarters; external scans run after significant changes, with a policy defining what counts as significant; remediation records and rescan reports for high-risk findings |
+| Asset inventory | Asset listings or configuration management database (CMDB) exports plus cloud console screenshots showing deployed resources; a documented list of external systems with owners and locations |
+| Supported system components | Asset management policy and screenshots of build or configuration standards showing components remain under vendor support |
+| Business continuity and disaster recovery | The current business continuity plan, a business impact analysis, and results from a recent continuity test with identified issues and corrective actions |
+| Personnel screening | Records from a recent hire's screening, such as interview schedules, interviewer feedback, applicant tracking exports, and credential checks (redacted as needed) |
+| Identity verification for new personnel | Onboarding policy requiring identity verification plus redacted verification records for sample hires |
+| Confidentiality agreements | An executed confidentiality or intellectual property agreement with a recently hired employee |
+| Disciplinary process | A documented disciplinary process for security policy violations with graduated responses |
+| Security and privacy training | Training policy requiring privacy and security training at hire and annually; completion records exported from your training platform; role-based security training records for specialized positions |
+| Secure development training | Training records showing developers completed secure coding training within the last 12 months |
+| Access provisioning | A documented access request ticket for a recent hire showing management approval; identity management policy with authorization evidence for both privileged and general users |
+| Application and system accounts | Access control policy, request and approval tickets for service accounts, access logs, and periodic access review records |
+| Shared account management | System access control policy addressing shared accounts |
+| Account lockout | Policies stating that accounts lock after a defined number of failed login attempts and remain locked for a minimum duration |
+| Change management | Pull request or ticket screenshots showing review and approval by authorized personnel before production deployment, plus post-implementation review |
+| Security impact assessment for changes | Change management policy with completed impact assessments and post-implementation validation records |
+| Secure development process | Software development lifecycle documentation with security activities at each stage and policies protecting custom-developed code |
+| Static application security testing (SAST) | Evidence of SAST running in the CI/CD pipeline, or screenshots of the tool's configuration and dashboards |
+| Hard-coded credentials | Secret scanning configuration in source repositories or other mechanisms that detect credentials in code |
+| Encryption strength | Policies documenting required encryption strength with screenshots confirming deployment |
+| Encryption in transit | Screenshots showing TLS on data transmission paths, such as HTTPS on pages that collect sensitive data |
+| Disk and file system encryption | Screenshots of disk encryption configurations showing logical access managed separately from the underlying encryption |
+| Removable media | Policy assigning ownership of removable media with an inventory of devices and owners; configuration evidence showing removable media is encrypted |
+| Key management | Evidence that cryptographic keys protecting account data are stored in a certified secure cryptographic device |
+| Sensitive authentication data | Screenshots of data stores and system configurations showing authentication data is secured |
+| Anti-malware | Screenshots showing anti-malware deployed across system components, definitions updating automatically, and periodic scans running; documentation showing malware threats are periodically evaluated |
+| Patch management | Vendor patch lists with screenshots showing critical security patches installed; evidence of automated update mechanisms |
+| Intrusion detection and prevention | Screenshots from your cloud provider's threat detection service showing it is enabled and detecting threats; evidence that signatures are kept current |
+| Logging and monitoring | Logging and monitoring policy; audit log configuration screenshots with sample logs; documented procedures for following up on anomalies and exceptions |
+| File integrity monitoring | Alerting and change detection configuration showing critical file comparisons run on a defined schedule |
+| Data loss prevention (DLP) | DLP tool screenshots plus an example of a blocked transmission containing sensitive data |
+| Mobile device management (MDM) | Screenshots from the MDM console showing enforced security policies |
+| Telework and endpoint devices | Remote work or information security policy covering endpoint device requirements |
+| Acceptable use | Acceptable use policy requiring explicit approval for end-user technologies; policy requiring devices to be tagged with owner and contact information |
+| Backups | Tickets or monitoring records from the current period showing backup failures are tracked; a documented security review of offline backup media storage from the past 12 months |
+| Data disposal | Data deletion and media destruction policies covering shredding, secured storage containers, and secure electronic deletion; a recent destruction certificate or decommissioning ticket; photos of secure disposal bins; cloud storage lifecycle rules that delete data automatically |
+| Customer data deletion on termination | System logs showing deletion, screenshots of decommissioned resources, and deletion agreement documentation |
+| Vendor management | Due diligence policy and procedures; executed agreements containing privacy and security requirements, such as data processing agreements (DPAs) or business associate agreements; documented review steps and approvals for new and existing contracts; records showing vendor service changes required management review |
+| Incident response and breach notification | Formal breach notification procedures and the template used to notify affected parties; policy requiring staff with incident response roles to receive response training |
+| Customer commitments | An executed service agreement, publicly available terms of service, and screenshots of the account sign-up flow |
+| Privacy notice | A link to the current public privacy policy covering purposes, lawful bases, and data subject rights; registration flow screenshots showing the notice is presented before sign-up completes |
+| Data subject consent | Documentation of how consent is captured, screenshots of consent mechanisms, and records of consent obtained |
+| Data minimization | A documented data minimization policy with technical implementation evidence; screenshots showing optional data collection is disabled by default |
+| Personal data inventory and record of processing activities (ROPA) | A formal inventory of systems storing or processing personal data including categories, locations, data elements, and owners; a completed ROPA covering each population whose data you process |
+| Data subject requests | Procedures for receiving and fulfilling requests, a log of requests with resolution records, identity verification procedures for requesters, and published submission channels such as a web form or dedicated inbox |
+| Right to access | The access request procedure and redacted records of completed requests |
+| Rights of minors | Privacy policy language and internal procedures covering requests involving data subjects under 16 |
+| Self-service data management | Screenshots of a user updating their personal information within the application |
+| Privacy inquiries | Screenshots of the system used to track complaints, inquiries, and disputes, plus evidence of resolution |
+| Subprocessor transparency | A public page listing third parties that receive personal data; email or web notifications informing customers of subprocessor changes |
+| Third-party privacy requirements | Evidence that third parties received your personal data handling requirements; the DPA template used with third parties and fully executed contracts incorporating it |
+| Customer instructions and disclosures | Procedures for consulting the customer before disclosing personal data, verification records for authorized agents, and a process for notifying customers when a processing instruction may conflict with applicable law |
+| Data return and disposal for customers | Customer-facing documentation describing the tools available to return, transfer, or dispose of data, plus the supporting disposal policies |
+| Privacy by design | A privacy impact assessment process with completed samples, or a development lifecycle policy that incorporates privacy requirements |
+| Data de-identification | Data classification and protection policies plus architecture documentation showing how data is de-identified |
+| Sensitive information handling | Data classification policy covering personal data and awareness training materials that address handling and reporting |
+| AI governance | A documented AI governance policy addressing fairness and ethics; a governance charter with committee membership and meeting records |
+| AI risk management | AI risk management policy with completed assessment samples; procedures for tracking emerging AI risks supported by a risk register and meeting minutes |
+| AI impact assessments | The impact assessment procedure with completed reports, including environmental impact assessments where performed |
+| AI development and data management | Policy governing the AI system lifecycle with design and evaluation records; a data lifecycle policy for AI systems with provenance and quality records |
+| Human oversight of AI | A procedure defining when humans must intervene in AI system operation, with oversight and review records |
+| AI fairness and bias evaluation | The fairness evaluation procedure with testing reports and mitigation documentation |
+| AI transparency and user control | Feedback collection procedures with screenshots of active mechanisms and logs; user-facing opt-out and appeal mechanisms with the supporting procedure |
+| AI training and proficiency | A policy requiring responsible AI training with completion records; a program defining practitioner proficiency requirements with assessment records or certifications |
+| AI monitoring and corrective action | Procedures defining AI governance metrics with monitoring reports or dashboards; root-cause analysis and corrective action records for nonconformities |

@@ -1,0 +1,82 @@
+---
+title: NIST 800-171
+sidebar_label: Overview
+description: NIST SP 800-171 - Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations
+sidebar_position: 1
+keywords:
+  - NIST 800-171 compliance
+  - controlled unclassified information
+  - CUI protection
+  - DFARS 252.204-7012
+  - defense contractor security requirements
+  - system security plan
+  - SPRS self-assessment
+tags:
+  - NIST 800-171
+  - CUI
+  - compliance
+  - DoD
+  - defense
+---
+
+import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
+
+# Protecting Controlled Unclassified Information (NIST SP 800-171)
+
+National Institute of Standards and Technology (NIST) Special Publication 800-171 defines the security requirements for protecting Controlled Unclassified Information (CUI) when that information lives in systems the federal government doesn't own. Federal agencies impose it on contractors through contract clauses, most prominently Defense Federal Acquisition Regulation Supplement (DFARS) 252.204-7012 for the defense industrial base, so for most organizations it arrives as a contractual condition rather than a voluntary framework.
+
+<StandardMeta
+  fullName={"NIST SP 800-171, Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations"}
+  type={"Security requirements catalog (NIST Special Publication), imposed by contract"}
+  source={"NIST SP 800-171 Revision 3 (Revision 2 remains the DoD contractual baseline)"}
+  established={"First published June 2015; Revision 2 February 2020; Revision 3 May 2024"}
+  managedBy={"National Institute of Standards and Technology (NIST)"}
+  appliesTo={"Nonfederal organizations that process, store, or transmit CUI, primarily federal and defense contractors and subcontractors"}
+  certification={"No: contractual obligation with self-assessment reporting; CMMC provides verified assessment against it"}
+/>
+
+## Who Needs It
+
+CUI is information the government creates or possesses that isn't classified but that law, regulation, or government-wide policy requires be safeguarded: export-controlled technical data, controlled defense information, certain research data, and dozens of other categories catalogued in the National Archives CUI Registry. When that information flows into your systems under a federal contract, SP 800-171 is the standard for protecting its confidentiality.
+
+In practice, you're in scope if you:
+
+- Hold a DoD contract with DFARS 252.204-7012, which requires implementing SP 800-171 on any contractor system that processes, stores, or transmits covered defense information
+- Are a subcontractor at any tier on such a contract; the clause flows down whenever CUI does
+- Handle CUI under contracts from civilian agencies that cite SP 800-171 in their terms
+- Are a university, research institution, or service provider whose systems touch CUI on behalf of a contractor
+
+Scoping matters as much as the requirements themselves. Only systems and components that process, store, or transmit CUI, or that protect those components, need to meet the requirements. Many organizations concentrate CUI in a bounded enclave rather than bringing the entire corporate network into scope.
+
+## How the Requirements Are Organized
+
+The current version, Revision 3 (May 2024), contains 97 security requirements across 17 families that will look familiar to anyone who has worked with NIST SP 800-53, from which they are derived: Access Control, Awareness and Training, Audit and Accountability, Configuration Management, Identification and Authentication, Incident Response, Maintenance, Media Protection, Personnel Security, Physical Protection, Planning, Risk Assessment, Security Assessment and Monitoring, System and Communications Protection, System and Information Integrity, System and Services Acquisition, and Supply Chain Risk Management. Requirements align directly with the SP 800-53 control catalog, and many include organization-defined parameters (ODPs) that the contracting agency or the organization fills in, such as specific review frequencies and lockout thresholds. The companion publication SP 800-171A provides the assessment procedures for verifying each requirement.
+
+Two artifacts anchor any implementation: a System Security Plan (SSP) describing the in-scope environment and how each requirement is met, and <Term t="action-plan">Plans of Action and Milestones</Term> (POA&Ms) tracking requirements that aren't fully implemented yet.
+
+## DoD Contracts and Revision 2
+
+Although Revision 3 is the current publication, Revision 2 (110 requirements across 14 families) remains the operative version for defense work: an active DoD class deviation directs contractors subject to DFARS 252.204-7012 to comply with Revision 2, and it survived the February 2026 DFARS restructuring unchanged. Cybersecurity Maturity Model Certification (CMMC) Level 2 likewise assesses against the Revision 2 requirements. We recommend implementing against the revision your contracts actually cite, which for DoD work today still means Revision 2, while using Revision 3's structure for planning.
+
+## Relationship to DFARS and CMMC
+
+Three mechanisms turn SP 800-171 from guidance into obligation for defense contractors:
+
+- **DFARS 252.204-7012** requires implementing SP 800-171, reporting cyber incidents to DoD within 72 hours, and ensuring that cloud providers holding covered defense information meet the FedRAMP Moderate baseline or equivalent.
+- **DFARS 252.204-7019 and 7020** require a current SP 800-171 self-assessment score, computed under the DoD assessment methodology, posted in the Supplier Performance Risk System (SPRS) before contract award.
+- **[CMMC](../cmmc/overview.mdx)** adds verification. CMMC Level 2 assesses the same 110 Revision 2 requirements, either by self-assessment under stricter scoring rules or by a certified third-party assessor, depending on the solicitation. If CMMC is in your future, SP 800-171 implementation is the substance of it.
+
+Misstating your implementation status carries real risk: SPRS scores and CMMC affirmations are representations to the government, and the Department of Justice has pursued False Claims Act cases over inaccurate cybersecurity attestations.
+
+For the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).
+
+## Additional Resources
+
+- [NIST SP 800-171 Rev 3](https://csrc.nist.gov/pubs/sp/800/171/r3/final)
+- [NIST SP 800-171 Rev 2 (withdrawn, current DoD baseline)](https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final)
+- [NIST SP 800-171A Rev 3 (assessment procedures)](https://csrc.nist.gov/pubs/sp/800/171a/r3/final)
+- [NARA CUI Registry](https://www.archives.gov/cui)
+- [DFARS 252.204-7012](https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting.)
+- [Supplier Performance Risk System (SPRS)](https://www.sprs.csd.disa.mil/)
+- [DoD CMMC Program](https://dodcio.defense.gov/CMMC/)

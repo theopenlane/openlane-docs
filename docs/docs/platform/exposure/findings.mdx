@@ -1,39 +1,72 @@
 ---
 title: Findings
 description: Capture specific security issues discovered during scans and reviews
-sidebar_position: 5
+sidebar_position: 6
+compliance:
+  - "SOC 2 CC7"
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Findings
 
-## Overview
+A finding is an observed security issue: a specific resource, in a specific state, at a specific time. A storage bucket open to the public, a security group allowing inbound traffic from anywhere, a service account with unused admin privileges, an observation from last quarter's penetration test. Where a [vulnerability](./vulnerabilities/overview.mdx) describes a known weakness in the abstract (a <Term t="common-vulnerabilities-and-exposures">CVE</Term> with a severity score), a finding describes an instance in your environment, which is why findings carry resource identifiers and source-reported state rather than package versions and patch availability.
 
-Findings are specific issues observed by security tooling or reviews, such as misconfigurations, policy violations, and exposed resources. While vulnerabilities describe known weaknesses, findings usually describe concrete occurrences in your environment.
+Findings mostly come from tools that watch your environment continuously: cloud security posture services like AWS Security Hub, Google Security Command Center (SCC), and Microsoft Defender for Cloud, plus periodic sources like penetration tests and internal reviews. The operational challenge is volume. These tools generate findings faster than any team can individually investigate, so an effective program depends on filtering out noise at the source, triaging what remains by severity and production impact, and validating which findings are real before committing engineering time.
 
-In Openlane, findings are usually linked to the affected asset or vendor context and the remediation work used to close the issue. This keeps investigation and follow-up traceable for audits and internal reviews.
+Auditors evaluate the handling process rather than the raw count. An organization with fifty open findings and a documented pipeline from detection through triage to closure demonstrates working monitoring and response; a claim of zero findings tends to invite scrutiny instead. What gets tested is traceability: pick a finding, show who assessed it, what was decided, and how it was closed or accepted.
 
-## Compliance Significance
+## How Findings Work in Openlane
 
-- SOC 2: CC7 monitoring and response evidence
-- ISO 27001: operational control and improvement records
+Integration ingestion is the primary source. The [AWS](../integrations/aws.mdx), [GCP Security Command Center](../integrations/gcp_scc.mdx), and [Microsoft Defender for Cloud](../integrations/azure_security_center.mdx) integrations pull findings and alerts from their providers and normalize them, linking each record to the integration that produced it. The AWS and GCP integrations deduplicate on the source's stable identifier so repeated syncs update existing records instead of creating duplicates, and accept Common Expression Language (CEL) filter expressions in the integration configuration that decide what gets ingested at all; the raw source payload can be retained on the record for auditing and troubleshooting.
 
-## Practical Examples
+Each finding preserves the source's reported data, so triage does not require a trip back to the provider console. Three facts carry most of the triage weight: a normalized security level that makes severity comparable across sources that label it differently, a production marker that separates live exposure from lab noise, and a remediation service level agreement (SLA) that turns the triage decision into a deadline. Remediation guidance from the source travels with the record as recommended actions, giving the eventual assignee a starting point.
 
-- A cloud team imports findings from a provider security feed and routes high-severity items into remediation tasks.
-- A compliance owner reports closure trends for in-scope findings before a readiness review.
+Findings connect across the [exposure pipeline](./overview.mdx): to the scans that surfaced them, the vulnerabilities they relate to, the assets and entities they affect, and the [remediations](./remediations.mdx) and tasks that close them. Two connections matter specifically for compliance: findings map to controls and <Term t="subcontrol">subcontrols</Term> through control mappings, tying detection to the control it implicates, and findings link to [risks](./risks/overview.mdx) when a pattern warrants register-level attention. The full field list is in the [API reference](/graphql).
+
+## Working with Findings
+
+### Triage This Week's Intake
+
+Filter open findings by `securityLevel` for `CRITICAL` and `HIGH`, then narrow to `production`. Investigate each, and mark the real ones `validated` so downstream effort concentrates on confirmed issues. When a recurring class of finding is consistently noise, do not keep triaging it by hand: tighten the CEL filter expression on the integration so it never becomes a record. The AWS and GCP SCC integration guides show filter examples, such as ingesting only critical and high severity findings.
+
+### Drive Findings to Closure
+
+For each validated finding, create a [remediation](./remediations.mdx) with an owner, a ticket reference, and a due date consistent with the finding's `remediationSLA`. The `recommendedActions` guidance from the source gives the assignee a starting point without a trip back to the provider console. Because integration syncs keep records current, a finding the provider now reports as `INACTIVE` corroborates that the fix landed; flip `open` to false once you have confirmed closure on your side.
+
+### Turn Detection into Audit Evidence
+
+Map findings to the controls they implicate through control mappings. A finding against an in-scope control, followed by a linked remediation and closure, is the monitoring-and-response chain auditors ask for: the control's monitoring caught an issue and the process resolved it. When the same category of finding recurs across resources or accounts, escalate the pattern to a [risk](./risks/overview.mdx) and link the findings to it, so the systemic issue is assessed and treated at the register level rather than fixed one resource at a time.
+
+## FAQ
+
+<details>
+<summary>When does something belong as a finding versus a vulnerability?</summary>
+
+If it is a known weakness with an identity of its own, typically a CVE tied to a package or version, it is a vulnerability. If it is an observed condition on a specific resource, such as a misconfiguration or policy violation, it is a finding. The cloud integrations make this call during normalization and create the appropriate record type; the two link to each other when a finding is an instance of a known vulnerability.
+
+</details>
+
+<details>
+<summary>Our cloud tools produce far more findings than we can handle. What do we do?</summary>
+
+We recommend filtering before ingestion rather than after. The AWS and GCP SCC integrations support CEL filter expressions evaluated against each source record, so you can restrict ingestion to the severities, categories, or sources you will actually act on. What does land gets triaged by `securityLevel` and `production`, and marked `validated` before it consumes remediation capacity.
+
+</details>
+
+<details>
+<summary>Do open findings look bad in an audit?</summary>
+
+Not by themselves. Auditors expect active environments to produce findings continuously; what they test is whether your process works. Open findings with owners, due dates, and linked remediations demonstrate an operating control. A suspiciously empty findings list invites harder questions than a managed backlog does.
+
+</details>
 
 ## Examples
 
-<Tabs>
+<Tabs groupId="api-format" queryString>
   <TabItem value="csv" label="CSV">
-
-| Operation | API |
-| --- | --- |
-| Create | `createBulkCSVFinding` |
-| Update | `updateFinding` |
 
 ```csv
 # Create
@@ -51,11 +84,6 @@ FIND01J9FIND2222222222222,LOW,CLOSED,false,true
 
   </TabItem>
   <TabItem value="graphql" label="GraphQL">
-
-| Operation | Mutation |
-| --- | --- |
-| Create | `createFinding` |
-| Update | `updateFinding` |
 
 ```graphql
 mutation {
@@ -96,11 +124,6 @@ mutation {
   </TabItem>
   <TabItem value="go-client" label="Go Client">
 
-| Operation | Method |
-| --- | --- |
-| Create | `client.CreateFinding(ctx, input)` |
-| Update | `client.UpdateFinding(ctx, id, input)` |
-
 ```go
 ctx := context.Background()
 
@@ -126,11 +149,6 @@ if err != nil {
 
   </TabItem>
   <TabItem value="cli" label="CLI">
-
-| Operation | Command |
-| --- | --- |
-| Create | `openlane finding create` |
-| Update | `openlane finding update` |
 
 ```bash
 openlane finding create \

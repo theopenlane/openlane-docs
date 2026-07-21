@@ -25,7 +25,7 @@ tags:
 
 # Building an Integration
 
-This guide walks through how to build a new integration. A companion page covers what's additionally required for [Directory Sync integrations](./directory-sync.mdx).
+Building a new integration means implementing a provider: its config, credential exchange, health checks, and operations. Directory Sync integrations have [additional requirements](./directory-sync.mdx).
 
 ---
 
@@ -35,12 +35,12 @@ Every integration lives under `internal/integrations/definitions/<provider>/`. A
 
 ```
 internal/integrations/definitions/<provider>/
-├── builder.go          # Definition assembly — the entry point
+├── builder.go          # Definition assembly - the entry point
 ├── config.go           # Operator-level config (secrets, URLs)
 ├── types.go            # Credential types, UserInput, InstallationMetadata, package-level refs
 ├── installation.go     # Resolves InstallationMetadata from credentials after connection
 ├── client.go           # Builds the SDK client used by operations
-├── operation_health.go # Health check — validates credentials work
+├── operation_health.go # Health check - validates credentials work
 ├── operation_<type>.go # Logic for pulling the data from the integration source and creating the envelopes for ingestion, e.g. `operation_directory_sync.go` would be for directory sync operations
 ├── mappings.go         # CEL mapping expressions (for ingest operations)
 └── errors.go           # Sentinel errors
@@ -50,7 +50,7 @@ internal/integrations/definitions/<provider>/
 
 ## Operator Config - `config.go`
 
-`Config` holds secrets and URLs that the operator (Openlane) provides at deploy time — things like OAuth client IDs and secrets. These are never set by end users.
+`Config` holds secrets and URLs that the operator (Openlane) provides at deploy time: things like OAuth client IDs and secrets. These are never set by end users.
 
 ```go
 type Config struct {
@@ -84,11 +84,13 @@ The name of the `Type` passed into the `OperationSchema` is what will show to th
 be called `DirectorySync`
 :::
 
-- **`definitionID`** — stable ULID string; must be unique across all integrations and should contain a reference to the integration, e.g. `def_01K0SLACK000000000000000001` for slack v1 definition
-- **`installation`** — typed ref that wires `resolveInstallationMetadata` into the connection registration
-- **`myCredential`** — `providerkit.CredentialSchema` returns a JSON schema (for registration) and a typed `CredentialRef[T]` (for resolving at runtime)
-- **`myClient`** — typed `ClientRef[T]` used to cast the built client in operation handlers
-- **`<operation>SyncOperation`** — `providerkit.OperationSchema` returns a config schema and a typed operation ref
+| Ref | Purpose |
+|---|---|
+| `definitionID` | Stable ULID string; must be unique across all integrations and should contain a reference to the integration, e.g. `def_01K0SLACK000000000000000001` for slack v1 definition |
+| `installation` | Typed ref that wires `resolveInstallationMetadata` into the connection registration |
+| `myCredential` | `providerkit.CredentialSchema` returns a JSON schema (for registration) and a typed `CredentialRef[T]` (for resolving at runtime) |
+| `myClient` | Typed `ClientRef[T]` used to cast the built client in operation handlers |
+| `<operation>SyncOperation` | `providerkit.OperationSchema` returns a config schema and a typed operation ref |
 
 The credential type (`myCredential`) holds whatever the OAuth callback returns:
 
@@ -102,7 +104,7 @@ type myCred struct {
 
 ### User Config - `UserInput`
 
-`UserInput` holds per-installation config that the end user provides during setup (e.g. filter expressions, flags). If an integration has multiple operations, e.g. `DirectorySync` and `FindingSync`, each operation should have it's own config within `UserInput`. The individual per-sync configs are what are passed to the `OperationSchema`. This will allow for configuration of each operation individually, for example:
+`UserInput` holds per-installation config that the end user provides during setup (e.g. filter expressions, flags). If an integration has multiple operations, e.g. `DirectorySync` and `FindingSync`, each operation should have its own config within `UserInput`. The individual per-sync configs are what are passed to the `OperationSchema`. This will allow for configuration of each operation individually, for example:
 
 ```go
 // UserInput holds installation-specific configuration collected from the user
@@ -173,8 +175,8 @@ DefinitionSpec: types.DefinitionSpec{
 
 **`Active` and `Visible` must both start as `false`** for a new integration. Flip them to `true` once the integration is complete, tested, and ready for production.
 
-- **`Active`** — controls whether the definition is enabled for use at the operator level
-- **`Visible`** — controls whether the integration appears in the catalog UI
+- **`Active`**: controls whether the definition is enabled for use at the operator level
+- **`Visible`**: controls whether the integration appears in the catalog UI
 
 ### `OperatorConfig` and `UserInput`
 
@@ -247,7 +249,7 @@ Connections: []types.ConnectionRegistration{
 
 ### Clients
 
-Client lists the clients the definition can build that are used for the integration. Some integrations, such as the `AWS` integration will have multiple clients for different operations, while others will only have a single client definition.
+`Clients` lists the clients the definition can build for the integration. Some integrations, such as the `AWS` integration, will have multiple clients for different operations, while others will only have a single client definition.
 
 ```go
 Clients: []types.ClientRegistration{
@@ -266,7 +268,7 @@ Clients: []types.ClientRegistration{
 
 #### Health Check - `operation_health.go`
 
-Every integration needs at least a health check operation, this will run immediately after connection to confirm the integration is setup correctly.
+Every integration needs at least a health check operation. It runs immediately after connection to confirm the integration is set up correctly.
 
 ```go
 Operations: []types.OperationRegistration{
@@ -282,8 +284,8 @@ Operations: []types.OperationRegistration{
 },
 ```
 
-- **`Inline: true`** — runs synchronously as part of the connection flow; used for validation
-- **`Reconcile: true`** — runs on a schedule or on-demand; used for data collection
+- **`Inline: true`**: runs synchronously as part of the connection flow; used for validation
+- **`Reconcile: true`**: runs on a schedule or on-demand; used for data collection
 
 The health check calls a lightweight, read-only provider endpoint to confirm the credential is valid. It uses `Handle()`, not `IngestHandle()`:
 
@@ -301,7 +303,7 @@ func (h HealthCheck) Handle() types.OperationHandler {
 
 #### Additional Operations - `operation_<operation_name>.go`
 
-Each additional operation performed by an integration will follow this same pattern as the health check but defines the how the data is pulled and what schemas the data is pulled into Openlane. For example, a `directory_sync` operation will almost always have an ingest schema that includes DirectoryAccounts, DirectoryGroups, and DirectoryMemberships. Go to [directory sync](./directory-sync.mdx) for more specific details on directory sync operations.
+Each additional operation performed by an integration follows the same pattern as the health check, but defines how the data is pulled and which schemas the data is ingested into within Openlane. For example, a `directory_sync` operation will almost always have an ingest schema that includes DirectoryAccounts, DirectoryGroups, and DirectoryMemberships. See [directory sync](./directory-sync.mdx) for more specific details on directory sync operations.
 
 ```go
 {
@@ -358,7 +360,7 @@ Return `(meta, false, nil)` when metadata cannot be resolved yet but it is not a
 
 ## CEL Expressions
 
-CEL (Common Expression Language) is used by ingest operations to filter and map provider payloads onto normalized schema keys. Any integration that uses `IngestHandle` will define CEL expressions.
+Common Expression Language (CEL) is used by ingest operations to filter and map provider payloads onto normalized schema keys. Any integration that uses `IngestHandle` will define CEL expressions.
 
 ### Available Variables
 
@@ -372,7 +374,7 @@ Every CEL expression has access to the following variables, bound from the `Mapp
 | `action` | `dyn` | The event action name (populated for webhook-driven flows) |
 | `variant` | `dyn` | The variant selector (if set on the mapping registration) |
 
-All variables are typed as `dyn` — use field existence checks (`'field' in payload`) before accessing optional fields.
+All variables are typed as `dyn`; use field existence checks (`'field' in payload`) before accessing optional fields.
 
 ### Filter Expressions
 
@@ -398,7 +400,7 @@ true
 
 ### Map Expressions
 
-A map expression is a CEL object literal that projects provider payload fields onto the target schema keys. Use `providerkit.CelMapExpr` to build it from a slice of key/expression pairs — each value is automatically wrapped in `dyn(...)` to handle type coercion.
+A map expression is a CEL object literal that projects provider payload fields onto the target schema keys. Use `providerkit.CelMapExpr` to build it from a slice of key/expression pairs; each value is automatically wrapped in `dyn(...)` to handle type coercion.
 
 ```go
 var mapExprDirectoryAccount = providerkit.CelMapExpr([]providerkit.CelMapEntry{
@@ -416,7 +418,7 @@ var mapExprDirectoryAccount = providerkit.CelMapExpr([]providerkit.CelMapEntry{
 })
 ```
 
-When building membership envelopes, pass the group identifier as `resourceID` in `MarshalEnvelope` — it becomes available as `resource` in the CEL expression, letting you associate the membership back to its group without duplicating the value in the payload:
+When building membership envelopes, pass the group identifier as `resourceID` in `MarshalEnvelope`; it becomes available as `resource` in the CEL expression, letting you associate the membership back to its group without duplicating the value in the payload:
 
 ```go
 {Key: integrationgenerated.IntegrationMappingDirectoryMembershipDirectoryGroupID,

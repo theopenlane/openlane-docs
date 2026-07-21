@@ -1,0 +1,83 @@
+---
+title: "CC6.2"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC6.2
+
+<ControlMeta
+  refCode={"CC6.2"}
+  category={"Security"}
+  subcategory={"Logical and Physical Access Controls"}
+  description={"Prior to issuing system credentials and granting system access, the entity registers and authorizes new internal and external users whose access is administered by the entity. For those users whose access is administered by the entity, user system credentials are removed when user access is no longer authorized."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Creates Access Credentials to Protected Information Assets</summary>
+
+The entity creates credentials for accessing protected information assets based on an authorization from the system's asset owner or authorized custodian. Authorization is required for the creation of all types of credentials of individuals (for example, employees, contractors, vendors, and business partner personnel), systems, and software.
+
+</details>
+
+<details>
+<summary>Reviews Validity of Access Credentials</summary>
+
+The entity reviews access credentials on a periodic basis for validity (for example, employees, contractors, vendors, and business partner personnel) and inappropriate system or service accounts.
+
+</details>
+
+<details>
+<summary>Prevents the Use of Credentials When No Longer Valid</summary>
+
+Processes are in place to disable, destroy, or otherwise prevent the use of access credentials when no longer valid.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Human Resources | Role Review | Documented evidence of a formal review process to ensure personnel roles currently reflect business needs. |
+| Human Resources | Provisioning Checklist (Onboarding) | Documented evidence of personnel management practices to formally onboard personnel into their assigned roles. |
+| Human Resources | Deprovisioning Checklist (Offboarding) | Documented evidence of personnel management practices to formally offboard personnel from their assigned roles due to employment termination or role change. |
+| Human Resources | Responsibilities Review | Documented evidence of a formal review process to ensure assigned responsibilities currently reflect business needs for the assigned role. |
+| Identity & Access Management | Access Permission Review | Documented evidence of periodic access permission reviews. |
+
+## Policies
+
+- **[Access Control Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/access-control/access-control.md)** - Establishes requirements for managing user access to information systems and data
+
+## Example Organization Controls
+
+- **CC6.2.1** - Documented policies and procedures are in place regarding system settings, authentication, access, and security monitoring.
+- **CC6.2.2** - Logical access to systems is approved and granted to an employee as a component of the hiring process.
+- **CC6.2.3** - Logical access to systems is revoked as a component of the termination process.
+
+## Example Control Objectives
+
+- **Access control enforcement** - Access to systems and data is restricted to authorized individuals through proper provisioning and deprovisioning controls.
+
+## Example Control Implementations
+
+- **identity-provider-sso** - Access control is implemented through Google Workspace as the primary identity provider. All employee accounts are managed centrally with single sign-on (SSO) integration to business applications. Implementation includes: - Google Workspace serves as the identity provider for all employees - SSO is configured for GitHub, GCP Console, AWS Console, Slack, Notion, and other tools - Multi-factor authentication (MFA) is enforced organization-wide via Google Workspace security policies - User provisioning and deprovisioning follow documented onboarding/offboarding procedures
+
+## Example Evidence
+
+- **Google Workspace MFA Enforcement** - Screenshot of Google Workspace admin console showing MFA enforcement policy
+- **GCP IAM Policy Export** - Export of GCP identity and access management (IAM) bindings showing role assignments for all users and service accounts
+- **GitHub Organization Members** - Export of GitHub organization members with role and team assignments
+- **Quarterly Access Review Report** - Documentation of most recent quarterly access review with findings and remediation
+- **Terminated Employees Report** - Listing of employees terminated during audit period with access revocation evidence
+
+## Example Action Plans
+
+- **GCP IAM permissions cleanup** - GCP IAM permissions have accumulated over time and require comprehensive audit to remove excessive access and establish least privilege policies via Config Connector.
+
+## Example Remediations
+
+- **iam-policy-remediation** - Review and remediate GCP IAM policies to remove excessive permissions identified during security review.

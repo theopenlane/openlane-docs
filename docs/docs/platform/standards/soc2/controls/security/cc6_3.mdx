@@ -1,0 +1,81 @@
+---
+title: "CC6.3"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC6.3
+
+<ControlMeta
+  refCode={"CC6.3"}
+  category={"Security"}
+  subcategory={"Logical and Physical Access Controls"}
+  description={"The entity authorizes, modifies, or removes access to data, software, functions, and other protected information assets based on roles, responsibilities, or the system design and changes, giving consideration to the concepts of least privilege and segregation of duties, to meet the entity’s objectives."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Creates or Modifies Access to Protected Information Assets</summary>
+
+Processes are in place to create or modify access to protected information assets based on authorization from the asset's owner.
+
+</details>
+
+<details>
+<summary>Removes Access to Protected Information Assets</summary>
+
+Processes are in place to remove access to protected information assets when no longer required.
+
+</details>
+
+<details>
+<summary>Uses Access Control Structures</summary>
+
+The entity uses access control structures, such as role-based access controls, to restrict access to protected information assets, limit privileges, and support segregation of incompatible functions.
+
+</details>
+
+<details>
+<summary>Reviews Access Roles and Rules</summary>
+
+The appropriateness of access roles and access rules is reviewed on a periodic basis for unnecessary and inappropriate individuals (for example, employees, contractors, vendors, business partner personnel) and inappropriate system or service accounts. Access roles and rules are modified, as appropriate.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Human Resources | Role Review | Documented evidence of a formal review process to ensure personnel roles currently reflect business needs. |
+| Identity & Access Management | Defined Roles & Authorizations (RBAC) | Documented evidence of defined access control-specific roles (e.g., Role Based Access Control (RBAC)) that affect both logical and physical access authorizations. |
+
+## Policies
+
+- **[Access Control Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/access-control/access-control.md)** - Establishes requirements for managing user access to information systems and data
+
+## Example Organization Controls
+
+- **CC6.3.1** - Documented policies and procedures are in place regarding system settings, authentication, access, and security monitoring.
+- **CC6.3.2** - Logical access to systems is approved and granted to an employee as a component of the hiring process.
+- **CC6.3.3** - Logical access to systems is revoked as a component of the termination process.
+- **CC6.3.4** - System access is restricted to authorized individuals commensurate with their job responsibilities.
+- **CC6.3.5** - Predefined security groups are utilized to assign role-based access privileges and segregate access.
+
+## Example Control Objectives
+
+- **Access control enforcement** - Access to systems and data is restricted to authorized individuals through proper provisioning and deprovisioning controls.
+
+## Example Evidence
+
+- **Quarterly Access Review Report** - Documentation of most recent quarterly access review with findings and remediation
+
+## Example Action Plans
+
+- **GCP IAM permissions cleanup** - GCP identity and access management (IAM) permissions have accumulated over time and require comprehensive audit to remove excessive access and establish least privilege policies via Config Connector.
+
+## Example Remediations
+
+- **iam-policy-remediation** - Review and remediate GCP IAM policies to remove excessive permissions identified during security review.

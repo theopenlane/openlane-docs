@@ -1,0 +1,55 @@
+.steps > ol {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+  margin-left: 0.25rem;
+}
+
+.steps > ol > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 1.25rem;
+  margin: 0;
+}
+
+/* numbered circle */
+.steps > ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -0.15rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+  border: 1px solid var(--ifm-color-primary-light);
+}
+
+/* connecting guide line between circles */
+.steps > ol > li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: calc(1rem - 1px);
+  top: 2.1rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: var(--ifm-color-emphasis-200);
+}
+
+.steps > ol > li > :last-child {
+  margin-bottom: 0;
+}
+
+html[data-theme='dark'] .steps > ol > li::before {
+  background: var(--ifm-color-primary-darkest);
+  color: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-primary-darker);
+}

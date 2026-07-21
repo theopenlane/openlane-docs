@@ -1,0 +1,128 @@
+---
+title: Vulnerability Scanning Guidance
+sidebar_label: Scanning Guidance
+sidebar_position: 2
+description: Running a vulnerability scanning program that stands up to an audit
+compliance:
+  - "SOC 2 CC7"
+  - "ISO 27001:2022 A.8.8"
+  - "NIST 800-53 RA-5"
+  - "PCI DSS 11"
+keywords:
+  - vulnerability scanning
+  - vulnerability scanner
+  - internal scan
+  - external scan
+  - authenticated scan
+  - container scanning
+  - scan frequency
+  - nuclei
+  - openvas
+tags:
+  - vulnerabilities
+  - scanning
+  - exposure
+---
+
+import Term from '@site/src/components/Term';
+
+# Vulnerability Scanning Guidance
+
+A vulnerability scanner probes your systems, collects what they reveal about themselves, and compares the results against databases of known weaknesses: unpatched software, known exploits, and misconfigurations. The [scans](../scans.mdx) and [vulnerabilities](./overview.mdx) records in Openlane carry the results, turning each run into <Term t="evidence">evidence</Term> an auditor can sample.
+
+## Scan Types
+
+Two axes matter more than any product feature list: where the scan runs from, and what access you give it.
+
+**By vantage point:**
+
+| Type | Runs from | What it shows |
+| ---- | --------- | ------------- |
+| Internal | Inside your network or virtual private cloud (VPC) | What an insider (or an attacker who got in) can reach; strongest at verifying patch levels |
+| External | Outside your perimeter, through your public firewall | What an external attacker sees; validates your exposed surface |
+
+**By access level:**
+
+| Type | Credentials | Trade-off |
+| ---- | ----------- | --------- |
+| Authenticated (credentialed) | Scanner logs in to targets | Sees far more (installed packages, configuration, local privilege issues); the scan credential itself needs protecting |
+| Unauthenticated | None | Realistic picture of an outsider's view; blind to anything not network-exposed |
+
+The two axes combine: an authenticated internal scan and an unauthenticated external scan answer different questions, and a program that only runs one is blind on the other axis. We recommend rotating combinations rather than picking a single mode, for example alternating authenticated internal scans with unauthenticated external scans, so every period exercises a different view.
+
+Two specialized types round out coverage for most modern environments. Container scanning inspects images and their base OS, runtimes, and libraries before and after deployment; if your workloads are containerized, it should lead your host scanning rather than trail it. Code security scanning (static and dependency analysis, integrated into the development lifecycle) catches vulnerable libraries, logic errors, and broken authentication before they ship; the [GitHub App integration](../../integrations/github_app.mdx) pulls repository security findings into Openlane.
+
+## Scanner Architectures
+
+Network-based scanners run everything from one place, which is simple to operate but can be slow against large estates and can overwhelm fragile targets. Agent-based scanners put a small agent on each host and aggregate centrally, which distributes the load and keeps visibility on hosts that roam off-network, at the cost of a per-device footprint. Most cloud-native services take a third path, querying provider APIs agentlessly. Mixed estates commonly end up with a combination, and that is fine; the scan records just need to say which surface each covers.
+
+## How Often to Scan
+
+System and Organization Controls 2 (SOC 2), ISO 27001, Health Insurance Portability and Accountability Act (HIPAA), and General Data Protection Regulation (GDPR) require a vulnerability management process but set no fixed scanning frequency; the National Institute of Standards and Technology (NIST) 800-53 makes scanning a control (RA-5) with organization-defined cadence; Payment Card Industry Data Security Standard (PCI DSS) is the exception that prescribes, requiring quarterly external scans by an Approved Scanning Vendor plus rescans after significant changes.
+
+Absent a mandate, we recommend quarterly as the floor, monthly where infrastructure or application change is frequent, and a scan after any significant change regardless of schedule. Auditors test adherence rather than ambition: a documented quarterly schedule you actually follow beats a monthly one you miss. Set the cadence on your [scan records](../scans.mdx) (`scanSchedule`) to the frequency you genuinely run.
+
+## Choosing a Scanner
+
+The right scanner depends on what you're scanning: hosts, cloud accounts, containers, web applications, or code. Common, well-regarded options by category:
+
+**Commercial platforms**
+
+| Scanner | Focus |
+| ------- | ----- |
+| [Tenable Nessus / Vulnerability Management](https://www.tenable.com/products) | The long-standing reference point for host and network scanning; Nessus for self-managed scanning, Tenable Vulnerability Management as the cloud platform, Security Center on-premises |
+| [Qualys VMDR](https://www.qualys.com/apps/vulnerability-management-detection-response/) | The original SaaS scanner; strong at large, complex internal networks and cloud environments |
+| [Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/) | Comparable coverage to Tenable and Qualys; InsightVM is the current platform (Nexpose remains its on-premises scanner) |
+| [Intruder](https://www.intruder.io/) | SaaS scanner focused on prioritizing the highest-risk findings; internal, external, and web application scans with cloud integrations |
+| [Snyk](https://snyk.io/) | Developer-centered code, dependency, container, and infrastructure-as-code scanning, integrated into IDEs and CI |
+
+**Cloud-native services**
+
+| Scanner | Focus |
+| ------- | ----- |
+| [Amazon Inspector](https://aws.amazon.com/inspector/) | Native scanning for EC2, ECR images, and Lambda; the low-friction choice for AWS-native estates. Findings route through Security Hub, which the [AWS integration](../../integrations/aws.mdx) ingests into Openlane |
+| [Microsoft Defender for Cloud](https://azure.microsoft.com/en-us/products/defender-for-cloud) | Azure's posture and workload protection service, broader in scope than Inspector; see the [Azure Security Center integration](../../integrations/azure_security_center.mdx) |
+| [Google Security Command Center](https://cloud.google.com/security-command-center) | GCP's posture, vulnerability, and threat findings service; the [GCP SCC integration](../../integrations/gcp_scc.mdx) ingests its findings, vulnerabilities, and risks directly |
+
+**Open source**
+
+| Scanner | Focus |
+| ------- | ----- |
+| [Nuclei](https://github.com/projectdiscovery/nuclei) ([ProjectDiscovery](https://projectdiscovery.io/)) | Fast, template-driven scanning with a large community template library covering CVEs, misconfigurations, and exposed panels. Pairs with ProjectDiscovery's wider toolkit ([subfinder](https://github.com/projectdiscovery/subfinder), [httpx](https://github.com/projectdiscovery/httpx), [naabu](https://github.com/projectdiscovery/naabu), [katana](https://github.com/projectdiscovery/katana)) for discovering the surface before scanning it |
+| [Greenbone Community Edition (OpenVAS)](https://www.greenbone.net/en/community-edition/) | Full-featured open-source network vulnerability scanner descended from Nessus; capable, with more setup effort than the commercial platforms |
+| [ZAP by Checkmarx](https://www.zaproxy.org/) | The standard open-source web application scanner (formerly OWASP ZAP; the project moved to Checkmarx stewardship and remains free and open source) |
+| [Trivy](https://trivy.dev/) ([Aqua Security](https://www.aquasec.com/)) | The de facto open-source scanner for container images, filesystems, and infrastructure-as-code; a natural fit in CI pipelines |
+
+Adjacent tools like Nmap (network mapping) and Burp Suite (interactive application testing) complement scanners but don't replace a scheduled scanning program; confirm with your auditor before treating their output as scan evidence.
+
+## What Auditors Expect
+
+Two artifacts, per cycle:
+
+1. **The scan report itself**, dated and attributable to a target and scan type.
+2. **Evidence of what happened next**: remediation records for what you fixed, or a documented acceptance for what you chose not to fix.
+
+A clean report is not the goal and auditors don't expect one; they expect a working pipeline from detection to disposition. That pipeline is what the exposure section models: record each run as a [scan](../scans.mdx), let <Term t="finding">findings</Term> and [vulnerabilities](./overview.mdx) link back to the scan that surfaced them, resolve them through [remediations](../remediations.mdx), and document accepted items on the [risk register](../risks/risk-register.mdx) with an owner and review date. When the auditor samples a quarter, the answer is a filtered view rather than a folder hunt.
+
+## FAQ
+
+<details>
+<summary>Which scan type should we start with?</summary>
+
+If you run containerized cloud workloads, start with container image scanning plus your cloud provider's native service, because they cover the highest-change surface with the least setup. Add an unauthenticated external scan next; it validates what the internet actually sees.
+
+</details>
+
+<details>
+<summary>Do we need a commercial scanner to pass an audit?</summary>
+
+No. Auditors evaluate the process (scheduled scans, reviewed results, remediation or documented acceptance), not the vendor. An open-source pipeline built on Nuclei, Greenbone, or Trivy satisfies the same controls if the reports and dispositions are recorded.
+
+</details>
+
+<details>
+<summary>Is a penetration test a substitute for scanning?</summary>
+
+No, and the reverse is also true. Scans are automated, frequent, and broad; a penetration test is manual, periodic, and deep. Most frameworks and customer questionnaires expect both: recurring scans plus an annual third-party penetration test.
+
+</details>

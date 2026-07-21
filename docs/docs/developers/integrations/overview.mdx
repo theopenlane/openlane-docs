@@ -6,11 +6,11 @@ sidebar_position: 1
 
 # Integrations
 
-This section covers how Openlane connects to external providers and how integration data is normalized for platform use.
+How Openlane connects to external providers, and how integration data is normalized for platform use.
 
-## Includes
-1. [Integration Providers](/docs/category/integration-providers)
-1. [GitHub Actions CLI](./github-actions-cli.mdx)
-1. [SSO and OIDC Providers](./sso-oidc-providers.mdx)
-1. [Email Delivery](./email-delivery.mdx)
-1. [Billing and Entitlements](./billing-catalog-entitlements.mdx)
+- [Building Integrations](./development/architecture.mdx): the integration builder architecture, with guides for [building a provider](./development/basics.mdx) and [directory sync](./development/directory-sync.mdx)
+- [GitHub Actions](./github-actions-cli.mdx): install and use the Openlane CLI in CI/CD workflows
+- [Email Delivery](./email-delivery.mdx): template rendering and asynchronous delivery through the Riverboat job queue
+- [Billing and Entitlements](./billing-catalog-entitlements.mdx): Stripe integration, the module catalog, and feature entitlements
+
+Single sign-on (SSO) configuration lives with the rest of the auth material in [Security](../security/sso-configuration.mdx).

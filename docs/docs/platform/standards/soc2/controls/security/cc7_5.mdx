@@ -1,0 +1,94 @@
+---
+title: "CC7.5"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC7.5
+
+<ControlMeta
+  refCode={"CC7.5"}
+  category={"Security"}
+  subcategory={"System Operations"}
+  description={"The entity identifies, develops, and implements activities to recover from identified security incidents."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Restores the Affected Environment</summary>
+
+The activities restore the affected environment to functional operation by rebuilding systems, updating software, installing patches, modifying access controls and changing configurations, as needed.
+
+</details>
+
+<details>
+<summary>Communicates Information About the Incident</summary>
+
+Communications about the nature of the incident, recovery actions taken, and activities required for the prevention of future security incidents are made to management and others as appropriate (internal and external).
+
+</details>
+
+<details>
+<summary>Determines Root Cause of the Incident</summary>
+
+The root cause of the incident is determined.
+
+</details>
+
+<details>
+<summary>Implements Changes to Prevent and Detect Recurrences</summary>
+
+Additional architecture or changes to preventive and detective controls are implemented to prevent and detect incident recurrences in a timely manner.
+
+</details>
+
+<details>
+<summary>Improves Response and Recovery Procedures</summary>
+
+Lessons learned are analyzed, and the incident response plan and recovery procedures are improved.
+
+</details>
+
+<details>
+<summary>Implements Incident Recovery Plan Testing</summary>
+
+Incident recovery plan testing is performed on a periodic basis. The testing includes- (1) development of testing scenarios based on threat likelihood and magnitude; (2) consideration of relevant system components from across the entity that can impair availability; (3) scenarios that consider the potential for the lack of availability of key personnel; and (4) revision of resilience posture and continuity plans based on test results.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Business Continuity | Continuity of Operations Plan (COOP) | Documented evidence of a Continuity of Operations Plan (COOP). This is program-level documentation in the form of a runbook, playbook or a similar format provides guidance on organizational practices that support existing policies and standards. This involves internal and external stakeholders for incident response, disaster recovery and business continuity support requirements. |
+| Business Continuity | COOP Criticality Analysis | Documented evidence of a Continuity of Operations Plan (COOP)-related criticality analysis. |
+| Business Continuity | COOP Testing | Documented evidence of a Continuity of Operations Plan (COOP)-related testing activity. |
+| Business Continuity | COOP Training | Documented evidence of a Continuity of Operations Plan (COOP)-related training activity. |
+| Business Continuity | COOP Root Cause Analysis (RCA) | Documented evidence of a Root Cause Analysis (RCA) from any Continuity of Operations Plan (COOP)-related training, testing or incident. |
+| Business Continuity | COOP Updates | Documented evidence of a periodic review process for the organization's Continuity of Operations Plan (COOP) to identify necessary updates. |
+| Business Continuity | Backups | Documented evidence of a Continuity of Operations Plan (COOP)-related data backup scheme that demonstrates the methods of data backup (including protection measures) for all data types to ensure business continuity requirements. |
+| Business Continuity | Backups - Local | Documented evidence of event logs for the on-site / local data backup solution. |
+| Business Continuity | Backups - Remote | Documented evidence of event logs for the off-site / remote data backup solution. |
+| Business Continuity | Backups - Recovery | Documented evidence of a Continuity of Operations Plan (COOP)-related criticality analysis for applications, systems, services, facilities, stakeholders and third-parties. |
+| Business Continuity | Restoration Events | Documented evidence of system, application and/or data recovery events. This can include random testing of data backups to ensure recovery methods are viable. |
+| Cybersecurity & Data Protection Management | Cybersecurity & Data Protection Controls | Documented evidence of an appropriately-scoped cybersecurity & data protection controls. Controls are technical, administrative or physical safeguards. Controls are the nexus used to manage risks through preventing, detecting or lessening the ability of a particular threat from negatively impacting business processes. Controls directly map to standards, since control testing is designed to measure specific aspects of how standards are actually implemented. |
+| Cybersecurity & Data Protection Management | Cybersecurity & Data Protection Procedures | Documented evidence of an appropriate appropriately-scoped cybersecurity & data protection procedures. Procedures are a documented set of steps necessary to perform a specific task or process in conformance with an applicable standard. Procedures help address the question of how the organization actually operationalizes a policy, standard or control. The result of a procedure is intended to satisfy a specific control. Procedures are also commonly referred to as “control activities.” |
+
+## Policies
+
+- **[Incident Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/incident-response/incident-response.md)** - Establishes the framework for detecting, responding to, and recovering from security incidents
+
+## Example Organization Controls
+
+- **CC7.5.1** - Incident recovery procedures are documented and tested to ensure timely restoration of services.
+
+## Example Control Objectives
+
+- **Incident response readiness** - Security incidents are identified, responded to, and resolved in a timely manner with lessons learned.
+
+## Example Evidence
+
+- **Incident Recovery Test Results** - Documented incident recovery procedures with test results demonstrating timely restoration of services

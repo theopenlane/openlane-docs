@@ -1,0 +1,163 @@
+---
+title: Writing CEL Expressions
+description: Filter which records integrations ingest using Common Expression Language
+sidebar_position: 18
+sidebar_label: CEL Expressions
+keywords:
+  - cel
+  - common expression language
+  - filter expression
+  - integration filter
+tags:
+  - integrations
+  - cel
+  - configuration
+---
+
+import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
+
+# Writing CEL Expressions
+
+Several integrations let you provide a **Filter Expression** in their sync configuration: a small rule, written in [Common Expression Language (CEL)](https://github.com/google/cel-spec), that is evaluated against every record the integration collects. Only records where the expression is true are ingested into Openlane; everything else is skipped.
+
+This lets you keep your compliance data focused: sync only your production devices, only members of your workforce domain, only the record types you actually govern, all without changing anything on the provider side.
+
+## How Filtering Works
+
+When an integration syncs, each record it collects (a user, a device, a group, a <Term t="finding">finding</Term>) is checked against your filter expression:
+
+- Expression evaluates to **true** → the record is ingested
+- Expression evaluates to **false** → the record is skipped
+- **No filter set** → every record is ingested
+
+The record is available to your expression as `payload`, and you read its fields with dot notation: `payload.name`, `payload.email`, `payload.tags`. The fields available depend on the provider. A Tailscale device record has fields like `os` and `tags`, while an Okta user record has `status` and `profile`. Refer to the provider's API documentation for the shape of its records.
+
+## The Basics
+
+A filter expression is a condition, like the ones you would write in a spreadsheet or a search query:
+
+```
+payload.role == 'member'
+```
+
+You can compare values (`==`, `!=`, `<`, `<=`, `>`, `>=`) and combine conditions with **and** (`&&`), **or** (`||`), and **not** (`!`):
+
+```
+payload.role == 'member' && payload.suspended == false
+```
+
+```
+payload.os == 'linux' || payload.os == 'macos'
+```
+
+Strings are quoted with single quotes, and true/false values are written bare (`true`, `false`).
+
+## Common Filters
+
+The recipes below cover the situations that come up most often. Adapt the field names to the provider you're configuring.
+
+### Keep only one kind of record
+
+Sync workforce members but skip guest or external accounts:
+
+```
+payload.role == 'member'
+```
+
+### Exclude test or non-production records by name
+
+Skip anything whose name marks it as a test resource:
+
+```
+!payload.name.startsWith('test-')
+```
+
+### Keep only your organization's users
+
+Filter a directory down to your own email domain:
+
+```
+payload.email.endsWith('@yourcompany.com')
+```
+
+### Filter by tags
+
+Keep only records carrying a specific tag:
+
+```
+payload.tags.exists(t, t == 'tag:prod')
+```
+
+Or exclude records with a tag you don't want:
+
+```
+!payload.tags.exists(t, t == 'sandbox')
+```
+
+### Limit to specific regions or environments
+
+```
+payload.region in ['us-east-1', 'eu-west-1']
+```
+
+### Combine conditions
+
+Only active members on your company domain:
+
+```
+payload.status == 'ACTIVE' && payload.email.endsWith('@yourcompany.com')
+```
+
+## Handling Missing Fields
+
+Not every record contains every field, and reading a field that isn't present causes the expression to fail rather than return false. When a field is optional, check that it exists before reading it with the `in` operator:
+
+```
+'severity' in payload && payload.severity == 'HIGH'
+```
+
+## Working with Lists
+
+When a field holds a list (like tags or group memberships), these functions let you express conditions over it:
+
+| Function | Example | Matches when |
+|---|---|---|
+| `exists` | `payload.tags.exists(t, t == 'prod')` | Any element matches |
+| `all` | `payload.groups.all(g, g != 'admins')` | Every element matches |
+| `size` | `size(payload.tags) > 0` | Based on the number of elements |
+| `in` | `payload.region in ['us-east-1', 'eu-west-1']` | The value is in the list |
+
+## Working with Text
+
+| Function | Example |
+|---|---|
+| `startsWith` | `payload.name.startsWith('prod-')` |
+| `endsWith` | `payload.email.endsWith('@yourcompany.com')` |
+| `contains` | `payload.description.contains('production')` |
+| `matches` | `payload.hostname.matches('^web-[0-9]+$')` (regular expression) |
+
+## Rules to Remember
+
+- The expression must evaluate to **true or false**; a filter that returns anything else is treated as an error.
+- **An empty filter allows everything.** Only add one when you want to narrow what's ingested.
+- **Guard optional fields** with `'field' in payload` so a missing field doesn't fail the expression.
+- Expressions are sandboxed: they can read the record, but cannot call external services or modify anything.
+
+## Testing Your Filter
+
+We recommend building up a filter in stages, so you can see the fields the provider actually sends before you narrow anything:
+
+<Steps>
+
+1. Connect the integration **without** a filter expression and let it sync.
+2. Review the ingested records to see the field names and values the provider actually sends.
+3. Add a filter expression based on what you saw and save the configuration.
+4. After the next sync, confirm the record set narrowed the way you expected.
+
+</Steps>
+
+## References
+
+- [CEL language definition](https://github.com/google/cel-spec/blob/master/doc/langdef.md): full syntax and built-in functions
+- [Integrations Overview](./overview): all available integrations

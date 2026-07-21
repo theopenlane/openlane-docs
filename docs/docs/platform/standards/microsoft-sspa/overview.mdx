@@ -1,0 +1,60 @@
+---
+title: Microsoft SSPA
+sidebar_label: Overview
+description: Microsoft Supplier Security and Privacy Assurance Program - Compliance with Microsoft's Data Protection Requirements for Suppliers
+sidebar_position: 1
+keywords:
+  - Microsoft SSPA
+  - Supplier Security and Privacy Assurance
+  - Data Protection Requirements
+  - DPR compliance
+  - Microsoft supplier compliance
+  - supplier data processing profile
+  - SSPA independent assessment
+tags:
+  - SSPA
+  - Microsoft
+  - supplier compliance
+  - data protection
+---
+
+import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
+
+# Microsoft Supplier Security and Privacy Assurance (SSPA)
+
+Supplier Security and Privacy Assurance (SSPA) is the compliance program Microsoft runs for its own supply chain. Suppliers that handle Microsoft Personal Data or Microsoft Confidential Data enroll in the program and demonstrate compliance with the Microsoft Supplier Data Protection Requirements (DPR) every year; a compliant (Green) SSPA status in Microsoft's procurement systems is what allows purchase orders and engagements to proceed.
+
+<StandardMeta
+  fullName={"Supplier Security and Privacy Assurance Program"}
+  type={"Supplier compliance program (contractual requirement)"}
+  source={"Microsoft Supplier Data Protection Requirements (DPR), version 11"}
+  managedBy={"Microsoft: Procurement, Corporate External and Legal Affairs, Corporate Security, and the Office of Responsible AI"}
+  appliesTo={"Suppliers that process Microsoft Personal Data or Microsoft Confidential Data"}
+  certification={"No: annual self-attestation to the DPR, plus independent assessment for higher-risk profiles"}
+/>
+
+## Who Needs It
+
+Any supplier whose work for Microsoft involves processing Personal Data or Microsoft Confidential Data is in scope, regardless of size or industry. That includes suppliers building or testing Microsoft products, staffing firms, SaaS vendors, website hosts, <Term t="subprocessor">subprocessors</Term> that touch Microsoft customer data, and suppliers delivering AI systems. Enrollment happens through the Microsoft Supplier Compliance Portal as part of onboarding, and Microsoft business groups can only open engagements that match the data processing categories a supplier has been approved for.
+
+The DPR itself is a set of security, privacy, and responsible AI requirements that suppliers must have in place before contracted work begins. The current version is 11, published in 2025, and it is the single baseline Microsoft applies to suppliers globally.
+
+## How the Program Works
+
+**Data Processing Profile.** Each supplier declares a profile in the Supplier Compliance Portal: whether it processes Personal Data or only Confidential Data, whether processing happens on Microsoft's network or at the supplier's own facilities, its processing role (controller, processor, or Microsoft-designated subprocessor), and whether the engagement involves payment cards, SaaS delivery, subcontractors, website hosting, healthcare data, or AI systems. The profile determines which DPR requirements are issued; lower-risk profiles receive a subset, higher-risk profiles receive the full set.
+
+**Annual attestation cycle.** All enrolled suppliers self-attest to the DPR annually. Once requirements are issued, the supplier has 90 days to respond to each one (requirements that genuinely do not apply can be marked as such with justification for Microsoft's reviewers). Microsoft's SSPA team reviews submissions, typically within about 10 business days, and the outcome is a Green (compliant) or Red (non-compliant) status. A Red status blocks new in-scope purchase orders until resolved.
+
+**Independent assessment.** Suppliers whose profiles carry higher risk must supplement self-attestation with independent assurance. Triggers include processing Highly Confidential Data at supplier facilities, being designated a subprocessor (assessed annually), using subcontractors, hosting websites on Microsoft's behalf, handling protected health information, and providing AI systems. The standard path is an assessment against the DPR by a qualified independent assessor, paid for by the supplier, resulting in an unqualified letter of attestation; a 90-day extension is available for completing it. Microsoft also accepts certifications in place of a DPR assessment for many profiles: ISO 27001 for security, ISO 27001 plus ISO 27701 for privacy coverage, ISO 42001 for the responsible AI section (required when the service involves sensitive-use AI), and a HITRUST report for US healthcare covered entities. SaaS suppliers may be contractually required to hold ISO 27001 covering the services they deliver, and payment card processing requires Payment Card Industry Data Security Standard (PCI DSS) validation.
+
+Separately from the annual cycle, suppliers must report privacy or security incidents involving Microsoft data to Microsoft promptly, as defined in the DPR.
+
+For the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).
+
+## Additional Resources
+
+- [Microsoft SSPA Program](https://www.microsoft.com/en-us/procurement/sspa)
+- [Microsoft Supplier Data Protection Requirements v11 (PDF)](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/accex/documents/presentations/FY25-Microsoft-Supplier-Data-Protection-Requirements-v11_en-US.pdf)
+- [SSPA Program Guide (PDF)](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/accex/documents/presentations/%28Pre-read%29%20FY25%20SSPA%20Program%20Guide%20v10%20en-US.pdf)
+- [Microsoft Service Assurance: Supplier Management](https://learn.microsoft.com/en-us/compliance/assurance/assurance-supplier-management)

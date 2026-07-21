@@ -1,0 +1,178 @@
+---
+title: "CC6.1"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC6.1
+
+<ControlMeta
+  refCode={"CC6.1"}
+  category={"Security"}
+  subcategory={"Logical and Physical Access Controls"}
+  description={"The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events to meet the entity’s objectives."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Identifies and Manages the Inventory of Information Assets</summary>
+
+The entity identifies, inventories, classifies, and manages information assets (for example, infrastructure, software, and data).
+
+</details>
+
+<details>
+<summary>Assesses New Architectures</summary>
+
+The entity identifies new system architectures and assesses their security prior to implementation into the system environment.
+
+</details>
+
+<details>
+<summary>Restricts Logical Access</summary>
+
+The entity restricts logical access to information assets, including infrastructure (for example, server, storage, network elements, APIs, and endpoint devices), software, and data (at rest, during processing, or in transmission) through the use of access control software, rule sets, and standard configuration hardening processes.
+
+</details>
+
+<details>
+<summary>Identifies and Authenticates Users</summary>
+
+The entity identifies and authenticates persons, infrastructure, and software prior to accessing information assets, whether locally or remotely. The entity uses more complex or advanced user authentication techniques such as multifactor authentication when such protections are deemed appropriate based on its risk mitigation strategy.
+
+</details>
+
+<details>
+<summary>Considers Network Segmentation</summary>
+
+The entity uses network segmentation, zero trust architectures, and other techniques to isolate unrelated portions of the entity's information technology from each other based on the entity's risk mitigation strategy.
+
+</details>
+
+<details>
+<summary>Manages Points of Access</summary>
+
+Points of access by outside entities and the types of data that flow through the points of access are identified, inventoried, and managed. The types of individuals and systems using each point of access are identified, documented, and managed.
+
+</details>
+
+<details>
+<summary>Restricts Access to Information Assets</summary>
+
+Combinations of data classification, separate data structures, port restrictions, access protocol restrictions, user identification, and digital certificates are used to establish access control rules and configuration standards for information assets.
+
+</details>
+
+<details>
+<summary>Manages Identification and Authentication</summary>
+
+Identification and authentication requirements are established, documented, and managed for individuals and systems accessing entity information, infrastructure and software.
+
+</details>
+
+<details>
+<summary>Manages Credentials for Infrastructure and Software</summary>
+
+New internal and external infrastructure and software are registered, authorized, and documented prior to being granted access credentials and implemented on the network or access point. Credentials are removed and access is disabled when access is no longer required or the infrastructure and software are no longer in use.
+
+</details>
+
+<details>
+<summary>Uses Encryption to Protect Data</summary>
+
+The entity uses encryption to protect data (at rest, during processing, or in transmission), when such protections are deemed appropriate based on the entity's risk mitigation strategy.
+
+</details>
+
+<details>
+<summary>Protects Cryptographic Keys</summary>
+
+The entity protects cryptographic keys during generation, storage, use, and destruction. Cryptographic modules, algorithms, key lengths, and architectures are appropriate based on the entity's risk mitigation strategy.
+
+</details>
+
+<details>
+<summary>Restricts Access to and Use of Confidential Information for Identified Purposes</summary>
+
+Logical access to and use of confidential information is restricted to identified purposes.
+
+</details>
+
+<details>
+<summary>(Privacy Criteria Only) Restricts Access to and the Use of Personal Information</summary>
+
+Logical access to and use of personal information is restricted to authorized personnel who require such access to fulfill the identified purposes to support the achievement of the entity's objectives related to privacy.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Cryptographic Protections | Cryptographic Protections | Documented evidence of organization-approved cryptographic solutions and modules for both data at rest and in transit. |
+| Cryptographic Protections | Cryptographic Key Management | Documented evidence of cryptographic key management practices. |
+| Asset Management | IT Asset Management (ITAM) | Documented evidence of an IT Asset Management (ITAM) program that addresses the due diligence and due care activities associated with maintaining both secure and compliant systems, applications and services. |
+| Identity & Access Management | Identity & Access Management (IAM) Function | Documented evidence of an Identity & Access Management (IAM), or similar function, that facilitates the implementation of identification and access management controls. |
+| Identity & Access Management | Account Management Documentation | Documented evidence of list of account management practices. |
+| Identity & Access Management | Authenticate, Authorize and Audit (AAA) Solution | Documented evidence of an Authenticate, Authorize and Audit (AAA) solution (on-premises and hosted by External Service Providers (ESP)). |
+| Asset Management | Authenticator Types | Documented evidence of system authenticator types. |
+| Human Resources | Role Review | Documented evidence of a formal review process to ensure personnel roles currently reflect business needs. |
+| Identity & Access Management | Defined Roles & Authorizations (RBAC) | Documented evidence of defined access control-specific roles (e.g., Role Based Access Control (RBAC)) that affect both logical and physical access authorizations. |
+| Identity & Access Management | Account Management Compliance Reviews | Documented evidence of account management compliance reviews. |
+| Identity & Access Management | Conditions for Group / Role Membership | Documented evidence of conditions for group and role membership. |
+| Identity & Access Management | Privileged User Inventory | Documented evidence of an inventory of privileged users across systems, applications and services (internal and external). |
+| Network Security | Network Security Controls (NSC) | Documented evidence of the organization's network security controls (e.g., boundary protections, content filtering, wireless infrastructure, etc.). |
+| Network Security | Internal Boundaries | Documented evidence of key internal boundaries. |
+| Asset Management | Secure Baseline Configurations Reviews | Documented evidence of a review process to ensure Secure Baseline Configurations (SBC) are current and applicable (e.g., system configuration settings and associated documentation). |
+| Asset Management | Secure Baseline Configurations - Network Devices | Documented evidence of secure baseline configurations for all deployed types of network devices. |
+| Network Security | Authorized Network Connections | Documented evidence of systems, applications and/or services authorized to connect to organizational systems, including remote access authorizations. |
+| Network Security | External System Accessibility | Documented evidence of a list of systems, applications and/or services accessible from external systems. |
+
+## Policies
+
+- **[Access Control Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/access-control/access-control.md)** - Establishes requirements for managing user access to information systems and data
+- **[Asset Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/asset-management/asset-management.md)** - Defines requirements for identifying, tracking, and managing organizational assets
+- **[Backup Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/backup/backup.md)** - Establishes requirements for data backup and recovery processes
+- **[Cryptographic Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/cryptography/cryptography.md)** - Defines requirements for the use of cryptographic controls
+- **[Data Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/data-management/data-management.md)** - Establishes requirements for data classification, handling, and protection
+- **[Mobile Device Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/mobile-device/mobile-device.md)** - Establishes requirements for the secure use of mobile devices
+
+## Example Organization Controls
+
+- **CC6.1.1** - An inventory of system assets and components is maintained to manage the information assets.
+- **CC6.1.2** - Documented policies and procedures are in place regarding system settings, authentication, access, and security monitoring.
+- **CC6.1.3** - System access is restricted to authorized individuals commensurate with their job responsibilities.
+- **CC6.1.4** - Predefined security groups are utilized to assign role-based access privileges and segregate access.
+- **CC6.1.5** - Network segmentation and IP restrictions are in-place to ensure logical access is also enforced by origin address.
+- **CC6.1.6** - Endpoints are secured using TLS encryption.
+
+## Example Control Objectives
+
+- **Access control enforcement** - Access to systems and data is restricted to authorized individuals through proper provisioning and deprovisioning controls.
+
+## Example Control Implementations
+
+- **identity-provider-sso** - Access control is implemented through Google Workspace as the primary identity provider. All employee accounts are managed centrally with single sign-on (SSO) integration to business applications. Implementation includes: - Google Workspace serves as the identity provider for all employees - SSO is configured for GitHub, GCP Console, AWS Console, Slack, Notion, and other tools - Multi-factor authentication (MFA) is enforced organization-wide via Google Workspace security policies - User provisioning and deprovisioning follow documented onboarding/offboarding procedures
+- **secret-management** - Secrets are managed through dedicated secret management tools. Implementation includes: - Production secrets stored in GCP Secret Manager - Development credentials stored in 1Password - GitHub secret scanning enabled on all repositories - API keys rotated quarterly per Password Policy - Service accounts audited quarterly during access reviews
+- **encryption-at-rest-transit** - All data is encrypted at rest and in transit. Implementation includes: - TLS 1.2+ required for all external connections - Cloudflare provides TLS termination and certificate management - Cloud SQL encryption at rest with Google-managed keys - S3 server-side encryption for evidence storage - Employee devices require full disk encryption (FileVault/BitLocker)
+
+## Example Evidence
+
+- **Google Workspace MFA Enforcement** - Screenshot of Google Workspace admin console showing MFA enforcement policy
+- **Tailscale ACL Configuration** - Export of Tailscale access control list (ACL) policy showing access controls by team and role
+- **GCP IAM Policy Export** - Export of GCP IAM bindings showing role assignments for all users and service accounts
+
+## Example Action Plans
+
+- **GCP IAM permissions cleanup** - GCP IAM permissions have accumulated over time and require comprehensive audit to remove excessive access and establish least privilege policies via Config Connector.
+
+## Example Findings
+
+- **IAM policy drift detected** · severity: HIGH - Privileged IAM role grants broader access than intended.
+
+## Example Remediations
+
+- **iam-policy-remediation** - Review and remediate GCP IAM policies to remove excessive permissions identified during security review.

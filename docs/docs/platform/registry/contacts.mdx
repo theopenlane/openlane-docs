@@ -1,0 +1,156 @@
+---
+title: Contacts
+description: Keep a directory of the people behind your vendors and campaigns
+sidebar_position: 6
+compliance:
+  - "SOC 2 CC9"
+  - "ISO 27001:2022 A.5.19-A.5.23"
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
+
+# Contacts
+
+Contacts are Openlane's directory of external people: the security lead at a vendor, the point of contact at a <Term t="subprocessor">subprocessor</Term>, the recipient of a questionnaire campaign. They are distinct from [personnel](./personnel/overview.mdx), which is your own workforce roster, and from Openlane users, which are platform accounts.
+
+Keeping these people as records serves two purposes. Questionnaires, incident notifications, and renewal conversations need a current, named recipient at each vendor. And vendor review controls are partly communication records: an auditor testing your third-party program looks for <Term t="evidence">evidence</Term> of who you engaged and when, which is only retrievable if outreach history lives on the record rather than in individual inboxes.
+
+## How Contacts Work
+
+A contact record carries the person's details plus a status, so the directory can distinguish current points of contact from historical ones without deleting anything.
+
+Synced contact records stay tied to their upstream source, so repeat ingests update the existing record instead of creating duplicates or drifting into hand-maintained copies.
+
+What makes a contact useful is what it connects to. A contact relates to the vendor [entities](./entities.mdx) they represent, and to the [campaigns](../automation/campaigns.mdx) that target them, including the per-recipient campaign target records that track each send and its completion. That means outreach history accumulates on the contact: which questionnaires they received, when, and what happened. For the complete field list, see the [GraphQL object reference](/graphql).
+
+## Working with Contacts
+
+### Attach Contacts to Vendor Records
+
+For each vendor entity, record the people who matter to the relationship: the security contact for questionnaires and incident notifications, and the account contact for commercial questions. Capturing titles matters more than it looks; when a questionnaire stalls, "Security Lead" versus "Account Manager" tells the analyst who to escalate to. A contact can relate to more than one entity, which handles consultants and agency staff who represent several vendors.
+
+### Target Campaigns at the Right People
+
+When a vendor review comes due, target the assessment [campaign](../automation/campaigns.mdx) at the vendor's contact rather than a generic address. Each recipient gets a campaign target record tracking their individual status, so you can see who has responded, resend to whoever has not, and keep the completion record attached to both the campaign and the contact. Next year's review can then start from last year's engagement history.
+
+### Keep the Directory Honest
+
+Contacts go stale faster than any other registry record because you do not control the churn. Build a habit into your vendor review cadence: when a review runs, confirm the contact still holds the role. When someone leaves the vendor, set their record to Inactive or Deactivated and add their replacement rather than editing the old record into a new person; overwriting a contact rewrites your outreach history, while retiring it preserves who you actually corresponded with.
+
+## FAQ
+
+<details>
+<summary>When is someone a contact versus an identity holder?</summary>
+
+Use a contact for people outside your organization whom you correspond with: vendor security leads, subprocessor points of contact, questionnaire recipients. Use an [identity holder](./personnel/overview.mdx) for people in your workforce, including contractors, because they are subject to your access, training, and offboarding controls. The same campaign machinery can target both, but they answer different audit questions: "who did we engage at the vendor" versus "who works in our environment".
+
+</details>
+
+<details>
+<summary>Can one contact belong to several vendors?</summary>
+
+Yes. Contacts relate to entities as a many-sided relationship, so a consultant or agency representative who speaks for multiple vendors is one contact related to several entities, and their outreach history stays consolidated on that single record.
+
+</details>
+
+<details>
+<summary>What should I do when a vendor contact leaves?</summary>
+
+Set the contact's status to Inactive or Deactivated and create a new record for the replacement. Do not repurpose the old record with a new name and email: campaign targets and correspondence history reference that record, and editing it into a different person quietly falsifies who you engaged during past reviews.
+
+</details>
+
+## Examples
+
+<Tabs groupId="api-format" queryString>
+  <TabItem value="csv" label="CSV">
+
+```csv
+# Create
+FullName,Email,Title,Company,Status
+Dana Whitmore,dana@stripe.com,Security Lead,Stripe,ACTIVE
+Sam Okafor,sam@aws.com,Account Manager,Amazon Web Services,ACTIVE
+```
+
+```csv
+# Update
+ID,Title,Status
+CTC01J9ABCD111111111111111,Head of Security,ACTIVE
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+```graphql
+mutation {
+  createContact(
+    input: {
+      fullName: "Dana Whitmore"
+      email: "dana@stripe.com"
+      title: "Security Lead"
+      company: "Stripe"
+    }
+  ) {
+    contact {
+      id
+      fullName
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateContact(
+    id: "CTC01J9ABCD111111111111111"
+    input: {
+      title: "Head of Security"
+    }
+  ) {
+    contact {
+      id
+      title
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+```go
+ctx := context.Background()
+
+fullName := "Dana Whitmore"
+email := "dana@stripe.com"
+title := "Security Lead"
+
+_, err := client.CreateContact(ctx, graphclient.CreateContactInput{
+	FullName: &fullName,
+	Email:    &email,
+	Title:    &title,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+```bash
+openlane contact create \
+  --name "Dana Whitmore" \
+  --email "dana@stripe.com" \
+  --title "Security Lead" \
+  --company "Stripe"
+
+openlane contact update \
+  --id "CTC01J9ABCD111111111111111" \
+  --title "Head of Security"
+```
+
+  </TabItem>
+</Tabs>

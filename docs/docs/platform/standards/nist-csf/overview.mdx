@@ -1,0 +1,109 @@
+---
+title: NIST Cybersecurity Framework (CSF)
+sidebar_label: Overview
+description: NIST Cybersecurity Framework - Identify, Protect, Detect, Respond, Recover
+sidebar_position: 1
+keywords:
+  - NIST CSF
+  - cybersecurity framework
+  - NIST compliance
+  - risk management
+  - cybersecurity standards
+  - identify function
+  - protect function
+  - detect function
+  - respond function
+  - recover function
+  - NIST guidelines
+  - cybersecurity best practices
+tags:
+  - NIST
+  - cybersecurity
+  - compliance
+  - risk management
+---
+
+import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
+
+# NIST Cybersecurity Framework (CSF)
+
+The NIST Cybersecurity Framework gives you a shared vocabulary for describing your security posture: where it is today, where it should be, and what closes the gap. Because there is no certification, nobody passes or fails CSF. You use it to organize your security program and communicate about risk, often as the backbone under frameworks you do get assessed against.
+
+<StandardMeta
+  fullName={"NIST Cybersecurity Framework"}
+  type={"Framework"}
+  source={"NIST CSF 2.0"}
+  established={"2014; current version 2.0 (2024)"}
+  managedBy={"NIST"}
+  appliesTo={"Voluntary; organizations of any size or sector"}
+  certification={"No: voluntary self-assessment"}
+/>
+
+## Who Needs It
+
+No regulator requires CSF adoption, but you'll reach for it when:
+
+- A customer, insurer, or partner asks you to describe your security program in a recognized structure
+- You operate critical infrastructure or work with US federal agencies, where CSF is the common reference point
+- You're building a security program from scratch and want a map before committing to an auditable framework like System and Organization Controls 2 (SOC 2) or International Organization for Standardization (ISO) 27001
+- Leadership wants a risk conversation that doesn't require reading a control catalog
+
+CSF 2.0 explicitly targets organizations of every size and sector, not just critical infrastructure.
+
+## How the Framework Is Organized
+
+The core of CSF 2.0 is six functions that describe the cybersecurity lifecycle:
+
+| Function | What it covers |
+| -------- | -------------- |
+| **Govern** | Risk management strategy, policy, roles, and supply chain oversight |
+| **Identify** | Know your assets, risks, and dependencies |
+| **Protect** | Safeguards: access control, training, data security, platform hardening |
+| **Detect** | Find adverse events through monitoring and analysis |
+| **Respond** | Contain and communicate when an incident happens |
+| **Recover** | Restore operations and fold lessons back in |
+
+Each function breaks into categories and subcategories that describe desired outcomes rather than prescriptive controls. The framework deliberately doesn't tell you *how* to achieve an outcome; it points to informative references (ISO 27001, Center for Internet Security (CIS) Controls, NIST SP 800-53) for that.
+
+### Tiers and Profiles
+
+Two companion concepts make CSF useful in practice:
+
+- **Implementation Tiers** (Partial, Risk Informed, Repeatable, Adaptive) characterize how rigorous your risk management practices are. Tier 4 is not the goal for everyone; we recommend picking the tier your risk profile actually justifies.
+- **Profiles** capture your current state and your target state against the framework outcomes. The gap between the two is your improvement roadmap, and it makes a more concrete planning tool than a generic maturity score. These are formalized as Organizational Profiles, and NIST and sector bodies also publish Community Profiles that provide a shared baseline for a particular industry, technology, or threat scenario.
+
+For the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).
+
+## FAQ
+
+<details>
+<summary>Is there a CSF certification?</summary>
+
+No. CSF is a self-assessment framework; there's no accredited certification body and no formal audit. If a customer needs third-party assurance, they'll ask for SOC 2 or ISO 27001; CSF work transfers well to both.
+
+</details>
+
+<details>
+<summary>How does CSF relate to NIST 800-53?</summary>
+
+CSF describes outcomes; SP 800-53 is a detailed control catalog. CSF subcategories reference 800-53 controls as one way to achieve the outcome. Federal systems are required to use 800-53; CSF is the voluntary, higher-altitude view.
+
+</details>
+
+<details>
+<summary>Which tier should we target?</summary>
+
+The one your risk exposure warrants. A 40-person SaaS company operating at Tier 2 with a clear target profile is in better shape than one claiming Tier 4 aspirations it can't fund.
+
+</details>
+
+## Additional Resources
+
+- [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework)
+- [CSF Tools and Resources](https://www.nist.gov/cyberframework/framework-tools)
+- [CSF Reference Tool](https://www.nist.gov/cyberframework/framework)
+- [NIST Special Publications](https://csrc.nist.gov/publications/sp)
+- [Cybersecurity and Infrastructure Security Agency (CISA)](https://www.cisa.gov/)
+- [Framework for Improving Critical Infrastructure Cybersecurity](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf)
+- [Small Business Cybersecurity Corner](https://www.nist.gov/itl/smallbusinesscyber)

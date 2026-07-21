@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Documentation References
 
-Is markdown scary for you? Confused why you can't just make a pile a google docs? This guide is to help you navigate markdown effectively.
+Openlane documentation reuses a small set of markdown, table, and diagram patterns. Copy the examples below rather than writing the syntax from scratch, and consult these references for anything not covered here:
 
 * [Mermaid](https://mermaid-js.github.io/mermaid/#/)
 * [Material Icons](https://materialdesignicons.com/icon/)
@@ -14,7 +14,7 @@ Is markdown scary for you? Confused why you can't just make a pile a google docs
 
 ## Tables
 
-There are two types of tables we can use in our documentation setup: traditional markdown (or github markdown), and HTML. Most folks already know what the markdown table looks like, but here's one for the unacquainted:
+Both markdown and HTML tables are supported, and each renders correctly in GitHub's UI, VSCode preview, and the built site. A markdown table looks like this:
 
 ```
 |       Header 1        |     Header 2          |     Header 3          |
@@ -29,7 +29,7 @@ Which renders like this:
 | stuff                 | about                 | docs and stuff        |
 
 
-We can also create tables in HTML and they are rendered in all the same ways (github's UI, Locally with VSCode, building our site, etc.). Using HTML provides a higher degree of control with respect to customization and is more or less "human readable". That said, HTML can be quite tedious to write and is less tolerant to error, but that has some benefits with things like linting and the ability to visually see errors. Use your best judgement.
+HTML tables provide a higher degree of control over customization and remain reasonably readable in source form. HTML is more tedious to write and less tolerant of errors than markdown, though the strictness helps with linting and makes mistakes easier to spot visually. Use your best judgment.
 
 An Example HTML table looks like this:
 
@@ -63,7 +63,7 @@ Which renders like this:
   </tr>
 </table>
 
-Pro-tip! Instead of going through the motions of building the docker image for your changes, VSCode actually has a markdown render function inside of it you can use to see how things would look in real time, quick is _quite_ convenient when working with visualization or rendering changes. You can enable it in the upper right hand corder:
+Instead of going through the motions of building the docker image for your changes, we recommend using VSCode's built-in markdown preview to see how things would look in real time, which is quite convenient when working with visualization or rendering changes. You can enable it in the upper right hand corner:
 
 ![protip2](/img/vscode_preview.png)
 
@@ -72,9 +72,9 @@ Once you click it, while you type in real-time you can see things like tables or
 ![protip](/img/vscode_protip.png)
 
 
-## Ze copy pasta
+## Copy-Paste Examples
 
-Traditional; each header matches a row entry that spans the table
+A traditional table, where each header matches a row entry that spans the table:
 ```
 <table>
   <tr>
@@ -90,7 +90,7 @@ Traditional; each header matches a row entry that spans the table
 </table>
 ```
 
-More key-value-esk; description on the left, value on the right, no real "header"
+A key-value style table, with the description on the left, the value on the right, and no real "header":
 
 ```
 <table>
@@ -105,7 +105,7 @@ More key-value-esk; description on the left, value on the right, no real "header
 </table>
 ```
 
-Nested lists
+Nested lists:
 ```
 <ul>
   <li></li>
@@ -120,7 +120,7 @@ Nested lists
 </ul>
 ```
 
-Regular markdown table; centered text
+A regular markdown table with centered text:
 
 ```
 |   |   |   |
@@ -128,7 +128,7 @@ Regular markdown table; centered text
 |   |   |   |
 ```
 
-Tabbed table with MDX
+A tabbed table with MDX:
 
 ```
 <Tabs className="unique-tabs">

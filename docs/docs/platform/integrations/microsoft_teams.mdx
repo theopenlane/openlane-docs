@@ -3,7 +3,13 @@ title: Microsoft Teams
 description: Microsoft Teams integration guide for compliance notifications and event routing
 sidebar_position: 13
 sidebar_label: Microsoft Teams
+compliance:
+  - "SOC 2 CC7.2"
+  - "SOC 2 CC7.3"
 ---
+
+import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 :::info
 This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
@@ -11,13 +17,13 @@ This integration is not yet generally available. It appears in the **Coming Soon
 
 # ![microsoft teams integration](./assets/microsoft_teams.png) Microsoft Teams Integration Guide
 
-If your team collaborates in Microsoft Teams, this integration lets Openlane deliver security and compliance notifications directly into your channels. Think vulnerability SLA reminders, access review deadlines, or policy attestation nudges, right where your team already works.
+If your team collaborates in Microsoft Teams, this integration lets Openlane deliver security and compliance notifications directly into your channels. Vulnerability service level agreement (SLA) reminders, access review deadlines, and policy attestation nudges arrive where your team already works.
 
 ## Key Capabilities
 
 - **Channel-Targeted Notifications:** Route different notification types to the right Teams channels. Security findings go to your security channel, access review reminders go to the team leads, policy updates go to compliance.
 - **Compliance Event Routing:** Deliver remediation deadlines, review reminders, and policy attestation nudges directly to the people responsible for action.
-- **Workflow Integration:** Keep your compliance program visible where your team already collaborates, reducing the lag between "finding identified" and "someone is working on it."
+- **Workflow Integration:** Keep your compliance program visible where your team already collaborates, reducing the lag between identifying a <Term t="finding">finding</Term> and someone acting on it.
 
 ## Prerequisites
 
@@ -29,16 +35,24 @@ If your team collaborates in Microsoft Teams, this integration lets Openlane del
 
 ### Step 1: Configure Microsoft App Permissions
 
+<Steps>
+
 1. Configure the Openlane callback URL in your Entra app registration.
 2. Grant Graph permissions for profile/team read and channel message send.
 3. Grant admin consent for the requested permissions.
 
+</Steps>
+
 ### Step 2: Connect in Openlane
+
+<Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Microsoft Teams**.
 2. Click **Connect**. You will be redirected to Microsoft to authorize access.
 3. Sign in and grant the requested permissions.
 4. After authorization, you are redirected back to Openlane and the connection is saved.
+
+</Steps>
 
 ### Step 3: Post-Connection Configuration
 
@@ -50,11 +64,11 @@ After the OAuth connection is established, provide tenant context:
 
 ## Validate Connection
 
-After saving, Openlane runs a health check against Microsoft Teams and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+After saving, Openlane runs a health check against Microsoft Teams and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
 
 ## What Openlane Syncs
 
-Openlane reads team and channel context and can send outbound notification messages to Teams channels. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. Helps demonstrate timely response and escalation under SOC 2 CC7.2 and CC7.3.
+Openlane reads team and channel context and can send outbound notification messages to Teams channels. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. This helps demonstrate timely response and escalation when an auditor asks how findings reach the people who act on them.
 
 ## Disconnect
 

@@ -1,0 +1,9 @@
+{
+  "label": "APRA CPS 230",
+  "position": 21,
+  "link": {
+    "type": "doc",
+    "id": "platform/standards/apra-cps-230/overview"
+  },
+  "collapsed": true
+}

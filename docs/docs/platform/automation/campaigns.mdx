@@ -1,51 +1,100 @@
 ---
 title: Campaigns
 description: Send and track bulk compliance requests
-sidebar_position: 4
+sidebar_position: 3
+compliance:
+  - "SOC 2 CC1"
+  - "SOC 2 CC2"
+  - "SOC 2 CC5"
+  - "ISO 27001"
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
 
 # Campaigns
 
-## Overview
+A campaign sends one request to many recipients and tracks every response: a policy attestation to all personnel, a security questionnaire to your vendors, a training acknowledgement to a department. You define the audience once, launch, and the campaign handles delivery, per-recipient tracking, follow-ups, and, for recurring obligations, the next run.
 
-Campaigns are structured outreach runs for policy attestations, training acknowledgements, and questionnaire requests. They let you target many recipients, track progress at the recipient level, and manage follow-up sends from one workflow.
+## Campaign Types
 
-Campaign records are most commonly tied to an assessment template and a recipient audience (such as personnel, contacts, users, or groups).
+The type tells the campaign what kind of work it is coordinating and what gets attached:
 
-## Campaign Lifecycle
+| Type | What it sends | Typically attached |
+| ---- | ------------- | ------------------ |
+| Questionnaire | A questionnaire built from an [assessment](./assessments.mdx) | The assessment definition |
+| Policy attestation | An acknowledgement request for a policy | The policy content or template |
+| Training | A training acknowledgement | Training material |
+| Vendor assessment | A due-diligence questionnaire aimed at third parties | An assessment plus vendor contacts |
+| Trust center update | A notification to your trust center subscribers | Your trust center |
+| Custom | Anything else you need to distribute and track | An email template |
 
-```mermaid
-flowchart LR
-    A[Create Campaign] --> B[Add Targets]
-    B --> C[Launch]
-    C --> D[Responses Collected]
-    D --> E[Resend Incomplete]
-    E --> F[Completion Metrics and Evidence]
-```
+## The Campaign Lifecycle
 
-## Compliance Significance
+A campaign starts as a **draft** while you assemble the audience and content. From there you can launch it immediately or schedule it for a future date; a **scheduled** campaign dispatches itself at the configured time. Once dispatching begins the campaign is **active**: emails go out, responses come in, and progress accrues. A campaign **completes** automatically the moment every recipient has finished, or you can cancel it at any point.
 
-- SOC 2: CC1, CC2, CC5 communication and governance evidence
-- ISO 27001: awareness, policy communication, and recurring control operation
+Set a **due date** to give recipients a deadline. Anyone who has not finished by then is flagged as overdue, which feeds both the console progress view and your follow-up sends.
 
-## Practical Examples
+## Recipients and Targets
 
-- A security team launches quarterly policy acknowledgment campaigns for all personnel.
-- A vendor risk team runs an annual questionnaire campaign and tracks completion before renewal decisions.
+Each recipient is a target the campaign tracks individually. You can add targets one at a time, in bulk, by importing a CSV, or in the same call that creates the campaign (see the [examples](#examples) below). A target needs an email address and optionally a name; if the email matches an existing Openlane user or contact, we link the records automatically so campaign history shows up wherever that person appears.
+
+Every target carries its own state, which is what lets you [resend](#follow-ups-and-resends) to only the recipients who have not finished instead of re-emailing the whole audience. Each target also records when it was last sent to and when it finished.
+
+## Tracking Progress
+
+The console shows a live breakdown for each campaign: how many recipients have completed, who is still outstanding, and who is overdue. Underneath the rollup, each target tracks delivery-level detail: whether the email was delivered, opened, and clicked, how many times, and when the last event happened. That detail comes from delivery events reported by the email provider, so "sent but never opened" and "opened but never finished" are distinguishable states you can act on.
+
+When the last recipient completes, the campaign marks itself completed and records the completion time, so the finished record doubles as <Term t="evidence">evidence</Term> that the run happened and who participated. The completion records, who was asked, who responded, and when, are the artifact an auditor samples.
+
+## Follow-Ups and Resends
+
+For anyone who has not finished, resend the campaign to incomplete recipients: outstanding and overdue targets get a fresh email (overdue recipients are reset to sent), and the campaign tracks how many times it has been resent and when. Sends to an individual recipient are capped at five attempts, which keeps a bad address from being retried forever.
+
+Before launching to a real audience, you can send a **test email** to addresses you choose; test sends use the real template and branding but create no targets and count toward nothing.
+
+## Recurring Campaigns
+
+Compliance outreach is rarely one-time, so campaigns can recur on a schedule: monthly, quarterly, twice a year, annually, or every two or three years, with an optional interval multiplier (every 2 months), an explicit timezone for the schedule arithmetic, and an optional end date. Recurrence can also be expressed as a cron schedule when the calendar options don't fit.
+
+When a recurring campaign is active, we compute and store its next run time. At each run, the campaign re-dispatches to its audience (including people who completed last cycle, since a new cycle means a new obligation), stamps the run, and schedules the next one. When the end date passes, the campaign completes itself and deactivates.
+
+This is what keeps quarterly policy attestations and annual vendor reviews running without anyone re-creating them by hand, and it pairs with [assessments](./assessments.mdx) to produce year-over-year comparable responses.
+
+## Email Delivery and Branding
+
+Campaign email goes out through the [email integration](../integrations/email.mdx), so you control the sender address rather than everything arriving from a shared Openlane one. Content comes from an email template, which can carry file attachments (a policy PDF alongside its attestation request, for example). Branding is configurable end to end: logo, colors, footer, company details, and the legal links in the message.
+
+For questionnaire campaigns, the email each recipient receives contains their personal access link to the questionnaire; how that link works, and how recipients respond without needing an Openlane account, is covered in [Assessments](./assessments.mdx#how-recipients-respond).
+
+## FAQ
+
+<details>
+<summary>Do recipients need an Openlane account?</summary>
+
+No. Campaign recipients are email addresses. Questionnaire recipients respond through a secure personal link without signing up; if a recipient happens to be an existing user or contact, we link the records automatically.
+
+</details>
+
+<details>
+<summary>What happens to people who completed the last cycle of a recurring campaign?</summary>
+
+They are included in the next run. Each recurrence is a new obligation (a new quarter's attestation, a new year's review), so prior completion doesn't carry forward.
+
+</details>
+
+<details>
+<summary>Can I see whether someone actually received the email?</summary>
+
+Yes. Each recipient tracks delivery, open, and click events reported by the email provider, so you can distinguish an unread email from an ignored one before deciding to resend.
+
+</details>
 
 ## Examples
 
-<Tabs>
+<Tabs groupId="api-format" queryString>
   <TabItem value="csv" label="CSV">
-
-| Operation | API |
-| --- | --- |
-| Create campaign | `createBulkCSVCampaign` |
-| Create campaign with recipients | `createCampaignWithTargetsCSV` |
-| Update campaign | `updateCampaign` |
 
 ```csv
 # Create campaign
@@ -63,11 +112,6 @@ riley@vendor-partner.com,Riley Chen,NOT_STARTED
 
   </TabItem>
   <TabItem value="graphql" label="GraphQL">
-
-| Operation | Mutation |
-| --- | --- |
-| Create | `createCampaign` |
-| Update | `updateCampaign` |
 
 ```graphql
 mutation {
@@ -107,11 +151,6 @@ mutation {
   </TabItem>
   <TabItem value="go-client" label="Go Client">
 
-| Operation | Method |
-| --- | --- |
-| Create | `client.CreateCampaign(ctx, input)` |
-| Update | `client.UpdateCampaign(ctx, id, input)` |
-
 ```go
 ctx := context.Background()
 
@@ -135,12 +174,6 @@ if err != nil {
 
   </TabItem>
   <TabItem value="cli" label="CLI">
-
-| Operation | Command |
-| --- | --- |
-| Create | `openlane campaign create` |
-| Create with targets | `openlane campaign create-with-targets` |
-| Update | `openlane campaign update` |
 
 ```bash
 openlane campaign create \

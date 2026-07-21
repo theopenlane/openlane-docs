@@ -4,38 +4,30 @@ description: How to create and manage evidence
 sidebar_position: 2
 ---
 
+import Steps from '@site/src/components/Steps';
+import Supademo from '@site/src/components/Supademo';
+import Term from '@site/src/components/Term';
+
 # Create Evidence
 
-This guide explains how to create evidence in the Openlane Console for compliance management.
-
-## Prerequisites
-
-- Access to the Openlane Console
-- Appropriate permissions to manage compliance evidence
+Submit evidence whenever a <Term t="controls">control</Term> needs proof that it operated: a completed access review, a training report, a configuration export. Each submission becomes a reviewable record linked to the controls it supports, which is what an auditor samples during the audit.
 
 ## Steps to Create Evidence
 
+<Steps>
+
 1. **Log in** to the Openlane Console.
-2. Navigate to [Evidence](https://console.theopenlane.io/evidence)
-3. Click the **Submit Evidence** button.
-4. Fill in the required details:
-    - **Evidence Name**: A descriptive name for the evidence.
-    - **Description**: Briefly describe the evidence.
-    - **Collection Procedure**: Specify how the evidence was collected with a detailed description.
-    - **Source**: Indicate the system or process that generated the evidence.
-    - **Upload File**: Attach relevant files if needed.
+1. Navigate to [Evidence](https://console.theopenlane.io/evidence)
+1. Click the **Submit Evidence** button.
+1. Fill in the details. Three fields do the heavy lifting for audit readiness:
+    - **Collection Procedure** and **Source** are what let an auditor (or a teammate re-collecting next quarter) reproduce the evidence; write them for that reader
+    - **Renewal Date** is what turns evidence from a one-time upload into a maintained artifact; most evidence goes stale, so set it
+    - **Associated Controls** connect the artifact to what it proves; unlinked evidence helps nobody at audit time
+
     ![Evidence upload screenshot](../../../../static/img/screenshots/evidence/evidence_file_upload.png)
+1. Click **Submit for review** to create the evidence record.
 
-    - **Tags**: Add tags for easier searching and categorization.
-    - **Renewal Date**: Set a date for when the evidence should be reviewed or renewed.
-    - **Associated Controls**: Link the evidence to relevant controls or compliance requirements.
-5. Click **Submit for review** to create the evidence record.
-
-## Tips
-
-- Ensure all required fields are completed.
-- Use clear and descriptive names for easier identification.
-- Attach supporting documents to strengthen your evidence.
+</Steps>
 
 ## Next Steps
 

@@ -1,0 +1,141 @@
+---
+sidebar_position: 2
+sidebar_label: Schema Conventions
+title: GraphQL Schema Conventions
+description: The patterns every Openlane GraphQL query shares, including pagination, filtering, ordering, mutations, and bulk operations
+keywords:
+  - GraphQL conventions
+  - relay pagination
+  - where input
+  - GraphQL filtering
+  - bulk mutations
+  - GraphQL cursor
+tags:
+  - api
+  - graphql
+---
+
+# GraphQL Schema Conventions
+
+The Openlane schema is generated from the platform's data model, so the same handful of patterns repeats for every object. Once you know how they work for one object, you know how they work for all of them; the examples below use campaigns, and substituting any other object name gives you its equivalent.
+
+## Queries Come in Pairs
+
+Every object has a singular lookup by ID and a plural, filterable list query:
+
+```graphql
+query {
+  campaign(id: "CMP01...") {
+    name
+    status
+  }
+}
+```
+
+```graphql
+query {
+  campaigns(first: 10) {
+    edges {
+      node {
+        id
+        name
+        status
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
+```
+
+Many objects also have a `<object>Search` query for text search across their searchable fields.
+
+## Pagination Is Cursor-Based
+
+List queries return relay-style connections: results arrive as `edges` containing `node`s, and you page with `first`/`after` (forward) or `last`/`before` (backward) using the opaque cursors from `pageInfo`.
+
+```graphql
+query {
+  campaigns(first: 25, after: "eyJpZCI6...") {
+    edges {
+      node { id name }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
+```
+
+To fetch everything, loop while `hasNextPage` is true, passing `endCursor` as the next `after`. Connection results also expose `totalCount` when you need the size without walking the pages.
+
+## Filtering with Where Inputs
+
+Every list query accepts a `where` argument typed to that object (`CampaignWhereInput` for campaigns). For each field, the input offers predicates for equality, comparison, list membership, null checks, and, for strings, contains/prefix/suffix matching with case-insensitive variants. Predicates combine implicitly with AND, and explicit `and`, `or`, and `not` groups compose more complex logic:
+
+```graphql
+query {
+  campaigns(
+    where: {
+      statusIn: [ACTIVE, SCHEDULED]
+      or: [
+        { nameContainsFold: "policy" }
+        { nameContainsFold: "attestation" }
+      ]
+    }
+    first: 25
+  ) {
+    edges {
+      node { id name status }
+    }
+  }
+}
+```
+
+The Explorer's documentation panel lists every predicate available on a given where-input; the naming is consistent (`name`, `nameNEQ`, `nameIn`, `nameContainsFold`, and so on), so discovering one object's filters teaches you all of them.
+
+## Ordering
+
+List queries take `orderBy`, an array of `{field, direction}` pairs applied in order:
+
+```graphql
+query {
+  campaigns(
+    orderBy: [{field: due_date, direction: ASC}]
+    first: 25
+  ) {
+    edges {
+      node { id name dueDate }
+    }
+  }
+}
+```
+
+## Mutations and Payloads
+
+Mutations follow create/update/delete triplets with typed inputs, and each returns a payload object wrapping the affected record, so you can request exactly the fields you need back:
+
+```graphql
+mutation {
+  createCampaign(input: {name: "Q3 Policy Attestation", campaignType: POLICY_ATTESTATION}) {
+    campaign {
+      id
+      name
+      status
+    }
+  }
+}
+```
+
+Updates take the record ID plus an input of only the fields you're changing; unset fields are left alone. Deletes return the deleted ID.
+
+## Bulk and CSV Operations
+
+Most objects support bulk variants: `createBulk<Object>` takes an array of inputs in one call, and `createBulkCSV<Object>` / `updateBulkCSV<Object>` accept an uploaded CSV file, which is what the console's import features use. The `Examples` section on each object's platform docs page shows the expected CSV column layout.
+
+## Errors
+
+Errors return in the standard GraphQL `errors` array alongside any partial `data`. Authorization is enforced per object and per field, so a query touching records you can't access fails with an authorization error rather than silently filtering; see [Privacy and Authorization](/docs/developers/security/privacy-and-authorization) for how the policy layers evaluate.

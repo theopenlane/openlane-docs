@@ -3,17 +3,24 @@ title: GitHub App
 description: GitHub App integration guide for installation-scoped access
 sidebar_position: 8
 sidebar_label: GitHub App
+compliance:
+  - "SOC 2 CC7"
+  - "SOC 2 CC8"
+  - "ISO 27001:2022 A.8.8"
 ---
+
+import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # ![github app integration](./assets/github.png) GitHub App Integration Guide
 
-The GitHub App integration is the recommended way to connect your repositories to Openlane. It uses installation-scoped, short-lived tokens instead of user OAuth credentials, which means tighter access control and no dependency on individual user sessions.
+We recommend the GitHub App integration as the way to connect your repositories to Openlane. It uses installation-scoped, short-lived tokens instead of user OAuth credentials, which means tighter access control and no dependency on individual user sessions.
 
 ## Key Capabilities
 
 - **Installation-Scoped Authentication:** Uses app credentials to mint short-lived installation tokens, so there are no long-lived user tokens to manage or rotate.
 - **Repository Access Validation:** Confirms installation visibility to target repositories so you know exactly what Openlane can see.
-- **Security Alert Ingestion:** Collects Dependabot, code scanning, and secret scanning alerts, giving you a unified view for vulnerability tracking and remediation SLAs (SOC 2: CC7, CC8).
+- **Security Alert Ingestion:** Collects Dependabot, code scanning, and secret scanning alerts, giving you a unified view for vulnerability tracking and remediation SLAs.
 
 ## Prerequisites
 
@@ -24,14 +31,18 @@ The GitHub App integration is the recommended way to connect your repositories t
 
 ### Step 1: Authorize the Openlane GitHub App
 
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations** and find **GitHub App**.
 2. Click **Configure**.
-3. Click **Continue to Authorization** — you will be redirected to GitHub. There are no credentials to enter manually.
+3. Click **Continue to Authorization**. You will be redirected to GitHub. There are no credentials to enter manually.
 4. On GitHub, choose the organization where you want to install the app.
 5. Choose repository access scope:
    - **All repositories**, or
    - **Only select repositories**.
 6. Complete the installation. GitHub redirects back to Openlane automatically.
+
+</Steps>
 
 ### Step 2: Configure Sync Behavior
 
@@ -42,7 +53,7 @@ Optionally configure which data sources are active and how records are filtered 
 | Setting | Description |
 |---|---|
 | **Disable** | Turn off vulnerability ingestion from GitHub Security without disconnecting the integration |
-| **Filter Expression** | CEL expression evaluated against each vulnerability record — only records that match are ingested |
+| **Filter Expression** | Common Expression Language (CEL) expression evaluated against each vulnerability record; only records that match are ingested |
 
 ```
 # Ingest only open alerts
@@ -54,8 +65,8 @@ payload.state == 'open'
 | Setting | Description |
 |---|---|
 | **Disable** | Turn off user and group ingestion from GitHub |
-| **Disable Group Sync** | Sync GitHub users only — skip team/group membership |
-| **Filter Expression** | CEL expression evaluated against each user record — only records that match are ingested |
+| **Disable Group Sync** | Sync GitHub users only; skip team/group membership |
+| **Filter Expression** | CEL expression evaluated against each user record; only records that match are ingested |
 
 ```
 # Limit to a specific org
@@ -67,7 +78,7 @@ payload.Org == 'my-org'
 | Setting | Description |
 |---|---|
 | **Disable** | Turn off repository ingestion from GitHub |
-| **Filter Expression** | CEL expression evaluated against each repository record — only records that match are ingested |
+| **Filter Expression** | CEL expression evaluated against each repository record; only records that match are ingested |
 
 ```
 # Ingest only repositories with open state
@@ -78,11 +89,11 @@ CEL expressions have access to the full raw payload for each record via `payload
 
 ## Validate Connection
 
-After saving, Openlane runs a health check against the GitHub App installation and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+After saving, Openlane runs a health check against the GitHub App installation and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
 
 ## What Openlane Syncs
 
-- **GitHub Security Hub Sync:** Collects Dependabot, code scanning, and secret scanning alerts and normalizes them into vulnerability records you can link to assets, assign to teams, and track against remediation SLAs (SOC 2: CC7, CC8; ISO 27001: A.12.6).
+- **GitHub Security Hub Sync:** Collects Dependabot, code scanning, and secret scanning alerts and normalizes them into vulnerability records you can link to assets, assign to teams, and track against remediation SLAs.
 - **Directory Account Sync:** Pulls GitHub users and team membership into Openlane directory accounts, giving you visibility into who has access to your repositories.
 - **Repository Sync:** Ingests repository metadata scoped to the app installation as assets within Openlane, providing an inventory of repositories within your compliance boundary.
 
@@ -90,11 +101,15 @@ After saving, Openlane runs a health check against the GitHub App installation a
 
 
 To remove this integration:
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations**
 1. Select the **Installed** tab
 1. Open the menu on the integration card and select **Disconnect**.
 
-This removes stored credentials and stops all collection activity and will redirect you to the installation in github to remove the installed app.
+</Steps>
+
+This removes stored credentials and stops all collection activity. You are then redirected to the installation page on GitHub, where you can remove the installed app.
 
 ## Troubleshooting
 

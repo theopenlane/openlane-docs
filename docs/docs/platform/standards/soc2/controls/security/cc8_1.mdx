@@ -1,0 +1,195 @@
+---
+title: "CC8.1"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC8.1
+
+<ControlMeta
+  refCode={"CC8.1"}
+  category={"Security"}
+  subcategory={"Change Management"}
+  description={"The entity authorizes, designs, develops or acquires, configures, documents, tests, approves, and implements changes to infrastructure, data, software, and procedures to meet its objectives."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Manages Changes Throughout the System Life Cycle</summary>
+
+A process for managing system changes throughout the life cycle of the system and its components (infrastructure, data, software, and manual and automated procedures) is used to support the achievement of entity objectives.
+
+</details>
+
+<details>
+<summary>Authorizes Changes</summary>
+
+A process is in place to authorize system and architecture changes prior to design, development, or acquisition and configuration.
+
+</details>
+
+<details>
+<summary>Designs and Develops Changes</summary>
+
+A process is in place to design and develop system changes in a secure manner to support the achievement of entity objectives.
+
+</details>
+
+<details>
+<summary>Documents Changes</summary>
+
+A process is in place to document system changes to support ongoing maintenance of the system and to support internal and external users in performing their responsibilities.
+
+</details>
+
+<details>
+<summary>Tracks System Changes</summary>
+
+A process is in place to track system changes prior to implementation.
+
+</details>
+
+<details>
+<summary>Configures Software</summary>
+
+A process is in place to select, implement, maintain, and monitor configuration parameters used to control the functionality of developed and acquired software.
+
+</details>
+
+<details>
+<summary>Tests System Changes</summary>
+
+A process is in place to test internally developed and acquired system changes prior to implementation into the production environment. Examples of testing may include unit, integration, regression, static and dynamic application source code, quality assurance, or automated testing (whether point in time or continuous).
+
+</details>
+
+<details>
+<summary>Approves System Changes</summary>
+
+A process is in place to approve system changes prior to implementation.
+
+</details>
+
+<details>
+<summary>Deploys System Changes</summary>
+
+A process is in place to implement system changes with consideration of segregation of responsibilities (for example, restricting unilateral code development or testing and implementation by a single user) to prevent or detect unauthorized changes.
+
+</details>
+
+<details>
+<summary>Identifies and Evaluates System Changes</summary>
+
+Objectives affected by system changes are identified, and the ability of the modified system to support the achievement of the objectives is evaluated throughout the system development life cycle.
+
+</details>
+
+<details>
+<summary>Identifies Changes in Infrastructure, Data, Software, and Procedures Required to Remediate Incidents</summary>
+
+Changes in infrastructure, data, software, and procedures required to remediate incidents are identified, and the change process is initiated upon identification.
+
+</details>
+
+<details>
+<summary>Creates Baseline Configuration of IT Technology</summary>
+
+A baseline configuration of IT and control systems is created and maintained.
+
+</details>
+
+<details>
+<summary>Provides for Changes Necessary in Emergency Situations</summary>
+
+A process is in place for authorizing, designing, testing, approving and implementing changes necessary in emergency situations (that is, changes that need to be implemented in an urgent timeframe).
+
+</details>
+
+<details>
+<summary>Manages Patch Changes</summary>
+
+A process is in place to identify, evaluate, test, approve, and implement patches in a timely manner on infrastructure and software.
+
+</details>
+
+<details>
+<summary>Considers System Resilience</summary>
+
+(For Trust Service Criteria of AVAILABVILITY) The entity considers system resilience when designing its systems and tests resilience during development to help ensure the entity's ability to respond to, recover from, and resume operations through significant disruptions.
+
+</details>
+
+<details>
+<summary>Protects Confidential Information</summary>
+
+(For Trust Service Criteria of CONFIDENTIALITY) The entity protects confidential information during system design, development, testing, implementation, and change processes to support the achievement of the entity's objectives related to confidentiality.
+
+</details>
+
+<details>
+<summary>Protects Personal Information</summary>
+
+(For Trust Service Criteria of PRIVACY) The entity protects personal information during system design, development, testing, implementation, and change processes to support the achievement of the entity's objectives related to privacy.
+
+</details>
+
+<details>
+<summary>Privacy by Design</summary>
+
+(For Trust Service Criteria of PRIVACY) The entity considers privacy requirements in the design of its systems and processes and limits the collection and processing of personal information to what is necessary for the identified purpose.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Change Management | Charter - Change Control Board (CCB) | Documented evidence of the organization's Change Control Board (CCB) charter and mission to govern the organization's change control processes. |
+| Change Management | Change Control Records | Documented evidence of change control records. |
+| Change Management | Change Control Board (CCB) Minutes | Documented evidence of Change Control Board (CCB) meeting minutes |
+| Asset Management | Secure Baseline Configurations Reviews | Documented evidence of a review process to ensure Secure Baseline Configurations (SBC) are current and applicable (e.g., system configuration settings and associated documentation). |
+| Asset Management | Secure Baseline Configurations - Cloud-Based Services | Documented evidence of secure baseline configurations for all deployed types of cloud-based services or applications. |
+| Asset Management | Secure Baseline Configurations - Databases | Documented evidence of secure baseline configurations for all deployed types of databases. |
+| Asset Management | Secure Baseline Configurations - Embedded Technologies | Documented evidence of secure baseline configurations for all deployed types of embedded technologies. |
+| Asset Management | Secure Baseline Configurations - Major Applications | Documented evidence of secure baseline configurations for all deployed types of major applications. |
+| Asset Management | Secure Baseline Configurations - Minor Applications | Documented evidence of secure baseline configurations for all deployed types of minor applications. |
+| Asset Management | Secure Baseline Configurations - Mobile Devices | Documented evidence of secure baseline configurations for all deployed types of mobile devices. |
+| Asset Management | Secure Baseline Configurations - Network Devices | Documented evidence of secure baseline configurations for all deployed types of network devices. |
+| Asset Management | Secure Baseline Configurations - Server Class Systems | Documented evidence of secure baseline configurations for all deployed types of server-class operating systems. |
+| Asset Management | Secure Baseline Configurations - Workstation Class Systems | Documented evidence of secure baseline configurations for all deployed types of workstation-class operating systems. |
+| Resource Management | Secure Development Lifecycle (SDLC) | Documented evidence of a secure development lifecycle that the organization utilizes for new initiatives or significant changes to existing initiatives to ensure cybersecurity & data privacy principles are identified and implemented by default. |
+
+## Policies
+
+- **[Change Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/change-management/change-management.md)** - Establishes requirements for managing changes to information systems
+- **[Secure Development Lifecycle Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/secure-development/secure-development.md)** - Defines security requirements for software development lifecycle
+
+## Example Organization Controls
+
+- **CC8.1.1** - Documented change control policies and procedures are in place to guide personnel in the change management process.
+- **CC8.1.2** - Prior code is held in the source code repository (GitHub) for rollback capability in the event that a system change does not function as designed.
+- **CC8.1.3** - Development and test environments are physically and logically separated from the production environment.
+- **CC8.1.4** - Changes made to in-scope production systems are approved prior to implementation.
+- **CC8.1.5** - Documented change control policies and procedures are in place to guide personnel in implementing changes in an emergency situation.
+- **CC8.1.6** - System access is restricted to authorized individuals commensurate with their job responsibilities.
+
+## Example Control Objectives
+
+- **Change control effectiveness** - Changes to systems are authorized, tested, and implemented in a controlled manner with rollback capability.
+
+## Example Control Implementations
+
+- **gitops-change-management** - All changes to production systems follow a GitOps workflow. Implementation includes: - All code and infrastructure configuration stored in GitHub repositories - Branch protection requires pull request review before merging - Buildkite CI runs automated tests, linting, and security scanning - ArgoCD deploys changes to GKE after Helm chart PR is approved - Rollback capability maintained through Git history and ArgoCD - Emergency changes require post-implementation review
+
+## Example Evidence
+
+- **GitHub Branch Protection Configuration** - Screenshot of branch protection rules for main repository
+- **Sample Application Change PR** - Example pull request demonstrating change management workflow with review and approval
+- **ArgoCD Deployment History** - Export of ArgoCD sync history showing deployment audit trail
+
+## Example Action Plans
+
+- **Cloudflare declarative configuration** - Currently Cloudflare is managed via dashboard (manual). This initiative moves to declarative configuration with Terraform or Pulumi for GitOps-style management.

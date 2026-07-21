@@ -3,41 +3,64 @@ title: Exposure Overview
 description: Track and reduce risk with a practical exposure workflow
 sidebar_position: 1
 sidebar_label: Overview
+compliance:
+  - "SOC 2 CC5"
+  - "SOC 2 CC7-CC9"
+  - "ISO 27001:2022 A.8.8"
+  - "ISO 27001:2022 A.5.24-A.5.28"
+  - "HIPAA"
 ---
+
+import Term from '@site/src/components/Term';
 
 # Exposure
 
-Exposure connects risk decisions to real security work: scans, vulnerabilities, findings, and remediations.
+Openlane's Exposure module connects risk themes to real security work: scans, vulnerabilities, <Term t="finding">findings</Term>, and remediations. Technical findings get prioritized by business impact rather than tracked equally, and the chain from risk to remediation is one auditors can follow end to end. Several of the terms used in this section are often incorrectly used interchangeably. They mean different things, and the distinctions drive how each is handled:
 
-## Exposure Flow
+<div className="row cards-row">
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Threat</h4></div>
+<div className="card__body">
 
-```mermaid
-flowchart LR
-    A[Registry Scope\nAssets and Entities] --> B[Scans]
-    B --> C[Vulnerabilities]
-    B --> D[Findings]
-    C --> E[Remediations]
-    D --> E
-    E --> F[Risks Updated]
-    F --> G[Audit Evidence and Reporting]
-```
+A person, event, or condition capable of causing harm, whether natural (an earthquake, an outage) or human (an attacker, a careless insider). Threats exist whether or not you do anything about them.
 
-## Why It Matters
+</div>
+</div>
+</div>
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Vulnerability</h4></div>
+<div className="card__body">
 
-- Align technical security data with compliance outcomes
-- Prioritize what matters instead of tracking everything equally
-- Show auditors a repeatable risk-to-remediation process
+A weakness in a system, procedure, or control that a threat could exploit. A vulnerability is a condition, not an outcome: it describes what is exploitable, not what has happened.
+
+</div>
+</div>
+</div>
+<div className="col col--4">
+<div className="card">
+<div className="card__header"><h4>Risk</h4></div>
+<div className="card__body">
+
+The exposure that results when a threat could exploit a vulnerability against something you value, assessed by how likely that is and how bad it would be. Risk is what you score, prioritize, and treat.
+
+</div>
+</div>
+</div>
+</div>
+
+At a high level, threats exploit vulnerabilities, and that exposure is risk. [Controls](../compliance-management/controls/overview.mdx) reduce it by preventing, detecting, or correcting; when controls are absent or fail, incidents happen.
+
+These records interconnect rather than flow in one direction. Scans link to the assets and entities they cover; vulnerabilities and findings reference the scans that surfaced them and link directly to risks; remediations connect to the findings, vulnerabilities, scans, and risks they address. Each page in this section describes one record and the connections it carries.
+
+![How exposure records connect](/img/diagrams/risk-ecosystem.png)
+
 
 ## What's in This Section
 
-- [Risks](./risks.mdx) - Define and prioritize business and security risks
+- [Risks](./risks/overview.mdx) - Define and prioritize business and security risks
 - [Scans](./scans.mdx) - Track scan cadence, execution, and coverage context
-- [Vulnerabilities](./vulnerabilities.mdx) - Manage known weaknesses and remediation SLAs
+- [Vulnerabilities](./vulnerabilities/overview.mdx) - Manage known weaknesses and remediation SLAs
 - [Findings](./findings.mdx) - Track observed issues from tooling and reviews
 - [Remediations](./remediations.mdx) - Document and verify corrective actions
-
-## Compliance Significance
-
-- SOC 2: CC5, CC7, CC8, CC9
-- ISO 27001: A.8, A.12, A.16
-- HIPAA: Risk analysis and risk management requirements

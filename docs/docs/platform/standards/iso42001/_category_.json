@@ -1,0 +1,9 @@
+{
+  "label": "ISO 42001",
+  "position": 16,
+  "link": {
+    "type": "doc",
+    "id": "platform/standards/iso42001/overview"
+  },
+  "collapsed": true
+}

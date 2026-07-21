@@ -1,0 +1,94 @@
+---
+title: "CC6.7"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC6.7
+
+<ControlMeta
+  refCode={"CC6.7"}
+  category={"Security"}
+  subcategory={"Logical and Physical Access Controls"}
+  description={"The entity restricts the transmission, movement, and removal of information to authorized internal and external users and processes, and protects it during transmission, movement, or removal to meet the entity’s objectives."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Restricts the Ability to Perform Transmission</summary>
+
+Data loss prevention processes and technologies are used to restrict ability to authorize and execute transmission, movement and removal of information.
+
+</details>
+
+<details>
+<summary>Uses Encryption Technologies or Secure Communication Channels to Protect Data</summary>
+
+Encryption technologies or secured communication channels are used to protect transmission of data and other communications beyond connectivity access points.
+
+</details>
+
+<details>
+<summary>Protects Removal Media</summary>
+
+Encryption technologies and physical asset protections are used for removable media (such as USB drives and backup tapes), as appropriate.
+
+</details>
+
+<details>
+<summary>Protects Endpoint Devices</summary>
+
+Processes and controls are in place to protect endpoint devices (such as mobile devices, laptops, desktops, and sensors).
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Cryptographic Protections | Cryptographic Protections | Documented evidence of organization-approved cryptographic solutions and modules for both data at rest and in transit. |
+| Data Protection | Assigned Responsibilities | Documented evidence of data stewardship being assigned and communicated to individuals entrusted with sensitive and/or regulated data. |
+| Education | Role-Based Training | Documented evidence of specialized user training for privileged users, executives, individuals who handle sensitive/regulated data, etc. |
+
+## Policies
+
+- **[Cryptographic Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/cryptography/cryptography.md)** - Defines requirements for the use of cryptographic controls
+- **[Data Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/data-management/data-management.md)** - Establishes requirements for data classification, handling, and protection
+- **[Mobile Device Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/mobile-device/mobile-device.md)** - Establishes requirements for the secure use of mobile devices
+- **[Network Security Standard](https://raw.githubusercontent.com/theopenlane/policy-hub/main/network-security/network-security.md)** - Defines requirements for securing network infrastructure and communications
+
+## Example Organization Controls
+
+- **CC6.7.1** - System access is restricted to authorized individuals commensurate with their job responsibilities.
+- **CC6.7.2** - Predefined security groups are utilized to assign role-based access privileges and segregate access.
+- **CC6.7.3** - A firewall is in place to filter unauthorized inbound network traffic from the internet.
+- **CC6.7.4** - The firewall is configured to deny any type of network connection that is not explicitly authorized by a firewall rule.
+- **CC6.7.5** - An encrypted VPN is required for remote access to the production network.
+- **CC6.7.6** - Web servers utilize TLS encryption for web communication sessions.
+
+## Example Control Objectives
+
+- **System boundary protection** - System boundaries are defined and access from external sources is controlled.
+
+## Example Control Implementations
+
+- **tailscale-vpn-access** - Infrastructure access is controlled through Tailscale mesh VPN. Implementation includes: - All production infrastructure requires Tailscale connection - Tailscale ACLs restrict access based on user role and team membership - Direct internet access to production infrastructure is prohibited - Device registration required in Tailscale admin console - Devices removed promptly upon employee departure
+- **encryption-at-rest-transit** - All data is encrypted at rest and in transit. Implementation includes: - TLS 1.2+ required for all external connections - Cloudflare provides TLS termination and certificate management - Cloud SQL encryption at rest with Google-managed keys - S3 server-side encryption for evidence storage - Employee devices require full disk encryption (FileVault/BitLocker)
+
+## Example Evidence
+
+- **Role-Based Access Control Matrix** - Access matrix showing system access is restricted to authorized individuals commensurate with job responsibilities using predefined security groups
+- **GCP Firewall Deny-by-Default Ruleset** - Firewall configuration showing unauthorized inbound traffic is filtered and connections are denied unless explicitly authorized
+- **Tailscale Remote Access VPN Configuration** - Encrypted VPN configuration required for remote access to the production network
+- **TLS Configuration Scan Results** - External TLS scan showing web servers enforce TLS encryption for web communication sessions
+
+## Example Findings
+
+- **TLS config out of date** · severity: MEDIUM - TLS 1.0 enabled on public endpoint.
+
+## Example Remediations
+
+- **tls-upgrade-remediation** - Update Cloudflare configuration to disable TLS 1.0 and 1.1, requiring TLS 1.2 or higher for all connections.

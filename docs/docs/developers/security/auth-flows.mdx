@@ -18,7 +18,7 @@ keywords:
 
 ## Login Flows
 
-This section illustrates the major authentication paths supported by Openlane.
+Openlane supports credential, OAuth, passkey, and organization-enforced single sign-on (SSO) login, backed by a WebFinger discovery endpoint and SSO enforcement and provisioning logic. The flows below trace how each login request moves through the handlers, which tells you where to look when debugging a failed login.
 
 ### Credential Login
 
@@ -125,7 +125,7 @@ flowchart TD
     L --> M[User authenticated]
 ```
 
-Single sign-on logic is implemented in `internal/httpserve/handlers/sso.go`:
+SSO logic is implemented in `internal/httpserve/handlers/sso.go`:
 
 - `SSOLoginHandler` checks the organization policy via `fetchSSOStatus` and redirects to the configured IdP.
 - On return, `SSOCallbackHandler` exchanges the authorization code with `rp.CodeExchange` and retrieves the user data.
@@ -189,3 +189,80 @@ sequenceDiagram
         App->>User: Return success response
     end
 ```
+
+## SSO Enforcement & Exemptions
+
+Whether a member must use SSO is decided by `Evaluate` in `pkg/ssoutils/enforcement.go`, fed by `LoadEnforcement` in `pkg/ssoutils/load.go`. `LoadEnforcement` reads the organization setting (`identity_provider_login_enforced`, `multifactor_auth_enforced`, `sso_exempt_domains`) and, when a user id is supplied, the member's `role` and `sso_exempt` flag.
+
+`Evaluate` resolves exemption with first-match precedence, then computes `MustSSO = SSOEnforced && !Exempt`:
+
+```mermaid
+flowchart TD
+    A[Evaluate] --> B{IsOwner?}
+    B -->|yes| X[Exempt: owner]
+    B -->|no| C{MemberExempt?}
+    C -->|yes| Y[Exempt: user_exempt]
+    C -->|no| D{IsMember AND domain in ExemptDomains?}
+    D -->|yes| Z[Exempt: domain_exempt]
+    D -->|no| E[MustSSO = SSOEnforced]
+```
+
+- Two-factor authentication (TFA) is independent: `TFARequired` mirrors `multifactor_auth_enforced` regardless of SSO exemption.
+- The same decision is consulted at every entry point: `login.go` and `oauth_login.go` call `orgEnforcementsForUser` → `fetchSSOStatus`; `switch.go` calls `fetchSSOStatus` for the target org; `webfinger.go` exposes it for the UI. `fetchSSOStatus` (in `sso.go`) only applies the per-user exemptions when a user id is provided, so an `org:`-scoped webfinger lookup reports raw enforcement while an `acct:` lookup reports the specific user's requirement.
+
+## JIT Provisioning
+
+`SSOCallbackHandler` (in `sso.go`) provisions membership after a successful IdP exchange, before the session is issued, via `jitProvisionMembership` (in `ent.go`):
+
+- Runs only when the org has `identity_provider_login_enforced` **and** `identity_provider_jit_provisioning` set.
+- When `jit_allowed_email_domains` is non-empty, the authenticated email's domain must be in the list; otherwise provisioning is skipped.
+- Existing members are left untouched; new memberships are created with the Member role under an org-scoped caller so the membership hooks resolve the organization.
+
+The callback also marks the IdP-verified email confirmed (via `setEmailConfirmed`) before session generation. That confirmation triggers the email-confirmation hook, which drives domain auto-join for **non-enforced** organizations (see below); the enforced target org is joined by just-in-time (JIT) provisioning, not auto-join.
+
+```mermaid
+flowchart TD
+    A[SSO callback: code exchanged, user ensured] --> B[Mark email confirmed]
+    B --> C[Auto-join hook fires for non-enforced matching orgs]
+    A --> D{Enforced AND JIT on?}
+    D -->|no| F[No JIT membership]
+    D -->|yes| E{jit_allowed_email_domains empty OR domain matches?}
+    E -->|yes| G[Create Member membership in the enforced org]
+    E -->|no| F
+    G --> H[Generate session]
+    F --> H
+```
+
+## Domain-Based Membership: Auto-Join vs JIT
+
+`autoJoinOrganizationsForUser` (in `internal/ent/hooks/usersettings.go`) runs from the email-confirmation hook and now filters on `organizationsetting.IdentityProviderLoginEnforced(false)` in addition to `AllowMatchingDomainsAutojoin(true)` and the email domain being contained in `allowed_email_domains`. So:
+
+- **SSO not enforced** → membership by `allowed_email_domains` + auto-join toggle, on email confirmation.
+- **SSO enforced** → auto-join is skipped; membership comes from JIT (`jit_allowed_email_domains`) or an invitation.
+
+The two domain lists are independent fields and never apply simultaneously to the same organization.
+
+## Shareable Per-Org SSO Initiation
+
+`SSOInitiateHandler` (in `sso.go`, route `GET /v1/orgs/:slug_name/sso`, unauthenticated) resolves an organization by `slug_name` and mirrors `SSOLoginHandler`: it sets the `state`/`nonce`/`organization_id` cookies and returns the IdP redirect URL as JSON, rather than redirecting from the API directly. The console proxies it so those cookies are re-set on the UI origin, after which the existing `/login/sso` callback page completes the exchange unchanged.
+
+`slug_name` is derived from the organization name in the create hook (`internal/ent/hooks/organization.go`, `strcase.KebabCase`). The org-setting read inside `oidcConfig` uses an allow context so a non-member can start the flow; the client secret is only used server-side for the code exchange and is never returned.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI as Console
+    participant App as Openlane API
+    participant IdP as Identity Provider
+
+    User->>UI: Open /orgs/{slug}/sso, click Continue
+    UI->>App: GET /v1/orgs/{slug}/sso
+    App->>App: Resolve org by slug, set state/nonce/org cookies
+    App-->>UI: redirect_uri (JSON)
+    UI->>UI: Re-set cookies on UI origin
+    UI->>User: Redirect to redirect_uri
+    User->>IdP: Authenticate
+    IdP-->>User: Redirect to /login/sso callback
+    User->>App: Exchange code, JIT provision, session
+```
+

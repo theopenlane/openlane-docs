@@ -1,0 +1,8 @@
+{
+  "label": "Audit Preparation",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "platform/grc-fundamentals/audit/index"
+  }
+}

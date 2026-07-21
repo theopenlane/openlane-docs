@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"examples":{"success":{"value":{"Token":"token"}}},"schema":{"properties":{"Token":{"description":"The token to be used to unsubscribe, token is sent via email","type":"string"}},"type":"object","title":"UnsubscribeRequest"}}},"description":"Request body"}}

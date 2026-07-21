@@ -1,0 +1,98 @@
+---
+title: Example Evidence
+sidebar_label: Example Evidence
+sidebar_position: 2
+description: Example evidence artifacts for commonly manually evidenced NIST 800-171 control areas
+---
+
+# NIST 800-171 Example Evidence
+
+The table below lists commonly evidenced control areas for National Institute of Standards and Technology (NIST) SP 800-171, grouped roughly by requirement family, and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
+
+| Control Area | Example Evidence |
+| ------------ | ---------------- |
+| Access provisioning | A documented access request ticket or form for a recent new hire showing approval before access was granted |
+| Periodic account reviews | Records of periodic reviews of user, application, and system accounts, including dates, reviewers, and resulting actions |
+| Role-based access definitions | Documented access needs for each role, listing the system components and data each role requires |
+| Dedicated administrative accounts | Policy requiring separate accounts for administrative functions and account configurations showing the separation |
+| Shared and service account management | Business justification and management approval for privileged shared accounts; approvals and audit logs covering any interactive use of service accounts |
+| Access changes for transferred personnel | Access review procedures for reassigned personnel and records of access modifications when roles change |
+| Offboarding and return of assets | Offboarding checklists or tickets showing account deactivation and the return of devices, badges, and tokens for departed personnel |
+| Account lockout | System configurations showing lockout after failed login attempts and the enforced lockout duration; audit logs of administrator unlock actions |
+| Session termination and re-authentication | Screenshots of inactivity timeout and automatic logout settings; policy and configurations requiring periodic or event-driven re-authentication |
+| System use notification | Screenshots of the notice or banner displayed to users before system access |
+| Remote access management | Documented usage restrictions and connection requirements per remote access type; screenshots showing access denied without VPN and permitted with it; logs from remote connection monitoring |
+| Multifactor authentication | System configurations showing multi-factor authentication (MFA) enforced for administrative and standard users, including remote access; documented, management-approved exceptions with justification |
+| Telework and endpoint devices | Information security policy sections covering telework; an inventory of security controls applied to devices that connect to organizational systems, including employee-owned devices where permitted |
+| Mobile device management | Screenshots from the device management console showing enrolled devices, baseline configurations, and enforced security policies |
+| External systems | Policy requiring identification of external systems; a current inventory of external systems handling organizational data; risk assessments, contracts, and security reviews for those systems |
+| Controlled unclassified information (CUI) flow control | Data classification policy; screenshots of technical enforcement such as encryption policies on endpoints and firewall or load balancer rules restricting data flows |
+| Publicly accessible content | Policy designating who may post public content; the list of authorized individuals; training records covering prevention of CUI in public postings; approval workflow records |
+| Devices in high-risk locations | Travel security policy, pre-travel checklists, and device configuration or VPN enforcement evidence for equipment taken to high-risk areas |
+| Security awareness training | Training completion records showing all personnel trained at hire and at least annually; evidence that periodic security updates reach personnel through more than one channel |
+| Insider threat training | Policy establishing insider threat training requirements, the training materials, and completion or attendance records |
+| Role-based security training | Documented security roles, the specialized curriculum for each, completion records for initial and refresher training, and records of periodic program review and update |
+| Secure development training | Secure coding training content and completion records for engineering personnel within the past year |
+| Audit log content | Sample log exports showing that privileged actions, invalid access attempts, and changes to the logging configuration itself are captured |
+| Audit log protection | The list of users with administrative access to log systems; screenshots showing audit trails protected from unauthorized access, modification, and deletion |
+| Automated log review | Log management or security information and event management (SIEM) configuration showing automated correlation and analysis, and a resulting log analysis report |
+| Clock synchronization | Configurations showing critical system clocks synchronized to designated central time sources referenced to UTC |
+| Logging and monitoring policy | The current logging and monitoring policy |
+| Asset inventory | A formal documented asset listing or cloud console screenshots covering in-scope infrastructure, including device identifiers |
+| CUI inventory | Policy requiring a CUI inventory; the current inventory identifying where CUI is processed and stored; evidence of periodic review and update |
+| Configuration baselines | Documented server and system configuration standards that include required security parameter settings |
+| Least functionality | Screenshots showing only necessary services and functions enabled on in-scope components |
+| Software restrictions | Evidence of mechanisms preventing installation and execution of unauthorized software, such as allowlisting configurations |
+| Software and library inventory | Output from software composition analysis tooling showing a software bill of materials for in-scope applications |
+| Change management | Ticketing records showing changes tested and approved by appropriate personnel before release; documented emergency change procedures; security impact assessments for changes |
+| Identifier management | Directory or identity and access management (IAM) screenshots showing unique identifiers per user; termination checklists showing identifiers disabled on departure |
+| Password management | Password policy; screenshots of complexity, minimum character change, and first-use forced change settings; change records for system and application account passwords; documentation of resets after suspected compromise |
+| Credential storage and transmission | Screenshots or configuration evidence showing passwords stored as salted hashes and protected with strong cryptography in transit |
+| Identity verification before credential changes | Policy or procedure requiring identity verification before password resets or new credential issuance |
+| Obscured authentication feedback | A screenshot of the login interface showing authentication feedback masked during entry |
+| Device authentication | Policies covering device identification; the asset inventory with device identifiers; authentication logs showing device-level authentication |
+| Incident response capability | The approved incident response plan; evidence of detection and analysis capability; the documented list of incident response team members with their responsibilities and authority |
+| Incident response training and testing | Training records for responders, records of periodic review of the training content, and the report from the most recent tabletop or other incident response test |
+| Incident tracking and lessons learned | Records from the tracking system used to log incidents, including root cause analysis and documented lessons learned |
+| Incident reporting | Incident response procedures identifying the authorities to notify, the triggering events, and communication methods; breach notification procedures and the notification template |
+| Evidence collection | Incident response procedures covering the collection and preservation of evidence |
+| Security group engagement | Evidence of contact with professional groups and advisories, such as memberships, subscription records, or conference participation |
+| Maintenance management | The current maintenance management policy |
+| Remote and third-party maintenance | Approval and monitoring records for remote maintenance sessions, logs showing session termination, the list of authorized maintenance personnel, and supervision assignments for unescorted personnel |
+| Diagnostic media verification | Procedures requiring media containing diagnostic programs to be checked for malicious code before use, and records of those checks |
+| Media protection | Policies for physically securing media, including computers and removable media; photographs of secure storage; documented review of offsite backup storage security within the last year |
+| CUI marking | Media marking policy, samples of marked media, and related training records |
+| Media transport and inventory | Management approval records for media movement; the media inventory or register with assigned owners |
+| Media sanitization | Certificates of destruction or screenshots demonstrating secure disposal of media before reuse or release |
+| Removable media restrictions | Policy restricting removable media to authorized types, technical enforcement evidence, and personnel acknowledgments |
+| Personnel screening | Artifacts from the formal screening process, such as background check records, applicant tracking exports, or documented interview evaluations |
+| Physical entry controls | Photographs showing badge readers or lock-and-key controls at entry points, video monitoring of entry and exit points, and tamper protection for those mechanisms; procedures for reviewing access logs and camera data; an inventory of physical access devices such as badges and keys |
+| Visitor management | Records or observation evidence of visitors being badged and escorted within facilities |
+| Physical protection of infrastructure | Evidence that access to network hardware such as wireless access points and communications equipment is restricted; physical access approvals and logs for locations where system changes occur |
+| System security plan | Policy requiring system security plan (SSP) development and maintenance; the completed SSP; evidence of periodic review and update |
+| Plans of action and milestones | The current Plan of Action and Milestones (POA&M) records with periodic review and update evidence |
+| Documented operating procedures | The documented operating procedures for in-scope systems, typically maintained within the security policy set |
+| Risk assessment | The risk assessment methodology, completed assessments covering systems handling CUI, and records of periodic review with management approval |
+| Vulnerability management | The vulnerability management policy; remediation documentation for high-risk findings and rescan reports confirming resolution |
+| Penetration testing | The report from the most recent penetration test |
+| Independent assessments | Internal audit reports or other periodic independent assessment results, with corrective action plans and evidence of their completion |
+| Cloud security posture | Cloud security monitoring configuration, recent configuration scan reports, and remediation tickets for findings |
+| Acquisition security | The system and services acquisition policy; executed third-party agreements containing security and privacy requirements, such as data processing or service provider agreements |
+| Boundary protection | Firewall and router configuration standards with screenshots showing compliance; network diagrams showing separation between internal networks and untrusted networks; anti-spoofing configurations; testing and approval procedures for network connections |
+| Data flow documentation | A finalized data flow diagram for the environment handling CUI, including the date it was last updated |
+| Separate environments | Screenshots demonstrating separation between test and production environments |
+| Encrypted administrative access | Configuration screenshots showing non-console administrative access is encrypted |
+| Cryptographic standards | Policy requiring Federal Information Processing Standards (FIPS)-validated cryptography for protecting CUI and system configurations showing compliant algorithms in use |
+| Key management | Documented key management procedures covering strong key generation, replacement of known or suspected compromised keys, and validation of keys and certificates, with configuration evidence |
+| Wireless security | An inventory of authorized wireless access points with business justification for each; procedures for detecting unauthorized access points; configurations showing strong encryption on wireless networks and vendor default credentials replaced |
+| Session protection | Policy and configurations providing session-level authentication protections, with supporting test results |
+| Collaborative devices and mobile code | Policy prohibiting remote activation of collaborative computing devices, with configuration screenshots; policy defining acceptable mobile code, with enforcement configurations and scan reports |
+| Email protection | Screenshots showing Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) configured for organizational domains |
+| Malware protection | Screenshots from the anti-malware console showing deployment across in-scope components, automatic signature updates, and both periodic and real-time scanning enabled |
+| Patch management | Vendor patch lists and screenshots showing critical security patches installed on in-scope systems |
+| Threat detection and monitoring | Screenshots showing intrusion detection or prevention capability enabled, such as cloud-native threat detection services; network traffic monitoring configurations and evidence of unusual traffic detection and response |
+| Security tool failure handling | Alert configurations for failures of critical security controls such as firewalls, intrusion detection and prevention systems (IDS/IPS), and anti-malware; documented response procedures covering restoration, root cause analysis, and remediation |
+| Application security testing | CI/CD pipeline screenshots showing static analysis and software composition analysis scans executing automatically against in-scope repositories |
+| Secure information transfer | The data protection policy covering secure transfer of information, and technical controls preventing unauthorized transfer via shared system resources |
+| Vendor management | A centralized vendor inventory; executed vendor agreements; evidence of ongoing monitoring such as System and Organization Controls 2 (SOC 2) reports, International Organization for Standardization (ISO) 27001 certificates, or completed security questionnaires from critical vendors |
+| Supply chain risk management | The documented supply chain risk management plan and policies; completed supply chain risk assessments with periodic review records; supplier contracts containing security clauses; evidence the program feeds enterprise risk management |

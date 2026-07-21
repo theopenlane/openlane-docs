@@ -1,0 +1,71 @@
+---
+title: "A1.3"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# A1.3
+
+<ControlMeta
+  refCode={"A1.3"}
+  category={"Availability"}
+  subcategory={"Additional Criteria for Availability"}
+  description={"The entity tests recovery plan procedures supporting system recovery to meet its objectives."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Implements Business Continuity Plan Testing</summary>
+
+Business continuity plan testing is performed on a periodic basis to test the entity's ability to respond, recover from, and resume operations through significant disruptions. Testing includes (1) development of testing scenarios based on threat likelihood and magnitude; (2) consideration of system components from across the entity and vendors that can impair availability; (3) scenarios that consider the potential for the lack of availability of key personnel or vendors; and (4) revision of continuity plans and systems based on test results.
+
+</details>
+
+<details>
+<summary>Tests Integrity and Completeness of Back-Up Data</summary>
+
+The integrity and completeness of back-up information is tested on a periodic basis.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Business Continuity | Continuity of Operations Plan (COOP) Testing | Documented evidence of a COOP-related testing activity. |
+| Business Continuity | COOP Training | Documented evidence of a COOP-related training activity. |
+
+## Policies
+
+- **[System Availability Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/availability/availability.md)** - Defines requirements for proper controls to protect the availability of the organization's information systems
+- **[Business Continuity Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/business-continuity/business-continuity.md)** - Defines the framework for maintaining business operations during disruptions
+
+## Example Organization Controls
+
+- **A1.3.1** - A business continuity plan is documented and outlines the range of disaster scenarios and steps that the business will take to ensure the resumption of critical business operations.
+- **A1.3.2** - Backup systems are in place to perform scheduled backups of production databases at predefined times.
+- **A1.3.3** - Data backup restoration tests are performed at least annually.
+
+## Example Control Objectives
+
+- **Data recovery capability** - Data backup and recovery procedures ensure timely restoration of services.
+
+## Example Control Implementations
+
+- **database-backup-recovery** - Database backups are automated with point-in-time recovery capability. Implementation includes: - Cloud SQL automated backups with 30-day retention - Point-in-time recovery enabled for production database - Backups stored in GCS with encryption - Annual DR test validates recovery procedures - recovery time objective (RTO): 4 hours, recovery point objective (RPO): 1 hour
+
+## Example Evidence
+
+- **Backup Restoration Test Results** - Documentation of quarterly backup restoration test including time measurements and verification steps
+- **Disaster Recovery Test Report** - Annual DR test documentation including scenario, results, and lessons learned
+
+## Example Action Plans
+
+- **Annual disaster recovery test** - Annual full disaster recovery test to validate RTO/RPO objectives and recovery procedures. Tests database restore, application deployment, and failover capabilities.
+
+## Example Remediations
+
+- **backup-verification-remediation** - Conduct and document quarterly backup restore tests to verify data recovery capabilities meet RTO/RPO objectives.

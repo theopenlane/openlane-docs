@@ -1,89 +1,61 @@
 ---
 sidebar_position: 1
 sidebar_label: Openlane API
-title: Openlane API Documentation - GraphQL & REST API Guide
-description: Complete guide to using the Openlane API including GraphQL queries, mutations, REST endpoints, authentication, and integration examples for compliance management
+title: Using the Openlane GraphQL API
+description: The GraphQL API is the primary programmatic interface to Openlane
 keywords:
   - Openlane API
   - GraphQL API
-  - REST API
   - API documentation
   - API authentication
-  - GraphQL queries
-  - GraphQL mutations
-  - API integration
-  - compliance API
-  - API reference
   - GraphQL explorer
-  - API endpoints
   - token authentication
-  - API tutorial
-  - developer API
 tags:
     - api
-    - openapi
-    - graphapi
     - graphql
-    - openlane-api
-    - rest
 ---
-
-<head>
-  <meta name="keywords" content="Openlane API, GraphQL API, REST API, API documentation, authentication, API integration" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:title" content="Openlane API Documentation - GraphQL & REST API Guide" />
-  <meta property="og:description" content="Complete guide to using the Openlane API including GraphQL and REST endpoints, authentication, and integration examples" />
-  <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://docs.theopenlane.io/docs/api/graph-api" />
-  <script type="application/ld+json">
-    {JSON.stringify({
-      '@context': 'https://schema.org/',
-      '@type': 'TechArticle',
-      headline: 'Using the Openlane API',
-      description: 'Complete guide to GraphQL and REST API integration with Openlane platform',
-      keywords: ['Openlane API', 'GraphQL', 'REST API', 'API documentation', 'authentication'],
-      author: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      }
-    })}
-  </script>
-</head>
 
 # Using the Openlane API
 
-## Using the GraphQL API
+The GraphQL API is the primary programmatic interface to Openlane: every object you work with in the console (controls, risks, campaigns, vendors, evidence) is available through a single endpoint with a strongly typed schema. A smaller [REST API](../rest-api/openlane-openapi-3-1-1-specifications.info.mdx) covers authentication flows, account operations, and System for Cross-domain Identity Management (SCIM) provisioning.
 
-To use the GraphQL API, you can refer to the schema available in the [Openlane GraphQL Documentation](docs/api/graph-api/queries.md). This schema provides detailed information about the types, queries, and mutations that you can use to interact with the Openlane API.
+## Endpoint and Authentication
 
-For an interactive experience, you can explore the GraphQL API using the [GraphQL Explorer](/graphql). This tool allows you to construct and test queries in real-time, making it easier to understand the capabilities of the API and how to use it effectively.
+All GraphQL operations are HTTP POST requests to:
 
-## Using the REST API
+```
+https://api.theopenlane.io/query
+```
 
-To use the REST API, you can refer to the endpoints available in the [Openlane REST API Documentation](docs/api/rest-api/openlane-openapi-3-1-1-specifications.info.mdx). This documentation provides detailed information about the available endpoints, request methods, parameters, and responses.
-
-## Authentication
+Authenticate with a bearer token in the `Authorization` header. Two token types exist: organization-scoped **API tokens** for integrations and automation, and user-scoped **personal access tokens** for personal tooling; [Programmatic Access](/docs/platform/settings/authentication/programmatic) covers creating each and when to use which.
 
 :::info
-   In order to create any tokens, your organization must have a payment method on file
+Creating tokens requires your organization to have a payment method on file.
 :::
 
-All Openlane APIs use token-based authentication. You need to include an `Authorization` header with your token in each request:
-
+```bash
+curl -H "Authorization: Bearer $OPENLANE_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"query": "query { organizations { edges { node { id displayName } } } }"}' \
+  https://api.theopenlane.io/query
 ```
-Authorization: Bearer YOUR_ACCESS_TOKEN
-```
 
-### Example Request
+## Exploring the Schema
 
-Here is an example of how to make a GET request to retrieve a list of resources using `curl`:
+The schema is large (every object, filter, and mutation in the platform), so the right way to browse it is interactively rather than through static pages. The [GraphQL Explorer](/graphql) gives you the full, always-current schema with search, documentation for every field, and a query builder you can run authenticated requests from: set your `Authorization` header in the Headers tab and everything you compose runs against your real organization.
 
-```sh
-curl -X GET "https://api.theopenlane.io/v1/account/roles/organization -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
-```
+For the recurring patterns that apply across the whole schema (pagination, filtering, ordering, mutations, and bulk operations), see [Schema Conventions](./conventions.mdx); one read covers the machinery every query shares.
+
+## Worked Examples
+
+Per-domain examples with complete queries and mutations live in the developer docs:
+
+- [Organizations](/docs/developers/graphql-examples/organizations), [Groups](/docs/developers/graphql-examples/groups), and [Permissions](/docs/developers/graphql-examples/permissions)
+- [Controls](/docs/developers/graphql-examples/controls), [Evidence](/docs/developers/graphql-examples/evidence), and [Programs](/docs/developers/graphql-examples/programs)
+- [Risks](/docs/developers/graphql-examples/risks) and [Tasks](/docs/developers/graphql-examples/tasks)
+
+The object pages throughout the platform docs also carry `Examples` sections with CSV, GraphQL, Go client, and CLI variants for their object.
+
+## Clients
+
+The [Go client](https://github.com/theopenlane/go-client) is generated from this schema and is what the [CLI](https://github.com/theopenlane/core/releases) is built on. For other languages, any standard GraphQL client works against the endpoint; introspection is enabled, so codegen tooling can generate types directly from the API.

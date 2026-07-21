@@ -1,0 +1,91 @@
+---
+title: NIST 800-53
+sidebar_label: Overview
+sidebar_position: 1
+description: Overview of NIST 800-53 compliance including security controls, risk management framework, Revision 5 highlights, and implementation guidelines for federal information systems
+keywords:
+  - NIST 800-53 compliance
+  - NIST cybersecurity framework
+  - federal information systems
+  - security controls
+  - risk management framework
+  - access management
+  - NIST
+tags:
+  - NIST
+  - compliance
+  - cybersecurity
+---
+
+import StandardMeta from '@site/src/components/StandardMeta';
+import Term from '@site/src/components/Term';
+
+# Security and Privacy Controls for Information Systems and Organizations (NIST 800-53)
+
+NIST 800-53 outlines a set of security controls for federal information systems, designed to protect the confidentiality, integrity, and availability of data by mitigating risks from various threats through specific controls like access management, awareness training, and incident response procedures.
+
+<StandardMeta
+  fullName={"NIST SP 800-53, Security and Privacy Controls for Information Systems and Organizations"}
+  type={"Framework (control catalog)"}
+  source={"NIST Special Publication 800-53 Revision 5"}
+  established={"2005; current Revision 5 (2020)"}
+  managedBy={"NIST"}
+  appliesTo={"US federal agencies, contractors, and FedRAMP cloud providers"}
+  certification={"No: assessed through FISMA and FedRAMP authorization processes"}
+/>
+
+## Risk-based approach
+
+The framework encourages organizations to assess their risks and implement controls based on their specific needs and environment.
+It is primarily used by US government agencies to ensure compliance with security regulations.
+
+## Control Categories
+
+The NIST 800-53 standard organizes its security controls into the following families:
+
+| Family ID | Family |
+| --------- | ------ |
+| AC | Access Control |
+| AT | Awareness and Training |
+| AU | Audit and Accountability |
+| CA | Assessment, Authorization and Monitoring |
+| CM | Configuration Management |
+| CP | Contingency Planning |
+| IA | Identification and Authentication |
+| IR | Incident Response |
+| MA | Maintenance |
+| MP | Media Protection |
+| PE | Physical and Environmental Protection |
+| PL | Planning |
+| PM | Program Management |
+| PS | Personnel Security |
+| PT | PII Processing and Transparency |
+| RA | Risk Assessment |
+| SA | System and Services Acquisition |
+| SC | System and Communications Protection |
+| SI | System and Information Integrity |
+| SR | Supply Chain Risk Management |
+
+## Revision 5
+
+NIST Special Publication 800-53 Revision 5, titled "Security and Privacy Controls for Information Systems and Organizations," is the current version of the catalog. The changes from Revision 4 are structural. The word "federal" was dropped from the title because the catalog is now written for any organization that adopts it, not just federal agencies. Control statements became outcome-based: "the organization" was removed as the subject of each control, so a control now states what must be achieved rather than which entity does it. Privacy controls, formerly a separate appendix, were integrated into the main catalog, and two new families were added, Supply Chain Risk Management (SR) and PII Processing and Transparency (PT). The control baselines moved out of the catalog into a companion publication, covered below.
+
+For more details, see the [official NIST SP 800-53 Revision 5 publication](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final).
+
+## Companion Publications
+
+Two companion documents shape how the catalog is applied in practice. NIST SP 800-53B defines the low, moderate, and high impact control baselines (plus a privacy baseline) that determine which controls apply to a given system, and NIST SP 800-53A defines the assessment objectives and procedures assessors use to verify that each control is implemented as intended. If you are preparing for a FISMA or FedRAMP assessment, the 800-53A assessment objectives are what your <Term t="evidence">evidence</Term> will be judged against.
+
+## System Security Plans
+
+The Planning (PL) family expects each in-scope system to have a system security plan (SSP): a formal document describing the system and the controls that protect it. An effective SSP:
+
+- Defines the <Term t="system-boundaries">system boundary</Term>, identifying which components are inside it
+- Records the system's security categorization for confidentiality, integrity, and availability, following Federal Information Processing Standards (FIPS) 199 and NIST SP 800-60
+- Describes the system's operational context and its relationships to other systems
+- Summarizes the security requirements and lists the controls in place or planned to meet them
+- Is approved by an authorizing official, reviewed at least annually, and kept consistent with your enterprise architecture
+
+We recommend treating the SSP as a living document: distribute it to the personnel who need it, protect it from unauthorized access, and update it as the system and its controls change. The controls it describes should reflect a defense-in-depth approach, with multiple coordinated layers rather than reliance on any single safeguard.
+
+For the artifacts that typically satisfy manually evidenced control areas, see [Example Evidence](./example-evidence.mdx).

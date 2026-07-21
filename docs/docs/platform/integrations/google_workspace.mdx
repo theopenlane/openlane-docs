@@ -3,38 +3,44 @@ title: Google Workspace
 description: Google Workspace integration guide for directory metadata and identity governance
 sidebar_position: 11
 sidebar_label: Google Workspace
+compliance:
+  - "SOC 2 CC6"
+  - "SOC 2 CC6.2"
+  - "SOC 2 CC6.3"
+  - "ISO 27001:2022 A.5.15-A.5.18"
 ---
+
+import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # ![google workspace integration](./assets/google_workspace.png) Google Workspace Integration Guide
 
-If your organization uses Google Workspace for identity and collaboration, this integration pulls directory data into Openlane so you have the user and group context you need for User Access Reviews, onboarding/offboarding evidence, and identity governance (SOC 2: CC6, ISO 27001: A.9).
+If your organization uses Google Workspace for identity and collaboration, this integration pulls directory data into Openlane so you have the user and group context you need for User Access Reviews, onboarding/offboarding <Term t="evidence">evidence</Term>, and identity governance.
 
 ## Key Capabilities
 
 - **OAuth Connectivity Validation:** Confirms Workspace token access and directory API availability.
-- **Directory Metadata Sync:** Reads user directory data and group memberships, giving you the identity baseline for access reviews and audits (SOC 2: CC6.2, CC6.3).
-- **Scoped Directory Collection:** Supports optional OU filtering so you only collect identities within your compliance boundary.
+- **Directory Metadata Sync:** Reads users, groups, and group memberships from the Workspace directory, giving you the identity baseline for access reviews and audits.
+- **Scoped Directory Collection:** Supports optional organizational unit (OU) filtering so you only collect identities within your compliance boundary.
 
 ## Prerequisites
 
 - Google Workspace super admin account to authorize directory access during OAuth.
 - Admin SDK API enabled in your Google Cloud project.
 
-## Supported Operations
-
-| Operation | Description |
-|---|---|
-| `DirectorySync` | Collect Google Workspace directory users, groups, and memberships and emit directory ingest envelopes |
-
 ## Step-by-Step Setup
 
 ### Step 1: Authorize Google Workspace
 
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations** and find **Google Workspace**.
 2. Click **Configure**.
-3. Click **Continue to Authorization** — you will be redirected to Google. There are no credentials to enter manually.
+3. Click **Continue to Authorization**. You will be redirected to Google. There are no credentials to enter manually.
 4. Sign in with a Workspace super admin account and grant the requested directory permissions.
 5. After authorization, you are redirected back to Openlane and the connection is saved.
+
+</Steps>
 
 ### Step 2: Configure Sync Behavior
 
@@ -44,8 +50,8 @@ Optionally configure which data is collected and how records are filtered before
 
 | Setting | Description |
 |---|---|
-| **Primary Directory** | Designate this connection as the primary directory source for your organization — the primary directory is the authoritative source that populates the majority of fields on identity holder records |
-| **Filter Expression** | Optional CEL expression evaluated against each record — only records that match are ingested (allows inclusion) |
+| **Primary Directory** | Designate this connection as the primary directory source for your organization; the primary directory is the authoritative source that populates the majority of fields on identity holder records |
+| **Filter Expression** | Optional Common Expression Language (CEL) expression evaluated against each record; only records that match are ingested (allows inclusion) |
 
 Filter expression example:
 
@@ -57,19 +63,23 @@ CEL expressions have access to the full raw payload for each record via `payload
 
 ## Validate Connection
 
-After saving, Openlane runs a health check against Google Workspace and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+After saving, Openlane runs a health check against Google Workspace and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
 
 ## What Openlane Syncs
 
-Openlane reads directory user metadata, group memberships, and identity context. This data feeds directly into User Access Reviews, onboarding/offboarding verification, and identity scope validation. Saves you from manually compiling identity rosters when an auditor asks for SOC 2 CC6 (logical and physical access) or ISO 27001 A.9 (access control) evidence.
+Openlane reads directory user metadata, group memberships, and identity context. This data feeds directly into User Access Reviews, onboarding/offboarding verification, and identity scope validation. This saves you from manually compiling identity rosters when an auditor asks for access control evidence.
 
 ## Disconnect
 
 
 To remove this integration:
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations**
 1. Select the **Installed** tab
 1. Open the menu on the integration card and select **Disconnect**.
+
+</Steps>
 
 This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
 

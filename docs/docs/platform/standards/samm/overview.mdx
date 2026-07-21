@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Software Assurance Maturity Model (SAMM)
+sidebar_label: Overview
 sidebar_position: 1
 description: Overview of SAMM compliance including maturity levels, assessment framework, and implementation strategies for software security
 keywords:
@@ -18,13 +19,25 @@ tags:
   - compliance
 ---
 
-# Overview
+import StandardMeta from '@site/src/components/StandardMeta';
 
-SAMM compliance refers to adhering to the guidelines set by the "Software Assurance Maturity Model" (SAMM), a framework developed by the Open Web Application Security Project (OWASP) that helps organizations assess and improve their software security practices by evaluating their maturity level across different security aspects, allowing them to identify areas for improvement and work towards a higher level of software security compliance; essentially, it means actively working to achieve a mature and robust software security posture according to the SAMM model.
+# Software Assurance Maturity Model (SAMM)
+
+The Software Assurance Maturity Model (SAMM) helps organizations assess and improve their software security practices. Because SAMM is a maturity model rather than a certification, compliance means scoring your current practices against its defined maturity levels and choosing where to improve next.
+
+<StandardMeta
+  fullName={"Software Assurance Maturity Model"}
+  type={"Framework (maturity model)"}
+  source={"OWASP SAMM v2"}
+  established={"2009 (OpenSAMM 1.0); current version 2.0 (2020)"}
+  managedBy={"Open Web Application Security Project (OWASP) Foundation"}
+  appliesTo={"Organizations assessing and improving software security practices"}
+  certification={"No: self-assessment"}
+/>
 
 ## Maturity levels
 
-The framework defines different maturity levels for various security practices, allowing organizations to measure their current state and progress towards a higher level of security.
+SAMM organizes software security into five business functions: Governance, Design, Implementation, Verification, and Operations. Each function contains three security practices, and each practice defines three maturity levels, progressing from initial ad hoc activity at level 1 to comprehensive, measured practice at level 3. A score of 0 means the practice is not performed.
 
-SAMM organizes security practices into different business functions like Governance, Design, Implementation, Verification, and Operations, providing a structured approach to security assessment.
+To assess itself, a team answers the assessment questions for each practice and records a score from 0 to 3 per practice. The team then sets a target score for each practice based on its risk profile, builds an improvement roadmap to close the gaps between current and target scores, and reassesses on a regular cadence to measure progress.
 

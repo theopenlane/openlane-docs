@@ -3,15 +3,22 @@ title: Cloudflare
 description: Cloudflare integration guide for infrastructure visibility and access context
 sidebar_position: 6
 sidebar_label: Cloudflare
+compliance:
+  - "SOC 2 CC6.6"
+  - "SOC 2 CC6.7"
+  - "ISO 27001:2022 A.8.20-A.8.22"
 ---
+
+import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
 
 # ![cloudflare integration](./assets/cloudflare.png) Cloudflare Integration Guide
 
-If your traffic runs through Cloudflare, this integration connects your account and zone configuration to Openlane so you have visibility into your network boundary controls (SOC 2: CC6.6, CC6.7; ISO 27001: A.13).
+If your traffic runs through Cloudflare, this integration connects your account and zone configuration to Openlane so you have visibility into your network boundary controls.
 
 ## Key Capabilities
 
-- **Infrastructure Visibility:** Connects account and zone scope metadata to Openlane, supporting evidence for network security controls (SOC 2: CC6.6, CC6.7).
+- **Infrastructure Visibility:** Connects account and zone scope metadata to Openlane, supporting <Term t="evidence">evidence</Term> for network security controls.
 - **Read-Only API Access:** Validates token health without changing your Cloudflare configuration.
 - **Scoped Connection Options:** Limit collection scope by account and optional zone selection so you only pull what falls within your compliance boundary.
 
@@ -24,54 +31,64 @@ If your traffic runs through Cloudflare, this integration connects your account 
 
 ### Step 1: Create a Cloudflare API Token
 
+<Steps>
+
 1. In Cloudflare, go to **Manage Account** > **API tokens**.
 2. Click **Create Token** and build a custom token with read scopes for the resources you want Openlane to access.
-3. Save the token value — it is only shown once.
+3. Save the token value; it is only shown once.
+
+</Steps>
 
 :::warning
-Create an **Account API Token**, not a User API Token. User tokens are tied to an individual account and will break if that user is removed.
+We recommend creating an **Account API Token** rather than a User API Token, because user tokens are tied to an individual account and will break if that user is removed.
 :::
 
 ### Step 2: Connect in Openlane
 
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations** and find **Cloudflare**.
 2. Click **Configure** and enter the credential fields:
 
-| Field | Required | Description |
-|---|---|---|
-| `apiToken` | Yes | API token scoped to your Cloudflare account and zones |
-| `accountId` | Yes | Cloudflare account ID required for listing account members |
+   | Field | Required | Description |
+   |---|---|---|
+   | `apiToken` | Yes | API token scoped to your Cloudflare account and zones |
+   | `accountId` | Yes | Cloudflare account ID required for listing account members |
 
 3. Optionally configure data ingestion behavior:
 
-#### Configuration
+   | Setting | Description |
+   |---|---|
+   | **Filter Expression** | Common Expression Language (CEL) expression evaluated against each record; only records that match are ingested |
 
-| Setting | Description |
-|---|---|
-| **Filter Expression** | CEL expression evaluated against each record — only records that match are ingested |
+   Filter expression example:
 
-Filter expression example:
-
-```
-payload.status = 'ACTIVE'
-```
+   ```
+   payload.status == 'ACTIVE'
+   ```
 
 4. Click **Save & Connect**.
 
+</Steps>
+
 ## Validate Connection
 
-After saving, Openlane runs a health check against Cloudflare and displays the result on the **Installed** tab of the Integrations page. A **Healthy** badge confirms connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+After saving, Openlane runs a health check against Cloudflare and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
 
 ## What Openlane Syncs
 
-Openlane validates your token and records account and zone scope context. This data feeds into your boundary protection evidence for SOC 2 CC6.6 and CC6.7, and supports network security management controls under ISO 27001 A.13.
+Openlane validates your token and records account and zone scope context. This data feeds into your boundary protection evidence when an auditor asks how you manage network security controls.
 
 ## Disconnect
 
 To remove this integration:
+<Steps>
+
 1. Navigate to **Organization Settings** > **Integrations**
 1. Select the **Installed** tab
 1. Open the menu on the integration card and select **Disconnect**.
+
+</Steps>
 
 This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
 

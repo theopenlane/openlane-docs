@@ -1,0 +1,80 @@
+---
+title: Create New Schema
+description: Generate GraphQL and API layers from Ent schema changes
+sidebar_position: 1
+sidebar_custom_props:
+    icon: NetworkIcon
+keywords:
+    - entgo
+    - ent
+    - schema creation
+    - database schema
+tags:
+    - ent
+    - schema
+    - development
+    - database
+---
+
+# Creating a New Schema
+
+Workflow for generating a new schema and its CRUD resolvers. Read the [code generation ordering gotcha](./gotchas.mdx#ordering) first; it will save you a failed first run.
+
+## Create a New Schema File
+
+```bash
+task db:newschema -- MyNewSchema
+```
+
+## Update the Templated Schema
+
+The file will be located in `internal/ent/schema/`, the file name matching the schema name. Work through the template:
+
+* Add [fields](https://entgo.io/docs/schema-fields) to the schema
+* Add [edges](https://entgo.io/docs/schema-edges) for 1:1, 1:m, or m:m relationships with other objects
+* Add [indexes](https://entgo.io/docs/schema-indexes) where needed
+* Review and update the [annotations](https://entgo.io/docs/schema-annotations) on the templated schema
+* Add [hooks](https://entgo.io/docs/hooks/) for mutations and [interceptors](https://entgo.io/docs/interceptors) for queries; see [Hooks and Interceptors](./hooks-and-interceptors.mdx)
+* Review and update the [privacy](https://entgo.io/docs/privacy) policy on the templated schema
+
+:::note[Example]
+A common index pattern in our codebase allows soft-deleted names to be reused even when the name must be unique:
+
+```go
+index.Fields("name").
+    Unique().Annotations(entsql.IndexWhere("deleted_at is NULL")),
+```
+:::
+
+## Generate the CRUD Resolvers
+
+```bash
+task generate
+```
+
+This will take a few minutes the first time. The main tools that run:
+
+| Tool | Generates |
+|---|---|
+| `entc` | ORM code for the schema: field getters and setters, create/update/delete operations against the database |
+| `gqlgen` | GraphQL resolvers and basic query generation |
+| `gqlgenc` | The Go API client, from the queries in `internal/graphapi/query` |
+| [`gencmd`](https://github.com/theopenlane/core/blob/main/pkg/gencmd/README.md) | Base CRUD operations for CLI commands |
+
+## Generate the Migrations
+
+Generate the goose and atlas migrations based on the ent schema changes:
+
+```bash
+task db:create
+```
+
+## Stub Out the CRUD CLI Commands
+
+```bash
+task cli:generate
+```
+
+:::info
+The cli flags for create and update, along with field output (in `root.go`), will need to be manually updated
+:::

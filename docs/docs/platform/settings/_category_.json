@@ -1,0 +1,9 @@
+{
+  "label": "Settings",
+  "position": 11,
+  "link": {
+    "type": "doc",
+    "id": "platform/settings/overview"
+  },
+  "collapsed": true
+}

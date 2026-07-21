@@ -1,0 +1,9 @@
+{
+  "label": "FedRAMP",
+  "position": 18,
+  "link": {
+    "type": "doc",
+    "id": "platform/standards/fedramp-rev5-moderate/overview"
+  },
+  "collapsed": true
+}

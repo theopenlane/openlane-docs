@@ -1,0 +1,43 @@
+---
+title: Migrations and DB
+description: Database drivers, migration tooling, and local DB setup
+sidebar_position: 3
+---
+
+# Migrations and DB
+
+Openlane uses schema-driven development backed by PostgreSQL.
+
+## Stack
+
+| Tool | Role |
+|---|---|
+| [ent](https://entgo.io/) | Schema modeling |
+| [atlas](https://atlasgo.io/) | Schema diffing and migration generation |
+| [goose](https://github.com/pressly/goose) | Migration execution support |
+
+Supported database drivers are `pgx` and `postgres` (lib/pq).
+
+## Local Configuration Example
+
+```yaml
+db:
+  debug: true
+  driver_name: pgx
+  primary_db_source: "postgres://postgres:password@postgres:5432?sslmode=disable"
+  run_migrations: true
+```
+
+## Migration Workflow
+
+Generate migrations after schema changes:
+
+```bash
+task db:create
+```
+
+This writes the atlas and goose migrations under [`db/`](https://github.com/theopenlane/core/tree/main/db) in core; see the [db README](https://github.com/theopenlane/core/blob/main/db/README.md) for tooling details and [MIGRATION.md](https://github.com/theopenlane/core/blob/main/db/MIGRATION.md) for the v2 permissions tuple migration.
+
+:::info
+For new schemas, follow the [codegen flow](./graphql-and-codegen.mdx) first, then generate migrations
+:::

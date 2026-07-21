@@ -7,6 +7,8 @@ sidebar_label: Overview
 
 # Integrations Overview
 
+We built integrations to connect the tools you already run, such as identity providers, cloud platforms, code hosts, and collaboration tools, so their data feeds directly into Openlane. Each provider below links to its setup guide.
+
 To manage integrations, navigate to **Organization Settings** > **Integrations**. The page is organized into three tabs:
 
 - **All:** available integrations you can connect now.
@@ -15,27 +17,24 @@ To manage integrations, navigate to **Organization Settings** > **Integrations**
 
 Use the search bar to filter by name, description, or tags. Select a provider from the list below for its setup guide.
 
+Some integrations accept a filter expression to narrow which records they ingest; see [Writing CEL Expressions](./cel) for a tutorial and common recipes.
+
 ## Providers
 
-| Provider Spec | Category | Auth Model | Guide |
-|---|---|---|---|
-| `authentik` | identity | `apikey` | [Authentik](./authentik) |
-| `aws` | cloud | `aws_sts` | [AWS](./aws) |
-| `aws_security_hub` | cloud | `aws_sts` | [AWS](./aws) |
-| `aws_config` | compliance | `aws_sts` | [AWS](./aws) |
-| `aws_iam` | identity | `aws_sts` | [AWS](./aws) |
-| `azure_entra_id` | identity | `oauth2` | [Azure Entra ID](./azure_entra_id) |
-| `azure_security_center` | compliance | `oauth2` | [Microsoft Defender for Cloud](./azure_security_center) |
-| `buildkite` | ci | `apikey` | [Buildkite](./buildkite) |
-| `cloudflare` | security | `apikey` | [Cloudflare](./cloudflare) |
-| `gcp_scc` | cloud | `workload_identity` | [Google Cloud SCC](./gcp_scc) |
-| `github_app` | code | `github_app` | [GitHub App](./github_app) |
-| `google_workspace` | identity | `oauth2` | [Google Workspace](./google_workspace) |
-| `google drive` | documents | `oauth2` | [Google Drive](./google_drive) |
-| `microsoft_teams` | collab | `oauth2` | [Microsoft Teams](./microsoft_teams) |
-| `oidc_generic` | sso | `oidc` | [Generic OIDC](./oidc_generic) |
-| `okta` | sso | `apikey` | [Okta](./okta) |
-| `onedrive` | documents | `oauth2` | [OneDrive](./onedrive) |
-| `slack` | collab | `oauth2` | [Slack](./slack) |
-| `tailscale` | assets | `oauth credentials` | [Tailscale](./tailscale) |
-| `vercel` | devops | `apikey` | [Vercel](./vercel) |
+| Provider | Purpose |
+|---|---|
+| [Authentik](./authentik) | Sync directory users, groups, and memberships for access reviews |
+| [AWS](./aws) | Ingest Security Hub findings, identity and access management (IAM) users and groups, and Config assessment data |
+| [Azure Entra ID](./azure_entra_id) | Sync directory users and groups and surface authentication policy context |
+| [Microsoft Defender for Cloud](./azure_security_center) | Ingest security alerts, vulnerability assessments, and recommendations |
+| [Cloudflare](./cloudflare) | Record account and zone context for network boundary evidence |
+| [Email](./email) | Send campaign emails from your own provider and sender address |
+| [Google Cloud SCC](./gcp_scc) | Ingest Security Command Center (SCC) findings for vulnerability tracking |
+| [GitHub App](./github_app) | Ingest security alerts, repositories, and user access from GitHub |
+| [Google Workspace](./google_workspace) | Sync directory users, groups, and memberships for access reviews |
+| [Google Drive](./google_drive) | Manage policy documents stored in Google Drive |
+| [Microsoft Teams](./microsoft_teams) | Deliver compliance notifications to Teams channels |
+| [Okta](./okta) | Sync directory data, application assignments, and sign-on policies |
+| [OneDrive](./onedrive) | Manage policy documents stored in OneDrive |
+| [Slack](./slack) | Deliver compliance notifications and sync workspace users |
+| [Tailscale](./tailscale) | Sync tailnet users, groups, and enrolled devices for asset inventory |

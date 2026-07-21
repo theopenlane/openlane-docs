@@ -5,30 +5,27 @@ sidebar_position: 1
 sidebar_label: Overview
 ---
 
+import Term from '@site/src/components/Term';
+
 # Automation
 
-Automation helps your team execute compliance work on time with less manual coordination and better audit trails.
+Automation keeps recurring compliance work running without manual coordination. We give you a small set of tools, each suited to a different shape of work:
 
-## Automation Flow
+- [**Workflows**](./workflows/overview.mdx): gate object changes behind reviews. Define triggers and conditions, and the engine stages changes, routes approvals, and tracks the decision trail.
+- [**Workflow Definitions**](./workflows/workflow-definitions.mdx): the authoring reference for writing definitions, covering triggers, Common Expression Language (CEL) expressions, actions, and copyable examples.
+- [**Campaigns**](./campaigns.mdx): collect something from many people at once, such as policy attestations, training acknowledgements, and vendor questionnaires. Recipient-level tracking and follow-up resends are built in.
+- [**Assessments**](./assessments.mdx): the reusable questionnaire content campaigns send. Maintain one definition; run it as many times as you need.
+- [**Tasks**](./tasks.mdx): individual owned work with a deadline.
 
-```mermaid
-flowchart TD
-    A[Workflow Definitions] --> B[Object Changes Evaluated]
-    B --> C[Approvals and Assignments]
-    C --> D[Campaigns and Assessments]
-    D --> E[Tasks and Follow-up Work]
-    E --> F[Evidence and Reporting]
-```
+None of these depends on the others to be useful; you can run campaigns without ever defining a workflow, or use tasks alone. They compose where it helps: a campaign distributes an assessment and tracks every recipient's response; an approval workflow assigns its reviews as work items.
 
-## Why It Matters
+## Picking the Right Tool
 
-- Standardizes recurring governance workflows
-- Reduces manual handoffs and missed deadlines
-- Improves traceability for audits and customer assurance
+| You need... | Reach for |
+| --- | --- |
+| Policy changes reviewed and approved before they take effect | A [workflow](./workflows/overview.mdx) with pre-commit approval |
+| Every employee to attest to the acceptable use policy annually | A [campaign](./campaigns.mdx) targeting personnel |
+| 40 vendors to complete a security questionnaire | A [campaign](./campaigns.mdx) sending an [assessment](./assessments.mdx) |
+| One person to upload specific evidence by Friday | A [task](./tasks.mdx) |
 
-## What's in This Section
-
-- [Workflows and Approvals](./workflows.mdx) - Configure workflow behavior and understand engine-managed approvals
-- [Tasks](./tasks.mdx) - Track assigned compliance work and completion status
-- [Campaigns](./campaigns.mdx) - Run bulk outreach for attestations and questionnaires
-- [Assessments (Questionnaires)](./assessments.mdx) - Define and manage reusable questionnaire content
+Recurring governance work (access reviews, attestations, <Term t="evidence">evidence</Term> refresh) is the easiest part of a program to fall behind on. Running it through automation standardizes the cadence, reduces manual handoffs and missed deadlines, and leaves a traceable record for audits and customer assurance: who was asked, who responded, who approved, and when.

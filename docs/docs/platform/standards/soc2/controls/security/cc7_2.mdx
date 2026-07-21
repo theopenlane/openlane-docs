@@ -1,0 +1,94 @@
+---
+title: "CC7.2"
+description: ""
+---
+
+import ControlMeta from '@site/src/components/ControlMeta';
+
+# CC7.2
+
+<ControlMeta
+  refCode={"CC7.2"}
+  category={"Security"}
+  subcategory={"System Operations"}
+  description={"The entity monitors system components and the operation of those components for anomalies that are indicative of malicious acts, natural disasters, and errors affecting the entity’s ability to meet its objectives; anomalies are analyzed to determine whether they represent security events."}
+/>
+
+## Points of Focus
+
+<details>
+<summary>Implements Detection Policies, Procedures, and Tools</summary>
+
+Detection policies, procedures and tools are defined and implemented on Infrastructure and software to identify potential intrusions, inappropriate access and anomalies in the operation of or unusual activity on systems. Procedures may include- (1) a defined governance process for security event detection and management; (2) use of intelligence sources to identify newly discovered threats and vulnerabilities; and (3) logging of unusual system activities.
+
+</details>
+
+<details>
+<summary>Designs Detection Measures</summary>
+
+Detection measures are designed to identify anomalies that could result from actual or attempted (1) compromise of physical barriers; (2) unauthorized actions of authorized personnel; (3) use of compromised identification and authentication credentials; (4) unauthorized access from outside the system boundaries; (5) compromise of authorized external parties; and (6) implementation or connection of unauthorized hardware and software.
+
+</details>
+
+<details>
+<summary>Implements Filters to Analyze Anomalies</summary>
+
+Management has implemented procedures to filter, summarize, and analyze anomalies to identify security events.
+
+</details>
+
+<details>
+<summary>Monitors Detection Tools for Effective Operation</summary>
+
+Management has implemented processes to monitor and maintain the effectiveness of detection tools.
+
+</details>
+
+
+## Evidence Requests
+
+| Area of Focus | Artifact | Description |
+| --- | --- | --- |
+| Event Log Monitoring | Event Log Review & Analysis | Documented evidence of security event log review and analysis (e.g., system monitoring records). |
+| Event Log Monitoring | Automated Event Escalation & Reporting | Documented evidence of a capability for selected events to alert applicable personnel, or roles, based on the type of event. This can be demonstrated by the configuration of a Security Incident Event Manager (SIEM), or similar technology, that helps automate event log analysis and reporting. |
+| Event Log Monitoring | Situational Awareness | Documented evidence of the organization leveraging knowledge of event log generation to gain situational awareness of cross-domain activities (e.g., technology issues, security events, policy violations, service provider activities, remote workforce activities, physical security events, etc.). |
+| Event Log Monitoring | Centralized Event Log Collection | Documented evidence of security-relevant activities being logged and included as part of the centralized event log collection and review/analysis process. |
+| Endpoint Security | Antimalware Scanning Results | Documented evidence of scan results from malicious code protection mechanisms. |
+| Event Log Monitoring | Malware Activity | Documented evidence of malware activity being logged and included as part of the centralized event log collection and review/analysis process. |
+| Incident Response | Indicators of Compromise (IOC) | Documented evidence of defined Indicators of Compromise (IOC). |
+| Risk Management | Cybersecurity Risk Assessment (RA) | Documented evidence of a cybersecurity-specific risk assessment. |
+
+## Policies
+
+- **[Logging and Monitoring Standard](https://raw.githubusercontent.com/theopenlane/policy-hub/main/logging-monitoring/logging-monitoring.md)** - Defines requirements for logging security events and monitoring system activity
+- **[Vulnerability Management Policy](https://raw.githubusercontent.com/theopenlane/policy-hub/main/vulnerability-management/vulnerability-management.md)** - Establishes requirements for identifying and remediating security vulnerabilities
+
+## Example Organization Controls
+
+- **CC7.2.1** - Documented incident response and escalation procedures for reporting security incidents are in place to guide users in identifying, reporting and mitigating failures, incidents, concerns, and other complaints.
+- **CC7.2.2** - Policies and procedures are in place regarding detection, logging, and monitoring of unknown or unauthorized components into the environment.
+- **CC7.2.3** - The entity monitors key activities and alerts are generated when those activities are outside normal tolerances.
+- **CC7.2.4** - Alerts are generated to those responsible for taking action.
+- **CC7.2.7** - Suspected malicious traffic is tagged and blocked according to rulesets.
+
+## Example Control Objectives
+
+- **Security event detection** - Security events are detected, logged, and monitored for anomalies.
+
+## Example Control Implementations
+
+- **gitops-change-management** - All changes to production systems follow a GitOps workflow. Implementation includes: - All code and infrastructure configuration stored in GitHub repositories - Branch protection requires pull request review before merging - Buildkite CI runs automated tests, linting, and security scanning - ArgoCD deploys changes to GKE after Helm chart PR is approved - Rollback capability maintained through Git history and ArgoCD - Emergency changes require post-implementation review
+- **centralized-logging** - Application and infrastructure logs are centrally aggregated. Implementation includes: - GCP Cloud Logging aggregates all application and infrastructure logs - Betterstack provides uptime monitoring and alerting - Grafana provides metrics visualization - Log retention follows Data Retention Policy (90 days active, 1 year archived) - Security events trigger alerts via Slack integration
+
+## Example Evidence
+
+- **GCP Cloud Audit Logs Configuration** - Screenshot of GCP audit logging configuration showing retention and export settings
+- **Sample Audit Log Export** - Export of sample audit logs demonstrating logging of authentication and administrative events
+
+## Example Findings
+
+- **Backup verification evidence missing** · severity: MEDIUM - Backup restore tests are not documented for the last quarter.
+
+## Example Remediations
+
+- **backup-verification-remediation** - Conduct and document quarterly backup restore tests to verify data recovery capabilities meet recovery time and recovery point objectives (RTO/RPO).

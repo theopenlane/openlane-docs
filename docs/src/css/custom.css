@@ -4,50 +4,52 @@
  * work well for content-centric websites.
  */
 
-@import "@fontsource/outfit/100.css";
-@import "@fontsource/outfit/300.css";
-@import "@fontsource/outfit";
-@import "@fontsource/outfit/200.css";
-@import "@fontsource/outfit/400.css";
+/* Outfit for headings and UI chrome */
 @import "@fontsource/outfit/500.css";
 @import "@fontsource/outfit/600.css";
 @import "@fontsource/outfit/700.css";
-@import "@fontsource/outfit/800.css";
-@import "@fontsource/outfit/900.css";
+
+/* Inter for long-form body text */
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
 
 :root {
   /* width of left navigation */
-  --doc-sidebar-width: 400px !important;
+  --doc-sidebar-width: 320px !important;
 
-  /* font family */
-  --ifm-font-family-base: 'Outfit', sans-serif;
+  /* font family: Inter for body copy, Outfit for headings */
+  --ifm-font-family-base: 'Inter', system-ui, sans-serif;
   --ifm-heading-font-family: 'Outfit', sans-serif;
   --ifm-font-weight-semibold: 600;
+  --ifm-line-height-base: 1.6;
 
   /* color base set */
+  /* scale ordered light→dark so hover/active states darken (and gain
+     contrast on white) instead of flipping lighter */
   --ifm-color-primary-lightest: #d1f6ee;
   --ifm-color-primary-lighter: #9eebdd;
   --ifm-color-primary-light: #6ddbcb;
   --ifm-color-primary: #3fc2b4;
-  --ifm-color-primary-dark: #60E8C8;
+  --ifm-color-primary-dark: #2ea296;
   --ifm-color-primary-darker: #1b867d;
   --ifm-color-primary-darkest: #1a6b66;
 
-  /* navigation and link coloring */
+  /* navigation and link coloring: darker teal for text-sized accents (WCAG AA on light backgrounds) */
   --ifm-navbar-link-color: #09151D;
-  --ifm-navbar-link-hover-color: #3fc2b4;
-  --ifm-menu-color-active: #3fc2b4;
-  --ifm-toc-link-hover-color: #3fc2b4;
-  --ifm-breadcrumb-color-active: #3fc2b4;
+  --ifm-navbar-link-hover-color: #1b867d;
+  --ifm-menu-color-active: #1b867d;
+  --ifm-toc-link-hover-color: #1b867d;
+  --ifm-breadcrumb-color-active: #1b867d;
   --ifm-link-color: #09151D;
-  --ifm-link-hover-color: #3fc2b4;
+  --ifm-link-hover-color: #1b867d;
   --ifm-link-hover-decoration: none;
   --ifm-navbar-shadow: none;
   --ifm-footer-link-hover-color: #60E8C8;
 
   /* heading color */
   --ifm-heading-color: #2e2e2e;
-  --ifm-global-spacing: 1.6rem !important;
 
   /* background colors */
   --ifm-background-color: #EFF4F5;
@@ -65,14 +67,17 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 html[data-theme='dark'] {
-  /* color base set for dark mode */
-  --ifm-color-primary-lightest: #62e6c3;
-  --ifm-color-primary-lighter: #31d0a9;
-  --ifm-color-primary-light: #18b491;
-  --ifm-color-primary: #109176;
-  --ifm-color-primary-dark: #60E8C9;
-  --ifm-color-primary-darker: #146153;
-  --ifm-color-primary-darkest: #154c43;
+  /* color base set for dark mode.
+     primary must clear WCAG AA (4.5:1) against --ifm-background-color #162431;
+     #31d0a9 measures ~8:1. The scale is ordered light→dark correctly so
+     derived hover/active states darken instead of flipping lighter. */
+  --ifm-color-primary-lightest: #8ff0d9;
+  --ifm-color-primary-lighter: #62e6c3;
+  --ifm-color-primary-light: #45dbb5;
+  --ifm-color-primary: #31d0a9;
+  --ifm-color-primary-dark: #1fbb94;
+  --ifm-color-primary-darker: #18a382;
+  --ifm-color-primary-darkest: #128a6e;
 
   /* navigation and link coloring */
   --ifm-navbar-link-color: #ffffff;
@@ -225,8 +230,29 @@ html[data-theme='dark'] {
 }
 
 
+/* Descending heading scale so the page title outranks section headings */
 .markdown h1:first-child {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
+}
+
+.markdown h2 {
+  font-size: 1.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.2rem;
+}
+
+/* Cap the measure for readability; API reference pages keep their own
+   two-column layout (content + request/response panel), so the cap must not
+   apply where the openapi containers are present */
+.theme-doc-markdown {
+  max-width: 75ch;
+}
+
+.theme-doc-markdown:has(.openapi-left-panel__container),
+.theme-doc-markdown:has([class*="openapi__"]) {
+  max-width: none;
 }
 
 .markdown h1:first-child img {
@@ -258,11 +284,130 @@ html .table-of-contents ul {
 
 .theme-doc-sidebar-menu .menu__link {
   font-weight: 400;
+  font-size: 0.9rem;
 }
 
-/* Removes the next + previous controls from bottom of pages */
-.pagination-nav {
-  display: none;
+/* Tabs in doc content: render as a contained panel so it's clear where the
+   tabbed region begins and ends, with a high-contrast active tab */
+.theme-doc-markdown .tabs-container {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  /* lift the panel off the tinted page background in light mode */
+  background: var(--ifm-card-background-color);
+}
+
+/* dark mode panels looked right without a card background; keep them as-is */
+html[data-theme='dark'] .theme-doc-markdown .tabs-container {
+  background: transparent;
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+.theme-doc-markdown .tabs-container > .tabs {
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0 0.5rem;
+}
+
+.theme-doc-markdown .tabs-container .tabs__item {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+}
+
+.theme-doc-markdown .tabs-container .tabs__item--active {
+  color: var(--ifm-color-primary-darker);
+  border-bottom-color: var(--ifm-color-primary-darker);
+}
+
+/* the tab content sits inside an intermediate wrapper div, so the panel
+   padding goes on the wrapper (direct child), and content rules use
+   descendant selectors */
+.theme-doc-markdown .tabs-container > div {
+  margin-top: 0;
+  padding: 1rem 1rem 0.25rem;
+}
+
+/* Tables inside tab panels: stretch to the full panel width with centered
+   cells, so a small reference table doesn't sit lopsided next to full-width
+   code blocks. (Markdown tables are display:block for scrollability; these
+   are small enough that stretching is safe.) */
+.theme-doc-markdown .tabs-container div[role="tabpanel"] table {
+  display: table;
+  width: 100%;
+}
+
+.theme-doc-markdown .tabs-container div[role="tabpanel"] th,
+.theme-doc-markdown .tabs-container div[role="tabpanel"] td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+html[data-theme='dark'] .theme-doc-markdown .tabs-container .tabs__item--active {
+  color: var(--ifm-color-primary-lightest);
+  border-bottom-color: var(--ifm-color-primary-lightest);
+}
+
+/* Comparison cards: opt-in via className="row cards-row" in MDX. Never
+   style bare .row here: the OpenAPI theme's ApiItem wraps every docs page
+   in its own internal .row, and generic rules break the page layout. */
+.theme-doc-markdown .cards-row {
+  margin: 1.5rem -0.4rem;
+}
+
+.theme-doc-markdown .cards-row .col {
+  padding: 0 0.4rem;
+}
+
+.theme-doc-markdown .cards-row .card {
+  height: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: none;
+}
+
+.theme-doc-markdown .cards-row .card__header {
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.7rem 1rem;
+}
+
+.theme-doc-markdown .cards-row .card__header h4 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+/* per-column accent: a colored top border keyed to position */
+.theme-doc-markdown .cards-row .col:nth-child(1) .card { border-top: 3px solid #3b82c4; }
+.theme-doc-markdown .cards-row .col:nth-child(2) .card { border-top: 3px solid #d99a2b; }
+.theme-doc-markdown .cards-row .col:nth-child(3) .card { border-top: 3px solid var(--ifm-color-primary); }
+
+.theme-doc-markdown .cards-row .card__body {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 0.9rem 1rem;
+}
+
+.theme-doc-markdown .cards-row .card__body p {
+  margin-bottom: 0.6rem;
+}
+
+/* Mermaid diagrams: center, and scale oversized diagrams down to fit the
+   content column and viewport instead of dominating the page */
+.docusaurus-mermaid-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.docusaurus-mermaid-container svg {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 75vh;
 }
 
 /* For the Graphql Explorer Page */
@@ -273,5 +418,218 @@ html .table-of-contents ul {
 
 article .markdown a {
   text-decoration: underline;
-  color: #1877f2;
+  color: var(--ifm-color-primary-darker);
+}
+
+html[data-theme='dark'] article .markdown a {
+  color: var(--ifm-color-primary-lightest);
+}
+
+/* ---- Doc page chrome: no tag pills, no previous/next pagination ---- */
+.theme-doc-footer-tags-row,
+.theme-doc-footer .row .col:has(.theme-doc-footer-tags-row) {
+  display: none;
+}
+
+.pagination-nav {
+  display: none;
+}
+
+/* ---- Compliance relevance card (frontmatter: compliance: [...]) ----
+   rendered by src/theme/DocItem/Content inside the article column */
+.compliance-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.compliance-card__label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.compliance-card__groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.compliance-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--ifm-color-primary-darker);
+  background: color-mix(in srgb, var(--ifm-color-primary) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 35%, transparent);
+  white-space: nowrap;
+}
+
+html[data-theme='dark'] .compliance-pill {
+  color: var(--ifm-color-primary-light);
+}
+
+.compliance-pill__refs {
+  margin-left: 0.4rem;
+  padding-left: 0.4rem;
+  border-left: 1px solid color-mix(in srgb, var(--ifm-color-primary) 35%, transparent);
+  font-weight: 500;
+}
+
+/* ---- Admonitions: compact mkdocs-material-style rendering ----
+   CSS-only per docusaurus swizzling guidance (prefer CSS over swizzle).
+   Structure: .theme-admonition > heading div + content div */
+.theme-doc-markdown .theme-admonition {
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--ifm-alert-border-color);
+  border-left-width: 4px;
+  border-radius: 8px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.theme-doc-markdown .theme-admonition > div:first-child {
+  background: color-mix(in srgb, var(--ifm-alert-border-color) 10%, transparent);
+  padding: 0.4rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  display: flex;
+  align-items: center;
+}
+
+.theme-doc-markdown .theme-admonition > div:first-child svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.theme-doc-markdown .theme-admonition > div:nth-child(2) {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.theme-doc-markdown .theme-admonition > div:nth-child(2) > p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Collapsible callout (src/components/Callout) ---- */
+.callout-collapsible {
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--ifm-alert-border-color);
+  border-left-width: 4px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.callout-collapsible > summary {
+  cursor: pointer;
+  list-style: none;
+  background: color-mix(in srgb, var(--ifm-alert-border-color) 10%, transparent);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.callout-collapsible > summary::before {
+  content: '';
+  border: 5px solid transparent;
+  border-left-color: currentColor;
+  transition: transform 0.15s ease;
+}
+
+.callout-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.callout-collapsible__content {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.callout-collapsible__content > p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Compact icon cards: single container, icon + short text ---- */
+.cards-row .card--compact {
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  height: 100%;
+}
+
+.cards-row .card--compact > svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  color: var(--ifm-color-primary-darker);
+}
+
+html[data-theme='dark'] .cards-row .card--compact > svg {
+  color: var(--ifm-color-primary-light);
+}
+
+/* ---- Glossary term tooltips (src/components/Term) ---- */
+.glossary-term {
+  border-bottom: 1px dotted var(--ifm-color-primary-darker);
+  cursor: help;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.glossary-term:hover {
+  color: inherit;
+  border-bottom-style: solid;
+}
+
+.glossary-term::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 320px;
+  background: var(--ifm-color-emphasis-900);
+  color: var(--ifm-color-emphasis-0);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.45;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.glossary-term:hover::after,
+.glossary-term:focus::after {
+  opacity: 1;
+  visibility: visible;
 }

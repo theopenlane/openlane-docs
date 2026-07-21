@@ -1,0 +1,162 @@
+---
+title: Example Evidence
+sidebar_label: Example Evidence
+sidebar_position: 2
+description: Example evidence artifacts for commonly manually evidenced CIS control areas
+---
+
+# CIS Example Evidence
+
+The table below lists commonly evidenced control areas for the Center for Internet Security (CIS) Controls (v8.1) and the artifacts that typically satisfy them; attach these to your controls as [evidence](/docs/platform/compliance-management/evidence/overview).
+
+| Control Area | Example Evidence |
+| ------------ | ---------------- |
+| Separate environments | Screenshots showing production and non-production environments run at different URLs and on separate infrastructure |
+| Internal security reporting channels | Evidence of a dedicated channel for raising security concerns, such as a security channel in your messaging platform or a whistleblower system |
+| Periodic access reviews | Records of user access reviews with reviewer sign-off and evidence that resulting changes were carried out |
+| Risk treatment plan | Risk register entries and treatment plans maintained according to your risk management policy |
+| Asset inventory | A maintained asset inventory, supplemented with cloud infrastructure screenshots confirming coverage |
+| External systems inventory | A documented list of external and cloud-hosted systems with supporting infrastructure screenshots |
+| Architecture diagram | Current architecture diagram with evidence it is reviewed annually |
+| Network diagram | Current network diagram with confirmation that it reflects the environment accurately |
+| Data flow diagram | Current data flow diagram showing when it was finalized |
+| Data inventory | A formal inventory of data types and the systems that store them, with owner, classification, and location; maintain equivalent inventories for personal data and any regulated data categories you handle |
+| Cloud resource tagging | Resource inventory listings showing assigned tags |
+| Business continuity plan | The current business continuity plan document |
+| Business continuity and disaster recovery testing | Documentation of the test performed, the results, and lessons learned |
+| Backup storage | Screenshots showing backups are encrypted and stored separately from source systems, plus logs or alerts for backup failures |
+| Backup restore testing | Documentation of a backup restoration completed within the past year |
+| Asset integrity verification before restoration | Policy and logs showing integrity checks run before assets are restored |
+| Incident response team | Documented incident response roles and responsibilities |
+| Incident response testing | Documentation from a recently completed incident response tabletop exercise |
+| Incident classification | Incident response plan sections defining how incidents are classified |
+| Incident lessons learned | Incident records including the tracking ticket, root cause analysis, and lessons learned |
+| Incident and breach notification | Evidence that incidents are reported to affected parties and relevant authorities |
+| Contact with authorities | Incident response procedures identifying the authorities you would notify and the communication plan for reaching them |
+| Contact with special interest groups | Evidence of membership in professional associations or subscriptions to security advisories |
+| On-call coverage | Screenshots of the on-call rotation schedule from your paging or scheduling tool |
+| Designated security officials | Information security policy or job descriptions identifying who holds security responsibilities |
+| Vendor register and agreements | A centralized vendor inventory and executed vendor contracts |
+| Vendor management policy | The current vendor management policy, including how supplier relationships are exited |
+| Vendor classification | A service provider classification register with records of annual review |
+| Vendor due diligence | Records showing security evaluation was completed before engaging a vendor |
+| Vendor risk assessment | Vendor register entries with assigned risk ratings and the executed contracts behind them |
+| Vendor compliance monitoring | Vendors' System and Organization Controls 2 (SOC 2) reports, International Organization for Standardization (ISO) certificates, or completed security questionnaires |
+| Vendor security responsibility acknowledgment | Agreements in which service providers acknowledge their security responsibilities |
+| Service provider log collection | Reports from your log platform showing service provider logs are ingested and monitored |
+| Customer data segregation | Database screenshots showing per-customer identifiers or physically separated storage |
+| Multi-tenant segregation | Documentation of the logical separation between tenants and between provider and customer environments |
+| Internal network segmentation | Firewall configuration separating internal network zones from externally facing segments |
+| Session termination | Screenshots showing sessions time out automatically and require re-authentication |
+| Access provisioning | Access request tickets with documented approvals |
+| Application and system account authorization | Access control policies, request forms, and periodic review records for non-human accounts |
+| Application and system account reviews | Review logs, meeting minutes, and change records from periodic reviews of application and system accounts |
+| Service account inventory | A complete service account list with logs from quarterly reviews |
+| Disabling high-risk accounts | Access control policy plus dated records showing accounts were disabled |
+| Automated access management | Screenshots from identity and access management tooling showing automated account lifecycle handling |
+| Annual authentication system review | Policy and reports from a yearly review of authentication and authorization systems |
+| Least privilege | Access control policy defining who needs access to what and enforcing least privilege |
+| Role-based access definitions | Documented access needs for each role, including required privilege levels |
+| Access control system | Screenshots of access control system configuration showing enforcement by role or job classification |
+| Dedicated administrative accounts | Policy, access logs, and identity tool screenshots showing separate accounts are used for administrative functions |
+| Database access restrictions | Screenshots of database access controls limiting direct access |
+| Account lockout | Configuration evidence showing failed login attempt limits and lockout duration |
+| Brute force mitigation | Policy and screenshots showing login throttling and device lockout |
+| First-time passwords | Screenshots or process documentation showing initial passwords are unique and single-use |
+| Password policy enforcement | Password policy and identity management tool screenshots showing the rules are enforced |
+| Multi-factor authentication (MFA) for administrative access | Screenshots of system configuration and the authentication flow showing MFA on administrative access |
+| MFA for remote access | Configuration screenshots showing MFA enforced for remote network access |
+| Authentication guidance for staff | Policies and communications giving employees authentication best practices |
+| Remote access management | Remote access policy, configuration screenshots, and access logs |
+| Encrypted remote access | Evidence that production access requires an encrypted VPN connection |
+| Endpoint posture validation | Policy and endpoint management screenshots showing device health checks before access is granted |
+| Intrusion detection and prevention | Screenshots from your intrusion detection or prevention tooling showing it is enabled, and vendor documentation or screenshots showing signatures are kept current |
+| Network traffic monitoring | Monitoring tool configuration and log samples showing network traffic is observed |
+| Security control failure alerting | Screenshots showing alerts are configured for failures of critical security systems |
+| Security control failure records | Records of control failures including root cause and remediation |
+| Alert threshold tuning | Tuning procedures and change logs showing alerting thresholds are reviewed regularly |
+| Network security configuration standards | Documented standards and testing procedures for network connections and firewall changes |
+| Boundary controls | Firewall standards and configuration screenshots governing traffic between trusted and untrusted networks |
+| Insecure services, protocols, and ports | Standards identifying insecure services in use and the compensating controls applied |
+| Network security rule review | A documented firewall and router rule set review from within the last six months |
+| Wireless traffic restrictions | Firewall or network access control rules showing wireless traffic is denied by default |
+| Wireless encryption | Wireless security standards and configuration screenshots showing WPA2 or WPA3 |
+| Wireless vendor defaults | Policy and screenshots showing vendor-supplied wireless passwords have been replaced |
+| Vendor default accounts | Policy and screenshots showing default accounts are removed, disabled, or changed |
+| Trusted DNS configuration | Policy and network device configuration showing systems use trusted DNS servers |
+| Baseline configurations | Documented configuration baselines and evidence they are enforced |
+| Configuration management plan | The configuration management plan, often maintained as an appendix to the change management policy |
+| Security parameters in configuration standards | Server configuration standards documenting required security parameter settings |
+| Minimal services | Screenshots showing only approved services run on systems |
+| Supported system components | Asset management policy and configuration standards showing components remain under vendor support |
+| System maintenance | Maintenance policy and logs showing maintenance activities and their completion |
+| Asset management policy | The current asset management policy |
+| Active discovery | Policy and screenshots showing active discovery scans are configured and running |
+| Passive network discovery | Policy and screenshots showing a passive discovery tool monitoring the network, with scan results |
+| DHCP logging and IP address management | Policy and DHCP or IP address management tool screenshots showing logging is enabled |
+| Automated software inventory | Policy and screenshots from an automated software inventory tool |
+| Unauthorized software detection | Policy and tool screenshots showing unauthorized software is detected and recorded |
+| Software installation restrictions | Device management screenshots showing only allowlisted applications can be installed or run |
+| Authorized library allowlist | Policy and screenshots showing library allowlist enforcement, including logs of blocked libraries |
+| Authorized script allowlist | Policy and screenshots showing script allowlist enforcement |
+| Software and dependency inventory | Output from software composition analysis tooling, such as a software bill of materials, plus screenshots showing the tooling runs in your CI/CD pipeline |
+| Static application security testing | CI/CD screenshots showing static analysis scans execute on builds |
+| Secure development process | Documented secure development processes and standards |
+| Secure coding guidelines | Software development policies that incorporate secure coding guidelines |
+| Secure development training | Training records showing developers completed secure coding training |
+| Code review | Development lifecycle policy and example code review records from before release |
+| Change testing | Evidence that changes are reviewed, tested in a non-production environment, and approved |
+| Release approval | Screenshots showing releases are approved by authorized personnel |
+| Security impact assessment for changes | Change management policy and post-implementation validation records |
+| Software verification | Policy and logs showing software artifacts are verified before deployment |
+| Threat modeling | Threat modeling policy and completed assessments with documented analysis |
+| Web application security assessment | Policy for assessing public-facing web applications and reports from recent assessments |
+| Input validation | Screenshots confirming applications restrict input to valid values |
+| Mandatory fields | Screenshots showing applications require mandatory data entry before submission |
+| Patch management | Screenshots showing critical patches installed within required timeframes, plus evidence of automated update mechanisms |
+| Vulnerability scanning | Internal vulnerability scan results covering the past four quarters, with high-risk findings resolved |
+| Penetration testing methodology | Documentation defining your penetration testing methodology, based on industry standards |
+| External penetration testing | Scope of work and report from a recent external penetration test |
+| Internal penetration testing | Scope of work and report from a recent internal penetration test |
+| Penetration test remediation | Test reports, retest results, and records showing findings were remediated |
+| Anti-malware coverage | Vendor documentation and screenshots verifying malware detection on all system components |
+| Anti-malware updates | Screenshots showing automatic updates and threat blocking are enabled |
+| Anti-malware scanning behavior | Screenshots showing scheduled scans and real-time protection are enabled |
+| Anti-malware scans of removable media | Screenshots showing removable media is scanned when connected |
+| Centralized anti-malware management | Reports from the central management console showing endpoint status |
+| Anti-exploitation features | Endpoint protection screenshots showing anti-exploitation features are active |
+| Auto-run disabled | Policy and screenshots showing auto-run is disabled on systems |
+| Personal firewalls on portable devices | Policy plus configuration screenshots showing personal firewalls are enabled and cannot be disabled by users |
+| Internet-connected device controls | A security control inventory for such devices, with configuration settings and enforcement logs |
+| Mobile device management | Screenshots from the centralized device management console |
+| Separate enterprise workspaces on mobile devices | Policy and device management screenshots showing enterprise workspaces are segregated from personal ones |
+| Browser and email extension restrictions | Policy and device management reports showing unauthorized extensions are restricted |
+| Web filtering | Screenshots showing web filtering configured to block malicious sites |
+| Spam protection | Policy and screenshots of spam protection mechanisms |
+| Email authentication | Screenshots showing Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) configuration |
+| Encryption in transit | Screenshots showing TLS or HTTPS on data transmission paths |
+| Removable media encryption | Evidence that company-issued removable media is encrypted, with configuration screenshots and encrypted data examples |
+| Data loss prevention | Screenshots of data loss prevention rules or tool configuration |
+| Management of sensitive information | Policies covering how sensitive information is identified, stored, and disposed of |
+| Information labeling | Data protection and data classification policies covering labeling requirements |
+| Information disposal procedures | Documented procedures for erasing or destroying information |
+| Disposal of data on hardware | Certificates of destruction or screenshots showing data wiping |
+| Secure disposal of paper records | Evidence that hard copy materials are disposed of securely |
+| Secure erasure of temporary data | Policy and screenshots showing temporary data is deleted on a schedule |
+| Reuse of storage | Policy and screenshots showing storage is securely wiped before reuse |
+| Cloud storage lifecycle | Screenshots showing configured expiration and lifecycle actions on cloud storage |
+| Logging and monitoring policy | The formal logging and monitoring policy document |
+| Log retention | Audit log retention policy and storage screenshots showing at least one year of retention |
+| Audit logging of sensitive activity | Log configuration and sample entries covering user access to sensitive data, administrative actions, failed access attempts, authentication changes, system-level object changes, and access to the audit logs themselves |
+| Audit log content | Sample log entries showing user identification, event type, date and time, origin such as source address, and the affected resource |
+| Log management and threat detection systems | Logging policy, storage utilization records, and detection rule configuration |
+| Daily log review | Log review policy requiring daily review of critical system logs, plus screenshots of the review process; for non-critical systems, a risk assessment documenting the chosen review cadence |
+| Automated log review | Reports from a security information and event management (SIEM) or log management platform showing automated review mechanisms |
+| DNS query logging | Policy and reports showing DNS queries are logged and monitored, with sample query data |
+| URL request logging | Proxy or gateway configuration showing URL requests are logged and retained |
+| Command-line audit logs | System configuration showing command-line logging is enabled |
+| Clock synchronization | Documented time synchronization procedures and configuration screenshots showing NTP in use, time received from reliable sources in UTC, and multiple time servers configured to peer |
+| Security awareness training | Training records showing personnel complete security awareness training at hire and annually |
+| Role-based security training | Training policies and dated completion records for role-specific security training |
+| Phishing simulations | Records of phishing simulation campaigns and their results |
+| Nonconformity management | Tracker logs, tickets, root cause analyses, and corrective action records |

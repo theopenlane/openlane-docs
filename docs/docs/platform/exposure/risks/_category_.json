@@ -1,0 +1,9 @@
+{
+  "label": "Risks",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "platform/exposure/risks/overview"
+  },
+  "collapsed": true
+}

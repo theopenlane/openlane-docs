@@ -1,0 +1,40 @@
+---
+title: Overview
+description: Comprehensive overview of authentication methods supported by the Openlane platform
+sidebar_position: 0
+keywords:
+  - authentication
+  - SSO
+  - passkeys
+  - WebAuthn
+  - social login
+  - credentials
+  - identity management
+  - user authentication
+  - secure login
+  - multi-factor authentication
+tags:
+  - authentication
+  - security
+  - identity management
+  - SSO
+---
+
+import Term from '@site/src/components/Term';
+
+# Authentication in Openlane
+
+Openlane gives you flexible and secure ways to authenticate users, ranging from developer-friendly options to enterprise-grade SSO.
+
+| Method                | Best For                                                                 | Pros                                                                                                         | Considerations                                                                                       |
+|-----------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| Single sign-on (SSO)  | Organizations needing centralized access control, easy onboarding/offboarding | Centralized identity management<br/>Enforce multi-factor authentication (MFA), password policy, conditional access<br/>Automatic provisioning/de-provisioning via System for Cross-domain Identity Management (SCIM) (if IdP supports) | Requires admin setup in IdP<br/>May require extra configuration for group/role claims             |
+| Passkeys (WebAuthn)   | Security-focused teams wanting strong, phishing-resistant authentication      | Phishing-resistant<br/>No shared secret to leak<br/>Works across browsers and devices                   | Users must have at least one enrolled device or hardware key<br/>Recommended to set up backup passkey<br/>Requires manual user management |
+| Social Login          | Small teams, contractors, open-source contributors                           | No password to manage<br/>Uses trusted provider MFA settings                                              | Limited control over user lifecycle (must remove users manually if they leave your company)         |
+| Credentials (Password)| Legacy scenarios or fallback when other methods unavailable                  | Universal and simple                                                                                       | Not recommended (weakest security posture)<br/>Encourage MFA or migration to passkeys/SSO         |
+
+## Requiring Multi-Factor Authentication
+
+You can require all members of your organization to enable two-factor authentication for added security. Go to `Organization Settings` → `Authentication`, enable **Require Multi-Factor Authentication**, and save. All members are prompted to set up 2FA the next time they log in.
+
+MFA enforcement is independent of SSO: you can enforce it on its own or alongside SSO, and an [SSO-exempt member](./sso.mdx#exemptions) who signs in with a password still has to satisfy MFA.

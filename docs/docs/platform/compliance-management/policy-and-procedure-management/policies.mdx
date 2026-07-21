@@ -16,152 +16,75 @@ tags:
   - security
 ---
 
-# Overview
+import Term from '@site/src/components/Term';
 
-Policies and procedures are the foundation of any organization. They provide a framework for decision-making, guide behavior, and ensure compliance with laws and regulations. In the context of Openlane, policies and procedures are essential for managing risks, securing systems, and ensuring continuous compliance.
+# Policies and Procedures
 
-This section of the documentation provides an overview of policies and procedures within Openlane. It covers the policy lifecycle, best practices for creating policies, and how to enforce policies using technology. Whether you’re new to Openlane or looking to optimize your policy management processes, this documentation will help you get started.
+A policy says what your organization requires; a procedure says how you carry it out. Together they're the documents an auditor reads first.
 
-## What are Policies and Procedures?
+Almost every framework asks for the same thing: written policies, approved by someone accountable, reviewed on a schedule, and actually available to your people. Keeping them in Openlane means the document, the <Term t="controls">controls</Term> it maps to, and the revision history live in one place: no hunting for `final_v3.docx` across shared drives mid-audit.
 
-Policies and procedures are formal documents that outline the rules, guidelines, and standards that govern an organization’s operations. Policies define the organization’s goals and objectives, while procedures provide detailed instructions on how to achieve those goals. Together, policies and procedures help ensure consistency, accountability, and compliance across the organization.
+Policies also do real work outside the audit: they tell employees exactly what's expected and who to report to when something goes wrong. A policy nobody can find, or nobody reads, fails both jobs.
 
-## Why are Policies and Procedures Important?
+## Policies vs. Procedures
 
-Policies and procedures play a critical role in the success of an organization. They provide a roadmap for decision-making, guide employee behavior, and help mitigate risks. By establishing clear policies and procedures, organizations can:
+A policy sets the requirement ("production access requires multi-factor authentication (MFA) and quarterly review"); a procedure describes the steps to meet it (how to request access, who approves it, how the review runs). Openlane stores them as separate document types, but you work with them the same way: same editor, same import options.
 
-- Ensure compliance with laws and regulations
-- Protect sensitive information and data
-- Promote a culture of accountability and transparency
-- Improve operational efficiency and consistency
-- Minimize risks and prevent security breaches
-- Documents can inform employees about exactly what they need to do and who to report to in various situations
+## How Many Policies Do You Need
 
-## Types of Policies
+You likely need fewer than you think. A handful of well-scoped documents (information security, acceptable use, access management, incident response, business continuity, change management, data classification and retention, vendor management) covers most frameworks; the [policies to framework mapping](./policy-framework-mapping.mdx) shows exactly which policies each framework expects. Your industry and jurisdiction may require more (privacy, health and safety, anti-bribery); verify with legal counsel rather than a template list. For what the continuity documents should actually contain, see the best-practices guides on [business continuity](./business-continuity.mdx) and [disaster recovery](./disaster-recovery.mdx).
 
-There are several types of policies that organizations may develop, including:
+When deciding whether to consolidate or split:
 
-- **Information Security Policy**: Outlines the organization’s approach to protecting sensitive information and data.
-- **Acceptable Use Policy**: Defines acceptable and unacceptable use of organizational resources, such as computers, networks, and data.
-- **Data Retention Policy**: Establishes guidelines for retaining and disposing of data in compliance with laws and regulations.
-- **Incident Response Policy**: Outlines the organization’s response to security incidents, such as data breaches and cyber attacks.
-- **Remote Work Policy**: Defines guidelines and expectations for employees working remotely, including security requirements and best practices.
-- **BYOD Policy**: Outlines rules and guidelines for employees using personal devices for work purposes, such as smartphones and laptops.
-- **Password Policy**: Establishes requirements for creating and managing passwords to protect systems and data.
-- **Social Media Policy**: Defines guidelines for employees using social media for work purposes, including privacy and security considerations.
-- **Access Onboarding & Termination Policy**: Outlines the process for granting and revoking access to systems and data when employees join or leave the organization.
-- **Business Continuity Policy**: Outlines the organization’s approach to maintaining critical operations during disruptions, such as natural disasters and cyber attacks.
-- **Disaster Recovery Policy**: Defines the organization’s strategy for recovering systems and data in the event of a disaster, such as a data breach or system failure.
-- **Change Management Policy**: Outlines the process for managing changes to systems, applications, and infrastructure to minimize risks and disruptions.
-- **Confidentiality Policy**: Defines rules and guidelines for protecting confidential information and data from unauthorized access and disclosure.
-- **Cyber Risk Policy**: Outlines the organization’s approach to identifying, assessing, and managing cyber risks to protect systems and data.
-- **Data Center Security Policy**: Defines security requirements and best practices for securing data centers and critical infrastructure.
-- **Data Classification Policy**: Establishes guidelines for classifying and protecting data based on its sensitivity and criticality.
-- **Encryption Policy**: Outlines requirements for encrypting data at rest and in transit to protect against unauthorized access and disclosure.
-- **Information Security Policy**: Outlines the organization’s approach to protecting sensitive information and data.
-- **IT Vendor Management Policy**: Defines guidelines for managing relationships with IT vendors, including security requirements and best practices.
-- **Log Management Policy**: Outlines requirements for collecting, storing, and analyzing logs to monitor and detect security incidents.
-- **Office Physical Security Policy**: Defines security requirements and best practices for securing office facilities and premises.
-- **Password Policy**: Establishes requirements for creating and managing passwords to protect systems and data.
-- **Remote Access Policy**: Outlines security requirements and best practices for accessing organizational resources remotely.
-- **Removable Media Policy**: Defines guidelines for using removable media, such as USB drives and external hard drives, to protect against data loss and theft.
-- **Software Development Lifecycle Policy**: Outlines the organization’s approach to developing, testing, and deploying software to ensure security and quality.
-- **Workstation Policy**: Defines security requirements and best practices for securing workstations, such as laptops and desktop computers.
+- One policy can map to multiple controls. <Term t="evidence">Evidence</Term> may differ per control even when the policy is consolidated, so grouping costs you nothing at audit time.
+- Group until the concepts truly diverge. If the audiences or use cases are different, split: an IT security policy can cover a wide range of general user guidance, but infrastructure change management usually belongs on its own.
+- Favor fewer, clearer documents. Policies only work when people read and follow them, and a smaller set is easier to keep consistent and current.
 
-Organizations may develop additional policies based on their specific needs, industry requirements, and compliance obligations.
+## Writing Policies That Hold Up
 
-:::tip
-In many cases, it is useful and even ideal to group policies. As a few quick guidelines to support policy creation:
-1. One policy can map to multiple controls. Remember, evidence may differ per control, even if the policy is consolidated.
-2. Group until the concepts truly diverge. That is, if the audiences or use cases are different, split. e.g.: an IT Security Policy can cover a wide range of general user guidance, but Infrastructure Change Management usually belongs on its own.
-3. Optimize for clarity, not bureaucracy. Your goal is adoption and consistency, not a library of documents nobody reads.
-:::
+A section skeleton that works for nearly every policy: **Purpose, Scope, Roles and Responsibilities, Policy, Enforcement, Definitions**. Auditors know this structure, and it forces you to answer the questions they'll ask anyway: who does this apply to, who owns it, what happens when it's violated.
 
-### Policies and Procedures that are recommended or required by law
+Two habits that pay off:
 
-NOTE: This is not an exhaustive list, and organizations should consult with legal counsel to determine the specific policies and procedures required for their industry and jurisdiction. We've written this as a guide post and some may not apply to you or your business so be certain to verify!
+- **Be vague about individual systems, but specific about scope and cadence.** "Access reviews run quarterly across all production systems" survives a tooling migration; naming the specific tool means a policy update every time you switch vendors.
+- **Keep a modification history table at the top**: dates, edits, approvals. Openlane keeps revisions of your documents on your behalf, but an in-document history is standard industry practice and lets the reader understand the document's history without walking every revision.
 
-- **Health and Safety Policy**: Employers have common law and statutory duties relating to the health and safety of their employees, contractors and members of the public. These should be reflected in this policy in line with the nature of the workplace, the industry in which it operates, and the outcome of the employer’s risk assessment.
-- **Equal Opportunity Policy**: This document should discourage discriminatory attitudes and behaviors, especially on the grounds of protected characteristics such as gender, race and religion, making job applicants and employees feel confident about equality of opportunity.
-- **Disciplinary and Grievance Procedures**: This document sets out the procedure that will be followed where allegations of misconduct have been made against an employee and it sets out minimum standards of good practice for employers and employees in relation to grievances.
-- **Bribery Policy**: This policy is intended to be used by employers to help prevent bribery and corruption by or involving its workers and provide guidance on the employer’s and workers’ obligations and potential liabilities under the Bribery Act 2010.
-- **Privacy Policy**: Required by law in many jurisdictions, a privacy policy outlines how an organization collects, uses, and protects personal information.
-- **Security Policy**: A security policy outlines an organization's approach to protecting sensitive information and data from unauthorized access, disclosure, and misuse.
-- **Data Retention Policy**: A data retention policy establishes guidelines for retaining and disposing of data in compliance with laws and regulations.
-- **Acceptable Use Policy**: An acceptable use policy defines acceptable and unacceptable use of organizational resources, such as computers, networks, and data.
-- **Incident Response Policy**: An incident response policy outlines an organization's response to security incidents, such as data breaches and cyber attacks.
+The editor supports most native markdown (type `##` for a heading), and `cmd+shift+v` pastes with formatting intact.
 
-## Policy Lifecycle
+## Getting Existing Policies In
 
-The policy lifecycle consists of several stages, including policy development, approval, dissemination, implementation, monitoring, and review. Each stage is essential for creating effective policies and ensuring compliance with organizational goals and objectives.
+If you already have policies written, there's no need to retype them. You can bulk-import markdown, Word, or text files from the console, or set up a continuous sync from a GitHub repository so the repo stays your source of truth. The [import guide](./import.mdx) covers both.
 
-### Policy Life Cycle Steps
+## Keeping Policies Current
 
-1. Perform a risk assessment to identify risks to organizational assets.
-1. Utilize policy templates to guide policy creation.
-1. Seek policy input from executives and other stakeholders.
-1. Establish penalties for policy violations.
-1. Publish the policy to all employees in the organization.
-1. Ensure staff members read, understand, and sign the policy.
-1. Utilize technology to enforce policies whenever possible.
-1. Educate staff about the policy contents.
-1. Schedule reviews for the policy on an annual or semi-annual basis.
-1. Retire the policy when it’s no longer applicable.
+The lifecycle is straightforward: draft with input from the stakeholders the policy binds, get approval from someone with authority to enforce it, publish it where employees will see it, make sure staff read and acknowledge it, then review on a schedule; annually or semi-annually is typical. Enforce with technology where you can, and retire policies that no longer apply: a stale policy that contradicts current practice is worse in an audit than no policy at all.
 
-### Policy Development
+## FAQ
 
-Policy development involves identifying the need for a new policy, conducting research, drafting the policy, and obtaining input from stakeholders. During this stage, it’s essential to consider the organization’s goals, objectives, and compliance requirements.
+<details>
+<summary>Do I need a separate policy for every control?</summary>
 
-### Policy Approval
+No, one policy typically satisfies many controls. Map the policy to each control it supports and collect control-specific evidence separately.
 
-Policy approval involves obtaining approval from key stakeholders, such as senior management, legal, and compliance teams. It’s essential to ensure that policies are aligned with organizational goals and objectives and comply with laws and regulations.
+</details>
 
-### Policy Dissemination
+<details>
+<summary>Who should approve policies?</summary>
 
-Policy dissemination involves communicating policies to employees, contractors, and other relevant stakeholders. It’s essential to ensure that policies are accessible, easy to understand, and readily available to all employees.
+Someone with the authority to enforce them: typically an executive or department head, not just the person who drafted them. Record the approval in the modification history.
 
-### Policy Implementation
+</details>
 
-Policy implementation involves putting policies into practice and ensuring that employees understand and comply with them. It’s essential to provide training, resources, and support to help employees adhere to policies.
+<details>
+<summary>How often should policies be reviewed?</summary>
 
-### Policy Monitoring
+Annually is the common baseline, plus whenever something material changes: a new system, a reorganization, a new regulation.
 
-Policy monitoring involves tracking policy compliance, identifying gaps, and addressing issues as they arise. It’s essential to establish monitoring mechanisms, such as audits, assessments, and reporting, to ensure ongoing compliance.
+</details>
 
-### Policy Review
+<details>
+<summary>What format should policies be in?</summary>
 
-Policy review involves periodically reviewing policies to ensure they remain relevant, effective, and compliant with laws and regulations. It’s essential to update policies as needed and involve key stakeholders in the review process.
+Markdown works best in Openlane, but you can import Word and text files too. If your policies live in Git, the [GitHub sync](./import.mdx) keeps them updated automatically.
 
-## Best Practices for Creating Policies
-
-Creating effective policies requires careful planning, research, and collaboration. Here are some best practices to consider when developing policies:
-
-- **Define Clear Goals and Objectives**: Clearly define the purpose and scope of the policy to ensure alignment with organizational goals and objectives.
-- **Comply with Laws and Regulations**: Ensure that policies comply with relevant laws, regulations, and industry standards to avoid legal risks.
-- **Involve Key Stakeholders**: Obtain input from key stakeholders, such as senior management, legal, compliance, and IT teams, to ensure policies are comprehensive and effective.
-- **Provide Training and Support**: Offer training, resources, and support to help employees understand and comply with policies.
-- **Monitor and Review Policies**: Establish monitoring mechanisms, such as audits, assessments, and reporting, to track policy compliance and identify areas for improvement.
-- **Update Policies as Needed**: Periodically review and update policies to ensure they remain relevant, effective, and compliant with laws and regulations.
-
-By following these best practices, organizations can create policies that are clear, effective, and aligned with their goals and objectives.
-
-:::tip
-For more detailed guidance on creating or importing existing policies, refer to our [policy onboarding](../onboarding/policies) section.
-:::
-
-### Questions to ask when creating a security policy
-
-When you’re creating a security policy, it helps to ask questions because in answering them, you’ll learn what’s important to your organization and the resources you’ll need to create and maintain your security policy. Here’s are a few questions to get you started:
-
-* Who will you need buy-in from?
-* Who will be the owner of this security policy?
-* Who is my audience for this policy?
-* What regulations apply to your industry (for instance GLBA, HIPAA, Sarbanes-Oxley etc)?
-* Who needs access to your organization’s data?
-* Who owns the data you manage? Your organization? Your customers?
-* How many requests are received per week to provide access to data?
-* How are these requests fulfilled?
-* How and when is access reviewed?
-* How will all access provisioning activity be recorded and available to audit?
-* How will you align your security policy to the business objectives of the organization?
-
+</details>

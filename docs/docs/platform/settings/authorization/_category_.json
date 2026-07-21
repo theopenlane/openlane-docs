@@ -1,0 +1,9 @@
+{
+  "label": "Permissions",
+  "position": 5,
+  "link": {
+    "type": "doc",
+    "id": "platform/settings/authorization/overview"
+  },
+  "collapsed": true
+}

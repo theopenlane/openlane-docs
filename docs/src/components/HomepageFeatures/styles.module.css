@@ -93,8 +93,21 @@
 /* ---- CARDS ---- */
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+@media (max-width: 996px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cards {
@@ -103,12 +116,25 @@
   align-items: center;
   text-align: center;
   background: var(--ifm-navbar-background-color, #fff);
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, .05);
-  padding: 1.75rem;
+  padding: 1.1rem 1.1rem 1.25rem;
   transition: transform .15s ease, box-shadow .15s ease;
   text-decoration: none;
   color: inherit;
+}
+
+.cardImageWrap {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .75rem;
+}
+
+.cardImage {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .cards:hover {
@@ -135,15 +161,16 @@
 }
 
 .cardTitle {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  margin: .75rem 0 .5rem;
+  margin: .25rem 0 .4rem;
 }
 
 .cardDescription {
-  font-size: .98rem;
-  line-height: 1.6;
+  font-size: .88rem;
+  line-height: 1.55;
   color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0;
 }
 
 /* ---- Responsive ---- */

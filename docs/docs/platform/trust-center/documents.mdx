@@ -14,9 +14,11 @@ tags:
   - compliance
 ---
 
+import Term from '@site/src/components/Term';
+
 # Documents
 
-Upload security documentation for Trust Center visitors to view or download. Common documents include SOC 2 reports, ISO certifications, penetration test summaries, and security policies.
+Upload security documentation for Trust Center visitors to view or download. Common documents include System and Organization Controls 2 (SOC 2) reports, International Organization for Standardization (ISO) certifications, penetration test summaries, and security policies.
 
 ## Visibility Levels
 
@@ -25,7 +27,7 @@ Each document has a visibility setting that controls who can access it:
 | Visibility | Who Can Access |
 | ---------- | -------------- |
 | **Not Visible** | No one (draft or internal only) |
-| **Private** | Visitors who sign your NDA and get approved |
+| **Private** | Visitors who sign your non-disclosure agreement (NDA) and get approved |
 | **Public** | Anyone visiting your Trust Center |
 
 ### Private Documents and NDAs
@@ -37,16 +39,15 @@ For private documents, the access flow is:
 1. Their request is submitted for your approval
 1. Once approved, they can download the document
 
+:::info
 You need to upload an NDA in the [NDAs](./ndas.mdx) section for this to work.
+:::
 
 ## Watermarking
 
 Enable watermarking to add the downloader's information to PDF downloads. The watermark includes who downloaded it and when, creating an audit trail and discouraging unauthorized sharing.
 
-Watermark status shows whether processing is complete:
-- **Pending**: Document is being processed
-- **Completed**: Watermarked version is ready
-- **Failed**: Something went wrong (try re-uploading)
+Watermarking runs after upload, and the document's watermark status shows when the watermarked version is ready. If watermarking fails, re-upload the document rather than serving the original, because an unwatermarked copy carries no download trail.
 
 ## Categories and Standards
 

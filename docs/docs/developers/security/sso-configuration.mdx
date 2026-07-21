@@ -1,0 +1,127 @@
+---
+title: "SSO & Auth Configuration"
+description: "Operator-supplied values for enabling authentication flows: client credentials, discovery endpoints, and redirect URIs"
+sidebar_position: 3
+keywords:
+  - sso configuration
+  - oidc
+  - client id
+  - client secret
+  - discovery endpoint
+  - redirect uri
+tags:
+  - sso
+  - oidc
+  - authentication
+  - configuration
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# SSO & Auth Configuration
+
+Operators supply a small set of values to enable authentication flows: client credentials, discovery endpoints, and redirect URIs. For how the flows themselves work (enforcement, exemptions, just-in-time (JIT) provisioning, WebFinger), see [Auth Flows](./auth-flows.mdx). For setting up single sign-on (SSO) as an organization admin, see the [product SSO guide](/docs/platform/settings/authentication/sso).
+
+## What You Bring
+
+| Value | Scope | Where It Goes |
+| ----- | ----- | ------------- |
+| OpenID Connect (OIDC) Client ID + Client Secret | Per organization | Organization settings, via console or API |
+| OIDC Discovery Endpoint | Per organization | Organization settings, via console or API |
+| Social login Client ID + Secret pairs (Google, GitHub) | Instance-wide | Helm values / environment variables |
+| Redirect URI registered with the IdP | Per IdP application | Derived from `CORE_DOMAIN`; register `https://api.<domain>/oidc/callback` in the IdP |
+
+Any OIDC-compliant provider works: the system consumes the standard discovery document; there is no per-vendor configuration in Openlane itself.
+
+## Instance Configuration
+
+Social login providers and token settings are instance-level, configured through Helm values or environment variables:
+
+<Tabs groupId="config-format" queryString>
+<TabItem value="helm" label="Helm Values">
+
+```yaml
+openlane:
+  coreConfiguration:
+    auth:
+      enabled: true
+      providers:
+        # Social login, available to non-SSO orgs
+        google:
+          clientId: "social-google-client-id"
+          clientSecret: "social-google-secret"
+        github:
+          clientId: "social-github-client-id"
+          clientSecret: "social-github-secret"
+
+# Organization SSO is configured via the API after deployment,
+# not in Helm values
+```
+
+</TabItem>
+<TabItem value="env" label="Environment Variables">
+
+```bash
+CORE_AUTH_ENABLED=true
+
+# Social login providers (organization-independent)
+CORE_AUTH_PROVIDERS_GOOGLE_CLIENTID=social-google-client-id
+CORE_AUTH_PROVIDERS_GOOGLE_CLIENTSECRET=social-google-secret
+CORE_AUTH_PROVIDERS_GITHUB_CLIENTID=social-github-client-id
+CORE_AUTH_PROVIDERS_GITHUB_CLIENTSECRET=social-github-secret
+
+# Domain configuration for redirect URIs
+CORE_DOMAIN=theopenlane.io
+# Auto-configures: https://api.theopenlane.io/oidc/callback
+
+# JWT token configuration
+CORE_AUTH_TOKEN_ISSUER=https://auth.theopenlane.io
+CORE_AUTH_TOKEN_AUDIENCE=https://theopenlane.io
+CORE_AUTH_TOKEN_JWKSENDPOINT=https://api.theopenlane.io/.well-known/jwks.json
+```
+
+</TabItem>
+</Tabs>
+
+See [Config and Secrets](../operations/config-and-secrets.mdx) for how these values load and where secrets should live.
+
+## Per-Organization SSO Configuration
+
+Organization SSO settings live on the organization, managed through the console or the API:
+
+```graphql
+# Query current SSO configuration
+query GetOrgSSO($orgId: ID!) {
+  organizationSetting(id: $orgId) {
+    id
+    identityProvider
+    identityProviderClientID
+    oidcDiscoveryEndpoint
+    identityProviderLoginEnforced
+  }
+}
+```
+
+```graphql
+# Update SSO configuration
+mutation UpdateSSO($orgId: ID!, $config: UpdateOrganizationSettingInput!) {
+  updateOrganizationSetting(id: $orgId, input: $config) {
+    organizationSetting {
+      id
+      identityProvider
+      identityProviderLoginEnforced
+    }
+  }
+}
+```
+
+Only enable `identityProviderLoginEnforced` after a successful test connection. Enforcement and exemption behavior is covered in [Auth Flows](./auth-flows.mdx#sso-enforcement--exemptions).
+
+## Troubleshooting
+
+| Symptom | Check |
+| ------- | ----- |
+| OIDC discovery fails | The discovery endpoint is reachable from the API host and serves a valid TLS certificate; `curl <endpoint>/.well-known/openid-configuration` |
+| `redirect_uri_mismatch` | The redirect URI registered in the IdP matches `https://api.<domain>/oidc/callback` exactly: scheme, host, and path |
+| Token signature validation fails | The token's issuer and audience claims match the configured values, and the IdP's JWKS endpoint is reachable |

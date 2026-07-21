@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Platform Overview
 title: Openlane Platform Overview - Compliance Automation & Security
-description: Open-source compliance automation platform for managing security, risk, and regulatory requirements. Streamline SOC 2, ISO 27001, NIST, GDPR, and HIPAA compliance.
+description: Open-source compliance automation platform for managing security, risk, and regulatory requirements. Automate SOC 2, ISO 27001, NIST, GDPR, and HIPAA compliance.
 keywords:
   - openlane platform
   - compliance automation
@@ -29,87 +29,50 @@ tags:
     - SOC2
 ---
 
-<head>
-  <meta name="keywords" content="compliance automation, GRC platform, security compliance, regulatory compliance, SOC 2, ISO 27001, open source compliance" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:title" content="Openlane Platform Overview - Compliance Automation & Security" />
-  <meta property="og:description" content="Open-source compliance automation platform for managing security, risk, and regulatory requirements across multiple frameworks and standards" />
-  <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://docs.theopenlane.io/docs/platform/overview" />
-  <script type="application/ld+json">
-    {JSON.stringify({
-      '@context': 'https://schema.org/',
-      '@type': 'SoftwareApplication',
-      name: 'Openlane',
-      applicationCategory: 'SecurityApplication',
-      description: 'Open-source compliance automation platform for managing security, risk, and regulatory requirements',
-      operatingSystem: 'Web',
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'USD'
-      },
-      author: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Openlane',
-        url: 'https://theopenlane.io/',
-      },
-    })}
-  </script>
-</head>
+import Term from '@site/src/components/Term';
 
 # Platform Overview
 
-Welcome to Openlane! We're thrilled to have you as a customer or open-source contributor or collaborator. At Openlane, we're working to develop a cutting-edge cybersecurity and compliance automation solution to help organizations of all sizes and industries secure their systems, navigate the increasingly complex web of privacy laws and regulations, ensure continuous compliance, manage risks, and get ahead of evolving cyber threats. Our open source platform and transparent pricing provides not only state of the art compliance management tools but a community that values transparency and collaboration which encourages innovation and sharing of best practices, ensuring that everyone has an opportunity to navigate today’s complex regulatory landscape.
+Openlane is an open-source compliance automation platform. It gives you a system of record for your compliance program (the people, systems, and vendors in scope; the policies and controls that govern them; the <Term t="evidence">evidence</Term> that proves it) and the automation to keep all of it current.
 
-## What is Compliance Automation?
+The platform (and this documentation) is organized into a handful of areas that build on each other.
 
-Openlane's compliance automation platform revolutionizes how companies are able to fulfill their legal or regulatory requirements by leveraging technology to streamline previously manual tasks. Automation assures timely adherence to regulations and simplifies complex compliance workflows such as risk assessments and corrective actions. By integrating a company’s specific security and compliance protocols into our sophisticated software, we can efficiently identify and addresses non-compliance issues which enhances overall business operations and regulatory conformity.
+## Organization Settings
 
-Compliance automation not only enable organizations to maintain regulatory compliance and avert financial repercussions, but also significantly enhances your companies efficiency. By eliminating the need for time-consuming manual processes, these tools free up your teams to concentrate on your core business goals. This shift from mundane tasks to high-level planning and analysis not only improves productivity, but also allows for a more active and strategic approach to compliance, assuring that organizations are always ahead of regulatory changes and industry standards.
+Everything in Openlane lives inside an [organization](./settings/organizations/overview.mdx): your tenant, your team, your data. The [Settings](./settings/overview.mdx) section covers the administrative side: profile, members and roles, billing, and the [custom data](./settings/custom-data.mdx) (enums and tags) that shapes how objects are classified to match how your team operates. Getting this foundation right pays off through the whole program: when every control, risk, and policy has a clear owner and audit trail, evidence collection takes less time and auditor questions have a named person to answer them.
 
-Some of the main benefits of using Openlane's compliance automation platform include:
+## Registry
 
-* Centralized documentation and evidence-gathering
-* Simplified risk assessment calculations and reporting
-* Easier and more accurate compliance reporting
-* Supplier due diligence / Third-party Risk Management
-* Improved risk management decision-making with real-time data
-* Standardized controls testing and on-going alignment with standards
-* Lower chance of security breaches
+The [Registry](./registry/overview.mdx) is your source of truth for *who and what is in scope*, the single place to answer the questions every audit starts with: who works in the environment, which third parties are involved, and which assets matter. It holds [personnel](./registry/personnel/overview.mdx) (employees and contractors), [entities](./registry/entities.mdx) (vendors and third parties), [assets](./registry/assets.mdx) (systems, services, devices), [platforms](./registry/platforms.mdx) (the system boundaries that define your compliance scope), and [contacts](./registry/contacts.mdx). These records feed everything downstream: they scope your [Exposure](./exposure/overview.mdx) work, anchor vendor due diligence, and give controls and evidence something concrete to point at.
 
-## How Openlane Works
+## Compliance Management
 
-Openlane's compliance automation platform is designed to be user-friendly and intuitive, allowing organizations to easily navigate the complexities of compliance management. Our platform is today focused on these key areas of management and automation:
+[Compliance Management](./compliance-management/overview.mdx) is where your program takes shape, and its objects form a chain: [policies and procedures](./compliance-management/policy-and-procedure-management/policies.mdx) document what you intend to do, [controls](./compliance-management/controls/overview.mdx) operationalize those policies and map to the standards you're pursuing, [evidence](./compliance-management/evidence/overview.mdx) attaches to controls to prove they operate, and [programs](./compliance-management/programs/overview.mdx) bundle all of it for a given audit period (say, System and Organization Controls 2 (SOC 2) Type 2 for this year). That chain (policy → control → evidence → program) is the outcome the rest of the platform exists to support, with [questionnaires](./automation/assessments.mdx) and [audit preparation](./grc-fundamentals/audit/index.mdx) rounding out assessment and audit readiness.
 
-* **Compliance Management**: Openlane provides a centralized platform for managing compliance requirements, policies, and procedures. Users can track compliance status, assign tasks, and generate reports to demonstrate adherence to regulatory standards.
-* **Risk Assessment**: Openlane enables organizations to conduct risk assessments to identify potential threats and vulnerabilities. Users can evaluate the likelihood and impact of risks, prioritize mitigation efforts, and monitor risk levels over time.
-* **Audit Management**: Openlane supports audit planning, execution, and reporting to ensure compliance with internal and external audit requirements. Users can schedule audits, assign auditors, and track audit findings to address non-conformities.
-* **Policy and Procedure Management**: Openlane allows organizations to create, review, and distribute policies and procedures to employees. Users can track policy acceptance, monitor compliance, and update policies as needed to reflect changing requirements.
-* **Scalability and Flexibility**: Openlane is designed to scale with organizations as they grow and evolve. Users can customize the platform to meet their unique compliance needs, add new features and modules as required, and expand their compliance program over time.
-* **Collaboration and Communication**: Openlane fosters collaboration and communication among stakeholders to promote a culture of compliance and security. Users can share information, assign tasks, and engage with colleagues, partners, and regulators to achieve common goals and address shared challenges.
+## Frameworks & Standards
 
-Additionally, we believe Openlane is set apart from other software solutions in the space because we pair the power of open-source with our battle-tested team of highly skilled software and platform engineers and deep industry expertise; this allows our customers to take advantage of:
+The [standards catalog](./standards/overview.mdx) covers the frameworks you're likely working toward ([SOC 2](./standards/soc2/overview.mdx), [ISO 27001](./standards/iso27001/overview.mdx), [NIST CSF](./standards/nist-csf/overview.mdx), [GDPR](./standards/gdpr/overview.mdx), [HIPAA](./standards/hipaa/overview.mdx), and more) with reference documentation and importable control sets, so you seed your controls from the catalog rather than authoring them from scratch. One control can satisfy requirements across multiple frameworks, which means adding a second standard doesn't mean duplicating your program.
 
-* **Community Support**: Openlane offers a vibrant community of users, experts, and partners who share knowledge, best practices, and resources to help organizations succeed in their compliance journey. Users can access templates, libraries, forums, training sessions, and other community events to learn from others and contribute to the community.
-* **Innovation and Evolution**: Openlane is committed to innovation and continuous improvement to stay ahead of emerging threats, regulatory changes, and industry trends. Users can expect regular updates, new features, and enhancements to the platform to address evolving compliance requirements and business needs.
-* **Transparency and Trust**: Openlane values transparency, integrity, and trust in all its interactions with customers, partners, and stakeholders. Users can rely on Openlane to provide accurate information, secure data handling, and ethical business practices to build lasting relationships and foster mutual success.
-* **Open Source**: Openlane is an open-source platform that encourages collaboration, innovation, and knowledge sharing among users and developers. Users can access the source code, contribute to the platform, and customize it to meet their specific needs, ensuring a vibrant and sustainable ecosystem for compliance automation.
-* **Machine Learning and AI**: Openlane incorporates machine learning and artificial intelligence capabilities to enhance compliance automation, risk prediction, anomaly detection, and decision-making. Users can leverage Openlane's AI-driven features to make inquiries, obtain and get feedback on templates, analyze data, and optimize compliance processes, enabling proactive risk management and continuous improvement in compliance performance.
-* **Global Reach**: Openlane serves a global audience of organizations, industries, and regulatory environments, providing compliance solutions that are adaptable, scalable, and customizable to meet diverse needs. Users can use Openlane to manage compliance in multiple jurisdictions and frameworks, ensuring consistency, efficiency, and effectiveness in their compliance operations.
+## Exposure
 
-## What's next?
+[Exposure](./exposure/overview.mdx) connects risk management to real security work, in a pipeline that starts from Registry scope: your assets and entities define what gets scanned, [scans](./exposure/scans.mdx) surface [vulnerabilities](./exposure/vulnerabilities/overview.mdx) and [findings](./exposure/findings.mdx), [remediations](./exposure/remediations.mdx) document and verify the fixes, and closing them out updates the [risks](./exposure/risks/overview.mdx) that capture what could go wrong: a repeatable risk-to-remediation trail auditors can follow.
 
-As we grow, you grow. We've got our eyes on the horizon and are already cooking up more features and capabilities to help you navigate the ever-changing world of compliance and cybersecurity. We're excited to have you on this journey with us and can't wait to see what we can accomplish together. Keep a lookout for features like:
+## Automation
 
-* **Training and Awareness**: Openlane provides training modules and awareness campaigns to educate employees on security best practices and compliance requirements. Users can assign training courses, track completion, and assess employee knowledge to improve security awareness.
-* **Reporting and Analytics**: Openlane offers customizable reporting and analytics tools to monitor compliance performance, identify trends, and make data-driven decisions. Users can generate compliance reports, dashboards, and alerts to stay informed about their compliance status.
-* **Integration and Automation**: Openlane integrates with third-party tools and systems to streamline compliance processes and automate routine tasks. Users can connect Openlane with their existing security tools, IT systems, and business applications to enhance efficiency and accuracy.
-* **Continuous Monitoring**: Openlane provides continuous monitoring capabilities to detect security incidents, compliance violations, and other risks in real time. Users can set up alerts, notifications, and automated responses to address issues promptly and prevent further damage.
-* **Incident Response**: Openlane offers tools for managing security incidents, including incident reporting, investigation, and resolution. Users can track incident details, assign responsibilities, and implement corrective actions to prevent future incidents.
-* **Trust Center**: Openlane establishes a configurable trust center you can publish and manage to proactively demonstrate your security posture to future prospects as well as existing customers and internal employees. This trust center can be customized to include your compliance certifications, security policies, and other relevant information to build trust and transparency with stakeholders and be branded with your name and logo so it fits right in with the rest of your tools and branding.
+[Automation](./automation/overview.mdx) keeps recurring governance work (access reviews, policy acceptance, evidence refresh) running on cadence, with approvals and audit trails built in: [workflows and approvals](./automation/workflows/overview.mdx) gate changes and route reviews, [campaigns](./automation/campaigns.mdx) run bulk outreach (annual attestations, vendor questionnaires), [assessments](./automation/assessments.mdx) define reusable questionnaire content, and [tasks](./automation/tasks.mdx) track the resulting work, each one owned, dated, and linked to the objects it concerns.
+
+## Trust Center
+
+The [Trust Center](./trust-center/overview.mdx) is the public face of the program: a branded portal on your own domain where prospects and customers find your certifications, security documents (public or NDA-gated), <Term t="subprocessor">subprocessors</Term>, and updates, instead of sending you another questionnaire. It publishes what the rest of the platform produces; completed frameworks, approved policies, and subprocessor records flow straight through.
+
+## Integrations & Security
+
+[Integrations](./integrations/overview.mdx) connect Openlane to the systems you already run (cloud providers and security tooling for posture collection, Slack and Teams for notifications, identity providers for single sign-on (SSO)), so Registry and Exposure data stays current without manual entry. How access to Openlane itself works (authentication methods, the permissions model, and [groups](./settings/groups/overview.mdx)) lives in [Settings](./settings/overview.mdx).
+
+## Where to Go Next
+
+- **New to Openlane?** The [Quickstart Guide](./quickstartguide.mdx) walks through standing up your organization and program step by step.
+- **Coming with an existing program?** [Import your controls](./compliance-management/controls/import.mdx) and [policies](./compliance-management/policy-and-procedure-management/import.mdx) instead of recreating them.
+- **Building against the API?** Head to the [developer documentation](../developers/overview.mdx) and [GraphQL examples](../developers/graphql-examples/overview.mdx).
+- **New to compliance concepts or your first audit?** [GRC Fundamentals](./grc-fundamentals/overview.mdx) covers the concepts, terminology, and audit preparation.
+- **Unfamiliar terms?** Compliance and security terminology is defined in the [Glossary](./glossary/index.mdx).
