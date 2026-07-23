@@ -8,6 +8,240 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "Account Management",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/user-info",
+          label: "UserInfo",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/account-access",
+          label: "AccountAccess",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/account-features",
+          label: "AccountFeatures",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/account-features-by-id",
+          label: "AccountFeaturesByID",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/delete-organization-roles",
+          label: "DeleteOrganizationRoles",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/organization-roles",
+          label: "OrganizationRoles",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/assign-organization-roles",
+          label: "AssignOrganizationRoles",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/account-roles",
+          label: "AccountRoles",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/account-roles-me",
+          label: "AccountRolesMe",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/account-roles-organization",
+          label: "AccountRolesOrganization",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/account-roles-organization-by-id",
+          label: "AccountRolesOrganizationByID",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/forgot-password",
+          label: "ForgotPassword",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/reset-password",
+          label: "ResetPassword",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/roles",
+          label: "Roles",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/scopes",
+          label: "Scopes",
+          className: "api-method get",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Account Registration",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/register",
+          label: "Register",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/resend-email",
+          label: "ResendVerificationEmail",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/verify-email",
+          label: "VerifyEmail",
+          className: "api-method get",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Authentication",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/login-handler",
+          label: "Login",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/logout-handler",
+          label: "Logout",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/sso-initiate",
+          label: "SSOInitiate",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/refresh-handler",
+          label: "Refresh",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/switch",
+          label: "Switch",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Integrations",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/list-integration-providers",
+          label: "ListIntegrationProviders",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/configure-integration-provider",
+          label: "ConfigureIntegrationProvider",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/disconnect-integration",
+          label: "DisconnectIntegration",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/run-integration-operation",
+          label: "RunIntegrationOperation",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Invites",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/organization-invite-accept",
+          label: "OrganizationInviteAccept",
+          className: "api-method get",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Products",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/product-catalog",
+          label: "ProductCatalog",
+          className: "api-method get",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Questionnaires",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest-api/get-questionnaire",
+          label: "GetQuestionnaire",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/submit-questionnaire",
+          label: "SubmitQuestionnaire",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest-api/resend-questionnaire-email",
+          label: "ResendQuestionnaireEmail",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "SCIM Discovery",
       items: [
         {
@@ -128,217 +362,7 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "account",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/account-access",
-          label: "AccountAccess",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/account-features",
-          label: "AccountFeatures",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/account-features-by-id",
-          label: "AccountFeaturesByID",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/delete-organization-roles",
-          label: "DeleteOrganizationRoles",
-          className: "api-method delete",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/organization-roles",
-          label: "OrganizationRoles",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/assign-organization-roles",
-          label: "AssignOrganizationRoles",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/account-roles",
-          label: "AccountRoles",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/account-roles-me",
-          label: "AccountRolesMe",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/account-roles-organization",
-          label: "AccountRolesOrganization",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/account-roles-organization-by-id",
-          label: "AccountRolesOrganizationByID",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "accountRegistration",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/register",
-          label: "Register",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "catalog",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/product-catalog",
-          label: "ProductCatalog",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "email",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/verify-email",
-          label: "VerifyEmail",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "forgotpassword",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/forgot-password",
-          label: "ForgotPassword",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "oauth",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/user-info",
-          label: "UserInfo",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "organization",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/organization-invite-accept",
-          label: "OrganizationInviteAccept",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/switch",
-          label: "Switch",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "password-reset",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/reset-password",
-          label: "ResetPassword",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "questionnaire",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/get-questionnaire",
-          label: "GetQuestionnaire",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/submit-questionnaire",
-          label: "SubmitQuestionnaire",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/resend-questionnaire-email",
-          label: "ResendQuestionnaireEmail",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "resend",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/resend-email",
-          label: "ResendEmail",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "scopes",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/roles",
-          label: "Roles",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/scopes",
-          label: "Scopes",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "subscription",
+      label: "Subscribers",
       items: [
         {
           type: "doc",
@@ -356,30 +380,12 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "tokens",
+      label: "documentation",
       items: [
         {
           type: "doc",
-          id: "api/rest-api/roles",
-          label: "Roles",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest-api/scopes",
-          label: "Scopes",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "user",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest-api/user-info",
-          label: "UserInfo",
+          id: "api/rest-api/api-docs",
+          label: "APIDocs",
           className: "api-method get",
         },
       ],
