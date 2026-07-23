@@ -1,1 +1,1 @@
-{"parameters":[{"description":"Path parameter: id","in":"path","name":"id","required":true,"schema":{"type":"string"}}]}
+{"parameters":[{"description":"The ID of the organization to check roles for","example":"01J4HMNDSZCCQBTY93BF9CBF5D","in":"path","name":"id","required":true,"schema":{"type":"string"}}]}
