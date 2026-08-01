@@ -84,13 +84,14 @@ The codebase uses `//go:build` tags for conditional compilation. This keeps the 
 | `test` | Test-only code (test utilities, fixtures, mock implementations) | `internal/testutils/`, test files |
 | `cli` | CLI-specific code | `cli/`, CLI command implementations |
 | `codegen` | Code generation scripts (not compiled into any binary) | `internal/ent/generate/`, `internal/graphapi/generate/` |
+| `examples` | Example programs and development CLIs | `internal/workflows/examples/`, `internal/integrations/cli/` |
 | `clistripe` | Stripe webhook management CLI tool | `cmd/stripe-webhook/` |
 | `climanagedgroups` | Managed groups CLI tool | `cmd/managedgroups/` |
 | `ignore` | Generation scripts that should never be compiled | Various `generate.go` files |
 
 ### Impact on Development
 
-Your IDE needs to know about these tags to resolve symbols correctly. Without `cli,test,codegen` in your build tags, functions gated behind those tags will appear undefined. See [Local Setup](../getting-started/local-setup.mdx#ide-build-tags) for VSCode and GoLand configuration.
+Your IDE needs to know about these tags to resolve symbols correctly. Without `cli,test,codegen,examples` in your build tags, functions gated behind those tags will appear undefined. See [Local Setup](../getting-started/local-setup.mdx#ide-build-tags) for VSCode and GoLand configuration.
 
 On the command line, pass tags explicitly:
 

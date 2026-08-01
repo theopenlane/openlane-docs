@@ -30,6 +30,7 @@ task db:newschema -- MyNewSchema
 
 The file will be located in `internal/ent/schema/`, the file name matching the schema name. Work through the template:
 
+* Keep the `IDMixin` and the standard annotations included in the template; removing `IDMixin` causes ID type conflicts with the rest of the graph
 * Add [fields](https://entgo.io/docs/schema-fields) to the schema
 * Add [edges](https://entgo.io/docs/schema-edges) for 1:1, 1:m, or m:m relationships with other objects
 * Add [indexes](https://entgo.io/docs/schema-indexes) where needed
