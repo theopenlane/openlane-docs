@@ -54,11 +54,6 @@ tasks:
       - task: clean-api-docs
       - task: generate-api-docs
 
-  generate-graphql-docs:
-    dir: docs
-    desc: generate graphql docs
-    cmd: npx docusaurus docs:generate:graphql
-
   generate-glossary-data:
     dir: docs
     desc: regenerate the glossary tooltip data from the glossary page
