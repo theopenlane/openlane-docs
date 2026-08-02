@@ -1,0 +1,66 @@
+---
+id: logout-handler
+title: ""
+description: "The Logout endpoint revokes the caller's access and refresh tokens and deletes their server-side session so that the credentials can no longer be used. It is intended to be called by clients on sign-out to ensure logout is enforced on the server rather than only clearing client-side state."
+sidebar_label: LogoutHandler
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtvGzcQ/ivEXnLRw3bbQ3WKHbioa7cObAUp4BgBtTuSGK/ILcmV4gj67/2G5K71gusGPhS1YcDa5Qzn+c1wh8usIJdbVXlldDbIhlMSF2Ziai9IF5VR2gtLc3NHTnjQclmWZN84IfOcHH50AfrYkpsKDy4dlwoqycctygpHdk6261RBeHYOqoQzIEofhVoqSHslSwcFWmgjSqMnZMWIRO2o6IkzL5QTsAZWUQFVTArGFGJ0L/JSQYATLFhNdJftBw/MqS1BWHAIAkiPjc2xB4ysOVomrMSLZYM0KCXLI2mVniTByXQvPfWyTmYqwg54cVYgZDFcv8JtRAZUS3/V5PyJKe6zwTLLDRvt+VFWVanysLP/xXG8lxl9lbOqJMfPUdJV3M8Lc1nWxA8pxJ9DiKEz/q5Wq07m8inNJDNtZnJDmDBhGfGCb9JaldK5kTqOWMy1WEzxqkLItPHC1Ww5wjZXUuTG3CmCo5XlQHgVjd8ycducy2TA4ypZGcTOVbGtzN9XiETmPKclY8fTihl9odwzh/IlbTseY7RpShOTEWdoxQlzldEuunF0cPBdWbuuQ0FcJVkb2ZuBICfB/MgFa5ungbc1PSmRUTAiosfKzlzCb6wmrrlUfguylGJa7CSJrDV2VwVXfSCJZKpQ44SPGKqFdKLWyeZxXe4mpBNlf85NQY8pYPr3SG9juNyltbHcVvtxSqGwoZeRta3zQWPieFA8MgYtQLP0WqNFqDHgv6a8pT8BiAkRe5B4ec4KfvzXkGvT2EIsrWQjWTQuroNsjNb6OMquqOLeABukAorQ63QhbSHgd1m42Kulje1YoImKCWmEJRfH789EW0EBiMEW9z/C3n8UX6fsVMjbPmydAAltE2SQHT4byGotaz81Vn0LLeYVZS8XZR/WocAwO/r52WDmjREzqe8bb90r1l401obAw++Mh6sGD2D56RkPTx4vLH+jprEgrr+C7iWD7qzBxHXEROAO8hzltVUeQ97NMhthXsT0N7i5XXUYguqc7sPbLRTJCZy+yY7RKXnMjdjMbvmjFr2TZ8jKhO+1CnMo3vrzw36cWRl8Qa8LWrZHKtKl1BSwE80Df21L0KbeV27Q78OSHrSaxNpTJmOTGtuvGcYRVyfBA7ZxN0GRlkY2ueEGkMxzMpsQB5DeJ81QibwqzPXjZtw0diK1+hY3MsYnVvLYDnjPVJhkHE+EaPoA8CeNIrEu8Zm6wmyj/FTpWEXrst4AJDl8hO4s1WbIfkxKm3oOCkOlSc+2m+wECFsedoLpd1if1Tw1kpACrUMVwWmsQ4Hi7VOSRVCnZVD/ZxcM3fPAkCxImmFDA5gGOr8YO5PoX9lvH4fZzrdcjP8+u2Kc91kWB/F/DAds4S559XBrcRqb5b57h4diVnpsmsYr89B40RBVGYbcqjLWv93CXRuXBrc7YF0sFjtg3RmZEhEpZye5OlTOHRNNFZxqouP1ULpFQEScYm9iS5XunokAVrhLsmOZU2jD4Q1+MJYZZSG2bYFVpfTgmvXEcKqiYvysq0sXVXwXNTLY3h4lQe3X9NJcU2FDo/AxbQgQTjJK1wkpeseVRELFUe9gb/xkIPdQHf201/Uvzt6d/nF92uU9q4fG1yrkB/bph95h71BcV5SjZCPI+Pzh9hODPz/o4a9b0JzlcNNCqa7ZdtE0rY2crZ3Or/eLT7lfTPXpgZs+wKDi+capXqYj4iabHzI6YrzR0Kd8gGB5uRxJRx9suVrxMmrahnMIWYRCOeLE8xnVNCs+VbiFDbJ3MUfdISvvNB9Hu19TfL7FHcdIUeUf5V0/495fXnNnG6V70Vn4ysisXPCdKf4PsnC1GlHHvYfXlhkQOqnj7VmUyR1LpmOqOeabztYewy0J34trFiI8gWPIUEKIOsmVdJ96C+F/A5OLMWw=
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest-api/openlane-openapi-3-1-1-specifications
+custom_edit_url: null
+show_extensions: true
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Logout"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/logout"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+The Logout endpoint revokes the caller's access and refresh tokens and deletes their server-side session so that the credentials can no longer be used. It is intended to be called by clients on sign-out to ensure logout is enforced on the server rather than only clearing client-side state.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./logout-handler.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./logout-handler.StatusCodes.json")}
+>
+  
+</StatusCodes>
+

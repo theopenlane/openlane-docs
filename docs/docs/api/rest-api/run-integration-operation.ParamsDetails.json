@@ -1,0 +1,1 @@
+{"parameters":[{"description":"Path parameter: integrationID","in":"path","name":"integrationID","required":true,"schema":{"type":"string"}}]}

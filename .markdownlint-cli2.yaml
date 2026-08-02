@@ -16,6 +16,10 @@ gitignore: true
 # Define glob expressions to ignore
 ignores:
   - "docs/docs/api/**/**"
+  # Generated at build time by docusaurus-plugin-remote-content from theopenlane/core
+  - "docs/docs/developers/operations/configuration-reference.md"
+  - "docs/docs/developers/architecture/workflows-engine.mdx"
+  - "docs/docs/developers/getting-started/run-the-stack.mdx"
 
 # Disable progress on stdout (only valid at root)
 noProgress: false
