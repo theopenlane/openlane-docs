@@ -36,7 +36,9 @@ Generate migrations after schema changes:
 task db:create
 ```
 
-This writes the atlas and goose migrations under [`db/`](https://github.com/theopenlane/core/tree/main/db) in core; see the [db README](https://github.com/theopenlane/core/blob/main/db/README.md) for tooling details and [MIGRATION.md](https://github.com/theopenlane/core/blob/main/db/MIGRATION.md) for the v2 permissions tuple migration.
+This writes the atlas migrations under [`db/migrations`](https://github.com/theopenlane/core/tree/main/db/migrations) and the goose migrations under [`db/migrations-goose-postgres`](https://github.com/theopenlane/core/tree/main/db/migrations-goose-postgres), one file for the base schema and one for the history schema. On every core pull request, the Atlas CI integration also comments with any issues it detects in the schema changes or migrations.
+
+See the [db README](https://github.com/theopenlane/core/blob/main/db/README.md) for tooling details and [MIGRATION.md](https://github.com/theopenlane/core/blob/main/db/MIGRATION.md) for the v2 permissions tuple migration.
 
 :::info
 For new schemas, follow the [codegen flow](./graphql-and-codegen.mdx) first, then generate migrations

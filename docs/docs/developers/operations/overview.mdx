@@ -10,3 +10,7 @@ Deployment and release operations for core and its infrastructure.
 
 * [Config and Secrets](./config-and-secrets.mdx): how configuration is structured and loaded, and how secrets flow from the secret manager into the running application
 * [Stripe Webhook Migration Runbook](./runbook-stripe-webhook-migration.mdx): rotating Stripe webhook API versions with no downtime
+
+## Deployment
+
+Running locally is the only supported deployment method today, but all required container images are published to the [GitHub container registry](https://github.com/orgs/theopenlane/packages?repo_name=core) for deployment into Kubernetes. [Config and Secrets](./config-and-secrets.mdx) covers how Helm values and external-secrets resources are generated from the config structs.

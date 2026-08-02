@@ -46,7 +46,7 @@ task
 
 ## IDE Build Tags
 
-The core codebase uses [build tags](../schema-and-codegen/multi-module-structure.mdx#build-tags) for conditional compilation. Configure your IDE with the `cli,test,codegen` tags, or functions gated behind them will appear undefined and your language server will flag imports as unused.
+The core codebase uses [build tags](../schema-and-codegen/multi-module-structure.mdx#build-tags) for conditional compilation. Configure your IDE with the `cli,test,codegen,examples` tags, or functions gated behind them will appear undefined and your language server will flag imports as unused.
 
 <Tabs groupId="ide" queryString>
     <TabItem value="vscode" label="VSCode">
@@ -54,11 +54,11 @@ The core codebase uses [build tags](../schema-and-codegen/multi-module-structure
 
         ```json
         {
-          "go.buildTags": "cli,test,codegen"
+          "go.buildTags": "cli,test,codegen,examples"
         }
         ```
     </TabItem>
     <TabItem value="goland" label="GoLand">
-        Navigate to _Settings > Go > Build Tags_ and add `cli,test,codegen` as a comma-separated list.
+        Navigate to _Settings > Go > Build Tags_ and add `cli,test,codegen,examples` as a comma-separated list.
     </TabItem>
 </Tabs>
