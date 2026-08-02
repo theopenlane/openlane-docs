@@ -1,0 +1,1 @@
+{"parameters":[{"description":"the organization slug","example":"acme","in":"path","name":"slug_name","required":true,"schema":{"type":"string"}}]}

@@ -92,42 +92,4 @@ Because the CSRF middleware stores the token only in the client’s cookie and n
 Therefore, rolling restarts on Kubernetes will not force new tokens to be issued and should not cause requests to fail, provided the client retains its CSRF cookie.
 :::
 
-### Querying the API with Apollo Sandbox
-
-We recommend the [Apollo sandbox](https://studio.apollographql.com/sandbox/explorer) for exploring the GraphQL API against a local server. Allow the sandbox origin in `config/.config.yaml`:
-
-```yaml
-server:
-  cors:
-    allowOrigins:
-      - https://studio.apollographql.com
-```
-
-In the Apollo connection settings, configure:
-
-1. Endpoint: `http://localhost:17608/query`
-1. Shared Headers: `Authorization` `Bearer tolp_REDACTED`
-
-Create an API token or personal access token against your local API with:
-
-```bash
-task cli:token:create
-```
-
-```bash
-task cli:pat:create
-```
-
-Both are also created automatically when you set up the test user with `task cli:user:all`. See [API Tokens & PATs](../security/api-tokens-and-pats.mdx) for how the two token types differ.
-
-### OpenFGA Playground
-
-Bring up a local OpenFGA environment with the compose setup in the core repository:
-
-```bash
-task docker:fga:up
-```
-
-This launches an interactive playground where you can inspect tuples and model changes to the [permission model](../security/privacy-and-authorization.mdx). If you hit a CORS and loopback error, see this [OpenFGA issue](https://github.com/openfga/openfga/issues/338#issuecomment-3511304207) for a workaround.
-
 

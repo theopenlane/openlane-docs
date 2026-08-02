@@ -40,7 +40,8 @@ steps:
       git config user.email "theopenlane-bender@users.noreply.github.com"
 
       echo "--- checking for changes"
-      if git diff --quiet; then
+      git add -A docs
+      if git diff --cached --quiet; then
         echo "No changes from task generate; nothing to commit."
         exit 0
       fi
@@ -54,7 +55,6 @@ steps:
         branchName="${BUILDKITE_BRANCH}"
         git checkout "$$branchName"
       fi
-      git add -u
 
       # commit changes
       git commit -m "chore: run task generate"
