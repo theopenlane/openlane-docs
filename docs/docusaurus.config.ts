@@ -504,36 +504,6 @@ ${rewriteRelativeLinks(content, 'https://github.com/theopenlane/core/blob/main/j
         },
       },
     ],
-    [
-      "docusaurus-plugin-remote-content",
-      {
-        name: "openlane-core-startup",
-        sourceBaseUrl: "https://raw.githubusercontent.com/theopenlane/core/refs/heads/main/",
-        outDir: "docs/developers/getting-started",
-        documents: ["README.md"],
-        modifyContent(filename: any, content: any) {
-          if (filename.includes("README")) {
-            return {
-              filename: `run-the-stack.mdx`,
-              content: `---
-title: Run the Stack
-sidebar_position: 3
-tags:
-    - local
-    - development
----
-
-# Run the Stack
-
-${convertGitHubAlerts(excerpt(content, "### Starting the Server", "### Creating Queries in GraphQL"))}`,
-            }
-          }
-
-          // we don't want to modify this item, since it doesn't contain "README" in the name
-          return undefined
-        },
-      },
-    ],
   ],
   customFields: {
     pirschKey: process.env.PIRSCH_KEY,
@@ -542,14 +512,6 @@ ${convertGitHubAlerts(excerpt(content, "### Starting the Server", "### Creating 
 
 export default async function createConfig() {
   return config;
-}
-
-// excerpt grabs a substring from a string between two substrings
-// generally used for grabbing a section of a remote markdown file
-function excerpt(str: string, startString: string, endString: string) {
-  const indexStart = str.indexOf(startString, startString.length)
-  const indexEnd = str.indexOf(endString)
-  return str.slice(indexStart, indexEnd)
 }
 
 // stripCodeInventoryTables removes markdown tables that inventory code
