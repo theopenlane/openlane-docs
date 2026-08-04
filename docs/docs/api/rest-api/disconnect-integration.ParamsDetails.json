@@ -1,1 +1,0 @@
-{"parameters":[{"description":"Integration ID to disconnect","example":"01J4HMNDSZCCQBTY93BF9CBF5D","in":"path","name":"integrationID","required":true,"schema":{"type":"string"}}]}

@@ -104,132 +104,6 @@ html[data-theme='dark'] {
   --button-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-/* OpenAPI Spec styles*/
-.api-method>.menu__link {
-  align-items: center;
-  justify-content: start;
-  font-size: 14px;
-  font-family: "JetBrains Mono", monospace;
-}
-
-.api-method>.menu__link::before {
-  width: 50px;
-  height: 20px;
-  font-size: 12px;
-  line-height: 20px;
-  text-transform: uppercase;
-  font-weight: 600;
-  border-radius: 0.25rem;
-  border: 1px solid;
-  margin-right: var(--ifm-spacing-horizontal);
-  text-align: center;
-  flex-shrink: 0;
-  border-color: transparent;
-  color: white;
-  margin-right: 10px;
-}
-
-.get>.menu__link::before,
-.openapi-endpoint.api-method.get::before,
-.theme-api-markdown .openapi__method-endpoint .badge--primary {
-  background-color: var(--ifm-color-info-contrast-background);
-  color: var(--ifm-color-info-contrast-foreground);
-  border-color: var(--ifm-color-info-dark);
-}
-
-.openapi-endpoint.api-method.get::before,
-.get>.menu__link::before {
-  content: 'get';
-}
-
-.openapi-endpoint.api-method.post::before,
-.post>.menu__link::before {
-  content: 'post';
-}
-
-.post>.menu__link::before,
-.openapi-endpoint.api-method.post::before,
-.theme-api-markdown .openapi__method-endpoint .badge--success {
-  background-color: var(--ifm-color-success-contrast-background);
-  color: var(--ifm-color-success-contrast-foreground);
-  border-color: var(--ifm-color-success-dark);
-}
-
-.openapi-endpoint.api-method.delete::before,
-.delete>.menu__link::before {
-  content: 'del';
-}
-
-.delete>.menu__link::before,
-.openapi-endpoint.api-method.delete::before,
-.theme-api-markdown .openapi__method-endpoint .badge--danger {
-  background-color: var(--ifm-color-danger-contrast-background);
-  color: var(--ifm-color-danger-contrast-foreground);
-  border-color: var(--ifm-color-danger-dark);
-}
-
-.openapi-endpoint.api-method.put::before,
-.put>.menu__link::before {
-  content: 'put';
-}
-
-.put>.menu__link::before,
-.openapi-endpoint.api-method.put::before,
-.theme-api-markdown .openapi__method-endpoint .badge--info {
-  background-color: var(--ifm-color-warning-contrast-background);
-  color: var(--ifm-color-warning-contrast-foreground);
-  border-color: var(--ifm-color-warning-dark);
-}
-
-.openapi-endpoint.api-method.patch::before,
-.patch>.menu__link::before {
-  content: 'patch';
-}
-
-.patch>.menu__link::before,
-.openapi-endpoint.api-method.patch::before,
-.theme-api-markdown .openapi__method-endpoint .badge--warning {
-  background-color: var(--ifm-color-success-contrast-background);
-  color: var(--ifm-color-success-contrast-foreground);
-  border-color: var(--ifm-color-success-dark);
-}
-
-.openapi-endpoint.api-method.head::before,
-.head>.menu__link::before {
-  content: 'head';
-}
-
-.head>.menu__link::before,
-.openapi-endpoint.api-method.head::before,
-.event>.menu__link::before,
-.openapi-endpoint.api-method.event::before,
-.schema>.menu__link::before,
-.openapi-endpoint.api-method.schema::before,
-.theme-api-markdown .openapi__method-endpoint .badge--secondary {
-  background-color: var(--ifm-color-secondary-contrast-background);
-  color: var(--ifm-color-secondary-contrast-foreground);
-  border-color: var(--ifm-color-secondary-dark);
-}
-
-.openapi-endpoint.api-method.event::before,
-.event>.menu__link::before {
-  content: 'event';
-}
-
-.event>.menu__link::before,
-.theme-api-markdown .openapi__method-endpoint .badge--secondary {
-  background-color: var(--ifm-color-secondary-contrast-background);
-  color: var(--ifm-color-secondary-contrast-foreground);
-  border-color: var(--ifm-color-secondary-dark);
-}
-
-.theme-doc-markdown .openapi__heading {
-  font-size: var(--ifm-h1-font-size);
-  margin-bottom: calc(var(--ifm-h1-vertical-rhythm-bottom)* var(--ifm-leading)) !important;
-  margin-top: 20px;
-}
-
-
 /* Descending heading scale so the page title outranks section headings */
 .markdown h1:first-child {
   font-size: 2.25rem;
@@ -243,16 +117,9 @@ html[data-theme='dark'] {
   font-size: 1.2rem;
 }
 
-/* Cap the measure for readability; API reference pages keep their own
-   two-column layout (content + request/response panel), so the cap must not
-   apply where the openapi containers are present */
+/* Cap the measure for readability */
 .theme-doc-markdown {
   max-width: 75ch;
-}
-
-.theme-doc-markdown:has(.openapi-left-panel__container),
-.theme-doc-markdown:has([class*="openapi__"]) {
-  max-width: none;
 }
 
 .markdown h1:first-child img {
@@ -262,11 +129,6 @@ html[data-theme='dark'] {
   margin-right: 8px;
   object-fit: contain;
 }
-
-.theme-doc-markdown .openapi-tabs__code-container .openapi-tabs__code-item span {
-  text-transform: none;
-}
-
 
 /* Right side table of contents styles */
 html .table-of-contents {
@@ -352,8 +214,8 @@ html[data-theme='dark'] .theme-doc-markdown .tabs-container .tabs__item--active 
 }
 
 /* Comparison cards: opt-in via className="row cards-row" in MDX. Never
-   style bare .row here: the OpenAPI theme's ApiItem wraps every docs page
-   in its own internal .row, and generic rules break the page layout. */
+   style bare .row here: Docusaurus uses .row for its own doc page layout,
+   and generic rules break it. */
 .theme-doc-markdown .cards-row {
   margin: 1.5rem -0.4rem;
 }
@@ -414,6 +276,33 @@ html[data-theme='dark'] .theme-doc-markdown .tabs-container .tabs__item--active 
 .graphql {
   height: 100vh;
   width: 100vw;
+}
+
+/* ---- Scalar API reference (/api-reference) ----
+   The @scalar/docusaurus theme.css already maps most --scalar-* variables to
+   the site's Infima variables and follows the navbar light/dark toggle via
+   [data-theme]. These overrides align the rest: the site's tinted page
+   background with white cards in light mode (theme.css forces white), and
+   Outfit for headings. Dark mode needs nothing: the mapped values already
+   resolve to the site palette. */
+html[data-theme='light'] body .scalar-api-reference {
+  --scalar-background-1: var(--ifm-background-color);
+  --scalar-background-2: var(--ifm-card-background-color);
+  --scalar-background-3: color-mix(in srgb, rgba(0, 0, 0, 1) 5%, var(--ifm-background-color));
+}
+
+.scalar-api-reference h1,
+.scalar-api-reference h2,
+.scalar-api-reference h3,
+.scalar-api-reference h4,
+.scalar-api-reference .section-header {
+  font-family: var(--ifm-heading-font-family);
+}
+
+/* the "Powered by Scalar" sidebar-footer link is a hardcoded slot fallback
+   with no config flag to disable it */
+.scalar-api-reference a[href="https://www.scalar.com"] {
+  display: none;
 }
 
 article .markdown a {
