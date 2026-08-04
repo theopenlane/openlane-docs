@@ -37,7 +37,7 @@ tasks:
     desc: clean all apps and package
     cmd: bun run clean
 
-  generate-api-reference-assets:
+  generate-api-docs:
     dir: docs
     desc: refresh the OpenAPI spec and Scalar renderer served at /api-reference
     cmd: bash scripts/api-reference-assets.sh
@@ -51,7 +51,7 @@ tasks:
     dir: docs
     desc: generate all docs
     cmds:
-      - task: generate-api-reference-assets
+      - task: generate-api-docs
       - task: generate-glossary-data
 
   dev:
