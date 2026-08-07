@@ -1073,11 +1073,14 @@ identity provider configuration, since both authentications must occur together
 |**ID**|`string`|||
 |**JobCleanerTimeout**|`integer`|||
 |**JobInsertMiddleware**|`array`|||
+|**JobStuckHandler**||||
+|**JobStuckThreshold**|`integer`|||
 |**JobTimeout**|`integer`|||
 |**Hooks**|`array`|||
 |**Logger**|`object`|||
 |**MaxAttempts**|`integer`|||
 |**Middleware**|`array`|||
+|**Plugins**|`array`|||
 |**PeriodicJobs**|`array`|||
 |**PollOnly**|`boolean`|||
 |**Queues**|`object`|||
@@ -1128,6 +1131,11 @@ identity provider configuration, since both authentications must occur together
 **Additional Properties:** not allowed  
 <a name="jobqueueriverconfmiddleware"></a>
 #### jobqueue\.riverconf\.Middleware: array
+
+**Items**
+
+<a name="jobqueueriverconfplugins"></a>
+#### jobqueue\.riverconf\.Plugins: array
 
 **Items**
 
