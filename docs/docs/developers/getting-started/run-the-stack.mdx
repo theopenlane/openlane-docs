@@ -32,13 +32,9 @@ tags:
    subscription:
      enabled: false
   ```
-
 :::
-
 1. Use the task commands to start the server
-
    Run the core server in development mode with dependencies in docker
-
    ```bash
    task run-dev
    ```
@@ -91,5 +87,3 @@ Because the CSRF middleware stores the token only in the client’s cookie and n
 
 Therefore, rolling restarts on Kubernetes will not force new tokens to be issued and should not cause requests to fail, provided the client retains its CSRF cookie.
 :::
-
-

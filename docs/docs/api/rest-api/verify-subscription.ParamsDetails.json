@@ -1,1 +1,0 @@
-{"parameters":[{"description":"The token to be used to verify the subscription, token is sent via email","in":"query","name":"token","schema":{"type":"string"}}]}

@@ -1,1 +1,0 @@
-{"parameters":[{"description":"Path parameter: definitionID","in":"path","name":"definitionID","required":true,"schema":{"type":"string"}}]}

@@ -1,8 +1,0 @@
-{
-  "label": "Openlane API",
-  "position": 1,
-  "link": {
-    "description": "Interacting with the Openlane API",
-    "id": "api/rest-api/index"
-  }
-}

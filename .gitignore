@@ -8,6 +8,8 @@ docs/build
 # Generated files
 docs/.docusaurus
 docs/.cache-loader
+# Scalar renderer copied from node_modules by scripts/api-reference-assets.sh
+docs/static/scalar
 
 # Misc
 .DS_Store

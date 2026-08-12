@@ -3,11 +3,7 @@
 
 import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
-import type * as Plugin from "@docusaurus/types/src/plugin";
-import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 import { themes as prismThemes } from 'prism-react-renderer';
-
-const path = require('path');
 
 const config: Config = {
   title: "Openlane",
@@ -85,14 +81,13 @@ const config: Config = {
       },
     },
   ],
-  themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       "classic",
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.ts"),
-          docItemComponent: "@theme/ApiItem",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           breadcrumbs: true,
@@ -200,7 +195,7 @@ const config: Config = {
             position: 'left',
             items: [
               { label: 'GraphQL', to: '/docs/api/graph-api', activeBasePath: '/docs/api/graph-api' },
-              { label: 'OpenAPI Spec', to: '/docs/api', activeBasePath: '/docs/api/rest-api' },
+              { label: 'OpenAPI Spec', to: '/api-reference' },
               { label: 'GraphQL Explorer', to: '/graphql' },
               { label: 'Go Client', href: 'https://github.com/theopenlane/go-client' },
               { label: 'CLI Client', href: 'https://github.com/theopenlane/core/releases' },
@@ -225,29 +220,6 @@ const config: Config = {
         theme: prismThemes.oneLight,
         darkTheme: prismThemes.oneDark,
       },
-      languageTabs: [
-        {
-          language: "curl",
-        },
-        {
-          language: "go",
-        },
-        {
-          language: "python",
-        },
-        {
-          language: "nodejs",
-        },
-        {
-          language: "php",
-        },
-        {
-          language: "java",
-        },
-        {
-          language: "rust",
-        },
-      ],
     } satisfies Preset.ThemeConfig,
 
   plugins: [
@@ -265,19 +237,28 @@ const config: Config = {
           { from: "/docs/platform/standards/soc2/requireddocumentation", to: "/docs/platform/standards/soc2/example-evidence" },
           { from: "/docs/platform/standards/soc2/security-management-procedures", to: "/docs/platform/standards/soc2/overview" },
           // REST API endpoint and schema pages removed in the regenerated spec
-          { from: ["/docs/api/rest-api/acme-solver", "/docs/api/rest-api/agent-node-registration", "/docs/api/rest-api/csrf", "/docs/api/rest-api/end-impersonation", "/docs/api/rest-api/example-csv", "/docs/api/rest-api/favicon", "/docs/api/rest-api/file-download"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/git-hub-callback", "/docs/api/rest-api/git-hub-login", "/docs/api/rest-api/google-callback", "/docs/api/rest-api/google-login", "/docs/api/rest-api/graph-ql-query", "/docs/api/rest-api/graph-ql-query-history", "/docs/api/rest-api/jwks", "/docs/api/rest-api/livez"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/o-auth-register", "/docs/api/rest-api/ready", "/docs/api/rest-api/robots", "/docs/api/rest-api/schemas/accountaccessreply", "/docs/api/rest-api/schemas/accountaccessrequest", "/docs/api/rest-api/schemas/accountfeaturesreply"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/schemas/accountrolesorganizationreply", "/docs/api/rest-api/schemas/accountrolesreply", "/docs/api/rest-api/schemas/accountrolesrequest", "/docs/api/rest-api/schemas/createtrustcenteranonymousjwtresponse", "/docs/api/rest-api/schemas/endimpersonationreply", "/docs/api/rest-api/schemas/endimpersonationrequest", "/docs/api/rest-api/schemas/errorresponse", "/docs/api/rest-api/schemas/filedownload"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/schemas/forgotpasswordreply", "/docs/api/rest-api/schemas/forgotpasswordrequest", "/docs/api/rest-api/schemas/getquestionnaireresponse", "/docs/api/rest-api/schemas/group", "/docs/api/rest-api/schemas/invitereply", "/docs/api/rest-api/schemas/itemsperpage", "/docs/api/rest-api/schemas/jobrunnerregistrationreply", "/docs/api/rest-api/schemas/jobrunnerregistrationrequest"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/schemas/listresponseschemas", "/docs/api/rest-api/schemas/loginreply", "/docs/api/rest-api/schemas/loginrequest", "/docs/api/rest-api/schemas/oauthtokenrequest", "/docs/api/rest-api/schemas/patchrequest", "/docs/api/rest-api/schemas/productcatalogreply", "/docs/api/rest-api/schemas/refreshreply", "/docs/api/rest-api/schemas/refreshrequest"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/schemas/registerreply", "/docs/api/rest-api/schemas/registerrequest", "/docs/api/rest-api/schemas/reply", "/docs/api/rest-api/schemas/resendquestionnairerequest", "/docs/api/rest-api/schemas/resendreply", "/docs/api/rest-api/schemas/resendrequest", "/docs/api/rest-api/schemas/resetpasswordreply", "/docs/api/rest-api/schemas/resetpasswordrequest"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/schemas/resourcemetadata", "/docs/api/rest-api/schemas/resourcetype", "/docs/api/rest-api/schemas/schemaattribute", "/docs/api/rest-api/schemas/schemadefinition", "/docs/api/rest-api/schemas/serviceproviderconfig", "/docs/api/rest-api/schemas/ssostatusreply", "/docs/api/rest-api/schemas/ssotokenauthorizereply", "/docs/api/rest-api/schemas/startimpersonationreply"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/schemas/startimpersonationrequest", "/docs/api/rest-api/schemas/startindex", "/docs/api/rest-api/schemas/submitquestionnaireresponse", "/docs/api/rest-api/schemas/switchorganizationreply", "/docs/api/rest-api/schemas/switchorganizationrequest", "/docs/api/rest-api/schemas/tfareply", "/docs/api/rest-api/schemas/tfarequest", "/docs/api/rest-api/schemas/totalresults"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/schemas/user", "/docs/api/rest-api/schemas/verifyreply", "/docs/api/rest-api/schemas/verifysubscribereply", "/docs/api/rest-api/schemas/webauthnbeginloginresponse", "/docs/api/rest-api/schemas/webauthnbeginregistrationresponse", "/docs/api/rest-api/schemas/webauthnloginfinishrequest", "/docs/api/rest-api/schemas/webauthnloginrequest", "/docs/api/rest-api/schemas/webauthnloginresponse"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/schemas/webauthnregistrationfinishrequest", "/docs/api/rest-api/schemas/webauthnregistrationrequest", "/docs/api/rest-api/schemas/webauthnregistrationresponse", "/docs/api/rest-api/security-txt", "/docs/api/rest-api/sso-callback", "/docs/api/rest-api/sso-login", "/docs/api/rest-api/sso-token-authorize", "/docs/api/rest-api/sso-token-callback"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/start-impersonation", "/docs/api/rest-api/tfa-validation", "/docs/api/rest-api/trust-center-anonymous-jwt", "/docs/api/rest-api/web-authn-well-known", "/docs/api/rest-api/webauthn-authentication", "/docs/api/rest-api/webauthn-authentication-verification", "/docs/api/rest-api/webauthn-registration", "/docs/api/rest-api/webauthn-registration-verification"], to: "/docs/api" },
-          { from: ["/docs/api/rest-api/webfinger"], to: "/docs/api" },
+          { from: ["/docs/api/rest-api/acme-solver", "/docs/api/rest-api/agent-node-registration", "/docs/api/rest-api/csrf", "/docs/api/rest-api/end-impersonation", "/docs/api/rest-api/example-csv", "/docs/api/rest-api/favicon", "/docs/api/rest-api/file-download"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/git-hub-callback", "/docs/api/rest-api/git-hub-login", "/docs/api/rest-api/google-callback", "/docs/api/rest-api/google-login", "/docs/api/rest-api/graph-ql-query", "/docs/api/rest-api/graph-ql-query-history", "/docs/api/rest-api/jwks", "/docs/api/rest-api/livez"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/o-auth-register", "/docs/api/rest-api/ready", "/docs/api/rest-api/robots", "/docs/api/rest-api/schemas/accountaccessreply", "/docs/api/rest-api/schemas/accountaccessrequest", "/docs/api/rest-api/schemas/accountfeaturesreply"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/schemas/accountrolesorganizationreply", "/docs/api/rest-api/schemas/accountrolesreply", "/docs/api/rest-api/schemas/accountrolesrequest", "/docs/api/rest-api/schemas/createtrustcenteranonymousjwtresponse", "/docs/api/rest-api/schemas/endimpersonationreply", "/docs/api/rest-api/schemas/endimpersonationrequest", "/docs/api/rest-api/schemas/errorresponse", "/docs/api/rest-api/schemas/filedownload"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/schemas/forgotpasswordreply", "/docs/api/rest-api/schemas/forgotpasswordrequest", "/docs/api/rest-api/schemas/getquestionnaireresponse", "/docs/api/rest-api/schemas/group", "/docs/api/rest-api/schemas/invitereply", "/docs/api/rest-api/schemas/itemsperpage", "/docs/api/rest-api/schemas/jobrunnerregistrationreply", "/docs/api/rest-api/schemas/jobrunnerregistrationrequest"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/schemas/listresponseschemas", "/docs/api/rest-api/schemas/loginreply", "/docs/api/rest-api/schemas/loginrequest", "/docs/api/rest-api/schemas/oauthtokenrequest", "/docs/api/rest-api/schemas/patchrequest", "/docs/api/rest-api/schemas/productcatalogreply", "/docs/api/rest-api/schemas/refreshreply", "/docs/api/rest-api/schemas/refreshrequest"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/schemas/registerreply", "/docs/api/rest-api/schemas/registerrequest", "/docs/api/rest-api/schemas/reply", "/docs/api/rest-api/schemas/resendquestionnairerequest", "/docs/api/rest-api/schemas/resendreply", "/docs/api/rest-api/schemas/resendrequest", "/docs/api/rest-api/schemas/resetpasswordreply", "/docs/api/rest-api/schemas/resetpasswordrequest"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/schemas/resourcemetadata", "/docs/api/rest-api/schemas/resourcetype", "/docs/api/rest-api/schemas/schemaattribute", "/docs/api/rest-api/schemas/schemadefinition", "/docs/api/rest-api/schemas/serviceproviderconfig", "/docs/api/rest-api/schemas/ssostatusreply", "/docs/api/rest-api/schemas/ssotokenauthorizereply", "/docs/api/rest-api/schemas/startimpersonationreply"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/schemas/startimpersonationrequest", "/docs/api/rest-api/schemas/startindex", "/docs/api/rest-api/schemas/submitquestionnaireresponse", "/docs/api/rest-api/schemas/switchorganizationreply", "/docs/api/rest-api/schemas/switchorganizationrequest", "/docs/api/rest-api/schemas/tfareply", "/docs/api/rest-api/schemas/tfarequest", "/docs/api/rest-api/schemas/totalresults"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/schemas/user", "/docs/api/rest-api/schemas/verifyreply", "/docs/api/rest-api/schemas/verifysubscribereply", "/docs/api/rest-api/schemas/webauthnbeginloginresponse", "/docs/api/rest-api/schemas/webauthnbeginregistrationresponse", "/docs/api/rest-api/schemas/webauthnloginfinishrequest", "/docs/api/rest-api/schemas/webauthnloginrequest", "/docs/api/rest-api/schemas/webauthnloginresponse"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/schemas/webauthnregistrationfinishrequest", "/docs/api/rest-api/schemas/webauthnregistrationrequest", "/docs/api/rest-api/schemas/webauthnregistrationresponse", "/docs/api/rest-api/security-txt", "/docs/api/rest-api/sso-callback", "/docs/api/rest-api/sso-login", "/docs/api/rest-api/sso-token-authorize", "/docs/api/rest-api/sso-token-callback"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/start-impersonation", "/docs/api/rest-api/tfa-validation", "/docs/api/rest-api/trust-center-anonymous-jwt", "/docs/api/rest-api/web-authn-well-known", "/docs/api/rest-api/webauthn-authentication", "/docs/api/rest-api/webauthn-authentication-verification", "/docs/api/rest-api/webauthn-registration", "/docs/api/rest-api/webauthn-registration-verification"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/webfinger"], to: "/api-reference" },
+          // generated per-endpoint pages replaced by the Scalar reference at /api-reference
+          { from: "/docs/api", to: "/api-reference" },
+          { from: ["/docs/api/rest-api/account-access", "/docs/api/rest-api/account-features", "/docs/api/rest-api/account-features-by-id", "/docs/api/rest-api/account-roles", "/docs/api/rest-api/account-roles-me", "/docs/api/rest-api/account-roles-organization", "/docs/api/rest-api/account-roles-organization-by-id", "/docs/api/rest-api/api-docs"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/assign-organization-roles", "/docs/api/rest-api/configure-integration-provider", "/docs/api/rest-api/create-group", "/docs/api/rest-api/create-user", "/docs/api/rest-api/delete-group", "/docs/api/rest-api/delete-organization-roles", "/docs/api/rest-api/delete-user", "/docs/api/rest-api/disconnect-integration"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/forgot-password", "/docs/api/rest-api/get-group-by-id", "/docs/api/rest-api/get-questionnaire", "/docs/api/rest-api/get-resource-type-by-name", "/docs/api/rest-api/get-resource-types", "/docs/api/rest-api/get-schema-by-uri", "/docs/api/rest-api/get-schemas", "/docs/api/rest-api/get-service-provider-config"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/get-user-by-id", "/docs/api/rest-api/list-groups", "/docs/api/rest-api/list-integration-providers", "/docs/api/rest-api/list-users", "/docs/api/rest-api/login-handler", "/docs/api/rest-api/logout-handler", "/docs/api/rest-api/organization-invite-accept", "/docs/api/rest-api/organization-roles"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/patch-group", "/docs/api/rest-api/patch-user", "/docs/api/rest-api/product-catalog", "/docs/api/rest-api/refresh-handler", "/docs/api/rest-api/register", "/docs/api/rest-api/replace-group", "/docs/api/rest-api/replace-user", "/docs/api/rest-api/resend-email"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/resend-questionnaire-email", "/docs/api/rest-api/reset-password", "/docs/api/rest-api/roles", "/docs/api/rest-api/run-integration-operation", "/docs/api/rest-api/scopes", "/docs/api/rest-api/sso-initiate", "/docs/api/rest-api/submit-questionnaire", "/docs/api/rest-api/switch"], to: "/api-reference" },
+          { from: ["/docs/api/rest-api/unsubscribe", "/docs/api/rest-api/user-info", "/docs/api/rest-api/verify-email", "/docs/api/rest-api/verify-subscription"], to: "/api-reference" },
           // generated-index category pages replaced by doc-linked overviews
           { from: "/docs/category/automation", to: "/docs/platform/automation/overview" },
           { from: ["/docs/category/basic-concepts", "/docs/platform/basics/overview"], to: "/docs/platform/settings/overview" },
@@ -412,26 +393,38 @@ const config: Config = {
       },
     ],
     [
-      "docusaurus-plugin-openapi-docs",
+      "@scalar/docusaurus",
       {
-        id: "openapi",
-        docsPluginId: "classic",
-
-        config: {
-          v1: {
-            /** @type {import('docusaurus-plugin-openapi-docs').Options} */
-            specPath: "https://api.theopenlane.io/api-docs",
-            outputDir: "docs/api/rest-api",
-            showSchemas: false,
-            showExtensions: true,
-            sidebarOptions: {
-              groupPathsBy: "tag",
+        label: "OpenAPI Spec",
+        route: "/api-reference",
+        // the navbar link lives in the API Specifications dropdown instead
+        showNavLink: false,
+        // renderer is copied from node_modules to static/scalar/ by
+        // scripts/api-reference-assets.sh so the version is pinned by
+        // bun.lock instead of loading latest from jsDelivr
+        cdn: "/scalar/standalone.js",
+        configuration: {
+          // fetched to static/ at build time by the same script; the API
+          // 401s cross-origin requests, so a runtime fetch of
+          // https://api.theopenlane.io/api-docs only works in production
+          sources: [
+            {
+              url: "/openapi.json",
+              // no Scalar-hosted AI agent for this reference
+              agent: { disabled: true },
             },
-            downloadUrl:
-              "https://api.theopenlane.io/api-docs",
-            template: path.resolve(__dirname, '../templates/api.mdx'),
-          } satisfies OpenApiPlugin.Options,
-        } satisfies Plugin.PluginOptions,
+          ],
+          hideModels: true,
+          mcp: { disabled: true },
+          showDeveloperTools: "never",
+          // without this, "test request" calls route through Scalar's CORS
+          // proxy (proxy.scalar.com), sending tokens through their infra;
+          // empty string sends requests straight to api.theopenlane.io
+          proxyUrl: "",
+          // Inter/Outfit are self-hosted via fontsource; don't pull fonts
+          // from the Scalar CDN
+          withDefaultFonts: false,
+        },
       },
     ],
     [
