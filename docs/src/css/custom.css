@@ -104,6 +104,14 @@ html[data-theme='dark'] {
   --button-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
+/* Infima only paints --ifm-background-color on <html>, leaving <body>
+   transparent; root-canvas backgrounds repaint inconsistently while
+   scrolling in Safari/Chrome (white bands appear mid-page). Painting
+   body directly avoids the canvas path entirely */
+body {
+  background-color: var(--ifm-background-color);
+}
+
 /* Descending heading scale so the page title outranks section headings */
 .markdown h1:first-child {
   font-size: 2.25rem;

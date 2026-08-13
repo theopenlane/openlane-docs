@@ -44,7 +44,7 @@ Config contains the configuration for the core server
 |**shortlinks**|`object`|||
 |**backfill**|`object`|Backfill configures one-time startup data backfill routines that populate fields introduced by recent<br/>||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -183,467 +183,355 @@ Config contains the configuration for the core server
 }
 ```
 
-<a name="server"></a>
-## server: object
-
-Server settings for the echo server
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**dev**|`boolean`|Dev enables echo's dev mode options<br/>|no|
-|**listen**|`string`|Listen sets the listen address to serve the echo server on<br/>|yes|
-|**metricsport**|`string`|MetricsPort sets the port for the metrics endpoint<br/>|no|
-|**shutdowngraceperiod**|`integer`|ShutdownGracePeriod sets the grace period for in flight requests before shutting down<br/>|no|
-|**readtimeout**|`integer`|ReadTimeout sets the maximum duration for reading the entire request including the body<br/>|no|
-|**writetimeout**|`integer`|WriteTimeout sets the maximum duration before timing out writes of the response<br/>|no|
-|**idletimeout**|`integer`|IdleTimeout sets the maximum amount of time to wait for the next request when keep-alives are enabled<br/>|no|
-|**readheadertimeout**|`integer`|ReadHeaderTimeout sets the amount of time allowed to read request headers<br/>|no|
-|**tls**|`object`|TLS settings for the server for secure connections<br/>|no|
-|**cors**|`object`|Config holds the cors configuration settings<br/>|no|
-|**secure**|`object`|Config contains the types used in the mw middleware<br/>|no|
-|**cachecontrol**|`object`|Config is the config values for the cache-control middleware<br/>|no|
-|**mime**|`object`|Config defines the config for Mime middleware<br/>|no|
-|**graphpool**|`object`|PoolConfig contains the settings for the goroutine pool<br/>|no|
-|**enablegraphextensions**|`boolean`|EnableGraphExtensions enables the graph extensions for the graph resolvers<br/>|no|
-|**enablegraphsubscriptions**|`boolean`|EnableGraphSubscriptions enables graphql subscriptions to the server using websockets or sse<br/>|no|
-|**complexitylimit**|`integer`|ComplexityLimit sets the maximum complexity allowed for a query<br/>|no|
-|**maxresultlimit**|`integer`|MaxResultLimit sets the maximum number of results allowed for a query<br/>|no|
-|**csrfprotection**|`object`|Config defines configuration for the CSRF middleware wrapper.<br/>|no|
-|**secretmanager**|`string`|SecretManagerSecret is the name of the GCP Secret Manager secret containing the JWT signing key<br/>|no|
-|**defaulttrustcenterdomain**|`string`|DefaultTrustCenterDomain is the default domain to use for the trust center if no custom domain is set<br/>|no|
-|**trustcentercnametarget**|`string`|TrustCenterCnameTarget is the cname target for the trust center<br/>Used for mapping the vanity domains to the trust centers<br/>|no|
-|**trustcenterpreviewzoneid**|`string`|TrustCenterPreviewZoneID is the cloudflare zone id for the trust center preview domain<br/>|no|
-|**notificationlookbackdays**|`integer`|NotificationLookbackDays is the number of days of read notifications to pull when starting a notification subscription<br/>Unread notifications are always pulled regardless of this setting<br/>|no|
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "tls": {},
-    "cors": {
-        "prefixes": {}
-    },
-    "secure": {},
-    "cachecontrol": {
-        "nocacheheaders": {}
-    },
-    "mime": {},
-    "graphpool": {},
-    "csrfprotection": {}
-}
-```
-
-<a name="servertls"></a>
-### server\.tls: object
-
-TLS settings for the server for secure connections
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled turns on TLS settings for the server<br/>||
-|**certfile**|`string`|CertFile location for the TLS server<br/>||
-|**certkey**|`string`|CertKey file location for the TLS server<br/>||
-|**autocert**|`boolean`|AutoCert generates the cert with letsencrypt, this does not work on localhost<br/>||
-
-**Additional Properties:** not allowed  
-<a name="servercors"></a>
-### server\.cors: object
-
-Config holds the cors configuration settings
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enable or disable the CORS middleware<br/>||
-|**prefixes**|`object`|||
-|**alloworigins**|`string[]`|||
-|**cookieinsecure**|`boolean`|CookieInsecure sets the cookie to be insecure<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "prefixes": {}
-}
-```
-
-<a name="servercorsprefixes"></a>
-#### server\.cors\.prefixes: object
-
-**Additional Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**Additional Properties**|`string[]`|||
-
-<a name="servercorsprefixesadditionalproperties"></a>
-##### server\.cors\.prefixes\.additionalProperties: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="servercorsalloworigins"></a>
-#### server\.cors\.alloworigins: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="serversecure"></a>
-### server\.secure: object
-
-Config contains the types used in the mw middleware
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates if the secure middleware should be enabled<br/>||
-|**xssprotection**|`string`|XSSProtection is the value to set the X-XSS-Protection header to - default is 1; mode=block<br/>||
-|**contenttypenosniff**|`string`|ContentTypeNosniff is the value to set the X-Content-Type-Options header to - default is nosniff<br/>||
-|**xframeoptions**|`string`|XFrameOptions is the value to set the X-Frame-Options header to - default is SAMEORIGIN<br/>||
-|**hstspreloadenabled**|`boolean`|HSTSPreloadEnabled is a boolean to enable HSTS preloading - default is false<br/>||
-|**hstsmaxage**|`integer`|HSTSMaxAge is the max age to set the HSTS header to - default is 31536000<br/>||
-|**contentsecuritypolicy**|`string`|ContentSecurityPolicy is the value to set the Content-Security-Policy header to - default is default-src 'self'<br/>||
-|**referrerpolicy**|`string`|ReferrerPolicy is the value to set the Referrer-Policy header to - default is same-origin<br/>||
-|**cspreportonly**|`boolean`|CSPReportOnly is a boolean to enable the Content-Security-Policy-Report-Only header - default is false<br/>||
-
-**Additional Properties:** not allowed  
-<a name="servercachecontrol"></a>
-### server\.cachecontrol: object
-
-Config is the config values for the cache-control middleware
-
+ 
+<a name="defscacheconfig"></a>
+## $defs/cache\.Config: object
 
 **Properties**
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
 |**enabled**|`boolean`|||
-|**nocacheheaders**|`object`|||
-|**etagheaders**|`string[]`|||
+|**address**|`string`|||
+|**name**|`string`|||
+|**username**|`string`|||
+|**password**|`string`|||
+|**db**|`integer`|||
+|**dialtimeout**|`integer`|||
+|**readtimeout**|`integer`|||
+|**writetimeout**|`integer`|||
+|**maxretries**|`integer`|||
+|**minidleconns**|`integer`|||
+|**maxidleconns**|`integer`|||
+|**maxactiveconns**|`integer`|||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
+ 
+<a name="defscatalogconfig"></a>
+## $defs/catalog\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**consoleintegrationpath**|`string`|||
+|**awssecurityhub**|`object`|||
+|**cloudflareruntime**|`object`|||
+|**githubapp**|`object`|||
+|**slack**|`object`|||
+|**slackruntime**|`object`|||
+|**googledrive**|`object`|||
+|**googleworkspace**|`object`|||
+|**azureentraid**|`object`|||
+|**microsoftteams**|`object`|||
+|**onedrive**|`object`|||
+|**oidclocal**|`object`|||
+|**email**|`object`||yes|
+|**paymentreminder**|`object`|||
+|**organizationdelete**|`object`|||
+
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
 {
-    "nocacheheaders": {}
-}
-```
-
-<a name="servercachecontrolnocacheheaders"></a>
-#### server\.cachecontrol\.nocacheheaders: object
-
-**Additional Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**Additional Properties**|`string`|||
-
-<a name="servercachecontroletagheaders"></a>
-#### server\.cachecontrol\.etagheaders: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="servermime"></a>
-### server\.mime: object
-
-Config defines the config for Mime middleware
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates if the mime middleware should be enabled<br/>||
-|**mimetypesfile**|`string`|MimeTypesFile is the file to load mime types from<br/>||
-|**defaultcontenttype**|`string`|DefaultContentType is the default content type to set if no mime type is found<br/>||
-
-**Additional Properties:** not allowed  
-<a name="servergraphpool"></a>
-### server\.graphpool: object
-
-PoolConfig contains the settings for the goroutine pool
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**maxworkers**|`integer`|MaxWorkers is the maximum number of workers in the pool<br/>||
-
-**Additional Properties:** not allowed  
-<a name="servercsrfprotection"></a>
-### server\.csrfprotection: object
-
-Config defines configuration for the CSRF middleware wrapper.
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates whether CSRF protection is enabled.<br/>||
-|**header**|`string`|Header specifies the header name to look for the CSRF token.<br/>||
-|**cookie**|`string`|Cookie specifies the cookie name used to store the CSRF token.<br/>||
-|**secure**|`boolean`|Secure sets the Secure flag on the CSRF cookie.<br/>||
-|**samesite**|`string`|SameSite configures the SameSite attribute on the CSRF cookie. Valid<br/>values are "Lax", "Strict", "None" and "Default".<br/>||
-|**cookiehttponly**|`boolean`|CookieHTTPOnly indicates whether the CSRF cookie is HTTP only.<br/>||
-|**cookiedomain**|`string`|CookieDomain specifies the domain for the CSRF cookie, default to no domain<br/>||
-|**cookiepath**|`string`|CookiePath specifies the path for the CSRF cookie, default to "/"<br/>||
-
-**Additional Properties:** not allowed  
-<a name="entconfig"></a>
-## entconfig: object
-
-Config holds the configuration for the ent server
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**entitytypes**|`string[]`|||
-|**summarizer**|`object`|Config holds configuration for the text summarization functionality<br/>||
-|**maxpoolsize**|`integer`|MaxPoolSize is the max worker pool size that can be used by the ent client<br/>||
-|**modules**|`object`|Modules settings for features access<br/>||
-|**maxschemaimportsize**|`integer`|MaxSchemaImportSize is the maximum size allowed for schema imports in bytes<br/>||
-|**emailvalidation**|`object`|EmailVerificationConfig is the configuration for email verification<br/>||
-|**billing**|`object`|Billing settings for feature access<br/>||
-|**notifications**|`object`|Notifications settings for notifications sent to users based on events<br/>||
-|**questionnaireproducturl**|`string`|QuestionnaireProductURL is the product URL used to build questionnaire access links<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "summarizer": {
-        "llm": {
-            "anthropic": {},
-            "cloudflare": {},
-            "openai": {}
-        }
+    "awssecurityhub": {},
+    "cloudflareruntime": {
+        "domainscan": {}
     },
-    "modules": {},
-    "emailvalidation": {
-        "allowedemailtypes": {}
+    "githubapp": {},
+    "slack": {},
+    "slackruntime": {},
+    "googledrive": {},
+    "googleworkspace": {},
+    "azureentraid": {},
+    "microsoftteams": {},
+    "onedrive": {},
+    "oidclocal": {},
+    "email": {},
+    "paymentreminder": {
+        "paymentmethodinterval": 30,
+        "deletiondays": 7,
+        "enabled": false,
+        "dryrun": true
     },
-    "billing": {},
-    "notifications": {}
-}
-```
-
-<a name="entconfigentitytypes"></a>
-### entconfig\.entitytypes: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="entconfigsummarizer"></a>
-### entconfig\.summarizer: object
-
-Config holds configuration for the text summarization functionality
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**type**|`string`|Type specifies the summarization algorithm to use<br/>||
-|**llm**|`object`|LLM contains configuration for multiple LLM providers<br/>||
-|**maximumsentences**|`integer`|MaximumSentences specifies the maximum number of sentences in the summary<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "llm": {
-        "anthropic": {},
-        "cloudflare": {},
-        "openai": {}
+    "organizationdelete": {
+        "maxdeletesperrun": 25
     }
 }
 ```
 
-<a name="entconfigsummarizerllm"></a>
-#### entconfig\.summarizer\.llm: object
-
-LLM contains configuration for multiple LLM providers
-
+ 
+<a name="defsawssecurityhubconfig"></a>
+### $defs/awssecurityhub\.Config: object
 
 **Properties**
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
-|**provider**|`string`|Provider specifies which LLM service to use<br/>||
-|**anthropic**|`object`|AnthropicConfig contains Anthropic specific configuration<br/>||
-|**cloudflare**|`object`|CloudflareConfig contains Cloudflare specific configuration<br/>||
-|**openai**|`object`|OpenAIConfig contains OpenAI specific configuration<br/>||
+|**accesskeyid**|`string`|||
+|**secretaccesskey**|`string`|||
+|**arn**|`string`|||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
+ 
+<a name="defsazureentraidconfig"></a>
+### $defs/azureentraid\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+|**defaulttenant**|`string`|||
+|**applicationid**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defscloudflareruntimeconfig"></a>
+### $defs/cloudflare\.RuntimeConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**apitoken**|`string`|Cloudflare API token for the operator-owned account<br/>||
+|**accountid**|`string`|Cloudflare account ID for the operator-owned account<br/>||
+|**domainscan**|`object`|||
+
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
 {
-    "anthropic": {},
-    "cloudflare": {},
-    "openai": {}
+    "domainscan": {}
 }
 ```
 
-<a name="entconfigsummarizerllmanthropic"></a>
-##### entconfig\.summarizer\.llm\.anthropic: object
-
-AnthropicConfig contains Anthropic specific configuration
-
+ 
+<a name="defsdomainscanreportconfig"></a>
+#### $defs/domainscan\.ReportConfig: object
 
 **Properties**
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
-|**betaheader**|`string`|BetaHeader specifies the beta API features to enable<br/>||
-|**legacytextcompletion**|`boolean`|LegacyTextCompletion enables legacy text completion API<br/>||
-|**baseurl**|`string`|BaseURL specifies the API endpoint<br/>||
-|**model**|`string`|Model specifies the model name to use<br/>||
-|**apikey**|`string`|APIKey contains the authentication key for the service<br/>||
+|**nonvendorcategories**|`string[]`|||
+|**deniedvendornames**|`string[]`|||
+|**scanttl**|`integer`|||
 
-**Additional Properties:** not allowed  
-<a name="entconfigsummarizerllmcloudflare"></a>
-##### entconfig\.summarizer\.llm\.cloudflare: object
-
-CloudflareConfig contains Cloudflare specific configuration
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**model**|`string`|Model specifies the model name to use<br/>||
-|**apikey**|`string`|APIKey contains the authentication key for the service<br/>||
-|**accountid**|`string`|AccountID specifies the Cloudflare account ID<br/>||
-|**serverurl**|`string`|ServerURL specifies the API endpoint<br/>||
-
-**Additional Properties:** not allowed  
-<a name="entconfigsummarizerllmopenai"></a>
-##### entconfig\.summarizer\.llm\.openai: object
-
-OpenAIConfig contains OpenAI specific configuration
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**model**|`string`|Model specifies the model name to use<br/>||
-|**apikey**|`string`|APIKey contains the authentication key for the service<br/>||
-|**url**|`string`|URL specifies the API endpoint<br/>||
-|**organizationid**|`string`|OrganizationID specifies the OpenAI organization ID<br/>||
-
-**Additional Properties:** not allowed  
-<a name="entconfigmodules"></a>
-### entconfig\.modules: object
-
-Modules settings for features access
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates whether to check and verify module access<br/>||
-|**usesandbox**|`boolean`|UseSandbox indicates whether to use the sandbox catalog for module access checks<br/>||
-|**devmode**|`boolean`|DevMode enables all modules for local development regardless of trial status<br/>||
-
-**Additional Properties:** not allowed  
-<a name="entconfigemailvalidation"></a>
-### entconfig\.emailvalidation: object
-
-EmailVerificationConfig is the configuration for email verification
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates whether email verification is enabled<br/>||
-|**enableautoupdatedisposable**|`boolean`|EnableAutoUpdateDisposable indicates whether to automatically update disposable email addresses<br/>||
-|**enablegravatarcheck**|`boolean`|EnableGravatarCheck indicates whether to check for Gravatar existence<br/>||
-|**enablesmtpcheck**|`boolean`|EnableSMTPCheck indicates whether to check email by smtp<br/>||
-|**allowedemailtypes**|`object`|AllowedEmailTypes defines the allowed email types for verification<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "allowedemailtypes": {}
-}
-```
-
-<a name="entconfigemailvalidationallowedemailtypes"></a>
-#### entconfig\.emailvalidation\.allowedemailtypes: object
-
-AllowedEmailTypes defines the allowed email types for verification
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**disposable**|`boolean`|Disposable indicates whether disposable email addresses are allowed<br/>||
-|**free**|`boolean`|Free indicates whether free email addresses are allowed<br/>||
-|**role**|`boolean`|Role indicates whether role-based email addresses are allowed<br/>||
-
-**Additional Properties:** not allowed  
-<a name="entconfigbilling"></a>
-### entconfig\.billing: object
-
-Billing settings for feature access
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**requirepaymentmethod**|`boolean`|RequirePaymentMethod indicates whether to check if a payment method<br/>exists for orgs before they can access some resource<br/>||
-|**bypassemaildomains**|`string[]`|||
-
-**Additional Properties:** not allowed  
-<a name="entconfigbillingbypassemaildomains"></a>
-#### entconfig\.billing\.bypassemaildomains: array
+**Additional Properties:** not allowed 
+ 
+<a name="defsstring"></a>
+##### $defs/\[\]string: array
 
 **Items**
 
-**Item Type:** `string`  
-<a name="entconfignotifications"></a>
-### entconfig\.notifications: object
-
-Notifications settings for notifications sent to users based on events
-
+**Item Type:** `string` 
+ 
+<a name="defsemailruntimeemailconfig"></a>
+### $defs/email\.RuntimeEmailConfig: object
 
 **Properties**
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
-|**consoleurl**|`string`|ConsoleURL for ui links used in notifications<br/>||
+|**testdir**|`string`|Directory for dev-mode email output<br/>|no|
+|**resendsecret**|`string`|Resend webhook signing secret<br/>|no|
+|**apikey**|`string`|Email provider API key<br/>|yes|
+|**provider**|`string`|Email service provider<br/>Enum: `"resend"`<br/>|yes|
+|**fromemail**|`string`|Sender email address<br/>|yes|
+|**supportemail**|`string`|Support contact email address<br/>|no|
+|**questionnaireemail**|`string`|Sender override for questionnaire auth emails<br/>|no|
+|**rooturl**|`string`|Root application URL used to construct email action links<br/>|no|
+|**producturl**|`string`|Product home URL<br/>|no|
+|**docsurl**|`string`|Documentation URL<br/>|no|
+|**apiurl**|`string`|Public base URL of the API for email links that hit the API directly<br/>|no|
+|**CompanyName**|`string`|Company display name<br/>|no|
+|**CompanyAddress**|`string`|Company mailing address<br/>|no|
+|**Corporation**|`string`|Legal corporation name<br/>|no|
+|**LogoURL**|`string`|Hero logo URL displayed in the email body<br/>|no|
+|**HeaderLogoURL**|`string`|Small logo or icon displayed in the top header bar<br/>|no|
+|**Copyright**|`string`|Copyright override for email footers; when empty the template renders a dynamic notice from Corporation and the current year<br/>|no|
+|**TroubleText**|`string`|Fallback help text shown below action buttons; {ACTION} is replaced with the button text at render time<br/>|no|
+|**TermsURL**|`string`|Terms of service link for email footers<br/>|no|
+|**PrivacyURL**|`string`|Privacy policy link for email footers<br/>|no|
+|**UnsubscribeURL**|`string`|Unsubscribe link override for email footers; when empty the template constructs one from ProductURL and the recipient email<br/>|no|
+|**HeaderText**|`string`|Text displayed in the upper-right corner of the modern theme header<br/>|no|
+|**CardStyle**|`string`|Card visual style<br/>Enum: `"flat"`, `"elevated"`<br/>|no|
+|**BodyBackgroundColor**|`string`|Outer page background color<br/>|no|
+|**CardBackgroundColor**|`string`|Card container background color<br/>|no|
+|**HeroBackgroundColor**|`string`|Hero banner section background color<br/>|no|
+|**ButtonColor**|`string`|Call-to-action button background color<br/>|no|
+|**ButtonTextColor**|`string`|Call-to-action button text color<br/>|no|
+|**HeadingColor**|`string`|Heading and title text color<br/>|no|
+|**TextColor**|`string`|Body paragraph text color<br/>|no|
+|**FooterTextColor**|`string`|Muted text color for headers footers and secondary content<br/>|no|
+|**AccentBorderColor**|`string`|Decorative accent color applied to borders only<br/>|no|
+|**Tagline**|`string`|Short descriptive footer line rendered above the social row in modern themes<br/>|no|
 
-**Additional Properties:** not allowed  
-<a name="auth"></a>
-## auth: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsgithubappconfig"></a>
+### $defs/githubapp\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**appid**|`string`|||
+|**privatekey**|`string`|||
+|**webhooksecret**|`string`|||
+|**appslug**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsgoogledriveconfig"></a>
+### $defs/googledrive\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsgoogleworkspaceconfig"></a>
+### $defs/googleworkspace\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsmicrosoftteamsconfig"></a>
+### $defs/microsoftteams\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+|**applicationid**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsoidclocalconfig"></a>
+### $defs/oidclocal\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|||
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**discoveryurl**|`string`|||
+|**redirecturl**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsonedriveconfig"></a>
+### $defs/onedrive\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+|**contentmode**|`string`|||
+|**applicationid**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsslackconfig"></a>
+### $defs/slack\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+|**appid**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsslackruntimeslackconfig"></a>
+### $defs/slack\.RuntimeSlackConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**webhookURL**|`string`|Slack incoming webhook URL for fire-and-forget system notifications<br/>||
+|**botToken**|`string`|Bot User OAuth Token for full Web API access to the platform workspace<br/>||
+|**defaultChannel**|`string`|Default channel id for system messages when no explicit channel is provided<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defssystemorganizationdeleteconfig"></a>
+### $defs/system\.OrganizationDeleteConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**maxdeletesperrun**|`integer`|Maximum overdue organizations to delete per run<br/>Default: `25`<br/>||
+|**enabled**|`boolean`|Whether the organization deletion listener is enabled<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "maxdeletesperrun": 25
+}
+```
+
+ 
+<a name="defssystempaymentreminderconfig"></a>
+### $defs/system\.PaymentReminderConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**paymentmethodinterval**|`integer`|Days after org creation before marking for deletion<br/>Default: `30`<br/>||
+|**deletiondays**|`integer`|Days between marking and actual deletion<br/>Default: `7`<br/>||
+|**enabled**|`boolean`|Whether the payment reminder listener is enabled<br/>Default: `false`<br/>||
+|**dryrun**|`boolean`|If true only log organization IDs that would be processed<br/>Default: `true`<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "paymentmethodinterval": 30,
+    "deletiondays": 7,
+    "enabled": false,
+    "dryrun": true
+}
+```
+
+ 
+<a name="defsconfigauth"></a>
+## $defs/config\.Auth: object
 
 Auth settings including oauth2 providers and token configuration
 
@@ -654,11 +542,11 @@ Auth settings including oauth2 providers and token configuration
 |----|----|-----------|--------|
 |**enabled**|`boolean`|Enabled authentication on the server, not recommended to disable<br/>|no|
 |**token**|`object`||yes|
-|**supportedproviders**|`string[]`||no|
-|**providers**|`object`|OauthProviderConfig represents the configuration for OAuth providers such as Github and Google<br/>|no|
-|**supportaccess**|`object`|SupportAccessConfig contains configuration for the Openlane support access flow. The support<br/>|no|
+|**supportedproviders**|`string[]`|||
+|**providers**|`object`|OauthProviderConfig represents the configuration for OAuth providers such as Github and Google<br/>||
+|**supportaccess**|`object`|SupportAccessConfig contains configuration for the Openlane support access flow. The support<br/>||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -681,146 +569,16 @@ Auth settings including oauth2 providers and token configuration
 }
 ```
 
-<a name="authtoken"></a>
-### auth\.token: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**kid**|`string`||yes|
-|**audience**|`string`||yes|
-|**refreshaudience**|`string`||no|
-|**issuer**|`string`||yes|
-|**accessduration**|`integer`||no|
-|**refreshduration**|`integer`||no|
-|**refreshoverlap**|`integer`||no|
-|**jwksendpoint**|`string`||no|
-|**keys**|`object`||yes|
-|**generatekeys**|`boolean`||no|
-|**jwkscachettl**|`integer`||no|
-|**redis**|`object`||no|
-|**apitokens**|`object`||no|
-|**assessmentaccessduration**|`integer`||no|
-|**trustcenterndarequestaccessduration**|`integer`||no|
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "keys": {},
-    "redis": {
-        "config": {}
-    },
-    "apitokens": {
-        "keys": {}
-    }
-}
-```
-
-<a name="authtokenkeys"></a>
-#### auth\.token\.keys: object
-
-**Additional Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**Additional Properties**|`string`|||
-
-<a name="authtokenredis"></a>
-#### auth\.token\.redis: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|||
-|**config**|`object`|||
-|**blacklistprefix**|`string`|||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "config": {}
-}
-```
-
-<a name="authtokenredisconfig"></a>
-##### auth\.token\.redis\.config: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|||
-|**address**|`string`|||
-|**name**|`string`|||
-|**username**|`string`|||
-|**password**|`string`|||
-|**db**|`integer`|||
-|**dialtimeout**|`integer`|||
-|**readtimeout**|`integer`|||
-|**writetimeout**|`integer`|||
-|**maxretries**|`integer`|||
-|**minidleconns**|`integer`|||
-|**maxidleconns**|`integer`|||
-|**maxactiveconns**|`integer`|||
-
-**Additional Properties:** not allowed  
-<a name="authtokenapitokens"></a>
-#### auth\.token\.apitokens: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|||
-|**envprefix**|`string`|||
-|**keys**|`object`|||
-|**secretsize**|`integer`|||
-|**delimiter**|`string`|||
-|**prefix**|`string`|||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "keys": {}
-}
-```
-
-<a name="authtokenapitokenskeys"></a>
-##### auth\.token\.apitokens\.keys: object
-
-**Additional Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**Additional Properties**|`object`|||
-
-<a name="authtokenapitokenskeysadditionalproperties"></a>
-###### auth\.token\.apitokens\.keys\.additionalProperties: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**secret**|`string`|||
-|**status**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="authsupportedproviders"></a>
-### auth\.supportedproviders: array
+ 
+<a name="defsstring"></a>
+### $defs/\[\]string: array
 
 **Items**
 
-**Item Type:** `string`  
-<a name="authproviders"></a>
-### auth\.providers: object
+**Item Type:** `string` 
+ 
+<a name="defshandlersoauthproviderconfig"></a>
+### $defs/handlers\.OauthProviderConfig: object
 
 OauthProviderConfig represents the configuration for OAuth providers such as Github and Google
 
@@ -834,7 +592,7 @@ OauthProviderConfig represents the configuration for OAuth providers such as Git
 |**google**|`object`||yes|
 |**webauthn**|`object`||yes|
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -845,8 +603,9 @@ OauthProviderConfig represents the configuration for OAuth providers such as Git
 }
 ```
 
-<a name="authprovidersgithub"></a>
-#### auth\.providers\.github: object
+ 
+<a name="defsgithubproviderconfig"></a>
+#### $defs/github\.ProviderConfig: object
 
 **Properties**
 
@@ -855,18 +614,20 @@ OauthProviderConfig represents the configuration for OAuth providers such as Git
 |**clientid**|`string`||yes|
 |**clientsecret**|`string`||yes|
 |**clientendpoint**|`string`||no|
-|**scopes**|`string[]`||yes|
+|**scopes**|`string[]`|||
 |**redirecturl**|`string`||yes|
 
-**Additional Properties:** not allowed  
-<a name="authprovidersgithubscopes"></a>
-##### auth\.providers\.github\.scopes: array
+**Additional Properties:** not allowed 
+ 
+<a name="defsstring"></a>
+##### $defs/\[\]string: array
 
 **Items**
 
-**Item Type:** `string`  
-<a name="authprovidersgoogle"></a>
-#### auth\.providers\.google: object
+**Item Type:** `string` 
+ 
+<a name="defsgoogleproviderconfig"></a>
+#### $defs/google\.ProviderConfig: object
 
 **Properties**
 
@@ -875,18 +636,20 @@ OauthProviderConfig represents the configuration for OAuth providers such as Git
 |**clientid**|`string`||yes|
 |**clientsecret**|`string`||yes|
 |**clientendpoint**|`string`||no|
-|**scopes**|`string[]`||yes|
+|**scopes**|`string[]`|||
 |**redirecturl**|`string`||yes|
 
-**Additional Properties:** not allowed  
-<a name="authprovidersgooglescopes"></a>
-##### auth\.providers\.google\.scopes: array
+**Additional Properties:** not allowed 
+ 
+<a name="defsstring"></a>
+##### $defs/\[\]string: array
 
 **Items**
 
-**Item Type:** `string`  
-<a name="authproviderswebauthn"></a>
-#### auth\.providers\.webauthn: object
+**Item Type:** `string` 
+ 
+<a name="defswebauthnproviderconfig"></a>
+#### $defs/webauthn\.ProviderConfig: object
 
 **Properties**
 
@@ -895,21 +658,23 @@ OauthProviderConfig represents the configuration for OAuth providers such as Git
 |**enabled**|`boolean`||no|
 |**displayname**|`string`||yes|
 |**relyingpartyid**|`string`||yes|
-|**requestorigins**|`string[]`||yes|
+|**requestorigins**|`string[]`|||
 |**maxdevices**|`integer`||no|
 |**enforcetimeout**|`boolean`||no|
 |**timeout**|`integer`||no|
 |**debug**|`boolean`||no|
 
-**Additional Properties:** not allowed  
-<a name="authproviderswebauthnrequestorigins"></a>
-##### auth\.providers\.webauthn\.requestorigins: array
+**Additional Properties:** not allowed 
+ 
+<a name="defsstring"></a>
+##### $defs/\[\]string: array
 
 **Items**
 
-**Item Type:** `string`  
-<a name="authsupportaccess"></a>
-### auth\.supportaccess: object
+**Item Type:** `string` 
+ 
+<a name="defshandlerssupportaccessconfig"></a>
+### $defs/handlers\.SupportAccessConfig: object
 
 SupportAccessConfig contains configuration for the Openlane support access flow. The support
 identity is virtual and authenticated entirely from these values, never from the database. This is
@@ -933,80 +698,709 @@ identity provider configuration, since both authentications must occur together
 |**redirecturl**|`string`|RedirectURL is the callback URL registered with the second factor identity provider<br/>||
 |**alloweddomain**|`string`|AllowedDomain restricts which email domain may complete the second factor (e.g. theopenlane.io)<br/>||
 
-**Additional Properties:** not allowed  
-<a name="authz"></a>
-## authz: object
+**Additional Properties:** not allowed 
+ 
+<a name="defstokensconfig"></a>
+### $defs/tokens\.Config: object
 
 **Properties**
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
-|**enabled**|`boolean`|enables authorization checks with openFGA<br/>|no|
-|**storename**|`string`|name of openFGA store<br/>|no|
-|**hosturl**|`string`|host url with scheme of the openFGA API<br/>|yes|
-|**storeid**|`string`|id of openFGA store<br/>|no|
-|**modelid**|`string`|id of openFGA model<br/>|no|
-|**createnewmodel**|`boolean`|force create a new model<br/>|no|
-|**modelfile**|`string`|path to the fga model file<br/>|no|
-|**modulefile**|`string`|path to the fga module file<br/>|no|
-|**credentials**|`object`||no|
-|**maxbatchwritesize**|`integer`|maximum number of writes per batch in a transaction<br/>|no|
-|**enableparentcontext**|`boolean`|disables the automatic addition of parent context tuples<br/>|no|
-|**parentcontextskipkinds**|`string[]`||no|
-|**parentcontextconditions**|`array`||no|
+|**kid**|`string`||yes|
+|**audience**|`string`||yes|
+|**refreshaudience**|`string`||no|
+|**issuer**|`string`||yes|
+|**accessduration**|`integer`||no|
+|**refreshduration**|`integer`||no|
+|**refreshoverlap**|`integer`||no|
+|**jwksendpoint**|`string`||no|
+|**keys**|`object`|||
+|**generatekeys**|`boolean`||no|
+|**jwkscachettl**|`integer`||no|
+|**redis**|`object`|||
+|**apitokens**|`object`|||
+|**assessmentaccessduration**|`integer`||no|
+|**trustcenterndarequestaccessduration**|`integer`||no|
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
 {
-    "credentials": {},
-    "parentcontextconditions": [
-        {
-            "context": {}
-        }
-    ]
+    "keys": {},
+    "redis": {
+        "config": {}
+    },
+    "apitokens": {
+        "keys": {}
+    }
 }
 ```
 
-<a name="authzcredentials"></a>
-### authz\.credentials: object
+ 
+<a name="defsmapstringstring"></a>
+#### $defs/map\[string\]string: object
+
+**Additional Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**Additional Properties**|`string`|||
+
+ 
+<a name="defstokensapitokenconfig"></a>
+#### $defs/tokens\.APITokenConfig: object
 
 **Properties**
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
-|**apitoken**|`string`|api token for the openFGA client<br/>||
-|**clientid**|`string`|client id for the openFGA client<br/>||
-|**clientsecret**|`string`|client secret for the openFGA client<br/>||
-|**audience**|`string`|audience for the openFGA client<br/>||
-|**issuer**|`string`|issuer for the openFGA client<br/>||
-|**scopes**|`string`|scopes for the openFGA client<br/>||
+|**enabled**|`boolean`|||
+|**envprefix**|`string`|||
+|**keys**|`object`|||
+|**secretsize**|`integer`|||
+|**delimiter**|`string`|||
+|**prefix**|`string`|||
 
-**Additional Properties:** not allowed  
-<a name="authzparentcontextskipkinds"></a>
-### authz\.parentcontextskipkinds: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="authzparentcontextconditions"></a>
-### authz\.parentcontextconditions: array
-
-**Items**
-
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
-[
-    {
-        "context": {}
-    }
-]
+{
+    "keys": {}
+}
 ```
 
-<a name="db"></a>
-## db: object
+ 
+<a name="defsmapstringtokensapitokenkeyconfig"></a>
+##### $defs/map\[string\]tokens\.APITokenKeyConfig: object
+
+**Additional Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**Additional Properties**|`object`|||
+
+ 
+<a name="defstokensapitokenkeyconfig"></a>
+###### $defs/tokens\.APITokenKeyConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**secret**|`string`|||
+|**status**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defstokensredisconfig"></a>
+#### $defs/tokens\.RedisConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|||
+|**config**|`object`|||
+|**blacklistprefix**|`string`|||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "config": {}
+}
+```
+
+ 
+<a name="defscacheconfig"></a>
+##### $defs/cache\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|||
+|**address**|`string`|||
+|**name**|`string`|||
+|**username**|`string`|||
+|**password**|`string`|||
+|**db**|`integer`|||
+|**dialtimeout**|`integer`|||
+|**readtimeout**|`integer`|||
+|**writetimeout**|`integer`|||
+|**maxretries**|`integer`|||
+|**minidleconns**|`integer`|||
+|**maxidleconns**|`integer`|||
+|**maxactiveconns**|`integer`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsconfigbackfill"></a>
+## $defs/config\.Backfill: object
+
+Backfill configures one-time startup data backfill routines that populate fields introduced by recent
+migrations for organizations and memberships that pre-date them
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled runs the backfill routines on server startup<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsconfigkeywatcher"></a>
+## $defs/config\.KeyWatcher: object
+
+KeyWatcher contains settings for the key watcher that manages JWT signing keys
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates whether the key watcher is enabled<br/>||
+|**keydir**|`string`|KeyDir is the path to the directory containing PEM keys for JWT signing<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsconfigserver"></a>
+## $defs/config\.Server: object
+
+Server settings for the echo server
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**dev**|`boolean`|Dev enables echo's dev mode options<br/>|no|
+|**listen**|`string`|Listen sets the listen address to serve the echo server on<br/>|yes|
+|**metricsport**|`string`|MetricsPort sets the port for the metrics endpoint<br/>|no|
+|**shutdowngraceperiod**|`integer`|ShutdownGracePeriod sets the grace period for in flight requests before shutting down<br/>|no|
+|**readtimeout**|`integer`|ReadTimeout sets the maximum duration for reading the entire request including the body<br/>|no|
+|**writetimeout**|`integer`|WriteTimeout sets the maximum duration before timing out writes of the response<br/>|no|
+|**idletimeout**|`integer`|IdleTimeout sets the maximum amount of time to wait for the next request when keep-alive are enabled<br/>|no|
+|**readheadertimeout**|`integer`|ReadHeaderTimeout sets the amount of time allowed to read request headers<br/>|no|
+|**tls**|`object`|TLS settings for the server for secure connections<br/>||
+|**cors**|`object`|Config holds the cors configuration settings<br/>||
+|**secure**|`object`|Config contains the types used in the mw middleware<br/>||
+|**cachecontrol**|`object`|Config is the config values for the cache-control middleware<br/>||
+|**mime**|`object`|Config defines the config for Mime middleware<br/>||
+|**graphpool**|`object`|PoolConfig contains the settings for the goroutine pool<br/>||
+|**enablegraphextensions**|`boolean`|EnableGraphExtensions enables the graph extensions for the graph resolvers<br/>|no|
+|**enablegraphsubscriptions**|`boolean`|EnableGraphSubscriptions enables graphql subscriptions to the server using websockets or sse<br/>|no|
+|**complexitylimit**|`integer`|ComplexityLimit sets the maximum complexity allowed for a query<br/>|no|
+|**maxresultlimit**|`integer`|MaxResultLimit sets the maximum number of results allowed for a query<br/>|no|
+|**csrfprotection**|`object`|Config defines configuration for the CSRF middleware wrapper.<br/>||
+|**secretmanager**|`string`|SecretManagerSecret is the name of the GCP Secret Manager secret containing the JWT signing key<br/>|no|
+|**defaulttrustcenterdomain**|`string`|DefaultTrustCenterDomain is the default domain to use for the trust center if no custom domain is set<br/>|no|
+|**trustcentercnametarget**|`string`|TrustCenterCnameTarget is the cname target for the trust center<br/>Used for mapping the vanity domains to the trust centers<br/>|no|
+|**trustcenterpreviewzoneid**|`string`|TrustCenterPreviewZoneID is the cloudflare zone id for the trust center preview domain<br/>|no|
+|**notificationlookbackdays**|`integer`|NotificationLookbackDays is the number of days of read notifications to pull when starting a notification subscription<br/>Unread notifications are always pulled regardless of this setting<br/>|no|
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "tls": {},
+    "cors": {
+        "prefixes": {}
+    },
+    "secure": {},
+    "cachecontrol": {
+        "nocacheheaders": {}
+    },
+    "mime": {},
+    "graphpool": {},
+    "csrfprotection": {}
+}
+```
+
+ 
+<a name="defscachecontrolconfig"></a>
+### $defs/cachecontrol\.Config: object
+
+Config is the config values for the cache-control middleware
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|||
+|**nocacheheaders**|`object`|||
+|**etagheaders**|`string[]`|||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "nocacheheaders": {}
+}
+```
+
+ 
+<a name="defsstring"></a>
+#### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defsmapstringstring"></a>
+#### $defs/map\[string\]string: object
+
+**Additional Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**Additional Properties**|`string`|||
+
+ 
+<a name="defsconfigpoolconfig"></a>
+### $defs/config\.PoolConfig: object
+
+PoolConfig contains the settings for the goroutine pool
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**maxworkers**|`integer`|MaxWorkers is the maximum number of workers in the pool<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsconfigtls"></a>
+### $defs/config\.TLS: object
+
+TLS settings for the server for secure connections
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled turns on TLS settings for the server<br/>||
+|**certfile**|`string`|CertFile location for the TLS server<br/>||
+|**certkey**|`string`|CertKey file location for the TLS server<br/>||
+|**autocert**|`boolean`|AutoCert generates the cert with letsencrypt, this does not work on localhost<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defscorsconfig"></a>
+### $defs/cors\.Config: object
+
+Config holds the cors configuration settings
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enable or disable the CORS middleware<br/>||
+|**prefixes**|`object`|||
+|**alloworigins**|`string[]`|||
+|**cookieinsecure**|`boolean`|CookieInsecure sets the cookie to be insecure<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "prefixes": {}
+}
+```
+
+ 
+<a name="defsstring"></a>
+#### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defsmapstringstring"></a>
+#### $defs/map\[string\]\[\]string: object
+
+**Additional Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**Additional Properties**|`string[]`|||
+
+ 
+<a name="defsstring"></a>
+##### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defscsrfconfig"></a>
+### $defs/csrf\.Config: object
+
+Config defines configuration for the CSRF middleware wrapper.
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates whether CSRF protection is enabled.<br/>||
+|**header**|`string`|Header specifies the header name to look for the CSRF token.<br/>||
+|**cookie**|`string`|Cookie specifies the cookie name used to store the CSRF token.<br/>||
+|**secure**|`boolean`|Secure sets the Secure flag on the CSRF cookie.<br/>||
+|**samesite**|`string`|SameSite configures the SameSite attribute on the CSRF cookie. Valid<br/>values are "Lax", "Strict", "None" and "Default".<br/>||
+|**cookiehttponly**|`boolean`|CookieHTTPOnly indicates whether the CSRF cookie is HTTP only.<br/>||
+|**cookiedomain**|`string`|CookieDomain specifies the domain for the CSRF cookie, default to no domain<br/>||
+|**cookiepath**|`string`|CookiePath specifies the path for the CSRF cookie, default to "/"<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsmimeconfig"></a>
+### $defs/mime\.Config: object
+
+Config defines the config for Mime middleware
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if the mime middleware should be enabled<br/>||
+|**mimetypesfile**|`string`|MimeTypesFile is the file to load mime types from<br/>||
+|**defaultcontenttype**|`string`|DefaultContentType is the default content type to set if no mime type is found<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defssecureconfig"></a>
+### $defs/secure\.Config: object
+
+Config contains the types used in the mw middleware
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if the secure middleware should be enabled<br/>||
+|**xssprotection**|`string`|XSSProtection is the value to set the X-XSS-Protection header to - default is 1; mode=block<br/>||
+|**contenttypenosniff**|`string`|ContentTypeNosniff is the value to set the X-Content-Type-Options header to - default is nosniff<br/>||
+|**xframeoptions**|`string`|XFrameOptions is the value to set the X-Frame-Options header to - default is SAMEORIGIN<br/>||
+|**hstspreloadenabled**|`boolean`|HSTSPreloadEnabled is a boolean to enable HSTS preloading - default is false<br/>||
+|**hstsmaxage**|`integer`|HSTSMaxAge is the max age to set the HSTS header to - default is 31536000<br/>||
+|**contentsecuritypolicy**|`string`|ContentSecurityPolicy is the value to set the Content-Security-Policy header to - default is default-src 'self'<br/>||
+|**referrerpolicy**|`string`|ReferrerPolicy is the value to set the Referrer-Policy header to - default is same-origin<br/>||
+|**cspreportonly**|`boolean`|CSPReportOnly is a boolean to enable the Content-Security-Policy-Report-Only header - default is false<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsentconfigconfig"></a>
+## $defs/entconfig\.Config: object
+
+Config holds the configuration for the ent server
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**entitytypes**|`string[]`|||
+|**summarizer**|`object`|Config holds configuration for the text summarization functionality<br/>||
+|**maxpoolsize**|`integer`|MaxPoolSize is the max worker pool size that can be used by the ent client<br/>||
+|**modules**|`object`|Modules settings for features access<br/>||
+|**maxschemaimportsize**|`integer`|MaxSchemaImportSize is the maximum size allowed for schema imports in bytes<br/>||
+|**emailvalidation**|`object`|EmailVerificationConfig is the configuration for email verification<br/>||
+|**billing**|`object`|Billing settings for feature access<br/>||
+|**notifications**|`object`|Notifications settings for notifications sent to users based on events<br/>||
+|**questionnaireproducturl**|`string`|QuestionnaireProductURL is the product URL used to build questionnaire access links<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "summarizer": {
+        "llm": {
+            "anthropic": {},
+            "cloudflare": {},
+            "openai": {}
+        }
+    },
+    "modules": {},
+    "emailvalidation": {
+        "allowedemailtypes": {}
+    },
+    "billing": {},
+    "notifications": {}
+}
+```
+
+ 
+<a name="defsstring"></a>
+### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defsentconfigbilling"></a>
+### $defs/entconfig\.Billing: object
+
+Billing settings for feature access
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**requirepaymentmethod**|`boolean`|RequirePaymentMethod indicates whether to check if a payment method<br/>exists for orgs before they can access some resource<br/>||
+|**bypassemaildomains**|`string[]`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsstring"></a>
+#### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defsentconfigmodules"></a>
+### $defs/entconfig\.Modules: object
+
+Modules settings for features access
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates whether to check and verify module access<br/>||
+|**usesandbox**|`boolean`|UseSandbox indicates whether to use the sandbox catalog for module access checks<br/>||
+|**devmode**|`boolean`|DevMode enables all modules for local development regardless of trial status<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsentconfignotifications"></a>
+### $defs/entconfig\.Notifications: object
+
+Notifications settings for notifications sent to users based on events
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**consoleurl**|`string`|ConsoleURL for ui links used in notifications<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defssummarizerconfig"></a>
+### $defs/summarizer\.Config: object
+
+Config holds configuration for the text summarization functionality
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**type**|`string`|Type specifies the summarization algorithm to use<br/>||
+|**llm**|`object`|LLM contains configuration for multiple LLM providers<br/>||
+|**maximumsentences**|`integer`|MaximumSentences specifies the maximum number of sentences in the summary<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "llm": {
+        "anthropic": {},
+        "cloudflare": {},
+        "openai": {}
+    }
+}
+```
+
+ 
+<a name="defssummarizerllm"></a>
+#### $defs/summarizer\.LLM: object
+
+LLM contains configuration for multiple LLM providers
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**provider**|`string`|Provider specifies which LLM service to use<br/>||
+|**anthropic**|`object`|AnthropicConfig contains Anthropic specific configuration<br/>||
+|**cloudflare**|`object`|CloudflareConfig contains Cloudflare specific configuration<br/>||
+|**openai**|`object`|OpenAIConfig contains OpenAI specific configuration<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "anthropic": {},
+    "cloudflare": {},
+    "openai": {}
+}
+```
+
+ 
+<a name="defssummarizeranthropicconfig"></a>
+##### $defs/summarizer\.AnthropicConfig: object
+
+AnthropicConfig contains Anthropic specific configuration
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**betaheader**|`string`|BetaHeader specifies the beta API features to enable<br/>||
+|**legacytextcompletion**|`boolean`|LegacyTextCompletion enables legacy text completion API<br/>||
+|**baseurl**|`string`|BaseURL specifies the API endpoint<br/>||
+|**model**|`string`|Model specifies the model name to use<br/>||
+|**apikey**|`string`|APIKey contains the authentication key for the service<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defssummarizercloudflareconfig"></a>
+##### $defs/summarizer\.CloudflareConfig: object
+
+CloudflareConfig contains Cloudflare specific configuration
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**model**|`string`|Model specifies the model name to use<br/>||
+|**apikey**|`string`|APIKey contains the authentication key for the service<br/>||
+|**accountid**|`string`|AccountID specifies the Cloudflare account ID<br/>||
+|**serverurl**|`string`|ServerURL specifies the API endpoint<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defssummarizeropenaiconfig"></a>
+##### $defs/summarizer\.OpenAIConfig: object
+
+OpenAIConfig contains OpenAI specific configuration
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**model**|`string`|Model specifies the model name to use<br/>||
+|**apikey**|`string`|APIKey contains the authentication key for the service<br/>||
+|**url**|`string`|URL specifies the API endpoint<br/>||
+|**organizationid**|`string`|OrganizationID specifies the OpenAI organization ID<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsvalidatoremailverificationconfig"></a>
+### $defs/validator\.EmailVerificationConfig: object
+
+EmailVerificationConfig is the configuration for email verification
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates whether email verification is enabled<br/>||
+|**enableautoupdatedisposable**|`boolean`|EnableAutoUpdateDisposable indicates whether to automatically update disposable email addresses<br/>||
+|**enablegravatarcheck**|`boolean`|EnableGravatarCheck indicates whether to check for Gravatar existence<br/>||
+|**enablesmtpcheck**|`boolean`|EnableSMTPCheck indicates whether to check email by smtp<br/>||
+|**allowedemailtypes**|`object`|AllowedEmailTypes defines the allowed email types for verification<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "allowedemailtypes": {}
+}
+```
+
+ 
+<a name="defsvalidatorallowedemailtypes"></a>
+#### $defs/validator\.AllowedEmailTypes: object
+
+AllowedEmailTypes defines the allowed email types for verification
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**disposable**|`boolean`|Disposable indicates whether disposable email addresses are allowed<br/>||
+|**free**|`boolean`|Free indicates whether free email addresses are allowed<br/>||
+|**role**|`boolean`|Role indicates whether role-based email addresses are allowed<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsentitlementsconfig"></a>
+## $defs/entitlements\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled determines if the entitlements service is enabled<br/>||
+|**privatestripekey**|`string`|PrivateStripeKey is the key for the stripe service<br/>||
+|**stripewebhooksecret**|`string`|StripeWebhookSecret is the secret for the stripe service (legacy, use StripeWebhookSecrets for version-specific secrets)<br/>||
+|**stripewebhooksecrets**|`object`|||
+|**stripewebhookurl**|`string`|StripeWebhookURL is the URL for the stripe webhook<br/>||
+|**stripebillingportalsuccessurl**|`string`|StripeBillingPortalSuccessURL<br/>||
+|**stripecancellationreturnurl**|`string`|StripeCancellationReturnURL is the URL for the stripe cancellation return<br/>||
+|**stripewebhookevents**|`string[]`|||
+|**stripewebhookapiversion**|`string`|StripeWebhookAPIVersion is the Stripe API version currently accepted by the webhook handler<br/>||
+|**stripewebhookdiscardapiversion**|`string`|StripeWebhookDiscardAPIVersion is the Stripe API version to discard during migration<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "stripewebhooksecrets": {}
+}
+```
+
+ 
+<a name="defsstring"></a>
+### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defsmapstringstring"></a>
+### $defs/map\[string\]string: object
+
+**Additional Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**Additional Properties**|`string`|||
+
+ 
+<a name="defsentxconfig"></a>
+## $defs/entx\.Config: object
 
 **Properties**
 
@@ -1025,9 +1419,158 @@ identity provider configuration, since both authentications must occur together
 |**maxconnections**|`integer`|maximum number of connections to the database<br/>|no|
 |**maxidleconnections**|`integer`|maximum number of idle connections to the database<br/>|no|
 
-**Additional Properties:** not allowed  
-<a name="jobqueue"></a>
-## jobqueue: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsfgaxconfig"></a>
+## $defs/fgax\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|enables authorization checks with openFGA<br/>|no|
+|**storename**|`string`|name of openFGA store<br/>|no|
+|**hosturl**|`string`|host url with scheme of the openFGA API<br/>|yes|
+|**storeid**|`string`|id of openFGA store<br/>|no|
+|**modelid**|`string`|id of openFGA model<br/>|no|
+|**createnewmodel**|`boolean`|force create a new model<br/>|no|
+|**modelfile**|`string`|path to the fga model file<br/>|no|
+|**modulefile**|`string`|path to the fga module file<br/>|no|
+|**credentials**|`object`|||
+|**maxbatchwritesize**|`integer`|maximum number of writes per batch in a transaction<br/>|no|
+|**enableparentcontext**|`boolean`|disables the automatic addition of parent context tuples<br/>|no|
+|**parentcontextskipkinds**|`string[]`|||
+|**parentcontextconditions**|`array`|||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "credentials": {},
+    "parentcontextconditions": [
+        {
+            "context": {}
+        }
+    ]
+}
+```
+
+ 
+<a name="defsfgaxparentcontextconditionconfig"></a>
+### $defs/\[\]fgax\.ParentContextConditionConfig: array
+
+**Items**
+
+**Example**
+
+```json
+[
+    {
+        "context": {}
+    }
+]
+```
+
+ 
+<a name="defsstring"></a>
+### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defsfgaxcredentials"></a>
+### $defs/fgax\.Credentials: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**apitoken**|`string`|api token for the openFGA client<br/>||
+|**clientid**|`string`|client id for the openFGA client<br/>||
+|**clientsecret**|`string`|client secret for the openFGA client<br/>||
+|**audience**|`string`|audience for the openFGA client<br/>||
+|**issuer**|`string`|issuer for the openFGA client<br/>||
+|**scopes**|`string`|scopes for the openFGA client<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defshandlerscloudflareconfig"></a>
+## $defs/handlers\.CloudflareConfig: object
+
+CloudflareConfig contains configuration for Cloudflare integration.
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled toggles the Cloudflare snapshot handler<br/>||
+|**apitoken**|`string`|APIToken is the API token used for Cloudflare client initialization<br/>||
+|**accountid**|`string`|AccountID is the Cloudflare account ID to use for snapshot operations<br/>||
+|**clientid**|`string`|ClientID is the Cloudflare Access client ID for shortlink API requests<br/>||
+|**clientsecret**|`string`|ClientSecret is the Cloudflare Access client secret for shortlink API requests<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsratelimitconfig"></a>
+## $defs/ratelimit\.Config: object
+
+Config defines the configuration settings for the rate limiter middleware.
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|||
+|**options**|`array`|||
+|**headers**|`string[]`|||
+|**forwardedindexfrombehind**|`integer`|ForwardedIndexFromBehind selects which IP from X-Forwarded-For should be used.<br/>0 means the closest client, 1 the proxy behind it, etc.<br/>||
+|**includepath**|`boolean`|IncludePath appends the request path to the limiter key when true.<br/>||
+|**includemethod**|`boolean`|IncludeMethod appends the request method to the limiter key when true.<br/>||
+|**keyprefix**|`string`|KeyPrefix allows scoping the limiter key space with a static prefix.<br/>||
+|**denystatus**|`integer`|DenyStatus overrides the HTTP status code returned when a rate limit is exceeded.<br/>||
+|**denymessage**|`string`|DenyMessage customises the error payload when a rate limit is exceeded.<br/>||
+|**sendretryafterheader**|`boolean`|SendRetryAfterHeader toggles whether the Retry-After header should be added when available.<br/>||
+|**dryrun**|`boolean`|DryRun enables logging rate limit decisions without blocking requests.<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "options": [
+        {}
+    ]
+}
+```
+
+ 
+<a name="defsratelimitrateoption"></a>
+### $defs/\[\]ratelimit\.RateOption: array
+
+**Items**
+
+**Example**
+
+```json
+[
+    {}
+]
+```
+
+ 
+<a name="defsstring"></a>
+### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defsriverqueueconfig"></a>
+## $defs/riverqueue\.Config: object
 
 **Properties**
 
@@ -1038,7 +1581,7 @@ identity provider configuration, since both authentications must occur together
 |**riverconf**|`object`|||
 |**metrics**|`object`|||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -1056,8 +1599,9 @@ identity provider configuration, since both authentications must occur together
 }
 ```
 
-<a name="jobqueueriverconf"></a>
-### jobqueue\.riverconf: object
+ 
+<a name="defsriverconfig"></a>
+### $defs/river\.Config: object
 
 **Properties**
 
@@ -1098,7 +1642,7 @@ identity provider configuration, since both authentications must occur together
 |**Workers**|`object`|||
 |**WorkerMiddleware**|`array`|||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -1113,34 +1657,9 @@ identity provider configuration, since both authentications must occur together
 }
 ```
 
-<a name="jobqueueriverconfjobinsertmiddleware"></a>
-#### jobqueue\.riverconf\.JobInsertMiddleware: array
-
-**Items**
-
-<a name="jobqueueriverconfhooks"></a>
-#### jobqueue\.riverconf\.Hooks: array
-
-**Items**
-
-<a name="jobqueueriverconflogger"></a>
-#### jobqueue\.riverconf\.Logger: object
-
-**No properties.**
-
-**Additional Properties:** not allowed  
-<a name="jobqueueriverconfmiddleware"></a>
-#### jobqueue\.riverconf\.Middleware: array
-
-**Items**
-
-<a name="jobqueueriverconfplugins"></a>
-#### jobqueue\.riverconf\.Plugins: array
-
-**Items**
-
-<a name="jobqueueriverconfperiodicjobs"></a>
-#### jobqueue\.riverconf\.PeriodicJobs: array
+ 
+<a name="defsriverperiodicjob"></a>
+#### $defs/\[\]\*river\.PeriodicJob: array
 
 **Items**
 
@@ -1152,8 +1671,46 @@ identity provider configuration, since both authentications must occur together
 ]
 ```
 
-<a name="jobqueueriverconfqueues"></a>
-#### jobqueue\.riverconf\.Queues: object
+ 
+<a name="defsrivertypehook"></a>
+#### $defs/\[\]rivertype\.Hook: array
+
+**Items**
+
+ 
+<a name="defsrivertypejobinsertmiddleware"></a>
+#### $defs/\[\]rivertype\.JobInsertMiddleware: array
+
+**Items**
+
+ 
+<a name="defsrivertypemiddleware"></a>
+#### $defs/\[\]rivertype\.Middleware: array
+
+**Items**
+
+ 
+<a name="defsrivertypeplugin"></a>
+#### $defs/\[\]rivertype\.Plugin: array
+
+**Items**
+
+ 
+<a name="defsrivertypeworkermiddleware"></a>
+#### $defs/\[\]rivertype\.WorkerMiddleware: array
+
+**Items**
+
+ 
+<a name="defsstring"></a>
+#### $defs/\[\]string: array
+
+**Items**
+
+**Item Type:** `string` 
+ 
+<a name="defsmapstringriverqueueconfig"></a>
+#### $defs/map\[string\]river\.QueueConfig: object
 
 **Additional Properties**
 
@@ -1161,8 +1718,9 @@ identity provider configuration, since both authentications must occur together
 |----|----|-----------|--------|
 |**Additional Properties**|`object`|||
 
-<a name="jobqueueriverconfqueuesadditionalproperties"></a>
-##### jobqueue\.riverconf\.Queues\.additionalProperties: object
+ 
+<a name="defsriverqueueconfig"></a>
+##### $defs/river\.QueueConfig: object
 
 **Properties**
 
@@ -1172,15 +1730,10 @@ identity provider configuration, since both authentications must occur together
 |**FetchPollInterval**|`integer`|||
 |**MaxWorkers**|`integer`|||
 
-**Additional Properties:** not allowed  
-<a name="jobqueueriverconfreindexerindexnames"></a>
-#### jobqueue\.riverconf\.ReindexerIndexNames: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="jobqueueriverconftest"></a>
-#### jobqueue\.riverconf\.Test: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsrivertestconfig"></a>
+#### $defs/river\.TestConfig: object
 
 **Properties**
 
@@ -1189,20 +1742,24 @@ identity provider configuration, since both authentications must occur together
 |**DisableUniqueEnforcement**|`boolean`|||
 |**Time**||||
 
-**Additional Properties:** not allowed  
-<a name="jobqueueriverconfworkers"></a>
-#### jobqueue\.riverconf\.Workers: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsriverworkers"></a>
+#### $defs/river\.Workers: object
 
 **No properties.**
 
-**Additional Properties:** not allowed  
-<a name="jobqueueriverconfworkermiddleware"></a>
-#### jobqueue\.riverconf\.WorkerMiddleware: array
+**Additional Properties:** not allowed 
+ 
+<a name="defssloglogger"></a>
+#### $defs/slog\.Logger: object
 
-**Items**
+**No properties.**
 
-<a name="jobqueuemetrics"></a>
-### jobqueue\.metrics: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsriverqueuemetricsconfig"></a>
+### $defs/riverqueue\.MetricsConfig: object
 
 **Properties**
 
@@ -1212,31 +1769,10 @@ identity provider configuration, since both authentications must occur together
 |**metricsdurationunit**|`string`|||
 |**enablesemanticmetrics**|`boolean`|||
 
-**Additional Properties:** not allowed  
-<a name="redis"></a>
-## redis: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|||
-|**address**|`string`|||
-|**name**|`string`|||
-|**username**|`string`|||
-|**password**|`string`|||
-|**db**|`integer`|||
-|**dialtimeout**|`integer`|||
-|**readtimeout**|`integer`|||
-|**writetimeout**|`integer`|||
-|**maxretries**|`integer`|||
-|**minidleconns**|`integer`|||
-|**maxidleconns**|`integer`|||
-|**maxactiveconns**|`integer`|||
-
-**Additional Properties:** not allowed  
-<a name="sessions"></a>
-## sessions: object
+**Additional Properties:** not allowed 
+ 
+<a name="defssessionsconfig"></a>
+## $defs/sessions\.Config: object
 
 **Properties**
 
@@ -1250,129 +1786,24 @@ identity provider configuration, since both authentications must occur together
 |**httponly**|`boolean`|||
 |**samesite**|`string`|||
 
-**Additional Properties:** not allowed  
-<a name="totp"></a>
-## totp: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsshortlinksconfig"></a>
+## $defs/shortlinks\.Config: object
 
 **Properties**
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
 |**enabled**|`boolean`|||
-|**codelength**|`integer`|||
-|**issuer**|`string`|||
-|**redis**|`boolean`|||
-|**secret**|`string`|||
-|**recoverycodecount**|`integer`|||
-|**recoverycodelength**|`integer`|||
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**endpointurl**|`string`|||
 
-**Additional Properties:** not allowed  
-<a name="ratelimit"></a>
-## ratelimit: object
-
-Config defines the configuration settings for the rate limiter middleware.
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|||
-|**options**|`array`|||
-|**headers**|`string[]`|||
-|**forwardedindexfrombehind**|`integer`|ForwardedIndexFromBehind selects which IP from X-Forwarded-For should be used.<br/>0 means the closest client, 1 the proxy behind it, etc.<br/>||
-|**includepath**|`boolean`|IncludePath appends the request path to the limiter key when true.<br/>||
-|**includemethod**|`boolean`|IncludeMethod appends the request method to the limiter key when true.<br/>||
-|**keyprefix**|`string`|KeyPrefix allows scoping the limiter key space with a static prefix.<br/>||
-|**denystatus**|`integer`|DenyStatus overrides the HTTP status code returned when a rate limit is exceeded.<br/>||
-|**denymessage**|`string`|DenyMessage customises the error payload when a rate limit is exceeded.<br/>||
-|**sendretryafterheader**|`boolean`|SendRetryAfterHeader toggles whether the Retry-After header should be added when available.<br/>||
-|**dryrun**|`boolean`|DryRun enables logging rate limit decisions without blocking requests.<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "options": [
-        {}
-    ]
-}
-```
-
-<a name="ratelimitoptions"></a>
-### ratelimit\.options: array
-
-**Items**
-
-**Example**
-
-```json
-[
-    {}
-]
-```
-
-<a name="ratelimitheaders"></a>
-### ratelimit\.headers: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="ratelimitunmatched"></a>
-## ratelimitunmatched: object
-
-Config defines the configuration settings for the rate limiter middleware.
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|||
-|**options**|`array`|||
-|**headers**|`string[]`|||
-|**forwardedindexfrombehind**|`integer`|ForwardedIndexFromBehind selects which IP from X-Forwarded-For should be used.<br/>0 means the closest client, 1 the proxy behind it, etc.<br/>||
-|**includepath**|`boolean`|IncludePath appends the request path to the limiter key when true.<br/>||
-|**includemethod**|`boolean`|IncludeMethod appends the request method to the limiter key when true.<br/>||
-|**keyprefix**|`string`|KeyPrefix allows scoping the limiter key space with a static prefix.<br/>||
-|**denystatus**|`integer`|DenyStatus overrides the HTTP status code returned when a rate limit is exceeded.<br/>||
-|**denymessage**|`string`|DenyMessage customises the error payload when a rate limit is exceeded.<br/>||
-|**sendretryafterheader**|`boolean`|SendRetryAfterHeader toggles whether the Retry-After header should be added when available.<br/>||
-|**dryrun**|`boolean`|DryRun enables logging rate limit decisions without blocking requests.<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "options": [
-        {}
-    ]
-}
-```
-
-<a name="ratelimitunmatchedoptions"></a>
-### ratelimitunmatched\.options: array
-
-**Items**
-
-**Example**
-
-```json
-[
-    {}
-]
-```
-
-<a name="ratelimitunmatchedheaders"></a>
-### ratelimitunmatched\.headers: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="objectstorage"></a>
-## objectstorage: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsstorageproviderconfig"></a>
+## $defs/storage\.ProviderConfig: object
 
 ProviderConfig contains configuration for object storage providers
 
@@ -1388,7 +1819,7 @@ ProviderConfig contains configuration for object storage providers
 |**devmode**|`boolean`|DevMode automatically configures a local disk storage provider (and ensures directories exist) and ignores other provider configs<br/>||
 |**providers**|`object`|||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -1410,14 +1841,16 @@ ProviderConfig contains configuration for object storage providers
 }
 ```
 
-<a name="objectstoragekeys"></a>
-### objectstorage\.keys: array
+ 
+<a name="defsstring"></a>
+### $defs/\[\]string: array
 
 **Items**
 
-**Item Type:** `string`  
-<a name="objectstorageproviders"></a>
-### objectstorage\.providers: object
+**Item Type:** `string` 
+ 
+<a name="defsstorageproviders"></a>
+### $defs/storage\.Providers: object
 
 **Properties**
 
@@ -1428,7 +1861,7 @@ ProviderConfig contains configuration for object storage providers
 |**disk**|`object`|ProviderConfigs contains configuration for all storage providers<br/>||
 |**database**|`object`|ProviderConfigs contains configuration for all storage providers<br/>||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -1448,8 +1881,9 @@ ProviderConfig contains configuration for object storage providers
 }
 ```
 
-<a name="objectstorageproviderss3"></a>
-#### objectstorage\.providers\.s3: object
+ 
+<a name="defsstorageproviderconfigs"></a>
+#### $defs/storage\.ProviderConfigs: object
 
 ProviderConfigs contains configuration for all storage providers
 This is structured to allow easy extension for additional providers in the future
@@ -1468,7 +1902,7 @@ This is structured to allow easy extension for additional providers in the futur
 |**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files).<br/>||
 |**credentials**|`object`|ProviderCredentials contains credentials for a storage provider<br/>||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -1477,8 +1911,9 @@ This is structured to allow easy extension for additional providers in the futur
 }
 ```
 
-<a name="objectstorageproviderss3credentials"></a>
-##### objectstorage\.providers\.s3\.credentials: object
+ 
+<a name="defsstorageprovidercredentials"></a>
+##### $defs/storage\.ProviderCredentials: object
 
 ProviderCredentials contains credentials for a storage provider
 
@@ -1493,515 +1928,27 @@ ProviderCredentials contains credentials for a storage provider
 |**accountid**|`string`|AccountID for Cloudflare R2<br/>||
 |**apitoken**|`string`|APIToken for Cloudflare R2<br/>||
 
-**Additional Properties:** not allowed  
-<a name="objectstorageprovidersr2"></a>
-#### objectstorage\.providers\.r2: object
-
-ProviderConfigs contains configuration for all storage providers
-This is structured to allow easy extension for additional providers in the future
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates if this provider is enabled<br/>||
-|**ensureavailable**|`boolean`|EnsureAvailable enforces provider availability before completing server startup<br/>||
-|**region**|`string`|Region for cloud providers<br/>||
-|**bucket**|`string`|Bucket name for cloud providers<br/>||
-|**endpoint**|`string`|Endpoint for custom endpoints<br/>||
-|**proxypresignenabled**|`boolean`|ProxyPresignEnabled toggles proxy-signed download URL generation<br/>||
-|**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files).<br/>||
-|**credentials**|`object`|ProviderCredentials contains credentials for a storage provider<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "credentials": {}
-}
-```
-
-<a name="objectstorageprovidersr2credentials"></a>
-##### objectstorage\.providers\.r2\.credentials: object
-
-ProviderCredentials contains credentials for a storage provider
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**accesskeyid**|`string`|AccessKeyID for cloud providers<br/>||
-|**secretaccesskey**|`string`|SecretAccessKey for cloud providers<br/>||
-|**projectid**|`string`|ProjectID for GCS<br/>||
-|**accountid**|`string`|AccountID for Cloudflare R2<br/>||
-|**apitoken**|`string`|APIToken for Cloudflare R2<br/>||
-
-**Additional Properties:** not allowed  
-<a name="objectstorageprovidersdisk"></a>
-#### objectstorage\.providers\.disk: object
-
-ProviderConfigs contains configuration for all storage providers
-This is structured to allow easy extension for additional providers in the future
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates if this provider is enabled<br/>||
-|**ensureavailable**|`boolean`|EnsureAvailable enforces provider availability before completing server startup<br/>||
-|**region**|`string`|Region for cloud providers<br/>||
-|**bucket**|`string`|Bucket name for cloud providers<br/>||
-|**endpoint**|`string`|Endpoint for custom endpoints<br/>||
-|**proxypresignenabled**|`boolean`|ProxyPresignEnabled toggles proxy-signed download URL generation<br/>||
-|**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files).<br/>||
-|**credentials**|`object`|ProviderCredentials contains credentials for a storage provider<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "credentials": {}
-}
-```
-
-<a name="objectstorageprovidersdiskcredentials"></a>
-##### objectstorage\.providers\.disk\.credentials: object
-
-ProviderCredentials contains credentials for a storage provider
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**accesskeyid**|`string`|AccessKeyID for cloud providers<br/>||
-|**secretaccesskey**|`string`|SecretAccessKey for cloud providers<br/>||
-|**projectid**|`string`|ProjectID for GCS<br/>||
-|**accountid**|`string`|AccountID for Cloudflare R2<br/>||
-|**apitoken**|`string`|APIToken for Cloudflare R2<br/>||
-
-**Additional Properties:** not allowed  
-<a name="objectstorageprovidersdatabase"></a>
-#### objectstorage\.providers\.database: object
-
-ProviderConfigs contains configuration for all storage providers
-This is structured to allow easy extension for additional providers in the future
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates if this provider is enabled<br/>||
-|**ensureavailable**|`boolean`|EnsureAvailable enforces provider availability before completing server startup<br/>||
-|**region**|`string`|Region for cloud providers<br/>||
-|**bucket**|`string`|Bucket name for cloud providers<br/>||
-|**endpoint**|`string`|Endpoint for custom endpoints<br/>||
-|**proxypresignenabled**|`boolean`|ProxyPresignEnabled toggles proxy-signed download URL generation<br/>||
-|**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files).<br/>||
-|**credentials**|`object`|ProviderCredentials contains credentials for a storage provider<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "credentials": {}
-}
-```
-
-<a name="objectstorageprovidersdatabasecredentials"></a>
-##### objectstorage\.providers\.database\.credentials: object
-
-ProviderCredentials contains credentials for a storage provider
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**accesskeyid**|`string`|AccessKeyID for cloud providers<br/>||
-|**secretaccesskey**|`string`|SecretAccessKey for cloud providers<br/>||
-|**projectid**|`string`|ProjectID for GCS<br/>||
-|**accountid**|`string`|AccountID for Cloudflare R2<br/>||
-|**apitoken**|`string`|APIToken for Cloudflare R2<br/>||
-
-**Additional Properties:** not allowed  
-<a name="subscription"></a>
-## subscription: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled determines if the entitlements service is enabled<br/>||
-|**privatestripekey**|`string`|PrivateStripeKey is the key for the stripe service<br/>||
-|**stripewebhooksecret**|`string`|StripeWebhookSecret is the secret for the stripe service (legacy, use StripeWebhookSecrets for version-specific secrets)<br/>||
-|**stripewebhooksecrets**|`object`|||
-|**stripewebhookurl**|`string`|StripeWebhookURL is the URL for the stripe webhook<br/>||
-|**stripebillingportalsuccessurl**|`string`|StripeBillingPortalSuccessURL<br/>||
-|**stripecancellationreturnurl**|`string`|StripeCancellationReturnURL is the URL for the stripe cancellation return<br/>||
-|**stripewebhookevents**|`string[]`|||
-|**stripewebhookapiversion**|`string`|StripeWebhookAPIVersion is the Stripe API version currently accepted by the webhook handler<br/>||
-|**stripewebhookdiscardapiversion**|`string`|StripeWebhookDiscardAPIVersion is the Stripe API version to discard during migration<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "stripewebhooksecrets": {}
-}
-```
-
-<a name="subscriptionstripewebhooksecrets"></a>
-### subscription\.stripewebhooksecrets: object
-
-**Additional Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**Additional Properties**|`string`|||
-
-<a name="subscriptionstripewebhookevents"></a>
-### subscription\.stripewebhookevents: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="keywatcher"></a>
-## keywatcher: object
-
-KeyWatcher contains settings for the key watcher that manages JWT signing keys
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled indicates whether the key watcher is enabled<br/>||
-|**keydir**|`string`|KeyDir is the path to the directory containing PEM keys for JWT signing<br/>||
-
-**Additional Properties:** not allowed  
-<a name="integrations"></a>
-## integrations: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**consoleintegrationpath**|`string`|||
-|**awssecurityhub**|`object`|||
-|**cloudflareruntime**|`object`|||
-|**githubapp**|`object`|||
-|**slack**|`object`|||
-|**slackruntime**|`object`|||
-|**googledrive**|`object`|||
-|**googleworkspace**|`object`|||
-|**azureentraid**|`object`|||
-|**microsoftteams**|`object`|||
-|**onedrive**|`object`|||
-|**oidclocal**|`object`|||
-|**email**|`object`||yes|
-|**paymentreminder**|`object`|||
-|**organizationdelete**|`object`|||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "awssecurityhub": {},
-    "cloudflareruntime": {
-        "domainscan": {}
-    },
-    "githubapp": {},
-    "slack": {},
-    "slackruntime": {},
-    "googledrive": {},
-    "googleworkspace": {},
-    "azureentraid": {},
-    "microsoftteams": {},
-    "onedrive": {},
-    "oidclocal": {},
-    "email": {},
-    "paymentreminder": {
-        "paymentmethodinterval": 30,
-        "deletiondays": 7,
-        "enabled": false,
-        "dryrun": true
-    },
-    "organizationdelete": {
-        "maxdeletesperrun": 25
-    }
-}
-```
-
-<a name="integrationsawssecurityhub"></a>
-### integrations\.awssecurityhub: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**accesskeyid**|`string`|||
-|**secretaccesskey**|`string`|||
-|**arn**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationscloudflareruntime"></a>
-### integrations\.cloudflareruntime: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**apitoken**|`string`|Cloudflare API token for the operator-owned account<br/>||
-|**accountid**|`string`|Cloudflare account ID for the operator-owned account<br/>||
-|**domainscan**|`object`|||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "domainscan": {}
-}
-```
-
-<a name="integrationscloudflareruntimedomainscan"></a>
-#### integrations\.cloudflareruntime\.domainscan: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**nonvendorcategories**|`string[]`|||
-|**deniedvendornames**|`string[]`|||
-|**scanttl**|`integer`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationscloudflareruntimedomainscannonvendorcategories"></a>
-##### integrations\.cloudflareruntime\.domainscan\.nonvendorcategories: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="integrationscloudflareruntimedomainscandeniedvendornames"></a>
-##### integrations\.cloudflareruntime\.domainscan\.deniedvendornames: array
-
-**Items**
-
-**Item Type:** `string`  
-<a name="integrationsgithubapp"></a>
-### integrations\.githubapp: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**appid**|`string`|||
-|**privatekey**|`string`|||
-|**webhooksecret**|`string`|||
-|**appslug**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationsslack"></a>
-### integrations\.slack: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**clientid**|`string`|||
-|**clientsecret**|`string`|||
-|**redirecturl**|`string`|||
-|**appid**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationsslackruntime"></a>
-### integrations\.slackruntime: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**webhookURL**|`string`|Slack incoming webhook URL for fire-and-forget system notifications<br/>||
-|**botToken**|`string`|Bot User OAuth Token for full Web API access to the platform workspace<br/>||
-|**defaultChannel**|`string`|Default channel id for system messages when no explicit channel is provided<br/>||
-
-**Additional Properties:** not allowed  
-<a name="integrationsgoogledrive"></a>
-### integrations\.googledrive: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**clientid**|`string`|||
-|**clientsecret**|`string`|||
-|**redirecturl**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationsgoogleworkspace"></a>
-### integrations\.googleworkspace: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**clientid**|`string`|||
-|**clientsecret**|`string`|||
-|**redirecturl**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationsazureentraid"></a>
-### integrations\.azureentraid: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**clientid**|`string`|||
-|**clientsecret**|`string`|||
-|**redirecturl**|`string`|||
-|**defaulttenant**|`string`|||
-|**applicationid**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationsmicrosoftteams"></a>
-### integrations\.microsoftteams: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**clientid**|`string`|||
-|**clientsecret**|`string`|||
-|**redirecturl**|`string`|||
-|**applicationid**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationsonedrive"></a>
-### integrations\.onedrive: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**clientid**|`string`|||
-|**clientsecret**|`string`|||
-|**redirecturl**|`string`|||
-|**contentmode**|`string`|||
-|**applicationid**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="integrationsoidclocal"></a>
-### integrations\.oidclocal: object
+**Additional Properties:** not allowed 
+ 
+<a name="defstotpconfig"></a>
+## $defs/totp\.Config: object
 
 **Properties**
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
 |**enabled**|`boolean`|||
-|**clientid**|`string`|||
-|**clientsecret**|`string`|||
-|**discoveryurl**|`string`|||
-|**redirecturl**|`string`|||
+|**codelength**|`integer`|||
+|**issuer**|`string`|||
+|**redis**|`boolean`|||
+|**secret**|`string`|||
+|**recoverycodecount**|`integer`|||
+|**recoverycodelength**|`integer`|||
 
-**Additional Properties:** not allowed  
-<a name="integrationsemail"></a>
-### integrations\.email: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**testdir**|`string`|Directory for dev-mode email output<br/>|no|
-|**resendsecret**|`string`|Resend webhook signing secret<br/>|no|
-|**apikey**|`string`|Email provider API key<br/>|yes|
-|**provider**|`string`|Email service provider<br/>Enum: `"resend"`<br/>|yes|
-|**fromemail**|`string`|Sender email address<br/>|yes|
-|**supportemail**|`string`|Support contact email address<br/>|no|
-|**questionnaireemail**|`string`|Sender override for questionnaire auth emails<br/>|no|
-|**rooturl**|`string`|Root application URL used to construct email action links<br/>|no|
-|**producturl**|`string`|Product home URL<br/>|no|
-|**docsurl**|`string`|Documentation URL<br/>|no|
-|**apiurl**|`string`|Public base URL of the API for email links that hit the API directly<br/>|no|
-|**CompanyName**|`string`|Company display name<br/>|no|
-|**CompanyAddress**|`string`|Company mailing address<br/>|no|
-|**Corporation**|`string`|Legal corporation name<br/>|no|
-|**LogoURL**|`string`|Hero logo URL displayed in the email body<br/>|no|
-|**HeaderLogoURL**|`string`|Small logo or icon displayed in the top header bar<br/>|no|
-|**Copyright**|`string`|Copyright override for email footers; when empty the template renders a dynamic notice from Corporation and the current year<br/>|no|
-|**TroubleText**|`string`|Fallback help text shown below action buttons; {ACTION} is replaced with the button text at render time<br/>|no|
-|**TermsURL**|`string`|Terms of service link for email footers<br/>|no|
-|**PrivacyURL**|`string`|Privacy policy link for email footers<br/>|no|
-|**UnsubscribeURL**|`string`|Unsubscribe link override for email footers; when empty the template constructs one from ProductURL and the recipient email<br/>|no|
-|**HeaderText**|`string`|Text displayed in the upper-right corner of the modern theme header<br/>|no|
-|**CardStyle**|`string`|Card visual style<br/>Enum: `"flat"`, `"elevated"`<br/>|no|
-|**BodyBackgroundColor**|`string`|Outer page background color<br/>|no|
-|**CardBackgroundColor**|`string`|Card container background color<br/>|no|
-|**HeroBackgroundColor**|`string`|Hero banner section background color<br/>|no|
-|**ButtonColor**|`string`|Call-to-action button background color<br/>|no|
-|**ButtonTextColor**|`string`|Call-to-action button text color<br/>|no|
-|**HeadingColor**|`string`|Heading and title text color<br/>|no|
-|**TextColor**|`string`|Body paragraph text color<br/>|no|
-|**FooterTextColor**|`string`|Muted text color for headers footers and secondary content<br/>|no|
-|**AccentBorderColor**|`string`|Decorative accent color applied to borders only<br/>|no|
-|**Tagline**|`string`|Short descriptive footer line rendered above the social row in modern themes<br/>|no|
-
-**Additional Properties:** not allowed  
-<a name="integrationspaymentreminder"></a>
-### integrations\.paymentreminder: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**paymentmethodinterval**|`integer`|Days after org creation before marking for deletion<br/>Default: `30`<br/>||
-|**deletiondays**|`integer`|Days between marking and actual deletion<br/>Default: `7`<br/>||
-|**enabled**|`boolean`|Whether the payment reminder listener is enabled<br/>Default: `false`<br/>||
-|**dryrun**|`boolean`|If true only log organization IDs that would be processed<br/>Default: `true`<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "paymentmethodinterval": 30,
-    "deletiondays": 7,
-    "enabled": false,
-    "dryrun": true
-}
-```
-
-<a name="integrationsorganizationdelete"></a>
-### integrations\.organizationdelete: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**maxdeletesperrun**|`integer`|Maximum overdue organizations to delete per run<br/>Default: `25`<br/>||
-|**enabled**|`boolean`|Whether the organization deletion listener is enabled<br/>||
-
-**Additional Properties:** not allowed  
-**Example**
-
-```json
-{
-    "maxdeletesperrun": 25
-}
-```
-
-<a name="workflows"></a>
-## workflows: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsworkflowsconfig"></a>
+## $defs/workflows\.Config: object
 
 **Properties**
 
@@ -2011,7 +1958,7 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 |**cel**|`object`|||
 |**gala**|`object`|||
 
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 **Example**
 
 ```json
@@ -2021,8 +1968,9 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 }
 ```
 
-<a name="workflowscel"></a>
-### workflows\.cel: object
+ 
+<a name="defsworkflowscelconfig"></a>
+### $defs/workflows\.CELConfig: object
 
 **Properties**
 
@@ -2042,9 +1990,10 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 |**evaloptimize**|`boolean`|||
 |**trackstate**|`boolean`|||
 
-**Additional Properties:** not allowed  
-<a name="workflowsgala"></a>
-### workflows\.gala: object
+**Additional Properties:** not allowed 
+ 
+<a name="defsworkflowsgalaconfig"></a>
+### $defs/workflows\.GalaConfig: object
 
 **Properties**
 
@@ -2056,49 +2005,5 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 |**failonenqueueerror**|`boolean`|||
 |**queuename**|`string`|||
 
-**Additional Properties:** not allowed  
-<a name="cloudflare"></a>
-## cloudflare: object
-
-CloudflareConfig contains configuration for Cloudflare integration.
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled toggles the Cloudflare snapshot handler<br/>||
-|**apitoken**|`string`|APIToken is the API token used for Cloudflare client initialization<br/>||
-|**accountid**|`string`|AccountID is the Cloudflare account ID to use for snapshot operations<br/>||
-|**clientid**|`string`|ClientID is the Cloudflare Access client ID for shortlink API requests<br/>||
-|**clientsecret**|`string`|ClientSecret is the Cloudflare Access client secret for shortlink API requests<br/>||
-
-**Additional Properties:** not allowed  
-<a name="shortlinks"></a>
-## shortlinks: object
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|||
-|**clientid**|`string`|||
-|**clientsecret**|`string`|||
-|**endpointurl**|`string`|||
-
-**Additional Properties:** not allowed  
-<a name="backfill"></a>
-## backfill: object
-
-Backfill configures one-time startup data backfill routines that populate fields introduced by recent
-migrations for organizations and memberships that pre-date them
-
-
-**Properties**
-
-|Name|Type|Description|Required|
-|----|----|-----------|--------|
-|**enabled**|`boolean`|Enabled runs the backfill routines on server startup<br/>||
-
-**Additional Properties:** not allowed  
+**Additional Properties:** not allowed 
 
