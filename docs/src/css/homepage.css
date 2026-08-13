@@ -1,0 +1,247 @@
+/* Openlane docs landing — card grid + art.
+   Colors resolve from Docusaurus's own --ifm-* tokens, so the existing
+   navbar theme toggle drives light/dark with no extra JS. */
+
+:root {
+  --dl-fg: var(--ifm-heading-color, #2e2e2e);
+  --dl-fg2: #6b7682;
+  --dl-card: var(--ifm-card-background-color, #ffffff);
+  --dl-panel: #f5f9f9;
+  --dl-line: rgba(9, 21, 29, 0.12);
+  --dl-line-2: rgba(9, 21, 29, 0.1);
+  --dl-line-3: rgba(9, 21, 29, 0.08);
+  --dl-line-strong: rgba(9, 21, 29, 0.2);
+  --dl-grid: rgba(9, 21, 29, 0.035);
+  --dl-shadow: rgba(9, 21, 29, 0.09);
+  --dl-accent: var(--ifm-color-primary-darker, #1b867d);
+  --dl-accent-2: var(--ifm-color-primary, #3fc2b4);
+  --dl-accent-bg: rgba(154, 245, 220, 0.55);
+  --dl-accent-bg-2: rgba(154, 245, 220, 0.35);
+  --dl-accent-line: rgba(16, 117, 101, 0.3);
+  --dl-accent-line-2: rgba(16, 117, 101, 0.45);
+  --dl-link: var(--ifm-link-color, #09151d);
+  --dl-link-hover: var(--ifm-link-hover-color, #1b867d);
+}
+
+html[data-theme='dark'] {
+  --dl-fg: var(--ifm-heading-color, #f0f0f0);
+  --dl-fg2: #aabdc5;
+  --dl-card: var(--ifm-card-background-color, #233440);
+  --dl-panel: #1a2a36;
+  --dl-line: rgba(255, 255, 255, 0.14);
+  --dl-line-2: rgba(255, 255, 255, 0.1);
+  --dl-line-3: rgba(255, 255, 255, 0.07);
+  --dl-line-strong: rgba(255, 255, 255, 0.24);
+  --dl-grid: rgba(255, 255, 255, 0.045);
+  --dl-shadow: rgba(0, 0, 0, 0.45);
+  --dl-accent: var(--ifm-color-primary, #31d0a9);
+  --dl-accent-2: #60e8c9;
+  --dl-accent-bg: rgba(96, 232, 201, 0.16);
+  --dl-accent-bg-2: rgba(96, 232, 201, 0.1);
+  --dl-accent-line: rgba(96, 232, 201, 0.32);
+  --dl-accent-line-2: rgba(96, 232, 201, 0.5);
+  --dl-link: var(--ifm-link-color, #ffffff);
+  --dl-link-hover: var(--ifm-link-hover-color, #60e8c9);
+}
+
+.dlSection {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.dlIcon {
+  width: 17px;
+  height: 17px;
+  color: var(--dl-fg2);
+  flex: none;
+}
+
+/* Quickstart row */
+.dlQuick {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--dl-line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: var(--dl-panel);
+  cursor: pointer;
+  transition:
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dlQuick:hover {
+  transform: translateY(-3px);
+  background: var(--dl-card);
+  border-color: var(--dl-accent-line-2);
+  box-shadow: 0 10px 22px var(--dl-shadow);
+}
+
+/* The six area cards */
+.dlCard {
+  border: 1px solid var(--dl-line);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dlCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--dl-accent-line-2);
+  box-shadow: 0 14px 30px var(--dl-shadow);
+  text-decoration: none;
+}
+
+/* Main click target inside a card: art + title + description */
+.dlCardMain {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.dlCardMain:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Link rows inside a card */
+.dlLink {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  color: var(--dl-link);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dlCard:hover .dlLink,
+.dlLink:hover {
+  color: var(--dl-link-hover);
+}
+
+.dlLink:hover {
+  text-decoration: underline;
+}
+
+/* Open-source line above the footer rule */
+.dlOss {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14.5px;
+  color: var(--dl-fg2);
+  text-decoration: none;
+  transition: color 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dlOss:hover {
+  color: var(--dl-accent);
+  text-decoration: none;
+}
+
+/* Card art motion — subtle, one pass per 5s, paused for reduced motion.
+   Animations must be applied via these classes, not inline styles: the CSS
+   minifier drops @keyframes that no CSS rule references. Per-element stagger
+   comes from an inline animation-delay. */
+.dlAnimFill {
+  animation: ol-fill 5s ease-in-out infinite;
+}
+
+.dlAnimStep {
+  animation: ol-step 5s ease-in-out infinite;
+}
+
+.dlAnimDrop {
+  animation: ol-drop 5s ease-in-out infinite;
+}
+
+@keyframes ol-fill {
+  0%,
+  8% {
+    transform: scaleX(0);
+  }
+  46%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes ol-rise {
+  0%,
+  10% {
+    transform: scaleY(0.12);
+  }
+  52%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes ol-step {
+  0%,
+  12% {
+    opacity: 0.25;
+    transform: translateY(5px);
+  }
+  40%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes ol-drop {
+  0% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  40%,
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dlSection * {
+    animation: none !important;
+  }
+  .dlCard:hover,
+  .dlQuick:hover {
+    transform: none;
+  }
+}
+
+/* Responsive: three up, then two, then one */
+@media (max-width: 1100px) {
+  .dlSection [data-dl-grid='areas'] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .dlSection [data-dl-grid='quick'] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .dlSection [data-dl-grid='areas'],
+  .dlSection [data-dl-grid='quick'] {
+    grid-template-columns: 1fr !important;
+  }
+}
