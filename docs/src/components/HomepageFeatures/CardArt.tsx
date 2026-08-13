@@ -61,7 +61,7 @@ function FrameworkRow({ name, pct, color, count, dim, delay }: { name: string; p
     <span style={{flex: '1', display: 'flex', alignItems: 'center', gap: '11px', background: 'var(--dl-card)', border: '1px solid var(--dl-line-2)', borderRadius: '8px', padding: '9px 12px'}}>
       <span style={{fontSize: '12.5px', color: 'var(--dl-fg)', width: '64px'}}>{name}</span>
       <span style={{flex: '1', height: '6px', borderRadius: '99px', background: 'var(--dl-line-3)', overflow: 'hidden'}}>
-        <span style={{display: 'block', width: pct, height: '100%', background: color, transformOrigin: 'left', animation: `ol-fill 5s ease-in-out ${delay ?? '0s'} infinite`}}></span>
+        <span className="dlAnimFill" style={{display: 'block', width: pct, height: '100%', background: color, transformOrigin: 'left', animationDelay: delay ?? '0s'}}></span>
       </span>
       <span style={{fontFamily: '\'JetBrains Mono\', monospace', fontSize: '10px', color: dim ? 'var(--dl-fg2)' : 'var(--dl-accent)', width: '42px', textAlign: 'right'}}>{count}</span>
     </span>
@@ -103,12 +103,12 @@ function RegistryArt() {
         <RegistryStat icon="users" label="PERSONNEL" value="148" />
       </span>
       <span style={{position: 'relative', flex: '1', display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '9px'}}>
-        <span style={{flex: '1', display: 'flex', alignItems: 'center', gap: '9px', background: 'var(--dl-card)', border: '1px solid var(--dl-line-2)', borderRadius: '7px', padding: '7px 10px', animation: 'ol-drop 5s ease-in-out infinite'}}>
+        <span className="dlAnimDrop" style={{flex: '1', display: 'flex', alignItems: 'center', gap: '9px', background: 'var(--dl-card)', border: '1px solid var(--dl-line-2)', borderRadius: '7px', padding: '7px 10px'}}>
           <span style={{width: '6px', height: '6px', borderRadius: '99px', background: '#21C55D'}}></span>
           <span style={{flex: '1', fontSize: '11.5px', color: 'var(--dl-fg)'}}>prod-us-east · RDS cluster</span>
           <span style={{fontFamily: '\'JetBrains Mono\', monospace', fontSize: '9px', color: '#15803D', background: 'rgba(33,197,93,.16)', borderRadius: '99px', padding: '2px 7px'}}>IN SCOPE</span>
         </span>
-        <span style={{flex: '1', display: 'flex', alignItems: 'center', gap: '9px', background: 'var(--dl-card)', border: '1px solid var(--dl-line-2)', borderRadius: '7px', padding: '7px 10px', animation: 'ol-drop 5s ease-in-out .4s infinite'}}>
+        <span className="dlAnimDrop" style={{flex: '1', display: 'flex', alignItems: 'center', gap: '9px', background: 'var(--dl-card)', border: '1px solid var(--dl-line-2)', borderRadius: '7px', padding: '7px 10px', animationDelay: '.4s'}}>
           <span style={{width: '6px', height: '6px', borderRadius: '99px', background: 'var(--dl-line-strong)'}}></span>
           <span style={{flex: '1', fontSize: '11.5px', color: 'var(--dl-fg2)'}}>design-sandbox · Figma</span>
           <span style={{fontFamily: '\'JetBrains Mono\', monospace', fontSize: '9px', color: 'var(--dl-fg2)', background: 'var(--dl-line-3)', borderRadius: '99px', padding: '2px 7px'}}>OUT OF SCOPE</span>
@@ -185,7 +185,7 @@ function TrustArt() {
             <TrustUpdate text="Pen test completed" dotColor="var(--dl-line-strong)" opacity=".55" dim />
           </span>
         </span>
-        <span style={{display: 'flex', alignItems: 'center', gap: '8px', margin: '0 12px 12px', border: '1px solid var(--dl-accent-line)', background: 'var(--dl-accent-bg-2)', borderRadius: '7px', padding: '8px 10px', animation: 'ol-drop 5s ease-in-out .5s infinite'}}>
+        <span className="dlAnimDrop" style={{display: 'flex', alignItems: 'center', gap: '8px', margin: '0 12px 12px', border: '1px solid var(--dl-accent-line)', background: 'var(--dl-accent-bg-2)', borderRadius: '7px', padding: '8px 10px', animationDelay: '.5s'}}>
           <Icon n="file-check" style={{color: 'var(--dl-accent)', width: '13px', height: '13px'}} />
           <span style={{fontSize: '11px', color: 'var(--dl-fg)'}}>SOC 2 report — NDA required</span>
         </span>
@@ -196,7 +196,7 @@ function TrustArt() {
 
 function AutomationStep({ icon, label, text, delay }: { icon: string; label: string; text: string; delay: string }) {
   return (
-    <span style={{flex: '1', display: 'flex', alignItems: 'center', gap: '9px', background: 'var(--dl-card)', border: '1px solid var(--dl-line-2)', borderRadius: '8px', padding: '9px 11px', animation: `ol-step 5s ease-in-out ${delay} infinite`}}>
+    <span className="dlAnimStep" style={{flex: '1', display: 'flex', alignItems: 'center', gap: '9px', background: 'var(--dl-card)', border: '1px solid var(--dl-line-2)', borderRadius: '8px', padding: '9px 11px', animationDelay: delay}}>
       <span style={{width: '22px', height: '22px', borderRadius: '6px', background: 'var(--dl-accent-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 'none'}}>
         <Icon n={icon} style={{color: 'var(--dl-accent)', width: '13px', height: '13px'}} />
       </span>

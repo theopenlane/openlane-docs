@@ -156,7 +156,22 @@ html[data-theme='dark'] {
   text-decoration: none;
 }
 
-/* Card art motion — subtle, one pass per 5s, paused for reduced motion */
+/* Card art motion — subtle, one pass per 5s, paused for reduced motion.
+   Animations must be applied via these classes, not inline styles: the CSS
+   minifier drops @keyframes that no CSS rule references. Per-element stagger
+   comes from an inline animation-delay. */
+.dlAnimFill {
+  animation: ol-fill 5s ease-in-out infinite;
+}
+
+.dlAnimStep {
+  animation: ol-step 5s ease-in-out infinite;
+}
+
+.dlAnimDrop {
+  animation: ol-drop 5s ease-in-out infinite;
+}
+
 @keyframes ol-fill {
   0%,
   8% {
