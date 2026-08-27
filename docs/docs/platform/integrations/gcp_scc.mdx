@@ -22,18 +22,19 @@ If your team runs infrastructure on Google Cloud, this integration brings Securi
 |---|---|
 | Primary use case | Continuous ingestion of SCC findings into Openlane |
 | Data direction | One-way (GCP -> Openlane), read-only |
-| GCP services used | SCC, IAM |
-| Setup model | Service account key JSON |
+| GCP services used | SCC, IAM, Security Token Service (STS) |
+| Setup model | Workload identity federation (keyless, recommended) or service account key JSON |
 | Openlane records created | Findings, Vulnerabilities and Risks (created or updated), linked to your SCC integration |
 
 ## Key Capabilities
 
+- **Keyless Authentication:** Workload identity federation lets GCP trust Openlane as an OpenID Connect (OIDC) identity provider, so no service account key is ever created, downloaded, or stored.
 - **Findings Ingestion:** Pulls SCC findings and normalizes them into Openlane vulnerability records, giving you a unified view for remediation tracking and SLA compliance.
 - **Scoped Collection:** Supports source and filter scoping to match your operating model and compliance boundary.
 
 ## Prerequisites
 
-- `gcloud` CLI access with permissions to create service accounts and grant identity and access management (IAM) bindings.
+- `gcloud` CLI access with permissions to create workload identity pools and grant identity and access management (IAM) bindings.
 - SCC API enabled in the target project.
 - Organization ID or project ID to define your SCC collection scope.
 
