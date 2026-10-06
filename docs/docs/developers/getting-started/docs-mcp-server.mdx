@@ -1,0 +1,84 @@
+---
+title: Docs MCP Server
+description: Connect a coding agent to the Openlane documentation over MCP so it grounds answers in the current docs
+sidebar_position: 5
+tags:
+    - mcp
+    - development
+    - ai
+keywords:
+  - mcp server
+  - model context protocol
+  - claude code
+  - cursor
+  - coding agent
+  - openlane documentation
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Using the Docs MCP Server
+
+Openlane exposes this documentation to coding agents through a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server at `https://docs-search.theopenlane.io/mcp`. An agent configured to use it searches the published platform, developer, and API docs on demand, so its answers reflect what is documented today rather than what was in its training data.
+
+The endpoint is stateless, read-only, and requires no authentication. It never touches your Openlane organization or data, only the public documentation.
+
+## What the Server Exposes
+
+The server provides a single tool over streamable HTTP:
+
+| Tool | Input | Returns |
+|------|-------|---------|
+| `search` | `query` (string) | Ranked page sections, each with the page `title`, `description`, `url`, and the matching content |
+
+Search is semantic: results are retrieved by vector similarity and then reranked, so phrase queries as natural-language questions rather than exact identifiers. Each result carries the full URL of the page it came from, which lets the agent cite the source or open the page for more context.
+
+## Configure Your Agent
+
+Most MCP-capable clients accept a remote server entry with the transport and URL. Clients that lack remote MCP support can bridge through the [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) proxy pointed at the same URL.
+
+<Tabs groupId="mcp-client" queryString>
+<TabItem value="generic" label="JSON Config">
+
+```json
+{
+  "mcpServers": {
+    "openlane-docs": {
+      "type": "streamable-http",
+      "url": "https://docs-search.theopenlane.io/mcp"
+    }
+  }
+}
+```
+
+Consult your client's documentation for the file location and the exact key names it expects for remote servers. Cursor, for example, reads `.cursor/mcp.json` and accepts the entry with only the `url` key.
+
+</TabItem>
+<TabItem value="claude-code" label="Claude Code">
+
+```shell
+claude mcp add --transport http openlane-docs https://docs-search.theopenlane.io/mcp
+```
+
+Use `--scope project` to share the server with everyone working in the repository through a checked-in `.mcp.json`, or `--scope user` to make it available in every project on your machine.
+
+</TabItem>
+<TabItem value="claude-desktop" label="Claude Desktop">
+
+Open **Settings**, choose **Connectors**, select **Add custom connector**, and enter `https://docs-search.theopenlane.io/mcp` as the URL. The connector is then available in every conversation.
+
+</TabItem>
+</Tabs>
+
+Once configured, the `search` tool appears in your agent's tool list with no API keys or session setup.
+
+## Try It
+
+The quickest validation is the [MCP Inspector](https://github.com/modelcontextprotocol/inspector): point it at `https://docs-search.theopenlane.io/mcp` and you should see `search` listed. Run it with a query like `how does the Openlane CLI authenticate` and the top result should be the [CLI Auth](./cli-auth.mdx) page.
+
+From your agent, ask a question that can only be answered from the docs and confirm it calls `search` and cites pages from `docs.theopenlane.io`. If the tool never runs, check that the server appears in your client's list of connected MCP servers and that the URL was entered without a trailing path.
+
+:::tip
+Agents use the server most reliably when told to prefer it. A short instruction in your project's `CLAUDE.md`, `.cursor/rules`, or equivalent, such as "use the openlane-docs MCP server for questions about Openlane", keeps answers grounded in the documentation.
+:::

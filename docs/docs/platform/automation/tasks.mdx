@@ -27,7 +27,7 @@ The home dashboard surfaces tasks that are due soon, so the answer to "what need
 
 - **Created directly**: from the [Tasks page](https://console.theopenlane.io/tasks), with a title, type, assignee, due date, and any related objects
 - **Created from another object**: open a control, risk, or policy and create a task from there; the link back is made automatically. This is the most common path: you spot a gap while looking at a control, and the follow-up work is one click away.
-- **Bulk imported**: upload a CSV to create many tasks at once, like a full set of evidence-request tasks at the start of an audit period
+- **Bulk imported**: [upload a CSV](../importing-data.mdx) to create many tasks at once, like a full set of evidence-request tasks at the start of an audit period
 
 ## Creating a Task
 
@@ -38,21 +38,17 @@ Create a task from the [Tasks page](https://console.theopenlane.io/tasks) with t
 
 ### Bulk Task Creation
 
-For many tasks at once, like a full evidence-request queue, import a CSV from the Tasks page:
+For many tasks at once, like a full evidence-request queue, import a CSV:
 
 <Steps>
 
-1. Navigate to the [Tasks page](https://console.theopenlane.io/tasks) and select **Bulk Upload**
-
-2. Download the sample CSV template from the upload interface to see the supported fields and structure
-
-3. Upload your CSV and follow the prompts
+1. Open [Import tasks](https://console.theopenlane.io/import?type=task), or select **Bulk Upload** from the `...` menu on the [Tasks page](https://console.theopenlane.io/tasks)
+2. Upload your CSV. `Title` is the only required column, and your column names don't need to match Openlane's.
+3. Map your columns to task fields, remap any values your file spells differently (such as a status), and preview the tasks before importing
 
 </Steps>
 
-:::tip
-Refer to our API documentation for details on supported task fields in the [GraphQL object reference](/docs/api/graph-api/). When putting fields that are lists in the CSV, such as `Tags`, provide valid JSON like `[""soc2"", ""evidence""]` with double quotes escaped.
-:::
+See [Import Data from CSV](../importing-data.mdx) for a walkthrough of each step. The field reference on the upload step lists every supported field and has an example CSV to download.
 
 ## What Teams Use Tasks For
 

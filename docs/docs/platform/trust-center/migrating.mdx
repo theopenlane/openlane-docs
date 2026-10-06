@@ -1,0 +1,106 @@
+---
+title: Migrating from Another Trust Center
+description: Move your subprocessors, FAQs, signed NDAs, and subscribers from another trust center into Openlane
+sidebar_position: 13
+tags:
+  - trust center
+  - import
+  - migration
+  - csv
+keywords:
+  - trust center migration
+  - import subprocessors
+  - import faqs
+  - import signed ndas
+  - import subscribers
+---
+
+import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
+
+# Migrating from Another Trust Center
+
+If you already run a trust center elsewhere, you can bring its lists into Openlane without re-entering them. Export each list from your current tool as a CSV, then import it with the same [upload, map, and review flow](../importing-data.mdx#how-import-works) used everywhere in Openlane. Column names don't need to match ours; you map them during import.
+
+| What | Import | Required columns |
+| --- | --- | --- |
+| [Subprocessors](./subprocessors.mdx) | [Import subprocessors](https://console.theopenlane.io/import?type=trustcentersubprocessor) | `Name` |
+| [FAQs](./faqs.mdx) | [Import FAQs](https://console.theopenlane.io/import?type=trustcenterfaq) | `Question`, `Answer` |
+| [Signed NDAs](./ndas.mdx) | [Import signed NDAs](https://console.theopenlane.io/import?type=trustcenterndarequest) | `Email`, `First Name`, `Last Name` |
+| [Subscribers](./notifications.mdx) | `Bulk Upload` on the [Subscribers page](https://console.theopenlane.io/trust-center/subscribers) | `Email` |
+
+Your [custom domain](./custom-domain.mdx), [documents](./documents.mdx), [frameworks](./frameworks.mdx), and [customer logos](./customer-logos.mdx) are set up directly in Openlane rather than imported. You don't need to rebuild your branding by hand: [detect it from your website](./branding.mdx#detect-branding-from-domain) instead.
+
+## Recommended Order
+
+<Steps>
+
+1. **Set up your branding.** Click **Detect Branding from Domain** on the [branding page](./branding.mdx#detect-branding-from-domain) to pull your colors, fonts, logo, and favicon from your website into preview. Fine-tune the colors with the [live color preview](./branding.mdx#live-color-preview) and publish when it matches.
+1. **Upload your NDA document.** Signed NDAs can only be imported once your NDA is on the [NDAs page](https://console.theopenlane.io/trust-center/NDAs), because every NDA record links to the document your visitors sign.
+1. **[Import subprocessors](#subprocessors)**
+1. **[Import FAQs](#faqs)**
+1. **[Import signed NDAs](#signed-ndas)**
+1. **[Import subscribers](#subscribers)**
+1. **Point your [custom domain](./custom-domain.mdx) at Openlane.** Do this last, once everything is in place, so visitors switch over to a complete Trust Center. Adding the domain also [hides the default Openlane URL from search engines](./overview.mdx#search-engine-visibility) by default.
+
+</Steps>
+
+## Subprocessors
+
+Open [Import subprocessors](https://console.theopenlane.io/import?type=trustcentersubprocessor), or select `Bulk Upload` from the `...` menu on the [Subprocessors page](https://console.theopenlane.io/trust-center/subprocessors). Only `Name` is required. You can also map:
+
+- **Website**: used to fetch a logo for subprocessors that are created as custom ones
+- **Description**: what the subprocessor does
+- **Countries**: country names or ISO codes, separated by `;`, `|`, or `,`
+- **Category**: the category shown in your Trust Center; new categories are created for you
+- **Tags** and **Logo URL**: applied to subprocessors that are created as custom ones
+
+```csv
+Subprocessor,Website,Purpose,Location,Category
+Amazon Web Services,aws.amazon.com,Cloud infrastructure hosting,United States; Germany,Infrastructure
+Acme Analytics,acme-analytics.io,Product usage analytics,US,Analytics
+```
+
+Subprocessor imports have a **Match subprocessors** step instead of **Review**. Each name in your file is matched against Openlane's subprocessor catalog and your own custom subprocessors, so well-known vendors such as AWS link to the existing catalog entry with its logo and details.
+
+- **Matched** rows link to an existing subprocessor. Rows matched on a close spelling or an acronym are marked as suggestions; review them individually or click `Confirm suggestions` to accept them all.
+- **New** rows that don't match anything are created as custom subprocessors, with a logo from their website. Click a row's details to add or correct its website, logo, description, or tags.
+- **Change any row's target**: pick a different subprocessor, create it as a custom subprocessor, or choose `Don't import this row`.
+- **Defaults** for countries and category fill in rows that have no value in your file.
+- **Unrecognized countries**, such as a region name, are listed so you can choose the countries each one stands for; every row using that value is updated.
+- Rows already in your Trust Center and duplicates within the file are flagged so they aren't added twice.
+
+Use the `All`, `Needs review`, `Matched`, `New`, and `Not imported` tabs to work through long lists, then click `Add` to add the subprocessors to your Trust Center.
+
+## FAQs
+
+Open [Import FAQs](https://console.theopenlane.io/import?type=trustcenterfaq), or click `Bulk Upload` on the [FAQs page](https://console.theopenlane.io/trust-center/faqs). `Question` and `Answer` are required; you can also map a `Reference Link` where buyers can read more and a `Category`. A new category is created when none matches.
+
+```csv
+Question,Answer,Category,Reference Link
+Do you encrypt customer data at rest?,Yes. All customer data is encrypted at rest with AES-256.,Security,https://example.com/security
+```
+
+On the **Review** step, drag the rows to set the order of the imported FAQs. They are always added after any FAQs you already have, so reordering here only changes their order relative to each other. Files over 200 rows can't be reordered there, so those FAQs keep the order they have in your file.
+
+## Signed NDAs
+
+If visitors already signed your NDA in your previous trust center, import those records so your NDA history carries over. Open [Import signed NDAs](https://console.theopenlane.io/import?type=trustcenterndarequest), or click `Import Signed NDAs` on the [NDAs page](https://console.theopenlane.io/trust-center/NDAs).
+
+`Email`, `First Name`, and `Last Name` are required. You can also map the signer's company and the date they signed; columns such as `Organization`, `Employer`, `Date Signed`, or `Executed On` are recognized automatically.
+
+```csv
+Email,First Name,Last Name,Company,Date Signed
+jordan@customer.com,Jordan,Lee,Customer Inc,2026-03-14
+```
+
+Every imported record is set to `Signed` and linked to your Trust Center and current NDA document.
+## Subscribers
+
+On the [Subscribers page](https://console.theopenlane.io/trust-center/subscribers), select `Bulk Upload` from the `...` menu. Only `Email` is required. Your Trust Center must be [accepting new subscribers](./notifications.mdx#accepting-subscribers); turn on `Allow new subscribers` first if it's off.
+
+Imported subscribers are marked as verified and start receiving [notifications](./notifications.mdx) right away.
+
+:::warning
+By uploading subscribers, you confirm that you have permission to add and contact these recipients. Imported subscribers will not be asked to verify their email address.
+:::

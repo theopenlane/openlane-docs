@@ -530,3 +530,8 @@ html[data-theme='dark'] .cards-row .card--compact > svg {
   opacity: 1;
   visibility: visible;
 }
+
+/* Pages linked from elsewhere that should not appear in the left nav */
+.menu__list-item.sidebar-hidden {
+  display: none;
+}

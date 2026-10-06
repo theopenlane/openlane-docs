@@ -47,7 +47,34 @@ Security researchers and customers use this to report potential vulnerabilities.
 You can choose between:
 
 - **Easy mode**: Pick a primary color and the system derives the rest
-- **Custom mode**: Full control over individual colors
+- **Advanced mode**: Full control over the font and individual colors (foreground, background, accent, secondary foreground, and secondary background)
+
+### Detect Branding from Domain
+
+Instead of setting colors by hand, click **Detect Branding from Domain** in the Theme section and Openlane will read the branding from your company website:
+
+- It picks up your colors, fonts, logo, and favicon
+- Results go into your preview settings only; nothing goes live until you publish
+- Assets you've already uploaded stay unchanged
+- Any unsaved edits on the branding page are replaced by what's pulled
+
+Choose the domain to scan from the list. It's built from the domains in [Organization Settings](https://console.theopenlane.io/organization-settings/general-settings) and the company domain on the branding page; use **Manage Domains** to add or change them. The scan can take a few minutes. You can navigate away, and you'll get a notification when it's done.
+
+### Live Color Preview
+
+In Advanced mode, click **Generate palette** to open your preview site with a color generator panel. Change any of the five colors and the page updates as you go, so you can see the result on your actual Trust Center instead of switching back and forth. **Generate dark** and **Generate light** create a starting palette for you, and **Reset to saved colors** returns to what's saved.
+
+When you're happy with the colors:
+
+<Steps>
+
+1. Click **Copy** in the color generator. It copies a palette string such as `olbrand1:bg=#ffffff;fg=#09151d;accent=#2dcdad;secBg=#ffffff;secFg=#09151d`
+1. Back on the branding page, paste it into **Import palette** and click **Apply**
+1. Click **Save Preview** to check it on your preview site, then **Publish** to make it live
+
+</Steps>
+
+The color generator is only available on your preview site, so visitors to your live Trust Center never see it.
 
 ## Logo and Favicon
 

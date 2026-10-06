@@ -1,0 +1,73 @@
+---
+title: Custom Reports
+description: Build a report on any Openlane data, choose the columns, filter and sort it, and export the results
+sidebar_position: 3
+tags:
+  - reports
+  - export
+keywords:
+  - custom report
+  - report builder
+  - export csv
+  - export data
+---
+
+import Steps from '@site/src/components/Steps';
+
+# Custom Reports
+
+[Custom Report](https://console.theopenlane.io/reports/custom) lets you pull exactly the data you need without waiting on a canned report: every control with its owner and status, open risks above a score, vendors due for review next quarter, evidence that hasn't been submitted. Pick what to report on, choose the columns, narrow it down, and export the result for an auditor, a board deck, or your own analysis.
+
+## Building a Report
+
+<Steps>
+
+1. Open **Custom Report** from the side navigation
+1. Under **Report on**, choose the type of data, such as controls, risks, vendors, evidence, tasks, or personnel. The list only includes data types your organization's modules give you access to.
+1. Under **Columns**, select the fields to include. Search to find a field quickly, or select all fields at once.
+1. Optionally add fields from linked records under **Related data**, such as the program a control belongs to or the controls a risk is linked to
+1. Optionally add **Filters** and set **Sort & limit**
+1. Click **Run report**
+
+</Steps>
+
+You need at least one column to run a report, and every filter needs a value.
+
+### Related Data
+
+Related data adds fields from records linked to each row, for example the controls mapped to a risk, or the owner of a control. Up to the first 25 linked records are included for each row.
+
+### Filters
+
+Add up to five filters to narrow the results. Each filter picks a field, an operator, and a value. The operators available depend on the field:
+
+- **Text**: equals, does not equal, contains, starts with, ends with, and case-insensitive versions of equals and contains
+- **Numbers**: equals, is greater than, is less than, and their "or equal to" versions
+- **Dates**: is before, is after, is on or before, is on or after, or equals a specific day
+- **Lists of values**, such as status: is any of, is none of
+- **Owners**, such as internal owner, assigned to, or reviewed by: is any of, is none of. Pick users, groups, or personnel.
+- **Any field**: is empty, is not empty
+
+With more than one filter, choose **Match all** to require every filter, or **Match any** to include records that match at least one.
+
+### Sort and Limit
+
+Sort by any field in ascending or descending order, and cap how many records the report pulls: 100, 500, 1,000, 5,000, or all records.
+
+## Viewing Results
+
+Results show on the **Results** tab, with the total number of matching records. Switch **Format** between **Table** and **JSON** to see the data the way you need it. If a limit cuts the results short, the summary shows how many records matched in total.
+
+The **Query** tab shows the GraphQL query and variables behind the report. Click **Copy** to reuse it with the [Openlane API](/docs/api/graph-api/), for example to run the same report on a schedule.
+
+## Exporting
+
+Click **Export** and choose **CSV**, **JSON**, or **YAML** to download the full results, not just the page you're viewing. The export respects your filters, sort, and limit.
+
+## Report History
+
+Every time you run a report, it's saved to **History** next to the **Run report** button. Pick a recent report to load its data type, columns, filters, and sort and run it again. History keeps your last 10 reports for each organization, and it's stored in your browser, so it isn't shared with teammates or across devices.
+
+## What You Can Report On
+
+Reports respect your permissions: you only see the records you can view elsewhere in Openlane.
