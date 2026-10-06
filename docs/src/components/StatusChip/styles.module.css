@@ -1,0 +1,13 @@
+.chip {
+  display: inline-block;
+  padding: 0.0625rem 0.5rem;
+  border: 1px solid var(--ifm-color-warning-dark);
+  border-radius: 999px;
+  background: var(--ifm-color-warning-contrast-background);
+  color: var(--ifm-color-warning-contrast-foreground);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  vertical-align: middle;
+  white-space: nowrap;
+}
