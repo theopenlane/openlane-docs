@@ -1,6 +1,7 @@
 {
   "label": "Workflows",
   "position": 5,
+  "className": "sidebar-private-beta",
   "link": {
     "type": "doc",
     "id": "platform/automation/workflows/overview"
