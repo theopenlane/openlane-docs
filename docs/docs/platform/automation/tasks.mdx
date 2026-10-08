@@ -43,7 +43,17 @@ Create a task from the [Tasks page](https://console.theopenlane.io/tasks) with *
 
 Some work happens the same way every time it comes up, such as offboarding an employee. A template holds that task's instructions and links once, so each new instance starts from the template instead of a blank form.
 
-A template is a task with **This is a template** turned on. It keeps the title, type, details, assignee, tags, and associated objects, so the instructions and the controls or policies the work relates to come along with every task you create from it.
+A template is a task with **This is a template** turned on. When you create a task from it, the new task starts with these fields filled in:
+
+| Field | Copied from the template |
+| --- | --- |
+| Title, type, details, and tags | Yes |
+| Associated objects, such as controls and policies | Yes |
+| Assignee | Yes, when the template has one |
+| Assigner | No. The assigner is whoever creates the task. |
+| Due date | No. Each task gets its own deadline. |
+
+Set an assignee on the template when the same person always does the work, such as the IT lead who handles every offboarding, and each new task goes to them without another step. Leave the assignee blank when it changes each time, and choose who to assign as you create the task.
 
 To create a template:
 
@@ -62,11 +72,11 @@ To create a task from a template:
 
 1. Select **Create** → **From Template** and search for the template.
 1. Pick the template to open a new task form filled in from it.
-1. Change what is specific to this task, such as the person being offboarded, the assignee, and the due date, then save.
+1. Change what is specific to this task, such as the person being offboarded, then set the due date and the assignee if the template left it blank, and save.
 
 </Steps>
 
-The due date is not copied, since each task has its own deadline, and editing the new task leaves the template unchanged.
+Editing the new task leaves the template unchanged.
 
 Templates stay out of your normal task lists and counts. Use the **Templates** quick filter on the Tasks table to find, edit, or retire them, and look for the **Template** badge on each one.
 
@@ -202,6 +212,15 @@ A task is a single piece of work with an owner and a deadline. Recurring collect
 <summary>Can I assign a task to a group?</summary>
 
 Tasks are assigned to individual users for clear accountability, but you can use [groups](../settings/groups/overview.mdx) to control who can see and manage them.
+
+</details>
+
+<details>
+<summary>Who can see a task?</summary>
+
+By default, only the task's assignee and assigner can see it, along with organization owners and super admins, who can see everything in the organization. A task also inherits access from the objects it is linked to. Link a task to a program, and anyone who can view that program can view the task, and the same goes for a linked control, policy, risk, or asset. To share a task with someone outside those groups, link it to an object they can already see or give them or their group access directly.
+
+Task templates work differently: everyone in your organization can see them, so anyone can create a task from one.
 
 </details>
 
