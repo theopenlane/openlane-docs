@@ -537,6 +537,13 @@ html[data-theme='dark'] .cards-row .card--compact > svg {
 }
 
 /* Coming soon chip on sidebar entries, paired with the StatusChip component */
+.menu__list-item.sidebar-coming-soon > .menu__list-item-collapsible > .menu__link,
+.menu__list-item.sidebar-coming-soon > .menu__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .menu__list-item.sidebar-coming-soon > .menu__list-item-collapsible > .menu__link::after,
 .menu__list-item.sidebar-coming-soon > .menu__link::after {
   content: "Coming soon";
@@ -547,7 +554,8 @@ html[data-theme='dark'] .cards-row .card--compact > svg {
   transform: none;
   filter: none;
   vertical-align: middle;
-  margin-left: 0.5rem;
+  flex-shrink: 0;
+  margin-left: auto;
   padding: 0 0.4rem;
   border: 1px solid var(--ifm-color-info-dark);
   border-radius: 999px;
