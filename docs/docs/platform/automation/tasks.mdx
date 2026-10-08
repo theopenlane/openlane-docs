@@ -27,14 +27,46 @@ The home dashboard surfaces tasks that are due soon, so the answer to "what need
 
 - **Created directly**: from the [Tasks page](https://console.theopenlane.io/tasks), with a title, type, assignee, due date, and any related objects
 - **Created from another object**: open a control, risk, or policy and create a task from there; the link back is made automatically. This is the most common path: you spot a gap while looking at a control, and the follow-up work is one click away.
+- **From a template**: reuse a [task template](#task-templates) for repeatable work like offboarding an employee, with the details and linked objects already filled in
 - **Bulk imported**: [upload a CSV](../importing-data.mdx) to create many tasks at once, like a full set of evidence-request tasks at the start of an audit period
 
 ## Creating a Task
 
-Create a task from the [Tasks page](https://console.theopenlane.io/tasks) with the "Create Task" button, or from the object that needs the work. Two fields on the form warrant explanation:
+Create a task from the [Tasks page](https://console.theopenlane.io/tasks) with **Create** → **From Scratch** (or **From Template**, see [Task Templates](#task-templates)), or from the object that needs the work. Two fields on the form warrant explanation:
 
 - The **Type** list (Evidence, Risk Review, Policy Review, Other) is customizable through [custom data](../settings/custom-data.mdx), so it can match how your team categorizes work
 - **Associated objects** are what carry context to the assignee. A task linked to its control tells them exactly what evidence goes where; an unlinked task makes them reconstruct that from the title.
+
+### Task Templates
+
+Some work repeats with the same shape every time: offboarding an employee, onboarding a vendor, running the quarterly access review, prepping for an audit kickoff. Instead of rewriting those tasks from scratch, save them as templates and create new tasks from them.
+
+A template is a task with **This is a template** turned on. It keeps the title, type, details, assignee, tags, and associated objects, so the instructions and the controls or policies the work relates to come along every time.
+
+To create a template:
+
+<Steps>
+
+1. On the [Tasks page](https://console.theopenlane.io/tasks), select **Create** → **From Scratch**
+2. Fill in the task the way you want every copy to start, for example an "Employee offboarding" task with the offboarding checklist in the details, linked to your access control policy and the relevant controls
+3. Turn on **This is a template**
+4. Click **Save as template**, or **Save as template and use** to also create the first task from it right away
+
+</Steps>
+
+To create a task from a template:
+
+<Steps>
+
+1. Select **Create** → **From Template** and search for the template
+2. Pick it to open a new task form pre-filled from the template
+3. Adjust anything specific to this instance, such as the person being offboarded in the title, the assignee, and the due date, then save
+
+</Steps>
+
+The due date isn't copied, since each instance has its own deadline. Changes to the new task don't affect the template.
+
+Templates don't show up in your normal task lists or counts. Use the **Templates** quick filter on the Tasks table to find, edit, or retire them; templates are marked with a **Template** badge.
 
 ### Bulk Task Creation
 

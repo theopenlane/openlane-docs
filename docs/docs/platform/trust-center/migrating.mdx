@@ -1,7 +1,7 @@
 ---
-title: Migrating from Another Trust Center
+title: Migrating from another Trust Center
 description: Move your subprocessors, FAQs, signed NDAs, and subscribers from another trust center into Openlane
-sidebar_position: 13
+sidebar_position: 1
 tags:
   - trust center
   - import
@@ -36,12 +36,16 @@ Your [custom domain](./custom-domain.mdx), [documents](./documents.mdx), [framew
 <Steps>
 
 1. **Set up your branding.** Click **Detect Branding from Domain** on the [branding page](./branding.mdx#detect-branding-from-domain) to pull your colors, fonts, logo, and favicon from your website into preview. Fine-tune the colors with the [live color preview](./branding.mdx#live-color-preview) and publish when it matches.
-1. **Upload your NDA document.** Signed NDAs can only be imported once your NDA is on the [NDAs page](https://console.theopenlane.io/trust-center/NDAs), because every NDA record links to the document your visitors sign.
+1. **Upload your NDA document.** Signed NDAs can only be imported once your NDA is on the [NDAs page](https://console.theopenlane.io/trust-center/NDAs).
 1. **[Import subprocessors](#subprocessors)**
 1. **[Import FAQs](#faqs)**
 1. **[Import signed NDAs](#signed-ndas)**
-1. **[Import subscribers](#subscribers)**
-1. **Point your [custom domain](./custom-domain.mdx) at Openlane.** Do this last, once everything is in place, so visitors switch over to a complete Trust Center. Your default Openlane URL is [hidden from search engines](./overview.mdx#search-engine-visibility) from the start, so the Trust Center won't show up in search results while you migrate. Leave that on so results point to your own domain.
+1. **[Import documents](documents)**
+1. **[Select frameworks](frameworks)**
+1. **[Select implemented controls](controls)**
+1. **[Highlight your customers](customer-logos)**
+1. **Point your [custom domain](./custom-domain.mdx) at Openlane.** Do this once everything is in place, so visitors switch over to a complete Trust Center. Your default Openlane URL is [hidden from search engines](./overview.mdx#search-engine-visibility) from the start, so the Trust Center won't show up in search results while you migrate. Leave that on so results point to your own domain.
+1. **[Import subscribers](#subscribers)** do this last so your subscribers will start getting fresh updates instead of old content
 
 </Steps>
 
@@ -81,7 +85,7 @@ Question,Answer,Category,Reference Link
 Do you encrypt customer data at rest?,Yes. All customer data is encrypted at rest with AES-256.,Security,https://example.com/security
 ```
 
-On the **Review** step, drag the rows to set the order of the imported FAQs. They are always added after any FAQs you already have, so reordering here only changes their order relative to each other. Files over 200 rows can't be reordered there, so those FAQs keep the order they have in your file.
+On the **Review** step, drag the rows to set the order of the imported FAQs. They are always added after any FAQs you already have, so reordering here only changes their order relative to each other.
 
 ## Signed NDAs
 

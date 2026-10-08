@@ -1,13 +1,13 @@
 import type {ReactNode} from 'react';
 import styles from './styles.module.css';
 
-// Inline chip marking a feature's release status, e.g. <StatusChip status="private-beta" />
-type Status = 'private-beta';
+// Inline chip marking a feature's release status, e.g. <StatusChip status="coming-soon" />
+type Status = 'coming-soon';
 
 const STATUSES: Record<Status, {label: string; description: string}> = {
-  'private-beta': {
-    label: 'Private beta',
-    description: 'This feature is in private beta and is not available in the console yet',
+  'coming-soon': {
+    label: 'Coming soon',
+    description: 'This feature is coming soon and is not available in the console yet',
   },
 };
 

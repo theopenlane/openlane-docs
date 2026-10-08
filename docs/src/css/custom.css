@@ -536,10 +536,10 @@ html[data-theme='dark'] .cards-row .card--compact > svg {
   display: none;
 }
 
-/* Private beta chip on sidebar entries, paired with the StatusChip component */
-.menu__list-item.sidebar-private-beta > .menu__list-item-collapsible > .menu__link::after,
-.menu__list-item.sidebar-private-beta > .menu__link::after {
-  content: "Private beta";
+/* Coming soon chip on sidebar entries, paired with the StatusChip component */
+.menu__list-item.sidebar-coming-soon > .menu__list-item-collapsible > .menu__link::after,
+.menu__list-item.sidebar-coming-soon > .menu__link::after {
+  content: "Coming soon";
   display: inline-block;
   width: auto;
   min-width: 0;

@@ -17,10 +17,11 @@ keywords:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import CopyText from '@site/src/components/CopyText';
 
 # Using the Docs MCP Server
 
-Openlane exposes this documentation to coding agents through a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server at `https://docs-search.theopenlane.io/mcp`. An agent configured to use it searches the published platform, developer, and API docs on demand, so its answers reflect what is documented today rather than what was in its training data.
+Openlane exposes this documentation to coding agents through a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server at <CopyText value="https://docs-search.theopenlane.io/mcp" />. An agent configured to use it searches the published platform, developer, and API docs on demand, so its answers reflect what is documented today rather than what was in its training data.
 
 The endpoint is stateless, read-only, and requires no authentication. It never touches your Openlane organization or data, only the public documentation.
 
@@ -66,18 +67,12 @@ Use `--scope project` to share the server with everyone working in the repositor
 </TabItem>
 <TabItem value="claude-desktop" label="Claude Desktop">
 
-Open **Settings**, choose **Connectors**, select **Add custom connector**, and enter `https://docs-search.theopenlane.io/mcp` as the URL. The connector is then available in every conversation.
+Open **Settings**, choose **Connectors**, select **Add custom connector**, and enter <CopyText value="https://docs-search.theopenlane.io/mcp" /> as the URL. The connector is then available in every conversation.
 
 </TabItem>
 </Tabs>
 
 Once configured, the `search` tool appears in your agent's tool list with no API keys or session setup.
-
-## Try It
-
-The quickest validation is the [MCP Inspector](https://github.com/modelcontextprotocol/inspector): point it at `https://docs-search.theopenlane.io/mcp` and you should see `search` listed. Run it with a query like `how does the Openlane CLI authenticate` and the top result should be the [CLI Auth](./cli-auth.mdx) page.
-
-From your agent, ask a question that can only be answered from the docs and confirm it calls `search` and cites pages from `docs.theopenlane.io`. If the tool never runs, check that the server appears in your client's list of connected MCP servers and that the URL was entered without a trailing path.
 
 :::tip
 Agents use the server most reliably when told to prefer it. A short instruction in your project's `CLAUDE.md`, `.cursor/rules`, or equivalent, such as "use the openlane-docs MCP server for questions about Openlane", keeps answers grounded in the documentation.
