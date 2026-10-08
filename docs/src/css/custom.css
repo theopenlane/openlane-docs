@@ -549,10 +549,10 @@ html[data-theme='dark'] .cards-row .card--compact > svg {
   vertical-align: middle;
   margin-left: 0.5rem;
   padding: 0 0.4rem;
-  border: 1px solid var(--ifm-color-warning-dark);
+  border: 1px solid var(--ifm-color-info-dark);
   border-radius: 999px;
-  background: var(--ifm-color-warning-contrast-background);
-  color: var(--ifm-color-warning-contrast-foreground);
+  background: var(--ifm-color-info-contrast-background);
+  color: var(--ifm-color-info-contrast-foreground);
   font-size: 0.625rem;
   font-weight: 600;
   line-height: 1.5;
