@@ -39,14 +39,14 @@ If your organization uses Tailscale to manage private network connectivity, this
 <Steps>
 
 1. In the Tailscale admin panel, navigate to **Settings** > [**Trust credentials**](https://login.tailscale.com/admin/settings/trust-credentials).
-2. Click **Create trust credential**.
-3. Select **OAuth** as the credential type.
-4. Enter a description (e.g. `Openlane Integration`).
+1. Click **Create trust credential**.
+1. Select **OAuth** as the credential type.
+1. Enter a description (e.g. `Openlane Integration`).
 
    ![tailscale new credential settings](./assets/screenshots/tailscale_new_credential.png)
 
-5. Click **Continue** to proceed to the Scopes step.
-6. Select **Custom scopes** and enable the following scopes:
+1. Click **Continue** to proceed to the Scopes step.
+1. Select **Custom scopes** and enable the following scopes:
 
    | Scope | Required For |
    |---|---|
@@ -58,7 +58,7 @@ If your organization uses Tailscale to manage private network connectivity, this
 
    ![tailscale scopes](./assets/screenshots/tailscale_scopes.png)
 
-7. Click **Create credential** and copy the **Client ID** and **Client secret**; the secret is only shown once.
+1. Click **Create credential** and copy the **Client ID** and **Client secret**; the secret is only shown once.
 
 </Steps>
 
@@ -71,14 +71,14 @@ The `users:read` scope is required for the health check to succeed, even if you 
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Tailscale**.
-2. Click **Configure** and enter the required fields:
+1. Click **Configure** and enter the required fields:
 
    | Field | Required | Purpose |
    |---|---|---|
    | `clientId` | Yes | OAuth client ID from the Tailscale trust credential |
    | `clientSecret` | Yes | OAuth client secret from the Tailscale trust credential |
 
-3. Click **Save**.
+1. Click **Save**.
 
 </Steps>
 

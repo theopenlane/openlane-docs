@@ -19,13 +19,13 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CopyText from '@site/src/components/CopyText';
 
-# Using the Docs MCP Server
+# Using the docs MCP server
 
 Openlane exposes this documentation to coding agents through a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server at <CopyText value="https://docs-search.theopenlane.io/mcp" />. An agent configured to use it searches the published platform, developer, and API docs on demand, so its answers reflect what is documented today rather than what was in its training data.
 
 The endpoint is stateless, read-only, and requires no authentication. It never touches your Openlane organization or data, only the public documentation.
 
-## What the Server Exposes
+## What the server exposes
 
 The server provides a single tool over streamable HTTP:
 
@@ -35,7 +35,7 @@ The server provides a single tool over streamable HTTP:
 
 Search is semantic: results are retrieved by vector similarity and then reranked, so phrase queries as natural-language questions rather than exact identifiers. Each result carries the full URL of the page it came from, which lets the agent cite the source or open the page for more context.
 
-## Configure Your Agent
+## Configure your agent
 
 Most MCP-capable clients accept a remote server entry with the transport and URL. Clients that lack remote MCP support can bridge through the [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) proxy pointed at the same URL.
 
@@ -53,7 +53,7 @@ Most MCP-capable clients accept a remote server entry with the transport and URL
 }
 ```
 
-Consult your client's documentation for the file location and the exact key names it expects for remote servers. Cursor, for example, reads `.cursor/mcp.json` and accepts the entry with only the `url` key.
+Consult your client's documentation for the file location and the key names it expects for remote servers. Cursor, for example, reads `.cursor/mcp.json` and accepts the entry with only the `url` key.
 
 </TabItem>
 <TabItem value="claude-code" label="Claude Code">

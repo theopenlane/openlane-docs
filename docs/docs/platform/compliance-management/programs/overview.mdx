@@ -37,9 +37,9 @@ Programs also keep concurrent efforts from blurring together. Your SOC 2 Type 2 
   </div>
 `}</Supademo>
 
-## Creating a Program
+## Creating a program
 
-The program wizard walks you through setup and offers five paths: a quick-start **SOC 2** program, a **Risk Assessment** program, a **Framework Based** program (ISO 27001, Health Insurance Portability and Accountability Act (HIPAA), and others), a blank **Generic Program**, or **Advanced** for full customization.
+The program wizard walks you through setup and offers six starting points. The **Quickstart** templates set up a **SOC 2** program, a **Risk Assessment** program, or a **Framework Based** program (ISO 27001, Health Insurance Portability and Accountability Act (HIPAA), and others). The **Custom** options start **From Existing Program** to reuse its controls, auditor, and owner, start a blank **Generic Program**, or use **Advanced Setup** for full customization. If you chose frameworks during onboarding, the matching template is marked **Recommended** when you create your first program.
 
 <CreateProgramPreview />
 
@@ -52,55 +52,56 @@ To create one:
 
 Framework-based programs come pre-populated with the relevant controls; a SOC 2 program additionally lets you include only specific domains (for example Security and Availability) if you don't want all of the Trust Services Criteria. Controls can be added or removed after creation from the program settings or the [standards catalog](https://console.theopenlane.io/standards), and any field you set in the wizard can be changed later from the programs page or program settings. The wizard choice gets you started; it doesn't lock you in.
 
-## Program Status
+## Program status
 
 A program's status tracks the effort from planning through completion. The one behavior worth knowing in advance: a completed program stays completed as the record of that cycle, and the next cycle (next year's audit period, the annual risk assessment) starts as a new program, which keeps each cycle's scope, evidence period, and audit details distinct.
 
-## Tracking Program Work
+## Tracking program work
 
-The **Work** tab on a program shows everything still to be done for it in one list, so you don't have to check controls, evidence, tasks, and documents separately. It pulls in the tasks, controls, evidence, policies, and procedures linked to the program.
+The **Work** tab on a program lists everything still to be done for it in one place. It covers every kind of object linked to the program, so you can see what is outstanding without opening each section of the console.
 
 <ProgramWorkPreview view="table" />
 
-### Work Status
+### Work status
 
 Each of those objects has its own status values, so the Work tab maps them onto four shared stages:
 
 | Work status | Tasks | Controls | Evidence | Policies and procedures |
 | --- | --- | --- | --- | --- |
-| **Open** | Open | Not Implemented | Requested, Needs Renewal | — |
+| **Open** | Open | Not Implemented | Requested, Needs Renewal | None |
 | **In Progress** | In Progress | Preparing, Draft, Changes Requested | Draft, Missing Artifact, Rejected | Draft |
 | **In Review** | In Review | Needs Approval | Submitted, In Review | Needs Approval, Pending |
 | **Completed** | Completed, Won't Do | Approved, Not Applicable, Archived | Ready for Auditor, Auditor Approved | Approved, Published, Archived |
 
-By default the tab shows outstanding work only: everything that isn't Completed. When an item's own status is more specific than its stage, such as a control in **Changes Requested** or evidence that **Needs Renewal**, it's shown in the **Attention** column alongside an **Overdue** badge for tasks past their due date.
+By default the tab shows only outstanding work, which is anything not yet completed. When an item's own status says more than its stage, such as a control with changes requested or evidence that needs renewal, the **Attention** column shows it. Tasks past their due date also get an **Overdue** badge there.
 
-### What Each Item Shows
+### What each item shows
 
-- **Owner**: the task's assignee, the control's owner, the approver for a policy or procedure, or the owners of the controls an evidence item supports
-- **Due date**: set on tasks; other objects don't carry a due date
-- **Related to**: the control or framework the item belongs to
+| Column | What it shows |
+| --- | --- |
+| Owner | The assignee for a task, the owner for a control, the approver for a policy or procedure, and the owners of the supported controls for evidence |
+| Due date | The due date for tasks. Other objects do not carry one. |
+| Related to | The control or framework the item belongs to |
 
-Items are sorted by stage, with overdue tasks first, then oldest first.
+Items are sorted by stage, with overdue tasks first and then the oldest items.
 
-### Finding Your Work
+### Finding your work
 
-- **Summary cards** at the top count outstanding items by type. Click a card to show only that type, or **Total** to show everything again.
-- **Table** and **Board** views: the board groups items into a column per work status.
-- **Quick filters**: **My Work** shows items you own, and **Overdue tasks** shows tasks past their due date.
-- **Filters** for status, object type, owner, and overdue tasks, plus search by name, title, or ref code.
+The summary cards at the top count outstanding items by type. Click a card to show only that type, or click **Total** to show everything again. Switch between the **Table** and **Board** views to see the same items as a list or grouped into a column per stage.
+
+Use the **My Work** quick filter to see items you own, or **Overdue tasks** to see tasks past their due date. The full filters cover status, object type, owner, and overdue tasks, and the search box matches names, titles, and ref codes.
 
 <ProgramWorkPreview view="board" />
 
 :::info
-The Work tab loads up to 100 items per object type. If a program has more than that matching your filters, a message tells you how many are hidden; narrow the filters to see the rest.
+The Work tab loads up to 100 items per object type. When more than that match your filters, a message tells you how many are hidden. Narrow the filters to see the rest.
 :::
 
-## Working with Auditors
+## Working with auditors
 
 Programs carry your audit details: the audit firm, the auditor, and the audit period. You can grant your auditor access directly during program setup, so evidence review happens in Openlane instead of through a third-party portal upload.
 
-## How Programs Connect
+## How programs connect
 
 A program scopes [controls](../controls/overview.mdx) from your enabled frameworks, coordinates [evidence](../evidence/overview.mdx) collection against the audit period, and tracks the work through [tasks](../../automation/tasks.mdx) and [risks](../../exposure/risks/overview.mdx). For the full field list, see the [GraphQL object reference](/docs/api/graph-api/). For framework-specific guidance, see the [Standards section](../../standards/overview.mdx).
 

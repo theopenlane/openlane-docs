@@ -163,6 +163,7 @@ const config: Config = {
               { label: 'Overview', to: 'docs/platform/overview' },
               { label: 'Automation', to: 'docs/platform/automation/overview' },
               { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
+              { label: 'Custom Reports', to: 'docs/platform/custom-reports' },
               { label: 'Exposure', to: 'docs/platform/exposure/overview' },
               { label: 'Frameworks & Standards', to: 'docs/platform/standards/overview' },
               { label: 'GRC Fundamentals', to: 'docs/platform/grc-fundamentals/overview' },

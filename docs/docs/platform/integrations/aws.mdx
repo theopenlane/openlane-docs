@@ -50,8 +50,8 @@ Before creating anything in AWS, retrieve the two values Openlane provides for y
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **AWS**.
-2. Click **Configure**.
-3. Copy the pre-generated values shown on the configuration page:
+1. Click **Configure**.
+1. Copy the pre-generated values shown on the configuration page:
    - **Openlane Principal ARN**: the ARN of the Openlane IAM identity that will assume the role in your account
    - **External ID**: a unique identifier scoped to your Openlane tenant, used to prevent confused deputy attacks
 
@@ -80,7 +80,7 @@ Use the Openlane CloudFormation template to create the role. Security Hub access
    Run `aws sts get-caller-identity` to confirm you are targeting the correct account before proceeding.
    :::
 
-2. Deploy the stack using the values copied from the Openlane configuration page:
+1. Deploy the stack using the values copied from the Openlane configuration page:
 
    ```bash
    aws cloudformation deploy \
@@ -111,7 +111,7 @@ Use the Openlane CloudFormation template to create the role. Security Hub access
    | `EnableIAMAccess` | No | Set to `true` to grant IAM user and group read access (default: `false`) |
    | `EnableAuditConfig` | No | Set to `true` to grant AWS Config and Control Catalog read access (default: `false`) |
 
-3. Once the stack deploys, capture the `RoleArn` output:
+1. Once the stack deploys, capture the `RoleArn` output:
 
    ```bash
    aws cloudformation describe-stacks \
@@ -140,8 +140,8 @@ Copy the `RoleArn` value; you will enter it into Openlane in Step 4.
 <Steps>
 
 1. In the [AWS Console](https://console.aws.amazon.com/), navigate to **IAM** > **Roles** > **Create role**.
-2. Under **Trusted entity type**, select **Custom trust policy**.
-3. Paste the following, replacing the placeholders with the values from the Openlane configuration page:
+1. Under **Trusted entity type**, select **Custom trust policy**.
+1. Paste the following, replacing the placeholders with the values from the Openlane configuration page:
 
    <details>
    <summary>Trust policy JSON</summary>
@@ -168,11 +168,11 @@ Copy the `RoleArn` value; you will enter it into Openlane in Step 4.
 
    </details>
 
-4. Click **Next**.
-5. Click **Next** again to skip attaching managed policies; you will add an inline policy instead.
-6. Give the role a name (e.g. `OpenlaneIntegrationReadOnlyRole`) and click **Create role**.
-7. Open the role you just created, go to the **Permissions** tab, and click **Add permissions** > **Create inline policy**.
-8. Switch to the **JSON** editor and paste the policy below, removing any blocks for data sources you do not want to grant:
+1. Click **Next**.
+1. Click **Next** again to skip attaching managed policies; you will add an inline policy instead.
+1. Give the role a name (e.g. `OpenlaneIntegrationReadOnlyRole`) and click **Create role**.
+1. Open the role you just created, go to the **Permissions** tab, and click **Add permissions** > **Create inline policy**.
+1. Switch to the **JSON** editor and paste the policy below, removing any blocks for data sources you do not want to grant:
 
    <details>
    <summary>Inline policy JSON</summary>
@@ -230,8 +230,8 @@ Copy the `RoleArn` value; you will enter it into Openlane in Step 4.
 
    </details>
 
-9. Click **Next**, give the policy a name, and click **Save**.
-10. Copy the **ARN** shown at the top of the role summary page; you will enter it into Openlane in Step 4.
+1. Click **Next**, give the policy a name, and click **Save**.
+1. Copy the **ARN** shown at the top of the role summary page; you will enter it into Openlane in Step 4.
 
 </Steps>
 
@@ -240,8 +240,8 @@ Copy the `RoleArn` value; you will enter it into Openlane in Step 4.
 <Steps>
 
 1. Enable Security Hub for the target accounts and regions.
-2. If you use AWS Organizations, configure delegated admin and cross-region aggregation.
-3. Use the same home region for `HomeRegion` in the CloudFormation parameters and in Openlane.
+1. If you use AWS Organizations, configure delegated admin and cross-region aggregation.
+1. Use the same home region for `HomeRegion` in the CloudFormation parameters and in Openlane.
 
 </Steps>
 
@@ -250,7 +250,7 @@ Copy the `RoleArn` value; you will enter it into Openlane in Step 4.
 <Steps>
 
 1. Return to **Organization Settings** > **Integrations** > **AWS** > **Configure**.
-2. Enter the following. The External ID is already pre-populated from Step 1, but confirm it matches if you have navigated away from the page:
+1. Enter the following. The External ID is already pre-populated from Step 1, but confirm it matches if you have navigated away from the page:
 
    | Field | Required | Purpose |
    |---|---|---|
@@ -319,11 +319,11 @@ We recommend the cross-account role approach because static credentials do not r
 <Steps>
 
 1. In the [AWS Console](https://console.aws.amazon.com/), navigate to **IAM** > **Users** > **Create user**.
-2. Enter a name (e.g. `openlane-integration-readonly`) and click **Next**.
-3. Select **Attach policies directly** and click **Next**; you will add an inline policy after creation instead of using a managed policy.
-4. Click **Create user**.
-5. Open the user you just created, go to the **Permissions** tab, and click **Add permissions** > **Create inline policy**.
-6. Switch to the **JSON** editor and paste the policy below, removing any blocks for data sources you do not need:
+1. Enter a name (e.g. `openlane-integration-readonly`) and click **Next**.
+1. Select **Attach policies directly** and click **Next**; you will add an inline policy after creation instead of using a managed policy.
+1. Click **Create user**.
+1. Open the user you just created, go to the **Permissions** tab, and click **Add permissions** > **Create inline policy**.
+1. Switch to the **JSON** editor and paste the policy below, removing any blocks for data sources you do not need:
 
    <details>
    <summary>Inline policy JSON</summary>
@@ -381,7 +381,7 @@ We recommend the cross-account role approach because static credentials do not r
 
    </details>
 
-7. Click **Next**, give the policy a name (e.g. `OpenlaneIntegrationReadOnly`), and click **Save**.
+1. Click **Next**, give the policy a name (e.g. `OpenlaneIntegrationReadOnly`), and click **Save**.
 
 </Steps>
 
@@ -390,10 +390,10 @@ We recommend the cross-account role approach because static credentials do not r
 <Steps>
 
 1. Open the IAM user you just created and go to the **Security credentials** tab.
-2. Under **Access keys**, click **Create access key**.
-3. Select **Third-party service** as the use case and click **Next**.
-4. Click **Create access key**.
-5. Copy both the **Access key ID** and the **Secret access key**; the secret is only shown once and cannot be retrieved later.
+1. Under **Access keys**, click **Create access key**.
+1. Select **Third-party service** as the use case and click **Next**.
+1. Click **Create access key**.
+1. Copy both the **Access key ID** and the **Secret access key**; the secret is only shown once and cannot be retrieved later.
 
 </Steps>
 
@@ -402,7 +402,7 @@ We recommend the cross-account role approach because static credentials do not r
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** > **AWS** > **Configure**.
-2. Enter the following fields, leaving `roleArn` and `externalId` empty, as they are not used with static credentials:
+1. Enter the following fields, leaving `roleArn` and `externalId` empty, as they are not used with static credentials:
 
    | Field | Required | Purpose |
    |---|---|---|
@@ -410,7 +410,7 @@ We recommend the cross-account role approach because static credentials do not r
    | `secretAccessKey` | Yes | AWS Secret Access Key from the IAM user |
    | `sessionToken` | No | Include only when using temporary credentials obtained via `sts:GetSessionToken` |
 
-3. Click **Save**.
+1. Click **Save**.
 
 </Steps>
 

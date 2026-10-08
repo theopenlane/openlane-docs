@@ -6,7 +6,7 @@ type Status = 'coming-soon';
 
 const STATUSES: Record<Status, {label: string; description: string}> = {
   'coming-soon': {
-    label: 'Coming soon',
+    label: 'Coming Soon',
     description: 'This feature is coming soon and is not available in the console yet',
   },
 };

@@ -201,11 +201,11 @@ riverboat:
 ### Job Processing Flow
 
 1. **Email Creation** - Application creates email with template data
-2. **Job Queuing** - Email job added to River queue with message payload
-3. **Worker Processing** - Email worker picks up job and renders final template
-4. **Delivery Attempt** - Worker sends email via configured provider
-5. **Status Tracking** - Job marked complete or retried on failure
-6. **Error Handling** - Failed jobs moved to dead letter queue after retries
+1. **Job Queuing** - Email job added to River queue with message payload
+1. **Worker Processing** - Email worker picks up job and renders final template
+1. **Delivery Attempt** - Worker sends email via configured provider
+1. **Status Tracking** - Job marked complete or retried on failure
+1. **Error Handling** - Failed jobs moved to dead letter queue after retries
 
 ## Email Delivery Methods
 

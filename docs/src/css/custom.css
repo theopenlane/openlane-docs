@@ -546,7 +546,7 @@ html[data-theme='dark'] .cards-row .card--compact > svg {
 
 .menu__list-item.sidebar-coming-soon > .menu__list-item-collapsible > .menu__link::after,
 .menu__list-item.sidebar-coming-soon > .menu__link::after {
-  content: "Coming soon";
+  content: "Coming Soon";
   display: inline-block;
   width: auto;
   min-width: 0;

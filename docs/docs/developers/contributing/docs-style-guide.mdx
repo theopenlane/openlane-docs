@@ -4,11 +4,11 @@ description: The style guide for the Openlane documentation
 sidebar_position: 2
 ---
 
-# Style Guide
+# Style guide
 
-The style guide for the Openlane documentation: how we write, format, and structure every page.
+The style guide for the Openlane documentation: how we write, format, and structure every page. It applies the Openlane brand style guide to docs, so the docs share one voice and one terminology with everything else Openlane publishes, with the mechanics that suit reference material read by security reviewers and auditors.
 
-## Voice and Tone
+## Voice and tone
 
 Openlane documentation speaks with one voice across product and developer docs:
 
@@ -17,15 +17,73 @@ Openlane documentation speaks with one voice across product and developer docs:
 * Explain why alongside how. A procedure without a reason invites misuse; a recommendation without a trade-off invites distrust
 * Address the reader as "you"
 * In procedures, tell the reader what success looks like: follow "do this" with "you should see this" where the outcome is known
-* Every page opens with a 1 to 3 sentence context paragraph between the title and the first `H2`. The opener describes the subject itself, never the page: no "This page covers...", "This section explains...", or any other sentence that narrates the page's own structure. State the facts the reader came for and let the headings show what the page contains
+* Do not use contractions in docs prose ("do not", "cannot", "you will"). Console labels quoted in backticks or bold stay as the console shows them
+* Use gender-neutral language everywhere
 
-Equally important is what the voice is not:
+### Openers
+
+Every page opens with a 1 to 3 sentence context paragraph between the title and the first `H2`. The opener describes the subject itself, never the page: no "This page covers...", "This section explains...", or any other sentence that narrates the page's own structure.
+
+The opener confirms the reader is in the right place. Say what the subject is and when to use it, often by relating it to something the reader already knows, and let the body answer the questions the reader came with. Do not pitch the feature, and question any sentence that enumerates comma-separated examples: a list of what a feature can do rarely tells the reader why they would use it.
+
+| Good | Bad |
+|---|---|
+| "Most sections of the console open on a table for that object, with search and filters to narrow it down. Custom Reports are for the questions a single table does not answer." | "Custom Reports pull every control with its owner and status, open risks above a score, or evidence that has not been submitted." |
+
+### Specific claims
+
+Numbers and named mechanisms beat intensity words. If a claim cannot be made specific, question whether it should be made at all.
+
+| Good | Bad |
+|---|---|
+| "Reuse one implementation across every framework it satisfies." | "Powerful cross-framework capabilities" |
+| "The Work tab loads up to 100 items per object type." | "The Work tab handles any volume of work." |
+
+### What the voice is not
 
 * No marketing or blog register: no aphorism openers, rhetorical-question hooks, punchline contrasts, or dramatized failure stories. State facts declaratively
 * No humor, memes, slang, or pop culture references. These docs are read by security reviewers and auditors evaluating a compliance product
 * No exclamation points, no emoji, no filler ("simply", "just", "please note")
+* No adjectives without evidence: "flexible", "modern", and "powerful" say nothing until an example carries them
+* No speed promises ("in 10 minutes", "days, not weeks") and no "agentic" or AI-first self-labeling
+* No competitor swipes. Describe what Openlane does
 * No inventories: do not enumerate schema fields, enum values, or function names in user-facing docs. Describe what the reader can do, not what the code contains
 * Docs are product-forward: Openlane is the system of record, and external tools feed it. Do not scope-shrink Openlane by deferring to competing tooling
+
+## Prose habits
+
+Ten habits that mark prose as machine-written or lazy, and the rule for each.
+They apply to every surface, the blog included.
+
+| Habit | Rule |
+|---|---|
+| Em dashes | One aside per page at most. Commas, periods, and parentheses do the job first. Docs forbid them outright. |
+| Apparatus in place of prose | Lists and subheadings only where the items or the break are the point. A paragraph that reads naturally beats three bullets. |
+| Stock reversals | "It's not just X, it's Y", "The result? More people...", "X is not a lock. It is a secret." State what the thing is and what follows. |
+| Cliche words | "glimpse into", "dive", "delve", "stark", "landscape", "navigate", "robust", "leverage", "seamless", "table stakes", "game-changer" do not run. |
+| Flowery expression | Direct words over decorative ones. If a sentence sounds like a keynote, rewrite it as a fact. |
+| Over-polish | A sentence with a plain rhythm or an unhedged opinion is allowed to stand. Uniform smoothness reads as generated. |
+| Repetition | One idea gets one phrasing. A closing line that echoes an earlier line is a defect, and so is a favorite word used every paragraph. |
+| Flat tone | Take a position and say it in a voice. The register tables above set the range; use it. |
+| Filler | "simply", "just", "actually", "obviously", "it's worth noting", "in other words" go unless the rhythm of the sentence needs them. |
+| Surface statements | Every claim carries its reason, its evidence, or its consequence. A sentence that could open any vendor's page does not run on ours. |
+| Rule of three | Three-item lists and three parallel sentences in a row read as generated. Vary list lengths to two or four, never stack a triad on a triad, and quote a source's own three as the source's ("the FAQ names three conditions"). |
+| Kicker on every paragraph | A quotable last line on paragraph after paragraph is a tell. Let most paragraphs end on a fact or a qualification and save the aphorism for two or three places. |
+| Colon before a reveal | "Its answer is one word: no." The colon introduces a list or a quotation, never a drumroll. |
+| No contractions | Blog and social prose contracts where speech would ("doesn't", "can't", "we've"). Uniform "does not" and "cannot" reads as generated. Docs and product UI stay uncontracted. |
+| Transition openers | "Moreover", "Furthermore", "Additionally", "Ultimately", "That said", "In short", "Indeed" do not open sentences. The logic carries the transition. |
+| Hedges and throat-clearing | "It is important to note", "it's worth mentioning", "arguably", "generally speaking" go. |
+| Intensifiers of precision | "exactly", "precisely", "literally" as emphasis go. "Stops precisely none of them" is "stops none of them". |
+| Scare quotes | Quotation marks around an ordinary phrase to hold it at arm's length ("open source security", "easy button") at most once a piece, and only for a phrase someone else actually uses. |
+| Uniform rhythm | Sentences of the same length in a row and paragraphs of the same shape read as generated. A five-word sentence next to a thirty-word one is the target, and a paragraph may be one sentence. Vary rhythm by writing the paragraph again, never by chopping a sentence in two; a row of clipped assertions is the same tell in the other direction. |
+| Generated vocabulary | "meaningful", "significant" (outside statistics), "crucial", "critical", "essential", "key", "genuine", "showcase", "underscore", "foster", "realm", "testament", "pivotal", "comprehensive", "holistic", "nuanced", "harness", "elevate", "empower", "unlock", "serves as", "at its core", "in other words" do not run. |
+| Narration about the argument | "The concern is legitimate and worth stating in full", "Let me concede what should be conceded", "The rest of this post is the evidence", "That reframes the question". Sentences that describe what the argument is doing instead of doing it. Cut them and make the argument. |
+
+| Good | Bad |
+|---|---|
+| "Availability for review says nothing about whether review happened, and a pile of GitHub stars measures popularity." | "Open source is not automatically secure. It is an opportunity, not a guarantee." |
+| "Exploitation does not check the license first." | "The result? Attackers target proprietary and open source software alike." |
+| "Cloning the repository yields a copy with an empty database." | "The concern is legitimate and worth stating in full. Cloning the repository yields a copy with an empty database." |
 
 ## Layout
 
@@ -39,7 +97,18 @@ Documentation should follow the general template of:
 * Avoid repeating content; instead link back to the canonical source
 * Provide attribution in the bottom / footer of the document if relevant
 
-## Formatting Text
+### Headings
+
+Write every heading in sentence case, from the page `H1` down: "Import data from CSV", not "Import Data from CSV". Product names keep their capitals (Trust Center, Custom Reports, SOC 2). Headings take no terminal punctuation, except a question mark on a question.
+
+Chips, buttons, and navigation items use Title Case, such as the `StatusChip` label "Coming Soon" and the labels in the navbar dropdowns.
+
+| Good | Bad |
+|---|---|
+| "Control mapping" | "Control Mapping." |
+| "Saved and shared reports" | "Saved And Shared Reports" |
+
+## Formatting text
 
 * Use **bold text** for general emphasis and link reference to projects
 * Use _italics_ to emphasize a new topic or subject for the first time
@@ -74,14 +143,23 @@ When using code blocks:
     ```
 * Separate commands from output
 
+To show a value the reader copies into another tool, such as an endpoint URL, use the `CopyText` component so the value stays inline with a copy button:
+
+```jsx
+import CopyText from '@site/src/components/CopyText';
+
+Connect to <CopyText value="https://docs-search.theopenlane.io/mcp" />.
+```
+
 ## Lists
 
 * Capitalize the first character of each entry unless the item is explicitly case sensitive
 * Leave exactly 1 new line after a list
 * Use numbered lists only when order matters: implementation sequences, ranked recommendations, maturity progressions, and procedures. Do not number independent best practices; numbering implies order or priority even when none exists
-* Ordered lists should use repeating `1.` should _not_ enumerate the lists (e.g. `1. 2. 3.`)
-* Every ordered bullet should only have `1.`
+* Number every item in an ordered list `1.`, never `1. 2. 3.`. The site numbers the list when it renders, so items can be added, removed, or reordered without renumbering. This applies to lists inside `<Steps>` too
 * Unordered lists should use `*` as delimiters instead of `-` ; when needing different sub points use `+`
+* Keep each list consistent: all fragments without periods, or all full sentences with periods, never mixed. Steps in a procedure are full sentences
+* A list earns its place only when the specific items are the point the reader needs. When it is the writer inventorying features, write the outcome instead. Reference material (a table of fields, the integrations directory) is exempt
 * List subitems should be indented 4 spaces:
 
 ```
@@ -98,7 +176,7 @@ When using code blocks:
 * When inserting a code block into an ordered list, indent (space) an additional
   two times
 
-## Structuring Content
+## Structuring content
 
 Choose the structure by what the reader is doing, not by what is easiest to write:
 
@@ -130,7 +208,7 @@ import Callout from '@site/src/components/Callout';
 </Callout>
 ```
 
-## Icon Cards
+## Icon cards
 
 For grids of short parallel points (a single container with an icon and text, no header), use compact cards with a [lucide](https://lucide.dev/icons/) icon:
 
@@ -153,7 +231,7 @@ import {ShieldCheck, KeyRound} from 'lucide-react';
 </div>
 ```
 
-## Glossary Terms
+## Glossary terms
 
 Link compliance terminology to the glossary with a hover tooltip. Definitions are generated from the [glossary page](/docs/platform/glossary) at build time, and unknown slugs degrade to plain text:
 
@@ -165,17 +243,55 @@ Every <Term t="subprocessor">subprocessor</Term> should be under a DPA.
 
 The slug is the kebab-cased term name (`carve-out-method`, `residual-risk`). Tag the first meaningful mention on a page, not every occurrence.
 
-## Dates and Times
+## Terminology
+
+The words are part of the brand:
+
+| Good | Bad |
+|---|---|
+| Openlane | OpenLane |
+| Trust Center (the product surface); "your trust center" in generic prose | Compliance portal |
+| "A control implementation describes how a control works; evidence demonstrates it kept working through the audit period." | Using "implementation" and "evidence" interchangeably |
+| Security and compliance platform | Trust platform, AI-first compliance |
+
+Capitalize product objects when naming the product concept (Program, Control, Evidence, Trust Center) and lowercase them in generic use.
+
+## Technical terms
+
+Customer-facing pages describe the outcome a reader gets, not how the platform is built. Protocol and library names (CEL, SAML, OIDC, SCIM, RBAC, TOTP) belong where the reader configures or writes them, such as an SSO setup page or the workflow definition reference, and developer docs may name the API surface they document. Elsewhere, write the sentence around the outcome.
+
+| Good | Bad |
+|---|---|
+| "Single sign-on through the identity provider you already run" | "SAML or OIDC SSO" (on an overview page) |
+
+## Product state and claims
+
+The product decides what the docs may call live. Never describe a feature or integration that is not available as if it were. Mark it with the `StatusChip` component next to its title, and add `sidebar_class_name: sidebar-coming-soon` to the page front matter so the left nav shows the same chip:
+
+```jsx
+import StatusChip from '@site/src/components/StatusChip';
+
+# Okta integration guide <StatusChip status="coming-soon" />
+```
+
+For integrations, the source of truth is the integration definition in core: one with `Active: false` shows as coming soon in the console and gets the chip in the docs. When a feature ships, remove the chip the same day.
+
+Anything the site emits as structured data follows the same rules as visible copy. FAQ answers under an `## FAQ` heading become `FAQPage` JSON-LD at build time, so each answer has to stand on its own and pass the same claim checks.
+
+## Dates and times
 
 * Format dates as `month day, year`. (January 1, 2021)
 * When conveying a date in numerical form, use [ISO 8601] Format: `yyyy-mm-dd`
 
-## Diagrams and Images
+## Diagrams and images
 
 * Images and other assets should be stored in the same directory as the document
   that is referencing it, or within the `/img/` directory
 * Filenames should be lowercase and descriptive of what they are referencing, with `_` used as work breaks
 * Avoid excessively large images
+* Prefer the real product over abstract art. To show a console view, use the theme-aware mockup components built on `ConsoleMockup` (such as `ImportPreview` or `ProgramWorkPreview`) instead of screenshots, so the image follows light and dark mode and carries no customer data
+* Never use screenshots that show customer names, customer data, or real people without anonymizing them first
+* Use [lucide](https://lucide.dev/icons/) icons only; no emoji and no PNG icons
 
 Images function mostly the same as hyperlinks, but preceded by an exclamation
 point and with alt text in place of the link text.
@@ -184,7 +300,15 @@ point and with alt text in place of the link text.
 ![Alt text](../img/.png)
 ```
 
-## Language and Grammar
+## Accessibility
+
+* Meaningful images get alt text that describes the view they show ("Findings queue filtered to critical severity"), never "Screenshot" or "Dashboard"
+* Decorative images that sit beside their own visible label get empty alt text
+* Mockup components set `role="img"` with a one-sentence `aria-label` describing the view
+* Link text is unique on the page: name the destination instead of repeating "Learn more"
+* Every icon-only control has an `aria-label` that names its object
+
+## Language and grammar
 
 * Prefer an active voice and present tense
     * Active voice is when the subject of the sentence performs the action. Whereas with passive voice the subject receives the action. Writing with an active voice in mind easily conveys to the reader who or what is performing
@@ -198,20 +322,20 @@ point and with alt text in place of the link text.
     * **Bad example:** Please be patient and wait for the Pod to start
 * Use gender-neutral language
 * If using acronyms, ensure they are clearly defined in the same document
-* If using an abbreviation, spell it out the first time it is used in the document unless it is commonly known (example: TCP/IP)
+* If using an abbreviation, spell it out the first time it is used in the document unless it is commonly known (example: TCP/IP, SOC 2, API)
 
 ## Punctuation
 
 * Do not use em dashes. Use commas, periods, or parentheses instead
 * Do not use punctuation in headings
-* End full sentences with a period, except when in an unordered bulleted list or when using a link at the end of a sentence (where it would be confusing if the period is a part of the link element)
+* End full sentences with a period, and keep each list either all fragments or all sentences. Leave the period off when a link ends the sentence and the period would read as part of the link
 * Add a single space after a period when beginning a new sentence
 * Use an Oxford comma when a list contains 3 or more elements
 
 ## Links
 
 * Links should point directly to the markdown file in the folder tree, using `..` and/or `filename.md` as appropriate
-* If reusing a link / reference many times throughout multiple documents it's also acceptable to use`[Link Text][path]` which defines the path in a separate part of the document
+* If reusing a link / reference many times throughout multiple documents, it is also acceptable to use `[Link Text][path]`, which defines the path in a separate part of the document
 
 Examples:
 
@@ -220,9 +344,22 @@ Examples:
 * `[section within this page](#that-section)`
 * `![awesome alt text](../../images/awesome-screenshot.png)`
 
+## Pre-publish checklist
+
+| Check | Passes when |
+|---|---|
+| Voice | Active voice, second person, no contractions, no filler, no exclamation points, no emoji |
+| Opener | 1 to 3 sentences that confirm the reader is in the right place; no pitch, no narration of the page |
+| Prose habits | Nothing from the prose habits table |
+| Headings | Sentence case, no terminal punctuation |
+| Lists | No definition bullets; each list all fragments or all sentences; every list earns its place |
+| Claims | Every claim is specific and true of the product as it ships; nothing coming soon is described as live |
+| Terminology | Product names and objects match the terminology table |
+| Images | Mockups or anonymized screenshots, lucide icons, specific alt text |
+
 ## Attribution
 
-This style guide is influenced by the style guides below.
+This style guide adapts the Openlane brand style guide for documentation and is influenced by the style guides below.
 
 * [Google Style guide](https://developers.google.com/style/)
 * [Microsoft Style guide](https://docs.microsoft.com/en-us/style-guide/welcome/)

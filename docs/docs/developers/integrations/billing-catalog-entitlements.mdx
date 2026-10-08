@@ -163,9 +163,9 @@ addons:
 On server startup, the system automatically:
 
 1. Loads the catalog configuration
-2. Ensures all products exist in Stripe
-3. Creates missing prices with proper metadata
-4. Updates the catalog with Stripe IDs
+1. Ensures all products exist in Stripe
+1. Creates missing prices with proper metadata
+1. Updates the catalog with Stripe IDs
 
 #### CLI Tools
 The `cmd/catalog` utility provides catalog management:
@@ -261,10 +261,10 @@ func (h *Handler) WebhookReceiverHandler(ctx echo.Context) error {
 When subscription events are received:
 
 1. **Extract subscription data** from Stripe webhook
-2. **Update organization subscription** in the database
-3. **Synchronize OpenFGA tuples** for enabled features
-4. **Refresh Redis cache** to reflect changes
-5. **Update usage limits** based on subscription tier
+1. **Update organization subscription** in the database
+1. **Synchronize OpenFGA tuples** for enabled features
+1. **Refresh Redis cache** to reflect changes
+1. **Update usage limits** based on subscription tier
 
 ## Usage Limits and Metering
 
@@ -304,14 +304,14 @@ Usage limits are enforced through:
    export STRIPE_WEBHOOK_SECRET="whsec_..."
    ```
 
-2. **Set up webhook forwarding** using Stripe CLI:
+1. **Set up webhook forwarding** using Stripe CLI:
 
    ```bash
    stripe login
    stripe listen --forward-to localhost:17608/v1/stripe/webhook
    ```
 
-3. **Test webhook events**:
+1. **Test webhook events**:
 
    ```bash
    stripe trigger customer.subscription.updated
@@ -327,9 +327,9 @@ For testing, create a separate Stripe account and:
 <Steps>
 
 1. Generate test API keys
-2. Create a clean catalog configuration
-3. Use the catalog CLI to seed products and prices
-4. Test webhook integration with Stripe CLI
+1. Create a clean catalog configuration
+1. Use the catalog CLI to seed products and prices
+1. Test webhook integration with Stripe CLI
 
 </Steps>
 
