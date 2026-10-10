@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: sidebar-coming-soon
 title: Microsoft Defender for Cloud
 description: Microsoft Defender for Cloud integration guide for security findings and vulnerability management
 sidebar_position: 13
@@ -13,12 +14,13 @@ compliance:
 
 import Steps from '@site/src/components/Steps';
 import Term from '@site/src/components/Term';
+import StatusChip from '@site/src/components/StatusChip';
 
 :::info
 This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
 :::
 
-# ![azure security center integration](./assets/azure.png) Microsoft Defender for Cloud Integration Guide
+# ![azure security center integration](./assets/azure.png) Microsoft Defender for Cloud integration guide <StatusChip status="coming-soon" />
 
 If your team runs workloads on Azure, this integration brings Defender for Cloud <Term t="finding">findings</Term> (security alerts, vulnerability assessments, and recommendations) into Openlane so you can track remediation timelines and service level agreement (SLA) compliance in one place.
 
@@ -41,8 +43,8 @@ If your team runs workloads on Azure, this integration brings Defender for Cloud
 <Steps>
 
 1. In the Azure portal, create or select an app registration and generate a client secret.
-2. Navigate to the target subscription's **Access control (IAM)** blade and assign the **Security Reader** role to the service principal.
-3. Record the following values for use in Openlane:
+1. Navigate to the target subscription's **Access control (IAM)** blade and assign the **Security Reader** role to the service principal.
+1. Record the following values for use in Openlane:
    - **Tenant ID:** from the app registration's overview page.
    - **Client ID:** the application (client) ID of the app registration.
    - **Client Secret:** the secret value (shown only at creation time).
@@ -55,7 +57,7 @@ If your team runs workloads on Azure, this integration brings Defender for Cloud
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Microsoft Defender for Cloud**.
-2. Click **Configure** and enter the required fields:
+1. Click **Configure** and enter the required fields:
 
    | Field | Required | Purpose |
    |---|---|---|
@@ -66,7 +68,7 @@ If your team runs workloads on Azure, this integration brings Defender for Cloud
    | `resourceGroup` | No | Restrict scope to a specific resource group |
    | `workspaceId` | No | Log Analytics Workspace ID for workspace-scoped alert queries |
 
-3. Click **Save**.
+1. Click **Save**.
 
 </Steps>
 

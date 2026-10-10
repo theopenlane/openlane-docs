@@ -36,10 +36,10 @@ If your organization runs Authentik as a self-hosted identity provider, this int
 <Steps>
 
 1. In the Authentik admin panel, navigate to **Directory** > **Users** and create a dedicated service account for Openlane (or select an existing one).
-2. Navigate to **Directory** > **Tokens and App passwords**.
-3. Click **Create** and select **API Token** as the token type.
-4. Assign the token to your Openlane service account.
-5. Copy the token value; it is only shown once.
+1. Navigate to **Directory** > **Tokens and App passwords**.
+1. Click **Create** and select **API Token** as the token type.
+1. Assign the token to your Openlane service account.
+1. Copy the token value; it is only shown once.
 
 </Steps>
 
@@ -48,14 +48,14 @@ If your organization runs Authentik as a self-hosted identity provider, this int
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Authentik**.
-2. Click **Configure** and enter the required fields:
+1. Click **Configure** and enter the required fields:
 
    | Field | Required | Purpose |
    |---|---|---|
    | `baseUrl` | Yes | Base URL of your Authentik instance (e.g. `https://authentik.mycompany.com`) |
    | `token` | Yes | Static API token used for Bearer token authentication |
 
-3. Click **Save**.
+1. Click **Save**.
 
 </Steps>
 

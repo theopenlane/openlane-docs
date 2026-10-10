@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: sidebar-coming-soon
 title: Microsoft Teams
 description: Microsoft Teams integration guide for compliance notifications and event routing
 sidebar_position: 14
@@ -10,12 +11,13 @@ compliance:
 
 import Steps from '@site/src/components/Steps';
 import Term from '@site/src/components/Term';
+import StatusChip from '@site/src/components/StatusChip';
 
 :::info
 This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
 :::
 
-# ![microsoft teams integration](./assets/microsoft_teams.png) Microsoft Teams Integration Guide
+# ![microsoft teams integration](./assets/microsoft_teams.png) Microsoft Teams integration guide <StatusChip status="coming-soon" />
 
 If your team collaborates in Microsoft Teams, this integration lets Openlane deliver security and compliance notifications directly into your channels. Vulnerability service level agreement (SLA) reminders, access review deadlines, and policy attestation nudges arrive where your team already works.
 
@@ -38,8 +40,8 @@ If your team collaborates in Microsoft Teams, this integration lets Openlane del
 <Steps>
 
 1. Configure the Openlane callback URL in your Entra app registration.
-2. Grant Graph permissions for profile/team read and channel message send.
-3. Grant admin consent for the requested permissions.
+1. Grant Graph permissions for profile/team read and channel message send.
+1. Grant admin consent for the requested permissions.
 
 </Steps>
 
@@ -48,9 +50,9 @@ If your team collaborates in Microsoft Teams, this integration lets Openlane del
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Microsoft Teams**.
-2. Click **Connect**. You will be redirected to Microsoft to authorize access.
-3. Sign in and grant the requested permissions.
-4. After authorization, you are redirected back to Openlane and the connection is saved.
+1. Click **Connect**. You will be redirected to Microsoft to authorize access.
+1. Sign in and grant the requested permissions.
+1. After authorization, you are redirected back to Openlane and the connection is saved.
 
 </Steps>
 

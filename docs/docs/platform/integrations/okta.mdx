@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: sidebar-coming-soon
 title: Okta
 description: Okta integration guide for sign-on policy metadata and access governance
 sidebar_position: 16
@@ -15,12 +16,13 @@ compliance:
 
 import Steps from '@site/src/components/Steps';
 import Term from '@site/src/components/Term';
+import StatusChip from '@site/src/components/StatusChip';
 
 :::info
 This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
 :::
 
-# ![okta integration](./assets/okta.png) Okta Integration Guide
+# ![okta integration](./assets/okta.png) Okta integration guide <StatusChip status="coming-soon" />
 
 If your organization uses Okta for identity management, this integration brings your directory, application assignments, and authentication policies into Openlane so you can run User Access Reviews, verify multi-factor authentication (MFA) enforcement, and maintain a current view of who has access to what.
 
@@ -42,8 +44,8 @@ If your organization uses Okta for identity management, this integration brings 
 <Steps>
 
 1. In the Okta admin console, navigate to **Security** > **API** > **Tokens**.
-2. Generate a new API token with org and policy read access.
-3. Copy the token value (it is only shown once).
+1. Generate a new API token with org and policy read access.
+1. Copy the token value (it is only shown once).
 
 </Steps>
 
@@ -52,14 +54,14 @@ If your organization uses Okta for identity management, this integration brings 
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Okta**.
-2. Click **Configure** and enter the required fields:
+1. Click **Configure** and enter the required fields:
 
    | Field | Required | Purpose |
    |---|---|---|
    | `orgUrl` | Yes | Okta tenant base URL (e.g. `https://acme.okta.com`) |
    | `apiToken` | Yes | API token used for Okta API authentication |
 
-3. Click **Save**.
+1. Click **Save**.
 
 </Steps>
 

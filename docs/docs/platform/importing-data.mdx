@@ -1,0 +1,72 @@
+---
+title: Import data from CSV
+description: Bring existing records into Openlane by uploading a CSV, mapping its columns, and previewing the result before anything is created
+sidebar_position: 2
+sidebar_class_name: sidebar-hidden
+tags:
+  - import
+  - csv
+  - onboarding
+keywords:
+  - csv import
+  - bulk upload
+  - bulk import
+  - import vendors
+  - import assets
+  - import risks
+  - import contacts
+---
+
+import ImportPreview from '@site/src/components/ImportPreview';
+
+# Import data from CSV
+
+It is common for compliance records to live in spreadsheets or another tool before they come to Openlane, and retyping them one at a time is slow and invites mistakes. Importing brings those records in from the CSV you already have, because you match your columns to Openlane fields during the import instead of reshaping the file to fit ours. The same import works for every object type, and nothing is saved until you confirm the preview.
+
+## What you can import
+
+To start an import, select `Bulk Upload` from the `...` menu on the table you want to fill, such as vendors, assets, contacts, or risks.
+
+Every upload step links to a field reference that lists each field the import accepts, along with an example CSV you can download.
+
+## How import works
+
+The import walks you through three steps: **Upload**, **Map fields**, and **Review**. Nothing is created until you confirm on the last step. The illustrations below show a control import, and every other import works the same way.
+
+### Upload
+
+Drag and drop your CSV, or click to choose it. Files up to 10MB are accepted, and comma, semicolon, tab, and pipe delimiters are detected automatically. Openlane reads the header row and lists the columns it found. If some rows have a different number of values than the header, a warning tells you to check them in the preview before importing.
+
+<ImportPreview step="upload" />
+
+### Map fields
+
+Each column in your file is shown with example values and a suggested Openlane field. Openlane matches columns by exact name, by known aliases (for example `Vendor Name`, `Company Name`, and `Account Name` all map to `Name`), and by names that differ only in wording. The **Match** column shows how each suggestion was made, or `Manual` when you picked the field yourself.
+
+<ImportPreview step="map" />
+
+Pick a different field from the **Import as** dropdown to change a mapping, or choose `Ignore this column` to leave a column out. Extra columns can stay in your file, and empty columns are skipped. On a large file, use the tabs above the list or search by column name to find the columns that still need attention.
+
+When a column uses different terms than Openlane, such as `Done` or `In progress` for a status, Openlane flags the values it does not recognize. Open the value mapping for that column and choose the Openlane value each one should import as, or leave it blank. Openlane suggests close matches for you. A column with more than 50 unrecognized values has to be fixed in the file instead.
+
+Openlane also reads common formats for other kinds of values:
+
+| Value | What the import accepts |
+| --- | --- |
+| Dates | Common formats such as `2/7/2026` or `Feb 7, 2026`. When a date like `4/5/2026` could be read either way, a toggle lets you pick month-first or day-first. |
+| Lists, such as `Tags` | A JSON array (`["Security"]`) or values separated by `;`, `\|`, or `,` |
+| Yes or no fields | `true`, `false`, `yes`, or `no` |
+
+Anything that would block the import, such as a missing required column, two columns mapped to the same field, or values that are still invalid, appears at the top of the step with a `Fix` link that jumps to the column. `Continue` turns on once every issue is resolved.
+
+### Review
+
+The review step summarizes how many records will be created, how many fields are mapped, which columns are ignored, and what Openlane fills in for you, such as the source of each record. A preview shows the first rows as they will be imported, along with any values that were remapped or dates that were converted.
+
+<ImportPreview step="review" />
+
+If something in the preview looks wrong, click `Edit mapping` or `Back` to return to the previous step. When it looks right, click `Import`. Openlane shows a success message and returns you to the table you started from.
+
+## Importing through the API
+
+Each import is also available as a `createBulkCSV<Object>` GraphQL mutation, such as `createBulkCSVEntity` or `createBulkCSVRisk`, which accepts a CSV directly without the mapping step. Through the API, headers must match the field names in `UpperCamelCase`, lists must be JSON (for example `["Security"]`), and JSON fields must have their quotes escaped. Download the example CSV from the field reference in the console to start from the expected headers.

@@ -23,38 +23,78 @@ Missed compliance work is easy to overlook: an access review that slipped a quar
 
 The home dashboard surfaces tasks that are due soon, so the answer to "what needs doing?" is the first thing people see when they log in.
 
-## Where Tasks Come From
+## Where tasks come from
 
-- **Created directly**: from the [Tasks page](https://console.theopenlane.io/tasks), with a title, type, assignee, due date, and any related objects
-- **Created from another object**: open a control, risk, or policy and create a task from there; the link back is made automatically. This is the most common path: you spot a gap while looking at a control, and the follow-up work is one click away.
-- **Bulk imported**: upload a CSV to create many tasks at once, like a full set of evidence-request tasks at the start of an audit period
+| Source | How it works |
+| --- | --- |
+| The Tasks page | Create a task on the [Tasks page](https://console.theopenlane.io/tasks) with a title, type, assignee, due date, and any related objects. |
+| Another object | Open a control, risk, or policy and create a task from there, and the link back is made for you. This is the most common path: you spot a gap while looking at a control, and the follow-up work is one click away. |
+| A template | Reuse a [task template](#task-templates) for repeatable work like offboarding an employee, with the details and linked objects already filled in. |
+| A CSV import | [Upload a CSV](../importing-data.mdx) to create many tasks at once, like a full set of evidence-request tasks at the start of an audit period. |
 
-## Creating a Task
+## Creating a task
 
-Create a task from the [Tasks page](https://console.theopenlane.io/tasks) with the "Create Task" button, or from the object that needs the work. Two fields on the form warrant explanation:
+Create a task from the [Tasks page](https://console.theopenlane.io/tasks) with **Create** → **From Scratch** (or **From Template**, see [task templates](#task-templates)), or from the object that needs the work. Two fields on the form warrant explanation:
 
 - The **Type** list (Evidence, Risk Review, Policy Review, Other) is customizable through [custom data](../settings/custom-data.mdx), so it can match how your team categorizes work
 - **Associated objects** are what carry context to the assignee. A task linked to its control tells them exactly what evidence goes where; an unlinked task makes them reconstruct that from the title.
 
-### Bulk Task Creation
+### Task templates
 
-For many tasks at once, like a full evidence-request queue, import a CSV from the Tasks page:
+Some work happens the same way every time it comes up, such as offboarding an employee. A template holds that task's instructions and links once, so each new instance starts from the template instead of a blank form.
+
+A template is a task with **This is a template** turned on. When you create a task from it, the new task starts with these fields filled in:
+
+| Field | Copied from the template |
+| --- | --- |
+| Title, type, details, and tags | Yes |
+| Associated objects, such as controls and policies | Yes |
+| Assignee | Yes, when the template has one |
+| Assigner | No. The assigner is whoever creates the task. |
+| Due date | No. Each task gets its own deadline. |
+
+Set an assignee on the template when the same person always does the work, such as the IT lead who handles every offboarding, and each new task goes to them without another step. Leave the assignee blank when it changes each time, and choose who to assign as you create the task.
+
+To create a template:
 
 <Steps>
 
-1. Navigate to the [Tasks page](https://console.theopenlane.io/tasks) and select **Bulk Upload**
-
-2. Download the sample CSV template from the upload interface to see the supported fields and structure
-
-3. Upload your CSV and follow the prompts
+1. On the [Tasks page](https://console.theopenlane.io/tasks), select **Create** → **From Scratch**.
+1. Fill in the task the way you want every copy to start. An "Employee offboarding" template might hold the offboarding checklist in its details and link to your access control policy and its controls.
+1. Turn on **This is a template**.
+1. Click **Save as template**, or click **Save as template and use** to also create the first task from it.
 
 </Steps>
 
-:::tip
-Refer to our API documentation for details on supported task fields in the [GraphQL object reference](/docs/api/graph-api/). When putting fields that are lists in the CSV, such as `Tags`, provide valid JSON like `[""soc2"", ""evidence""]` with double quotes escaped.
-:::
+To create a task from a template:
 
-## What Teams Use Tasks For
+<Steps>
+
+1. Select **Create** → **From Template** and search for the template.
+1. Pick the template to open a new task form filled in from it.
+1. Change what is specific to this task, such as the person being offboarded, then set the due date and the assignee if the template left it blank, and save.
+
+</Steps>
+
+Editing the new task leaves the template unchanged.
+
+Templates stay out of your normal task lists and counts. Use the **Templates** quick filter on the Tasks table to find, edit, or retire them, and look for the **Template** badge on each one.
+
+### Bulk task creation
+
+To create many tasks at once, such as a full evidence-request queue, import a CSV:
+
+<Steps>
+
+1. Open [Import tasks](https://console.theopenlane.io/import?type=task), or select **Bulk Upload** from the `...` menu on the [Tasks page](https://console.theopenlane.io/tasks).
+1. Upload your CSV. `Title` is the only required column, and your column names do not need to match ours.
+1. Map your columns to task fields, remap any values your file spells differently (such as a status), and preview the tasks before importing.
+
+</Steps>
+
+See [Import data from CSV](../importing-data.mdx) for a walkthrough of each step. The field reference on the upload step lists every supported field and links to an example CSV.
+
+## What teams use tasks for
 
 | Use Case | Example |
 | --- | --- |
@@ -64,7 +104,7 @@ Refer to our API documentation for details on supported task fields in the [Grap
 | **Audit preparation** | Walkthrough scheduling, document collection, and auditor requests, tracked in one place |
 | **Automated collection** | A developer wires the Openlane [Go client](https://github.com/theopenlane/go-client) into a CI/CD pipeline to create and close evidence tasks automatically |
 
-## API Examples
+## API examples
 
 <Tabs groupId="api-format" queryString>
   <TabItem value="csv" label="CSV">
@@ -172,6 +212,15 @@ A task is a single piece of work with an owner and a deadline. Recurring collect
 <summary>Can I assign a task to a group?</summary>
 
 Tasks are assigned to individual users for clear accountability, but you can use [groups](../settings/groups/overview.mdx) to control who can see and manage them.
+
+</details>
+
+<details>
+<summary>Who can see a task?</summary>
+
+By default, only the task's assignee and assigner can see it, along with organization owners and super admins, who can see everything in the organization. A task also inherits access from the objects it is linked to. Link a task to a program, and anyone who can view that program can view the task, and the same goes for a linked control, policy, risk, or asset. To share a task with someone outside those groups, link it to an object they can already see or give them or their group access directly.
+
+Task templates work differently: everyone in your organization can see them, so anyone can create a task from one.
 
 </details>
 

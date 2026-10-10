@@ -1,5 +1,5 @@
 [files]
-extend-exclude = ["docs/docs/api/**", "docs/bun.lock", "static/img/**/", "static/**", "docs/static/**"]
+extend-exclude = ["docs/docs/api/**", "docs/bun.lock", "static/img/**/", "static/**", "docs/static/**", ".codespellrc"]
 ignore-hidden = true
 ignore-files = true
 ignore-dot = true
@@ -15,6 +15,6 @@ unicode = true
 ignore-hex = true
 identifier-leading-digits = false
 locale = "en"
-extend-ignore-identifiers-re = []
-extend-ignore-words-re = ["(?i)requestor","(?i)indentity","(?i)encrypter","(?i)seeked","(?i)generater","(?i)policys","NDA*","OT"]
+extend-ignore-identifiers-re = ["^BAAs?$", "^OpenVAS$"]
+extend-ignore-words-re = ["(?i)requestor","(?i)indentity","(?i)encrypter","(?i)seeked","(?i)generater","(?i)policys","NDA*","OT","RTO","EHR"]
 extend-ignore-re = ["(?Rm)^.*//\\s*spellchecker:disable-line$"]

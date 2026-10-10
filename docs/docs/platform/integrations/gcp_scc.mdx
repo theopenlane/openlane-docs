@@ -54,7 +54,7 @@ Use the Openlane setup script to configure IAM, enable required APIs, and print 
    chmod +x openlane-gcp-scc-setup.sh
    ```
 
-2. Run the setup:
+1. Run the setup:
 
    ```bash
    ./openlane-gcp-scc-setup.sh \
@@ -71,7 +71,7 @@ The script prints the service account key JSON and other values to paste into Op
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Google Cloud SCC**.
-2. Click **Configure** and enter the credential fields:
+1. Click **Configure** and enter the credential fields:
 
    | Field | Required | Description |
    |---|---|---|
@@ -96,7 +96,7 @@ The script prints the service account key JSON and other values to paste into Op
    This returns source resource names like `organizations/123/sources/456`; paste the full name or just the numeric suffix into `sccSourceIds`.
    :::
 
-3. Optionally configure data ingestion behavior:
+1. Optionally configure data ingestion behavior:
 
    | Setting | Description |
    |---|---|
@@ -116,7 +116,7 @@ The script prints the service account key JSON and other values to paste into Op
 
    CEL expressions have access to the full raw payload for each finding via `payload.<field>`.
 
-4. Click **Save & Connect**.
+1. Click **Save & Connect**.
 
 </Steps>
 

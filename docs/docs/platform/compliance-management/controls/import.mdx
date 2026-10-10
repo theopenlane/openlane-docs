@@ -21,19 +21,73 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Term from '@site/src/components/Term';
 
-# Import Controls
+# Import controls
 
-We built CSV import so you can bring in controls you have already defined in other systems or spreadsheets, or pre-compose data before loading it into Openlane. Framework controls, custom controls, and control mappings can all come in this way.
+We built CSV import so you can bring in controls you have already defined in other systems or spreadsheets, or prepare data before loading it into Openlane. Upload the CSV you already have, map its columns to Openlane fields, and preview the result before anything is created.
 
-## Importing Controls
+Most organizations define their own organization controls, which describe how the business operates, and map framework controls such as SOC 2, ISO 27001, or NIST 800-53 to them. One organization control can then show coverage across several frameworks. Import your [organization controls](#importing-controls) first, then import the [mappings](#importing-control-mappings) that link each one to the framework controls it satisfies.
 
-Controls will generally fall into two buckets: those that are from a published framework or standard (ex: NIST 800-53), and custom controls. We recommend that you orient your <Term t="compliance-program">compliance program</Term> to be based on an existing framework / standard even if you may have some custom controls outside of that. This way, you can add implementation details, objectives, <Term t="evidence">evidence</Term>, etc., related to the controls from the published framework and receive the ongoing benefits of updates and changes we will publish as the upstream standard(s) are updated.
+## How import works
 
-### Framework Controls
+Open the import directly with [Import controls](https://console.theopenlane.io/import?type=control) or [Import control mappings](https://console.theopenlane.io/import?type=mappedcontrol). You can also get there from [Controls](https://console.theopenlane.io/controls): switch to the table view, click the `...` menu, and select `Upload Custom Controls` or `Upload Control Mappings`.
 
-Even if you are coming with controls from another system, we recommend cloning them from our existing standard catalog rather than creating all of the controls as custom. To accomplish this, you'll need to ensure you have the fields outlined in the below table.
+Controls use the same upload, map, and review flow as every other import in Openlane. See [Import data from CSV](../../importing-data.mdx#how-import-works) for a walkthrough of each step, including remapping values such as statuses your file spells differently.
 
-### Framework Control CSV Fields
+## Importing controls
+
+Your organization controls are the controls your teams own, implement, and collect <Term t="evidence">evidence</Term> against.
+
+`Ref Code` is the only required field. Every other column is optional, and every other field on the [`control` object](/graphql) is supported.
+
+When you import from the console, Openlane records each control's source as imported, and your column names do not need to match ours. Columns such as `Control ID`, `Control Number`, or `Reference` map to `Ref Code`, so a spreadsheet with `Control IDs` and `Control Description` columns imports as it is. Through the API, headers must match the field names.
+
+```csv
+RefCode,Description,Category,AuditorReferenceID,MappedCategories
+CO-07,Company has established core values (Code of Conduct) that are communicated to employees (and contractors) during onboarding and on an ongoing basis thereafter.,Organizational Governance and Structure,AU-07,["Security"]
+```
+
+The above will create a control with the `RefCode` `CO-07`, with an auditor reference ID `AU-07`.
+
+Open [Import controls](https://console.theopenlane.io/import?type=control) and follow the [import steps](../../importing-data.mdx#how-import-works). Once your controls are in, add them to a program. Filter the control table by the `Custom` standard, then:
+
+<Steps>
+
+1. Click `View Results`
+1. Select the checkbox on the top of each page until you have selected all controls
+1. Select `Bulk Edit (count)`
+1. Choose the `Program` field and select your program
+1. Click `Save`
+
+</Steps>
+
+:::info
+    The `createBulkCSVControl` mutation accepts a CSV directly through the API, without the mapping step. Through the API, headers must match the control field names in `UpperCamelCase`, lists must be JSON (for example `["Security"]`), and JSON fields must have their quotes escaped, for example `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`. Download the example CSV from the field reference in the console to start from the expected headers.
+:::
+
+## Importing control mappings
+
+Mappings link your organization controls to the framework controls they satisfy, so a single control can show coverage for every framework it supports.
+
+Every control a mapping refers to has to exist in your organization before you import it. If you are mapping your organization controls to System and Organization Controls 2 (SOC 2), add the SOC 2 controls first, either from the standards catalog or by creating a SOC 2 program, which adds them for you.
+
+The CSV can contain any of the fields from the [MappedControl](/graphql) object. When you import from the console and leave the source unmapped, Openlane records it as imported. For example:
+
+```csv
+FromControlRefCodes,ToControlRefCodes,MappingType,Confidence,Source,Relation,
+["CUSTOM::CO-07"],["SOC 2::CC1.1"],SUBSET,100,IMPORTED,Mapping between SOC2 controls and our custom controls,
+```
+
+Open [Import control mappings](https://console.theopenlane.io/import?type=mappedcontrol) and follow the [import steps](../../importing-data.mdx#how-import-works), resolving any flagged values such as a `MappingType` your file spells differently. After the import, the mappings appear on the `Linked Controls` panel of each control.
+
+:::tip
+    Refer to our documentation for a list of all [relationship types](/graphql) supported.
+:::
+
+## Cloning framework controls
+
+To bring a framework's controls into your organization with your own status, implementation details, or comments already filled in, clone them from the standards catalog with `Upload From Standard`. This upload does not use the mapping step, so your CSV must use the fields in the table below.
+
+### Framework control CSV fields
 
 | Field Name                 | Description                                                                                                                                                 | Example / Notes                                                                                                                                | Required |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -52,7 +106,7 @@ Even if you are coming with controls from another system, we recommend cloning t
     Refer to our documentation for a list of all fields supported on [controls](/graphql). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `MappedCategories` they need to be in as JSON, for example `["Security"]`. If the field is JSON, such as `ExampleEvidence` you need to escape the quotes, for example: `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`
 :::
 
-#### Framework Control CSV Example
+#### Framework control CSV example
 
 ```csv
 StandardShortName,RefCode,ControlInput.Status,ControlInput.ReferenceID,ControlImplementation,ImplementationGuidance,Comment
@@ -65,7 +119,7 @@ The above will clone the `AC-1` control from `NIST 800-53`, set the status of th
     The case of the field names matters. All field names _must_ be in `UpperCamelCase` and any field directly on the control object must be prefixed with `ControlInput`. For example `status` would be `ControlInput.Status`
 :::
 
-### Uploading Framework Controls
+### Uploading framework controls
 
 <Tabs groupId="console-vs-api" queryString>
 <TabItem value="console" label="Console">
@@ -73,7 +127,7 @@ The above will clone the `AC-1` control from `NIST 800-53`, set the status of th
 <Steps>
 
 1. Login to [console](https://console.theopenlane.io/)
-1. Navigate to the [controls table](https://console.theopenlane.io/controls?tab=controls) by clicking on `Controls` and then toggle to the table view.
+1. Navigate to the [controls table](https://console.theopenlane.io/controls) by clicking on `Controls` and then toggle to the table view.
 1. Click the `...` and select `Upload From Standard`
 1. You should now have a dialog where you can either use the file selector or drag and drop your csv
 1. Once you've selected your csv, click `Upload`. Depending on the number of controls this may take a little bit of time. If you have issues with timeouts, try breaking your csv into smaller chunks and uploading multiple times.
@@ -142,74 +196,3 @@ Using a GraphQL tool such as Apollo Explorer, you can send an API request:
 
 </TabItem>
 </Tabs>
-
-
-## Import Custom Controls
-
-### Custom Control CSV Fields
-
-All other fields on the [`control` object](/graphql) are supported. The `RefCode` is the only required field.
-
-:::tip
-    Refer to our documentation for a list of all fields supported on [controls](/graphql). As of today, all fields should be supported. When putting fields that are lists in the csv, such as `MappedCategories` they need to be in as JSON, for example `["Security"]`. If the field is JSON, such as `ExampleEvidence` you need to escape the quotes, for example: `[{""documentationType"":""Other documentation"",""description"":""Evidence that the values have been communicated to employees during onboarding and annually thereafter""}]"`
-:::
-
-#### Custom Control CSV Example
-
-```csv
-RefCode,Description,Category,AuditorReferenceID,MappedCategories
-CO-07,Company has established core values (Code of Conduct) that are communicated to employees (and contractors) during onboarding and on an ongoing basis thereafter.,Organizational Governance and Structure,AU-07,["Security"]
-```
-
-The above will create a control with the `RefCode` `CO-07`, with an auditor reference ID `AU-07`.
-
-:::note
-    The case of the field names matters. All field names _must_ be in `UpperCamelCase`
-:::
-
-### Through Console
-
-<Steps>
-
-1. Login to [console](https://console.theopenlane.io/)
-1. Navigate to the [controls table](https://console.theopenlane.io/controls?tab=controls) by clicking on `Controls` and then toggle to the table view
-1. Click the `...` and select `Upload Custom Controls`
-1. You should now have a dialog where you can either use the file selector or drag and drop your csv
-1. Once you've selected your csv, click `Upload`. Depending on the number of controls this may take a little bit of time
-1. When it is complete, the dialog will close and you should see a success message; the table should now be populated with your controls
-1. Now that your custom controls are imported, you'll most likely want to associate them to a program as well. You can filter by `Custom` standard from the control table view:
-1. Click `View Results`
-1. Select the checkbox on the top of each page until you have selected all controls
-1. Select `Bulk Edit (count)`
-1. Choose the `Program` field and select your program
-1. Click `Save`
-
-</Steps>
-
-## Import Control Mappings
-
-If you are importing custom controls, but want to map them to existing standard controls to show alignment, you can do so via CSV as well.
-
-Prior to creating the mappings, you must ensure all the expected controls exist in your organization. For example, if you imported your custom controls, but are mapping them to System and Organization Controls 2 (SOC 2) controls, you must first add the SOC 2 controls to your organization. This can be done by adding them from the standards catalog or creating a SOC 2 program which will automatically add them to your organization.
-
-### Mapping CSV Fields
-
-The CSV can contain any of the fields from the [MappedControl](/graphql) object, again in the `UpperCamelCase`format. For example:
-
-```csv
-FromControlRefCodes,ToControlRefCodes,MappingType,Confidence,Source,Relation,
-["CUSTOM::CO-07"],["SOC 2::CC1.1"],SUBSET,100,IMPORTED,Mapping between SOC2 controls and our custom controls,
-```
-
-<Steps>
-
-1. Go to the same menu as when importing the custom controls, but instead click `Upload Control Mappings`
-1. Select the mapping csv file
-1. Click `Upload`
-1. After successful upload, you should see the mappings on the `Linked Controls` panel on the control view screens
-
-</Steps>
-
-:::tip
-    Refer to our documentation for a list of all [relationship types](/graphql) supported.
-:::

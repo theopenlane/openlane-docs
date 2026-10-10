@@ -1,0 +1,239 @@
+.frame {
+  margin: 1.5rem 0;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  background: var(--ifm-background-color);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--ifm-font-color-base);
+  user-select: none;
+}
+
+.window small {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.title {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.muted {
+  opacity: 0.55;
+}
+
+.mono {
+  font-family: var(--ifm-font-family-monospace);
+}
+
+.accent {
+  color: var(--ifm-color-primary);
+}
+
+.hint {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.link {
+  color: var(--ifm-color-info-dark);
+  font-weight: 500;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  padding: 0.875rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-card-background-color);
+}
+
+.cardActive {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem;
+  padding-bottom: 0.625rem;
+}
+
+.tag {
+  padding: 0.125rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  color: var(--ifm-color-emphasis-700);
+  white-space: nowrap;
+}
+
+.tagActive {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.search {
+  margin-left: auto;
+  padding: 0.125rem 0.625rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 36rem;
+}
+
+.tableHead {
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.row {
+  display: grid;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.25rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-color);
+}
+
+.chevron {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.pill {
+  padding: 0 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.0625rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  white-space: nowrap;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.badge_success {
+  border-color: var(--ifm-color-success-dark);
+  background: var(--ifm-color-success-contrast-background);
+  color: var(--ifm-color-success-contrast-foreground);
+}
+
+.badge_info {
+  border-color: var(--ifm-color-info-dark);
+  background: var(--ifm-color-info-contrast-background);
+  color: var(--ifm-color-info-contrast-foreground);
+}
+
+.badge_warning {
+  border-color: var(--ifm-color-warning-dark);
+  background: var(--ifm-color-warning-contrast-background);
+  color: var(--ifm-color-warning-contrast-foreground);
+}
+
+.badge_danger {
+  border-color: var(--ifm-color-danger-dark);
+  background: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger-contrast-foreground);
+}
+
+.buttonPrimary,
+.buttonOutline,
+.buttonSecondary {
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.buttonPrimary {
+  background: var(--ifm-color-primary);
+  color: #09151d;
+  font-weight: 500;
+}
+
+.buttonOutline {
+  border: 1px solid var(--ifm-color-emphasis-400);
+}
+
+.buttonSecondary {
+  background: var(--ifm-color-emphasis-200);
+}
+
+@media (max-width: 640px) {
+  .search {
+    margin-left: 0;
+  }
+}
+
+.iconTile {
+  display: inline-grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+}
+
+.iconTileLarge {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.withIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-width: 0;
+  white-space: nowrap;
+}

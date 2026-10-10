@@ -1,0 +1,76 @@
+---
+title: Custom Reports
+description: Build a report on any Openlane data, choose the columns, filter and sort it, and export the results
+sidebar_position: 3
+tags:
+  - reports
+  - export
+keywords:
+  - custom report
+  - report builder
+  - export csv
+  - export data
+---
+
+import Steps from '@site/src/components/Steps';
+import StatusChip from '@site/src/components/StatusChip';
+
+# Custom reports
+
+Across the console, most objects land on a table view where you can search and filter for the subset of records you are looking for. We expect those tables to cover most of what you need, but some questions call for a cross-section of data with more granular filtering, or for fields from more than one type of object in the same results. That is where [Custom Reports](https://console.theopenlane.io/reports/custom) come in. Use Custom Reports to compose your more complex queries and reports, especially when the same data drives work for people across your organization.
+
+## Building a report
+
+<Steps>
+
+1. Open **Custom Report** from the side navigation.
+1. Under **Report on**, choose the type of data, such as controls, risks, vendors, evidence, tasks, or personnel. The list includes only the data types your organization's modules give you access to.
+1. Under **Columns**, select the fields to include. Search to find a field, or select all fields at once.
+1. Add fields from linked records under **Related data** if you need them, such as the program a control belongs to or the controls a risk is linked to.
+1. Add **Filters** and set **Sort & limit** if you want to narrow or order the results.
+1. Click **Run report**.
+
+</Steps>
+
+A report needs at least one column, and every filter needs a value before the report runs.
+
+### Related data
+
+Related data adds fields from records linked to each row, for example the controls mapped to a risk or the owner of a control. Each row includes up to the first 25 linked records.
+
+### Filters
+
+Add up to five filters to narrow the results. Each filter picks a field, an operator, and a value, and the operators depend on the kind of field:
+
+| Field | Operators |
+| --- | --- |
+| Text | Equals, does not equal, contains, starts with, ends with, and case-insensitive versions of equals and contains |
+| Numbers | Equals, is greater than, is less than, and their "or equal to" versions |
+| Dates | Is before, is after, is on or before, is on or after, or equals a specific day |
+| Lists of values, such as status | Is any of, is none of |
+| Owners, such as internal owner, assigned to, or reviewed by | Is any of, is none of, matching users, groups, or personnel |
+| Any field | Is empty, is not empty |
+
+With more than one filter, choose **Match all** to require every filter, or **Match any** to include records that match at least one.
+
+## Viewing results
+
+Results appear on the **Results** tab with the total number of matching records. Switch **Format** between **Table** and **JSON** to read the data the way you need it. When a limit cuts the results short, the summary shows how many records matched in total.
+
+The **Query** tab shows the GraphQL query and variables behind the report. Click **Copy** to reuse it with the [Openlane API](/docs/api/graph-api/), for example to run the same report on a schedule.
+
+## Exporting
+
+Click **Export** and choose **CSV**, **JSON**, or **YAML** to download the full results, not only the page you are viewing. The export keeps your filters, sort, and limit.
+
+## Report history
+
+Each report you run is saved to **History** next to the **Run report** button. Pick a recent report to reload its data type, columns, filters, and sort and run it again. History keeps your last 10 reports for each organization in your browser, so your teammates and your other devices do not see it.
+
+## Saved and shared reports <StatusChip status="coming-soon" />
+
+You will be able to save a report with a name and share it with your team, so everyone runs the same report from any device instead of rebuilding it from history.
+
+## What you can report on
+
+Reports respect your permissions, so a report shows only the records you can view elsewhere in Openlane.

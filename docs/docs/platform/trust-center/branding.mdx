@@ -21,7 +21,7 @@ import Term from '@site/src/components/Term';
 
 Customize your Trust Center to match your organization's brand. You can configure your company information, logo, colors, and theme.
 
-## Preview Before Publishing
+## Preview before publishing
 
 Branding changes aren't immediately public. When you make changes:
 
@@ -36,20 +36,39 @@ Branding changes aren't immediately public. When you make changes:
 
 The preview URL is shown at the top of the branding page.
 
-## Security Contact Email
+## Security contact email
 
 The security email address appears on your Trust Center as the contact for responsible disclosure. We recommend an address that routes to your security team (typically something like `security@yourcompany.com`) so reports reach the people who can act on them.
 
 Security researchers and customers use this to report potential vulnerabilities.
 
-## Theme Options
+## Theme options
 
-You can choose between:
+In **Easy** mode, you pick a primary color and Openlane derives the rest of the theme from it. **Advanced** mode gives you control over the font and each color: foreground, background, accent, secondary foreground, and secondary background.
 
-- **Easy mode**: Pick a primary color and the system derives the rest
-- **Custom mode**: Full control over individual colors
+### Detect branding from domain
 
-## Logo and Favicon
+Instead of setting colors by hand, click **Detect Branding from Domain** in the Theme section, and Openlane reads the colors, fonts, logo, and favicon from your company website. The results go into your preview settings, so nothing goes live until you publish. Assets you already uploaded stay as they are, but any unsaved edits on the branding page are replaced by what the scan finds.
+
+Choose the domain to scan from the list, which combines the domains in [Organization Settings](https://console.theopenlane.io/organization-settings/general-settings) with the company domain on the branding page. Use **Manage Domains** to add or change them. The scan can take a few minutes, and you can leave the page while it runs. Openlane notifies you when it finishes.
+
+### Live color preview
+
+In Advanced mode, click **Generate palette** to open your preview site with a color generator panel. The page updates as you change any of the five colors, so you see the result on your own Trust Center instead of switching between tabs. **Generate dark** and **Generate light** give you a starting palette, and **Reset to saved colors** returns to your saved theme.
+
+When the colors look right:
+
+<Steps>
+
+1. Click **Copy** in the color generator to copy a palette string such as `olbrand1:bg=#ffffff;fg=#09151d;accent=#2dcdad;secBg=#ffffff;secFg=#09151d`.
+1. On the branding page, paste it into **Import palette** and click **Apply**.
+1. Click **Save Preview** to check the theme on your preview site, then **Publish** to make it live.
+
+</Steps>
+
+The color generator appears only on your preview site, so visitors to your live Trust Center never see it.
+
+## Logo and favicon
 
 Upload your logo for the Trust Center header and a favicon for browser tabs.
 
@@ -59,14 +78,14 @@ Upload your logo for the Trust Center header and a favicon for browser tabs.
 
 You can upload files directly or provide URLs to hosted images.
 
-## Title and Overview
+## Title and overview
 
 The title and overview text appear prominently on your Trust Center and are used for SEO. Write an overview that communicates your organization's commitment to security, privacy, and transparency.
 
 Example:
 > At [Company], security and privacy are core to how we build our platform. This Trust Center provides an overview of our security practices and access to relevant documentation.
 
-## Best Practices
+## Best practices
 
 - Use a high-contrast color scheme for accessibility
 - Ensure your logo renders well on both light and dark backgrounds

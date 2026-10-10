@@ -4,6 +4,7 @@
 import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from 'prism-react-renderer';
+import remarkFaqSchema from './plugins/remark-faq-schema.mjs';
 
 const config: Config = {
   title: "Openlane",
@@ -91,6 +92,7 @@ const config: Config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           breadcrumbs: true,
+          remarkPlugins: [remarkFaqSchema],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -161,6 +163,7 @@ const config: Config = {
               { label: 'Overview', to: 'docs/platform/overview' },
               { label: 'Automation', to: 'docs/platform/automation/overview' },
               { label: 'Compliance Management', to: 'docs/platform/compliance-management/overview' },
+              { label: 'Custom Reports', to: 'docs/platform/custom-reports' },
               { label: 'Exposure', to: 'docs/platform/exposure/overview' },
               { label: 'Frameworks & Standards', to: 'docs/platform/standards/overview' },
               { label: 'GRC Fundamentals', to: 'docs/platform/grc-fundamentals/overview' },

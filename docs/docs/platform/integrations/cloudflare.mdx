@@ -34,8 +34,8 @@ If your traffic runs through Cloudflare, this integration connects your account 
 <Steps>
 
 1. In Cloudflare, go to **Manage Account** > **API tokens**.
-2. Click **Create Token** and build a custom token with read scopes for the resources you want Openlane to access.
-3. Save the token value; it is only shown once.
+1. Click **Create Token** and build a custom token with read scopes for the resources you want Openlane to access.
+1. Save the token value; it is only shown once.
 
 </Steps>
 
@@ -48,14 +48,14 @@ We recommend creating an **Account API Token** rather than a User API Token, bec
 <Steps>
 
 1. Navigate to **Organization Settings** > **Integrations** and find **Cloudflare**.
-2. Click **Configure** and enter the credential fields:
+1. Click **Configure** and enter the credential fields:
 
    | Field | Required | Description |
    |---|---|---|
    | `apiToken` | Yes | API token scoped to your Cloudflare account and zones |
    | `accountId` | Yes | Cloudflare account ID required for listing account members |
 
-3. Optionally configure data ingestion behavior:
+1. Optionally configure data ingestion behavior:
 
    | Setting | Description |
    |---|---|
@@ -67,7 +67,7 @@ We recommend creating an **Account API Token** rather than a User API Token, bec
    payload.status == 'ACTIVE'
    ```
 
-4. Click **Save & Connect**.
+1. Click **Save & Connect**.
 
 </Steps>
 
