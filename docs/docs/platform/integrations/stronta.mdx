@@ -8,35 +8,34 @@ sidebar_label: Stronta
 import Steps from '@site/src/components/Steps';
 import Term from '@site/src/components/Term';
 
-# ![stronta integration](./assets/stronta.png) Stronta Integration Guide
+# ![stronta integration](./assets/stronta.png) Stronta integration guide
 
 If your organization runs security awareness training through Stronta, this integration exports
 training completion to Openlane as <Term t="evidence">evidence</Term>. Each export creates an
 evidence record with the completion report attached, so training proof is ready for the
 <Term t="controls">controls</Term> it supports.
 
-## Key Capabilities
+## Capabilities
 
-* **Direct Evidence Export:** Send a training completion report to Openlane, which creates the
-  evidence record and attaches the report in one action.
-* **CSV Export:** Download the completion report as a CSV when you prefer to upload evidence
-  yourself.
-* **Program-Scoped Reports:** Export results for a single training program, such as Cybersecurity
-  Awareness, so that each evidence record maps to the training it demonstrates.
-* **Scoped Openlane Token:** Connect with an Openlane API token limited to evidence writes instead of
-  a personal credential.
+Stronta exports a training completion report to Openlane and creates an evidence record with the
+report attached, all in one action. You can also download the report as a CSV and upload it as evidence
+yourself.
+
+Reports are scoped to a single training program, such as Cybersecurity Awareness, so each evidence
+record maps to the training it demonstrates. The connection uses an Openlane API token limited to
+evidence writes rather than a personal credential.
 
 ## Prerequisites
 
-* A Stronta workspace on a paid plan with the Security Training module in use.
+* A Stronta workspace with the Security Training module enabled.
 * Administrative access in Stronta to enable **Admin Mode** and save the Openlane API token.
 * An Openlane API token that includes the `evidence:write` scope. Creating an API token requires a
   payment method on file for your Openlane organization. See
   [Programmatic Authentication](../settings/authentication/programmatic.mdx).
 
-## Step-by-Step Setup
+## Step-by-step setup
 
-### Step 1: Create an Openlane API Token
+### Step 1: Create an Openlane API token
 
 <Steps>
 
@@ -56,27 +55,19 @@ Create a dedicated token for this integration and grant only the scopes it needs
 
 <Steps>
 
-1. Open [app.stronta.com](https://app.stronta.com/) and sign in, or create an account if you do
-   not have one.
+1. Log in to [app.stronta.com](https://app.stronta.com/) as an admin.
 
-   ![stronta sign in and sign up page](./assets/screenshots/stronta_signup.png)
-
-1. Click **Settings** in the lower left navigation.
+1. Click **Settings** in the left navigation.
 
    ![stronta settings in the lower left navigation](./assets/screenshots/stronta_settings_nav.png)
 
-1. Enable **Admin Mode** with the slider in the lower left navigation. Admin Mode reveals the
+1. Enable **Admin Mode** with the slider in the left navigation. Admin Mode reveals the
    organization and integration settings.
 
    ![stronta admin mode in the lower left navigation](./assets/screenshots/stronta_admin_mode.png)
 
-1. Confirm the workspace is on a paid plan. If it shows the Starter Plan, click **Upgrade**, enter
-   payment details, accept the terms, and click **Complete Order**.
-
-   ![stronta upgrade button in organization settings](./assets/screenshots/stronta_upgrade.png)
-
-1. Return to **Settings**, find the **Openlane** integration, enter your API token in
-   **Enter Openlane API key**, and click **Save Key**.
+1. Find the **Openlane** integration, enter your API token in **Enter Openlane API key**, and click
+   **Save Key**.
 
    ![entering an openlane api key in the stronta openlane integration](./assets/screenshots/stronta_api_key.png)
 
@@ -84,7 +75,7 @@ Create a dedicated token for this integration and grant only the scopes it needs
 
 </Steps>
 
-### Step 3: Export Training Evidence
+### Step 3: Export training evidence
 
 <Steps>
 
@@ -106,27 +97,27 @@ Create a dedicated token for this integration and grant only the scopes it needs
 
 </Steps>
 
-## Validate Connection
+## Validate connection
 
 Saving the API token connects the integration immediately, and the Openlane integration card shows
 **Connected** with controls to **Update Key** or **Disconnect**. To confirm the connection end to
 end, run **Export to Openlane** from a training program and check for the new record in Openlane.
 
-## What Openlane Receives
+## What Openlane receives
 
 Each export creates one evidence record in Openlane. The record is named after the training program,
 for example **Stronta Training Program: Cybersecurity Awareness**, and the completion report is
 attached as a CSV file with one row per assigned user:
 
 ```text
-Full Name,Email Address,Videos Watched,Video Percentage Complete,Quizzes Passed,Quizzes Percentage Complete
-Example User,example@stronta.com,7,100%,1,100%
+Full Name,Email Address,Videos Watched,Video Percentage Complete,Quizzes Passed,Quizzes Percentage Complete,Overall Tasks Completed,Overall Completion Percentage
+Example User,example@stronta.com,7,100%,1,100%,8,100%
 ```
 
 ![stronta training evidence record in the openlane evidence center](./assets/screenshots/stronta_evidence_record.png)
 
-Link the record to the <Term t="controls">controls</Term> it supports. Exports do not link controls
-automatically, and unlinked evidence does not count toward a control at audit time.
+Link the record to the controls it supports. Exports do not link controls automatically, and
+unlinked evidence will not be seen by an auditor during a review.
 
 ## Disconnect
 
@@ -144,15 +135,15 @@ reconnect by saving a new token.
 
 ## Troubleshooting
 
-* **Key not accepted:** confirm the token value was copied in full and includes the `evidence:write`
-  scope.
-* **Integration disconnects after saving:** confirm the Stronta workspace is on a paid plan, which
-  the Openlane integration requires.
-* **Export to Openlane fails:** confirm the Openlane organization has a payment method on file, and
-  that the token has not expired or been revoked.
-* **No record appears after a CSV export:** CSV export only downloads a file. Upload it via the
-  [Evidence Center](../compliance-management/evidence/create.mdx).
-* **Record is missing controls:** link the record to the controls it supports.
+If an export fails, confirm that the Openlane token has not expired or been revoked, and that the token includes the
+`evidence:write` scope. Confirm as well that the Openlane organization has a
+payment method on file. Then, use the **Update Key** button on the integration card within Stronta to resubmit the key, to ensure that the correct value has been provided.
+
+A CSV export only downloads a file, so no record appears in Openlane until you upload it through the
+[Evidence Center](../compliance-management/evidence/create.mdx).
+
+If an evidence record is missing
+its controls, you must create links manually; the integration does not automatically link exported evidence to controls.
 
 ## References
 
