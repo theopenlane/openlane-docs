@@ -167,7 +167,10 @@ Config contains the configuration for the core server
         "microsoftteams": {},
         "onedrive": {},
         "oidclocal": {},
-        "email": {},
+        "email": {
+            "resend": {},
+            "postmark": {}
+        },
         "paymentreminder": {
             "paymentmethodinterval": 30,
             "deletiondays": 7,
@@ -210,7 +213,7 @@ Server settings for the echo server
 |**shutdowngraceperiod**|`integer`|ShutdownGracePeriod sets the grace period for in flight requests before shutting down<br/>|no|
 |**readtimeout**|`integer`|ReadTimeout sets the maximum duration for reading the entire request including the body<br/>|no|
 |**writetimeout**|`integer`|WriteTimeout sets the maximum duration before timing out writes of the response<br/>|no|
-|**idletimeout**|`integer`|IdleTimeout sets the maximum amount of time to wait for the next request when keep-alive are enabled<br/>|no|
+|**idletimeout**|`integer`|IdleTimeout sets the maximum amount of time to wait for the next request when keep-alives are enabled<br/>|no|
 |**readheadertimeout**|`integer`|ReadHeaderTimeout sets the amount of time allowed to read request headers<br/>|no|
 |**tls**|`object`|TLS settings for the server for secure connections<br/>||
 |**cors**|`object`|Config holds the cors configuration settings<br/>||
@@ -1873,7 +1876,10 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
     "microsoftteams": {},
     "onedrive": {},
     "oidclocal": {},
-    "email": {},
+    "email": {
+        "resend": {},
+        "postmark": {}
+    },
     "paymentreminder": {
         "paymentmethodinterval": 30,
         "deletiondays": 7,
@@ -2081,9 +2087,9 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
 |**testdir**|`string`|Directory for dev-mode email output<br/>|no|
-|**resendsecret**|`string`|Resend webhook signing secret<br/>|no|
-|**apikey**|`string`|Email provider API key<br/>|yes|
-|**provider**|`string`|Email service provider<br/>Enum: `"resend"`<br/>|yes|
+|**provider**|`string`|Email service provider<br/>Enum: `"resend"`, `"postmark"`<br/>|yes|
+|**resend**|`object`||yes|
+|**postmark**|`object`||yes|
 |**fromemail**|`string`|Sender email address<br/>|yes|
 |**supportemail**|`string`|Support contact email address<br/>|no|
 |**questionnaireemail**|`string`|Sender override for questionnaire auth emails<br/>|no|
@@ -2113,6 +2119,42 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 |**FooterTextColor**|`string`|Muted text color for headers footers and secondary content<br/>|no|
 |**AccentBorderColor**|`string`|Decorative accent color applied to borders only<br/>|no|
 |**Tagline**|`string`|Short descriptive footer line rendered above the social row in modern themes<br/>|no|
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "resend": {},
+    "postmark": {}
+}
+```
+
+ 
+<a name="defsemailresendconfig"></a>
+#### $defs/email\.ResendConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**apikey**|`string`|Resend API key<br/>|yes|
+|**webhooksecret**|`string`|Resend webhook signing secret<br/>|no|
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsemailpostmarkconfig"></a>
+#### $defs/email\.PostmarkConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**servertoken**|`string`|Postmark server API token<br/>|yes|
+|**messagestream**|`string`|Postmark message stream ID (defaults to outbound)<br/>|no|
+|**trackopens**|`boolean`|Enable Postmark open tracking<br/>|no|
+|**tracklinks**|`string`|Postmark link tracking mode<br/>Enum: `"None"`, `"HtmlAndText"`, `"HtmlOnly"`, `"TextOnly"`<br/>|no|
+|**webhooksecret**|`string`|Postmark webhook basic auth password<br/>|no|
 
 **Additional Properties:** not allowed 
  
@@ -2194,6 +2236,7 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 |**enabled**|`boolean`|||
 |**cel**|`object`|||
 |**gala**|`object`|||
+|**webhookallowprivateaddresses**|`boolean`|||
 
 **Additional Properties:** not allowed 
 **Example**
