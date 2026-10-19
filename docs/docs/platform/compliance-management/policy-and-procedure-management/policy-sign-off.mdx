@@ -24,7 +24,7 @@ Many organizations have a <Term t="controls">control</Term> stating that personn
 
 ## What recipients see
 
-Openlane exports each policy you choose to a PDF and places it in a questionnaire, followed by your acknowledgment statement. Recipients scroll through every PDF to the end before the statement becomes available, so a signature always follows a full read of each document.
+Openlane exports each policy you choose to a PDF and places it in a questionnaire, followed by your acknowledgment statement. The statement stays unavailable until the recipient has scrolled to the end of every PDF, so no one can sign without reaching the last page of each document.
 
 To sign, the recipient confirms the statement and accepts a typed signature generated from their name, or draws one instead. Openlane records the signing time, the recipient's email address, their IP address, and their browser with each signature. Recipients answer through a personal link in their email and do not need an Openlane account.
 
@@ -32,7 +32,7 @@ Each PDF carries the revision of the policy it was exported from, and the questi
 
 ## Supported policy sources
 
-You can send policies written in Openlane and policies managed in [Google Drive](../../integrations/google_drive.mdx). Openlane exports both to PDF when you create the request, so recipients read the same format either way.
+You can send policies written in Openlane and policies managed in [Google Drive](../../integrations/google_drive.mdx). Openlane exports both to PDF when you create the request.
 
 Policies managed in [OneDrive](../../integrations/onedrive.mdx) <StatusChip status="coming-soon" /> cannot be added to an acknowledgment request yet.
 
@@ -51,8 +51,6 @@ Policies managed in [OneDrive](../../integrations/onedrive.mdx) <StatusChip stat
 
 Each recipient receives an email with their personal link, and the confirmation in the console links to the questionnaire. If any send fails, the request is still created, and you can send to those recipients again from the questionnaire.
 
-A saved draft appears with your other questionnaires under [**Questionnaires**](https://console.theopenlane.io/automation/questionnaires), where you can edit it and send it later.
-
 :::info[Important]
 In this flow you select each recipient individually. To send to a larger group or on a schedule, use a [campaign](#send-through-a-campaign).
 :::
@@ -61,11 +59,11 @@ In this flow you select each recipient individually. To send to a larger group o
 
 The **Acknowledgments** tab on each policy lists every request that includes the policy. Expand a request to see each recipient and where their response stands. You can also export the responses from the questionnaire to hand to an auditor.
 
-Responses also appear on each person's record in [Personnel](../../registry/personnel/overview.mdx), so you can review everything one person has signed without opening each policy.
+When a recipient is in [Personnel](../../registry/personnel/overview.mdx), their responses also appear on their record, so you can review everything one person has signed without opening each policy.
 
 ## Customize the questionnaire
 
-Every acknowledgment request is saved as a questionnaire that you can edit like any other. Select **Save draft** instead of sending, then open the draft from [**Questionnaires**](https://console.theopenlane.io/automation/questionnaires) to reword the statement or add questions before the signature.
+Every acknowledgment request is saved as a questionnaire that you can edit like any other. Select **Save draft** instead of sending, then open the draft from [**Questionnaires** in the console](https://console.theopenlane.io/automation/questionnaires), where saved drafts appear, to reword the statement or add questions before the signature.
 
 To include another document, add a PDF question. It can embed a policy, which records that policy's revision, or a PDF you upload or link by URL.
 
@@ -75,17 +73,17 @@ When you send a request directly from a policy, Openlane emails each recipient f
 
 ## Send through a campaign
 
-Acknowledgment requests send directly and do not create a [campaign](../../automation/campaigns.mdx). We recommend a campaign when the same sign-off repeats on a schedule, such as an annual acceptable use acknowledgment, because a campaign reruns on its own schedule to a set of recipients. 
+Acknowledgment requests send directly and do not create a [campaign](../../automation/campaigns.mdx). We recommend a campaign when the same sign-off repeats on a schedule, such as an annual acceptable use acknowledgment, because a campaign reruns on its own schedule to a set of recipients.
 
 <Steps>
 
 1. Follow the first three steps of [Send an acknowledgment request](#send-an-acknowledgment-request), then select **Save draft**.
-1. Open the saved questionnaire under [**Questionnaires**](https://console.theopenlane.io/automation/questionnaires) and select **Save as Template**.
+1. Open the saved questionnaire under **Questionnaires** and select **Save as Template**.
 1. Create a campaign, select the template you saved, and add your recipients and schedule.
 
 </Steps>
 
-Campaign responses are tracked on the campaign and on each person's record. The [Questionnaires](../../automation/assessments.mdx) page covers how recipients respond and how follow-ups work.
+Campaign responses are tracked on the campaign and on each person's record. [How recipients respond](../../automation/assessments.mdx#how-recipients-respond) covers the response flow and follow-ups.
 
 ## Audience-based sign-off <StatusChip status="coming-soon" />
 
@@ -110,7 +108,7 @@ They stay tied to the revision the recipient read. A new revision needs a new ac
 </details>
 
 <details>
-<summary>Can a recipient sign without reading the policy?</summary>
+<summary>Can a recipient sign without opening every policy?</summary>
 
 No. The acknowledgment statement and signature stay unavailable until the recipient has scrolled to the end of every attached PDF.
 
