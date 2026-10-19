@@ -30,14 +30,18 @@ To sign, the recipient confirms the statement and accepts a typed signature gene
 
 Each PDF carries the revision of the policy it was exported from, and the questionnaire stays linked to the policy. When you publish a new revision, existing signatures remain tied to the revision the recipient read. To collect sign-off on the new revision, send a new request.
 
-## Send an acknowledgment request
+## Supported policy sources
 
-You can start a request from the `...` menu on the **Policies** table, from the actions menu on the policies report, or from the `...` menu on a policy's page. Starting from a policy's page selects that policy for you.
+You can send policies written in Openlane and policies managed in [Google Drive](../../integrations/google_drive.mdx). Openlane exports both to PDF when you create the request, so recipients read the same format either way.
+
+Policies managed in [OneDrive](../../integrations/onedrive.mdx) <StatusChip status="coming-soon" /> cannot be added to an acknowledgment request yet.
+
+## Send an acknowledgment request
 
 <Steps>
 
-1. Select **Send acknowledgment request**.
-1. Choose the policies to include. One request can cover up to 10 policies, and recipients sign once for all of them.
+1. Open a policy and select **Send acknowledgment request** from the `...` menu. The policy you opened is already selected. To start a request without a policy selected, use the same option in the `...` menu on the **Policies** table.
+1. Add any other policies the request should cover. One request can include up to 10 policies, and recipients sign once for all of them.
 1. Review the name and the acknowledgment statement. The name defaults to the policy name, and the statement defaults to "I acknowledge that I’ve read and understand the documents above." Edit either one to match your own wording.
 1. Select **Save draft** to create the questionnaire without sending it, or select **Send now** to continue.
 1. Add recipients by choosing personnel or entering email addresses, and set a due date if you need one. Select **Preview** to open the questionnaire as recipients will see it.
@@ -61,13 +65,17 @@ Responses also appear on each person's record in [Personnel](../../registry/pers
 
 ## Customize the questionnaire
 
-An acknowledgment request is a standard questionnaire, so you can change it in the questionnaire editor after you save it as a draft. Reword the statement, add questions before the signature, or attach more documents. A PDF question can attach a policy (which records its revision), an uploaded PDF, or a PDF linked by URL. Signature questions are available in any questionnaire, not only in acknowledgment requests.
+Every acknowledgment request is saved as a questionnaire that you can edit like any other. Select **Save draft** instead of sending, then open the draft from [**Questionnaires**](https://console.theopenlane.io/automation/questionnaires) to reword the statement or add questions before the signature.
 
-To reuse the same layout for later requests, open the questionnaire and select **Save as Template**. [Building a questionnaire](../../automation/assessments.mdx#building-a-questionnaire) covers templates and the editor. The email recipients receive uses your campaign email template and branding, described in [email delivery and branding](../../automation/campaigns.mdx#email-delivery-and-branding).
+To include another document, add a PDF question. It can embed a policy, which records that policy's revision, or a PDF you upload or link by URL.
+
+If you send the same acknowledgment regularly, open the questionnaire and select **Save as Template**, then start later requests from the template. [Building a questionnaire](../../automation/assessments.mdx#building-a-questionnaire) covers the editor and templates.
+
+When you send a request directly from a policy, Openlane emails each recipient from its own address and with Openlane branding. The email names your organization and the request and contains the recipient's link. To use your own template and branding, send through a campaign, described in [email delivery and branding](../../automation/campaigns.mdx#email-delivery-and-branding). Sending from your own address also requires the [email integration](../../integrations/email.mdx).
 
 ## Send through a campaign
 
-Acknowledgment requests send directly and do not create a [campaign](../../automation/campaigns.mdx). We recommend a campaign when the same sign-off repeats on a schedule, such as an annual acceptable use acknowledgment, because a campaign reruns on its own schedule and resends only to the people who have not finished.
+Acknowledgment requests send directly and do not create a [campaign](../../automation/campaigns.mdx). We recommend a campaign when the same sign-off repeats on a schedule, such as an annual acceptable use acknowledgment, because a campaign reruns on its own schedule to a set of recipients. 
 
 <Steps>
 
