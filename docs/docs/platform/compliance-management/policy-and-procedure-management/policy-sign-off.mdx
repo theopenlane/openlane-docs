@@ -1,0 +1,117 @@
+---
+title: Policy Sign-Off
+description: Send policies for signed acknowledgment and track who signed each revision
+sidebar_position: 3
+keywords:
+  - policy sign-off
+  - policy acknowledgment
+  - policy attestation
+  - e-signature
+  - employee acknowledgment
+tags:
+  - policies
+  - compliance
+  - questionnaires
+---
+
+import Steps from '@site/src/components/Steps';
+import StatusChip from '@site/src/components/StatusChip';
+import Term from '@site/src/components/Term';
+
+# Policy sign-off
+
+Many organizations have a <Term t="controls">control</Term> stating that personnel acknowledge security policies when they join and annually thereafter. To test that control, an auditor samples from a list of personnel and asks for each person's signed acknowledgment. An acknowledgment request sends one or more policies to recipients as PDFs, asks them to read each one and sign, and records which revision of each policy they signed.
+
+## What recipients see
+
+Openlane exports each policy you choose to a PDF and places it in a questionnaire, followed by your acknowledgment statement. The recipient must scroll to the end of every PDF to enable the acknowledgement statement, so no one can sign without reaching the last page of each document.
+
+To sign, the recipient confirms the statement and accepts a typed signature generated from their name, or draws one instead. Openlane records the signing time, the recipient's email address, their IP address, and their browser with each signature. Recipients answer through a personal link in their email and do not need an Openlane account.
+
+Each PDF carries the revision of the policy it was exported from, and the questionnaire stays linked to the policy. When you publish a new revision, existing signatures remain tied to the revision the recipient read. To collect sign-off on the new revision, send a new request.
+
+## Supported policy sources
+
+You can send policies written in Openlane and policies managed in [Google Drive](../../integrations/google_drive.mdx). Openlane exports both to PDF when you create the request.
+
+:::warning[OneDrive managed policies]
+Support for policies managed in [OneDrive](../../integrations/onedrive.mdx) is coming soon. Until then, they cannot be added to an acknowledgment request.
+:::
+
+## Send an acknowledgment request
+
+<Steps>
+
+1. Open a policy and select **Send acknowledgment request** from the `...` menu. The policy you opened is already selected. To start a request without a policy selected, use the same option in the `...` menu on the **Policies** table.
+1. Add any other policies the request should cover. One request can include up to 10 policies, and recipients sign once for all of them.
+1. Review the name and the acknowledgment statement. The name defaults to the policy name, and the statement defaults to "I acknowledge that I’ve read and understand the documents above." Edit either one to match your own wording.
+1. Select **Save draft** to create the questionnaire without sending it, or select **Send now** to continue.
+1. Add recipients by choosing personnel or entering email addresses, and set a due date if you need one. Select **Preview** to open the questionnaire as recipients will see it.
+1. Select **Create & send**.
+
+</Steps>
+
+Each recipient receives an email with their personal link, and the confirmation in the console links to the questionnaire. If any send fails, the request is still created, and you can send to those recipients again from the questionnaire.
+
+:::info[Important]
+In this flow you select each recipient individually. To send to a larger group or on a schedule, use a [campaign](#send-through-a-campaign).
+:::
+
+## Track responses
+
+The **Acknowledgments** tab on each policy lists every request that includes the policy. Expand a request to see each recipient and where their response stands. You can also export the responses from the questionnaire to hand to an auditor.
+
+When a recipient is in [Personnel](../../registry/personnel/overview.mdx), their responses also appear on their record, so you can review everything one person has signed without opening each policy.
+
+## Customize the questionnaire
+
+Every acknowledgment request is saved as a questionnaire that you can edit like any other. Select **Save draft** instead of sending, then open the draft from [**Questionnaires** in the console](https://console.theopenlane.io/automation/questionnaires), where saved drafts appear, to reword the statement or add questions before the signature.
+
+To include another document, add a PDF question. It can embed a policy, which records that policy's revision, or a PDF you upload or link by URL.
+
+If you send the same acknowledgment regularly, open the questionnaire and select **Save as Template**, then start later requests from the template. [Building a questionnaire](../../automation/assessments.mdx#building-a-questionnaire) covers the editor and templates.
+
+When you send a request directly from a policy, Openlane emails each recipient from its own address and with Openlane branding. The email names your organization and the request and contains the recipient's link. To use your own template and branding, send through a campaign, described in [email delivery and branding](../../automation/campaigns.mdx#email-delivery-and-branding). Sending from your own address also requires the [email integration](../../integrations/email.mdx).
+
+## Send through a campaign
+
+Acknowledgment requests send directly and do not create a [campaign](../../automation/campaigns.mdx). We recommend a campaign when the same sign-off repeats on a schedule, such as an annual acceptable use acknowledgment, because a campaign reruns on its own schedule to a set of recipients.
+
+<Steps>
+
+1. Follow the first three steps of [Send an acknowledgment request](#send-an-acknowledgment-request), then select **Save draft**.
+1. Open the saved questionnaire under **Questionnaires** and select **Save as Template**.
+1. Create a campaign, select the template you saved, and add your recipients and schedule.
+
+</Steps>
+
+Campaign responses are tracked on the campaign and on each person's record. [How recipients respond](../../automation/assessments.mdx#how-recipients-respond) covers the response flow and follow-ups.
+
+## Audience-based sign-off <StatusChip status="coming-soon" />
+
+Acknowledgment requests will send through campaigns directly, with audiences defined by rule instead of by name. For example, you will be able to send a policy to all personnel of type employee on a set interval. Set the audience and cadence once, and new personnel who match the rule are included in the next run.
+
+Until then, use the [campaign steps](#send-through-a-campaign) above for recurring sign-off.
+
+## FAQ
+
+<details>
+<summary>Do recipients need an Openlane account to sign?</summary>
+
+No. Each recipient answers through a personal link sent to their email address.
+
+</details>
+
+<details>
+<summary>What happens to signatures when a policy changes?</summary>
+
+They stay tied to the revision the recipient read. A new revision needs a new acknowledgment request, which gives you a separate record of who signed each version.
+
+</details>
+
+<details>
+<summary>Can a recipient sign without opening every policy?</summary>
+
+No. The acknowledgment statement and signature are not enabled until the recipient has scrolled to the end of every attached PDF.
+
+</details>

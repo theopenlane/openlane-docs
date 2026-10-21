@@ -12,14 +12,14 @@ repos:
     hooks:
       - id: yamlfmt
   - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.43.5
+    rev: v1.51.1
     hooks:
       - id: typos
   - repo: https://github.com/codespell-project/codespell # another spell checker because typos is not perfect and neither is codespell
-    rev: v2.4.1
+    rev: v2.4.3
     hooks:
       - id: codespell
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.21.0
+    rev: v0.23.3
     hooks:
       - id: markdownlint-cli2
