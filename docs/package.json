@@ -38,7 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "bun@1.4.3",
+  "packageManager": "bun@1.4.4",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
