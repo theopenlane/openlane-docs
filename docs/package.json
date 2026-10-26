@@ -10,7 +10,7 @@
     "@fontsource/inter": "^5.2.8",
     "@fontsource/outfit": "^5.2.5",
     "@mdx-js/react": "^3.0.0",
-    "@mermaid-js/layout-elk": "^0.2.0",
+    "@mermaid-js/layout-elk": "^1.0.0",
     "@scalar/api-reference": "^1.64.0",
     "@scalar/docusaurus": "^0.8.33",
     "bufferutil": "4.1.0",
