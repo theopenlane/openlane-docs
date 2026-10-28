@@ -1,0 +1,36 @@
+---
+title: User management
+sidebar_label: Overview
+sidebar_position: 1
+description: Members, roles, and groups that decide who belongs to your organization and what they can access
+tags:
+  - settings
+  - members
+  - groups
+keywords:
+  - user management
+  - organization members
+  - roles
+  - groups
+  - access management
+---
+
+# User management
+
+User management controls who belongs to your organization and what each person can reach once they are in. It matches `User Management` in the console, which holds the Members and Groups pages.
+
+## Members and roles
+
+Every person in your organization is a member with one base role, and that role sets the permission floor for everything they do. Admins, members, and auditors can also hold additional roles that extend their access for one domain. [Members and Roles](./members.mdx) covers inviting people, how people join automatically, and the per-member controls for roles, SSO exemptions, and 2FA enforcement.
+
+## Groups
+
+Groups give a set of members access to specific objects, so you grant access once for a team instead of person by person. Every organization starts with three groups that stay in sync with each member's base role. [Groups](./groups/overview.mdx) explains how to organize them, [group permissions](./groups/permissions.mdx) covers inheritance and overlapping grants, and [System Managed Groups](./groups/system-managed.mdx) describes the built-in Viewers, Admins, and All Members groups.
+
+## Permissions
+
+[Permissions](./permissions.mdx) lays out what each base role and additional role can do, object by object, and how access granted through groups and programs layers on top of a role.
+
+## Related settings
+
+Allowed email domains, SSO enforcement, and just-in-time provisioning decide how people join without an invitation, and they live under `Organization Settings` → `Authentication`, covered in [Authentication](../authentication/overview.mdx).

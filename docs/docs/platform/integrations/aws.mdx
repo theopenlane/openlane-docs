@@ -49,7 +49,7 @@ Before creating anything in AWS, retrieve the two values Openlane provides for y
 
 <Steps>
 
-1. Navigate to **Organization Settings** > **Integrations** and find **AWS**.
+1. Go to **Automation** > **Integrations** and find **AWS**.
 1. Click **Configure**.
 1. Copy the pre-generated values shown on the configuration page:
    - **Openlane Principal ARN**: the ARN of the Openlane IAM identity that will assume the role in your account
@@ -249,7 +249,7 @@ Copy the `RoleArn` value; you will enter it into Openlane in Step 4.
 
 <Steps>
 
-1. Return to **Organization Settings** > **Integrations** > **AWS** > **Configure**.
+1. Return to **Automation** > **Integrations** > **AWS** > **Configure**.
 1. Enter the following. The External ID is already pre-populated from Step 1, but confirm it matches if you have navigated away from the page:
 
    | Field | Required | Purpose |
@@ -401,7 +401,7 @@ We recommend the cross-account role approach because static credentials do not r
 
 <Steps>
 
-1. Navigate to **Organization Settings** > **Integrations** > **AWS** > **Configure**.
+1. Go to **Automation** > **Integrations** > **AWS** > **Configure**.
 1. Enter the following fields, leaving `roleArn` and `externalId` empty, as they are not used with static credentials:
 
    | Field | Required | Purpose |
@@ -439,7 +439,7 @@ Once the findings land in Openlane, you can link them to affected assets, create
 
 ## Disconnect
 
-To remove this integration, navigate to **Organization Settings** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+To remove this integration, go to **Automation** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
 
 ## Troubleshooting
 

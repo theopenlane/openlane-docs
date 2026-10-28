@@ -42,15 +42,16 @@ Inheritance cannot be cut off partway down the tree: a grant on a parent reaches
 
 ## Resources Belong to One Organization
 
-Every resource (a control, a policy, a risk, an asset) is owned by exactly one organization. There is no shared ownership across organizations. Access to individual resources within an organization is then managed through roles and [groups](../groups/overview.mdx), which can grant or restrict access at the object level; see [Authorization](../authorization/overview.mdx) for the full model.
+Every resource (a control, a policy, a risk, an asset) is owned by exactly one organization. There is no shared ownership across organizations. Access to individual resources within an organization is then managed through roles and [groups](../user-management/groups/overview.mdx), which can grant or restrict access at the object level; see [Authorization](../user-management/permissions.mdx) for the full model.
 
 ## Managing Your Organization
 
 The pages in this section cover day-to-day administration, mirroring what you'll find under `Organization Settings` in the console:
 
 - [Profile](./profile.mdx): name, display name, description, and avatar
-- [Members and Roles](./members.mdx): inviting people, roles, and how people join automatically
 - [Billing and Subscriptions](./billing.mdx): billing contact, payment methods, and feature modules
+
+Members, roles, and groups live under `User Management`, covered in [Members and Roles](../user-management/members.mdx) and [Groups](../user-management/groups/overview.mdx).
 
 Authentication settings (single sign-on (SSO), multi-factor authentication (MFA) enforcement, email domains) live under [Authentication](../authentication/overview.mdx).
 
@@ -64,8 +65,8 @@ Only organization Owners can delete an organization.
 
 <Steps>
 
-1. Go to Organization Settings
-1. Navigate to the Danger Zone or Delete section
+1. Go to `Organization Settings` → `General Settings`
+1. Scroll to the **Delete organization** section
 1. Click **Delete Organization**
 1. Confirm by typing the organization name
 1. Confirm the deletion
