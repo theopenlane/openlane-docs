@@ -369,9 +369,9 @@ const config: Config = {
           { from: "/docs/platform/security/authentication/programmatic", to: "/docs/platform/settings/authentication/programmatic" },
           { from: "/docs/platform/security/authentication/sso", to: "/docs/platform/settings/authentication/sso" },
           { from: "/docs/platform/security/authorization/overview", to: "/docs/platform/settings/user-management/permissions" },
-          { from: "/docs/platform/security/groups/overview", to: "/docs/platform/settings/groups/overview" },
+          { from: "/docs/platform/security/groups/overview", to: "/docs/platform/settings/user-management/groups/overview" },
           { from: "/docs/platform/security/groups/permissions", to: "/docs/platform/settings/user-management/groups/permissions" },
-          { from: "/docs/platform/security/groups/system-managed", to: "/docs/platform/settings/groups/system-managed" },
+          { from: "/docs/platform/security/groups/system-managed", to: "/docs/platform/settings/user-management/groups/system-managed" },
           // PAT page merged into the combined token doc
           { from: "/docs/developers/security/personal-access-tokens", to: "/docs/developers/security/api-tokens-and-pats" },
           // CI script inventory page removed

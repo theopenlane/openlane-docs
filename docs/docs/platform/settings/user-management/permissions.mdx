@@ -23,19 +23,13 @@ tags:
 
 import Term from '@site/src/components/Term';
 
-# Permissions Model
+# Permissions model
 
 Openlane decides what each user can see and do through three things layered together: a **base role** at the organization level, **role assignments** on groups and programs, and **object-level grants**. Effective access is the union of all three, so you can keep most people at a read-only baseline and grant write access only where they actually work.
 
-## How Access Is Layered
+## How access is layered
 
-Roles can be assigned at three levels:
-
-- **Organization**: global access across the entire organization
-- **Group**: permissions for collections of users
-- **Program**: permissions scoped to a specific compliance program
-
-Each level supports a common set of roles (Admin and Member), providing read/write or read access to objects within that scope. Permissions are **cumulative**: a user who is an organization member but a program admin has read access across the org and write access inside that program.
+Roles can be assigned at three levels: the organization, for access across the entire organization; a group, for permissions shared by a collection of users; and a program, for permissions scoped to one compliance program. Each level supports a common set of roles (Admin and Member), providing read/write or read access to objects within that scope. Permissions are **cumulative**: a user who is an organization member but a program admin has read access across the org and write access inside that program.
 
 ```mermaid
 flowchart TB
@@ -85,13 +79,13 @@ flowchart TB
     classDef ro stroke-dasharray:4 2
 ```
 
-## Base Roles
+## Base roles
 
 Every user holds exactly one base role at the organization level: the permission floor before anything else is layered on.
 
 **Owner** (one per organization) has full access and is the only role that can delete the organization, transfer ownership, or bypass organization single sign-on (SSO) requirements. Ownership can be transferred but never shared.
 
-**Super Admin** matches the Owner everywhere else (full access to all objects, actions, and settings) but cannot delete the organization or transfer ownership. There is no cap on Super Admin seats; it's the right role for trusted administrators who need full operational access without holding the single ownership seat.
+**Super Admin** matches the Owner everywhere else (full access to all objects, actions, and settings) but cannot delete the organization or transfer ownership. There is no cap on Super Admin seats; it is the right role for trusted administrators who need full operational access without holding the single ownership seat.
 
 **Admin** creates and manages most objects (policies, procedures, controls, risks, <Term t="evidence">evidence</Term>, control mappings), plus trust center, integrations, registry, and exposure. Admins manage members, roles, and invites, and can create groups (post-creation group membership is managed by group admins or the owner). Admins get **view** access to programs by default; editing a program requires being assigned as a program admin on it. Admins do not have billing access.
 
@@ -99,7 +93,7 @@ Every user holds exactly one base role at the organization level: the permission
 
 **Auditor** gets limited read access scoped to compliance objects (programs, policies, procedures, controls, subcontrols), plus full access to evidence and reviews, and can create comments, discussions, and tasks. This lets external auditors review compliance data without the ability to modify anything else.
 
-### Default Permissions by Role
+### Default permissions by role
 
 Legend: **Full** = create, edit, delete · **Read** = read only · **Create** = create/upload only · - = no access
 
@@ -130,9 +124,9 @@ Legend: **Full** = create, edit, delete · **Read** = read only · **Create** = 
 
 These are the defaults. Additional access layers on through group membership, program-level role assignment, or functional roles.
 
-## Functional Roles
+## Functional roles
 
-Functional roles are **additive**: assigned on top of a base role to extend permissions for one domain. They're available to admins, members, and auditors (owners and super admins already have full access):
+Functional roles are **additive**: assigned on top of a base role to extend permissions for one domain. They are available to admins, members, and auditors (owners and super admins already have full access):
 
 | Functional Role | Grants Access To |
 | --- | --- |
@@ -145,27 +139,19 @@ Functional roles are **additive**: assigned on top of a base role to extend perm
 | **Workflow Manager** | Workflow definitions, scheduled jobs, job runners, job templates, integrations, and integration webhooks |
 | **Campaign Manager** | Campaigns, assessments, templates, email templates, email branding, and notification templates |
 
-Each role grants access to its domain only: a Policy Manager can't manage risks, and a Risk Manager can't manage policies, unless they also hold Compliance Manager (which inherits both). Functional roles can also be assigned to groups; we recommend this route for giving a whole team domain access in one step.
+Each role grants access to its domain only: a Policy Manager cannot manage risks, and a Risk Manager cannot manage policies, unless they also hold Compliance Manager (which inherits both). Functional roles can also be assigned to groups; we recommend this route for giving a whole team domain access in one step.
 
-## Groups and Programs
+## Groups and programs
 
 Groups and programs support the same role structure as the organization: an **Admin** manages membership, settings, and related objects; a **Member** gets read access to the group's or program's objects by default. This is how you delegate without granting org-wide access: a program admin manages controls, policies, and evidence within that program; a group member inherits whatever access the group has been granted on specific objects.
 
-Two behaviors worth knowing:
-
-- **Permissions inherit** through relationships: an editor of a group can inherit editor access to programs associated with that group.
-- **The most permissive grant wins** when a user's groups overlap: if one group can edit a program and another can only view it, the user can edit it.
+Permissions inherit through relationships, so an editor of a group can inherit editor access to programs associated with that group. When a user's groups overlap, the most permissive grant wins: if one group can edit a program and another can only view it, the user can edit it.
 
 See [Group Permissions](./groups/permissions.mdx) for inheritance and overlap in depth, and [System Managed Groups](./groups/system-managed.mdx) for the built-in Viewers, Admins, and All Members groups.
 
-## Object-Level Grants
+## Object-level grants
 
-Beyond roles, owners and admins can grant groups:
-
-- **Object-specific permissions**: e.g. edit rights on a single control
-- **Object creation rights**: e.g. allowing a group to create policies, risks, or evidence within the organization
-
-This isn't currently available in the UI, but the API supports it; see the [Permissions GraphQL examples](../../../developers/graphql-examples/permissions.mdx).
+Beyond roles, owners and admins can grant a group object-specific permissions, such as edit rights on a single control, or object creation rights, such as permission to create policies, risks, or evidence in the organization. This is not available in the UI, but the API supports it; see the [Permissions GraphQL examples](../../../developers/graphql-examples/permissions.mdx).
 
 ## FAQ
 
@@ -191,9 +177,9 @@ Yes. Base role and program role are independent. A Member assigned as program ad
 </details>
 
 <details>
-<summary>What's the difference between Admin and Super Admin?</summary>
+<summary>What is the difference between Admin and Super Admin?</summary>
 
-The differences are billing access and organization deletion. Admins can't manage billing or subscriptions; Super Admins can, and are equivalent to the Owner except they can't delete the organization or transfer ownership.
+The differences are billing access and organization deletion. Admins cannot manage billing or subscriptions; Super Admins can, and are equivalent to the Owner except they cannot delete the organization or transfer ownership.
 
 </details>
 

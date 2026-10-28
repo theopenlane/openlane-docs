@@ -26,18 +26,18 @@ import Term from '@site/src/components/Term';
 
 Groups carry permissions for objects across Openlane, and those permissions determine what actions group members can perform. Permissions inherit across related objects and combine when grants overlap; you can also use GraphQL queries and mutations to view and define the relationships between objects (e.g., programs, controls) and the permissions assigned to users or groups.
 
-## Permission Inheritance
+## Permission inheritance
 
 Permission inheritance propagates permissions from one object to another, typically from a parent object to its child objects. This keeps permissions consistent across related objects without requiring you to define them explicitly on each one.
 
 Relationships between objects are defined in the system's underlying data model, and those relationships specify how permissions are inherited from one object to another. Permissions can be inherited directly or through intermediary relationships. For example, a user who is an editor of a group can inherit editor permissions for all programs associated with that group.
 
 
-## Permission Overlap
+## Permission overlap
 
 When a user is in multiple groups with different permissions for the same object, the most permissive set of permissions typically applies. In this case, if a user is in one group that can edit a program and another group that can only view the program, the user will have the higher level of access, which is the ability to edit the program.
 
-**Example Scenario**:
+**Example scenario**:
 
 | Group | Permission on `Program1` |
 | --- | --- |
@@ -47,15 +47,15 @@ When a user is in multiple groups with different permissions for the same object
 `User1`, a member of both groups, has editor permissions on `Program1` because editor is more permissive than viewer.
 
 
-## Managing Group Permissions in the UI
+## Managing group permissions in the UI
 
 You can manage group permissions directly through the Openlane user interface without writing GraphQL queries. The UI provides controls for assigning and revoking permissions for groups and users.
 
-**Steps to Manage Permissions in the UI:**
+**Steps to manage permissions in the UI:**
 
 <Steps>
 
-1. **Navigate to Groups:**
+1. **Go to Groups:**
   Go to `User Management` → `Groups` from the main navigation menu.
 
 1. **Select a Group:**

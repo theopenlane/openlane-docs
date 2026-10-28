@@ -1,5 +1,5 @@
 ---
-title: Members and Roles
+title: Members and roles
 sidebar_label: Members
 sidebar_position: 2
 description: Membership, roles, and automatic joining for your organization
@@ -18,11 +18,11 @@ keywords:
 import Steps from '@site/src/components/Steps';
 import Term from '@site/src/components/Term';
 
-# Members and Roles
+# Members and roles
 
 People become members of your organization through an invitation, by auto-joining on a verified email domain, or through your identity provider when SSO is enforced. Every member carries a role that determines what they can do. Member management lives under `User Management` → `Members`.
 
-## Inviting Members
+## Inviting members
 
 <Steps>
 
@@ -36,7 +36,7 @@ People become members of your organization through an invitation, by auto-joinin
 
 </Steps>
 
-The person receives an email with a link to accept the invitation. The link is valid for 14 days; if they don't accept in time, you can resend the invitation or create a new one. Invitations work regardless of your SSO settings, and an invitation marked SSO-exempt carries that exemption onto the resulting member.
+The person receives an email with a link to accept the invitation. The link is valid for 14 days; if they do not accept in time, you can resend the invitation or create a new one. Invitations work regardless of your SSO settings, and an invitation marked SSO-exempt carries that exemption onto the resulting member.
 
 :::tip
 There are no per-user fees, so we recommend inviting your whole team rather than a single "compliance owner". The program works best when it reflects how your organization actually operates.
@@ -60,11 +60,11 @@ The exact object-by-object permissions for each role are laid out in the [author
 
 Admins, members, and auditors can also hold additional roles, such as Compliance Manager or Risk Manager, that extend their base role with full access to one domain. Owners and Super Admins already have full access, so additional roles do not apply to them. To assign them, open the actions menu on a member's row and select **Manage Additional Roles**. [Functional roles](./permissions.mdx#functional-roles) lists each role and what it grants, and covers assigning them to a group instead of to individuals.
 
-## Managing Members
+## Managing members
 
 The Members section lists every current member, their role, and when they joined. The actions menu on each member's row holds the per-member controls: **Change Base Role**, **Manage Additional Roles**, **Mark as SSO Exempt**, **Mark as 2FA Enforced**, and **Remove Member**. Members can also leave the organization themselves at any time.
 
-## Joining Automatically
+## Joining automatically
 
 Beyond invitations, there are two mechanisms that add people to your organization without a manual invite, and which one applies depends on whether SSO is enforced:
 
@@ -74,5 +74,5 @@ Beyond invitations, there are two mechanisms that add people to your organizatio
 Both are configured under `Organization Settings` → `Authentication`, and the [SSO guide](../authentication/sso.mdx#getting-people-into-your-organization) covers the mechanics, the settings, and how to choose between them. Restricting allowed email domains also constrains who can be invited; free email providers like Gmail cannot be used as allowed domains.
 
 :::tip
-If you're working with a fractional chief information security officer (CISO) or consultant, adding their domain upfront (as an allowed domain, or as an [SSO exempt domain](../authentication/sso.mdx#exemptions) when SSO is enforced) makes collaboration much smoother.
+If you are working with a fractional chief information security officer (CISO) or consultant, adding their domain upfront (as an allowed domain, or as an [SSO exempt domain](../authentication/sso.mdx#exemptions) when SSO is enforced) makes collaboration much smoother.
 :::
