@@ -1,7 +1,7 @@
 ---
 title: Members and Roles
 sidebar_label: Members
-sidebar_position: 3
+sidebar_position: 2
 description: Membership, roles, and automatic joining for your organization
 tags:
   - organizations
@@ -20,7 +20,7 @@ import Term from '@site/src/components/Term';
 
 # Members and Roles
 
-People become members of your organization through an invitation, by auto-joining on a verified email domain, or through your identity provider when SSO is enforced. Every member carries a role that determines what they can do. Member management lives under `Organization Settings` → `Members`.
+People become members of your organization through an invitation, by auto-joining on a verified email domain, or through your identity provider when SSO is enforced. Every member carries a role that determines what they can do. Member management lives under `User Management` → `Members`.
 
 ## Inviting Members
 
@@ -44,24 +44,25 @@ There are no per-user fees, so we recommend inviting your whole team rather than
 
 ## Roles
 
-Each member has one role:
+Each member has one base role:
 
 | Role | What it can do |
 | ---- | -------------- |
 | Owner | Full control, including billing, ownership transfer, and deleting the organization; always exempt from SSO enforcement so you cannot lock yourself out |
-| Super Admin | Everything an admin can do, plus billing and subscriptions |
+| Super Admin | The same access as the Owner, including billing and subscriptions, except deleting the organization and transferring ownership |
 | Admin | Manages organization settings, members, and most objects; no billing access |
 | Member | Day-to-day work with organization resources, including sending invites |
 | Auditor | Read-oriented access designed for external auditors, with the ability to work with evidence and reviews |
 
-The exact object-by-object permissions for each role are laid out in the [authorization matrix](../authorization/overview.mdx); when role-level access is too coarse, [groups](../groups/overview.mdx) refine it per object.
+The exact object-by-object permissions for each role are laid out in the [authorization matrix](./permissions.mdx); when role-level access is too coarse, [groups](./groups/overview.mdx) refine it per object.
+
+### Additional roles
+
+Admins, members, and auditors can also hold additional roles, such as Compliance Manager or Risk Manager, that extend their base role with full access to one domain. Owners and Super Admins already have full access, so additional roles do not apply to them. To assign them, open the actions menu on a member's row and select **Manage Additional Roles**. [Functional roles](./permissions.mdx#functional-roles) lists each role and what it grants, and covers assigning them to a group instead of to individuals.
 
 ## Managing Members
 
-The Members section lists every current member, their role, and when they joined.
-
-- **Change a role**: find the member, click their current role, select the new role, and confirm.
-- **Remove a member**: find the member, click the remove option, and confirm. Members can also leave the organization themselves at any time.
+The Members section lists every current member, their role, and when they joined. The actions menu on each member's row holds the per-member controls: **Change Base Role**, **Manage Additional Roles**, **Mark as SSO Exempt**, **Mark as 2FA Enforced**, and **Remove Member**. Members can also leave the organization themselves at any time.
 
 ## Joining Automatically
 

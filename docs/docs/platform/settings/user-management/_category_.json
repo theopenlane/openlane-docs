@@ -1,0 +1,9 @@
+{
+  "label": "User Management",
+  "position": 6,
+  "link": {
+    "type": "doc",
+    "id": "platform/settings/user-management/overview"
+  },
+  "collapsed": true
+}

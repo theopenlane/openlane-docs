@@ -1,7 +1,7 @@
 ---
-title: Overview
+title: Permissions
 description: Permissions model and structure within the Openlane platform
-sidebar_position: 1
+sidebar_position: 4
 keywords:
   - permissions model
   - role-based access control
@@ -156,7 +156,7 @@ Two behaviors worth knowing:
 - **Permissions inherit** through relationships: an editor of a group can inherit editor access to programs associated with that group.
 - **The most permissive grant wins** when a user's groups overlap: if one group can edit a program and another can only view it, the user can edit it.
 
-See [Groups and Permissions](../groups/permissions.mdx) for inheritance and overlap in depth, and [System Managed Groups](../groups/system-managed.mdx) for the built-in Viewers, Admins, and All Members groups.
+See [Group Permissions](./groups/permissions.mdx) for inheritance and overlap in depth, and [System Managed Groups](./groups/system-managed.mdx) for the built-in Viewers, Admins, and All Members groups.
 
 ## Object-Level Grants
 

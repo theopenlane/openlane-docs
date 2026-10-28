@@ -27,14 +27,14 @@ The home dashboard surfaces tasks that are due soon, so the answer to "what need
 
 | Source | How it works |
 | --- | --- |
-| The Tasks page | Create a task on the [Tasks page](https://console.theopenlane.io/tasks) with a title, type, assignee, due date, and any related objects. |
+| The Tasks page | Create a task on the [Tasks page](https://console.theopenlane.io/automation/tasks) with a title, type, assignee, due date, and any related objects. |
 | Another object | Open a control, risk, or policy and create a task from there, and the link back is made for you. This is the most common path: you spot a gap while looking at a control, and the follow-up work is one click away. |
 | A template | Reuse a [task template](#task-templates) for repeatable work like offboarding an employee, with the details and linked objects already filled in. |
 | A CSV import | [Upload a CSV](../importing-data.mdx) to create many tasks at once, like a full set of evidence-request tasks at the start of an audit period. |
 
 ## Creating a task
 
-Create a task from the [Tasks page](https://console.theopenlane.io/tasks) with **Create** → **From Scratch** (or **From Template**, see [task templates](#task-templates)), or from the object that needs the work. Two fields on the form warrant explanation:
+Create a task from the [Tasks page](https://console.theopenlane.io/automation/tasks) with **Create** → **From Scratch** (or **From Template**, see [task templates](#task-templates)), or from the object that needs the work. Two fields on the form warrant explanation:
 
 - The **Type** list (Evidence, Risk Review, Policy Review, Other) is customizable through [custom data](../settings/custom-data.mdx), so it can match how your team categorizes work
 - **Associated objects** are what carry context to the assignee. A task linked to its control tells them exactly what evidence goes where; an unlinked task makes them reconstruct that from the title.
@@ -59,7 +59,7 @@ To create a template:
 
 <Steps>
 
-1. On the [Tasks page](https://console.theopenlane.io/tasks), select **Create** → **From Scratch**.
+1. On the [Tasks page](https://console.theopenlane.io/automation/tasks), select **Create** → **From Scratch**.
 1. Fill in the task the way you want every copy to start. An "Employee offboarding" template might hold the offboarding checklist in its details and link to your access control policy and its controls.
 1. Turn on **This is a template**.
 1. Click **Save as template**, or click **Save as template and use** to also create the first task from it.
@@ -86,7 +86,7 @@ To create many tasks at once, such as a full evidence-request queue, import a CS
 
 <Steps>
 
-1. Open [Import tasks](https://console.theopenlane.io/import?type=task), or select **Bulk Upload** from the `...` menu on the [Tasks page](https://console.theopenlane.io/tasks).
+1. Open [Import tasks](https://console.theopenlane.io/import?type=task), or select **Bulk Upload** from the `...` menu on the [Tasks page](https://console.theopenlane.io/automation/tasks).
 1. Upload your CSV. `Title` is the only required column, and your column names do not need to match ours.
 1. Map your columns to task fields, remap any values your file spells differently (such as a status), and preview the tasks before importing.
 
@@ -211,7 +211,7 @@ A task is a single piece of work with an owner and a deadline. Recurring collect
 <details>
 <summary>Can I assign a task to a group?</summary>
 
-Tasks are assigned to individual users for clear accountability, but you can use [groups](../settings/groups/overview.mdx) to control who can see and manage them.
+Tasks are assigned to individual users for clear accountability, but you can use [groups](../settings/user-management/groups/overview.mdx) to control who can see and manage them.
 
 </details>
 

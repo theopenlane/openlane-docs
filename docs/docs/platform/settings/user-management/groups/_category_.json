@@ -1,9 +1,9 @@
 {
   "label": "Groups",
-  "position": 6,
+  "position": 3,
   "link": {
     "type": "doc",
-    "id": "platform/settings/groups/overview"
+    "id": "platform/settings/user-management/groups/overview"
   },
   "collapsed": true
 }

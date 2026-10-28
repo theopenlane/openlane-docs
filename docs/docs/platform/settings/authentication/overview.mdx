@@ -35,6 +35,8 @@ Openlane gives you flexible and secure ways to authenticate users, ranging from 
 
 ## Requiring Multi-Factor Authentication
 
-You can require all members of your organization to enable two-factor authentication for added security. Go to `Organization Settings` → `Authentication`, enable **Require Multi-Factor Authentication**, and save. All members are prompted to set up 2FA the next time they log in.
+You can require individual members to set up two-factor authentication (2FA). Go to `User Management` → `Members`, open the actions menu on the member's row, and select **Mark as 2FA Enforced**. You can add an optional reason, such as privileged access, which shows in the members table and export. The member is prompted to set up 2FA the next time they sign in. To lift the requirement, select **Remove 2FA Enforcement** from the same menu.
+
+To require 2FA for every member at once, set `multifactorAuthEnforced` on your organization settings through the API. The console does not have a toggle for organization-wide enforcement.
 
 MFA enforcement is independent of SSO: you can enforce it on its own or alongside SSO, and an [SSO-exempt member](./sso.mdx#exemptions) who signs in with a password still has to satisfy MFA.

@@ -1,5 +1,6 @@
 ---
-title: Permissions
+title: Group permissions
+sidebar_label: Group Permissions
 sidebar_position: 2
 description: Managing group permissions, inheritance, and overlap in Openlane's compliance management platform
 keywords:
@@ -21,7 +22,7 @@ tags:
 import Steps from '@site/src/components/Steps';
 import Term from '@site/src/components/Term';
 
-# Permissions
+# Group permissions
 
 Groups carry permissions for objects across Openlane, and those permissions determine what actions group members can perform. Permissions inherit across related objects and combine when grants overlap; you can also use GraphQL queries and mutations to view and define the relationships between objects (e.g., programs, controls) and the permissions assigned to users or groups.
 
@@ -55,12 +56,12 @@ You can manage group permissions directly through the Openlane user interface wi
 <Steps>
 
 1. **Navigate to Groups:**
-  Go to the "Groups" section from the main navigation menu.
+  Go to `User Management` → `Groups` from the main navigation menu.
 
 1. **Select a Group:**
   Click on the group you want to manage. This opens the group's detail page.
 
-  ![Group Detail](../../../../static/img/screenshots/groups/group_members.png)
+  ![Group Detail](../../../../../static/img/screenshots/groups/group_members.png)
 
 1. **Manage Members:**
   - Use the "Add Members" tab to add or remove users from the group.
@@ -71,14 +72,14 @@ You can manage group permissions directly through the Openlane user interface wi
   - Select the object type (e.g., Program, Control) you want to manage.
   - Assign the desired permission level (viewer, editor, owner) for each object.
 
-  ![Assign Permissions](../../../../static/img/screenshots/groups/assign_permissions.png)
+  ![Assign Permissions](../../../../../static/img/screenshots/groups/assign_permissions.png)
 
 1. **Inherit Permissions from Another Group:**
   - In the group's detail view, you can configure the group to inherit permissions from another group.
   - Use the "Inherit Permissions" option to select the group whose permissions should be inherited.
-    ![Inherit Permissions](../../../../static/img/screenshots/groups/inherit_permissions.png)
+    ![Inherit Permissions](../../../../../static/img/screenshots/groups/inherit_permissions.png)
   - Members of the current group will automatically receive the permissions assigned to the other group.
-  ![Inherit Permissions](../../../../static/img/screenshots/groups/inherit_permission_confirmation.png)
+  ![Inherit Permissions](../../../../../static/img/screenshots/groups/inherit_permission_confirmation.png)
 
 </Steps>
 
