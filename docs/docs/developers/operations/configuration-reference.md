@@ -161,11 +161,43 @@ Config contains the configuration for the core server
         "githubapp": {},
         "slack": {},
         "slackruntime": {},
-        "googledrive": {},
+        "objectstore": {},
+        "objectstoreruntime": {
+            "providers": {
+                "s3": {
+                    "backup": {},
+                    "credentials": {}
+                },
+                "r2": {
+                    "backup": {},
+                    "credentials": {}
+                },
+                "gcs": {
+                    "backup": {}
+                },
+                "disk": {
+                    "backup": {}
+                },
+                "database": {
+                    "backup": {}
+                }
+            },
+            "import": {}
+        },
+        "googledrive": {
+            "legacy": {}
+        },
         "googleworkspace": {},
-        "azureentraid": {},
+        "azureentraid": {
+            "legacy": {}
+        },
+        "azuresecuritycenter": {
+            "lighthouse": {}
+        },
         "microsoftteams": {},
-        "onedrive": {},
+        "onedrive": {
+            "legacy": {}
+        },
         "oidclocal": {},
         "email": {
             "resend": {},
@@ -229,6 +261,7 @@ Server settings for the echo server
 |**secretmanager**|`string`|SecretManagerSecret is the name of the GCP Secret Manager secret containing the JWT signing key<br/>|no|
 |**defaulttrustcenterdomain**|`string`|DefaultTrustCenterDomain is the default domain to use for the trust center if no custom domain is set<br/>|no|
 |**trustcentercnametarget**|`string`|TrustCenterCnameTarget is the cname target for the trust center<br/>Used for mapping the vanity domains to the trust centers<br/>|no|
+|**assessmentcnametarget**|`string`|AssessmentCnameTarget is the cname target for the assessment domains.<br/>Used for mapping vanity domains for questionnaires<br/>|no|
 |**trustcenterpreviewzoneid**|`string`|TrustCenterPreviewZoneID is the cloudflare zone id that holds trust center preview domain records<br/>|no|
 |**notificationlookbackdays**|`integer`|NotificationLookbackDays is the number of days of read notifications to pull when starting a notification subscription<br/>Unread notifications are always pulled regardless of this setting<br/>|no|
 
@@ -1847,9 +1880,12 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 |**githubapp**|`object`|||
 |**slack**|`object`|||
 |**slackruntime**|`object`|||
+|**objectstore**|`object`|||
+|**objectstoreruntime**|`object`|||
 |**googledrive**|`object`|||
 |**googleworkspace**|`object`|||
 |**azureentraid**|`object`|||
+|**azuresecuritycenter**|`object`|||
 |**microsoftteams**|`object`|||
 |**onedrive**|`object`|||
 |**oidclocal**|`object`|||
@@ -1870,11 +1906,43 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
     "githubapp": {},
     "slack": {},
     "slackruntime": {},
-    "googledrive": {},
+    "objectstore": {},
+    "objectstoreruntime": {
+        "providers": {
+            "s3": {
+                "backup": {},
+                "credentials": {}
+            },
+            "r2": {
+                "backup": {},
+                "credentials": {}
+            },
+            "gcs": {
+                "backup": {}
+            },
+            "disk": {
+                "backup": {}
+            },
+            "database": {
+                "backup": {}
+            }
+        },
+        "import": {}
+    },
+    "googledrive": {
+        "legacy": {}
+    },
     "googleworkspace": {},
-    "azureentraid": {},
+    "azureentraid": {
+        "legacy": {}
+    },
+    "azuresecuritycenter": {
+        "lighthouse": {}
+    },
     "microsoftteams": {},
-    "onedrive": {},
+    "onedrive": {
+        "legacy": {}
+    },
     "oidclocal": {},
     "email": {
         "resend": {},
@@ -1994,8 +2062,407 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 
 **Additional Properties:** not allowed 
  
+<a name="defsobjectstoreconfig"></a>
+### $defs/objectstore\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**accesskeyid**|`string`|||
+|**secretaccesskey**|`string`|||
+|**arn**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsobjectstoreruntimeconfig"></a>
+### $defs/objectstore\.RuntimeConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**providers**|`object`|Providers contains the configuration for each storage provider<br/>||
+|**import**|`object`||yes|
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "providers": {
+        "s3": {
+            "backup": {},
+            "credentials": {}
+        },
+        "r2": {
+            "backup": {},
+            "credentials": {}
+        },
+        "gcs": {
+            "backup": {}
+        },
+        "disk": {
+            "backup": {}
+        },
+        "database": {
+            "backup": {}
+        }
+    },
+    "import": {}
+}
+```
+
+ 
+<a name="defsstorageproviders"></a>
+#### $defs/storage\.Providers: object
+
+Providers contains the configuration for each storage provider
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**s3**|`object`|S3Config configures the Amazon S3 provider<br/>||
+|**r2**|`object`|R2Config configures the Cloudflare R2 provider<br/>||
+|**gcs**|`object`|GCSConfig configures the Google Cloud Storage provider<br/>||
+|**disk**|`object`|DiskConfig configures the local filesystem provider<br/>||
+|**database**|`object`|DatabaseConfig configures the provider that stores file bytes in the database<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "s3": {
+        "backup": {},
+        "credentials": {}
+    },
+    "r2": {
+        "backup": {},
+        "credentials": {}
+    },
+    "gcs": {
+        "backup": {}
+    },
+    "disk": {
+        "backup": {}
+    },
+    "database": {
+        "backup": {}
+    }
+}
+```
+
+ 
+<a name="defsstorages3config"></a>
+##### $defs/storage\.S3Config: object
+
+S3Config configures the Amazon S3 provider
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this provider is enabled<br/>||
+|**ensureavailable**|`boolean`|EnsureAvailable enforces provider availability before completing server startup<br/>||
+|**bucket**|`string`|Bucket is the bucket name, or the directory path for the disk provider<br/>||
+|**backup**|`object`|BackupConfig defines an asynchronous replication target for a provider's objects. It only<br/>||
+|**proxypresignenabled**|`boolean`|ProxyPresignEnabled toggles proxy-signed download URL generation<br/>||
+|**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files)<br/>||
+|**region**|`string`|Region the bucket lives in<br/>||
+|**endpoint**|`string`|Endpoint overrides the AWS endpoint for S3 compatible services<br/>||
+|**credentials**|`object`|AccessKeyCredentials is the access key pair used by S3 compatible providers<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "backup": {},
+    "credentials": {}
+}
+```
+
+ 
+<a name="defsstoragebackupconfig"></a>
+###### $defs/storage\.BackupConfig: object
+
+BackupConfig defines an asynchronous replication target for a provider's objects. It only
+names whether backups run and where they go; the destination provider's own configuration
+supplies the region, endpoint, and credentials
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this backup target is enabled<br/>||
+|**provider**|`string`|Provider names the destination backend type, e.g. s3; empty replicates to the source<br/>provider itself, which writes the backup to the suffixed bucket alongside the live one<br/>||
+|**readfrombackup**|`boolean`|ReadFromBackup serves reads from this backup target instead of the source provider, intended<br/>to be enabled during a disaster recovery event when the source provider storage is lost<br/>||
+|**region**|`string`|Region optionally overrides the destination provider's region, so a backup can replicate<br/>into a region other than the one holding the live objects<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsstorageaccesskeycredentials"></a>
+###### $defs/storage\.AccessKeyCredentials: object
+
+AccessKeyCredentials is the access key pair used by S3 compatible providers
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**accesskeyid**|`string`|AccessKeyID for the bucket<br/>||
+|**secretaccesskey**|`string`|SecretAccessKey for the bucket<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsstorager2config"></a>
+##### $defs/storage\.R2Config: object
+
+R2Config configures the Cloudflare R2 provider
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this provider is enabled<br/>||
+|**ensureavailable**|`boolean`|EnsureAvailable enforces provider availability before completing server startup<br/>||
+|**bucket**|`string`|Bucket is the bucket name, or the directory path for the disk provider<br/>||
+|**backup**|`object`|BackupConfig defines an asynchronous replication target for a provider's objects. It only<br/>||
+|**proxypresignenabled**|`boolean`|ProxyPresignEnabled toggles proxy-signed download URL generation<br/>||
+|**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files)<br/>||
+|**endpoint**|`string`|Endpoint overrides the account endpoint derived from the account ID<br/>||
+|**credentials**|`object`|R2Credentials is the access key pair plus the Cloudflare account that owns the bucket<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "backup": {},
+    "credentials": {}
+}
+```
+
+ 
+<a name="defsstoragebackupconfig"></a>
+###### $defs/storage\.BackupConfig: object
+
+BackupConfig defines an asynchronous replication target for a provider's objects. It only
+names whether backups run and where they go; the destination provider's own configuration
+supplies the region, endpoint, and credentials
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this backup target is enabled<br/>||
+|**provider**|`string`|Provider names the destination backend type, e.g. s3; empty replicates to the source<br/>provider itself, which writes the backup to the suffixed bucket alongside the live one<br/>||
+|**readfrombackup**|`boolean`|ReadFromBackup serves reads from this backup target instead of the source provider, intended<br/>to be enabled during a disaster recovery event when the source provider storage is lost<br/>||
+|**region**|`string`|Region optionally overrides the destination provider's region, so a backup can replicate<br/>into a region other than the one holding the live objects<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsstorager2credentials"></a>
+###### $defs/storage\.R2Credentials: object
+
+R2Credentials is the access key pair plus the Cloudflare account that owns the bucket
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**accesskeyid**|`string`|AccessKeyID for the bucket<br/>||
+|**secretaccesskey**|`string`|SecretAccessKey for the bucket<br/>||
+|**accountid**|`string`|AccountID for Cloudflare R2<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsstoragegcsconfig"></a>
+##### $defs/storage\.GCSConfig: object
+
+GCSConfig configures the Google Cloud Storage provider
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this provider is enabled<br/>||
+|**ensureavailable**|`boolean`|EnsureAvailable enforces provider availability before completing server startup<br/>||
+|**bucket**|`string`|Bucket is the bucket name, or the directory path for the disk provider<br/>||
+|**backup**|`object`|BackupConfig defines an asynchronous replication target for a provider's objects. It only<br/>||
+|**proxypresignenabled**|`boolean`|ProxyPresignEnabled toggles proxy-signed download URL generation<br/>||
+|**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files)<br/>||
+|**endpoint**|`string`|Endpoint overrides the Google API endpoint, for an emulator<br/>||
+|**projectid**|`string`|ProjectID is the Google Cloud project that owns the bucket<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "backup": {}
+}
+```
+
+ 
+<a name="defsstoragebackupconfig"></a>
+###### $defs/storage\.BackupConfig: object
+
+BackupConfig defines an asynchronous replication target for a provider's objects. It only
+names whether backups run and where they go; the destination provider's own configuration
+supplies the region, endpoint, and credentials
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this backup target is enabled<br/>||
+|**provider**|`string`|Provider names the destination backend type, e.g. s3; empty replicates to the source<br/>provider itself, which writes the backup to the suffixed bucket alongside the live one<br/>||
+|**readfrombackup**|`boolean`|ReadFromBackup serves reads from this backup target instead of the source provider, intended<br/>to be enabled during a disaster recovery event when the source provider storage is lost<br/>||
+|**region**|`string`|Region optionally overrides the destination provider's region, so a backup can replicate<br/>into a region other than the one holding the live objects<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsstoragediskconfig"></a>
+##### $defs/storage\.DiskConfig: object
+
+DiskConfig configures the local filesystem provider
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this provider is enabled<br/>||
+|**ensureavailable**|`boolean`|EnsureAvailable enforces provider availability before completing server startup<br/>||
+|**bucket**|`string`|Bucket is the bucket name, or the directory path for the disk provider<br/>||
+|**backup**|`object`|BackupConfig defines an asynchronous replication target for a provider's objects. It only<br/>||
+|**proxypresignenabled**|`boolean`|ProxyPresignEnabled toggles proxy-signed download URL generation<br/>||
+|**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files)<br/>||
+|**endpoint**|`string`|Endpoint is the URL files are served from when proxy presigning is disabled<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "backup": {}
+}
+```
+
+ 
+<a name="defsstoragebackupconfig"></a>
+###### $defs/storage\.BackupConfig: object
+
+BackupConfig defines an asynchronous replication target for a provider's objects. It only
+names whether backups run and where they go; the destination provider's own configuration
+supplies the region, endpoint, and credentials
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this backup target is enabled<br/>||
+|**provider**|`string`|Provider names the destination backend type, e.g. s3; empty replicates to the source<br/>provider itself, which writes the backup to the suffixed bucket alongside the live one<br/>||
+|**readfrombackup**|`boolean`|ReadFromBackup serves reads from this backup target instead of the source provider, intended<br/>to be enabled during a disaster recovery event when the source provider storage is lost<br/>||
+|**region**|`string`|Region optionally overrides the destination provider's region, so a backup can replicate<br/>into a region other than the one holding the live objects<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsstoragedatabaseconfig"></a>
+##### $defs/storage\.DatabaseConfig: object
+
+DatabaseConfig configures the provider that stores file bytes in the database
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this provider is enabled<br/>||
+|**ensureavailable**|`boolean`|EnsureAvailable enforces provider availability before completing server startup<br/>||
+|**bucket**|`string`|Bucket is the bucket name, or the directory path for the disk provider<br/>||
+|**backup**|`object`|BackupConfig defines an asynchronous replication target for a provider's objects. It only<br/>||
+|**baseurl**|`string`|BaseURL is the prefix for proxy download URLs (e.g., http://localhost:17608/v1/files)<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "backup": {}
+}
+```
+
+ 
+<a name="defsstoragebackupconfig"></a>
+###### $defs/storage\.BackupConfig: object
+
+BackupConfig defines an asynchronous replication target for a provider's objects. It only
+names whether backups run and where they go; the destination provider's own configuration
+supplies the region, endpoint, and credentials
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled indicates if this backup target is enabled<br/>||
+|**provider**|`string`|Provider names the destination backend type, e.g. s3; empty replicates to the source<br/>provider itself, which writes the backup to the suffixed bucket alongside the live one<br/>||
+|**readfrombackup**|`boolean`|ReadFromBackup serves reads from this backup target instead of the source provider, intended<br/>to be enabled during a disaster recovery event when the source provider storage is lost<br/>||
+|**region**|`string`|Region optionally overrides the destination provider's region, so a backup can replicate<br/>into a region other than the one holding the live objects<br/>||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsobjectstoreimportspec"></a>
+#### $defs/objectstore\.ImportSpec: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**prefix**|`string`|Object key prefix (directory) whose JSON files hold arrays of records<br/>|yes|
+|**moveprocessed**<br/>(Move Processed)|`boolean`|Move each object into the processed directory under the prefix once its records import without failure<br/>|no|
+
+**Additional Properties:** not allowed 
+ 
 <a name="defsgoogledriveconfig"></a>
 ### $defs/googledrive\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**clientid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+|**pickerapikey**|`string`|||
+|**legacy**|`object`|||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "legacy": {}
+}
+```
+
+ 
+<a name="defsgoogledriveappconfig"></a>
+#### $defs/googledrive\.AppConfig: object
 
 **Properties**
 
@@ -2027,11 +2494,68 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
-|**clientid**|`string`|||
+|**applicationid**|`string`|||
 |**clientsecret**|`string`|||
 |**redirecturl**|`string`|||
 |**defaulttenant**|`string`|||
+|**legacy**|`object`|||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "legacy": {}
+}
+```
+
+ 
+<a name="defsmicrosoftappconfig"></a>
+#### $defs/microsoft\.AppConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
 |**applicationid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+|**defaulttenant**|`string`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsazuresecuritycenterconfig"></a>
+### $defs/azuresecuritycenter\.Config: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**applicationid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+|**defaulttenant**|`string`|||
+|**lighthouse**|`object`|||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "lighthouse": {}
+}
+```
+
+ 
+<a name="defsmicrosoftlighthouseconfig"></a>
+#### $defs/microsoft\.LighthouseConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**managingtenantid**|`string`|||
+|**principalid**|`string`|||
 
 **Additional Properties:** not allowed 
  
@@ -2042,10 +2566,10 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
-|**clientid**|`string`|||
+|**applicationid**|`string`|||
 |**clientsecret**|`string`|||
 |**redirecturl**|`string`|||
-|**applicationid**|`string`|||
+|**defaulttenant**|`string`|||
 
 **Additional Properties:** not allowed 
  
@@ -2056,11 +2580,34 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
-|**clientid**|`string`|||
+|**applicationid**|`string`|||
 |**clientsecret**|`string`|||
 |**redirecturl**|`string`|||
+|**defaulttenant**|`string`|||
 |**contentmode**|`string`|||
+|**legacy**|`object`|||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "legacy": {}
+}
+```
+
+ 
+<a name="defsmicrosoftappconfig"></a>
+#### $defs/microsoft\.AppConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
 |**applicationid**|`string`|||
+|**clientsecret**|`string`|||
+|**redirecturl**|`string`|||
+|**defaulttenant**|`string`|||
 
 **Additional Properties:** not allowed 
  
