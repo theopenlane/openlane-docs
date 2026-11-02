@@ -1,5 +1,4 @@
 ---
-sidebar_class_name: sidebar-coming-soon
 title: Microsoft Teams
 description: Microsoft Teams integration guide for compliance notifications and event routing
 sidebar_position: 14
@@ -11,78 +10,68 @@ compliance:
 
 import Steps from '@site/src/components/Steps';
 import Term from '@site/src/components/Term';
-import StatusChip from '@site/src/components/StatusChip';
 
-:::info
-This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
-:::
+# ![microsoft teams integration](./assets/microsoft_teams.png) Microsoft Teams integration guide
 
-# ![microsoft teams integration](./assets/microsoft_teams.png) Microsoft Teams integration guide <StatusChip status="coming-soon" />
+If your team works in Microsoft Teams, this integration posts Openlane notifications to a Teams channel, so they reach the people responsible for them where they already work.
 
-If your team collaborates in Microsoft Teams, this integration lets Openlane deliver security and compliance notifications directly into your channels. Vulnerability service level agreement (SLA) reminders, access review deadlines, and policy attestation nudges arrive where your team already works.
+## Key capabilities
 
-## Key Capabilities
+Openlane posts notification messages to a team and channel you choose, and you set a default channel for any message that does not name one. You can send a test message at any time to confirm the connection works.
 
-- **Channel-Targeted Notifications:** Route different notification types to the right Teams channels. Security findings go to your security channel, access review reminders go to the team leads, policy updates go to compliance.
-- **Compliance Event Routing:** Deliver remediation deadlines, review reminders, and policy attestation nudges directly to the people responsible for action.
-- **Workflow Integration:** Keep your compliance program visible where your team already collaborates, reducing the lag between identifying a <Term t="finding">finding</Term> and someone acting on it.
+Openlane posts as the Microsoft account that connected the integration and can only reach the teams and channels that account can post to. Connect with an account that belongs to every team you want messages in, such as a shared compliance account, rather than one person's account.
 
 ## Prerequisites
 
-- Entra app registration for Teams/Graph access.
-- Graph delegated permissions with admin consent (User.Read, Team.ReadBasic.All, Channel.ReadBasic.All, ChannelMessage.Send).
-- Access to target Teams channels for message delivery.
+* A Microsoft work or school account that is a member of the teams you want Openlane to post in
+* If your organization does not let users consent to apps on their own, an administrator who can grant consent to the Openlane app
 
-## Step-by-Step Setup
+## Step-by-step setup
 
-### Step 1: Configure Microsoft App Permissions
-
-<Steps>
-
-1. Configure the Openlane callback URL in your Entra app registration.
-1. Grant Graph permissions for profile/team read and channel message send.
-1. Grant admin consent for the requested permissions.
-
-</Steps>
-
-### Step 2: Connect in Openlane
+### Step 1: Connect in Openlane
 
 <Steps>
 
-1. Go to **Automation** > **Integrations** and find **Microsoft Teams**.
-1. Click **Connect**. You will be redirected to Microsoft to authorize access.
-1. Sign in and grant the requested permissions.
-1. After authorization, you are redirected back to Openlane and the connection is saved.
+1. Go to **Automation** > **Integrations**, find **Microsoft Teams**, and click **Configure**.
+1. Click **Continue to Authorization**. You will be redirected to Microsoft.
+1. Sign in and approve the requested permissions. Openlane asks to read your profile and the teams and channels you belong to, and to send channel messages.
+1. You are redirected back to Openlane and the connection is saved.
 
 </Steps>
 
-### Step 3: Post-Connection Configuration
+You do not need to create an app registration or enter a tenant ID. Openlane reads your tenant from the account you sign in with.
 
-After the OAuth connection is established, provide tenant context:
+### Step 2: Choose a default channel
 
-| Field | Required | Purpose |
-|---|---|---|
-| `tenantId` | Yes | Azure AD tenant hosting the Teams instance |
+<Steps>
 
-## Validate Connection
+1. On the **Installed** tab, open the Microsoft Teams card and click **Set Default Channel**.
+1. Choose a channel from the list of teams and channels your account can post to, then save.
+1. Optionally click **Send Test Message** to post a message to the channel and confirm it arrives.
 
-After saving, Openlane runs a health check against Microsoft Teams and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+</Steps>
 
-## What Openlane Syncs
+If you connect more than one Microsoft Teams account, turn on **Default Messaging** for the one Openlane should use when a message does not name a connection.
 
-Openlane reads team and channel context and can send outbound notification messages to Teams channels. Use this to route compliance-relevant alerts (vulnerability SLA breaches, upcoming access review deadlines, policy attestation reminders) to the teams responsible for action. This helps demonstrate timely response and escalation when an auditor asks how findings reach the people who act on them.
+## Validate connection
+
+After saving, Openlane runs a health check that confirms it can sign in to Microsoft as the connected account and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane syncs
+
+Openlane does not import data from Teams. It reads the list of teams and channels the connected account can post to, so you can choose where messages go, and sends outbound messages to those channels. Use it to route compliance notifications to the people who act on them, which helps you show an auditor how <Term t="finding">findings</Term> reach the responsible team.
 
 ## Disconnect
 
-To remove this integration, go to **Automation** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+To remove this integration, go to **Automation** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. Openlane removes its stored credential and stops sending messages. To revoke access fully, remove the Openlane app from **Enterprise applications** in Microsoft Entra ID.
 
 ## Troubleshooting
 
-- **Permission errors:** verify Graph permissions and admin consent.
-- **Message send failures:** verify target team/channel IDs and posting rights.
+If Microsoft blocks the sign-in with a consent message, your organization requires an administrator to approve new apps. Ask a Microsoft Entra ID administrator to grant consent to the Openlane app, then connect again.
+
+A channel that does not appear in the list belongs to a team the connected account is not a member of, or one where it cannot post. Messages also stop when the connected account is disabled or removed from a team, so disconnect and connect again with an account that has access.
 
 ## References
 
-- [Microsoft Teams overview](https://learn.microsoft.com/en-us/microsoftteams/teams-overview)
-- [Microsoft Graph Teams API overview](https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
-- [Microsoft Graph authentication for app-only access](https://learn.microsoft.com/en-us/graph/auth-v2-service)
+* [Microsoft Teams overview](https://learn.microsoft.com/en-us/microsoftteams/teams-overview)
+* [User and admin consent in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/user-admin-consent-overview)

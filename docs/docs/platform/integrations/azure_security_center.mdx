@@ -1,7 +1,6 @@
 ---
-sidebar_class_name: sidebar-coming-soon
 title: Microsoft Defender for Cloud
-description: Microsoft Defender for Cloud integration guide for security findings and vulnerability management
+description: Microsoft Defender for Cloud integration guide for security findings, vulnerabilities, and compliance assessment results
 sidebar_position: 13
 sidebar_label: Microsoft Defender for Cloud
 compliance:
@@ -14,91 +13,94 @@ compliance:
 
 import Steps from '@site/src/components/Steps';
 import Term from '@site/src/components/Term';
-import StatusChip from '@site/src/components/StatusChip';
 
-:::info
-This integration is not yet generally available. It appears in the **Coming Soon** tab of the Integrations page. Configuration will be enabled in a future release.
-:::
+# ![microsoft defender for cloud integration](./assets/azure.png) Microsoft Defender for Cloud integration guide
 
-# ![azure security center integration](./assets/azure.png) Microsoft Defender for Cloud integration guide <StatusChip status="coming-soon" />
+Microsoft Defender for Cloud assesses the resources in your Azure subscriptions and flags what is misconfigured or out of date. Connect it to Openlane when you want those results tracked as <Term t="finding">findings</Term> and vulnerabilities in the same program as your controls, with remediation owners and due dates.
 
-If your team runs workloads on Azure, this integration brings Defender for Cloud <Term t="finding">findings</Term> (security alerts, vulnerability assessments, and recommendations) into Openlane so you can track remediation timelines and service level agreement (SLA) compliance in one place.
+## Key capabilities
 
-## Key Capabilities
+Openlane collects the posture assessments Defender for Cloud marks as unhealthy and records each one as a finding, with the affected resource and a link back to the Azure portal. Recommendations to update software or upgrade a service carry their CVEs, so they arrive as vulnerability records instead. If you use Defender for Cloud regulatory compliance standards such as SOC 2, Openlane can also record each compliance assessment as a check against the control it tests.
 
-- **Security Findings Ingestion:** Collects security alerts, vulnerability assessments, and recommendations from Defender workload protection plans, giving you a single view for remediation tracking and SLA compliance.
-- **Compliance Assessment Context:** Reads regulatory compliance assessment results and secure score data, so you can show auditors how you track control effectiveness.
-- **Read-Only Subscription Access:** Authenticates with a service principal and reads security data without modifying subscription settings or Defender configuration.
+Access is read-only. Openlane reads security data from your subscriptions and never changes resources, policies, or Defender for Cloud settings.
 
 ## Prerequisites
 
-- An Entra app registration with a client secret.
-- A service principal with **Security Reader** (or equivalent read) role assigned at subscription scope.
-- Microsoft Defender for Cloud enabled on the target subscription with the relevant workload protection plans active (e.g., Defender for Servers, Defender for Containers, Defender for SQL).
+* Microsoft Defender for Cloud enabled on each subscription you want to collect from
+* For the Azure Lighthouse option, an account with the **Owner** role on each subscription
+* For the admin consent option, an account that can grant tenant-wide admin consent, plus permission to assign roles on each subscription
 
-## Step-by-Step Setup
+## Step-by-step setup
 
-### Step 1: Configure Azure App and Permissions
+### Step 1: Choose how to grant access
 
-<Steps>
+Openlane offers two ways to connect, and both give Openlane the built-in **Security Reader** role and nothing more. We recommend Azure Lighthouse because the access lives on each subscription you delegate, appears under **Service providers** in the Azure portal, and is removed from Azure when you disconnect in Openlane. Admin consent suits teams that already manage third-party access through enterprise applications.
 
-1. In the Azure portal, create or select an app registration and generate a client secret.
-1. Navigate to the target subscription's **Access control (IAM)** blade and assign the **Security Reader** role to the service principal.
-1. Record the following values for use in Openlane:
-   - **Tenant ID:** from the app registration's overview page.
-   - **Client ID:** the application (client) ID of the app registration.
-   - **Client Secret:** the secret value (shown only at creation time).
-   - **Subscription ID:** from the subscription's overview page.
-
-</Steps>
-
-### Step 2: Connect in Openlane
+#### Option A: Azure Lighthouse (recommended)
 
 <Steps>
 
-1. Go to **Automation** > **Integrations** and find **Microsoft Defender for Cloud**.
-1. Click **Configure** and enter the required fields:
-
-   | Field | Required | Purpose |
-   |---|---|---|
-   | `tenantId` | Yes | Azure AD tenant that owns the subscription |
-   | `clientId` | Yes | Application (client) ID of the service principal |
-   | `clientSecret` | Yes | Client secret for the service principal |
-   | `subscriptionId` | Yes | Azure subscription with Defender for Cloud enabled |
-   | `resourceGroup` | No | Restrict scope to a specific resource group |
-   | `workspaceId` | No | Log Analytics Workspace ID for workspace-scoped alert queries |
-
-1. Click **Save**.
+1. Go to **Automation** > **Integrations**, find **Microsoft Defender for Cloud**, and click **Configure**.
+1. Select **Azure Lighthouse**. The form shows a connection code and a template to deploy in Azure. Copy the template.
+1. In the Azure portal, open **Service providers** > **Service provider offers** and select **Add offer** > **Add via template**.
+1. Paste the template, choose the subscription to delegate, and enter the connection code from Openlane as the `connectionCode` parameter. A subscription Owner deploys the template once for each subscription you want Openlane to read.
+1. Wait until the Openlane Defender for Cloud offer appears under **Service provider offers**.
+1. Back in Openlane, enter your Microsoft Entra tenant ID and submit the form.
 
 </Steps>
 
-## Validate Connection
+Openlane checks that at least one subscription in your tenant is delegated with your connection code before it saves the connection. To add a subscription later, deploy the same template on it with the same connection code.
 
-After saving, Openlane runs a health check that verifies the service principal can authenticate and access Defender for Cloud APIs on the configured subscription. The result appears on the **Installed** tab of the Integrations page. You should see a **Healthy** badge confirming connectivity. If the badge shows **Needs Attention**, review the troubleshooting section below.
+#### Option B: Azure admin consent
 
-## What Openlane Syncs
+<Steps>
 
-Openlane reads security data from Microsoft Defender for Cloud. This feeds directly into your vulnerability management program and gives you evidence for technical vulnerability handling controls:
+1. Go to **Automation** > **Integrations**, find **Microsoft Defender for Cloud**, and click **Configure**.
+1. Select **Azure Admin Consent** and click **Continue to Authorization**. You will be redirected to Microsoft.
+1. Sign in with an account that can grant admin consent and approve the request. You are redirected back to Openlane and the connection is saved.
+1. In the Azure portal, open each subscription you want Openlane to read, go to **Access control (IAM)**, and assign the **Security Reader** role to the Openlane enterprise application. The application ID is shown on the Openlane connection form.
 
-- **Defender plan coverage:** which workload protection plans are active on the subscription and their configuration status.
-- **Security findings and alerts:** alerts generated by Defender workload protection (e.g., suspicious activity, malware detection, anomalous access patterns).
-- **Vulnerability assessment results:** findings from Defender vulnerability scanning across VMs, containers, SQL databases, and other supported resource types.
-- **Recommendations:** security recommendations produced by Defender, including severity, affected resources, and remediation guidance.
-- **Compliance and secure score context:** regulatory compliance assessment status and secure score metrics for audit reporting.
+</Steps>
+
+The connection saves before the role is assigned, so collection returns no data until you finish the last step.
+
+### Step 2: Configure collection
+
+Optionally narrow what Openlane collects:
+
+| Setting | Description |
+|---|---|
+| **Subscription IDs** | Limit collection to these subscriptions. Leave it empty to collect from every subscription Openlane can read |
+| **Compliance Standards** | Limit compliance assessment collection to these standards. Leave it empty to collect every standard enabled in Defender for Cloud |
+| **Collect Checks** | Record every compliance assessment as a check linked to its control. When it is off, Openlane collects only failed assessments that have no matching Defender for Cloud recommendation, as findings |
+
+## Validate connection
+
+After saving, Openlane runs a health check that confirms it can read Defender for Cloud assessments and displays the result on the **Installed** tab of the Integrations page. You should see a **Healthy** badge. If the badge shows **Needs Attention**, review the troubleshooting section below.
+
+## What Openlane syncs
+
+Openlane collects on a recurring schedule, and each sync updates the records from the previous one instead of creating duplicates. The data feeds your vulnerability management program and gives you evidence for technical vulnerability handling controls:
+
+* Unhealthy security posture assessments, as findings, with the affected resource and the owner from any Defender for Cloud governance assignment
+* Software update and service upgrade recommendations, as one vulnerability record per CVE
+* Regulatory compliance assessment results, as checks linked to their controls when **Collect Checks** is on, and as findings when they fail without a matching recommendation
 
 ## Disconnect
 
-To remove this integration, go to **Automation** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. This removes stored credentials and stops all collection activity. You can reconnect later by configuring the integration again.
+To remove this integration, go to **Automation** > **Integrations** and select the **Installed** tab. Open the menu on the integration card and select **Disconnect**. Collection stops and Openlane removes its stored connection.
+
+What happens in Azure depends on how you connected. For an Azure Lighthouse connection, Openlane also removes its delegation from every subscription delegated with your connection code. If that removal fails, remove the Openlane Defender for Cloud offer from **Service providers** in the Azure portal. For an admin consent connection, remove the Openlane enterprise application and its subscription role assignments in Azure to revoke access fully.
 
 ## Troubleshooting
 
-- **Permission denied:** verify the service principal has the **Security Reader** role (or equivalent) assigned at subscription scope.
-- **No data returned:** confirm Defender for Cloud is enabled and at least one workload protection plan is active on the subscription.
-- **Authentication failures:** verify the tenant ID, client ID, and client secret are correct and that the secret has not expired.
+If an Azure Lighthouse connection does not save, the template was usually deployed with a different connection code, or the deployment has not finished. Confirm that the Openlane Defender for Cloud offer appears under **Service provider offers** for at least one subscription and that its name ends with the code shown in Openlane.
+
+When the connection is healthy but no data arrives, confirm that Defender for Cloud is enabled on the subscription. For an admin consent connection, also confirm that the **Security Reader** role is assigned to the Openlane enterprise application on that subscription. A single missing subscription usually means **Subscription IDs** leaves it out or, for Azure Lighthouse, that the template has not been deployed on it yet.
 
 ## References
 
-- [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender for Cloud documentation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/)
-- [Security Reader role definition](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#security-reader)
-- [Defender for Cloud REST API reference](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/)
+* [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
+* [Azure Lighthouse overview](https://learn.microsoft.com/en-us/azure/lighthouse/overview)
+* [Grant tenant-wide admin consent to an application](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent)
+* [Security Reader role definition](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#security-reader)
