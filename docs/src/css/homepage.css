@@ -164,67 +164,24 @@ html[data-theme='dark'] {
   text-decoration: none;
 }
 
-/* Card art motion — subtle, one pass per 5s, paused for reduced motion.
-   Animations must be applied via these classes, not inline styles: the CSS
-   minifier drops @keyframes that no CSS rule references. Per-element stagger
-   comes from an inline animation-delay. */
-.dlAnimFill {
-  animation: ol-fill 5s ease-in-out infinite;
-}
-
-.dlAnimStep {
-  animation: ol-step 5s ease-in-out infinite;
-}
-
-.dlAnimDrop {
-  animation: ol-drop 5s ease-in-out infinite;
-}
-
-@keyframes ol-fill {
-  0%,
-  8% {
-    transform: scaleX(0);
-  }
-  46%,
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-@keyframes ol-rise {
-  0%,
-  10% {
-    transform: scaleY(0.12);
-  }
-  52%,
-  100% {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes ol-step {
-  0%,
-  12% {
-    opacity: 0.25;
-    transform: translateY(5px);
-  }
-  40%,
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes ol-drop {
-  0% {
-    transform: translateY(-6px);
-    opacity: 0;
-  }
-  40%,
-  100% {
-    transform: none;
-    opacity: 1;
-  }
+/* Card art colors come from @theopenlane/react-animations tokens */
+.dlSection {
+  --ol-art-fg: var(--dl-fg);
+  --ol-art-fg2: var(--dl-fg2);
+  --ol-art-card: var(--dl-card);
+  --ol-art-panel: var(--dl-panel);
+  --ol-art-line: var(--dl-line);
+  --ol-art-line-2: var(--dl-line-2);
+  --ol-art-line-3: var(--dl-line-3);
+  --ol-art-line-strong: var(--dl-line-strong);
+  --ol-art-grid: var(--dl-grid);
+  --ol-art-shadow: var(--dl-shadow);
+  --ol-art-accent: var(--dl-accent);
+  --ol-art-accent-2: var(--dl-accent-2);
+  --ol-art-accent-bg: var(--dl-accent-bg);
+  --ol-art-accent-bg-2: var(--dl-accent-bg-2);
+  --ol-art-accent-line: var(--dl-accent-line);
+  --ol-art-accent-line-2: var(--dl-accent-line-2);
 }
 
 @media (prefers-reduced-motion: reduce) {
