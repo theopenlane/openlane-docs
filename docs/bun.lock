@@ -17,6 +17,7 @@
         "@scalar/api-reference": "^1.64.0",
         "@scalar/docusaurus": "^0.8.33",
         "@theopenlane/animated-icons": "^0.2.2",
+        "@theopenlane/react-animations": "^0.1.0",
         "bufferutil": "4.1.0",
         "clsx": "^2.0.0",
         "docusaurus-lunr-search": "3.6.0",
@@ -691,6 +692,8 @@
     "@tanstack/vue-virtual": ["@tanstack/vue-virtual@3.13.35", "", { "dependencies": { "@tanstack/virtual-core": "3.17.7" }, "peerDependencies": { "vue": "^2.7.0 || ^3.0.0" } }, "sha512-lOfSPvgPdlaH6Qy+CyIc3XpycitaSQ9GECndGpTuDiu+uDA1am+90yWXwzDSd/20ZM196ggWJLS+Qb6WjVd/OA=="],
 
     "@theopenlane/animated-icons": ["@theopenlane/animated-icons@0.2.2", "", { "peerDependencies": { "motion": "^14.0.0", "react": "^19.0.0" } }, "sha512-fF62rWyQbDBqwXEVTQF/WhPaBwKck2INWghFJS+CIdaBloxKmw3KdLSrc0KK4xYj7whZe8YIqf6Ze9ud5nLFjA=="],
+
+    "@theopenlane/react-animations": ["@theopenlane/react-animations@0.1.0", "", { "peerDependencies": { "react": "^19.0.0" } }, "sha512-Pb66KQXSZnxj0mqlAQKwmQwVu4zMPubFYW35zOgoVR63W/7vkghWn37QrlXxzTDieDm2pZtKA8MnO2ek70pI0A=="],
 
     "@trysound/sax": ["@trysound/sax@0.2.0", "", {}, "sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA=="],
 
