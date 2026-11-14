@@ -1,0 +1,218 @@
+---
+title: Self-hosting
+description: What it takes to run the open-source Openlane project on your own infrastructure, and what the open-source project does not include
+sidebar_position: 2
+keywords:
+  - self-hosting
+  - self-hosted
+  - open source
+  - deployment
+tags:
+  - operations
+  - self-hosting
+---
+
+# Self-hosting Openlane
+
+The Openlane [core server](https://github.com/theopenlane/core) and [web console](https://github.com/theopenlane/openlane-ui) are open source under the Apache 2.0 license, and you can run them on your own infrastructure with no license fee. Self-hosting means you operate the whole stack yourself, and the open-source project does not ship with everything our cloud service includes - the specifics of what's included vs. not is outlined below.
+
+## What running Openlane yourself involves
+
+When you run the open-source project, you take on the responsibilities most SaaS vendors provide as a part of their services, which covers areas such as security, availability, backups, upgrades, deployment, and configuration of every service in the stack. Configuration of the system includes components such as integrations: you have to register your own OAuth applications and API credentials with each external system, and you make sure your deployment can reach them over the network, perform authentication, and fetch the needed data.
+
+The only deployment method we document today is running the stack locally. We publish container images for the core server and the Riverboat worker to the [GitHub container registry](https://github.com/orgs/theopenlane/packages?repo_name=core), and how you run them in production, whether on Kubernetes or on virtual machines, is your decision. We do not publish a container image for the console / UI today, so you would also need to decide how to deploy that part of the stack (e.g. using Vercel, CloudFlare Pages, within a container, etc.)
+
+## Infrastructure you provide
+
+The core server depends on several backing services. The [Docker Compose files in the core repository](https://github.com/theopenlane/core/tree/main/docker) show a working local arrangement of all of them, and [Config and Secrets](./config-and-secrets.mdx) covers how to point the server at each one. These backing services are detailed below.
+
+### PostgreSQL
+
+PostgreSQL holds the application data, the background job queue, and the authorization data. These run as three separate databases on one PostgreSQL instance, and you can split them across instances if your capacity planning calls for it. Plan backups and point-in-time recovery for all three, since losing the authorization database leaves the application data without its access rules.
+
+### Authorization service
+
+Openlane checks every permission against an [OpenFGA](https://openfga.dev/) server, which stores its data in PostgreSQL. The server runs a migration step before it starts, and the core server cannot authorize any request without it.
+
+### Redis
+
+Redis backs sessions, caching, key signing and rotation, and other misc tasks for the core server. While it is technically possible to run without it, both our local setup and unit tests leverage it and it should be assumed as required to run.
+
+### Object storage
+
+Uploaded files, including evidence attachments, go to object storage. The storage layer supports S3-compatible services, Cloudflare R2, local disk, and the database itself; the [object storage README](https://github.com/theopenlane/core/blob/main/pkg/objects/README.md) describes each provider. We recommend an S3-compatible service for any deployment with more than one server replica.
+
+### Background job worker
+
+Riverboat is a worker that processes a job queue (there is also a built-in worker within the `core` server that also uses River and its database), including functionality within the stack such as email delivery. It runs as its own container alongside the core server and reads from the job database.
+
+### Email delivery
+
+Openlane sends invitations, verification, and notification email through a provider account you configure. The configuration supports Resend and Postmark; see [Email](../integrations/email-delivery.mdx) for how delivery works. Invitation to target organizations, verification
+
+### Billing and module settings
+
+Our cloud service enforces subscriptions and product modules through Stripe. A self-hosted install does not need either, so turn both off in your configuration:
+
+```yaml
+entConfig:
+  modules:
+    enabled: false
+
+subscription:
+  enabled: false
+```
+
+## What the open-source project does not include
+
+### Control libraries
+
+The open-source project does not include our standards and control libraries. Some of that material is licensed rather than ours to give away: the AICPA owns the SOC 2 criteria, and we pay for the right to publish them in our commercial product, but that license does not let us redistribute them in an open-source project. Similar constraints exist for a number of compliance standards. On a self-hosted install you can create and manage your own standards, controls, and subcontrols, through the console or the API, and map them to each other, but you do not get the benefit of our ongoing maintenance and management of these control standards.
+
+### Trust Center
+
+Some components of the Openlane stack are not publicly available, and the Trust Center is one of them. A self-hosted install has no trust center for publishing your security posture to customers.
+
+### Deployment packaging
+
+We do not yet publish any kind of deployment manifest such as Helm charts. The core repository generates Helm values and Kubernetes manifests from its configuration for our own infrastructure, and you can read them as a reference, but they are not a supported chart for outside deployments.
+
+The web console is not containerized. You build and host [the Openlane UI](../getting-started/openlane-ui.mdx) from source, and some of its links and branding, such as our Terms of Service and Privacy Policy, are not configurable yet.
+
+## Releases, upgrades, and data repairs
+
+We release the core server often, sometimes several times in one week or even multiple times a day, as tagged [GitHub releases](https://github.com/theopenlane/core/releases) and container images. On a self-hosted install, deciding which releases to take, testing them against your configuration, and rolling them out is your work, and the console follows its own release cycle in its own repository.
+
+When we find a data problem or ship a change that needs a one-off fix, such as a `backfill`, a database correction, or a migration of authorization records, we run that fix against our cloud service. We do not run it against your install, and some of these fixes exist only as notes and scripts in the core repository, such as the [authorization record migration](https://github.com/theopenlane/core/blob/main/db/MIGRATION.md). Review the release notes before each upgrade, and back up every database first.
+
+## Support
+
+We offer basic paid support for self-hosted installs and are open to various contractual arrangements to aide you in your effort to self host, but as a growing startup we have limited availability for more complex agreements. Our basic agreement covers setup and deployment guidance, help debugging technical problems, and questions about product functionality, which is the same general support our cloud customers get. It does not include building, configuring, managing, or operating your environment or its infrastructure. [Contact us](mailto:info@theopenlane.io) for a quote.
+
+## FAQ
+
+<details>
+<summary>Does the self-hosted install include SOC 2 or other framework controls?</summary>
+
+No. The open-source project does not include our standards and control libraries.
+
+</details>
+
+<details>
+<summary>Is the Trust Center available when self-hosting?</summary>
+
+No. The Trust Center is not part of the open-source project, and it is available only in our cloud service.
+
+</details>
+
+<details>
+<summary>Are there deployment manifests or helm charts, similar, to deploy the stack?</summary>
+
+No. We publish container images for the core server and the Riverboat worker, but we do not publish Helm charts, and the web console is not containerized. You build and host the console from source or need to publish your own image.
+
+</details>
+
+<details>
+<summary>Can a self-hosted install record passing and failing results from systems like AWS, GitHub, or Google Workspace?</summary>
+
+Yes, through the API - this applies to both self-hosted and our cloud service. You can write check results from any system into Openlane attach them to the controls they relate to.
+
+</details>
+
+<details>
+<summary>Do Openlane integrations create evidence for controls automatically?</summary>
+
+No. Integrations bring in data for monitoring, alerting, and task assignment and tracking, but they do not create evidence. An auditor testing whether a control operated effectively chooses among inquiry, observation, examination of evidence, and re-performance, and a configuration setting pulled from an external system rarely satisfies that testing alone. Expect walk-throughs with your auditor even where an integration reports the setting.
+
+</details>
+
+<details>
+<summary>What data leaves my infrastructure when I self-host?</summary>
+
+Only the data you choose to send. Nothing in a self-hosted install communicates with services we run or operate. The external systems you connect, such as your email provider or the integrations you configure, receive what those connections send them. Replace the example configuration's URLs that point at our domains before you start the server; the next answer covers them.
+
+</details>
+
+<details>
+<summary>Which example configuration values point at Openlane's own services?</summary>
+
+Several URLs in the example configuration point at our domains, including the authorization server address, the console and API links in email, and the billing return pages. Set the top-level `domain` value, which fills in many of these, then review every remaining URL. A server left on these defaults tries to reach services we operate or sends your users links to our console.
+
+</details>
+
+<details>
+<summary>Who is responsible for taking new Openlane releases?</summary>
+
+You are. We publish tagged releases of the core server on GitHub, often several in a week, along with container images. Choosing which releases to take, testing them, and rolling them out is your work, including the console, which you build from its own repository. The core server applies database schema migrations when it starts, so back up your databases before every upgrade.
+
+</details>
+
+<details>
+<summary>Does Openlane run database fixes or data repairs on a self-hosted install?</summary>
+
+No. When a release needs a one-off data change, such as a backfill or a repair to authorization records, we run it against our cloud service only. On a self-hosted install you find, review, and run those changes yourself, and some exist only as notes and scripts in the core repository.
+
+</details>
+
+<details>
+<summary>Which signing keys and certificates do I need to create?</summary>
+
+You create and own all of them. The core server signs access tokens with keys you supply, and it can reload them from a key directory so you rotate keys without a restart; retired public keys are archived in Redis so tokens signed before a rotation still verify. When no keys are configured, the server generates one and writes it to its working directory. That behavior is for development: a container loses the file on restart, and every replica generates a different key, which invalidates sessions. Beyond token signing, you supply the session cookie signing and encryption keys, the secret used for two-factor codes, and the TLS certificates for your domains, unless you terminate TLS at a load balancer.
+
+</details>
+
+<details>
+<summary>What cookie, CORS, and browser security settings do I need to configure?</summary>
+
+You need to review and configure all of them. The software and associated configuration are not secure by default, which we make clear in our public documentation. You need to add your console's origin to the allowed CORS origins, which are empty by default. Set the session cookie domain and confirm the cookie stays secure and same-site. Turn on CSRF protection, which the example configurations leave off. Review the security headers, including the content security policy and HSTS, against the domains you serve. If you allow passkeys, set the relying party ID and allowed origins to your own domain. Rate limiting is also off by default.
+
+</details>
+
+<details>
+<summary>Can I seed demo data during onboarding on a self-hosted install?</summary>
+
+Only if you supply it, otherwise no. The demo datasets offered during onboarding live in storage we operate and are not part of the open-source project, so the option to add demo data is unavailable on a self-hosted install.
+
+</details>
+
+<details>
+<summary>How do I configure sign-in with Google or GitHub on a self-hosted install?</summary>
+
+Register your own OAuth application with Google, GitHub, or both, using callback URLs on your own API domain, then add each application's client ID and secret to the server configuration and list the provider as supported. Our cloud service's OAuth applications do not work for your install. [SSO and auth configuration](../security/sso-configuration.mdx) lists the values each provider needs, along with organization single sign-on, which you configure through the API after deployment.
+
+</details>
+
+<details>
+<summary>How should I manage secrets for a self-hosted install?</summary>
+
+Keep them in a secret manager you run and inject them as environment variables. Every setting can come from an environment variable with the `CORE_` prefix, as [Config and Secrets](./config-and-secrets.mdx) describes. The secrets include database and Redis credentials, signing keys, OAuth client secrets, email provider keys, object storage credentials, and the credentials for every integration you turn on. The example configuration files ship placeholder session keys and default database passwords; replace every one before the server accepts traffic.
+
+</details>
+
+<details>
+<summary>Can Openlane demo a self-hosted install?</summary>
+
+No. Any demonstration we give runs on our multi-tenant cloud service, because a self-hosted install is infrastructure you run. We are happy to demo the product and answer questions about how it would behave on your own deployment.
+
+</details>
+
+<details>
+<summary>Do I have to pay to self-host Openlane?</summary>
+
+No. The open-source project carries no license fee and no required payment. Paid support for self-hosted installs is optional.
+
+</details>
+
+<details>
+<summary>Does Openlane offer compliance services, audit coordination, or penetration testing?</summary>
+
+No. Our self-hosted support covers setup and deployment guidance, technical debugging, and product questions. For hands-on compliance work, virtual chief information security officer (vCISO) services, audit coordination, or penetration testing, we can refer you to audit firms and service providers we work with.
+
+</details>
+
+<details>
+<summary>Can I evaluate Openlane before deciding to self-host?</summary>
+
+Yes. Our cloud service has a 30-day free trial with no credit card required, which lets you learn the product's capabilities before you decide how to run it. Data you store in our cloud service stays yours, and you can export it at any time.
+
+</details>
