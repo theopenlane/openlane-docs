@@ -1,0 +1,235 @@
+---
+title: Vendor scoring
+description: Score vendors against a shared set of risk questions, and choose the questions and rating bands your organization uses
+sidebar_position: 3.5
+keywords:
+  - vendor scoring
+  - vendor risk score
+  - vendor risk rating
+  - third-party risk management
+compliance:
+  - "SOC 2 CC3"
+  - "SOC 2 CC9"
+  - "ISO 27001:2022 A.5.19-A.5.23"
+---
+
+import Steps from '@site/src/components/Steps';
+import StatusChip from '@site/src/components/StatusChip';
+import Term from '@site/src/components/Term';
+import VendorRiskMatrix, {RatingChip} from '@site/src/components/VendorRiskMatrix';
+import VendorScoringPreview from '@site/src/components/VendorScoringPreview';
+
+# Vendor scoring
+
+Vendor scoring is the assessment step of <Term t="third-party-risk-management">third-party risk management (TPRM)</Term>. You answer the same risk questions for each [vendor](./entities.mdx), and Openlane turns the answers into a risk score and rating. Where a vendor's tier says how much scrutiny it warrants, the rating records what that scrutiny found.
+
+## How a score is calculated
+
+Each answer scores **impact × likelihood**, and the vendor's risk score is the total across its answers. Impact is how much damage the gap would cause with this vendor, and likelihood is how probable that is.
+
+<VendorRiskMatrix />
+
+On a Yes / No question, **Yes** means the control is in place and scores 0. **No** scores impact × likelihood, and so does any answer to a text, number, or pick-one question.
+
+The total then maps to a rating. A vendor gets the first rating whose upper score it does not exceed:
+
+| Rating | Default score |
+| --- | --- |
+| <RatingChip rating="None" /> | 0 |
+| <RatingChip rating="Very Low" /> | Up to 3 |
+| <RatingChip rating="Low" /> | Up to 5 |
+| <RatingChip rating="Medium" /> | Up to 11 |
+| <RatingChip rating="High" /> | Up to 15 |
+| <RatingChip rating="Critical" /> | Above 15 |
+
+For example, a vendor answers No to two questions and Yes to the rest. Enforcing multi-factor authentication is rated Critical impact and Medium likelihood (5 × 2 = 10), and testing the disaster response plan is rated High impact and Low likelihood (4 × 1 = 4). The vendor scores 14, which is High.
+
+## Scoring a vendor
+
+Scoring works without any setup, using 37 built-in questions. Answering them takes edit access to the vendor, and changing how scoring works takes an organization role:
+
+| To do this | You need |
+| --- | --- |
+| Answer questions, upload answers, or set a score by hand | Edit access to the vendor |
+| Read a vendor's answers and notes | View access to the vendor |
+| Change questions, the unanswered setting, or rating bands | The organization owner or admin role |
+
+<Steps>
+
+1. Open the vendor from **Registry > Vendors** and select the **Risk Review** tab.
+1. Under **Risk Scoring**, click **Start scoring**. On a vendor that already has answers, the button reads **Edit answers**.
+1. Answer the questions in each category. For anything other than Yes, choose a **Likelihood**, and change **Impact** if this vendor's exposure differs from the default.
+1. Add **Notes** with the reason for the rating, such as the section of the vendor's SOC 2 report you relied on. A reviewer or auditor reading the score later sees the reasoning next to it.
+1. Click **Done**.
+
+</Steps>
+
+Complete answers save as you go, and the score at the top of the panel updates with them. An answer that still needs a likelihood is not saved, and you are warned before you close. To remove an answer, select the pressed **Yes** or **No** again, or click **Clear answer** on other question types.
+
+Back on the **Risk Review** tab you should see the answer score, how many questions are answered, and which categories the score comes from. Expand a category to read its answers and notes.
+
+<VendorScoringPreview view="results" />
+
+### Have the vendor fill in the answers
+
+When the vendor is the one who knows the answers, exchange them as a CSV file. Both options are in the menu next to **Start scoring** or **Edit answers**.
+
+<Steps>
+
+1. Choose **Download questions (CSV)** and send the file to your [vendor contact](./contacts.mdx).
+1. When the file comes back, review the `Answer` column and set `Likelihood` on every answer that is not Yes. Likelihood and impact are your judgment of the risk to your organization, so we recommend setting them yourself instead of asking the vendor to.
+1. Choose **Upload completed questionnaire** and import the file.
+
+</Steps>
+
+Rows with no answer are skipped, so a partly completed file still imports. If any answered row has a problem, such as a missing likelihood, nothing is imported and the error names the rows to fix. Importing a file again updates existing answers without duplicating them.
+
+### Set a vendor's score by hand
+
+Enter a score yourself when you assessed a vendor outside these questions.
+
+<Steps>
+
+1. Open the vendor and select the **Risk Review** tab.
+1. Under **Risk summary**, edit **Risk Score** and press Enter.
+
+</Steps>
+
+The next change to the vendor's answers replaces a score entered by hand. To keep hand-entered scores for every vendor, choose **Set ratings by hand** in the [scoring settings](#unanswered-questions).
+
+### Send the questions from Openlane <StatusChip status="coming-soon" />
+
+You will be able to send the scoring questions to a vendor and have them answer in Openlane. Today, responses to a [questionnaire](../automation/assessments.mdx) sent through a campaign are kept with the campaign and do not change the vendor's score.
+
+### Import answers from a SOC 2 report <StatusChip status="coming-soon" />
+
+You will be able to generate draft answers from a vendor's SOC 2 report and review them before relying on the score.
+
+## Configuring scoring for your organization
+
+The questions, the unanswered setting, and the rating bands apply to every vendor, so scores stay comparable.
+
+<Steps>
+
+1. Go to **Registry > Vendors**.
+1. In the banner above the table, click **Customize scoring**. Once scoring is set up, the button reads **Configure scoring**.
+1. Make your changes on the **Questions** and **Scoring & rating bands** tabs.
+1. Click **Save changes**.
+
+</Steps>
+
+If the banner is hidden, open the **Risk scoring** gear menu on the Vendors page and choose **Configure risk scoring**.
+
+### Questions
+
+Turn off questions that do not apply to your vendors, edit the built-in ones, or add your own. You can change a built-in question's wording and default impact, but not its category or answer type. **Reset to default** in the question editor restores the Openlane version.
+
+<VendorScoringPreview view="questions" />
+
+Write Yes / No questions so that Yes is the safe answer, because Yes always scores 0. "Is customer data encrypted at rest?" scores correctly. "Has the vendor had a breach in the last year?" would score a breach as no risk.
+
+To add a question:
+
+<Steps>
+
+1. On the **Questions** tab, click **Add question**.
+1. Enter the **Question**, and use **Why it matters** to explain it to whoever answers.
+1. Choose a **Category** and a **Default impact**. The default impact is the starting point on each vendor, and you can change it when answering.
+1. Choose an **Answer type**. **Pick one** needs at least two answer options.
+1. Click **Add question**, then **Save changes**.
+
+</Steps>
+
+Question changes apply to answers recorded from then on, and existing answers keep the wording they were given under. Once a question you added has been answered for a vendor, its answer type is fixed and it cannot be deleted. Turn it off instead.
+
+### Unanswered questions
+
+| Setting | Effect on the score | Use it when |
+| --- | --- | --- |
+| **Ignore unanswered questions** (default) | Only answered questions count | Answers arrive over time |
+| **Count unanswered as highest risk** | Each unanswered question adds 20 | Every vendor must answer everything |
+| **Set ratings by hand** | Answers are kept but not totaled | You score vendors outside these questions |
+
+With **Ignore unanswered questions**, read the score alongside its coverage. A vendor with two answers and a score of 0 has not been shown to be low risk.
+
+Before you choose **Count unanswered as highest risk**, raise the rating bands. One unanswered question adds 20 points, which is Critical under the default bands.
+
+With **Set ratings by hand**, Openlane does not total answers or apply the rating bands. A vendor's score and rating stay as set when its answers or the bands change.
+
+### Rating bands
+
+Each band sets the highest score that earns its rating, and each must be higher than the one before it. A score of 0 is always None, and anything above the High band is Critical.
+
+<VendorScoringPreview view="bands" />
+
+Scores are totals, not averages, so the default bands are strict: two No answers at High impact and Medium likelihood already add up to 16, which is Critical. We recommend scoring a few vendors you know well first, then adjusting the bands until their ratings match your judgment.
+
+### What changes a score
+
+| Change | Effect on scores |
+| --- | --- |
+| Saving, changing, or clearing an answer, its likelihood, or its impact | Recalculates that vendor |
+| Saving new rating bands or a new unanswered setting | Recalculates every scored vendor |
+| Adding, editing, or turning off a question | Leaves existing scores alone. With **Count unanswered as highest risk**, a vendor picks up the change the next time one of its answers changes |
+| Entering a score by hand | Replaces that vendor's score until the next recalculation |
+| Changing the vendor's tier | None |
+
+With **Set ratings by hand**, none of these recalculate a vendor, and only a score you enter changes it.
+
+## Finding vendors by rating
+
+Once scoring is set up, **Vendors by risk rating** above the Vendors table shows how many vendors hold each rating and how many are not scored. Select a rating to filter the table to those vendors. The table also has **Risk Rating** and **Risk Score** columns, hidden until you turn them on.
+
+A high rating is a finding to act on. Record the decision in a vendor review on the **Risk Review** tab, and add anything that needs treatment to your [risk register](../exposure/risks/risk-register.mdx).
+
+## Standard questionnaires and references
+
+A vendor may already have completed an industry questionnaire. Ask for it before sending your own questions, use its answers to score the matching ones.
+
+| Source | Use it for |
+| --- | --- |
+| [Consensus Assessment Initiative Questionnaire (CAIQ)](https://cloudsecurityalliance.org/artifacts/star-level-1-security-questionnaire-caiq-v4-1) | Yes / No questions on cloud provider security controls, from the Cloud Security Alliance (CSA) |
+| [CSA STAR Registry](https://cloudsecurityalliance.org/star/registry) | Looking up whether a vendor has already published a CAIQ |
+| [Standardized Information Gathering (SIG) questionnaire](https://sharedassessments.org/about-sig/) | A broad third-party questionnaire from Shared Assessments, available by subscription or membership |
+| [Higher Education Community Vendor Assessment Toolkit (HECVAT)](https://www.educause.edu/higher-education-community-vendor-assessment-toolkit) | Assessing vendors that serve colleges and universities, from EDUCAUSE |
+| [Minimum Viable Secure Product (MVSP)](https://mvsp.dev/) | A short security baseline for lower-tier vendors |
+| [NIST SP 800-30 Rev. 1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) | Guidance on conducting risk assessments |
+
+For what to review beyond the questions, see [Reviewing a vendor](./entities.mdx#reviewing-a-vendor).
+
+## FAQ
+
+<details>
+<summary>Why did a risk score I entered by hand change?</summary>
+
+Openlane recalculates the score and rating whenever a vendor's answers change, or when someone saves new rating bands or a new setting for unanswered questions. A score entered by hand stays in place if the vendor has no answers or if your organization uses **Set ratings by hand**.
+
+</details>
+
+<details>
+<summary>Why does the answer score differ from the vendor's risk score?</summary>
+
+The answer score on the **Risk Review** tab adds up the answers alone. The vendor's risk score can also include points for unanswered questions, and it can be a value someone entered by hand.
+
+</details>
+
+<details>
+<summary>Can the same question carry a different impact for different vendors?</summary>
+
+Yes. The impact on a question is a starting point, and you can change it on each vendor. Missing encryption matters more for a vendor that stores customer data than for one that does not.
+
+</details>
+
+<details>
+<summary>How does vendor scoring differ from risk scoring?</summary>
+
+A vendor's risk score is calculated from its answers. A [risk](../exposure/risks/overview.mdx#scoring-risks) in your register has a score you set on the risk itself, and it uses its own impact and likelihood levels. The two do not update each other, so a high vendor rating does not create or change a risk.
+
+</details>
+
+<details>
+<summary>Can I see how a vendor's answers changed over time?</summary>
+
+Yes. When an answer has changed, the question shows the earlier answer and its date in the answer panel.
+
+</details>
