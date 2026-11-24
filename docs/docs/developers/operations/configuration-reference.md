@@ -42,6 +42,7 @@ Config contains the configuration for the core server
 |**workflows**|`object`|||
 |**cloudflare**|`object`|CloudflareConfig contains configuration for Cloudflare integration.<br/>||
 |**shortlinks**|`object`|||
+|**storagelinks**|`object`|LinksConfig configures signed download and share link URLs served by the storage worker<br/>||
 |**backfill**|`object`|Backfill configures one-time startup data backfill routines that populate fields introduced by recent<br/>||
 
 **Additional Properties:** not allowed 
@@ -229,6 +230,7 @@ Config contains the configuration for the core server
     },
     "cloudflare": {},
     "shortlinks": {},
+    "storagelinks": {},
     "backfill": {}
 }
 ```
@@ -247,6 +249,7 @@ Server settings for the echo server
 |**dev**|`boolean`|Dev enables echo's dev mode options<br/>|no|
 |**listen**|`string`|Listen sets the listen address to serve the echo server on<br/>|yes|
 |**metricsport**|`string`|MetricsPort sets the port for the metrics endpoint<br/>|no|
+|**shutdowndelay**|`integer`|ShutdownDelay sets how long the server keeps serving after a shutdown signal before draining<br/>|no|
 |**shutdowngraceperiod**|`integer`|ShutdownGracePeriod sets the grace period for in flight requests before shutting down<br/>|no|
 |**readtimeout**|`integer`|ReadTimeout sets the maximum duration for reading the entire request including the body<br/>|no|
 |**writetimeout**|`integer`|WriteTimeout sets the maximum duration before timing out writes of the response<br/>|no|
@@ -2907,6 +2910,22 @@ CloudflareConfig contains configuration for Cloudflare integration.
 |**clientsecret**|`string`|||
 |**endpointurl**|`string`|||
 |**linkttl**|`integer`|||
+
+**Additional Properties:** not allowed 
+ 
+<a name="defsstoragelinksconfig"></a>
+## $defs/storage\.LinksConfig: object
+
+LinksConfig configures signed download and share link URLs served by the storage worker
+
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Enabled toggles minting of signed download URLs and share links<br/>||
+|**baseurl**|`string`|BaseURL is the prefix the storage worker serves download and share URLs under (e.g., https://api.theopenlane.io/v1/storage)<br/>||
+|**forwardersecret**|`string`|ForwarderSecret is the shared secret the storage worker presents on share link callbacks<br/>||
 
 **Additional Properties:** not allowed 
  
