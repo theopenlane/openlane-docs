@@ -216,6 +216,11 @@ Config contains the configuration for the core server
             "enabled": true,
             "dryrun": true,
             "maxperrun": 100
+        },
+        "fileorphan": {
+            "enabled": true,
+            "dryrun": true,
+            "maxperrun": 500
         }
     },
     "workflows": {
@@ -263,6 +268,7 @@ Server settings for the echo server
 |**trustcentercnametarget**|`string`|TrustCenterCnameTarget is the cname target for the trust center<br/>Used for mapping the vanity domains to the trust centers<br/>|no|
 |**assessmentcnametarget**|`string`|AssessmentCnameTarget is the cname target for the assessment domains.<br/>Used for mapping vanity domains for questionnaires<br/>|no|
 |**trustcenterpreviewzoneid**|`string`|TrustCenterPreviewZoneID is the cloudflare zone id that holds trust center preview domain records<br/>|no|
+|**trustcentercacherefreshsecret**|`string`|TrustCenterCacheRefreshSecret is the shared secret sent in the X-Openlane-Cache-Refresh header on trust center<br/>cache refresh requests so the trust center frontend can authenticate forced-fresh renders; no header is sent when empty<br/>|no|
 |**notificationlookbackdays**|`integer`|NotificationLookbackDays is the number of days of read notifications to pull when starting a notification subscription<br/>Unread notifications are always pulled regardless of this setting<br/>|no|
 
 **Additional Properties:** not allowed 
@@ -1173,6 +1179,7 @@ identity provider configuration, since both authentications must occur together
 |**DiscardedJobRetentionPeriod**|`integer`|||
 |**ErrorHandler**||||
 |**FetchCooldown**|`integer`|||
+|**FetchOnlyKnownKinds**|`boolean`|||
 |**FetchPollInterval**|`integer`|||
 |**ID**|`string`|||
 |**JobCleanerTimeout**|`integer`|||
@@ -1181,6 +1188,7 @@ identity provider configuration, since both authentications must occur together
 |**JobStuckThreshold**|`integer`|||
 |**JobTimeout**|`integer`|||
 |**Hooks**|`array`|||
+|**LeaderElectionDisabled**|`boolean`|||
 |**Logger**|`object`|||
 |**MaxAttempts**|`integer`|||
 |**Middleware**|`array`|||
@@ -1368,6 +1376,9 @@ identity provider configuration, since both authentications must occur together
 |**secure**|`boolean`|||
 |**httponly**|`boolean`|||
 |**samesite**|`string`|||
+|**absolutetimeout**|`integer`|||
+|**renewalinterval**|`integer`|||
+|**renewalgrace**|`integer`|||
 
 **Additional Properties:** not allowed 
  
@@ -1385,6 +1396,8 @@ identity provider configuration, since both authentications must occur together
 |**secret**|`string`|||
 |**recoverycodecount**|`integer`|||
 |**recoverycodelength**|`integer`|||
+|**maxfailedattempts**|`integer`|||
+|**failurewindow**|`integer`|||
 
 **Additional Properties:** not allowed 
  
@@ -1402,6 +1415,7 @@ Config defines the configuration settings for the rate limiter middleware.
 |**options**|`array`|||
 |**headers**|`string[]`|||
 |**forwardedindexfrombehind**|`integer`|ForwardedIndexFromBehind selects which IP from X-Forwarded-For should be used.<br/>0 means the closest client, 1 the proxy behind it, etc.<br/>||
+|**forwardersecret**|`string`|ForwarderSecret is the shared secret a trusted forwarding proxy presents in X-Openlane-Forwarder-Secret<br/>||
 |**includepath**|`boolean`|IncludePath appends the request path to the limiter key when true.<br/>||
 |**includemethod**|`boolean`|IncludeMethod appends the request method to the limiter key when true.<br/>||
 |**keyprefix**|`string`|KeyPrefix allows scoping the limiter key space with a static prefix.<br/>||
@@ -1893,6 +1907,7 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
 |**paymentreminder**|`object`|||
 |**organizationdelete**|`object`|||
 |**integrationlifecycle**|`object`|||
+|**fileorphan**|`object`|||
 
 **Additional Properties:** not allowed 
 **Example**
@@ -1961,6 +1976,11 @@ KeyWatcher contains settings for the key watcher that manages JWT signing keys
         "enabled": true,
         "dryrun": true,
         "maxperrun": 100
+    },
+    "fileorphan": {
+        "enabled": true,
+        "dryrun": true,
+        "maxperrun": 500
     }
 }
 ```
@@ -2769,6 +2789,29 @@ supplies the region, endpoint, and credentials
     "enabled": true,
     "dryrun": true,
     "maxperrun": 100
+}
+```
+
+ 
+<a name="defssystemfileorphanconfig"></a>
+### $defs/system\.FileOrphanConfig: object
+
+**Properties**
+
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**enabled**|`boolean`|Whether the file orphan sweep is enabled<br/>Default: `true`<br/>||
+|**dryrun**|`boolean`|If true only log file IDs that would be deleted<br/>Default: `true`<br/>||
+|**maxperrun**|`integer`|Maximum orphaned files to delete per run<br/>Default: `500`<br/>||
+
+**Additional Properties:** not allowed 
+**Example**
+
+```json
+{
+    "enabled": true,
+    "dryrun": true,
+    "maxperrun": 500
 }
 ```
 

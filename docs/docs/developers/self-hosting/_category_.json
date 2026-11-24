@@ -1,0 +1,9 @@
+{
+  "label": "Self Hosting",
+  "position": 9,
+  "link": {
+    "type": "doc",
+    "id": "developers/self-hosting/overview"
+  },
+  "collapsed": true
+}

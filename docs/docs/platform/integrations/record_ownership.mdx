@@ -1,0 +1,46 @@
+---
+title: Record Ownership
+description: How integration-created records are owned, kept current, and reconnected across reinstalls
+sidebar_position: 19
+sidebar_label: Record Ownership
+---
+
+# Record Ownership
+
+Every record an integration imports into Openlane has a single owner: the integration that first brought it in. The owner keeps the record current, and no other connection can modify it or claim it. We use this single-owner model because overlapping sources are common (two scanners reporting the same vulnerability, two directories holding the same person) and letting them write to the same record produces conflicting values, noisy change history, and update storms that never settle.
+
+## How ownership works
+
+Ownership belongs to the integration itself, not to the specific installation of it. When you connect an integration, each record it creates is marked as managed by that integration, and on every following sync we compare what the source reports against what the record already holds:
+
+* If nothing changed, we write nothing. The record's history and timestamps stay quiet, so change history reflects real changes in your environment rather than sync activity
+* If the source reports a difference, the owning integration updates the record and the change appears in its history
+* If the record is owned by a different integration, the sync leaves it alone entirely
+
+Records you create manually start out unowned. The first integration that recognizes one of them during a sync takes over managing it rather than creating a duplicate, so connecting an integration into an organization with existing data consolidates instead of doubling up.
+
+## Reinstalling an integration
+
+Removing an integration does not remove its records. Everything it imported stays in place with full history, because the evidence you collected remains yours regardless of which connections are currently active.
+
+When you reinstall the same integration against the same external system, it reconnects to the records it created before and resumes managing them. We recognize the external system instance itself (your GitHub organization, your Azure tenant, your Okta organization), so a reinstall picks up where the previous installation left off instead of importing a second copy of everything. You should see the existing records begin updating again on the first sync after reinstalling.
+
+While an integration is removed, its records stay exactly as they were. No other integration takes them over, and they resume updating only when the same integration is reconnected.
+
+:::info[Important]
+Reinstall continuity depends on connecting to the same external system instance. Connecting the integration to a different organization or tenant imports that instance's data as new records.
+:::
+
+## Overlapping sources
+
+When a second integration syncs data that matches a record another integration owns, the second source's copy is recognized and skipped. It is not imported as a duplicate, it does not overwrite the owner's values, and it is not attached to the record. A record's integration linkage always answers one question: which connection manages this record.
+
+Directory data works the same way at the record level, with one addition you will notice in the product: each directory source maintains its own account records, and we consolidate them into a single person profile, so connecting several directories gives you one view of a person without their sources contending over a single record.
+
+## Planned capabilities
+
+We plan to extend this model in ways that preserve the single-owner rule:
+
+* Observation tracking, so a record shows which additional connected sources have seen it and when, and that history survives removing the observing integration
+* Enrichment from secondary sources, presenting the information other sources hold about an owned record alongside it without modifying the owned record
+* Ownership transfer, allowing a different integration to take over records whose owning integration has been removed

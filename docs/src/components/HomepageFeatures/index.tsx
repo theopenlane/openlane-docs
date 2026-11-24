@@ -1,4 +1,5 @@
 import React from 'react';
+import {BookOpenIcon, RocketIcon, TerminalIcon} from '@theopenlane/animated-icons';
 import Icon from './Icon';
 import CardArt from './CardArt';
 import '../../css/homepage.css';
@@ -14,7 +15,7 @@ const HERO = {
 };
 
 type QuickLink = {
-  icon: string;
+  icon: typeof BookOpenIcon;
   title: string;
   description: string;
   href: string;
@@ -22,19 +23,19 @@ type QuickLink = {
 
 const QUICK_LINKS: QuickLink[] = [
   {
-    icon: 'rocket',
+    icon: RocketIcon,
     title: 'Quickstart',
     description: 'First program in 15 minutes',
     href: '/docs/platform/quickstartguide',
   },
   {
-    icon: 'book-open',
+    icon: BookOpenIcon,
     title: 'Core concepts',
     description: 'How the objects fit together',
     href: '/docs/platform/overview',
   },
   {
-    icon: 'terminal',
+    icon: TerminalIcon,
     title: 'API & CLI',
     description: 'GraphQL schema, auth, examples',
     href: '/docs/api/graph-api',
@@ -161,7 +162,7 @@ export default function HomepageFeatures() {
           {QUICK_LINKS.map((q) => (
             <a key={q.title} href={q.href} className="dlQuick" style={{color: 'inherit', textDecoration: 'none'}}>
               <span style={{width: '34px', height: '34px', borderRadius: '9px', background: 'var(--dl-accent-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 'none'}}>
-                <Icon n={q.icon} style={{color: 'var(--dl-accent)'}} />
+                <q.icon size={17} trigger="a" className="dlQuickIcon" />
               </span>
               <span style={{flex: '1', minWidth: '0'}}>
                 <span style={{display: 'block', fontFamily: '\'Outfit\', sans-serif', fontSize: '15.5px', fontWeight: '600', color: 'var(--dl-fg)'}}>{q.title}</span>
