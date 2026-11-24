@@ -22,7 +22,7 @@ Vendors, or "Entities" represent the external organizations your program depends
 
 Vendor management programs generally tier vendors by potential impact and let the tier drive the depth and cadence of review: a critical data processor warrants an annual questionnaire, System and Organization Controls 2 (SOC 2) report review, and contract scrutiny, while a low-impact tool gets a lightweight check at renewal. We built tiering and review scheduling into the entity record so assessments recur instead of happening once at onboarding.
 
-## How Entities Work
+## How entities work
 
 Each entity record carries a lifecycle status so terminated vendors stay auditable for the covered period instead of disappearing when the relationship ends, and teams evaluating a new vendor can see where it stands before due diligence completes.
 
@@ -30,17 +30,17 @@ Two settings turn the record into a management tool: the vendor tier classifies 
 
 Entities tie together the [contacts](./contacts.mdx) you correspond with at the vendor, the documents collected during reviews, and the [subprocessors](../trust-center/subprocessors.mdx) you disclose publicly. For the complete field list, see the [GraphQL object reference](/graphql).
 
-## Working with Entities
+## Working with entities
 
-### Build and Tier the Vendor Inventory
+### Build and tier the vendor inventory
 
 [Import your vendor list via CSV](../importing-data.mdx), then assign each entity a tier based on the data it touches and the blast radius if it fails. A useful heuristic: anything processing customer or regulated data, or sitting in the production path, is Critical or High; internal tooling with no sensitive data is Standard or Low. Assign an internal owner to each entity so every vendor has a person accountable for its reviews.
 
-### Run Due Diligence on a Cadence
+### Run due diligence on a cadence
 
 Set a review frequency and next review date on each entity, scaled to its tier. When a review comes due, send a vendor assessment [campaign](../automation/campaigns.mdx) to the vendor's contact, attach the returned SOC 2 report and questionnaire responses to the entity, and record who reviewed it and when. The entity becomes the audit trail: an auditor asking "show me your last review of this vendor" gets a record with a reviewer, a date, and the supporting documents rather than a search through shared drives.
 
-### Track Contracts and Renewals
+### Track contracts and renewals
 
 Record contract end dates, renewal dates, auto-renewal terms, and termination notice periods on each entity, then schedule reviews ahead of renewals so findings can actually influence the decision. A questionnaire completed before the termination notice window closes can still change the renewal decision; one completed after auto-renewal fires cannot.
 
@@ -67,7 +67,7 @@ Ask for evidence in proportion to the tier, and record what you relied on in the
 | ISO 27001 certificate | Whether its scope covers the service you buy, and which controls the Statement of Applicability excludes |
 | Penetration test summary | Scope and date, and whether high-severity findings were fixed |
 | Data processing agreement | Permitted processing, breach notice, subprocessor terms, and data return or deletion |
-| Business associate agreement | Signed before the vendor handles protected health information |
+| Business associate agreement | Signed before the vendor, as a business associate, creates, receives, or maintains protected health information |
 
 Two parts of a SOC 2 report are easy to miss. <Term t="complementary-user-entity-controls">Complementary user entity controls</Term> are the controls the vendor expects you to run, so confirm that you run them. The <Term t="carve-out-method">carve-out method</Term> means a <Term t="subservice-organization">subservice organization</Term>'s controls were left out of the audit, so review that provider separately if you depend on it.
 

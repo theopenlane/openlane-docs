@@ -120,9 +120,9 @@ function QuestionsView() {
 }
 
 const MODES = [
-  {label: 'Ignore unanswered questions', description: 'Only answered questions add to the score. Good when vendors fill things out over time.', active: true},
+  {label: 'Ignore unanswered questions', description: 'Only answered questions add to the score. Use when answers arrive over time.', active: true},
   {label: 'Count unanswered as highest risk', description: 'Each unanswered question adds the maximum score. Use when every vendor must answer everything.'},
-  {label: 'Set ratings by hand', description: "Answers are kept, but scores aren't totaled. You set each vendor's rating yourself."},
+  {label: 'Set ratings by hand', description: "Answers are kept, but scores are not totaled. You set each vendor's rating yourself."},
 ];
 
 const BANDS: {rating: string; from: number; upTo: number; tone: Tone}[] = [
@@ -154,7 +154,7 @@ function BandsView() {
       </div>
       <span>
         <span className={m.strong}>Rating bands</span>
-        <small>A vendor gets the first rating whose upper score it doesn&apos;t exceed.</small>
+        <small>A vendor gets the first rating whose upper score it does not exceed.</small>
       </span>
       <div>
         <div className={styles.bar}>
@@ -328,7 +328,7 @@ function ResultsView() {
           </div>
         </div>
       </div>
-      <small>Score = impact × likelihood. A Yes on a yes/no question means the control is in place, so it scores 0, and so does an unanswered question.</small>
+      <small>Score = impact × likelihood. A Yes on a Yes / No question means the control is in place, so it scores 0. Unanswered questions add nothing unless your organization counts them as highest risk.</small>
     </>
   );
 }
