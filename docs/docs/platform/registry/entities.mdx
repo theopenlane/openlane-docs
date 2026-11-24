@@ -65,21 +65,21 @@ Ask for evidence in proportion to the tier, and record what you relied on in the
 | SOC 2 report | The report <Term t="type-i-type-ii">type</Term>, the period covered, the auditor's opinion, and any exceptions |
 | [Bridge letter](../standards/soc2/bridge-letter.mdx) | Whether it covers the gap between the report period and today |
 | ISO 27001 certificate | Whether its scope covers the service you buy, and which controls the Statement of Applicability excludes |
-| Penetration test summary | The date, the scope, and whether high-severity findings were fixed |
-| Data processing agreement | Breach notice terms, subprocessor terms, and data return or deletion |
+| Penetration test summary | Scope and date, and whether high-severity findings were fixed |
+| Data processing agreement | Permitted processing, breach notice, subprocessor terms, and data return or deletion |
 | Business associate agreement | Signed before the vendor handles protected health information |
 
 Two parts of a SOC 2 report are easy to miss. <Term t="complementary-user-entity-controls">Complementary user entity controls</Term> are the controls the vendor expects you to run, so confirm that you run them. The <Term t="carve-out-method">carve-out method</Term> means a <Term t="subservice-organization">subservice organization</Term>'s controls were left out of the audit, so review that provider separately if you depend on it.
 
 ### Fourth parties
 
-Your vendor's own vendors, often called fourth parties, can expose you without a contract between you. Ask for the vendor's <Term t="subprocessor">subprocessor</Term> list, and look for a provider that several of your vendors share, because its outage would affect all of them at once.
+Your vendor's own vendors, often called fourth parties, can expose you without a contract between you. Ask for the vendor's subprocessor list, and look for a provider that several of your vendors share, because its outage would affect all of them at once.
 
-Your customers have the same question about you. Publish your own subprocessors in your [Trust Center](../trust-center/subprocessors.mdx) so they can see which vendors you rely on.
+Your customers have the same question about you. Publish your own subprocessors in your [trust center](../trust-center/subprocessors.mdx) so they can see which vendors you rely on.
 
 ### When to review again
 
-Review each vendor on its schedule, and before a [renewal](#track-contracts-and-renewals). Between scheduled reviews, review again when the vendor reports a breach, when its report lapses or is qualified, or when you start sending it more sensitive data.
+Review each vendor on its schedule, and before a [renewal](#track-contracts-and-renewals). Between scheduled reviews, review again when the vendor reports a breach, lets its report lapse, receives a qualified opinion, or starts handling more sensitive data for you.
 
 ### References
 
@@ -91,7 +91,7 @@ Review each vendor on its schedule, and before a [renewal](#track-contracts-and-
 | [ISO/IEC 27036-1](https://www.iso.org/standard/82905.html) | Concepts for securing supplier relationships |
 | [Interagency guidance on third-party relationships](https://www.occ.gov/news-issuances/bulletins/2023/bulletin-2023-17.html) | United States banking regulators' view of the third-party life cycle |
 | [GDPR Article 28](https://gdpr-info.eu/art-28-gdpr/) | What a contract with a processor must cover, and when a processor may engage another |
-| [DORA](https://eur-lex.europa.eu/eli/reg/2022/2554/oj) | Article 28 on information and communication technology (ICT) third-party risk for financial entities |
+| [Digital Operational Resilience Act (DORA)](https://eur-lex.europa.eu/eli/reg/2022/2554/oj) | Article 28 on information and communication technology (ICT) third-party risk for financial entities |
 | [HIPAA business associates](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) | Who counts as a business associate and what the contract must say |
 
 ## FAQ
@@ -99,7 +99,7 @@ Review each vendor on its schedule, and before a [renewal](#track-contracts-and-
 <details>
 <summary>What is the difference between tier and risk rating?</summary>
 
-Tier is your classification of how much the relationship matters: how much scrutiny it warrants, driven by the data and access involved. Risk rating and risk score capture what assessments actually found (see [Vendor scoring](./vendor-scoring.mdx)). They move independently. A critical-tier vendor can carry a low risk rating after a clean review, and that combination is exactly what you want: high scrutiny confirming low risk.
+Tier is your classification of how much the relationship matters: how much scrutiny it warrants, driven by the data and access involved. Risk rating and risk score capture what assessments found (see [Vendor scoring](./vendor-scoring.mdx)). They move independently. A critical-tier vendor can carry a low risk rating after a clean review, and that combination is what you want, because high scrutiny confirmed the low risk.
 
 </details>
 

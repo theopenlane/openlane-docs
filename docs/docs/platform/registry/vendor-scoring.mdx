@@ -54,6 +54,8 @@ Scoring works without any setup, using 37 built-in questions. Answering them tak
 | Read a vendor's answers and notes | View access to the vendor |
 | Change questions, the unanswered setting, or rating bands | The organization owner or admin role |
 
+To score a vendor:
+
 <Steps>
 
 1. Open the vendor from **Registry > Vendors** and select the **Risk Review** tab.
@@ -64,7 +66,7 @@ Scoring works without any setup, using 37 built-in questions. Answering them tak
 
 </Steps>
 
-Complete answers save as you go, and the score at the top of the panel updates with them. An answer that still needs a likelihood is not saved, and you are warned before you close. To remove an answer, select the pressed **Yes** or **No** again, or click **Clear answer** on other question types.
+Complete answers save as you go, and the score at the top of the panel updates with them. Openlane does not save an answer that still needs a likelihood, and it warns you before you close. To remove an answer, select the pressed **Yes** or **No** again, or click **Clear answer** on other question types.
 
 Back on the **Risk Review** tab you should see the answer score, how many questions are answered, and which categories the score comes from. Expand a category to read its answers and notes.
 
@@ -82,7 +84,7 @@ When the vendor is the one who knows the answers, exchange them as a CSV file. B
 
 </Steps>
 
-Rows with no answer are skipped, so a partly completed file still imports. If any answered row has a problem, such as a missing likelihood, nothing is imported and the error names the rows to fix. Importing a file again updates existing answers without duplicating them.
+The import skips rows with no answer, so a partly completed file still imports. If any answered row has a problem, such as a missing likelihood, nothing is imported and the error names the rows to fix. Importing a file again updates existing answers without duplicating them.
 
 ### Set a vendor's score by hand
 
@@ -114,7 +116,7 @@ The questions, the unanswered setting, and the rating bands apply to every vendo
 1. Go to **Registry > Vendors**.
 1. In the banner above the table, click **Customize scoring**. Once scoring is set up, the button reads **Configure scoring**.
 1. Make your changes on the **Questions** and **Scoring & rating bands** tabs.
-1. Click **Save changes**.
+1. Click **Save changes**. You should see a **Vendor scoring updated** notification.
 
 </Steps>
 
@@ -134,7 +136,7 @@ To add a question:
 
 1. On the **Questions** tab, click **Add question**.
 1. Enter the **Question**, and use **Why it matters** to explain it to whoever answers.
-1. Choose a **Category** and a **Default impact**. The default impact is the starting point on each vendor, and you can change it when answering.
+1. Choose a **Category** and a **Default impact**.
 1. Choose an **Answer type**. **Pick one** needs at least two answer options.
 1. Click **Add question**, then **Save changes**.
 
@@ -154,7 +156,7 @@ With **Ignore unanswered questions**, read the score alongside its coverage. A v
 
 Before you choose **Count unanswered as highest risk**, raise the rating bands. One unanswered question adds 20 points, which is Critical under the default bands.
 
-With **Set ratings by hand**, Openlane does not total answers or apply the rating bands. A vendor's score and rating stay as set when its answers or the bands change.
+With **Set ratings by hand**, Openlane does not total answers or apply the rating bands.
 
 ### Rating bands
 
@@ -162,7 +164,7 @@ Each band sets the highest score that earns its rating, and each must be higher 
 
 <VendorScoringPreview view="bands" />
 
-Scores are totals, not averages, so the default bands are strict: two No answers at High impact and Medium likelihood already add up to 16, which is Critical. We recommend scoring a few vendors you know well first, then adjusting the bands until their ratings match your judgment.
+Because scores are totals, the default bands are strict. Two No answers at High impact and Medium likelihood already add up to 16, which is Critical. We recommend scoring a few vendors you know well first, then adjusting the bands until their ratings match your judgment.
 
 ### What changes a score
 
@@ -170,26 +172,26 @@ Scores are totals, not averages, so the default bands are strict: two No answers
 | --- | --- |
 | Saving, changing, or clearing an answer, its likelihood, or its impact | Recalculates that vendor |
 | Saving new rating bands or a new unanswered setting | Recalculates every scored vendor |
-| Adding, editing, or turning off a question | Leaves existing scores alone. With **Count unanswered as highest risk**, a vendor picks up the change the next time one of its answers changes |
+| Adding, editing, or turning off a question | Leaves existing scores alone |
 | Entering a score by hand | Replaces that vendor's score until the next recalculation |
 | Changing the vendor's tier | None |
 
-With **Set ratings by hand**, none of these recalculate a vendor, and only a score you enter changes it.
+With **Count unanswered as highest risk**, a vendor picks up question changes the next time one of its answers changes. With **Set ratings by hand**, none of these recalculate a vendor, and only a score you enter changes it.
 
 ## Finding vendors by rating
 
 Once scoring is set up, **Vendors by risk rating** above the Vendors table shows how many vendors hold each rating and how many are not scored. Select a rating to filter the table to those vendors. The table also has **Risk Rating** and **Risk Score** columns, hidden until you turn them on.
 
-A high rating is a finding to act on. Record the decision in a vendor review on the **Risk Review** tab, and add anything that needs treatment to your [risk register](../exposure/risks/risk-register.mdx).
+A high rating calls for a decision. Record it in a vendor review on the **Risk Review** tab, and add anything that needs treatment to your [risk register](../exposure/risks/risk-register.mdx).
 
 ## Standard questionnaires and references
 
-A vendor may already have completed an industry questionnaire. Ask for it before sending your own questions, use its answers to score the matching ones.
+A vendor may already have completed an industry questionnaire. Ask for it before sending your own questions, and use its answers to score the matching ones.
 
 | Source | Use it for |
 | --- | --- |
 | [Consensus Assessment Initiative Questionnaire (CAIQ)](https://cloudsecurityalliance.org/artifacts/star-level-1-security-questionnaire-caiq-v4-1) | Yes / No questions on cloud provider security controls, from the Cloud Security Alliance (CSA) |
-| [CSA STAR Registry](https://cloudsecurityalliance.org/star/registry) | Looking up whether a vendor has already published a CAIQ |
+| [CSA Security, Trust, Assurance, and Risk (STAR) Registry](https://cloudsecurityalliance.org/star/registry) | Looking up whether a vendor has already published a CAIQ |
 | [Standardized Information Gathering (SIG) questionnaire](https://sharedassessments.org/about-sig/) | A broad third-party questionnaire from Shared Assessments, available by subscription or membership |
 | [Higher Education Community Vendor Assessment Toolkit (HECVAT)](https://www.educause.edu/higher-education-community-vendor-assessment-toolkit) | Assessing vendors that serve colleges and universities, from EDUCAUSE |
 | [Minimum Viable Secure Product (MVSP)](https://mvsp.dev/) | A short security baseline for lower-tier vendors |
