@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
+import {Check} from 'lucide-react';
 import styles from './styles.module.css';
 
 // Shared building blocks for theme-aware console illustrations, built on Infima variables
@@ -45,5 +46,38 @@ export function WithIcon({icon, children}: {icon: ReactNode; children: ReactNode
       {icon}
       {children}
     </span>
+  );
+}
+
+export type MockupStep<K extends string = string> = {key: K; label: string};
+
+export function Stepper<K extends string>({steps, current}: {steps: MockupStep<K>[]; current: K}) {
+  const currentIndex = steps.findIndex((step) => step.key === current);
+  return (
+    <div className={styles.stepper}>
+      {steps.map((step, index) => (
+        <span key={step.key} className={styles.stepperItem}>
+          {index > 0 && <span className={styles.stepperLine} />}
+          <span
+            className={clsx(
+              styles.stepperDot,
+              index < currentIndex && styles.stepperDone,
+              index === currentIndex && styles.stepperActive,
+            )}>
+            {index < currentIndex ? <Check size={12} /> : index + 1}
+          </span>
+          <span className={clsx(index === currentIndex && styles.strong)}>{step.label}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+export function MockupFooter({start, children}: {start?: ReactNode; children: ReactNode}) {
+  return (
+    <div className={styles.footer}>
+      <span>{start}</span>
+      <span className={styles.footerRight}>{children}</span>
+    </div>
   );
 }

@@ -1,13 +1,13 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
-import {ArrowRight, Check, CircleCheck, EyeOff, FileUp, ListChecks, Pencil, Scissors, Search, Sparkles} from 'lucide-react';
-import {Badge, IconTile, MockupFrame, Select, Tag, WithIcon, mockupStyles as m} from '@site/src/components/ConsoleMockup';
+import {ArrowRight, CircleCheck, EyeOff, FileUp, ListChecks, Pencil, Scissors, Search, Sparkles} from 'lucide-react';
+import {Badge, IconTile, MockupFooter, MockupFrame, type MockupStep, Select, Stepper, Tag, WithIcon, mockupStyles as m} from '@site/src/components/ConsoleMockup';
 import styles from './styles.module.css';
 
 // Theme-aware illustration of the console import steps, built on Infima variables
 type Step = 'upload' | 'map' | 'review';
 
-const STEPS: {key: Step; label: string}[] = [
+const STEPS: MockupStep<Step>[] = [
   {key: 'upload', label: 'Upload'},
   {key: 'map', label: 'Map fields'},
   {key: 'review', label: 'Review'},
@@ -19,37 +19,12 @@ const ARIA_LABELS: Record<Step, string> = {
   review: 'Review step: summary counts and a preview of the controls that will be created',
 };
 
-function Stepper({current}: {current: Step}) {
-  const currentIndex = STEPS.findIndex((step) => step.key === current);
-  return (
-    <div className={styles.stepper}>
-      {STEPS.map((step, index) => (
-        <span key={step.key} className={styles.stepperItem}>
-          {index > 0 && <span className={styles.stepperLine} />}
-          <span
-            className={clsx(
-              styles.stepperDot,
-              index < currentIndex && styles.stepperDone,
-              index === currentIndex && styles.stepperActive,
-            )}>
-            {index < currentIndex ? <Check size={12} /> : index + 1}
-          </span>
-          <span className={clsx(index === currentIndex && m.strong)}>{step.label}</span>
-        </span>
-      ))}
-    </div>
-  );
-}
-
 function Footer({hint, action, showBack = true}: {hint: string; action: string; showBack?: boolean}) {
   return (
-    <div className={styles.footer}>
-      {showBack ? <span className={m.buttonOutline}>← Back</span> : <span />}
-      <span className={styles.footerRight}>
-        <span className={m.hint}>{hint}</span>
-        <span className={m.buttonPrimary}>{action}</span>
-      </span>
-    </div>
+    <MockupFooter start={showBack && <span className={m.buttonOutline}>← Back</span>}>
+      <span className={m.hint}>{hint}</span>
+      <span className={m.buttonPrimary}>{action}</span>
+    </MockupFooter>
   );
 }
 
@@ -265,7 +240,7 @@ export default function ImportPreview({step}: {step: Step}): ReactNode {
   const Body = STEP_BODIES[step];
   return (
     <MockupFrame label={ARIA_LABELS[step]} title="Import controls">
-      <Stepper current={step} />
+      <Stepper steps={STEPS} current={step} />
       <Body />
     </MockupFrame>
   );
