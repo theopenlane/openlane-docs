@@ -15,7 +15,7 @@ repos:
     hooks:
       - id: yamlfmt
   - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.51.1
+    rev: v1.52.2
     hooks:
       - id: typos
   - repo: https://github.com/codespell-project/codespell # another spell checker because typos is not perfect and neither is codespell
@@ -23,6 +23,6 @@ repos:
     hooks:
       - id: codespell
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.23.3
+    rev: v0.24.2
     hooks:
       - id: markdownlint-cli2

@@ -1,0 +1,144 @@
+---
+title: Custom Frameworks
+description: When to create a custom framework, how it differs from org controls, and how to set one up in the console
+sidebar_position: 1.5
+tags:
+  - compliance frameworks
+  - custom frameworks
+  - controls
+keywords:
+  - custom framework
+  - custom standard
+  - org controls
+  - custom controls
+  - framework import
+---
+
+import CreateFrameworkPreview from '@site/src/components/CreateFrameworkPreview';
+import Steps from '@site/src/components/Steps';
+import Term from '@site/src/components/Term';
+
+# Custom frameworks
+
+The [Standards Catalog](https://console.theopenlane.io/standards) includes the published standards that Openlane maintains, such as SOC 2 and ISO 27001. Create a custom framework when you have to meet a set of requirements that is not among them and is specific to your company or too specialized for a shared catalog.
+
+## Why use a custom framework
+
+Use a custom framework when you are given a list of requirements and have to show how you meet each one. A customer's security addendum is a common case, because it applies to your agreement with that customer and is not a published standard. Internal security baselines and niche industry requirements work the same way.
+
+Entering those requirements as a <Term t="compliance-framework">framework</Term> stores each one as a framework control. It works like any other framework control, so you can add it to a program and map your org controls to it. An org control you already use for SOC 2 can then show coverage for the customer's addendum too.
+
+### Check with us before you manage a published standard
+
+:::info[Important]
+If the requirements come from a published standard, email [info@theopenlane.io](mailto:info@theopenlane.io) with its name and version before you build it yourself. We can support many common frameworks for you.
+:::
+
+When we maintain a standard, we also maintain its updates and revisions. When you build the same standard as a custom framework, each new version is yours to review, and you update the framework and its mappings to match.
+
+## Custom frameworks and org controls
+
+[Org controls](../compliance-management/controls/overview.mdx), also called custom controls, track what your organization does. They do not need a framework. You write them in your own language and [map them](../compliance-management/controls/mapping.mdx) to the framework <Term t="controls">controls</Term> they satisfy.
+
+A custom framework holds what you are asked to do. Suppose you revoke access within three business days of a termination. That practice is one org control, and it can map to CC6.2 in SOC 2 and to the offboarding requirement in a customer's addendum. The addendum is the custom framework.
+
+| | Org control | Custom framework |
+|---|---|---|
+| What it records | A practice your organization performs | A set of requirements you have to meet |
+| Needs a framework | No | It is the framework |
+| Where you find it | [Controls](https://console.theopenlane.io/controls) | [Standards Catalog](https://console.theopenlane.io/standards), with its controls also listed in Controls |
+| Label in the console | `CUSTOM` in place of a framework name | `Custom` badge on the catalog card, and its short name on each of its controls |
+
+If you want to track your own practices and map them to a framework in the catalog, org controls are enough. You do not need a custom framework to hold them.
+
+## Create a custom framework
+
+You need the Owner, Super Admin, or Admin role, or the Compliance Manager [functional role](../settings/user-management/permissions.mdx#functional-roles).
+
+<Steps>
+
+1. Go to **Compliance** > **Standards Catalog** and click `Create framework`.
+1. On **Details**, enter a `Name`, a `Short name`, and a `Category`, then click `Continue`. The short name labels the framework's controls across the console, so choose one that no other framework uses. Do not use `CUSTOM`, which identifies org controls.
+1. On **Icon**, upload an image of up to 2 MB, or click `Continue` to use a badge generated from the short name.
+1. On **Controls**, choose [how to add controls](#choose-how-to-add-controls) and click `Continue`.
+1. On **Review**, check the details and click `Create framework`. If you chose to import from CSV, the button reads `Create and import controls`.
+
+</Steps>
+
+<CreateFrameworkPreview />
+
+The console opens the framework's page, or the import page if you chose CSV. Back in the Standards Catalog, the framework has a `Custom` badge, and the `Custom` tab shows only the frameworks your organization owns. Custom frameworks added from the [Trust Center](../trust-center/frameworks.mdx#custom-frameworks) appear there too.
+
+### Choose how to add controls
+
+| Option | When to choose it |
+|---|---|
+| `Import from CSV` | You have the requirements in a spreadsheet or can put them in one |
+| `Link existing controls` | You already entered the framework's requirements as org controls |
+| `Skip for now` | You want the framework in place before its controls are ready |
+
+We recommend the CSV import for most frameworks. It adds the framework's requirements as new controls, so your org controls stay available to map to this framework and any others. After you create the framework, the console opens the import page, where you follow the same [import steps](../importing-data.mdx#how-import-works) as any other CSV. `Ref Code` is the only required column. Add a `Category` column if you want the controls grouped into domains.
+
+:::warning[Linking moves the control into the framework]
+A control can belong to only one framework. A linked org control keeps its existing details, such as its <Term t="evidence">evidence</Term>, but it becomes a framework control. It shows the framework's short name instead of `CUSTOM`, cannot be linked to another framework, and no longer counts as org control coverage for the frameworks it is mapped to. To use one org control across several frameworks, leave it unlinked and map it.
+:::
+
+To add more controls later, open the framework from the catalog and use the `Add controls` menu.
+
+## Map and track the framework
+
+Framework controls show coverage only when an org control is mapped to them. Map your org controls in the console with [Control Mapping](../compliance-management/controls/mapping.mdx), or [import the mappings](../compliance-management/controls/import.mdx#importing-control-mappings) and refer to each framework control by the short name. For the Internal Security Baseline framework, with the short name `ISB`:
+
+```csv
+FromControlRefCodes,ToControlRefCodes,MappingType,Confidence,Source,Relation
+["CUSTOM::CO-07"],["ISB::1.1"],SUBSET,100,IMPORTED,Mapping between our org controls and the ISB framework
+```
+
+To track the framework in a [program](../compliance-management/programs/overview.mdx), filter the controls table by its short name under `Standard`, then use the [bulk edit steps](../compliance-management/controls/import.mdx#importing-controls) to set the program.
+
+## Edit or delete a custom framework
+
+Open the framework from the Standards Catalog to edit its details or icon. If you change the short name, controls already in the framework keep the old one, and mapping imports have to use the name shown on the control.
+
+Deleting a framework does not delete its controls. They are unlinked and stay in your organization as org controls.
+
+:::warning
+If the framework is enabled on your Trust Center, [disable it there and publish](../trust-center/frameworks.mdx) before you delete it. A framework in use by the Trust Center cannot be deleted, and the attempt still unlinks its controls.
+:::
+
+## FAQ
+
+<details>
+<summary>Do I need a custom framework to use org controls?</summary>
+
+No. Org controls track what your organization does and do not need a framework. You can map them directly to frameworks in the Standards Catalog, such as SOC 2 or ISO 27001.
+
+</details>
+
+<details>
+<summary>Should I create a custom framework for a published standard that is not in the catalog?</summary>
+
+Email [info@theopenlane.io](mailto:info@theopenlane.io) first with the name and version of the standard. Openlane can support many common frameworks, and maintains their updates and revisions. A custom framework is the better fit when the standard is obscure or specific to your company.
+
+</details>
+
+<details>
+<summary>Can one org control cover a custom framework and SOC 2?</summary>
+
+Yes. [Map](../compliance-management/controls/mapping.mdx) the org control to the matching controls in each framework. Do not use `Link existing controls` for this, because linking makes the org control part of the custom framework and it no longer counts as org control coverage for SOC 2.
+
+</details>
+
+<details>
+<summary>Can I import my own controls into a framework that Openlane maintains?</summary>
+
+No. Controls can be imported only into frameworks your organization owns. To track your own practices against a framework such as SOC 2, [import them as org controls](../compliance-management/controls/import.mdx#importing-controls) and map them to the SOC 2 controls.
+
+</details>
+
+<details>
+<summary>Can I show a custom framework on my Trust Center?</summary>
+
+Yes. Custom frameworks appear on the [Trust Center frameworks page](../trust-center/frameworks.mdx), where you can enable one and publish the change. Enable it only after your organization has completed an audit or certification against it.
+
+</details>
