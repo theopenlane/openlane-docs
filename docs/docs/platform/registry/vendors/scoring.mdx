@@ -1,7 +1,7 @@
 ---
 title: Vendor scoring
 description: Score vendors against a shared set of risk questions, and choose the questions and rating bands your organization uses
-sidebar_position: 3.5
+sidebar_position: 2
 keywords:
   - vendor scoring
   - vendor risk score
@@ -21,7 +21,7 @@ import VendorScoringPreview from '@site/src/components/VendorScoringPreview';
 
 # Vendor scoring
 
-Vendor scoring is the assessment step of <Term t="third-party-risk-management">third-party risk management (TPRM)</Term>. You answer the same risk questions for each [vendor](./entities.mdx), and Openlane turns the answers into a risk score and rating. Where a vendor's tier says how much scrutiny it warrants, the rating records what that scrutiny found.
+Vendor scoring is the assessment step of <Term t="third-party-risk-management">third-party risk management (TPRM)</Term>. You answer the same risk questions for each [vendor](./overview.mdx), and Openlane turns the answers into a risk score and rating. Where a vendor's tier says how much scrutiny it warrants, the rating records what that scrutiny found.
 
 ## How a score is calculated
 
@@ -46,7 +46,7 @@ For example, a vendor answers No to two questions and Yes to the rest. Enforcing
 
 ## Scoring a vendor
 
-Scoring works without any setup, using 37 built-in questions. Answering them takes edit access to the vendor, and changing how scoring works takes an organization role:
+Scoring works without any setup, using 37 [built-in questions](./questions.mdx). Answering them takes edit access to the vendor, and changing how scoring works takes an organization role:
 
 | To do this | You need |
 | --- | --- |
@@ -74,11 +74,13 @@ Back on the **Risk Review** tab you should see the answer score, how many questi
 
 ### Have the vendor fill in the answers
 
+A vendor may already have completed an [industry questionnaire](./overview.mdx#references). Ask for it before sending your own questions, and use its answers to score the matching ones.
+
 When the vendor is the one who knows the answers, exchange them as a CSV file. Both options are in the menu next to **Start scoring** or **Edit answers**.
 
 <Steps>
 
-1. Choose **Download questions (CSV)** and send the file to your [vendor contact](./contacts.mdx).
+1. Choose **Download questions (CSV)** and send the file to your [vendor contact](../contacts.mdx).
 1. When the file comes back, review the `Answer` column and set `Likelihood` on every answer that is not Yes. Likelihood and impact are your judgment of the risk to your organization, so we recommend setting them yourself instead of asking the vendor to.
 1. Choose **Upload completed questionnaire** and import the file.
 
@@ -101,7 +103,7 @@ The next change to the vendor's answers replaces a score entered by hand. To kee
 
 ### Send the questions from Openlane <StatusChip status="coming-soon" />
 
-You will be able to send the scoring questions to a vendor and have them answer in Openlane. Today, responses to an [assessment](../automation/assessments.mdx) sent through a campaign are kept with the campaign and do not change the vendor's score.
+You will be able to send the scoring questions to a vendor and have them answer in Openlane. Today, responses to an [assessment](../../automation/assessments.mdx) sent through a campaign are kept with the campaign and do not change the vendor's score.
 
 ### Import answers from a SOC 2 report <StatusChip status="coming-soon" />
 
@@ -182,22 +184,9 @@ With **Count unanswered as highest risk**, a vendor picks up question changes th
 
 Once scoring is set up, **Vendors by risk rating** above the Vendors table shows how many vendors hold each rating and how many are not scored. Select a rating to filter the table to those vendors. The table also has **Risk Rating** and **Risk Score** columns, hidden until you turn them on.
 
-A high rating calls for a decision. Record it in a vendor review on the **Risk Review** tab, and add anything that needs treatment to your [risk register](../exposure/risks/risk-register.mdx).
+A high rating calls for a decision. Record it in a vendor review on the **Risk Review** tab, and add anything that needs treatment to your [risk register](../../exposure/risks/risk-register.mdx).
 
-## Standard questionnaires and references
-
-A vendor may already have completed an industry questionnaire. Ask for it before sending your own questions, and use its answers to score the matching ones.
-
-| Source | Use it for |
-| --- | --- |
-| [Consensus Assessment Initiative Questionnaire (CAIQ)](https://cloudsecurityalliance.org/artifacts/star-level-1-security-questionnaire-caiq-v4-1) | Yes / No questions on cloud provider security controls, from the Cloud Security Alliance (CSA) |
-| [CSA Security, Trust, Assurance, and Risk (STAR) Registry](https://cloudsecurityalliance.org/star/registry) | Looking up whether a vendor has already published a CAIQ |
-| [Standardized Information Gathering (SIG) questionnaire](https://sharedassessments.org/about-sig/) | A broad third-party questionnaire from Shared Assessments, available by subscription or membership |
-| [Higher Education Community Vendor Assessment Toolkit (HECVAT)](https://www.educause.edu/higher-education-community-vendor-assessment-toolkit) | Assessing vendors that serve colleges and universities, from EDUCAUSE |
-| [Minimum Viable Secure Product (MVSP)](https://mvsp.dev/) | A short security baseline for lower-tier vendors |
-| [NIST SP 800-30 Rev. 1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) | Guidance on conducting risk assessments |
-
-For what to review beyond the questions, see [Reviewing a vendor](./entities.mdx#reviewing-a-vendor).
+For what to review beyond the questions, see [Reviewing a vendor](./overview.mdx#reviewing-a-vendor).
 
 ## FAQ
 
@@ -225,7 +214,7 @@ Yes. The impact on a question is a starting point, and you can change it on each
 <details>
 <summary>How does vendor scoring differ from risk scoring?</summary>
 
-A vendor's risk score is calculated from its answers. A [risk](../exposure/risks/overview.mdx#scoring-risks) in your register has a score you set on the risk itself, and it uses its own impact and likelihood levels. The two do not update each other, so a high vendor rating does not create or change a risk.
+A vendor's risk score is calculated from its answers. A [risk](../../exposure/risks/overview.mdx#scoring-risks) in your register has a score you set on the risk itself, and it uses its own impact and likelihood levels. The two do not update each other, so a high vendor rating does not create or change a risk.
 
 </details>
 

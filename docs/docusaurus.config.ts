@@ -239,6 +239,9 @@ const config: Config = {
           { from: "/docs/platform/standards/soc2/framework-subject-matter", to: "/docs/platform/standards/soc2/overview" },
           { from: "/docs/platform/standards/soc2/requireddocumentation", to: "/docs/platform/standards/soc2/example-evidence" },
           { from: "/docs/platform/standards/soc2/security-management-procedures", to: "/docs/platform/standards/soc2/overview" },
+          // vendor pages nested under registry/vendors
+          { from: "/docs/platform/registry/entities", to: "/docs/platform/registry/vendors/overview" },
+          { from: "/docs/platform/registry/vendor-scoring", to: "/docs/platform/registry/vendors/scoring" },
           // REST API endpoint and schema pages removed in the regenerated spec
           { from: ["/docs/api/rest-api/acme-solver", "/docs/api/rest-api/agent-node-registration", "/docs/api/rest-api/csrf", "/docs/api/rest-api/end-impersonation", "/docs/api/rest-api/example-csv", "/docs/api/rest-api/favicon", "/docs/api/rest-api/file-download"], to: "/api-reference" },
           { from: ["/docs/api/rest-api/git-hub-callback", "/docs/api/rest-api/git-hub-login", "/docs/api/rest-api/google-callback", "/docs/api/rest-api/google-login", "/docs/api/rest-api/graph-ql-query", "/docs/api/rest-api/graph-ql-query-history", "/docs/api/rest-api/jwks", "/docs/api/rest-api/livez"], to: "/api-reference" },

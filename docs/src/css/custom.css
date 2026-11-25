@@ -125,8 +125,13 @@ body {
   font-size: 1.2rem;
 }
 
-/* Cap the measure for readability */
+/* Cap the page at 90ch and prose at 75ch for readability */
 .theme-doc-markdown {
+  max-width: 85ch;
+}
+
+.theme-doc-markdown p,
+.theme-doc-markdown li {
   max-width: 75ch;
 }
 
@@ -214,6 +219,11 @@ html[data-theme='dark'] .theme-doc-markdown .tabs-container {
 .theme-doc-markdown .tabs-container div[role="tabpanel"] td {
   text-align: center;
   vertical-align: middle;
+}
+
+/* Keep short IDs in a table's first column on one line: opt-in via className="nowrap-first-col" */
+.nowrap-first-col td:first-child {
+  white-space: nowrap;
 }
 
 html[data-theme='dark'] .theme-doc-markdown .tabs-container .tabs__item--active {

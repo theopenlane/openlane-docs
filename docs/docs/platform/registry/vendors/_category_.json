@@ -1,0 +1,9 @@
+{
+  "label": "Vendors",
+  "position": 3,
+  "link": {
+    "type": "doc",
+    "id": "platform/registry/vendors/overview"
+  },
+  "collapsed": true
+}
