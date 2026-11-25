@@ -125,7 +125,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* Cap the page at 90ch and prose at 75ch for readability */
+/* Cap the page at 85ch and prose at 75ch for readability */
 .theme-doc-markdown {
   max-width: 85ch;
 }
