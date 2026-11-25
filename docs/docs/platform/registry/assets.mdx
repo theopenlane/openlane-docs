@@ -45,7 +45,7 @@ Create an asset record when any of these hold:
 
 Production services, their databases, the domains they answer on, the repositories their code lives in, and the devices that administer them all typically qualify.
 
-Leave out what no obligation reaches: resources entirely outside your audit boundaries, personal peripherals, and the internals of vendor-managed services. You are accountable for the vendor relationship, not the vendor's infrastructure, and that relationship is tracked as an [entity](./entities.mdx) rather than as assets.
+Leave out what no obligation reaches: resources entirely outside your audit boundaries, personal peripherals, and the internals of vendor-managed services. You are accountable for the vendor relationship, not the vendor's infrastructure, and that relationship is tracked as an [entity](./vendors/overview.mdx) rather than as assets.
 
 Track assets at the granularity where ownership and controls attach. A production database cluster is one asset; its individual disks are not, because no owner or control applies to a disk separately from its cluster. When two resources share an owner, a data classification, and the controls that cover them, one record can represent both; when they diverge on any of those, split them, because an auditor's question about one will not have the same answer for the other.
 
@@ -55,7 +55,7 @@ Not every record deserves the same trust: an asset a person entered or imported 
 
 Classification carries much of the record's value: environment, criticality, data classification, and similar fields all draw from your organization's [custom enums](../settings/custom-data.mdx), so records are categorized in your vocabulary rather than a vendor's. Ownership can be a user, a group, or a named person who does not have an account yet, so accountability never depends on everyone being an Openlane user.
 
-Assets connect to the vendor [entities](./entities.mdx) that supply them, the [platforms](./platforms.mdx) whose scope they fall inside (or are explicitly excluded from), and the [scans](../exposure/scans.mdx) run against them. For the complete field list, see the [GraphQL object reference](/graphql).
+Assets connect to the vendor [entities](./vendors/overview.mdx) that supply them, the [platforms](./platforms.mdx) whose scope they fall inside (or are explicitly excluded from), and the [scans](../exposure/scans.mdx) run against them. For the complete field list, see the [GraphQL object reference](/graphql).
 
 ## Working with Assets
 
@@ -94,7 +94,7 @@ An asset is an individual resource: a service, domain, device, or repository. A 
 <details>
 <summary>Is a SaaS product we use an asset or an entity?</summary>
 
-The vendor is an [entity](./entities.mdx); your use of their product can be an asset. If your tenant of the tool holds in-scope data or carries control obligations (single sign-on (SSO) enforcement, access reviews, offboarding), record it as an asset linked to the vendor entity. If the relationship is purely contractual and no control in your program operates on the tool itself, the entity record is enough.
+The vendor is an [entity](./vendors/overview.mdx); your use of their product can be an asset. If your tenant of the tool holds in-scope data or carries control obligations (single sign-on (SSO) enforcement, access reviews, offboarding), record it as an asset linked to the vendor entity. If the relationship is purely contractual and no control in your program operates on the tool itself, the entity record is enough.
 
 </details>
 

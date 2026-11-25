@@ -1,0 +1,229 @@
+---
+title: Vendors
+description: Manage vendors and third parties with clear risk and review context
+sidebar_position: 1
+compliance:
+  - "SOC 2 CC3"
+  - "SOC 2 CC5"
+  - "SOC 2 CC7"
+  - "SOC 2 CC9"
+  - "ISO 27001:2022 A.5.19-A.5.23"
+  - "GDPR"
+  - "HIPAA"
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Term from '@site/src/components/Term';
+
+# Vendors
+
+Vendors, or "Entities" represent the external organizations your program depends on: suppliers / vendors, <Term t="subprocessor">subprocessors</Term>, and service providers. An entity record holds the relationship in one place, with the risk classification, review schedule, contract terms, security posture, and supporting documents that due diligence requests and audits draw on.
+
+Vendor management programs generally tier vendors by potential impact and let the tier drive the depth and cadence of review: a critical data processor warrants an annual questionnaire, System and Organization Controls 2 (SOC 2) report review, and contract scrutiny, while a low-impact tool gets a lightweight check at renewal. We built tiering and review scheduling into the entity record so assessments recur instead of happening once at onboarding.
+
+## How Entities work
+
+Each entity record carries a lifecycle status so terminated vendors stay auditable for the covered period instead of disappearing when the relationship ends, and teams evaluating a new vendor can see where it stands before due diligence completes.
+
+Two settings turn the record into a management tool: the vendor tier classifies how much scrutiny a relationship warrants, and the review frequency plus next review date turn that classification into a schedule. The record also holds the contract terms and security posture details you gather during reviews, and an approved-for-use flag gives teams a simple yes or no to check before adopting a vendor.
+
+Entities tie together the [contacts](../contacts.mdx) you correspond with at the vendor, the documents collected during reviews, and the [subprocessors](../../trust-center/subprocessors.mdx) you disclose publicly. For the complete field list, see the [GraphQL object reference](/graphql).
+
+## Working with Entities
+
+### Build and tier the Vendor inventory
+
+[Import your vendor list via CSV](../../importing-data.mdx), then assign each entity a tier based on the data it touches and the blast radius if it fails. A useful heuristic: anything processing customer or regulated data, or sitting in the production path, is Critical or High; internal tooling with no sensitive data is Standard or Low. Assign an internal owner to each entity so every vendor has a person accountable for its reviews.
+
+### Run due diligence on a cadence
+
+Set a review frequency and next review date on each entity, scaled to its tier. When a review comes due, send a vendor assessment [campaign](../../automation/campaigns.mdx) to the vendor's contact, attach the returned SOC 2 report and questionnaire responses to the entity, and record who reviewed it and when. The entity becomes the audit trail: an auditor asking "show me your last review of this vendor" gets a record with a reviewer, a date, and the supporting documents rather than a search through shared drives.
+
+### Track contracts and renewals
+
+Record contract end dates, renewal dates, auto-renewal terms, and termination notice periods on each entity, then schedule reviews ahead of renewals so findings can actually influence the decision. A questionnaire completed before the termination notice window closes can still change the renewal decision; one completed after auto-renewal fires cannot.
+
+### Feed the Trust Center
+
+If you publish a [trust center](../../trust-center/overview.mdx), your public subprocessor list can be built from entities you already manage: the [subprocessor page](../../trust-center/subprocessors.mdx) lets you add subprocessors from your existing vendor list. Keeping vendor records current in the registry then keeps your public disclosures current too, instead of maintaining the same list twice.
+
+## Reviewing a vendor
+
+A [risk score](./scoring.mdx) is one input to the decision to use a vendor. Auditors and regulators also look for the evidence you reviewed and how often you repeat the review.
+
+### Inherent and residual risk
+
+Inherent risk is the exposure a vendor creates before you consider its controls, based on the data it handles and how much you depend on it. <Term t="residual-risk">Residual risk</Term> is what remains after them. Use the vendor's tier for inherent risk and its risk rating as your evidence for residual risk. A vendor that stores customer data keeps a high tier even after a clean review, because a control failure there would still do the most damage.
+
+### What to review
+
+Ask for evidence in proportion to the tier, and record what you relied on in the vendor review.
+
+| Evidence | What to check |
+| --- | --- |
+| SOC 2 report | The report <Term t="type-i-type-ii">type</Term>, the period covered, the auditor's opinion, and any exceptions |
+| [Bridge letter](../../standards/soc2/bridge-letter.mdx) | Whether it covers the gap between the report period and today |
+| ISO 27001 certificate | Whether its scope covers the service you buy, and which controls the Statement of Applicability excludes |
+| Penetration test summary | Scope and date, and whether high-severity findings were fixed |
+| Data processing agreement | Permitted processing, breach notice, subprocessor terms, and data return or deletion |
+| Business associate agreement | Signed before the vendor, as a business associate, creates, receives, or maintains protected health information |
+
+Two parts of a SOC 2 report are easy to miss. <Term t="complementary-user-entity-controls">Complementary user entity controls</Term> are the controls the vendor expects you to run, so confirm that you run them. The <Term t="carve-out-method">carve-out method</Term> means a <Term t="subservice-organization">subservice organization</Term>'s controls were left out of the audit, so review that provider separately if you depend on it.
+
+### Fourth parties
+
+Your vendor's own vendors, often called fourth parties, can expose you without a contract between you. Ask for the vendor's subprocessor list, and look for a provider that several of your vendors share, because its outage would affect all of them at once.
+
+Your customers have the same question about you. Publish your own subprocessors in your [Trust Center](../../trust-center/subprocessors.mdx) so they can see which vendors you rely on.
+
+### When to review again
+
+Review each vendor on its schedule, and before a [renewal](#track-contracts-and-renewals). Between scheduled reviews, review again when the vendor reports a breach, lets its report lapse, receives a qualified opinion, or starts handling more sensitive data for you.
+
+## References
+
+A vendor may already have completed an industry questionnaire. Ask for it before sending your own questions, and use its answers to [score](./scoring.mdx) the matching ones.
+
+| Source | Use it for |
+| --- | --- |
+| [Consensus Assessment Initiative Questionnaire (CAIQ)](https://cloudsecurityalliance.org/artifacts/star-level-1-security-questionnaire-caiq-v4-1) | Yes / No questions on cloud provider security controls, from the Cloud Security Alliance (CSA) |
+| [CSA Security, Trust, Assurance, and Risk (STAR) Registry](https://cloudsecurityalliance.org/star/registry) | Looking up whether a vendor has already published a CAIQ |
+| [Standardized Information Gathering (SIG) questionnaire](https://sharedassessments.org/about-sig/) | A broad third-party questionnaire from Shared Assessments, available by subscription or membership |
+| [Higher Education Community Vendor Assessment Toolkit (HECVAT)](https://www.educause.edu/higher-education-community-vendor-assessment-toolkit) | Assessing vendors that serve colleges and universities, from EDUCAUSE |
+| [Minimum Viable Secure Product (MVSP)](https://mvsp.dev/) | A short security baseline for lower-tier vendors |
+| [NIST SP 800-30 Rev. 1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) | Guidance on conducting risk assessments |
+| [SOC 2 CC9.2](../../standards/soc2/controls/security/cc9_2.mdx) | The points of focus on assessing vendors and business partners |
+| [NIST SP 800-161 Rev. 1](https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final) | Identifying, assessing, and mitigating cybersecurity risk in the supply chain |
+| [NIST SP 1305](https://csrc.nist.gov/pubs/sp/1305/final) | A quick-start guide to the supply chain category (GV.SC) of the NIST Cybersecurity Framework 2.0 |
+| [ISO/IEC 27036-1](https://www.iso.org/standard/82905.html) | Concepts for securing supplier relationships |
+| [Interagency guidance on third-party relationships](https://www.occ.gov/news-issuances/bulletins/2023/bulletin-2023-17.html) | United States banking regulators' view of the third-party life cycle |
+| [GDPR Article 28](https://gdpr-info.eu/art-28-gdpr/) | What a contract with a processor must cover, and when a processor may engage another |
+| [Digital Operational Resilience Act (DORA)](https://eur-lex.europa.eu/eli/reg/2022/2554/oj) | Article 28 on information and communication technology (ICT) third-party risk for financial entities |
+| [HIPAA business associates](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) | Who counts as a business associate and what the contract must say |
+
+## FAQ
+
+<details>
+<summary>What is the difference between tier and risk rating?</summary>
+
+Tier is your classification of how much the relationship matters: how much scrutiny it warrants, driven by the data and access involved. Risk rating and risk score capture what assessments found (see [Vendor scoring](./scoring.mdx)). They move independently. A critical-tier vendor can carry a low risk rating after a clean review, and that combination is what you want, because high scrutiny confirmed the low risk.
+
+</details>
+
+<details>
+<summary>What status should a vendor have while we evaluate it?</summary>
+
+Start the record in Draft when someone proposes the vendor, move it to Under review while due diligence runs, then to Approved or Rejected based on the outcome. Keep `approvedForUse` false until the review completes so teams checking whether they can adopt the vendor get an accurate answer during the evaluation window.
+
+</details>
+
+<details>
+<summary>How should we handle a vendor we stop using?</summary>
+
+Move the entity through Offboarding while you confirm data return or deletion and access removal, then set it to Terminated and clear `approvedForUse`. Keep the record: audits cover the full period, and a vendor terminated mid-period still needs its review history available.
+
+</details>
+
+## Examples
+
+<Tabs groupId="api-format" queryString>
+  <TabItem value="csv" label="CSV">
+
+```csv
+# Create
+Name,DisplayName,Status,RiskRating,ReviewFrequency,NextReviewAt,ApprovedForUse,HasSoc2
+stripe,Stripe,active,HIGH,YEARLY,2026-10-01T00:00:00Z,true,true
+aws,Amazon Web Services,active,MEDIUM,YEARLY,2026-09-15T00:00:00Z,true,true
+```
+
+```csv
+# Update
+ID,RiskRating,NextReviewAt,ContractRenewalAt,ApprovedForUse
+ENT01J9ABCD111111111111111,MEDIUM,2026-11-01T00:00:00Z,2027-01-31T00:00:00Z,true
+ENT01J9ABCD222222222222222,HIGH,2026-08-01T00:00:00Z,2026-12-31T00:00:00Z,true
+```
+
+  </TabItem>
+  <TabItem value="graphql" label="GraphQL">
+
+```graphql
+mutation {
+  createEntity(
+    input: {
+      name: "stripe"
+      displayName: "Stripe"
+      status: "active"
+      description: "Payment processor"
+    }
+  ) {
+    entity {
+      id
+      displayName
+    }
+  }
+}
+```
+
+```graphql
+mutation {
+  updateEntity(
+    id: "ENT01J9ABCD111111111111111"
+    input: {
+      status: "active"
+      description: "Annual vendor review completed"
+    }
+  ) {
+    entity {
+      id
+      status
+    }
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="go-client" label="Go Client">
+
+```go
+ctx := context.Background()
+
+name := "stripe"
+displayName := "Stripe"
+status := "active"
+
+_, err := client.CreateEntity(ctx, graphclient.CreateEntityInput{
+	Name:        &name,
+	DisplayName: &displayName,
+	Status:      &status,
+})
+if err != nil {
+	return err
+}
+
+description := "Annual vendor review completed"
+_, err = client.UpdateEntity(ctx, "ENT01J9ABCD111111111111111", graphclient.UpdateEntityInput{
+	Description: &description,
+})
+if err != nil {
+	return err
+}
+```
+
+  </TabItem>
+  <TabItem value="cli" label="CLI">
+
+```bash
+openlane entity create \
+  --name "stripe" \
+  --display-name "Stripe" \
+  --status "active"
+
+openlane entity update \
+  --id "ENT01J9ABCD111111111111111" \
+  --status "active" \
+  --description "Annual vendor review completed"
+```
+
+  </TabItem>
+</Tabs>

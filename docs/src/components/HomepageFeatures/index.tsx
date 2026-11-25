@@ -88,7 +88,7 @@ const AREAS: Area[] = [
       'The system of record for what you operate: platforms, assets, vendors, personnel, and contacts.',
     links: [
       { label: 'Model your platforms', href: '/docs/platform/registry/platforms' },
-      { label: 'Vendor tiering and reviews', href: '/docs/platform/registry/entities' },
+      { label: 'Vendor tiering and reviews', href: '/docs/platform/registry/vendors/overview' },
       { label: 'Define compliance scope', href: '/docs/platform/registry/assets' },
     ],
   },

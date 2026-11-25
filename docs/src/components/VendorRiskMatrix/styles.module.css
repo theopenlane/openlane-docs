@@ -1,0 +1,94 @@
+.wrapper {
+  overflow-x: auto;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.matrix {
+  display: table;
+  width: 100%;
+  min-width: 600px;
+  margin: 0;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+.matrix thead tr,
+.matrix tbody tr:nth-child(n) {
+  background: transparent;
+  border: 0;
+}
+
+.matrix th,
+.matrix td {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 0.4rem;
+  text-align: center;
+}
+
+.matrix th {
+  background: var(--ifm-color-emphasis-200);
+  font-size: 0.8rem;
+}
+
+.caption {
+  caption-side: bottom;
+  padding-top: 0.5rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.score {
+  display: block;
+  font-weight: 700;
+}
+
+.rating {
+  display: block;
+  font-size: 0.72rem;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.0625rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Fixed light fills with dark text keep contrast in both color modes */
+.none,
+.veryLow,
+.low,
+.medium,
+.high,
+.critical {
+  color: #1a1a1a;
+}
+
+.none {
+  background: #d9dee3;
+}
+
+.veryLow {
+  background: #9fdfb0;
+}
+
+.low {
+  background: #d3eb9a;
+}
+
+.medium {
+  background: #ffdf80;
+}
+
+.high {
+  background: #ffb56b;
+}
+
+.critical {
+  background: #f79494;
+}

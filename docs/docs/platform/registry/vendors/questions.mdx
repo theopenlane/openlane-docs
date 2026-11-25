@@ -1,0 +1,123 @@
+---
+title: Scoring questions
+description: The built-in vendor scoring questions, their categories, and their default impact
+sidebar_position: 3
+keywords:
+  - vendor scoring questions
+  - vendor risk questionnaire
+  - CAIQ
+compliance:
+  - "SOC 2 CC9"
+  - "ISO 27001:2022 A.5.19-A.5.23"
+---
+
+# Scoring questions
+
+These are the 37 questions every organization starts with when it [scores a vendor](./scoring.mdx). Use this list to decide which questions apply to your vendors before you change them in the scoring settings.
+
+## Where the questions come from
+
+Each built-in question is taken from the Cloud Security Alliance's [Consensus Assessment Initiative Questionnaire (CAIQ)](https://cloudsecurityalliance.org/artifacts/star-level-1-security-questionnaire-caiq-v4-1) v4.0.3, and its ID is the CAIQ question ID. A vendor that has published a CAIQ has already answered these questions, so you can score the matching ones from its answers.
+
+We kept the questions that ask whether a practice is in place and working, and left out the ones that only ask whether a policy is documented, because those answers do not tell vendors apart.
+
+Every built-in question is a Yes / No question, where Yes means the practice is in place and scores 0. The default impact is the starting point on each vendor, and you can change it when answering or in the [scoring settings](./scoring.mdx#questions). No built-in questions fall under Financial Stability or Operational Dependency. Add your own there if those risks matter for your vendors.
+
+## Questions by category
+
+<details className="nowrap-first-col">
+<summary>Security Practices (16)</summary>
+
+| ID | Question | Default impact |
+| --- | --- | --- |
+| IAM-05.1 | Is the least privilege principle employed when implementing information system access? | Medium |
+| IAM-07.1 | Is a process in place to de-provision or modify access in a timely manner for movers and leavers? | High |
+| IAM-08.1 | Are reviews and revalidation of user access for least privilege and separation of duties completed with a frequency commensurate with organizational risk tolerance? | High |
+| IAM-09.1 | Are processes for the segregation of privileged access roles defined and implemented such that administrative data access, encryption, key management, and logging capabilities are distinct and separate? | High |
+| IAM-14.1 | Are processes for authenticating access to systems, applications, and data assets including multi-factor authentication for least-privileged users and sensitive data access defined, implemented, and evaluated? | Critical |
+| CEK-03.1 | Are data at-rest and in-transit cryptographically protected using cryptographic libraries certified to approved standards? | Critical |
+| CEK-12.1 | Are cryptographic keys rotated based on a cryptoperiod calculated while considering information disclosure risks and legal and regulatory requirements? | High |
+| TVM-03.1 | Are processes defined, implemented, and evaluated to enable scheduled and emergency responses to vulnerability identifications based on identified risk? | High |
+| TVM-06.1 | Are processes defined, implemented, and evaluated for periodic, independent, third-party penetration testing? | High |
+| TVM-07.1 | Are processes defined, implemented, and evaluated for vulnerability detection on organizationally managed assets at least monthly? | High |
+| HRS-01.1 | Are background verification policies and procedures established for all new employees, contractors, and third parties? | Medium |
+| HRS-11.1 | Is a security awareness training program established, documented, and maintained for all employees? | Medium |
+| AIS-04.1 | Is an SDLC process defined and implemented for application design, development, deployment, and operation per organizationally designed security requirements? | High |
+| AIS-07.1 | Are application security vulnerabilities remediated following defined processes? | High |
+| IVS-03.2 | Are communications between environments encrypted? | Critical |
+| LOG-03.1 | Are security-related events identified and monitored within applications and the underlying infrastructure? | High |
+
+</details>
+
+<details className="nowrap-first-col">
+<summary>Data Access (4)</summary>
+
+| ID | Question | Default impact |
+| --- | --- | --- |
+| DSP-02.1 | Are industry-accepted methods applied for secure data disposal from storage media so information is not recoverable by any forensic means? | High |
+| DSP-03.1 | Is a data inventory created and maintained for sensitive and personal information? | High |
+| DSP-16.1 | Do data retention, archiving, and deletion practices follow business requirements, applicable laws, and regulations? | Medium |
+| DSP-19.1 | Are processes defined and implemented to specify and document physical data locations, including locales where data is processed or backed up? | High |
+
+</details>
+
+<details className="nowrap-first-col">
+<summary>Data Privacy (4)</summary>
+
+| ID | Question | Default impact |
+| --- | --- | --- |
+| DSP-08.1 | Are systems, products, and business practices based on privacy principles by design and according to industry best practices? | Medium |
+| DSP-09.1 | Is a data protection impact assessment (DPIA) conducted when processing personal data and evaluating the origin, nature, particularity, and severity of risks? | High |
+| DSP-10.1 | Are processes defined to ensure any transfer of personal or sensitive data is protected from unauthorized access and only processed within scope? | High |
+| DSP-11.1 | Are processes defined to enable data subjects to request access to, modify, or delete personal data per applicable laws and regulations? | High |
+
+</details>
+
+<details className="nowrap-first-col">
+<summary>Business Continuity (4)</summary>
+
+| ID | Question | Default impact |
+| --- | --- | --- |
+| BCR-06.1 | Are the business continuity and operational resilience plans exercised and tested at least annually and when significant changes occur? | High |
+| BCR-08.1 | Is cloud data periodically backed up? | High |
+| BCR-09.1 | Is a disaster response plan established, documented, approved, and maintained to ensure recovery from natural and man-made disasters? | High |
+| BCR-10.1 | Is the disaster response plan exercised annually or when significant changes occur? | High |
+
+</details>
+
+<details className="nowrap-first-col">
+<summary>Incident Response (4)</summary>
+
+| ID | Question | Default impact |
+| --- | --- | --- |
+| SEF-03.1 | Is a security incident response plan that includes relevant internal departments, impacted customers, and supply-chain relationships established, documented, and maintained? | High |
+| SEF-04.1 | Is the security incident response plan tested and updated for effectiveness at planned intervals or upon significant organizational or environmental changes? | High |
+| SEF-07.1 | Are processes, procedures, and technical measures for security breach notifications defined and implemented? | Critical |
+| SEF-07.2 | Are security breaches and assumed security breaches reported, including any relevant supply chain breaches, per applicable SLAs, laws, and regulations? | Critical |
+
+</details>
+
+<details className="nowrap-first-col">
+<summary>Regulatory Compliance (2)</summary>
+
+| ID | Question | Default impact |
+| --- | --- | --- |
+| A&A-02.1 | Are independent audit and assurance assessments conducted according to relevant standards at least annually? | High |
+| GRC-05.1 | Has an information security program been developed and implemented? | High |
+
+</details>
+
+<details className="nowrap-first-col">
+<summary>Supply Chain Risk (3)</summary>
+
+| ID | Question | Default impact |
+| --- | --- | --- |
+| STA-07.1 | Is an inventory of all supply chain relationships developed and maintained? | Medium |
+| STA-09.1 | Do service agreements between the vendor and their customers incorporate security requirements, incident management, right to audit, and data privacy provisions? | High |
+| STA-14.1 | Is a process to conduct periodic security assessments for all supply chain organizations defined and implemented? | High |
+
+</details>
+
+## Questions you add
+
+A question you add gets an ID that starts with `CUST-` and the category it belongs to, such as `CUST-SP-01.01` for the first one under Security Practices. Editing a built-in question keeps its CAIQ ID, so answers already recorded against it stay linked.
