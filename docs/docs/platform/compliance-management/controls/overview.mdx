@@ -26,7 +26,7 @@ Policies set the direction by defining the overall goals and expectations for ma
 
 Some <Term t="controls">controls</Term> are too broad to implement or test as a single unit. Subcontrols split a control into smaller pieces that can each be implemented, tested, and verified on their own, while keeping the parent control as the thing your framework maps to.
 
-Take a broad access control requirement: the encryption configuration, the approval workflow, and the physical badge system might all live under it, but they're owned by different teams and verified in completely different ways. As three subcontrols, each piece gets its own <Term t="control-implementation">implementation</Term> and its own verification, and the parent control rolls them up.
+Take a broad access control requirement: the encryption configuration, the approval workflow, and the physical badge system might all live under it, but they are owned by different teams and verified in completely different ways. As three subcontrols, each piece gets its own <Term t="control-implementation">implementation</Term> and its own verification, and the parent control rolls them up.
 
 
 
@@ -39,13 +39,13 @@ Org controls, also called custom controls, are the <Term t="controls">controls</
 
 An org control can map to one or more framework controls, allowing you to satisfy requirements across multiple compliance frameworks without having to implement and manage duplicate controls.
 
-You can find examples and guidance in [Writing Controls](./writing-controls.mdx)
+You can find examples and guidance in [Writing Controls](./writing-controls.mdx).
 
 Org controls do not need a framework of their own. See [Custom frameworks and org controls](../../standards/custom-frameworks.mdx#custom-frameworks-and-org-controls) for how the two differ.
 </details>
 
 <details>
-<summary>What's the difference between an implementation and evidence?</summary>
+<summary>What is the difference between an implementation and evidence?</summary>
 
 The implementation describes how the control operates; evidence proves it operated during the period. Auditors want both: the narrative and the artifacts that back it up.
 
@@ -54,20 +54,20 @@ The implementation describes how the control operates; evidence proves it operat
 <details>
 <summary>Do I need an implementation for every control?</summary>
 
-An implementation is intended to make Openlane a functional system, not just a documentation repository. When you track what you actually do alongside the requirement you have to satisfy, you're more aware of what you have to adhere to and why.
+An implementation is intended to make Openlane a functional system, not just a documentation repository. When you track what you actually do alongside the requirement you have to satisfy, you are more aware of what you have to adhere to and why.
 
 </details>
 
 <details>
 <summary>Who should own an implementation?</summary>
 
-We recommend the person who actually runs the process rather than the compliance lead, because they'll know when reality drifts from the write-up. Drift between the two is the most common audit <Term t="finding">finding</Term>, and the person doing the job always knows the criteria and inputs best.
+We recommend the person who actually runs the process rather than the compliance lead, because they will know when reality drifts from the write-up. Drift between the two is the most common audit <Term t="finding">finding</Term>, and the person doing the job always knows the criteria and inputs best.
 
 </details>
 <details>
 <summary>When should I split a control into subcontrols?</summary>
 
-When its components have different owners, different implementation types, or different verification methods. If one person implements and one test verifies the whole control, a single [implementation](./implementations.mdx) is simpler; don't split for the sake of splitting.
+When its components have different owners, different implementation types, or different verification methods. If one person implements and one test verifies the whole control, a single [implementation](./implementations.mdx) is simpler; do not split for the sake of splitting.
 
 </details>
 
@@ -81,6 +81,6 @@ No, framework mapping happens at the [control](./overview.mdx) level. Subcontrol
 <details>
 <summary>Can a subcontrol have its own implementation?</summary>
 
-Yes. That's the point: each subcontrol carries its own implementation narrative and verification, independent of its siblings, and [evidence](../evidence/overview.mdx) collected for it demonstrates exactly that component.
+Yes. That is the point: each subcontrol carries its own implementation narrative and verification, independent of its siblings, and [evidence](../evidence/overview.mdx) collected for it demonstrates exactly that component.
 
 </details>

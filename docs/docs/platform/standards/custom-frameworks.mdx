@@ -26,15 +26,15 @@ The [Standards Catalog](https://console.theopenlane.io/standards) includes the p
 
 Use a custom framework when you are given a list of requirements and have to show how you meet each one. A customer's security addendum is a common case, because it applies to your agreement with that customer and is not a published standard. Internal security baselines and niche industry requirements work the same way.
 
-Entering those requirements as a <Term t="compliance-framework">framework</Term> stores each one as a framework control. You can assign it, add it to a program, and map your org controls to it. An org control you already use for SOC 2 can then show coverage for the customer's addendum too.
+Entering those requirements as a <Term t="compliance-framework">framework</Term> stores each one as a framework control. It works like any other framework control, so you can add it to a program and map your org controls to it. An org control you already use for SOC 2 can then show coverage for the customer's addendum too.
 
 ### Check with us before you manage a published standard
 
 :::info[Important]
-If the requirements come from a published standard, email [info@theopenlane.io](mailto:info@theopenlane.io) with its name and version before you build it yourself. We can generally support common frameworks for you.
+If the requirements come from a published standard, email [info@theopenlane.io](mailto:info@theopenlane.io) with its name and version before you build it yourself. We can support many common frameworks for you.
 :::
 
-When we maintain a standard, we also maintain its updates and revisions. When you build the same standard as a custom framework, each new version is yours to compare, re-enter, and map again.
+When we maintain a standard, we also maintain its updates and revisions. When you build the same standard as a custom framework, each new version is yours to review, and you update the framework and its mappings to match.
 
 ## Custom frameworks and org controls
 
@@ -80,7 +80,7 @@ The console opens the framework's page, or the import page if you chose CSV. Bac
 We recommend the CSV import for most frameworks. It adds the framework's requirements as new controls, so your org controls stay available to map to this framework and any others. After you create the framework, the console opens the import page, where you follow the same [import steps](../importing-data.mdx#how-import-works) as any other CSV. `Ref Code` is the only required column. Add a `Category` column if you want the controls grouped into domains.
 
 :::warning[Linking moves the control into the framework]
-A control can belong to only one framework. A linked org control keeps its <Term t="evidence">evidence</Term>, owner, and status, but it becomes a framework control. It shows the framework's short name instead of `CUSTOM`, cannot be linked to another framework, and no longer counts as org control coverage for the frameworks it is mapped to. To use one org control across several frameworks, leave it unlinked and map it.
+A control can belong to only one framework. A linked org control keeps its existing details, such as its <Term t="evidence">evidence</Term>, but it becomes a framework control. It shows the framework's short name instead of `CUSTOM`, cannot be linked to another framework, and no longer counts as org control coverage for the frameworks it is mapped to. To use one org control across several frameworks, leave it unlinked and map it.
 :::
 
 To add more controls later, open the framework from the catalog and use the `Add controls` menu.
@@ -118,7 +118,7 @@ No. Org controls track what your organization does and do not need a framework. 
 <details>
 <summary>Should I create a custom framework for a published standard that is not in the catalog?</summary>
 
-Email [info@theopenlane.io](mailto:info@theopenlane.io) first with the name and version of the standard. Openlane can generally support common frameworks, and maintains their updates and revisions. A custom framework is the better fit when the standard is obscure or specific to your company.
+Email [info@theopenlane.io](mailto:info@theopenlane.io) first with the name and version of the standard. Openlane can support many common frameworks, and maintains their updates and revisions. A custom framework is the better fit when the standard is obscure or specific to your company.
 
 </details>
 
